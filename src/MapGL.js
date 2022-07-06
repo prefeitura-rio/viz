@@ -15,8 +15,8 @@ mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worke
 // Source data CSV
 const trips = require("./trips.json")
 const MAPBOX_API_TOKEN = "pk.eyJ1IjoiZDExNjYyNiIsImEiOiJjazM1ODVoZ3MxNjJoM21vcWMwZmhycHVvIn0.7hxPP_9w7z8QAVc2nStP6w";
-const animationSpeed = 3
-const loopLength = 1800
+const animationSpeed = 5
+const loopLength = 10800
 
 export default function MapGL() {
 
@@ -44,7 +44,7 @@ export default function MapGL() {
             widthMinPixels: 5,
             fadeTrail: true,
             currentTime: time,
-            opacity: 1,
+            opacity: 0.3,
             rounded: true,
             trailLength:600,
             shadowEnabled: false
