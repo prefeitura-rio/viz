@@ -53,9 +53,9 @@ export default function MapGL() {
     
     
     const INITIAL_VIEW_STATE = {
-        longitude: -43.17785,
-        latitude: -22.9561,
-        zoom: 11,
+        longitude:  -43.41211,
+        latitude: -22.92192,
+        zoom: 10.7,
         pitch: 0,
         bearing: 0
     };
@@ -64,7 +64,7 @@ export default function MapGL() {
         <div>
             <DeckGL
                 initialViewState={INITIAL_VIEW_STATE}
-                controller={true}
+                controller={false}
                 layers={layers}
             >
             <Map
