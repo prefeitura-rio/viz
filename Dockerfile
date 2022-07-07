@@ -2,7 +2,7 @@ FROM node:lts-alpine as build-stage
 RUN apk update && apk add --no-cache --virtual build-deps git
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci
+RUN npm ci -f
 COPY . ./
 RUN npm run build
 
