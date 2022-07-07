@@ -10,7 +10,7 @@ import { TripsLayer } from "@deck.gl/geo-layers";
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
-// Source data CSV
+// Source data CSV: https://jupyter.dados.rio/lab/tree/dataviz/dataviz-subsidio
 const TRIPS = require("./trips.json");
 
 // Mapbox configs
