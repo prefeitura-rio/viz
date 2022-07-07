@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: viz-dados-rio
+  name: viz-dados-rio
+  namespace: viz-dados-rio
+spec:
+  ports:
+    - name: "80"
+      port: 80
+      targetPort: 80
+  selector:
+    app: viz-dados-rio
