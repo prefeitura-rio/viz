@@ -5,7 +5,7 @@ import * as React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/home";
 import TripsMap from "./pages/especial-sppo/tripsmap";
-import Scrollytelling from "./pages/especial-sppo/scrollytelling";
+import Scroll from "./pages/especial-sppo/scroll";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/especial-sppo/trips" element={<TripsMap />} />
-        <Route path="/especial-sppo/scroll" element={<Scrollytelling />} />
+        <Route path="/especial-sppo/scroll" element={<Scroll />} />
       </Routes>
     </Router>
   );
