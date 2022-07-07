@@ -3,16 +3,17 @@
 
 import * as React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/navbar";
+import Home from "./pages/home/home";
 import TripsMap from "./pages/especial-sppo/tripsmap";
+import Scrollytelling from "./pages/especial-sppo/scrollytelling";
 
 function App() {
   return (
     <Router>
-      <NavBar />
       <Routes>
-        <Route path="/" />
+        <Route path="/" element={<Home />} />
         <Route path="/especial-sppo/trips" element={<TripsMap />} />
+        <Route path="/especial-sppo/scroll" element={<Scrollytelling />} />
       </Routes>
     </Router>
   );
