@@ -1,12 +1,17 @@
-import * as React from 'react';
-// import Map from 'react-map-gl';
-import MapGL from './MapGL';
+import * as React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from "./components/navbar";
+import TripsMap from "./pages/especial-sppo/tripsmap";
 
 function App() {
   return (
-    <>
-          <MapGL />
-    </> 
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" />
+        <Route path="/especial-sppo" element={<TripsMap />} />
+      </Routes>
+    </Router>
   );
 }
 export default App;
