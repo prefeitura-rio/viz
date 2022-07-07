@@ -12,7 +12,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" />
-        <Route path="/especial-sppo" element={<TripsMap />} />
+        <Route path="/especial-sppo/trips" element={<TripsMap />} />
       </Routes>
     </Router>
   );

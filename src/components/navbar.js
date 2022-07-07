@@ -9,7 +9,7 @@ export default function NavBar() {
             <Link to="/"> Home </Link>
           </li>
           <li>
-            <Link to="/especial-sppo"> Especial SPPO </Link>
+            <Link to="/especial-sppo/trips"> Especial SPPO | Trips </Link>
           </li>
         </lu>
       </div>
