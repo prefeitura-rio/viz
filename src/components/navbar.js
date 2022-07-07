@@ -6,10 +6,10 @@ export default function NavBar() {
       <div>
         <lu>
           <li>
-            <Link to="/"> Home </Link>
+            <Link to={process.env.PUBLIC_URL + "/"}> Home </Link>
           </li>
           <li>
-            <Link to="/especial-sppo"> Especial SPPO </Link>
+            <Link to={process.env.PUBLIC_URL + "/especial-sppo"}> Especial SPPO </Link>
           </li>
         </lu>
       </div>
