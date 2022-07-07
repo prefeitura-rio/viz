@@ -25,11 +25,11 @@ const TRAIL_LENGTH = 600;
 
 //initial map position
 const INITIAL_VIEW_STATE = {
-  longitude: -43.41211,
-  latitude: -22.92192,
+  longitude: -43.59276,
+  latitude: -22.9347,
   zoom: 10.7,
-  pitch: 0,
-  bearing: 0,
+  pitch: 10.59,
+  bearing: -0.31,
 };
 
 export default function TripsMap() {
@@ -55,7 +55,7 @@ export default function TripsMap() {
       widthMinPixels: 5,
       fadeTrail: true,
       currentTime: time,
-      opacity: 0.3,
+      opacity: 0.6,
       rounded: true,
       trailLength: TRAIL_LENGTH,
       shadowEnabled: false,
