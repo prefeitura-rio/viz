@@ -1,3 +1,6 @@
+// gh-pages route for deployment
+// https://stackoverflow.com/questions/40776651/can-i-create-routes-with-react-router-for-a-github-pages-site
+
 import * as React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/navbar";
@@ -8,8 +11,8 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route path="/" />
-        <Route path="/especial-sppo" element={<TripsMap />} />
+        <Route path={process.env.PUBLIC_URL + "/"} />
+        <Route path={process.env.PUBLIC_URL + "/especial-sppo"} element={<TripsMap />} />
       </Routes>
     </Router>
   );
