@@ -14,8 +14,9 @@ mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worke
 const TRIPS = require("./trips.json");
 
 // Mapbox configs
-const MAP_STYLE = "mapbox://styles/mapbox/dark-v9";
-const MAPBOX_API_TOKEN = "pk.eyJ1IjoiZDExNjYyNiIsImEiOiJjazM1ODVoZ3MxNjJoM21vcWMwZmhycHVvIn0.7hxPP_9w7z8QAVc2nStP6w";
+const MAP_STYLE = "mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b";
+const MAPBOX_API_TOKEN =
+  "pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w";
 
 // animation configs
 const ANIMATION_SPEED = 5;
@@ -50,7 +51,7 @@ export default function TripsMap() {
       data: TRIPS,
       getPath: (d) => d.path,
       getTimestamps: (d) => d.timestamps,
-      getColor: [253, 128, 93],
+      getColor: [50, 137, 169],
       widthMinPixels: 5,
       fadeTrail: true,
       currentTime: time,
