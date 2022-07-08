@@ -3,7 +3,8 @@ const path = require("path");
 module.exports = {
   entry: {
     index: "./src/index.js",
-    scroll_index: "./src/components/scroll_example/scroll_example.js"
+    scroll_index: "./src/components/scroll_example/scroll_example.js",
+    capa_sppo: "./src/components/sppo/capa.js"
     // add components here:
     // component1: "./src/components/component1.js",
   },
