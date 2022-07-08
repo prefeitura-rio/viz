@@ -9,13 +9,15 @@ import Scroll from "./pages/especial-sppo/scroll";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/especial-sppo/trips" element={<TripsMap />} />
-        <Route path="/especial-sppo/scroll" element={<Scroll />} />
-      </Routes>
-    </Router>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/especial-sppo/trips" element={<TripsMap />} />
+          <Route path="/especial-sppo/scroll" element={<Scroll />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 export default App;
