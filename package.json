@@ -4,7 +4,7 @@
   "description": "Visualizações para o Escritório de Dados Rio",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development --progress --color --port 3000",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development --progress --color --port 3000 --hot",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
