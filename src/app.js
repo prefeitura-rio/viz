@@ -2,7 +2,7 @@
 // https://stackoverflow.com/questions/41325890/indexroute-not-showing-when-pushing-to-gh-pages
 
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/home";
 import TripsMap from "./pages/especial-sppo/tripsmap";
 
