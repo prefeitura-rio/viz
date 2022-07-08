@@ -21,15 +21,15 @@ const MAPBOX_API_TOKEN =
 // animation configs
 const ANIMATION_SPEED = 5;
 const LOOP_LENGTH = 10800;
-const TRAIL_LENGTH = 600;
+const TRAIL_LENGTH = 500;
 
 //initial map position
 const INITIAL_VIEW_STATE = {
-  longitude: -43.59276,
-  latitude: -22.9347,
-  zoom: 10.7,
-  pitch: 10.59,
-  bearing: -0.31,
+  longitude: -43.45938,
+  latitude: -22.94232,
+  zoom: 10.67,
+  pitch: 7.0,
+  bearing: 0.0,
 };
 
 export default function TripsMap() {
@@ -51,11 +51,11 @@ export default function TripsMap() {
       data: TRIPS,
       getPath: (d) => d.path,
       getTimestamps: (d) => d.timestamps,
-      getColor: [50, 137, 169],
+      getColor: [0, 200, 236],
       widthMinPixels: 5,
       fadeTrail: true,
       currentTime: time,
-      opacity: 0.6,
+      opacity: 0.5,
       rounded: true,
       trailLength: TRAIL_LENGTH,
       shadowEnabled: false,

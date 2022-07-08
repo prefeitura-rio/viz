@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -10,9 +10,6 @@ export default function Home() {
         </li>
         <li>
           <Link to="/especial-sppo/trips"> Especial SPPO | Trips </Link>
-        </li>
-        <li>
-          <Link to="/especial-sppo/scroll"> Especial SPPO | Scroll </Link>
         </li>
       </lu>
     </div>
