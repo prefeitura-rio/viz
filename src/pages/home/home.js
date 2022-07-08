@@ -11,6 +11,9 @@ export default function Home() {
         <li>
           <Link to="/especial-sppo/trips"> Especial SPPO | Trips </Link>
         </li>
+        <li>
+          <Link to="/especial-sppo/scroll"> Especial SPPO | Scroll </Link>
+        </li>
       </lu>
     </div>
   );
