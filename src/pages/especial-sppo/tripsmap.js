@@ -8,7 +8,8 @@ import { TripsLayer } from "@deck.gl/geo-layers";
 // notice the exclamation point in the import.
 // @ts-ignore
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
-mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
+mapboxgl.workerClass =
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 // Source data CSV: https://jupyter.dados.rio/lab/tree/dataviz/dataviz-subsidio
 const TRIPS = require("./trips.json");
@@ -23,16 +24,24 @@ const ANIMATION_SPEED = 5;
 const LOOP_LENGTH = 10800;
 const TRAIL_LENGTH = 500;
 
-//initial map position
-const INITIAL_VIEW_STATE = {
-  longitude: -43.45938,
-  latitude: -22.94232,
-  zoom: 10.67,
-  pitch: 7.0,
-  bearing: 0.0,
-};
+// //initial map position
+// const INITIAL_VIEW_STATE = {
+// longitude: -43.45938,
+// latitude: -22.94232,
+// zoom: 10.67,
+// pitch: 7.0,
+// bearing: 0.0,
+// };
 
-export default function TripsMap() {
+export default function TripsMap({
+  INITIAL_VIEW_STATE = {
+    longitude: -43.45938,
+    latitude: -22.94232,
+    zoom: 10.67,
+    pitch: 7.0,
+    bearing: 0.0,
+  },
+}) {
   const [time, setTime] = useState(0);
   const [animation] = useState({});
 
@@ -63,7 +72,11 @@ export default function TripsMap() {
   ];
 
   return (
-    <DeckGL initialViewState={INITIAL_VIEW_STATE} controller={false} layers={layers}>
+    <DeckGL
+      initialViewState={INITIAL_VIEW_STATE}
+      controller={false}
+      layers={layers}
+    >
       <Map mapStyle={MAP_STYLE} mapboxAccessToken={MAPBOX_API_TOKEN} />
     </DeckGL>
   );

@@ -14,6 +14,9 @@ export default function Home() {
         <li>
           <Link to="/especial-sppo/scroll"> Especial SPPO | Scroll </Link>
         </li>
+        <li>
+          <Link to="/especial-sppo/scrollmap"> Especial SPPO | ScrollMap </Link>
+        </li>
       </lu>
     </div>
   );

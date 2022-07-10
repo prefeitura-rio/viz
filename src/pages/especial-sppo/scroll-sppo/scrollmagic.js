@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 import busao from "./school-bus.png";
+import TripsMap from "../tripsmap";
 
 const windowWidth = window.innerWidth;
 const const_duration = 400;
