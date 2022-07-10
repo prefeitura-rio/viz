@@ -6,6 +6,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/home";
 import TripsMap from "./pages/especial-sppo/tripsmap";
 import ScrollSPPO from "./pages/especial-sppo/scroll-sppo/scrollmagic";
+import ScrollMap from "./pages/especial-sppo/scroll-sppo/scrollmap";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/especial-sppo/trips" element={<TripsMap />} />
           <Route path="/especial-sppo/scroll" element={<ScrollSPPO />} />
+          <Route path="/especial-sppo/scrollmap" element={<ScrollMap />} />
         </Routes>
       </Router>
     </div>
