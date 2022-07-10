@@ -58,16 +58,6 @@ export default class ScrollExample extends Component {
                         </svg>
                       </div>
                     </Tween>
-                    <Timeline
-                      target={
-                        <div className="heading">
-                          <h2>This is a cool heading</h2>
-                        </div>
-                      }
-                    >
-                      <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} />
-                      <Tween to={{ x: "110%" }} />
-                    </Timeline>
                   </Timeline>
                 </div>
               )}

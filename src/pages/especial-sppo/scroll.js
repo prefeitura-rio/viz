@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import ScrollExample from "../../components/scroll_example/scroll_example";
+import ScrollSPPO from "./scroll-sppo/scrollmagic";
 
 class App extends Component {
   render() {
-    return <ScrollExample />;
+    return <ScrollSPPO />;
   }
 }
 
-ReactDOM.render(React.createElement(App, {}, null), document.getElementById("scroll-div"));
+ReactDOM.render(
+  React.createElement(App, {}, null),
+  document.getElementById("scroll-div")
+);
