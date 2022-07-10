@@ -24,16 +24,17 @@ export default function ScrollMap() {
       // height: 100vh;
       background-color: #d5e8f7;
     }
+    .map {
+      height: 50vh;
+    }
+  }
   `;
   const [currentZoom, setCurrentZoon] = useState(10);
 
-  // const setZoom = (progress) => {
-  //   if (progress > 0.5) {
-  //     return setCurrentZoon(12);
-  //   } else {
-  //     return setCurrentZoon(10);
-  //   }
-  // };
+  const setZoom = (progress, initialZoom, finalZoom) => {
+    var step = finalZoom - initialZoom;
+    setCurrentZoon(initialZoom + step * progress);
+  };
 
   const updateZoom = (progress, initialZoom, finalZoom) => {
     var step = finalZoom - initialZoom;

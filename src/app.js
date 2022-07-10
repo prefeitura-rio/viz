@@ -7,6 +7,7 @@ import Home from "./pages/home/home";
 import TripsMap from "./pages/especial-sppo/tripsmap";
 import ScrollSPPO from "./pages/especial-sppo/scroll-sppo/scrollmagic";
 import ScrollMap from "./pages/especial-sppo/scroll-sppo/scrollmap";
+import ScrollMapboxGL from "./pages/especial-sppo/scroll-sppo/scrollmagic-mapboxgl";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
           <Route path="/especial-sppo/trips" element={<TripsMap />} />
           <Route path="/especial-sppo/scroll" element={<ScrollSPPO />} />
           <Route path="/especial-sppo/scrollmap" element={<ScrollMap />} />
+          <Route
+            path="/especial-sppo/scrollmapbox"
+            element={<ScrollMapboxGL />}
+          />
         </Routes>
       </Router>
     </div>
