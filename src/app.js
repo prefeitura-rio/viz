@@ -8,6 +8,7 @@ import TripsMap from "./pages/especial-sppo/tripsmap";
 import ScrollSPPO from "./pages/especial-sppo/scroll-sppo/scrollmagic";
 import ScrollMap from "./pages/especial-sppo/scroll-sppo/scrollmap";
 import ScrollMapboxGL from "./pages/especial-sppo/scroll-sppo/scrollmagic-mapboxgl";
+import Sandbox from "./pages/sandbox/sandbox";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             path="/especial-sppo/scrollmapbox"
             element={<ScrollMapboxGL />}
           />
+          <Route path="/sandbox" element={<Sandbox />} />
         </Routes>
       </Router>
     </div>
