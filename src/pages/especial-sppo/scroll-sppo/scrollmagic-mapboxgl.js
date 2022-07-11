@@ -17,8 +17,14 @@ export default function ScrollMapboxGL() {
   const [settings, setSettings] = useState({
     scrollZoom: false,
     mapboxAccessToken: MAPBOX_TOKEN,
-    mapStyle: "mapbox://styles/mapbox/light-v9",
-    style: { width: "100%", height: "500px" },
+    mapStyle: "mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b",
+    style: {
+      position: "fixed",
+      top: "0",
+      left: "0",
+      width: "100vw",
+      height: "100vh",
+    },
     boxZoom: true,
     dragRotate: true,
     dragPan: true,
@@ -47,8 +53,12 @@ export default function ScrollMapboxGL() {
       background-color: black;
     }
 
-    .map-container {
-      height: 400px;
+    .map {
+      position: fixed,
+      top: 0,
+      left: 0,
+      width: 100vw,
+      height: 100vh
     }
   `;
 
@@ -77,32 +87,94 @@ export default function ScrollMapboxGL() {
 
   return (
     <TweenStyled>
-      <div className="section" />
-      <Map
-        ref={mapRef}
-        initialViewState={initialViewState}
-        {...settings}
-        onLoad={flyToNextStep}
-      />
       <Controller>
-        <div id="t1" />
+        <div className="section" id="section" />
+        <div>
+          <Map ref={mapRef} initialViewState={initialViewState} {...settings} />
+        </div>
         <Scene
           triggerElement="#t1"
-          duration={500}
           indicators={true}
-          pin={true}
-          offset={-500}
+          pin={{
+            pushFollowers: false,
+          }}
+          duration={400}
         >
-          {(progress) => (
-            <Timeline totalProgress={progress} paused>
-              {/* <Tween>to={flyToNextStep}</Tween> */}
-            </Timeline>
+          {(progress, event) => (
+            <h1 style={{ color: "#FFF", top: "50vh" }}>
+              {progress}
+              {" Scene 1"}
+            </h1>
           )}
         </Scene>
-
-        <div className="black-box" />
+        <div id="t1" />
+        <Scene
+          triggerElement="#t2"
+          indicators={true}
+          pin={{
+            pushFollowers: false,
+          }}
+          duration={400}
+        >
+          {(progress, event) => (
+            <h1 style={{ color: "#FFF", top: "50vh" }}>
+              {progress}
+              {" Scene 2"}
+            </h1>
+          )}
+        </Scene>
+        <div id="t2" />
+        <Scene
+          triggerElement="#t3"
+          indicators={true}
+          pin={{
+            pushFollowers: false,
+          }}
+          duration={400}
+        >
+          {(progress, event) => (
+            <h1 style={{ color: "#FFF", top: "50vh" }}>
+              {progress}
+              {" Scene 3"}
+            </h1>
+          )}
+        </Scene>
+        <div id="t3" />
+        <Scene
+          triggerElement="#t4"
+          indicators={true}
+          pin={{
+            pushFollowers: false,
+          }}
+          duration={400}
+        >
+          {(progress, event) => (
+            <h1 style={{ color: "#FFF", top: "50vh" }}>
+              {progress}
+              {" Scene 4"}
+            </h1>
+          )}
+        </Scene>
+        <div id="t4" />
+        <Scene
+          triggerElement="#t5"
+          indicators={true}
+          pin={{
+            pushFollowers: false,
+          }}
+          duration={400}
+        >
+          {(progress, event) => (
+            <h1 style={{ color: "#FFF", top: "50vh" }}>
+              {progress}
+              {" Scene 5"}
+            </h1>
+          )}
+        </Scene>
+        <div id="t5" className="section" />
         <div className="section" />
       </Controller>
+      <div className="section" />{" "}
     </TweenStyled>
   );
 }
