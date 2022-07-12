@@ -78,9 +78,9 @@ export default function ScrollMapboxGL() {
           duration={400}
         >
           {(progress, event) => (
-            <h1 style={{ color: "#FFF", top: "50vh" }}>
+            <h1 style={{ color: "#FFF", top: "28vh" }}>
+              {" Scene 1 | Progress: "}
               {progress}
-              {" Scene 1"}
               {flyToNextStep({
                 center: [cities.sp.lon, cities.sp.lat],
                 zoom: 9,
@@ -101,9 +101,9 @@ export default function ScrollMapboxGL() {
           duration={400}
         >
           {(progress, event) => (
-            <h1 style={{ color: "#FFF", top: "50vh" }}>
+            <h1 style={{ color: "#FFF", top: "28vh" }}>
+              {" Scene 2 | Progress: "}
               {progress}
-              {" Scene 2"}
               {flyToNextStep({
                 center: [cities.rj.lon, cities.rj.lat],
                 zoom: 9,
@@ -124,9 +124,9 @@ export default function ScrollMapboxGL() {
           duration={400}
         >
           {(progress, event) => (
-            <h1 style={{ color: "#FFF", top: "50vh" }}>
+            <h1 style={{ color: "#FFF", top: "28vh" }}>
+              {" Scene 3 | Progress: "}
               {progress}
-              {" Scene 3"}
               {flyToNextStep({
                 center: [cities.rj.lon, cities.rj.lat],
                 zoom: 10,
@@ -147,9 +147,9 @@ export default function ScrollMapboxGL() {
           duration={400}
         >
           {(progress, event) => (
-            <h1 style={{ color: "#FFF", top: "50vh" }}>
+            <h1 style={{ color: "#FFF", top: "28vh" }}>
+              {" Scene 4 | Progress: "}
               {progress}
-              {" Scene 4"}
               {flyToNextStep({
                 center: [cities.rj.lon, cities.rj.lat],
                 zoom: 11,
@@ -169,9 +169,9 @@ export default function ScrollMapboxGL() {
           duration={400}
         >
           {(progress, event) => (
-            <h1 style={{ color: "#FFF", top: "50vh" }}>
+            <h1 style={{ color: "#FFF", top: "28vh" }}>
+              {" Scene 5 | Progress: "}
               {progress}
-              {" Scene 5"}
               {flyToNextStep({
                 center: [cities.sp.lon, cities.sp.lat],
                 zoom: 11,
