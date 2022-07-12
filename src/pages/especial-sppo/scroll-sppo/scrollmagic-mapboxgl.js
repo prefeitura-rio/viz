@@ -67,7 +67,7 @@ export default function ScrollMapboxGL() {
   return (
     <TweenStyled>
       <div className="section" id="section" />
-      <Map ref={mapRef} initialViewState={initialViewState} {...settings} />
+      <Map interactive={false} ref={mapRef} initialViewState={initialViewState} {...settings} />
       <Controller>
         <Scene
           triggerElement="#t1"
@@ -81,7 +81,9 @@ export default function ScrollMapboxGL() {
             <h1 style={{ color: "#FFF", top: "28vh" }}>
               {" Scene 1 | Progress: "}
               {progress}
-              {flyToNextStep({
+              {
+              event.type === "enter" &&
+              flyToNextStep({
                 center: [cities.sp.lon, cities.sp.lat],
                 zoom: 9,
                 pitch: 0,
@@ -104,7 +106,9 @@ export default function ScrollMapboxGL() {
             <h1 style={{ color: "#FFF", top: "28vh" }}>
               {" Scene 2 | Progress: "}
               {progress}
-              {flyToNextStep({
+              {
+              event.type === "enter" &&
+              flyToNextStep({
                 center: [cities.rj.lon, cities.rj.lat],
                 zoom: 9,
                 pitch: 40,
@@ -127,7 +131,9 @@ export default function ScrollMapboxGL() {
             <h1 style={{ color: "#FFF", top: "28vh" }}>
               {" Scene 3 | Progress: "}
               {progress}
-              {flyToNextStep({
+              {
+              event.type === "enter" &&
+              flyToNextStep({
                 center: [cities.rj.lon, cities.rj.lat],
                 zoom: 10,
                 pitch: 30,
@@ -150,7 +156,9 @@ export default function ScrollMapboxGL() {
             <h1 style={{ color: "#FFF", top: "28vh" }}>
               {" Scene 4 | Progress: "}
               {progress}
-              {flyToNextStep({
+              {
+              event.type === "enter" &&
+              flyToNextStep({
                 center: [cities.rj.lon, cities.rj.lat],
                 zoom: 11,
                 pitch: 0,
@@ -172,7 +180,9 @@ export default function ScrollMapboxGL() {
             <h1 style={{ color: "#FFF", top: "28vh" }}>
               {" Scene 5 | Progress: "}
               {progress}
-              {flyToNextStep({
+              {
+              event.type === "enter" &&
+              flyToNextStep({
                 center: [cities.sp.lon, cities.sp.lat],
                 zoom: 11,
                 pitch: 0,
