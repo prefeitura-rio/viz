@@ -17,8 +17,8 @@ const cities = {
 };
 
 const initialViewState = {
-  latitude: cities.sp.lat,
-  longitude: cities.sp.lon,
+  latitude: cities.rj.lat,
+  longitude: cities.rj.lon,
   zoom: 9,
   bearing: 0,
   pitch: 0,
@@ -86,11 +86,11 @@ export default function ScrollMapboxGL() {
               {progress}
               {event.type === "enter" &&
                 flyToNextStep({
-                  center: [cities.sp.lon, cities.sp.lat],
+                  center: [cities.rj.lon, cities.rj.lat],
                   zoom: 9,
-                  pitch: 0,
                   bearing: 0,
-                  duration: 1000,
+                  pitch: 0,
+                  duration: 4000,
                 })}
             </h1>
           )}
@@ -111,11 +111,11 @@ export default function ScrollMapboxGL() {
               {progress}
               {event.type === "enter" &&
                 flyToNextStep({
-                  center: [cities.rj.lon, cities.rj.lat],
-                  zoom: 9,
-                  pitch: 40,
-                  bearing: 180,
-                  duration: 2000,
+                  center: [-43.54516, -22.98354],
+                  zoom: 10.67,
+                  pitch: 7.0,
+                  bearing: 0.0,
+                  duration: 4000,
                 })}
             </h1>
           )}
@@ -136,11 +136,11 @@ export default function ScrollMapboxGL() {
               {progress}
               {event.type === "enter" &&
                 flyToNextStep({
-                  center: [cities.rj.lon, cities.rj.lat],
-                  zoom: 10,
-                  pitch: 30,
-                  bearing: 0,
-                  duration: 2000,
+                  center: [-43.66089, -22.92225],
+                  zoom: 13.36,
+                  pitch: 60.0,
+                  bearing: 0.0,
+                  duration: 4000,
                 })}
             </h1>
           )}
@@ -161,10 +161,11 @@ export default function ScrollMapboxGL() {
               {progress}
               {event.type === "enter" &&
                 flyToNextStep({
-                  center: [cities.rj.lon, cities.rj.lat],
-                  zoom: 11,
-                  pitch: 0,
-                  duration: 2000,
+                  center: [-43.35712, -22.8334],
+                  zoom: 13.26,
+                  pitch: 60.0,
+                  bearing: -151.9,
+                  duration: 4000,
                 })}
             </h1>
           )}
@@ -185,11 +186,11 @@ export default function ScrollMapboxGL() {
               {progress}
               {event.type === "enter" &&
                 flyToNextStep({
-                  center: [cities.sp.lon, cities.sp.lat],
-                  zoom: 11,
-                  pitch: 0,
-                  bearing: 0,
-                  duration: 2000,
+                  center: [-43.24732, -22.9526],
+                  zoom: 12.33,
+                  pitch: 60.0,
+                  bearing: -51.24,
+                  duration: 4000,
                 })}
             </h1>
           )}
