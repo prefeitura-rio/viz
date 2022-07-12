@@ -69,29 +69,24 @@ export default function ScrollMapboxGL() {
   console.log(cities.sp.lon);
 
   const initialViewState = {
-    latitude: cities.sp.lat,
-    longitude: cities.sp.lon,
-    zoom: 10,
+    latitude: cities.rj.lat,
+    longitude: cities.rj.lon,
+    zoom: 9,
     bearing: 0,
     pitch: 0,
   };
 
   const mapRef = useRef();
 
-  const flyToNextStep = useCallback(() => {
-    mapRef.current?.flyTo({
-      center: [cities.rj.lon, cities.rj.lat],
-      duration: 2000,
-    });
-  }, []);
+  const flyToNextStep = (viewState) => {
+    mapRef.current?.flyTo(viewState);
+  };
 
   return (
     <TweenStyled>
+      <div className="section" id="section" />
+      <Map ref={mapRef} initialViewState={initialViewState} {...settings} />
       <Controller>
-        <div className="section" id="section" />
-        <div>
-          <Map ref={mapRef} initialViewState={initialViewState} {...settings} />
-        </div>
         <Scene
           triggerElement="#t1"
           indicators={true}
@@ -104,6 +99,12 @@ export default function ScrollMapboxGL() {
             <h1 style={{ color: "#FFF", top: "50vh" }}>
               {progress}
               {" Scene 1"}
+              {flyToNextStep({
+                center: [cities.sp.lon, cities.sp.lat],
+                zoom: 10,
+                pitch: 50,
+                duration: 2000,
+              })}
             </h1>
           )}
         </Scene>
@@ -120,6 +121,12 @@ export default function ScrollMapboxGL() {
             <h1 style={{ color: "#FFF", top: "50vh" }}>
               {progress}
               {" Scene 2"}
+              {flyToNextStep({
+                center: [cities.rj.lon, cities.rj.lat],
+                zoom: 9,
+                pitch: 40,
+                duration: 2000,
+              })}
             </h1>
           )}
         </Scene>
