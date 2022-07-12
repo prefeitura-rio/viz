@@ -1,19 +1,35 @@
-import React, {
-  Component,
-  useRef,
-  useState,
-  useEffect,
-  useCallback,
-} from "react";
+import React, { useRef, useState, useCallback } from "react";
 import styled from "styled-components";
 import { Controller, Scene } from "react-scrollmagic";
-import { Tween, Timeline } from "react-gsap";
 import Map from "react-map-gl";
 
-const windowWidth = window.innerWidth;
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w";
+const cities = {
+  sp: { lat: -23.5691, lon: -46.6474 },
+  rj: { lat: -22.9121089, lon: -43.2301558 },
+};
+
+const initialViewState = {
+  latitude: cities.sp.lat,
+  longitude: cities.sp.lon,
+  zoom: 9,
+  bearing: 0,
+  pitch: 0,
+};
+
 export default function ScrollMapboxGL() {
+  const TweenStyled = styled.div`
+    .section {
+      height: 50vh;
+      background-color: #87c5f5;
+    }
+
+    .black-box {
+      height: 100px;
+      background-color: black;
+    }
+  `;
   const [settings, setSettings] = useState({
     scrollZoom: false,
     mapboxAccessToken: MAPBOX_TOKEN,
@@ -33,6 +49,7 @@ export default function ScrollMapboxGL() {
     touchZoomRotate: true,
     touchPitch: true,
   });
+
   const updateSettings = useCallback(
     (name, value) =>
       setSettings((s) => ({
@@ -42,42 +59,7 @@ export default function ScrollMapboxGL() {
     []
   );
 
-  const TweenStyled = styled.div`
-    .section {
-      height: 50vh;
-      background-color: #87c5f5;
-    }
-
-    .black-box {
-      height: 100px;
-      background-color: black;
-    }
-
-    .map {
-      position: fixed,
-      top: 0,
-      left: 0,
-      width: 100vw,
-      height: 100vh
-    }
-  `;
-
-  const cities = {
-    sp: { lat: -23.5691, lon: -46.6474 },
-    rj: { lat: -22.9121089, lon: -43.2301558 },
-  };
-  console.log(cities.sp.lon);
-
-  const initialViewState = {
-    latitude: cities.rj.lat,
-    longitude: cities.rj.lon,
-    zoom: 9,
-    bearing: 0,
-    pitch: 0,
-  };
-
   const mapRef = useRef();
-
   const flyToNextStep = (viewState) => {
     mapRef.current?.flyTo(viewState);
   };
@@ -101,9 +83,10 @@ export default function ScrollMapboxGL() {
               {" Scene 1"}
               {flyToNextStep({
                 center: [cities.sp.lon, cities.sp.lat],
-                zoom: 10,
-                pitch: 50,
-                duration: 2000,
+                zoom: 9,
+                pitch: 0,
+                bearing: 0,
+                duration: 1000,
               })}
             </h1>
           )}
@@ -125,6 +108,7 @@ export default function ScrollMapboxGL() {
                 center: [cities.rj.lon, cities.rj.lat],
                 zoom: 9,
                 pitch: 40,
+                bearing: 180,
                 duration: 2000,
               })}
             </h1>
@@ -143,6 +127,13 @@ export default function ScrollMapboxGL() {
             <h1 style={{ color: "#FFF", top: "50vh" }}>
               {progress}
               {" Scene 3"}
+              {flyToNextStep({
+                center: [cities.rj.lon, cities.rj.lat],
+                zoom: 10,
+                pitch: 30,
+                bearing: 0,
+                duration: 2000,
+              })}
             </h1>
           )}
         </Scene>
@@ -159,6 +150,12 @@ export default function ScrollMapboxGL() {
             <h1 style={{ color: "#FFF", top: "50vh" }}>
               {progress}
               {" Scene 4"}
+              {flyToNextStep({
+                center: [cities.rj.lon, cities.rj.lat],
+                zoom: 11,
+                pitch: 0,
+                duration: 2000,
+              })}
             </h1>
           )}
         </Scene>
@@ -175,6 +172,13 @@ export default function ScrollMapboxGL() {
             <h1 style={{ color: "#FFF", top: "50vh" }}>
               {progress}
               {" Scene 5"}
+              {flyToNextStep({
+                center: [cities.sp.lon, cities.sp.lat],
+                zoom: 11,
+                pitch: 0,
+                bearing: 0,
+                duration: 2000,
+              })}
             </h1>
           )}
         </Scene>
