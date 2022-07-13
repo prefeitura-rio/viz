@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Map } from "react-map-gl";
+import { Map, Layer } from "react-map-gl";
 import mapboxgl from "mapbox-gl"; // do not remove this line
 import DeckGL from "@deck.gl/react";
 import { TripsLayer } from "@deck.gl/geo-layers";
@@ -12,7 +12,7 @@ mapboxgl.workerClass =
   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 // Source data CSV: https://jupyter.dados.rio/lab/tree/dataviz/dataviz-subsidio
-const TRIPS = require("./trips.json");
+const TRIPS = require("./data/trips.json");
 
 // Mapbox configs
 const MAP_STYLE = "mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b";
@@ -20,8 +20,8 @@ const MAPBOX_API_TOKEN =
   "pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w";
 
 // animation configs
-const ANIMATION_SPEED = 5;
-const LOOP_LENGTH = 10800;
+const ANIMATION_SPEED = 4;
+const LOOP_LENGTH = 28000;
 const TRAIL_LENGTH = 500;
 
 // //initial map position
@@ -71,13 +71,46 @@ export default function TripsMap({
     }),
   ];
 
+  const [building3d, setBuilding] = useState({
+    id: "add-3d-buildings",
+    source: "composite",
+    "source-layer": "building",
+    filter: ["==", "extrude", "true"],
+    type: "fill-extrusion",
+    minzoom: 5,
+    paint: {
+      "fill-extrusion-color": "#aaa",
+      "fill-extrusion-height": [
+        "interpolate",
+        ["linear"],
+        ["zoom"],
+        5,
+        0,
+        10.05,
+        ["get", "height"],
+      ],
+      "fill-extrusion-base": [
+        "interpolate",
+        ["linear"],
+        ["zoom"],
+        5,
+        0,
+        10.05,
+        ["get", "min_height"],
+      ],
+      "fill-extrusion-opacity": 0.9,
+    },
+  });
+
   return (
     <DeckGL
       initialViewState={INITIAL_VIEW_STATE}
       controller={false}
       layers={layers}
     >
-      <Map mapStyle={MAP_STYLE} mapboxAccessToken={MAPBOX_API_TOKEN} />
+      <Map mapStyle={MAP_STYLE} mapboxAccessToken={MAPBOX_API_TOKEN}>
+        <Layer {...building3d} />
+      </Map>
     </DeckGL>
   );
 }

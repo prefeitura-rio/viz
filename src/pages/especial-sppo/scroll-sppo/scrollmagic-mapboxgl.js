@@ -40,6 +40,8 @@ export default function ScrollMapboxGL() {
     scrollZoom: false,
     mapboxAccessToken: MAPBOX_TOKEN,
     mapStyle: MAP_STYLE,
+    interactive: false,
+
     style: {
       position: "fixed",
       top: "0",
@@ -66,12 +68,7 @@ export default function ScrollMapboxGL() {
   return (
     <TweenStyled>
       <div className="section" />
-      <Map
-        interactive={false}
-        ref={mapRef}
-        initialViewState={initialViewState}
-        {...settings}
-      />
+      <Map ref={mapRef} initialViewState={initialViewState} {...settings} />
       <Controller>
         <Scene
           triggerElement="#t1"
