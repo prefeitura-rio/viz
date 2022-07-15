@@ -85,25 +85,10 @@ export default function ScrollMapboxGL() {
     mapRef.current?.flyTo(viewState);
   };
 
-  const myTripsLayer = new MapboxLayer({
-    id: "my-trips-layer",
-    type: TripsLayer,
-    data: TRIPS,
-    getPath: (d) => d.path,
-    getTimestamps: (d) => d.timestamps,
-    getColor: [0, 200, 236],
-    widthMinPixels: 5,
-    fadeTrail: true,
-    currentTime: time,
-    opacity: 1,
-    rounded: true,
-    trailLength: TRAIL_LENGTH,
-    shadowEnabled: false,
-})
-
   const layers = [
-    new TripsLayer({
-      id: "trips",
+    new MapboxLayer({
+      id: "my-trips-layer",
+      type: TripsLayer,
       data: TRIPS,
       getPath: (d) => d.path,
       getTimestamps: (d) => d.timestamps,
@@ -111,41 +96,43 @@ export default function ScrollMapboxGL() {
       widthMinPixels: 5,
       fadeTrail: true,
       currentTime: time,
-      opacity: 1,
+      opacity: 0,
       rounded: true,
       trailLength: TRAIL_LENGTH,
       shadowEnabled: false,
     }),
-    // null,
-    // new TripsLayer({
-    //   id: "trips",
-    //   data: TRIPS,
-    //   getPath: (d) => d.path,
-    //   getTimestamps: (d) => d.timestamps,
-    //   getColor: [0, 200, 236],
-    //   widthMinPixels: 5,
-    //   fadeTrail: true,
-    //   currentTime: time,
-    //   opacity: 0.5,
-    //   rounded: true,
-    //   trailLength: TRAIL_LENGTH,
-    //   shadowEnabled: false,
-    // }),
-    // null,
-    // new TripsLayer({
-    //   id: "trips",
-    //   data: TRIPS,
-    //   getPath: (d) => d.path,
-    //   getTimestamps: (d) => d.timestamps,
-    //   getColor: [0, 200, 236],
-    //   widthMinPixels: 5,
-    //   fadeTrail: true,
-    //   currentTime: time,
-    //   opacity: 0.5,
-    //   rounded: true,
-    //   trailLength: TRAIL_LENGTH,
-    //   shadowEnabled: false,
-    // }),
+    null,
+    new MapboxLayer({
+      id: "my-trips-layer2",
+      type: TripsLayer,
+      data: TRIPS,
+      getPath: (d) => d.path,
+      getTimestamps: (d) => d.timestamps,
+      getColor: [0, 200, 236],
+      widthMinPixels: 5,
+      fadeTrail: true,
+      currentTime: time,
+      opacity: 0,
+      rounded: true,
+      trailLength: TRAIL_LENGTH,
+      shadowEnabled: false,
+    }),
+    null,
+    new MapboxLayer({
+      id: "my-trips-layer3",
+      type: TripsLayer,
+      data: TRIPS,
+      getPath: (d) => d.path,
+      getTimestamps: (d) => d.timestamps,
+      getColor: [0, 200, 236],
+      widthMinPixels: 5,
+      fadeTrail: true,
+      currentTime: time,
+      opacity: 0,
+      rounded: true,
+      trailLength: TRAIL_LENGTH,
+      shadowEnabled: false,
+    }),
   ];
 
   const [building3d, setBuilding] = useState({
@@ -179,13 +166,21 @@ export default function ScrollMapboxGL() {
     },
   });
 
-  const addDeckGl = () => {
+  const setLayerOpacity = (index) => {
     const mapInstance = mapRef.current?.getMap();
-    const deckOverlay = new DeckOverlay({
-      id: "deck-overlay",
-      layers: layers,
-    })
-    mapInstance.addControl(deckOverlay);
+    if (!mapInstance) return;
+    for (let i = 0; i < layers.length; i++) {
+      if (!layers[i]) continue;
+      if (i === index) {
+        mapInstance.getLayer(layers[i].id)?.implementation.setProps({
+          opacity: 1,
+        });
+      } else {
+        mapInstance.getLayer(layers[i].id)?.implementation.setProps({
+          opacity: 0,
+        });
+      }
+    }
   };
 
   useEffect(
@@ -208,17 +203,25 @@ export default function ScrollMapboxGL() {
         {...settings}
         onLoad={
           ({target}) => {
-            target.addLayer(myTripsLayer);
+            layers.forEach((layer) => {
+              if (layer) {
+                target.addLayer(layer);
+              }
+            });
           }
         }
         onRender={
           ({target}) => {
-            const tripsLayer = target.getLayer("my-trips-layer");
-            if (tripsLayer) {
-              tripsLayer.implementation.setProps({
-                currentTime: time,
-              });
-            }
+            layers.forEach((layer) => {
+              if (layer) {
+                const currentLayer = target.getLayer(layer.id);
+                if (currentLayer) {
+                  currentLayer.implementation.setProps({
+                    currentTime: time,
+                  });
+                }
+              }
+            });
           }
         }
       >
@@ -247,6 +250,7 @@ export default function ScrollMapboxGL() {
                     duration: 4000,
                   })
                 }
+                {event.type === "enter" && setLayerOpacity(0)}
               </h1>
             )}
           </Scene>
@@ -272,6 +276,7 @@ export default function ScrollMapboxGL() {
                     bearing: 0.0,
                     duration: 4000,
                   })}
+                {event.type === "enter" && setLayerOpacity(1)}
               </h1>
             )}
           </Scene>
@@ -297,6 +302,7 @@ export default function ScrollMapboxGL() {
                     bearing: 0.0,
                     duration: 4000,
                   })}
+                {event.type === "enter" && setLayerOpacity(2)}
               </h1>
             )}
           </Scene>
@@ -322,6 +328,7 @@ export default function ScrollMapboxGL() {
                     bearing: -151.9,
                     duration: 4000,
                   })}
+                {event.type === "enter" && setLayerOpacity(3)}
               </h1>
             )}
           </Scene>
@@ -347,6 +354,7 @@ export default function ScrollMapboxGL() {
                     bearing: -51.24,
                     duration: 4000,
                   })}
+                {event.type === "enter" && setLayerOpacity(4)}
               </h1>
             )}
           </Scene>
