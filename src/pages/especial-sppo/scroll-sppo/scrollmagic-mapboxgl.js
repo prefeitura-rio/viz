@@ -193,7 +193,6 @@ export default function ScrollMapboxGL() {
       const animate = () => {
         setTime(t => (t + ANIMATION_SPEED) % LOOP_LENGTH);
         animation.id = window.requestAnimationFrame(animate);
-        console.log(animation);
       };
       animation.id = window.requestAnimationFrame(animate);
       return () => window.cancelAnimationFrame(animation.id);
@@ -210,18 +209,12 @@ export default function ScrollMapboxGL() {
         onLoad={
           ({target}) => {
             target.addLayer(myTripsLayer);
-            // setTimeout(() => {
-            //   const mapInstance = mapRef.current?.getMap();
-            //   mapInstance.addLayer(myTripsLayer);
-            //   console.log(mapInstance);
-            // }, 5000);
           }
         }
         onRender={
           ({target}) => {
             const tripsLayer = target.getLayer("my-trips-layer");
             if (tripsLayer) {
-              console.log(tripsLayer);
               tripsLayer.implementation.setProps({
                 currentTime: time,
               });
