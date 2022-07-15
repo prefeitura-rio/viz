@@ -21,8 +21,8 @@ const DURATION = 400;
 const OFFSET = -450;
 const TOP_SCENE = "-1vh";
 // animation configs
-const TRAIL_LENGTH = 500;
-const ANIMATION_SPEED = 4;
+const TRAIL_LENGTH = 1000;
+const ANIMATION_SPEED = 10;
 const LOOP_LENGTH = 28000;
 
 const TRIPS = require("../data/trips.json");
@@ -40,21 +40,22 @@ const initialViewState = {
   pitch: 0,
 };
 
+const TweenStyled = styled.div`
+.section {
+  height: 50vh;
+  background-color: #87c5f5;
+}
+
+.black-box {
+  height: 100px;
+  background-color: black;
+}
+`;
+
 export default function ScrollMapboxGL() {
   const [time, setTime] = useState(0);
   const [animation] = useState({id: undefined});
 
-  const TweenStyled = styled.div`
-    .section {
-      height: 50vh;
-      background-color: #87c5f5;
-    }
-
-    .black-box {
-      height: 100px;
-      background-color: black;
-    }
-  `;
   const [settings, setSettings] = useState({
     scrollZoom: false,
     mapboxAccessToken: MAPBOX_TOKEN,
@@ -190,11 +191,11 @@ export default function ScrollMapboxGL() {
   useEffect(
     () => {
       const animate = () => {
-        console.log(animation);
         setTime(t => (t + ANIMATION_SPEED) % LOOP_LENGTH);
         animation.id = window.requestAnimationFrame(animate).current?.id;
+        console.log(animation);
       };
-      // animation.id = window.requestAnimationFrame(animate).current?.id;
+      animation.id = window.requestAnimationFrame(animate).current?.id;
       return () => window.cancelAnimationFrame(animation.id);
     },
     [animation]
