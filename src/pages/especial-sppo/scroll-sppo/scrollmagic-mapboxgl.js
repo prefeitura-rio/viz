@@ -21,8 +21,8 @@ const DURATION = 400;
 const OFFSET = -450;
 const TOP_SCENE = "-1vh";
 // animation configs
-const TRAIL_LENGTH = 1000;
-const ANIMATION_SPEED = 10;
+const TRAIL_LENGTH = 500;
+const ANIMATION_SPEED = 3;
 const LOOP_LENGTH = 28000;
 
 const TRIPS = require("../data/trips.json");
@@ -54,7 +54,7 @@ const TweenStyled = styled.div`
 
 export default function ScrollMapboxGL() {
   const [time, setTime] = useState(0);
-  const [animation] = useState({id: undefined});
+  const [animation] = useState({});
 
   const [settings, setSettings] = useState({
     scrollZoom: false,
@@ -192,10 +192,10 @@ export default function ScrollMapboxGL() {
     () => {
       const animate = () => {
         setTime(t => (t + ANIMATION_SPEED) % LOOP_LENGTH);
-        animation.id = window.requestAnimationFrame(animate).current?.id;
+        animation.id = window.requestAnimationFrame(animate);
         console.log(animation);
       };
-      animation.id = window.requestAnimationFrame(animate).current?.id;
+      animation.id = window.requestAnimationFrame(animate);
       return () => window.cancelAnimationFrame(animation.id);
     },
     [animation]
@@ -203,13 +203,32 @@ export default function ScrollMapboxGL() {
 
   return (
     <div id="main-container">
-      <Map ref={mapRef} initialViewState={initialViewState} {...settings} onLoad={
-        () => {
-          const mapInstance = mapRef.current?.getMap();
-          mapInstance.addLayer(myTripsLayer);
-          console.log(mapInstance);
+      <Map
+        ref={mapRef}
+        initialViewState={initialViewState}
+        {...settings}
+        onLoad={
+          ({target}) => {
+            target.addLayer(myTripsLayer);
+            // setTimeout(() => {
+            //   const mapInstance = mapRef.current?.getMap();
+            //   mapInstance.addLayer(myTripsLayer);
+            //   console.log(mapInstance);
+            // }, 5000);
+          }
         }
-      }>
+        onRender={
+          ({target}) => {
+            const tripsLayer = target.getLayer("my-trips-layer");
+            if (tripsLayer) {
+              console.log(tripsLayer);
+              tripsLayer.implementation.setProps({
+                currentTime: time,
+              });
+            }
+          }
+        }
+      >
         <Layer {...building3d} />
       </Map>
       <TweenStyled {... {id: "main-div"}}>
