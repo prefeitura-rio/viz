@@ -7,7 +7,7 @@ import Home from "./pages/home/home";
 import TripsMap from "./pages/especial-sppo/tripsmap";
 import ScrollSPPO from "./pages/especial-sppo/scroll-sppo/scrollmagic";
 import ScrollMap from "./pages/especial-sppo/scroll-sppo/scrollmap";
-import ScrollMapboxGL from "./pages/especial-sppo/scroll-sppo/scrollmagic-mapboxgl";
+import ScrollMapboxGL from "./components/engine/scroll-mapbox-gl";
 import Sandbox from "./pages/sandbox/sandbox";
 import story from "./stories/sample";
 
@@ -28,7 +28,7 @@ function App() {
             path="/especial-sppo/scrollmapbox"
             element={
               <ScrollMapboxGL
-                interactive={false}
+                interactive={true}
                 mapboxAccessToken={MAPBOX_TOKEN}
                 mapStyle={MAP_STYLE}
                 scrollZoom={false}
