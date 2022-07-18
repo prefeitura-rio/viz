@@ -31,7 +31,7 @@ const buildings3d = {
       10.05,
       ["get", "min_height"]
     ],
-    "fill-extrusion-opacity": 0.9
+    "fill-extrusion-opacity": 1
   }
 };
 
@@ -46,7 +46,7 @@ const story = {
       sectionOffset: -500,
       layers: [
         {
-          layerType: "deckgl-trips",
+          layerType: "deckgl",
           layer: new MapboxLayer({
             id: "my-trips-layer",
             type: TripsLayer,
@@ -61,9 +61,9 @@ const story = {
             rounded: true,
             trailLength: TRAIL_LENGTH,
             shadowEnabled: false
-          })
-        },
-        { layerType: "mapboxlayer", layer: buildings3d }
+          }),
+          opacityProperty: ""
+        }
       ],
       map: {
         center: {
@@ -81,7 +81,13 @@ const story = {
       text: "chapter-2",
       sectionDuration: 400,
       sectionOffset: -500,
-      layers: [],
+      layers: [
+        {
+          layerType: "mapbox",
+          layer: { ...buildings3d },
+          opacityProperty: "fill-extrusion-opacity"
+        }
+      ],
       map: {
         center: {
           lat: -22.9121089,
@@ -100,7 +106,7 @@ const story = {
       sectionOffset: -500,
       layers: [
         {
-          layerType: "deckgl-trips",
+          layerType: "deckgl",
           layer: new MapboxLayer({
             id: "my-trips-layer3",
             type: TripsLayer,
@@ -115,9 +121,9 @@ const story = {
             rounded: true,
             trailLength: TRAIL_LENGTH,
             shadowEnabled: false
-          })
-        },
-        { layerType: "mapboxlayer", layer: buildings3d }
+          }),
+          opacityProperty: ""
+        }
       ],
       map: {
         center: {

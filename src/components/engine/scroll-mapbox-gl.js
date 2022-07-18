@@ -1,3 +1,5 @@
+// TODO: implement global layers
+
 import React, { useRef, useState, useCallback, useEffect } from "react";
 import styled from "styled-components";
 import { Controller, Scene } from "react-scrollmagic";
@@ -35,7 +37,7 @@ export default function ScrollMapboxGL(
       chapters: [
         {
           id: "chapter-1",
-          layers: [{ layerType: "", layer: {} }],
+          layers: [{ layerType: "", layer: {}, opacityProperty: "" }],
           sectionDuration: 0,
           sectionOffset: 0,
           map: {
@@ -112,13 +114,33 @@ export default function ScrollMapboxGL(
     if (!mapInstance) return;
     for (let i = 0; i < layers.length; i++) {
       if (i >= startIndex && i < startIndex + layersPerChapter[index]) {
-        mapInstance.getLayer(layers[i].layer.id)?.implementation.setProps({
-          opacity: 1
-        });
+        if (layers[i].layerType === "deckgl") {
+          mapInstance.getLayer(layers[i].layer.id)?.implementation.setProps({
+            opacity: 1
+          });
+        } else if (layers[i].layerType === "mapbox") {
+          if (mapInstance.getLayer(layers[i].layer.id)) {
+            mapInstance.setPaintProperty(
+              layers[i].layer.id,
+              layers[i].opacityProperty,
+              1
+            );
+          }
+        }
       } else {
-        mapInstance.getLayer(layers[i].layer.id)?.implementation.setProps({
-          opacity: 0
-        });
+        if (layers[i].layerType === "deckgl") {
+          mapInstance.getLayer(layers[i].layer.id)?.implementation.setProps({
+            opacity: 0
+          });
+        } else if (layers[i].layerType === "mapbox") {
+          if (mapInstance.getLayer(layers[i].layer.id)) {
+            mapInstance.setPaintProperty(
+              layers[i].layer.id,
+              layers[i].opacityProperty,
+              0
+            );
+          }
+        }
       }
     }
   };
@@ -136,7 +158,6 @@ export default function ScrollMapboxGL(
     }
     layersPerChapter.push(nLayers);
   });
-  console.log(layers);
 
   return (
     <div id="main-container">
@@ -153,14 +174,12 @@ export default function ScrollMapboxGL(
         {...settings}
         onLoad={({ target }) => {
           layers.forEach((layerDict) => {
-            if (layerDict.layerType === "deckgl-trips") {
-              target.addLayer(layerDict.layer);
-            }
+            target.addLayer(layerDict.layer);
           });
         }}
         onRender={({ target }) => {
           layers.forEach((layerDict) => {
-            if (layerDict.layerType === "deckgl-trips") {
+            if (layerDict.layerType === "deckgl") {
               const currentLayer = target.getLayer(layerDict.layer.id);
               if (currentLayer) {
                 currentLayer.implementation.setProps({
@@ -170,14 +189,7 @@ export default function ScrollMapboxGL(
             }
           });
         }}
-      >
-        {/* Mapbox Layers */}
-        {/* {props.story.chapters.layers.map((layerDict, index) => {
-          if (layerDict.layerType === "mapbox") {
-            return <Layer>{...layerDict.layer}</Layer>;
-          }
-        })} */}
-      </Map>
+      ></Map>
       <TweenStyled>
         <div className="section" />
         <Controller>
