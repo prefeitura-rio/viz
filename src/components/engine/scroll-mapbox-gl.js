@@ -43,24 +43,24 @@ export default function ScrollMapboxGL(
           map: {
             center: {
               lat: 0,
-              lon: 0
+              lon: 0,
             },
             zoom: 0,
             bearing: 0,
             pitch: 0,
-            duration: 4000
+            duration: 4000,
           },
-          text: ""
-        }
+          text: "",
+        },
       ],
       initialViewState: {
         latitude: 0,
         longitude: 0,
         zoom: 0,
         bearing: 0,
-        pitch: 0
-      }
-    }
+        pitch: 0,
+      },
+    },
   }
 ) {
   /* Map configurations */
@@ -74,8 +74,8 @@ export default function ScrollMapboxGL(
       top: "0",
       left: "0",
       width: "100vw",
-      height: "100vh"
-    }
+      height: "100vh",
+    },
   });
 
   /* Animation stuff */
@@ -112,11 +112,12 @@ export default function ScrollMapboxGL(
       startIndex += layersPerChapter[i];
     }
     if (!mapInstance) return;
+
     for (let i = 0; i < layers.length; i++) {
       if (i >= startIndex && i < startIndex + layersPerChapter[index]) {
         if (layers[i].layerType === "deckgl") {
           mapInstance.getLayer(layers[i].layer.id)?.implementation.setProps({
-            opacity: 1
+            opacity: 1,
           });
         } else if (layers[i].layerType === "mapbox") {
           if (mapInstance.getLayer(layers[i].layer.id)) {
@@ -125,12 +126,14 @@ export default function ScrollMapboxGL(
               layers[i].opacityProperty,
               1
             );
+            console.log("sources", mapInstance.getStyle().sources);
+            console.log("layers", mapInstance.getStyle().layers);
           }
         }
       } else {
         if (layers[i].layerType === "deckgl") {
           mapInstance.getLayer(layers[i].layer.id)?.implementation.setProps({
-            opacity: 0
+            opacity: 0,
           });
         } else if (layers[i].layerType === "mapbox") {
           if (mapInstance.getLayer(layers[i].layer.id)) {
@@ -169,7 +172,7 @@ export default function ScrollMapboxGL(
           longitude: props.story.chapters[0].map.center.lon,
           zoom: props.story.chapters[0].map.zoom,
           bearing: props.story.chapters[0].map.bearing,
-          pitch: props.story.chapters[0].map.pitch
+          pitch: props.story.chapters[0].map.pitch,
         }}
         {...settings}
         onLoad={({ target }) => {
@@ -183,7 +186,7 @@ export default function ScrollMapboxGL(
               const currentLayer = target.getLayer(layerDict.layer.id);
               if (currentLayer) {
                 currentLayer.implementation.setProps({
-                  currentTime: time
+                  currentTime: time,
                 });
               }
             }
@@ -210,12 +213,12 @@ export default function ScrollMapboxGL(
                         flyToNextStep({
                           center: [
                             chapter.map.center.lon,
-                            chapter.map.center.lat
+                            chapter.map.center.lat,
                           ],
                           zoom: chapter.map.zoom,
                           bearing: chapter.map.bearing,
                           pitch: chapter.map.pitch,
-                          duration: chapter.map.duration
+                          duration: chapter.map.duration,
                         })}
                       {event.type === "enter" && setLayerOpacity(index)}
                     </h1>

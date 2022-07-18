@@ -20,7 +20,7 @@ const buildings3d = {
       5,
       0,
       10.05,
-      ["get", "height"]
+      ["get", "height"],
     ],
     "fill-extrusion-base": [
       "interpolate",
@@ -29,10 +29,21 @@ const buildings3d = {
       5,
       0,
       10.05,
-      ["get", "min_height"]
+      ["get", "min_height"],
     ],
-    "fill-extrusion-opacity": 1
-  }
+    "fill-extrusion-opacity": 1,
+  },
+};
+
+// Use to discover the layer properties
+// console.log("sources", mapInstance.getStyle().sources);
+// console.log("layers", mapInstance.getStyle().layers);
+const linhasAntigas = {
+  id: "linhasantigas",
+  paint: { "line-opacity": 0, "line-color": "#3289a9" },
+  source: "composite",
+  "source-layer": "linhas-0pmlqw",
+  type: "line",
 };
 
 const story = {
@@ -60,21 +71,26 @@ const story = {
             opacity: 0,
             rounded: true,
             trailLength: TRAIL_LENGTH,
-            shadowEnabled: false
+            shadowEnabled: false,
           }),
-          opacityProperty: ""
-        }
+          opacityProperty: "",
+        },
+        {
+          layerType: "mapbox",
+          layer: { ...linhasAntigas },
+          opacityProperty: "line-opacity",
+        },
       ],
       map: {
         center: {
           lat: -22.9121089,
-          lon: -43.2301558
+          lon: -43.2301558,
         },
         zoom: 9,
         bearing: 0,
         pitch: 0,
-        duration: 4000
-      }
+        duration: 4000,
+      },
     },
     {
       id: "chapter-2",
@@ -85,19 +101,19 @@ const story = {
         {
           layerType: "mapbox",
           layer: { ...buildings3d },
-          opacityProperty: "fill-extrusion-opacity"
-        }
+          opacityProperty: "fill-extrusion-opacity",
+        },
       ],
       map: {
         center: {
           lat: -22.9121089,
-          lon: -43.2301558
+          lon: -43.2301558,
         },
         zoom: 15,
         bearing: 0,
         pitch: 0,
-        duration: 4000
-      }
+        duration: 4000,
+      },
     },
     {
       id: "chapter-3",
@@ -120,23 +136,23 @@ const story = {
             opacity: 0,
             rounded: true,
             trailLength: TRAIL_LENGTH,
-            shadowEnabled: false
+            shadowEnabled: false,
           }),
-          opacityProperty: ""
-        }
+          opacityProperty: "",
+        },
       ],
       map: {
         center: {
           lat: -22.9121089,
-          lon: -43.2301558
+          lon: -43.2301558,
         },
         zoom: 12,
         bearing: 0,
         pitch: 0,
-        duration: 4000
-      }
-    }
-  ]
+        duration: 4000,
+      },
+    },
+  ],
 };
 
 export default story;
