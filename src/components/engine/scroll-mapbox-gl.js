@@ -32,7 +32,7 @@ var layerTypes = {
   symbol: ["icon-opacity", "text-opacity"],
   raster: ["raster-opacity"],
   "fill-extrusion": ["fill-extrusion-opacity"],
-  heatmap: ["heatmap-opacity"],
+  heatmap: ["heatmap-opacity"]
 };
 
 export default function ScrollMapboxGL(
@@ -53,24 +53,24 @@ export default function ScrollMapboxGL(
           map: {
             center: {
               lat: 0,
-              lon: 0,
+              lon: 0
             },
             zoom: 0,
             bearing: 0,
             pitch: 0,
-            duration: 4000,
+            duration: 4000
           },
-          text: "",
-        },
+          text: ""
+        }
       ],
       initialViewState: {
         latitude: 0,
         longitude: 0,
         zoom: 0,
         bearing: 0,
-        pitch: 0,
-      },
-    },
+        pitch: 0
+      }
+    }
   }
 ) {
   /* Map configurations */
@@ -84,8 +84,8 @@ export default function ScrollMapboxGL(
       top: "0",
       left: "0",
       width: "100vw",
-      height: "100vh",
-    },
+      height: "100vh"
+    }
   });
 
   /* Animation stuff */
@@ -115,7 +115,19 @@ export default function ScrollMapboxGL(
   };
 
   function getLayerPaintType(layer) {
-    return layerTypes[layer.type][0];
+    return layerTypes[layer.type];
+  }
+
+  function setOpacityDeckglLayer(mapLayer, opacity) {
+    mapLayer?.implementation.setProps({
+      opacity: opacity
+    });
+  }
+
+  function setOpacityMapboxLayer(mapInstance, layerId, mapLayer, opacity) {
+    getLayerPaintType(mapLayer).forEach((paintType) => {
+      mapInstance.setPaintProperty(layerId, paintType, opacity);
+    });
   }
 
   // This will set the opacity of a layer while fading all other layers
@@ -130,6 +142,8 @@ export default function ScrollMapboxGL(
     }
     if (!mapInstance) return;
 
+    var currentLayerIds = [];
+
     for (let i = 0; i < layers.length; i++) {
       // layers from story
       var layerId = layers[i].layer.id;
@@ -140,31 +154,63 @@ export default function ScrollMapboxGL(
 
       // set opacity
       if (i >= startIndex && i < startIndex + layersPerChapter[index]) {
+        currentLayerIds.push(layerId);
         if (layerType === "deckgl") {
-          mapLayer?.implementation.setProps({
-            opacity: 1,
-          });
-        } else if (layerType === "mapbox") {
+          setOpacityDeckglLayer(mapLayer, 1);
+        } else if (layerType.startsWith("mapbox")) {
           if (mapLayer) {
-            mapInstance.setPaintProperty(
-              layerId,
-              getLayerPaintType(mapLayer),
-              1
-            );
+            setOpacityMapboxLayer(mapInstance, layerId, mapLayer, 1);
+          }
+        } else if (layerType === "reuse") {
+          // Look for layer in `layers`
+          const reusableLayer = layers.find((l) => l.layer.id === layerId);
+          const reusableLayerId = reusableLayer.layer.id;
+          const reusableLayerType = reusableLayer.layerType;
+          const reusableMapLayer = mapInstance.getLayer(layerId);
+          if (reusableMapLayer) {
+            if (reusableLayerType === "deckgl") {
+              setOpacityDeckglLayer(reusableMapLayer, 1);
+            } else if (reusableLayerType.startsWith("mapbox")) {
+              if (reusableMapLayer) {
+                setOpacityMapboxLayer(
+                  mapInstance,
+                  reusableLayerId,
+                  reusableMapLayer,
+                  1
+                );
+              }
+            }
           }
         }
       } else {
         if (layerType === "deckgl") {
-          mapLayer?.implementation.setProps({
-            opacity: 0,
-          });
-        } else if (layerType === "mapbox") {
+          setOpacityDeckglLayer(mapLayer, 0);
+        } else if (layerType.startsWith("mapbox")) {
           if (mapLayer) {
-            mapInstance.setPaintProperty(
-              layerId,
-              getLayerPaintType(mapLayer),
-              0
-            );
+            setOpacityMapboxLayer(mapInstance, layerId, mapLayer, 0);
+          }
+        } else if (
+          layerType === "reuse" &&
+          !currentLayerIds.includes(layerId)
+        ) {
+          // Look for layer in `layers`
+          const reusableLayer = layers.find((l) => l.layer.id === layerId);
+          const reusableLayerId = reusableLayer.layer.id;
+          const reusableLayerType = reusableLayer.layerType;
+          const reusableMapLayer = mapInstance.getLayer(layerId);
+          if (reusableMapLayer) {
+            if (reusableLayerType === "deckgl") {
+              setOpacityDeckglLayer(reusableMapLayer, 0);
+            } else if (reusableLayerType.startsWith("mapbox")) {
+              if (reusableMapLayer) {
+                setOpacityMapboxLayer(
+                  mapInstance,
+                  reusableLayerId,
+                  reusableMapLayer,
+                  0
+                );
+              }
+            }
           }
         }
       }
@@ -178,11 +224,7 @@ export default function ScrollMapboxGL(
     let nLayers = 0;
     if (chapter.layers) {
       chapter.layers.forEach((layer) => {
-        if (layer.layerType === "mapbox") {
-          layers.push(layer);
-        } else {
-          layers.push(layer);
-        }
+        layers.push(layer);
         nLayers++;
       });
     }
@@ -199,13 +241,19 @@ export default function ScrollMapboxGL(
           longitude: props.story.chapters[0].map.center.lon,
           zoom: props.story.chapters[0].map.zoom,
           bearing: props.story.chapters[0].map.bearing,
-          pitch: props.story.chapters[0].map.pitch,
+          pitch: props.story.chapters[0].map.pitch
         }}
         {...settings}
         onLoad={({ target }) => {
           layers.forEach((layerDict) => {
-            target.addLayer(layerDict.layer);
+            if (
+              layerDict.layerType === "mapbox" ||
+              layerDict.layerType === "deckgl"
+            ) {
+              target.addLayer(layerDict.layer);
+            }
           });
+          showLayers();
         }}
         onRender={({ target }) => {
           layers.forEach((layerDict) => {
@@ -213,7 +261,7 @@ export default function ScrollMapboxGL(
               const currentLayer = target.getLayer(layerDict.layer.id);
               if (currentLayer) {
                 currentLayer.implementation.setProps({
-                  currentTime: time,
+                  currentTime: time
                 });
               }
             }
@@ -240,12 +288,12 @@ export default function ScrollMapboxGL(
                         flyToNextStep({
                           center: [
                             chapter.map.center.lon,
-                            chapter.map.center.lat,
+                            chapter.map.center.lat
                           ],
                           zoom: chapter.map.zoom,
                           bearing: chapter.map.bearing,
                           pitch: chapter.map.pitch,
-                          duration: chapter.map.duration,
+                          duration: chapter.map.duration
                         })}
                       {event.type === "enter" && setLayerOpacity(index)}
                     </h1>

@@ -20,7 +20,7 @@ const buildings3d = {
       5,
       0,
       10.05,
-      ["get", "height"],
+      ["get", "height"]
     ],
     "fill-extrusion-base": [
       "interpolate",
@@ -29,19 +29,10 @@ const buildings3d = {
       5,
       0,
       10.05,
-      ["get", "min_height"],
+      ["get", "min_height"]
     ],
-    "fill-extrusion-opacity": 1,
-  },
-};
-
-// Use the function showLayers in scroll-mapbox-gl.js discover the layer properties
-const linhasAntigas = {
-  id: "linhasantigas2",
-  paint: { "line-opacity": 0, "line-color": "#3289a9" },
-  source: "composite",
-  "source-layer": "linhas-0pmlqw",
-  type: "line",
+    "fill-extrusion-opacity": 1
+  }
 };
 
 const story = {
@@ -69,25 +60,20 @@ const story = {
             opacity: 0,
             rounded: true,
             trailLength: TRAIL_LENGTH,
-            shadowEnabled: false,
-          }),
-        },
-        {
-          layerType: "mapbox",
-          layer: { ...linhasAntigas },
-          // layerID: "linhasantigas",
-        },
+            shadowEnabled: false
+          })
+        }
       ],
       map: {
         center: {
           lat: -22.9121089,
-          lon: -43.2301558,
+          lon: -43.2301558
         },
         zoom: 9,
         bearing: 0,
         pitch: 0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     {
       id: "chapter-2",
@@ -97,19 +83,25 @@ const story = {
       layers: [
         {
           layerType: "mapbox",
-          layer: { ...buildings3d },
+          layer: { ...buildings3d }
         },
+        {
+          layerType: "mapbox-style",
+          layer: {
+            id: "linhasantigas"
+          }
+        }
       ],
       map: {
         center: {
           lat: -22.9121089,
-          lon: -43.2301558,
+          lon: -43.2301558
         },
         zoom: 15,
         bearing: 0,
         pitch: 0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     {
       id: "chapter-3",
@@ -118,37 +110,24 @@ const story = {
       sectionOffset: -500,
       layers: [
         {
-          layerType: "deckgl",
-          layer: new MapboxLayer({
-            id: "my-trips-layer3",
-            type: TripsLayer,
-            data: TRIPS,
-            getPath: (d) => d.path,
-            getTimestamps: (d) => d.timestamps,
-            getColor: [0, 200, 236],
-            widthMinPixels: 5,
-            fadeTrail: true,
-            currentTime: 0,
-            opacity: 0,
-            rounded: true,
-            trailLength: TRAIL_LENGTH,
-            shadowEnabled: false,
-          }),
-          opacityProperty: "",
-        },
+          layerType: "reuse",
+          layer: {
+            id: "my-trips-layer"
+          }
+        }
       ],
       map: {
         center: {
           lat: -22.9121089,
-          lon: -43.2301558,
+          lon: -43.2301558
         },
         zoom: 12,
         bearing: 0,
         pitch: 0,
-        duration: 4000,
-      },
-    },
-  ],
+        duration: 4000
+      }
+    }
+  ]
 };
 
 export default story;
