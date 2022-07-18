@@ -28,7 +28,7 @@ function App() {
             path="/especial-sppo/scrollmapbox"
             element={
               <ScrollMapboxGL
-                interactive={true}
+                interactive={false}
                 mapboxAccessToken={MAPBOX_TOKEN}
                 mapStyle={MAP_STYLE}
                 scrollZoom={false}

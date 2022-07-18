@@ -20,7 +20,7 @@ const buildings3d = {
       5,
       0,
       10.05,
-      ["get", "height"],
+      ["get", "height"]
     ],
     "fill-extrusion-base": [
       "interpolate",
@@ -29,10 +29,10 @@ const buildings3d = {
       5,
       0,
       10.05,
-      ["get", "min_height"],
+      ["get", "min_height"]
     ],
-    "fill-extrusion-opacity": 0.9,
-  },
+    "fill-extrusion-opacity": 0.9
+  }
 };
 
 const story = {
@@ -60,39 +60,38 @@ const story = {
             opacity: 0,
             rounded: true,
             trailLength: TRAIL_LENGTH,
-            shadowEnabled: false,
-          }),
+            shadowEnabled: false
+          })
         },
-        { layerType: "mapboxlayer", layer: buildings3d },
+        { layerType: "mapboxlayer", layer: buildings3d }
       ],
       map: {
         center: {
           lat: -22.9121089,
-          lon: -43.2301558,
+          lon: -43.2301558
         },
         zoom: 9,
         bearing: 0,
         pitch: 0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     {
       id: "chapter-2",
-      layer: null,
       text: "chapter-2",
       sectionDuration: 400,
       sectionOffset: -500,
-      layers: [{}],
+      layers: [],
       map: {
         center: {
           lat: -22.9121089,
-          lon: -43.2301558,
+          lon: -43.2301558
         },
         zoom: 15,
         bearing: 0,
         pitch: 0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     {
       id: "chapter-3",
@@ -115,23 +114,23 @@ const story = {
             opacity: 0,
             rounded: true,
             trailLength: TRAIL_LENGTH,
-            shadowEnabled: false,
-          }),
+            shadowEnabled: false
+          })
         },
-        { layerType: "mapboxlayer", layer: buildings3d },
+        { layerType: "mapboxlayer", layer: buildings3d }
       ],
       map: {
         center: {
           lat: -22.9121089,
-          lon: -43.2301558,
+          lon: -43.2301558
         },
         zoom: 12,
         bearing: 0,
         pitch: 0,
-        duration: 4000,
-      },
-    },
-  ],
+        duration: 4000
+      }
+    }
+  ]
 };
 
 export default story;
