@@ -65,14 +65,26 @@ const story = {
         }
       ],
       map: {
-        center: {
-          lat: -22.9121089,
-          lon: -43.2301558
+        desktop: {
+          center: {
+            lat: -22.9121089,
+            lon: -43.2301558
+          },
+          zoom: 9,
+          bearing: 0,
+          pitch: 0,
+          duration: 4000
         },
-        zoom: 9,
-        bearing: 0,
-        pitch: 0,
-        duration: 4000
+        mobile: {
+          center: {
+            lat: -22.9121089,
+            lon: -43.2301558
+          },
+          zoom: 9,
+          bearing: 0,
+          pitch: 0,
+          duration: 4000
+        }
       }
     },
     {
@@ -93,14 +105,26 @@ const story = {
         }
       ],
       map: {
-        center: {
-          lat: -22.9121089,
-          lon: -43.2301558
+        desktop: {
+          center: {
+            lat: -22.9121089,
+            lon: -43.2301558
+          },
+          zoom: 15,
+          bearing: 0,
+          pitch: 0,
+          duration: 4000
         },
-        zoom: 15,
-        bearing: 0,
-        pitch: 0,
-        duration: 4000
+        mobile: {
+          center: {
+            lat: -22.9121089,
+            lon: -43.2301558
+          },
+          zoom: 15,
+          bearing: 0,
+          pitch: 0,
+          duration: 4000
+        }
       }
     },
     {
@@ -117,14 +141,26 @@ const story = {
         }
       ],
       map: {
-        center: {
-          lat: -22.9121089,
-          lon: -43.2301558
+        desktop: {
+          center: {
+            lat: -22.9121089,
+            lon: -43.2301558
+          },
+          zoom: 12,
+          bearing: 0,
+          pitch: 0,
+          duration: 4000
         },
-        zoom: 12,
-        bearing: 0,
-        pitch: 0,
-        duration: 4000
+        mobile: {
+          center: {
+            lat: -22.9121089,
+            lon: -43.2301558
+          },
+          zoom: 12,
+          bearing: 0,
+          pitch: 0,
+          duration: 4000
+        }
       }
     }
   ]

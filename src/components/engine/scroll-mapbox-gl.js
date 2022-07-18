@@ -3,8 +3,9 @@
 import React, { useRef, useState, useCallback, useEffect } from "react";
 import styled from "styled-components";
 import { Controller, Scene } from "react-scrollmagic";
-import { Map, Layer } from "react-map-gl";
+import { Map } from "react-map-gl";
 import mapboxgl from "mapbox-gl"; // do not remove this line
+import { isMobile } from "react-device-detect";
 
 // The following is required to stop "npm build" from transpiling mapbox code.
 // notice the exclamation point in the import.
@@ -51,25 +52,30 @@ export default function ScrollMapboxGL(
           sectionDuration: 0,
           sectionOffset: 0,
           map: {
-            center: {
-              lat: 0,
-              lon: 0
+            desktop: {
+              center: {
+                lat: 0,
+                lon: 0
+              },
+              zoom: 0,
+              bearing: 0,
+              pitch: 0,
+              duration: 4000
             },
-            zoom: 0,
-            bearing: 0,
-            pitch: 0,
-            duration: 4000
+            mobile: {
+              center: {
+                lat: 0,
+                lon: 0
+              },
+              zoom: 0,
+              bearing: 0,
+              pitch: 0,
+              duration: 4000
+            }
           },
           text: ""
         }
-      ],
-      initialViewState: {
-        latitude: 0,
-        longitude: 0,
-        zoom: 0,
-        bearing: 0,
-        pitch: 0
-      }
+      ]
     }
   }
 ) {
@@ -236,13 +242,23 @@ export default function ScrollMapboxGL(
       <Map
         ref={mapRef}
         cont
-        initialViewState={{
-          latitude: props.story.chapters[0].map.center.lat,
-          longitude: props.story.chapters[0].map.center.lon,
-          zoom: props.story.chapters[0].map.zoom,
-          bearing: props.story.chapters[0].map.bearing,
-          pitch: props.story.chapters[0].map.pitch
-        }}
+        initialViewState={
+          isMobile
+            ? {
+                latitude: props.story.chapters[0].map.mobile.center.lat,
+                longitude: props.story.chapters[0].map.mobile.center.lon,
+                zoom: props.story.chapters[0].map.mobile.zoom,
+                bearing: props.story.chapters[0].map.mobile.bearing,
+                pitch: props.story.chapters[0].map.mobile.pitch
+              }
+            : {
+                latitude: props.story.chapters[0].map.desktop.center.lat,
+                longitude: props.story.chapters[0].map.desktop.center.lon,
+                zoom: props.story.chapters[0].map.desktop.zoom,
+                bearing: props.story.chapters[0].map.desktop.bearing,
+                pitch: props.story.chapters[0].map.desktop.pitch
+              }
+        }
         {...settings}
         onLoad={({ target }) => {
           layers.forEach((layerDict) => {
@@ -285,15 +301,28 @@ export default function ScrollMapboxGL(
                     <h1 style={{ color: "#FFF", top: TOP_SCENE }}>
                       {chapter.text}
                       {event.type === "enter" &&
+                        isMobile &&
                         flyToNextStep({
                           center: [
-                            chapter.map.center.lon,
-                            chapter.map.center.lat
+                            chapter.map.mobile.center.lon,
+                            chapter.map.mobile.center.lat
                           ],
-                          zoom: chapter.map.zoom,
-                          bearing: chapter.map.bearing,
-                          pitch: chapter.map.pitch,
-                          duration: chapter.map.duration
+                          zoom: chapter.map.mobile.zoom,
+                          bearing: chapter.map.mobile.bearing,
+                          pitch: chapter.map.mobile.pitch,
+                          duration: chapter.map.mobile.duration
+                        })}
+                      {event.type === "enter" &&
+                        !isMobile &&
+                        flyToNextStep({
+                          center: [
+                            chapter.map.desktop.center.lon,
+                            chapter.map.desktop.center.lat
+                          ],
+                          zoom: chapter.map.desktop.zoom,
+                          bearing: chapter.map.desktop.bearing,
+                          pitch: chapter.map.desktop.pitch,
+                          duration: chapter.map.desktop.duration
                         })}
                       {event.type === "enter" && setLayerOpacity(index)}
                     </h1>
