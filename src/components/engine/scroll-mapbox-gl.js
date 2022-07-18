@@ -131,31 +131,38 @@ export default function ScrollMapboxGL(
     if (!mapInstance) return;
 
     for (let i = 0; i < layers.length; i++) {
+      // layers from story
       var layerId = layers[i].layer.id;
+      var layerType = layers[i].layerType;
+
+      // layers from map style
+      var mapLayer = mapInstance.getLayer(layerId);
+
+      // set opacity
       if (i >= startIndex && i < startIndex + layersPerChapter[index]) {
-        if (layers[i].layerType === "deckgl") {
-          mapInstance.getLayer(layerId)?.implementation.setProps({
+        if (layerType === "deckgl") {
+          mapLayer?.implementation.setProps({
             opacity: 1,
           });
-        } else if (layers[i].layerType === "mapbox") {
-          if (mapInstance.getLayer(layerId)) {
+        } else if (layerType === "mapbox") {
+          if (mapLayer) {
             mapInstance.setPaintProperty(
               layerId,
-              getLayerPaintType(mapInstance.getLayer(layerId)),
+              getLayerPaintType(mapLayer),
               1
             );
           }
         }
       } else {
-        if (layers[i].layerType === "deckgl") {
-          mapInstance.getLayer(layerId)?.implementation.setProps({
+        if (layerType === "deckgl") {
+          mapLayer?.implementation.setProps({
             opacity: 0,
           });
-        } else if (layers[i].layerType === "mapbox") {
-          if (mapInstance.getLayer(layerId)) {
+        } else if (layerType === "mapbox") {
+          if (mapLayer) {
             mapInstance.setPaintProperty(
               layerId,
-              getLayerPaintType(mapInstance.getLayer(layerId)),
+              getLayerPaintType(mapLayer),
               0
             );
           }
