@@ -25,6 +25,16 @@ const TweenStyled = styled.div`
     background-color: black;
   }
 `;
+var layerTypes = {
+  fill: ["fill-opacity"],
+  line: ["line-opacity"],
+  circle: ["circle-opacity", "circle-stroke-opacity"],
+  symbol: ["icon-opacity", "text-opacity"],
+  raster: ["raster-opacity"],
+  "fill-extrusion": ["fill-extrusion-opacity"],
+  heatmap: ["heatmap-opacity"],
+};
+
 export default function ScrollMapboxGL(
   props = {
     interactive: false,
@@ -104,6 +114,10 @@ export default function ScrollMapboxGL(
     console.log("layers", mapRef.current?.getMap().getStyle().layers);
   };
 
+  function getLayerPaintType(layer) {
+    return layerTypes[layer.type][0];
+  }
+
   // This will set the opacity of a layer while fading all other layers
   const setLayerOpacity = (index) => {
     const mapInstance = mapRef.current?.getMap();
@@ -117,30 +131,31 @@ export default function ScrollMapboxGL(
     if (!mapInstance) return;
 
     for (let i = 0; i < layers.length; i++) {
+      var layerId = layers[i].layer.id;
       if (i >= startIndex && i < startIndex + layersPerChapter[index]) {
         if (layers[i].layerType === "deckgl") {
-          mapInstance.getLayer(layers[i].layer.id)?.implementation.setProps({
+          mapInstance.getLayer(layerId)?.implementation.setProps({
             opacity: 1,
           });
         } else if (layers[i].layerType === "mapbox") {
-          if (mapInstance.getLayer(layers[i].layer.id)) {
+          if (mapInstance.getLayer(layerId)) {
             mapInstance.setPaintProperty(
-              layers[i].layer.id,
-              layers[i].opacityProperty,
+              layerId,
+              getLayerPaintType(mapInstance.getLayer(layerId)),
               1
             );
           }
         }
       } else {
         if (layers[i].layerType === "deckgl") {
-          mapInstance.getLayer(layers[i].layer.id)?.implementation.setProps({
+          mapInstance.getLayer(layerId)?.implementation.setProps({
             opacity: 0,
           });
         } else if (layers[i].layerType === "mapbox") {
-          if (mapInstance.getLayer(layers[i].layer.id)) {
+          if (mapInstance.getLayer(layerId)) {
             mapInstance.setPaintProperty(
-              layers[i].layer.id,
-              layers[i].opacityProperty,
+              layerId,
+              getLayerPaintType(mapInstance.getLayer(layerId)),
               0
             );
           }
@@ -156,7 +171,11 @@ export default function ScrollMapboxGL(
     let nLayers = 0;
     if (chapter.layers) {
       chapter.layers.forEach((layer) => {
-        layers.push(layer);
+        if (layer.layerType === "mapbox") {
+          layers.push(layer);
+        } else {
+          layers.push(layer);
+        }
         nLayers++;
       });
     }

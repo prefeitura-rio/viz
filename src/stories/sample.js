@@ -71,12 +71,11 @@ const story = {
             trailLength: TRAIL_LENGTH,
             shadowEnabled: false,
           }),
-          opacityProperty: "",
         },
         {
           layerType: "mapbox",
           layer: { ...linhasAntigas },
-          opacityProperty: "line-opacity",
+          // layerID: "linhasantigas",
         },
       ],
       map: {
@@ -99,7 +98,6 @@ const story = {
         {
           layerType: "mapbox",
           layer: { ...buildings3d },
-          opacityProperty: "fill-extrusion-opacity",
         },
       ],
       map: {
