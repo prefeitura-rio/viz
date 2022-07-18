@@ -100,6 +100,9 @@ export default function ScrollMapboxGL(
   const flyToNextStep = (viewState) => {
     mapRef.current?.flyTo(viewState);
   };
+  const showLayers = () => {
+    console.log("layers", mapRef.current?.getMap().getStyle().layers);
+  };
 
   // This will set the opacity of a layer while fading all other layers
   const setLayerOpacity = (index) => {
@@ -126,8 +129,6 @@ export default function ScrollMapboxGL(
               layers[i].opacityProperty,
               1
             );
-            console.log("sources", mapInstance.getStyle().sources);
-            console.log("layers", mapInstance.getStyle().layers);
           }
         }
       } else {

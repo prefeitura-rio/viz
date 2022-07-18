@@ -35,11 +35,9 @@ const buildings3d = {
   },
 };
 
-// Use to discover the layer properties
-// console.log("sources", mapInstance.getStyle().sources);
-// console.log("layers", mapInstance.getStyle().layers);
+// Use the function showLayers in scroll-mapbox-gl.js discover the layer properties
 const linhasAntigas = {
-  id: "linhasantigas",
+  id: "linhasantigas2",
   paint: { "line-opacity": 0, "line-color": "#3289a9" },
   source: "composite",
   "source-layer": "linhas-0pmlqw",
