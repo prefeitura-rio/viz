@@ -52,7 +52,7 @@ const story = {
       sectionOffset: -500,
       layers: [
         {
-          layerType: "deckgl",
+          layerType: "deckgl-trips",
           layer: new MapboxLayer({
             id: "my-trips-layer",
             type: TripsLayer,
@@ -63,7 +63,7 @@ const story = {
             widthMinPixels: 5,
             fadeTrail: true,
             currentTime: 0,
-            opacity: 0,
+            opacity: 1,
             rounded: true,
             trailLength: TRAIL_LENGTH,
             shadowEnabled: false,

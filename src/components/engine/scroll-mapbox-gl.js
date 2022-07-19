@@ -160,7 +160,7 @@ export default function ScrollMapboxGL(
       // set opacity
       if (i >= startIndex && i < startIndex + layersPerChapter[index]) {
         currentLayerIds.push(layerId);
-        if (layerType === "deckgl") {
+        if (layerType.startsWith("deckgl")) {
           setOpacityDeckglLayer(mapLayer, 1);
         } else if (layerType.startsWith("mapbox")) {
           if (mapLayer) {
@@ -173,7 +173,7 @@ export default function ScrollMapboxGL(
           const reusableLayerType = reusableLayer.layerType;
           const reusableMapLayer = mapInstance.getLayer(layerId);
           if (reusableMapLayer) {
-            if (reusableLayerType === "deckgl") {
+            if (reusableLayerType.startsWith("deckgl")) {
               setOpacityDeckglLayer(reusableMapLayer, 1);
             } else if (reusableLayerType.startsWith("mapbox")) {
               if (reusableMapLayer) {
@@ -188,7 +188,7 @@ export default function ScrollMapboxGL(
           }
         }
       } else {
-        if (layerType === "deckgl") {
+        if (layerType.startsWith("deckgl")) {
           setOpacityDeckglLayer(mapLayer, 0);
         } else if (layerType.startsWith("mapbox")) {
           if (mapLayer) {
@@ -204,7 +204,7 @@ export default function ScrollMapboxGL(
           const reusableLayerType = reusableLayer.layerType;
           const reusableMapLayer = mapInstance.getLayer(layerId);
           if (reusableMapLayer) {
-            if (reusableLayerType === "deckgl") {
+            if (reusableLayerType.startsWith("deckgl")) {
               setOpacityDeckglLayer(reusableMapLayer, 0);
             } else if (reusableLayerType.startsWith("mapbox")) {
               if (reusableMapLayer) {
@@ -262,8 +262,8 @@ export default function ScrollMapboxGL(
         onLoad={({ target }) => {
           layers.forEach((layerDict) => {
             if (
-              layerDict.layerType === "mapbox" ||
-              layerDict.layerType === "deckgl"
+              layerDict.layerType.startsWith("mapbox") ||
+              layerDict.layerType.startsWith("deckgl")
             ) {
               target.addLayer(layerDict.layer);
             }
@@ -272,7 +272,7 @@ export default function ScrollMapboxGL(
         }}
         onRender={({ target }) => {
           layers.forEach((layerDict) => {
-            if (layerDict.layerType === "deckgl") {
+            if (layerDict.layerType === "deckgl-trips") {
               const currentLayer = target.getLayer(layerDict.layer.id);
               if (currentLayer) {
                 currentLayer.implementation.setProps({
