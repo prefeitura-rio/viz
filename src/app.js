@@ -9,11 +9,12 @@ import ScrollSPPO from "./pages/especial-sppo/scroll-sppo/scrollmagic";
 import ScrollMap from "./pages/especial-sppo/scroll-sppo/scrollmap";
 import ScrollMapboxGL from "./components/engine/scroll-mapbox-gl";
 import Sandbox from "./pages/sandbox/sandbox";
-import story from "./pages/especial-sppo/story";
-
-const MAPBOX_TOKEN =
-  "pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w";
-const MAP_STYLE = "mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b";
+import {
+  story,
+  MAPBOX_TOKEN_SPPO,
+  MAP_STYLE_SPPO,
+  INTERACTIVE_SPPO,
+} from "./pages/especial-sppo/story";
 
 function App() {
   return (
@@ -28,9 +29,9 @@ function App() {
             path="/especial-sppo/scrollmapbox"
             element={
               <ScrollMapboxGL
-                interactive={false}
-                mapboxAccessToken={MAPBOX_TOKEN}
-                mapStyle={MAP_STYLE}
+                interactive={INTERACTIVE_SPPO}
+                mapboxAccessToken={MAPBOX_TOKEN_SPPO}
+                mapStyle={MAP_STYLE_SPPO}
                 scrollZoom={false}
                 story={story}
               />

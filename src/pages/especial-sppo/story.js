@@ -1,8 +1,14 @@
 import { MapboxLayer } from "@deck.gl/mapbox"; // Ref: https://deck.gl/docs/api-reference/mapbox/mapbox-layer
 import { TripsLayer } from "@deck.gl/geo-layers";
 
-const TRAIL_LENGTH = 500;
+export const MAPBOX_TOKEN_SPPO =
+  "pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w";
+export const MAP_STYLE_SPPO =
+  "mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b";
+export const INTERACTIVE_SPPO = false;
+
 const TRIPS = require("./data/trips.json");
+const TRAIL_LENGTH = 500;
 
 const buildings3d = {
   id: "add-3d-buildings",
@@ -35,7 +41,7 @@ const buildings3d = {
   },
 };
 
-const story = {
+export const story = {
   animationSpeed: 3,
   animationLoopLength: 28000,
   chapters: [
@@ -166,4 +172,4 @@ const story = {
   ],
 };
 
-export default story;
+// export default story;
