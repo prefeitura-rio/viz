@@ -47,9 +47,11 @@ export default function ScrollMapboxGL(
       chapters: [
         {
           id: "chapter-1",
-          layers: [{ layerType: "", layer: {}, opacityProperty: "" }],
+          chapterType: "",
+          text: "",
           sectionDuration: 0,
           sectionOffset: 0,
+          layers: [{ layerType: "", layer: {}, opacityProperty: "" }],
           map: {
             desktop: {
               center: {
@@ -72,7 +74,6 @@ export default function ScrollMapboxGL(
               duration: 4000,
             },
           },
-          text: "",
         },
       ],
     },
@@ -287,7 +288,51 @@ export default function ScrollMapboxGL(
         <div className="section" />
         <Controller>
           {props.story.chapters.map((chapter, index) => {
-            return (
+            if (chapter.chapterType === "map") {
+              return (
+                <span key={index}>
+                  <Scene
+                    triggerElement={"#" + chapter.id}
+                    indicators={true}
+                    pin={true}
+                    duration={chapter.sectionDuration}
+                    offset={chapter.sectionOffset}
+                  >
+                    {(progress, event) => (
+                      <h1 style={{ color: "#FFF", top: TOP_SCENE }}>
+                        {chapter.text}
+                        {event.type === "enter" &&
+                          isMobile &&
+                          flyToNextStep({
+                            center: [
+                              chapter.map.mobile.center.lon,
+                              chapter.map.mobile.center.lat,
+                            ],
+                            zoom: chapter.map.mobile.zoom,
+                            bearing: chapter.map.mobile.bearing,
+                            pitch: chapter.map.mobile.pitch,
+                            duration: chapter.map.mobile.duration,
+                          })}
+                        {event.type === "enter" &&
+                          !isMobile &&
+                          flyToNextStep({
+                            center: [
+                              chapter.map.desktop.center.lon,
+                              chapter.map.desktop.center.lat,
+                            ],
+                            zoom: chapter.map.desktop.zoom,
+                            bearing: chapter.map.desktop.bearing,
+                            pitch: chapter.map.desktop.pitch,
+                            duration: chapter.map.desktop.duration,
+                          })}
+                        {event.type === "enter" && setLayerOpacity(index)}
+                      </h1>
+                    )}
+                  </Scene>
+                  <div id={chapter.id} />
+                </span>
+              );
+            } else if (chapter.chapterType === "scrollmagic") {
               <span key={index}>
                 <Scene
                   triggerElement={"#" + chapter.id}
@@ -299,37 +344,12 @@ export default function ScrollMapboxGL(
                   {(progress, event) => (
                     <h1 style={{ color: "#FFF", top: TOP_SCENE }}>
                       {chapter.text}
-                      {event.type === "enter" &&
-                        isMobile &&
-                        flyToNextStep({
-                          center: [
-                            chapter.map.mobile.center.lon,
-                            chapter.map.mobile.center.lat,
-                          ],
-                          zoom: chapter.map.mobile.zoom,
-                          bearing: chapter.map.mobile.bearing,
-                          pitch: chapter.map.mobile.pitch,
-                          duration: chapter.map.mobile.duration,
-                        })}
-                      {event.type === "enter" &&
-                        !isMobile &&
-                        flyToNextStep({
-                          center: [
-                            chapter.map.desktop.center.lon,
-                            chapter.map.desktop.center.lat,
-                          ],
-                          zoom: chapter.map.desktop.zoom,
-                          bearing: chapter.map.desktop.bearing,
-                          pitch: chapter.map.desktop.pitch,
-                          duration: chapter.map.desktop.duration,
-                        })}
-                      {event.type === "enter" && setLayerOpacity(index)}
                     </h1>
                   )}
                 </Scene>
                 <div id={chapter.id} />
-              </span>
-            );
+              </span>;
+            }
           })}
         </Controller>
 

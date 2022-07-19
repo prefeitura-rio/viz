@@ -47,6 +47,7 @@ const story = {
   chapters: [
     {
       id: "chapter-1",
+      chapterType: "map",
       text: "chapter-1",
       sectionDuration: 400,
       sectionOffset: -500,
@@ -95,7 +96,15 @@ const story = {
     },
     {
       id: "chapter-2",
-      text: "chapter-2",
+      chapterType: "scrollmagic",
+      text: "chapter-2-scrollmagic",
+      sectionDuration: 400,
+      sectionOffset: -500,
+    },
+    {
+      id: "chapter-3",
+      chapterType: "map",
+      text: "chapter-3",
       sectionDuration: 400,
       sectionOffset: -500,
       layers: [
@@ -134,8 +143,9 @@ const story = {
       },
     },
     {
-      id: "chapter-3",
-      text: "chapter-3",
+      id: "chapter-4",
+      chapterType: "map",
+      text: "chapter-4",
       sectionDuration: 400,
       sectionOffset: -500,
       layers: [
