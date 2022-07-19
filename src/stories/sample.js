@@ -1,6 +1,12 @@
 import { MapboxLayer } from "@deck.gl/mapbox"; // Ref: https://deck.gl/docs/api-reference/mapbox/mapbox-layer
 import { TripsLayer } from "@deck.gl/geo-layers";
 
+export const MAPBOX_TOKEN =
+  "pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w";
+export const MAP_STYLE =
+  "mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b";
+export const INTERACTIVE = false;
+
 const TRAIL_LENGTH = 500;
 const TRIPS = require("../pages/especial-sppo/data/trips.json");
 
@@ -20,7 +26,7 @@ const buildings3d = {
       5,
       0,
       10.05,
-      ["get", "height"]
+      ["get", "height"],
     ],
     "fill-extrusion-base": [
       "interpolate",
@@ -29,13 +35,13 @@ const buildings3d = {
       5,
       0,
       10.05,
-      ["get", "min_height"]
+      ["get", "min_height"],
     ],
-    "fill-extrusion-opacity": 1
-  }
+    "fill-extrusion-opacity": 1,
+  },
 };
 
-const story = {
+export const story = {
   animationSpeed: 3,
   animationLoopLength: 28000,
   chapters: [
@@ -60,32 +66,32 @@ const story = {
             opacity: 0,
             rounded: true,
             trailLength: TRAIL_LENGTH,
-            shadowEnabled: false
-          })
-        }
+            shadowEnabled: false,
+          }),
+        },
       ],
       map: {
         desktop: {
           center: {
             lat: -22.9121089,
-            lon: -43.2301558
+            lon: -43.2301558,
           },
           zoom: 9,
           bearing: 0,
           pitch: 0,
-          duration: 4000
+          duration: 4000,
         },
         mobile: {
           center: {
             lat: -22.9121089,
-            lon: -43.2301558
+            lon: -43.2301558,
           },
           zoom: 9,
           bearing: 0,
           pitch: 0,
-          duration: 4000
-        }
-      }
+          duration: 4000,
+        },
+      },
     },
     {
       id: "chapter-2",
@@ -95,37 +101,37 @@ const story = {
       layers: [
         {
           layerType: "mapbox",
-          layer: { ...buildings3d }
+          layer: { ...buildings3d },
         },
         {
           layerType: "mapbox-style",
           layer: {
-            id: "linhasantigas"
-          }
-        }
+            id: "linhasantigas",
+          },
+        },
       ],
       map: {
         desktop: {
           center: {
             lat: -22.9121089,
-            lon: -43.2301558
+            lon: -43.2301558,
           },
           zoom: 15,
           bearing: 0,
           pitch: 0,
-          duration: 4000
+          duration: 4000,
         },
         mobile: {
           center: {
             lat: -22.9121089,
-            lon: -43.2301558
+            lon: -43.2301558,
           },
           zoom: 15,
           bearing: 0,
           pitch: 0,
-          duration: 4000
-        }
-      }
+          duration: 4000,
+        },
+      },
     },
     {
       id: "chapter-3",
@@ -136,34 +142,32 @@ const story = {
         {
           layerType: "reuse",
           layer: {
-            id: "my-trips-layer"
-          }
-        }
+            id: "my-trips-layer",
+          },
+        },
       ],
       map: {
         desktop: {
           center: {
             lat: -22.9121089,
-            lon: -43.2301558
+            lon: -43.2301558,
           },
           zoom: 12,
           bearing: 0,
           pitch: 0,
-          duration: 4000
+          duration: 4000,
         },
         mobile: {
           center: {
             lat: -22.9121089,
-            lon: -43.2301558
+            lon: -43.2301558,
           },
           zoom: 12,
           bearing: 0,
           pitch: 0,
-          duration: 4000
-        }
-      }
-    }
-  ]
+          duration: 4000,
+        },
+      },
+    },
+  ],
 };
-
-export default story;
