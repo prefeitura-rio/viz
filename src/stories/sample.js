@@ -1,5 +1,6 @@
 import { MapboxLayer } from "@deck.gl/mapbox"; // Ref: https://deck.gl/docs/api-reference/mapbox/mapbox-layer
 import { TripsLayer } from "@deck.gl/geo-layers";
+import ScrollMapboxGL from "../components/engine/scroll-mapbox-gl";
 
 export const MAPBOX_TOKEN =
   "pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w";
@@ -171,3 +172,15 @@ export const story = {
     },
   ],
 };
+
+export default function StorySample() {
+  return (
+    <ScrollMapboxGL
+      interactive={INTERACTIVE}
+      mapboxAccessToken={MAPBOX_TOKEN}
+      mapStyle={MAP_STYLE}
+      scrollZoom={false}
+      story={story}
+    />
+  );
+}

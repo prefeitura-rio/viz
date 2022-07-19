@@ -9,13 +9,13 @@ export default function Home() {
           <Link to="/"> Home </Link>
         </li>
         <li>
+          <Link to="/stories/sample"> Scroll Map Engine | Sample </Link>
+        </li>
+        <li>
           <Link to="/especial-sppo/trips"> Especial SPPO | Trips </Link>
         </li>
         <li>
           <Link to="/especial-sppo/scroll"> Especial SPPO | Scroll </Link>
-        </li>
-        <li>
-          <Link to="/especial-sppo/scrollmap"> Especial SPPO | ScrollMap </Link>
         </li>
         <li>
           <Link to="/especial-sppo/scrollmapbox">
