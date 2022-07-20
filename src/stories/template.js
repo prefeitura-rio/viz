@@ -1,8 +1,9 @@
 import { MapboxLayer } from "@deck.gl/mapbox"; // Ref: https://deck.gl/docs/api-reference/mapbox/mapbox-layer
 import { TripsLayer } from "@deck.gl/geo-layers";
-import ScrollMapboxGL from "../../components/engine/scroll-mapbox-gl";
-import { Tween } from "react-gsap";
-import busao from "./scroll-sppo/school-bus.png";
+import { Timeline } from "react-gsap";
+
+import ScrollMapboxGL from "../components/engine/scroll-mapbox-gl";
+import busao from "../pages/especial-sppo/scroll-sppo/school-bus.png";
 
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w";
@@ -123,12 +124,11 @@ const story = {
         width: "100%",
       },
       animation: {
-        targets: [],
-        tweens: [
+        tween: (
           <Tween from={{ x: "0px" }} to={{ x: windowWidth * 0.97 }}>
             <img src={busao} alt="" />
-          </Tween>,
-        ],
+          </Tween>
+        ),
       },
     },
     {
@@ -222,10 +222,10 @@ const story = {
   ],
 };
 
-export default function StorySPPO() {
+export default function StorySample() {
   return (
     <ScrollMapboxGL
-      interactive={false}
+      interactive={INTERACTIVE}
       indicators={true}
       mapboxAccessToken={MAPBOX_TOKEN}
       mapStyle={MAP_STYLE}

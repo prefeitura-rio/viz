@@ -6,7 +6,7 @@ import { Controller, Scene } from "react-scrollmagic";
 import { Map } from "react-map-gl";
 import mapboxgl from "mapbox-gl"; // do not remove this line
 import { isMobile } from "react-device-detect";
-
+import { Timeline } from "react-gsap";
 // The following is required to stop "npm build" from transpiling mapbox code.
 // notice the exclamation point in the import.
 // @ts-ignore
@@ -15,16 +15,6 @@ mapboxgl.workerClass =
   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 const TOP_SCENE = "-1vh";
 
-const TweenStyled = styled.div`
-  .section {
-    height: 60vh;
-  }
-
-  .black-box {
-    height: 100px;
-    background-color: black;
-  }
-`;
 var layerTypes = {
   fill: ["fill-opacity"],
   line: ["line-opacity"],
@@ -38,18 +28,25 @@ var layerTypes = {
 export default function ScrollMapboxGL(
   props = {
     interactive: false,
+    indicators: true,
     mapboxAccessToken: "",
     mapStyle: "",
+    mapCSS: {},
     scrollZoom: false,
     story: {
       animationSpeed: 3,
       animationLoopLength: 28000,
+      animation: { tweens: [], targets: [] },
       chapters: [
         {
           id: "chapter-1",
-          layers: [{ layerType: "", layer: {}, opacityProperty: "" }],
+          chapterType: "", // map, scrollmagic, etc.
+          text: "",
           sectionDuration: 0,
           sectionOffset: 0,
+          sectionPin: false,
+          divStyle: {},
+          layers: [{ layerType: "", layer: {}, opacityProperty: "" }],
           map: {
             desktop: {
               center: {
@@ -72,7 +69,6 @@ export default function ScrollMapboxGL(
               duration: 4000,
             },
           },
-          text: "",
         },
       ],
     },
@@ -84,13 +80,7 @@ export default function ScrollMapboxGL(
     mapboxAccessToken: props.mapboxAccessToken,
     mapStyle: props.mapStyle,
     interactive: props.interactive,
-    style: {
-      position: "fixed",
-      top: "0",
-      left: "0",
-      width: "100vw",
-      height: "100vh",
-    },
+    style: props.mapCSS,
   });
 
   /* Animation stuff */
@@ -283,58 +273,87 @@ export default function ScrollMapboxGL(
           });
         }}
       ></Map>
-      <TweenStyled>
-        <div className="section" />
-        <Controller>
-          {props.story.chapters.map((chapter, index) => {
+      <Controller>
+        {props.story.chapters.map((chapter, index) => {
+          if (chapter.chapterType === "map") {
             return (
               <span key={index}>
-                <Scene
-                  triggerElement={"#" + chapter.id}
-                  indicators={true}
-                  pin={true}
-                  duration={chapter.sectionDuration}
-                  offset={chapter.sectionOffset}
-                >
-                  {(progress, event) => (
-                    <h1 style={{ color: "#FFF", top: TOP_SCENE }}>
-                      {chapter.text}
-                      {event.type === "enter" &&
-                        isMobile &&
-                        flyToNextStep({
-                          center: [
-                            chapter.map.mobile.center.lon,
-                            chapter.map.mobile.center.lat,
-                          ],
-                          zoom: chapter.map.mobile.zoom,
-                          bearing: chapter.map.mobile.bearing,
-                          pitch: chapter.map.mobile.pitch,
-                          duration: chapter.map.mobile.duration,
-                        })}
-                      {event.type === "enter" &&
-                        !isMobile &&
-                        flyToNextStep({
-                          center: [
-                            chapter.map.desktop.center.lon,
-                            chapter.map.desktop.center.lat,
-                          ],
-                          zoom: chapter.map.desktop.zoom,
-                          bearing: chapter.map.desktop.bearing,
-                          pitch: chapter.map.desktop.pitch,
-                          duration: chapter.map.desktop.duration,
-                        })}
-                      {event.type === "enter" && setLayerOpacity(index)}
-                    </h1>
-                  )}
-                </Scene>
-                <div id={chapter.id} />
+                <div id={chapter.id} style={chapter.divStyle}>
+                  <Scene
+                    triggerElement={"#" + chapter.id}
+                    indicators={props.indicators}
+                    pin={chapter.sectionPin}
+                    duration={chapter.sectionDuration}
+                    offset={chapter.sectionOffset}
+                  >
+                    {(progress, event) => (
+                      <div style={{ color: "#FFF", top: TOP_SCENE }}>
+                        {chapter.text}
+                        {event.type === "enter" &&
+                          isMobile &&
+                          flyToNextStep({
+                            center: [
+                              chapter.map.mobile.center.lon,
+                              chapter.map.mobile.center.lat,
+                            ],
+                            zoom: chapter.map.mobile.zoom,
+                            bearing: chapter.map.mobile.bearing,
+                            pitch: chapter.map.mobile.pitch,
+                            duration: chapter.map.mobile.duration,
+                          })}
+                        {event.type === "enter" &&
+                          !isMobile &&
+                          flyToNextStep({
+                            center: [
+                              chapter.map.desktop.center.lon,
+                              chapter.map.desktop.center.lat,
+                            ],
+                            zoom: chapter.map.desktop.zoom,
+                            bearing: chapter.map.desktop.bearing,
+                            pitch: chapter.map.desktop.pitch,
+                            duration: chapter.map.desktop.duration,
+                          })}
+                        {event.type === "enter" && setLayerOpacity(index)}
+                      </div>
+                    )}
+                  </Scene>
+                </div>
               </span>
             );
-          })}
-        </Controller>
-
-        <div className="section" />
-      </TweenStyled>
+          } else if (chapter.chapterType === "scrollmagic") {
+            return (
+              <span key={index}>
+                <div id={chapter.id} style={chapter.divStyle}>
+                  <Scene
+                    triggerElement={"#" + chapter.id}
+                    indicators={props.indicators}
+                    pin={chapter.sectionPin}
+                    duration={chapter.sectionDuration}
+                    offset={chapter.sectionOffset}
+                  >
+                    {(progress, event) => (
+                      <div style={{ color: "#FFF", top: TOP_SCENE }}>
+                        {chapter.text}
+                        <Timeline
+                          target={chapter.animation.targets.map((target) => {
+                            return target;
+                          })}
+                          totalProgress={progress}
+                          paused
+                        >
+                          {chapter.animation.tweens.map((tween, index) => {
+                            return <span key={index}>{tween}</span>;
+                          })}
+                        </Timeline>
+                      </div>
+                    )}
+                  </Scene>
+                </div>
+              </span>
+            );
+          }
+        })}
+      </Controller>
     </div>
   );
 }
