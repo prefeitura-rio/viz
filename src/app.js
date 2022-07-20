@@ -8,6 +8,7 @@ import TripsMap from "./pages/especial-sppo/tripsmap";
 import ScrollSPPO from "./pages/especial-sppo/scroll-sppo/scrollmagic";
 import StorySPPO from "./pages/especial-sppo/story";
 import StorySample from "./stories/sample";
+import Teste from "./pages/sandbox/teste";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/especial-sppo/trips" element={<TripsMap />} />
           <Route path="/especial-sppo/scroll" element={<ScrollSPPO />} />
           <Route path="/especial-sppo/scrollmapbox" element={<StorySPPO />} />
+          <Route path="/sandbox/teste" element={<Teste />} />
         </Routes>
       </Router>
     </div>
