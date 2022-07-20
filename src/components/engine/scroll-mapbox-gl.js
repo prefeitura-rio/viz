@@ -335,11 +335,15 @@ export default function ScrollMapboxGL(
                       <div style={{ color: "#FFF", top: TOP_SCENE }}>
                         {chapter.text}
                         <Timeline
-                          target={chapter.animation.targets}
+                          target={chapter.animation.targets.map((target) => {
+                            return target;
+                          })}
                           totalProgress={progress}
                           paused
                         >
-                          {chapter.animation.tweens}
+                          {chapter.animation.tweens.map((tween, index) => {
+                            return <span key={index}>{tween}</span>;
+                          })}
                         </Timeline>
                       </div>
                     )}

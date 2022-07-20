@@ -123,7 +123,7 @@ const story = {
         width: "100%",
       },
       animation: {
-        target: [],
+        targets: [],
         tweens: [
           <Tween from={{ x: "0px" }} to={{ x: windowWidth * 0.97 }}>
             <img src={busao} alt="" />

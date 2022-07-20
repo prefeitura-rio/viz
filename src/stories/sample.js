@@ -55,6 +55,7 @@ const story = {
           <Tween to={{ opacity: 0 }} />,
         ],
       },
+
       //
       map: {
         desktop: {
@@ -83,6 +84,103 @@ const story = {
       id: "chapter-2",
       chapterType: "scrollmagic",
       text: "chapter-2",
+      sectionDuration: 400,
+      sectionOffset: -0,
+      sectionPin: false,
+      divStyle: {
+        height: "400px",
+        backgroundColor: "gray",
+        width: "100%",
+      },
+      animation: {
+        targets: [],
+        tweens: [
+          <div
+            style={{
+              width: "200px",
+              height: "200px",
+              display: "flex",
+              flexWrap: "wrap",
+            }}
+          >
+            <Tween
+              from={{ scale: 0.1 }}
+              stagger={{ from: "center", amount: 1, grid: [3, 3] }}
+              duration={1}
+              ease="elastic.out(2, 0.5)"
+            >
+              <div
+                style={{
+                  width: "33.33%",
+                  height: "33.33%",
+                  background: "#ccc",
+                }}
+              />
+              <div
+                style={{
+                  width: "33.33%",
+                  height: "33.33%",
+                  background: "#ccc",
+                }}
+              />
+              <div
+                style={{
+                  width: "33.33%",
+                  height: "33.33%",
+                  background: "#ccc",
+                }}
+              />
+              <div
+                style={{
+                  width: "33.33%",
+                  height: "33.33%",
+                  background: "#ccc",
+                }}
+              />
+              <div
+                style={{
+                  width: "33.33%",
+                  height: "33.33%",
+                  background: "#ccc",
+                }}
+              />
+              <div
+                style={{
+                  width: "33.33%",
+                  height: "33.33%",
+                  background: "#ccc",
+                }}
+              />
+              <div
+                style={{
+                  width: "33.33%",
+                  height: "33.33%",
+                  background: "#ccc",
+                }}
+              />
+              <div
+                style={{
+                  width: "33.33%",
+                  height: "33.33%",
+                  background: "#ccc",
+                }}
+              />
+              <div
+                style={{
+                  width: "33.33%",
+                  height: "33.33%",
+                  background: "#ccc",
+                }}
+              />
+            </Tween>
+          </div>,
+        ],
+      },
+    },
+    {
+      id: "chapter-3",
+      chapterType: "scrollmagic",
+      text: "chapter-3",
       sectionDuration: 400,
       sectionOffset: 0,
       sectionPin: false,
