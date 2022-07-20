@@ -9,6 +9,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
     cert-manager.io/issuer: "letsencrypt-production"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
 spec:
   tls:
     - hosts:
