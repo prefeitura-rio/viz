@@ -6,7 +6,7 @@ import { Controller, Scene } from "react-scrollmagic";
 import { Map } from "react-map-gl";
 import mapboxgl from "mapbox-gl"; // do not remove this line
 import { isMobile } from "react-device-detect";
-
+import { Timeline } from "react-gsap";
 // The following is required to stop "npm build" from transpiling mapbox code.
 // notice the exclamation point in the import.
 // @ts-ignore
@@ -15,16 +15,6 @@ mapboxgl.workerClass =
   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 const TOP_SCENE = "-1vh";
 
-const TweenStyled = styled.div`
-  .section {
-    height: 60vh;
-  }
-
-  .black-box {
-    height: 100px;
-    background-color: black;
-  }
-`;
 var layerTypes = {
   fill: ["fill-opacity"],
   line: ["line-opacity"],
@@ -38,19 +28,23 @@ var layerTypes = {
 export default function ScrollMapboxGL(
   props = {
     interactive: false,
+    indicators: true,
     mapboxAccessToken: "",
     mapStyle: "",
+    mapCSS: {},
     scrollZoom: false,
     story: {
       animationSpeed: 3,
       animationLoopLength: 28000,
+      animations: "",
       chapters: [
         {
           id: "chapter-1",
-          chapterType: "",
+          chapterType: "", // map, animation, etc.
           text: "",
           sectionDuration: 0,
           sectionOffset: 0,
+          sectionPin: false,
           layers: [{ layerType: "", layer: {}, opacityProperty: "" }],
           map: {
             desktop: {
@@ -85,13 +79,7 @@ export default function ScrollMapboxGL(
     mapboxAccessToken: props.mapboxAccessToken,
     mapStyle: props.mapStyle,
     interactive: props.interactive,
-    style: {
-      position: "fixed",
-      top: "0",
-      left: "0",
-      width: "100vw",
-      height: "100vh",
-    },
+    style: props.mapCSS,
   });
 
   /* Animation stuff */
@@ -284,22 +272,22 @@ export default function ScrollMapboxGL(
           });
         }}
       ></Map>
-      <TweenStyled>
-        <div className="section" />
-        <Controller>
-          {props.story.chapters.map((chapter, index) => {
-            if (chapter.chapterType === "map") {
-              return (
-                <span key={index}>
+      <div style={{ height: "60vh" }} />
+      <Controller>
+        {props.story.chapters.map((chapter, index) => {
+          if (chapter.chapterType === "map") {
+            return (
+              <span key={index}>
+                <div id={chapter.id}>
                   <Scene
                     triggerElement={"#" + chapter.id}
-                    indicators={true}
-                    pin={true}
+                    indicators={props.indicators}
+                    pin={chapter.sectionPin}
                     duration={chapter.sectionDuration}
                     offset={chapter.sectionOffset}
                   >
                     {(progress, event) => (
-                      <h1 style={{ color: "#FFF", top: TOP_SCENE }}>
+                      <div style={{ color: "#FFF", top: TOP_SCENE }}>
                         {chapter.text}
                         {event.type === "enter" &&
                           isMobile &&
@@ -326,35 +314,42 @@ export default function ScrollMapboxGL(
                             duration: chapter.map.desktop.duration,
                           })}
                         {event.type === "enter" && setLayerOpacity(index)}
-                      </h1>
+                      </div>
                     )}
                   </Scene>
-                  <div id={chapter.id} />
-                </span>
-              );
-            } else if (chapter.chapterType === "scrollmagic") {
+                </div>
+              </span>
+            );
+          } else if (chapter.chapterType === "scrollmagic") {
+            return (
               <span key={index}>
-                <Scene
-                  triggerElement={"#" + chapter.id}
-                  indicators={true}
-                  pin={true}
-                  duration={chapter.sectionDuration}
-                  offset={chapter.sectionOffset}
-                >
-                  {(progress, event) => (
-                    <h1 style={{ color: "#FFF", top: TOP_SCENE }}>
-                      {chapter.text}
-                    </h1>
-                  )}
-                </Scene>
-                <div id={chapter.id} />
-              </span>;
-            }
-          })}
-        </Controller>
-
-        <div className="section" />
-      </TweenStyled>
+                <div id={chapter.id}>
+                  <Scene
+                    triggerElement={"#" + chapter.id}
+                    indicators={props.indicators}
+                    pin={chapter.sectionPin}
+                    duration={chapter.sectionDuration}
+                    offset={chapter.sectionOffset}
+                  >
+                    {(progress, event) => (
+                      <div style={{ color: "#FFF", top: TOP_SCENE }}>
+                        {chapter.text}
+                        <Timeline
+                          totalProgress={progress}
+                          paused
+                          wrapper={<div style={chapter.animation.divStyle} />}
+                        >
+                          {chapter.animation.tween}
+                        </Timeline>
+                      </div>
+                    )}
+                  </Scene>
+                </div>
+              </span>
+            );
+          }
+        })}
+      </Controller>
     </div>
   );
 }

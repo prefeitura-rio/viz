@@ -1,10 +1,9 @@
 import { MapboxLayer } from "@deck.gl/mapbox"; // Ref: https://deck.gl/docs/api-reference/mapbox/mapbox-layer
 import { TripsLayer } from "@deck.gl/geo-layers";
-import { Tween } from "react-gsap";
+import { Timeline } from "react-gsap";
 
 import ScrollMapboxGL from "../components/engine/scroll-mapbox-gl";
 import busao from "../pages/especial-sppo/scroll-sppo/school-bus.png";
-
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w";
 const MAP_STYLE = "mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b";

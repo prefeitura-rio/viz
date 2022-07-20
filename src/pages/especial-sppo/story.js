@@ -1,14 +1,16 @@
 import { MapboxLayer } from "@deck.gl/mapbox"; // Ref: https://deck.gl/docs/api-reference/mapbox/mapbox-layer
 import { TripsLayer } from "@deck.gl/geo-layers";
 import ScrollMapboxGL from "../../components/engine/scroll-mapbox-gl";
+import { Tween } from "react-gsap";
+import busao from "./scroll-sppo/school-bus.png";
 
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w";
 const MAP_STYLE = "mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b";
-const INTERACTIVE = false;
 
 const TRIPS = require("./data/trips.json");
 const TRAIL_LENGTH = 500;
+const windowWidth = window.innerWidth;
 
 const buildings3d = {
   id: "add-3d-buildings",
@@ -41,6 +43,14 @@ const buildings3d = {
   },
 };
 
+const MAP_CSS = {
+  position: "fixed",
+  top: "0",
+  left: "0",
+  width: "100vw",
+  height: "100vh",
+  zIndex: "-1",
+};
 const story = {
   animationSpeed: 3,
   animationLoopLength: 28000,
@@ -50,7 +60,8 @@ const story = {
       chapterType: "map",
       text: "chapter-1",
       sectionDuration: 400,
-      sectionOffset: -500,
+      sectionOffset: -0,
+      sectionPin: false,
       layers: [
         {
           layerType: "deckgl-trips",
@@ -97,16 +108,31 @@ const story = {
     {
       id: "chapter-2",
       chapterType: "scrollmagic",
-      text: "chapter-2-scrollmagic",
+      text: "chapter-2",
       sectionDuration: 400,
-      sectionOffset: -500,
+      sectionOffset: 400,
+      sectionPin: false,
+      animation: {
+        tween: (
+          <Tween from={{ x: "0px" }} to={{ x: windowWidth * 0.97 }}>
+            <img src={busao} alt="" />
+          </Tween>
+        ),
+        divStyle: {
+          height: "400px",
+          backgroundColor: "gray",
+          width: "100%",
+          // marginTop: "-50vh",
+        },
+      },
     },
     {
       id: "chapter-3",
       chapterType: "map",
       text: "chapter-3",
       sectionDuration: 400,
-      sectionOffset: -500,
+      sectionOffset: 800,
+      sectionPin: false,
       layers: [
         {
           layerType: "mapbox",
@@ -147,7 +173,8 @@ const story = {
       chapterType: "map",
       text: "chapter-4",
       sectionDuration: 400,
-      sectionOffset: -500,
+      sectionOffset: 1200,
+      sectionPin: false,
       layers: [
         {
           layerType: "reuse",
@@ -185,9 +212,11 @@ const story = {
 export default function StorySPPO() {
   return (
     <ScrollMapboxGL
-      interactive={INTERACTIVE}
+      interactive={false}
+      indicators={true}
       mapboxAccessToken={MAPBOX_TOKEN}
       mapStyle={MAP_STYLE}
+      mapCSS={MAP_CSS}
       scrollZoom={false}
       story={story}
     />
