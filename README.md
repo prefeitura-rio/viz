@@ -2,6 +2,12 @@
 
 Repositório para apoiar o desenvolvimento de visualizações de dados para o Escritório de Dados Rio.
 
+
+## Como subir o servidor local:
+
+- Rodar `npm ci`
+- Rodar `npm start` 
+
 ## Como criar componentes exportáveis:
 
 - No arquivo `src/components/base.js` você encontrará as instruções para gerar o componente e registrá-lo para um bundle próprio.
