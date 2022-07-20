@@ -27,32 +27,47 @@ const story = {
       id: "chapter-1",
       chapterType: "scrollmagic",
       text: "chapter-1",
-      sectionDuration: 400,
+      sectionDuration: "50%",
       sectionOffset: -0,
       sectionPin: false,
       divStyle: {
         marginTop: "50vh",
-        height: "400px",
-        backgroundColor: "gray",
+        height: "50vh",
+        backgroundColor: "#232323",
         width: "100%",
       },
       animation: {
-        targets: [
-          <Fragment>
-            <div
-              style={{ width: "100px", height: "100px", background: "#ccc" }}
-            />
-            <div
-              style={{ width: "100px", height: "100px", background: "red" }}
-            />
-          </Fragment>,
-        ],
+        targets: [],
         tweens: [
-          <Tween to={{ x: "100px" }} target={0} />,
-          <Tween to={{ x: "100px" }} target={1} />,
-          <Tween to={{ x: "200px" }} target={0} />,
-          <Tween to={{ x: "200px" }} target={1} />,
-          <Tween to={{ opacity: 0 }} />,
+          <Tween to={{ x: windowWidth * 0.5 }}>
+            <div
+              style={{
+                width: "50px",
+                height: "50px",
+                background: "#FFFFFF",
+                borderRadius: "12px",
+                margin: "10px",
+              }}
+            ></div>
+            <div
+              style={{
+                width: "50px",
+                height: "50px",
+                background: "#FFFFFF",
+                borderRadius: "12px",
+                margin: "10px",
+              }}
+            ></div>
+            <div
+              style={{
+                width: "50px",
+                height: "50px",
+                background: "#FFFFFF",
+                borderRadius: "12px",
+                margin: "10px",
+              }}
+            ></div>
+          </Tween>,
         ],
       },
 
