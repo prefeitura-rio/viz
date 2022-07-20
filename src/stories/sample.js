@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { MapboxLayer } from "@deck.gl/mapbox"; // Ref: https://deck.gl/docs/api-reference/mapbox/mapbox-layer
 import { TripsLayer } from "@deck.gl/geo-layers";
 import { Tween } from "react-gsap";
@@ -36,11 +37,23 @@ const story = {
         width: "100%",
       },
       animation: {
-        tween: (
-          <Tween from={{ x: "0px" }} to={{ x: windowWidth * 0.97 }}>
-            <img src={busao} alt="" />
-          </Tween>
-        ),
+        targets: [
+          <Fragment>
+            <div
+              style={{ width: "100px", height: "100px", background: "#ccc" }}
+            />
+            <div
+              style={{ width: "100px", height: "100px", background: "red" }}
+            />
+          </Fragment>,
+        ],
+        tweens: [
+          <Tween to={{ x: "100px" }} target={0} />,
+          <Tween to={{ x: "100px" }} target={1} />,
+          <Tween to={{ x: "200px" }} target={0} />,
+          <Tween to={{ x: "200px" }} target={1} />,
+          <Tween to={{ opacity: 0 }} />,
+        ],
       },
       //
       map: {
@@ -77,13 +90,15 @@ const story = {
         height: "400px",
         backgroundColor: "gray",
         width: "100%",
+        marginTop: "50vh",
       },
       animation: {
-        tween: (
+        targets: [],
+        tweens: [
           <Tween from={{ x: "0px" }} to={{ x: windowWidth * 0.97 }}>
             <img src={busao} alt="" />
-          </Tween>
-        ),
+          </Tween>,
+        ],
       },
     },
   ],

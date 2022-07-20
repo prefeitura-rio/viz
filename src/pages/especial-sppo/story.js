@@ -123,11 +123,12 @@ const story = {
         width: "100%",
       },
       animation: {
-        tween: (
+        target: [],
+        tweens: [
           <Tween from={{ x: "0px" }} to={{ x: windowWidth * 0.97 }}>
             <img src={busao} alt="" />
-          </Tween>
-        ),
+          </Tween>,
+        ],
       },
     },
     {

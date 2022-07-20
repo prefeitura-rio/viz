@@ -36,7 +36,7 @@ export default function ScrollMapboxGL(
     story: {
       animationSpeed: 3,
       animationLoopLength: 28000,
-      animations: "",
+      animation: { tweens: [], targets: [] },
       chapters: [
         {
           id: "chapter-1",
@@ -334,8 +334,12 @@ export default function ScrollMapboxGL(
                     {(progress, event) => (
                       <div style={{ color: "#FFF", top: TOP_SCENE }}>
                         {chapter.text}
-                        <Timeline totalProgress={progress} paused>
-                          {chapter.animation.tween}
+                        <Timeline
+                          target={chapter.animation.targets}
+                          totalProgress={progress}
+                          paused
+                        >
+                          {chapter.animation.tweens}
                         </Timeline>
                       </div>
                     )}
