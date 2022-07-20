@@ -40,11 +40,12 @@ export default function ScrollMapboxGL(
       chapters: [
         {
           id: "chapter-1",
-          chapterType: "", // map, animation, etc.
+          chapterType: "", // map, scrollmagic, etc.
           text: "",
           sectionDuration: 0,
           sectionOffset: 0,
           sectionPin: false,
+          divStyle: {},
           layers: [{ layerType: "", layer: {}, opacityProperty: "" }],
           map: {
             desktop: {
