@@ -272,13 +272,12 @@ export default function ScrollMapboxGL(
           });
         }}
       ></Map>
-      <div style={{ height: "60vh" }} />
       <Controller>
         {props.story.chapters.map((chapter, index) => {
           if (chapter.chapterType === "map") {
             return (
               <span key={index}>
-                <div id={chapter.id}>
+                <div id={chapter.id} style={chapter.divStyle}>
                   <Scene
                     triggerElement={"#" + chapter.id}
                     indicators={props.indicators}
@@ -323,7 +322,7 @@ export default function ScrollMapboxGL(
           } else if (chapter.chapterType === "scrollmagic") {
             return (
               <span key={index}>
-                <div id={chapter.id}>
+                <div id={chapter.id} style={chapter.divStyle}>
                   <Scene
                     triggerElement={"#" + chapter.id}
                     indicators={props.indicators}
@@ -334,11 +333,7 @@ export default function ScrollMapboxGL(
                     {(progress, event) => (
                       <div style={{ color: "#FFF", top: TOP_SCENE }}>
                         {chapter.text}
-                        <Timeline
-                          totalProgress={progress}
-                          paused
-                          wrapper={<div style={chapter.animation.divStyle} />}
-                        >
+                        <Timeline totalProgress={progress} paused>
                           {chapter.animation.tween}
                         </Timeline>
                       </div>

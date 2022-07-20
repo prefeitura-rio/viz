@@ -29,19 +29,18 @@ const story = {
       sectionDuration: 400,
       sectionOffset: -0,
       sectionPin: false,
+      divStyle: {
+        marginTop: "50vh",
+        height: "400px",
+        backgroundColor: "gray",
+        width: "100%",
+      },
       animation: {
         tween: (
           <Tween from={{ x: "0px" }} to={{ x: windowWidth * 0.97 }}>
             <img src={busao} alt="" />
           </Tween>
         ),
-        divStyle: {
-          marginTop: "50vh",
-          height: "400px",
-          backgroundColor: "gray",
-          width: "100%",
-          zIndex: "-1",
-        },
       },
       //
       map: {
@@ -74,18 +73,17 @@ const story = {
       sectionDuration: 400,
       sectionOffset: 0,
       sectionPin: false,
+      divStyle: {
+        height: "400px",
+        backgroundColor: "gray",
+        width: "100%",
+      },
       animation: {
         tween: (
           <Tween from={{ x: "0px" }} to={{ x: windowWidth * 0.97 }}>
             <img src={busao} alt="" />
           </Tween>
         ),
-        divStyle: {
-          height: "400px",
-          backgroundColor: "gray",
-          width: "100%",
-          // marginTop: "-50vh",
-        },
       },
     },
   ],

@@ -59,9 +59,13 @@ const story = {
       id: "chapter-1",
       chapterType: "map",
       text: "chapter-1",
-      sectionDuration: 400,
-      sectionOffset: -0,
-      sectionPin: false,
+      sectionDuration: 600,
+      sectionOffset: 0,
+      sectionPin: true,
+      divStyle: {
+        height: "600px",
+        width: "100%",
+      },
       layers: [
         {
           layerType: "deckgl-trips",
@@ -82,6 +86,7 @@ const story = {
           }),
         },
       ],
+
       map: {
         desktop: {
           center: {
@@ -110,20 +115,19 @@ const story = {
       chapterType: "scrollmagic",
       text: "chapter-2",
       sectionDuration: 400,
-      sectionOffset: 400,
+      sectionOffset: 0,
       sectionPin: false,
+      divStyle: {
+        height: "400px",
+        backgroundColor: "gray",
+        width: "100%",
+      },
       animation: {
         tween: (
           <Tween from={{ x: "0px" }} to={{ x: windowWidth * 0.97 }}>
             <img src={busao} alt="" />
           </Tween>
         ),
-        divStyle: {
-          height: "400px",
-          backgroundColor: "gray",
-          width: "100%",
-          // marginTop: "-50vh",
-        },
       },
     },
     {
@@ -131,8 +135,12 @@ const story = {
       chapterType: "map",
       text: "chapter-3",
       sectionDuration: 400,
-      sectionOffset: 800,
+      sectionOffset: 0,
       sectionPin: false,
+      divStyle: {
+        height: "400px",
+        width: "100%",
+      },
       layers: [
         {
           layerType: "mapbox",
@@ -173,8 +181,12 @@ const story = {
       chapterType: "map",
       text: "chapter-4",
       sectionDuration: 400,
-      sectionOffset: 1200,
+      sectionOffset: 0,
       sectionPin: false,
+      divStyle: {
+        height: "400px",
+        width: "100%",
+      },
       layers: [
         {
           layerType: "reuse",

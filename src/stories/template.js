@@ -4,11 +4,45 @@ import { Timeline } from "react-gsap";
 
 import ScrollMapboxGL from "../components/engine/scroll-mapbox-gl";
 import busao from "../pages/especial-sppo/scroll-sppo/school-bus.png";
+
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w";
 const MAP_STYLE = "mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b";
-const INTERACTIVE = false;
+
+const TRIPS = require("./data/trips.json");
+const TRAIL_LENGTH = 500;
 const windowWidth = window.innerWidth;
+
+const buildings3d = {
+  id: "add-3d-buildings",
+  source: "composite",
+  "source-layer": "building",
+  filter: ["==", "extrude", "true"],
+  type: "fill-extrusion",
+  minzoom: 5,
+  paint: {
+    "fill-extrusion-color": "#aaa",
+    "fill-extrusion-height": [
+      "interpolate",
+      ["linear"],
+      ["zoom"],
+      5,
+      0,
+      10.05,
+      ["get", "height"],
+    ],
+    "fill-extrusion-base": [
+      "interpolate",
+      ["linear"],
+      ["zoom"],
+      5,
+      0,
+      10.05,
+      ["get", "min_height"],
+    ],
+    "fill-extrusion-opacity": 1,
+  },
+};
 
 const MAP_CSS = {
   position: "fixed",
@@ -18,31 +52,42 @@ const MAP_CSS = {
   height: "100vh",
   zIndex: "-1",
 };
-
 const story = {
+  animationSpeed: 3,
+  animationLoopLength: 28000,
   chapters: [
     {
       id: "chapter-1",
-      chapterType: "scrollmagic",
+      chapterType: "map",
       text: "chapter-1",
-      sectionDuration: 400,
-      sectionOffset: -0,
-      sectionPin: false,
-      animation: {
-        tween: (
-          <Tween from={{ x: "0px" }} to={{ x: windowWidth * 0.97 }}>
-            <img src={busao} alt="" />
-          </Tween>
-        ),
-        divStyle: {
-          marginTop: "50vh",
-          height: "400px",
-          backgroundColor: "gray",
-          width: "100%",
-          zIndex: "-1",
-        },
+      sectionDuration: 600,
+      sectionOffset: 0,
+      sectionPin: true,
+      divStyle: {
+        height: "600px",
+        width: "100%",
       },
-      //
+      layers: [
+        {
+          layerType: "deckgl-trips",
+          layer: new MapboxLayer({
+            id: "my-trips-layer",
+            type: TripsLayer,
+            data: TRIPS,
+            getPath: (d) => d.path,
+            getTimestamps: (d) => d.timestamps,
+            getColor: [0, 200, 236],
+            widthMinPixels: 5,
+            fadeTrail: true,
+            currentTime: 0,
+            opacity: 1,
+            rounded: true,
+            trailLength: TRAIL_LENGTH,
+            shadowEnabled: false,
+          }),
+        },
+      ],
+
       map: {
         desktop: {
           center: {
@@ -73,17 +118,104 @@ const story = {
       sectionDuration: 400,
       sectionOffset: 0,
       sectionPin: false,
+      divStyle: {
+        height: "400px",
+        backgroundColor: "gray",
+        width: "100%",
+      },
       animation: {
         tween: (
           <Tween from={{ x: "0px" }} to={{ x: windowWidth * 0.97 }}>
             <img src={busao} alt="" />
           </Tween>
         ),
-        divStyle: {
-          height: "400px",
-          backgroundColor: "gray",
-          width: "100%",
-          // marginTop: "-50vh",
+      },
+    },
+    {
+      id: "chapter-3",
+      chapterType: "map",
+      text: "chapter-3",
+      sectionDuration: 400,
+      sectionOffset: 0,
+      sectionPin: false,
+      divStyle: {
+        height: "400px",
+        width: "100%",
+      },
+      layers: [
+        {
+          layerType: "mapbox",
+          layer: { ...buildings3d },
+        },
+        {
+          layerType: "mapbox-style",
+          layer: {
+            id: "linhasantigas",
+          },
+        },
+      ],
+      map: {
+        desktop: {
+          center: {
+            lat: -22.9121089,
+            lon: -43.2301558,
+          },
+          zoom: 15,
+          bearing: 0,
+          pitch: 0,
+          duration: 4000,
+        },
+        mobile: {
+          center: {
+            lat: -22.9121089,
+            lon: -43.2301558,
+          },
+          zoom: 15,
+          bearing: 0,
+          pitch: 0,
+          duration: 4000,
+        },
+      },
+    },
+    {
+      id: "chapter-4",
+      chapterType: "map",
+      text: "chapter-4",
+      sectionDuration: 400,
+      sectionOffset: 0,
+      sectionPin: false,
+      divStyle: {
+        height: "400px",
+        width: "100%",
+      },
+      layers: [
+        {
+          layerType: "reuse",
+          layer: {
+            id: "my-trips-layer",
+          },
+        },
+      ],
+      map: {
+        desktop: {
+          center: {
+            lat: -22.9121089,
+            lon: -43.2301558,
+          },
+          zoom: 12,
+          bearing: 0,
+          pitch: 0,
+          duration: 4000,
+        },
+        mobile: {
+          center: {
+            lat: -22.9121089,
+            lon: -43.2301558,
+          },
+          zoom: 12,
+          bearing: 0,
+          pitch: 0,
+          duration: 4000,
         },
       },
     },
