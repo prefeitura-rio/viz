@@ -18,6 +18,9 @@ export default function Home() {
           <Link to="/especial-sppo/scroll"> Especial SPPO | Scroll </Link>
         </li>
         <li>
+          <Link to="/sandbox/teste"> Sandbox Teste | Scroll </Link>
+        </li>
+        <li>
           <Link to="/especial-sppo/scrollmapbox">
             Especial SPPO | ScrollMapboxGL
           </Link>
