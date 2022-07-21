@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/prefeitura-rio/viz#readme",
   "dependencies": {
+    "css-loader": "^6.7.1",
     "deck.gl": "^8.8.3",
     "mapbox-gl": "^2.9.1",
     "react": "^17.0.2",
@@ -31,6 +32,7 @@
     "react-map-gl": "^7.0.17",
     "react-router-dom": "^6.3.0",
     "react-scrollmagic": "^2.3.0",
+    "style-loader": "^3.3.1",
     "styled-components": "^5.3.5",
     "url-loader": "^4.1.1",
     "worker-loader": "^3.0.8"
