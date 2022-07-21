@@ -45,6 +45,7 @@ export default function ScrollMapboxGL(
           sectionDuration: 0,
           sectionOffset: 0,
           sectionPin: false,
+          sectionReverse: false,
           divStyle: {},
           layers: [{ layerType: "", layer: {}, opacityProperty: "" }],
           map: {
@@ -330,6 +331,7 @@ export default function ScrollMapboxGL(
                     pin={chapter.sectionPin}
                     duration={chapter.sectionDuration}
                     offset={chapter.sectionOffset}
+                    // reverse={chapter.sectionReverse}
                   >
                     {(progress, event) => (
                       <div style={{ color: "#FFF", top: TOP_SCENE }}>
