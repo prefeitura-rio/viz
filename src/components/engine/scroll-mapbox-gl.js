@@ -7,6 +7,7 @@ import { Map } from "react-map-gl";
 import mapboxgl from "mapbox-gl"; // do not remove this line
 import { isMobile } from "react-device-detect";
 import { Timeline } from "react-gsap";
+
 // The following is required to stop "npm build" from transpiling mapbox code.
 // notice the exclamation point in the import.
 // @ts-ignore
@@ -46,7 +47,7 @@ export default function ScrollMapboxGL(
           sectionOffset: 0,
           sectionPin: false,
           sectionReverse: false,
-          divStyle: {},
+          chapterDiv: "",
           layers: [{ layerType: "", layer: {}, opacityProperty: "" }],
           map: {
             desktop: {
@@ -274,12 +275,14 @@ export default function ScrollMapboxGL(
           });
         }}
       ></Map>
+
       <Controller>
         {props.story.chapters.map((chapter, index) => {
+          // const DivStyle = ;
           if (chapter.chapterType === "map") {
             return (
               <span key={index}>
-                <div id={chapter.id} style={chapter.divStyle}>
+                <chapter.chapterDiv id={chapter.id}>
                   <Scene
                     triggerElement={"#" + chapter.id}
                     indicators={props.indicators}
@@ -318,19 +321,20 @@ export default function ScrollMapboxGL(
                       </div>
                     )}
                   </Scene>
-                </div>
+                </chapter.chapterDiv>
               </span>
             );
           } else if (chapter.chapterType === "scrollmagic") {
             return (
-              <span key={index}>
-                <div id={chapter.id} style={chapter.divStyle}>
+              <div key={index}>
+                <chapter.chapterDiv id={chapter.id}>
                   <Scene
                     triggerElement={"#" + chapter.id}
                     indicators={props.indicators}
                     pin={chapter.sectionPin}
                     duration={chapter.sectionDuration}
                     offset={chapter.sectionOffset}
+                    reverse={true}
                   >
                     {(progress, event) => (
                       <div style={{ color: "#FFF", top: TOP_SCENE }}>
@@ -343,14 +347,14 @@ export default function ScrollMapboxGL(
                           paused
                         >
                           {chapter.animation.tweens.map((tween, index) => {
-                            return <span key={index}>{tween}</span>;
+                            return <div key={index}>{tween}</div>;
                           })}
                         </Timeline>
                       </div>
                     )}
                   </Scene>
-                </div>
-              </span>
+                </chapter.chapterDiv>
+              </div>
             );
           }
         })}

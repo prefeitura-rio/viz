@@ -26,13 +26,30 @@ const MAP_CSS = {
   zIndex: "-1",
 };
 
+const DivChapterOne = styled.div`
+  margin-top: 50vh;
+  height: 1200px;
+  width: 100%;
+  background: #232323;
+  // display: flex;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #ffffff;
+`;
+
 const Block = styled.div`
   width: 50px;
   height: 50px;
+  justify-content: center;
   background: #ffffff;
   border-radius: 10px;
   display: inline-block;
-  margin: 10px;
+  margin: 5px;
 `;
 
 const getTweenBlock = (position) => {
@@ -49,6 +66,8 @@ const getTweenBlock = (position) => {
 };
 
 const StyledText = styled.h1`
+  // display: inline-block;
+  justify-content: center;
   font-family: Poppins;
   font-weight: 700;
   font-size: 1.4rem;
@@ -56,148 +75,41 @@ const StyledText = styled.h1`
   color: #FFFFFF;
 `;
 
+console.log("from sample.js", DivChapterOne);
+
 const story = {
   chapters: [
     {
       id: "chapter-1",
       chapterType: "scrollmagic",
       text: "",
-      sectionDuration: 2000,
+      sectionDuration: 500,
       sectionOffset: 200,
       sectionPin: true,
       sectionReverse: false,
-      divStyle: {
-        marginTop: "50vh",
-        height: "3000px",
-        backgroundColor: "#232323",
-        width: "100%",
-      },
+      chapterDiv: DivChapterOne,
       animation: {
         targets: [<StyledText>1 minuto</StyledText>],
-
         tweens: [
           getTweenBlock(0),
           <Tween
-            from={{ x: windowWidth * 0.5, y: 200, opacity: 0 }}
-            to={{ opacity: 1 }}
+            ease={"power4.out"}
+            from={{ opacity: 0, y: 200 }}
+            to={{ opacity: 1, y: 200 }}
+            duration={2.5}
             target={0}
-            duration={0.25}
             position={0}
           ></Tween>,
-        ]
-          .concat([
-            // 5 minutes
-            getTweenBlock(0.1),
-            getTweenBlock(0.1),
-            getTweenBlock(0.1),
-            getTweenBlock(0.1),
-            <Tween
-              // from={{ x: windowWidth * 0.5, y: 180, opacity: 0 }}
-              to={{ text: "5 minutos" }}
-              target={0}
-              position={0.1}
-              duration={0}
-            ></Tween>,
-          ])
-          .concat([
-            // 10 minutes
-            getTweenBlock(0.2),
-            getTweenBlock(0.2),
-            getTweenBlock(0.2),
-            getTweenBlock(0.2),
-            getTweenBlock(0.2),
-            <Tween
-              // from={{ x: windowWidth * 0.5, y: 180, opacity: 0 }}
-              to={{ text: "10 minutos" }}
-              target={0}
-              position={0.2}
-              duration={0}
-            ></Tween>,
-          ])
-          .concat([
-            // 20 minutes
-            getTweenBlock(0.3),
-            getTweenBlock(0.3),
-            getTweenBlock(0.3),
-            getTweenBlock(0.3),
-            getTweenBlock(0.3),
-            getTweenBlock(0.3),
-            getTweenBlock(0.3),
-            getTweenBlock(0.3),
-            getTweenBlock(0.3),
-            getTweenBlock(0.3),
-
-            <Tween
-              // from={{ x: windowWidth * 0.5, y: 180, opacity: 0 }}
-              to={{ text: "20 minutos" }}
-              target={0}
-              position={0.3}
-              duration={0}
-            ></Tween>,
-          ])
-          .concat([
-            <Tween
-              // from={{ x: windowWidth * 0.5, y: 180, opacity: 0 }}
-              to={{ text: "20 minutos = 20 sinais" }}
-              target={0}
-              position={0.4}
-              duration={0}
-            ></Tween>,
-          ])
-          .concat([
-            <Tween
-              // from={{ x: windowWidth * 0.5, y: 180, opacity: 0 }}
-              to={{ text: "50% dos sinais = 10 sinais" }}
-              target={0}
-              position={0.5}
-              duration={0}
-            ></Tween>,
-          ])
-          .concat([
-            <Tween
-              // from={{ x: windowWidth * 0.5, y: 180, opacity: 0 }}
-              to={{ text: "menos de 50% dos sinais" }}
-              target={0}
-              position={0.6}
-              duration={0}
-            ></Tween>,
-          ])
-          .concat([
-            <Tween
-              from={{ x: windowWidth * 0.5, y: 180, opacity: 0 }}
-              to={{ text: "" }}
-              target={0}
-              position={0.7}
-              duration={0}
-            ></Tween>,
-          ])
-          .concat([
-            <Tween
-              from={{ x: windowWidth * 0.5, y: 180, opacity: 0 }}
-              to={{ text: "500 metros" }}
-              target={0}
-              position={0.8}
-              duration={0}
-            ></Tween>,
-          ])
-          .concat([
-            <Tween
-              from={{ x: windowWidth * 0.5, y: 180, opacity: 0 }}
-              to={{ text: "80% dos sinais = 16 sinais" }}
-              target={0}
-              position={0.9}
-              duration={0}
-            ></Tween>,
-          ])
-          .concat([
-            <Tween
-              from={{ x: windowWidth * 0.5, y: 180, opacity: 0 }}
-              to={{ text: "menos de 80% dos sinais" }}
-              target={0}
-              position={1}
-              duration={0}
-            ></Tween>,
-          ]),
+        ].concat([
+          // 5 minutes
+          // getTweenBlock(0.1),
+          // getTweenBlock(0.1),
+          // getTweenBlock(0.1),
+          // getTweenBlock(0.1),
+          // <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} position={0.1}>
+          //   <StyledText>5 minutos</StyledText>
+          // </Tween>,
+        ]),
       },
 
       //
