@@ -54,12 +54,12 @@ const Block = styled.h1`
   margin: 5px;
 `;
 
-const getTweenBlock = (position) => {
+const getTweenBlock = (props = { position: 10 }) => {
   return (
     <Tween
       from={{ y: 0, opacity: 0 }}
       to={{ opacity: 1 }}
-      position={position}
+      position={props.position}
       duration={20}
     >
       <Block />
@@ -84,7 +84,7 @@ const story = {
     {
       id: "chapter-1",
       chapterType: "scrollmagic",
-      text: "",
+      text: "CHAPTER 1",
       sectionDuration: 500,
       sectionOffset: 200,
       sectionPin: true,
@@ -107,8 +107,8 @@ const story = {
           ></Tween>,
         ].concat([
           // 5 minutes
-          getTweenBlock(20),
-          getTweenBlock(20),
+          getTweenBlock({ position: 20 }),
+          getTweenBlock({ position: 20 }),
           <Tween
             text={"5 minutos"}
             ease={"power4.out"}

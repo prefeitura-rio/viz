@@ -337,8 +337,9 @@ export default function ScrollMapboxGL(
                     reverse={true}
                   >
                     {(progress, event) => (
-                      <div style={{ color: "#FFF", top: TOP_SCENE }}>
-                        {chapter.text}
+                      <div style={{ color: "#B7990D", top: TOP_SCENE }}>
+                        <div>{chapter.text}</div>
+
                         <Timeline
                           target={chapter.animation.targets.map((target) => {
                             return target;
