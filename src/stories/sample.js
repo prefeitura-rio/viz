@@ -33,20 +33,22 @@ const DivChapterOne = styled.div`
   background: #232323;
   // display: flex;
 
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
+  // justify-content: center;
   text-align: center;
+  // display: inline-block;
 
   font-weight: 700;
   font-size: 1.4rem;
-  color: #ffffff;
+  color: #e2856e;
 `;
 
-const Block = styled.div`
+const Block = styled.h1`
   width: 50px;
   height: 50px;
   justify-content: center;
   background: #ffffff;
+  color: #e56399;
   border-radius: 10px;
   display: inline-block;
   margin: 5px;
@@ -58,7 +60,7 @@ const getTweenBlock = (position) => {
       from={{ y: 0, opacity: 0 }}
       to={{ opacity: 1 }}
       position={position}
-      duration={0.1}
+      duration={20}
     >
       <Block />
     </Tween>
@@ -66,13 +68,13 @@ const getTweenBlock = (position) => {
 };
 
 const StyledText = styled.h1`
-  // display: inline-block;
+  display: inline-block;
   justify-content: center;
   font-family: Poppins;
   font-weight: 700;
   font-size: 1.4rem;
-  font-style: "normal;
-  color: #FFFFFF;
+  color: #f6ae2d;
+  background: #7f96ff;
 `;
 
 console.log("from sample.js", DivChapterOne);
@@ -89,26 +91,33 @@ const story = {
       sectionReverse: false,
       chapterDiv: DivChapterOne,
       animation: {
-        targets: [<StyledText>1 minuto</StyledText>],
+        targets: [
+          <StyledText>1 minuto</StyledText>,
+          // <StyledText>092309 minutos</StyledText>,
+        ],
         tweens: [
           getTweenBlock(0),
           <Tween
             ease={"power4.out"}
             from={{ opacity: 0, y: 200 }}
             to={{ opacity: 1, y: 200 }}
-            duration={2.5}
+            duration={100}
             target={0}
             position={0}
           ></Tween>,
         ].concat([
           // 5 minutes
-          // getTweenBlock(0.1),
-          // getTweenBlock(0.1),
-          // getTweenBlock(0.1),
-          // getTweenBlock(0.1),
-          // <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} position={0.1}>
-          //   <StyledText>5 minutos</StyledText>
-          // </Tween>,
+          getTweenBlock(20),
+          getTweenBlock(20),
+          <Tween
+            text={"5 minutos"}
+            ease={"power4.out"}
+            from={{ opacity: 0, y: 200 }}
+            to={{ opacity: 1, y: 200 }}
+            duration={20}
+            // target={1}
+            position={20}
+          ></Tween>,
         ]),
       },
 
@@ -130,6 +139,48 @@ const story = {
             lon: -43.2301558,
           },
           zoom: 9,
+          bearing: 0,
+          pitch: 0,
+          duration: 4000,
+        },
+      },
+    },
+    {
+      id: "chapter-2",
+      chapterType: "map",
+      text: "chapter-2",
+      sectionDuration: 600,
+      sectionOffset: 0,
+      sectionPin: false,
+      chapterDiv: styled.div`
+        height: 1400px;
+        width: 100%;
+      `,
+      layers: [
+        {
+          layerType: "reuse",
+          layer: {
+            id: "linhasantigas",
+          },
+        },
+      ],
+      map: {
+        desktop: {
+          center: {
+            lat: -22.9121089,
+            lon: -43.2301558,
+          },
+          zoom: 15,
+          bearing: 0,
+          pitch: 0,
+          duration: 4000,
+        },
+        mobile: {
+          center: {
+            lat: -22.9121089,
+            lon: -43.2301558,
+          },
+          zoom: 15,
           bearing: 0,
           pitch: 0,
           duration: 4000,
