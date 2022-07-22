@@ -4,6 +4,7 @@ import { TripsLayer } from "@deck.gl/geo-layers";
 import { Tween } from "react-gsap";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+import styled from "styled-components";
 
 import ScrollMapboxGL from "../components/engine/scroll-mapbox-gl";
 import busao from "../pages/especial-sppo/scroll-sppo/school-bus.png";
@@ -25,39 +26,35 @@ const MAP_CSS = {
   zIndex: "-1",
 };
 
-const block = (
-  <div
-    style={{
-      display: "inline-block",
-      width: "50px",
-      height: "50px",
-      background: "#FFFFFF",
-      borderRadius: "12px",
-      margin: "10px",
-    }}
-  ></div>
-);
+const Block = styled.div`
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 10px;
+`;
 
 const getTweenBlock = (position) => {
   return (
     <Tween
-      from={{ x: windowWidth * 0.07, y: 0, opacity: 0 }}
+      from={{ y: 0, opacity: 0 }}
       to={{ opacity: 1 }}
       position={position}
       duration={0.1}
     >
-      {block}
+      <Block />
     </Tween>
   );
 };
 
-const textStyle = {
-  fontFamily: "Poppins",
-  fontWeight: "700",
-  fontSize: "1.4rem",
-  fontStyle: "normal",
-  color: "#FFFFFF",
-};
+const StyledText = styled.h1`
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-style: "normal;
+  color: #FFFFFF;
+`;
 
 const story = {
   chapters: [
@@ -68,7 +65,7 @@ const story = {
       sectionDuration: 2000,
       sectionOffset: 200,
       sectionPin: true,
-      sectionReverse: true,
+      sectionReverse: false,
       divStyle: {
         marginTop: "50vh",
         height: "3000px",
@@ -76,7 +73,7 @@ const story = {
         width: "100%",
       },
       animation: {
-        targets: [<div style={textStyle}>1 minuto</div>],
+        targets: [<StyledText>1 minuto</StyledText>],
 
         tweens: [
           getTweenBlock(0),
@@ -144,7 +141,7 @@ const story = {
               to={{ text: "20 minutos = 20 sinais" }}
               target={0}
               position={0.4}
-              duration={0.05}
+              duration={0}
             ></Tween>,
           ])
           .concat([
@@ -153,7 +150,7 @@ const story = {
               to={{ text: "50% dos sinais = 10 sinais" }}
               target={0}
               position={0.5}
-              duration={0.1}
+              duration={0}
             ></Tween>,
           ])
           .concat([
@@ -162,7 +159,7 @@ const story = {
               to={{ text: "menos de 50% dos sinais" }}
               target={0}
               position={0.6}
-              duration={0.1}
+              duration={0}
             ></Tween>,
           ])
           .concat([
@@ -171,7 +168,7 @@ const story = {
               to={{ text: "" }}
               target={0}
               position={0.7}
-              duration={0.1}
+              duration={0}
             ></Tween>,
           ])
           .concat([
@@ -180,16 +177,16 @@ const story = {
               to={{ text: "500 metros" }}
               target={0}
               position={0.8}
-              duration={0.1}
+              duration={0}
             ></Tween>,
           ])
           .concat([
             <Tween
               from={{ x: windowWidth * 0.5, y: 180, opacity: 0 }}
-              to={{ text: "80% dos sianais = 16 sinais" }}
+              to={{ text: "80% dos sinais = 16 sinais" }}
               target={0}
               position={0.9}
-              duration={0.1}
+              duration={0}
             ></Tween>,
           ])
           .concat([
@@ -198,7 +195,7 @@ const story = {
               to={{ text: "menos de 80% dos sinais" }}
               target={0}
               position={1}
-              duration={0.1}
+              duration={0}
             ></Tween>,
           ]),
       },

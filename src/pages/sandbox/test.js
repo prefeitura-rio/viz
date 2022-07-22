@@ -1,7 +1,9 @@
-import "./App.css";
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import styled from "styled-components";
+// import "./test.css";
 
-function App() {
+export default function Test() {
   const Section = styled.div`
     width: 100vw;
     height: 100vh;
@@ -111,7 +113,6 @@ function App() {
     flex-direction: column;
     margin-bottom: 0px;
   `;
-
   return (
     <div>
       <Section>
@@ -170,5 +171,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

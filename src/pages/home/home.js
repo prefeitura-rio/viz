@@ -7,24 +7,21 @@ export default function Home() {
       <lu>
         <li>
           <Link to="/"> Home </Link>
-        </li>
-        <li>
-          <Link to="/stories/sample"> Scroll Map Engine | Sample </Link>
+          <br />
         </li>
         <li>
           <Link to="/especial-sppo/trips"> Especial SPPO | Trips </Link>
-        </li>
-        <li>
-          <Link to="/especial-sppo/scroll"> Especial SPPO | Scroll </Link>
-        </li>
-        <li>
-          <Link to="/sandbox/App"> Sandbox App | Scroll </Link>
-        </li>
-        <li>
+          <br />
           <Link to="/especial-sppo/scrollmapbox">
             Especial SPPO | ScrollMapboxGL
           </Link>
         </li>
+        <li>
+          <Link to="/sandbox/test"> Sandbox | Test </Link>
+          <br />
+          <Link to="/stories/sample"> Stories | Sample </Link>
+        </li>
+        <li></li>
       </lu>
     </div>
   );
