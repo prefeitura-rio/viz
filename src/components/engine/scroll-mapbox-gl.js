@@ -361,7 +361,6 @@ export default function ScrollMapboxGL(
                     </chapter.text.Style>
                   )}
                 </Scene>
-
                 <Scene
                   triggerElement={"#" + chapter.id}
                   indicators={props.indicators}
@@ -389,7 +388,7 @@ export default function ScrollMapboxGL(
                             <div
                               style={{
                                 backgroundColor: "#e2856e",
-                                display: "inline-block",
+                                // display: "inline-block",
                                 // textAlign: "center",
                                 // position: "absolute",
                               }}

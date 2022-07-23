@@ -34,13 +34,15 @@ const DivChapter2 = styled.div`
   // font-size: 1.9rem;
 `;
 
-const Block = styled.div`
-  width: 50px;
-  height: 50px;
-  background: #ffffff;
-  color: #000000;
-  border-radius: 10px;
-  margin: 5px;
+const chapterIndicator = styled.div`
+  position: absolute;
+  background: #01baef;
+  text-align: "left";
+  font-size: 1.5rem;
+  color: #cfe795;
+  z-index: 1;
+  // top: 0;
+  // left: 0;
 `;
 
 const getTweenBlock = (props = { nBlocks: 1, duration: 0.01, position: 0 }) => {
@@ -62,6 +64,16 @@ const getTweenBlock = (props = { nBlocks: 1, duration: 0.01, position: 0 }) => {
   return tweenBlocks;
 };
 
+const Block = styled.div`
+  // text-align: center;
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+  margin: 5px;
+`;
+
 const DivChapter1 = styled.div`
   margin-top: 50vh;
   height: 1200px;
@@ -78,7 +90,7 @@ const DivChapter1 = styled.div`
   color: #e2856e;
 `;
 
-const StyledText = styled.h1`
+const MinutesText = styled.h1`
   // justify-content: center;
   // text-align: center;
   // font-family: Poppins;
@@ -90,17 +102,6 @@ const StyledText = styled.h1`
   background: #7f96ff;
 `;
 
-const textStyleIndicator = styled.div`
-  position: absolute;
-  background: #01baef;
-  text-align: "left";
-  font-size: 1.5rem;
-  color: #cfe795;
-  z-index: 1;
-  // top: 0;
-  // left: 0;
-`;
-
 const story = {
   chapters: [
     {
@@ -108,7 +109,7 @@ const story = {
       chapterType: "scrollmagic",
       text: {
         value: "CHAPTER 1",
-        Style: textStyleIndicator,
+        Style: chapterIndicator,
         sectionDuration: 1000,
         sectionPin: true,
         sectionOffset: 100,
@@ -120,8 +121,8 @@ const story = {
       chapterDiv: DivChapter1,
       animation: {
         targets: [
-          <StyledText>1 minuto</StyledText>,
-          // <StyledText>092309 minutos</StyledText>,
+          <MinutesText>1 minuto</MinutesText>,
+          // <MinutesText>092309 minutos</MinutesText>,
         ],
         tweens: [
           <Tween duration={100}></Tween>,
@@ -205,7 +206,7 @@ const story = {
       chapterType: "map",
       text: {
         value: "CHAPTER 2",
-        Style: textStyleIndicator,
+        Style: chapterIndicator,
         sectionDuration: 600,
         sectionPin: true,
         sectionOffset: 0,
