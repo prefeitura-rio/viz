@@ -42,7 +42,14 @@ export default function ScrollMapboxGL(
         {
           id: "chapter-1",
           chapterType: "", // map, scrollmagic, etc.
-          text: "",
+          text: {
+            value: "",
+            Style: "",
+            sectionDuration: "",
+            sectionPin: "",
+            sectionOffset: "",
+          },
+          // textStyle: "",
           sectionDuration: 0,
           sectionOffset: 0,
           sectionPin: false,
@@ -279,83 +286,125 @@ export default function ScrollMapboxGL(
       <Controller>
         {props.story.chapters.map((chapter, index) => {
           // const DivStyle = ;
+          // console.log(index, chapter);
           if (chapter.chapterType === "map") {
             return (
-              <span key={index}>
-                <chapter.chapterDiv id={chapter.id}>
-                  <Scene
-                    triggerElement={"#" + chapter.id}
-                    indicators={props.indicators}
-                    pin={chapter.sectionPin}
-                    duration={chapter.sectionDuration}
-                    offset={chapter.sectionOffset}
-                  >
-                    {(progress, event) => (
-                      <div style={{ color: "#FFF", top: TOP_SCENE }}>
-                        {chapter.text}
-                        {event.type === "enter" &&
-                          isMobile &&
-                          flyToNextStep({
-                            center: [
-                              chapter.map.mobile.center.lon,
-                              chapter.map.mobile.center.lat,
-                            ],
-                            zoom: chapter.map.mobile.zoom,
-                            bearing: chapter.map.mobile.bearing,
-                            pitch: chapter.map.mobile.pitch,
-                            duration: chapter.map.mobile.duration,
-                          })}
-                        {event.type === "enter" &&
-                          !isMobile &&
-                          flyToNextStep({
-                            center: [
-                              chapter.map.desktop.center.lon,
-                              chapter.map.desktop.center.lat,
-                            ],
-                            zoom: chapter.map.desktop.zoom,
-                            bearing: chapter.map.desktop.bearing,
-                            pitch: chapter.map.desktop.pitch,
-                            duration: chapter.map.desktop.duration,
-                          })}
-                        {event.type === "enter" && setLayerOpacity(index)}
-                      </div>
-                    )}
-                  </Scene>
-                </chapter.chapterDiv>
-              </span>
+              <chapter.chapterDiv key={index} id={chapter.id}>
+                <Scene
+                  triggerElement={"#" + chapter.id}
+                  indicators={props.indicators}
+                  pin={chapter.text.sectionPin}
+                  duration={chapter.text.sectionDuration}
+                  offset={chapter.text.sectionOffset}
+                  reverse={true}
+                >
+                  {(progress, event) => (
+                    <chapter.text.Style>
+                      {chapter.text.value}
+                    </chapter.text.Style>
+                  )}
+                </Scene>
+                <Scene
+                  triggerElement={"#" + chapter.id}
+                  indicators={props.indicators}
+                  pin={chapter.sectionPin}
+                  duration={chapter.sectionDuration}
+                  offset={chapter.sectionOffset}
+                >
+                  {(progress, event) => (
+                    <div>
+                      {event.type === "enter" &&
+                        isMobile &&
+                        flyToNextStep({
+                          center: [
+                            chapter.map.mobile.center.lon,
+                            chapter.map.mobile.center.lat,
+                          ],
+                          zoom: chapter.map.mobile.zoom,
+                          bearing: chapter.map.mobile.bearing,
+                          pitch: chapter.map.mobile.pitch,
+                          duration: chapter.map.mobile.duration,
+                        })}
+                      {event.type === "enter" &&
+                        !isMobile &&
+                        flyToNextStep({
+                          center: [
+                            chapter.map.desktop.center.lon,
+                            chapter.map.desktop.center.lat,
+                          ],
+                          zoom: chapter.map.desktop.zoom,
+                          bearing: chapter.map.desktop.bearing,
+                          pitch: chapter.map.desktop.pitch,
+                          duration: chapter.map.desktop.duration,
+                        })}
+                      {event.type === "enter" && setLayerOpacity(index)}
+                    </div>
+                  )}
+                </Scene>
+              </chapter.chapterDiv>
             );
           } else if (chapter.chapterType === "scrollmagic") {
+            // var dd = chapter.animation.tweens[0];
             return (
-              <div key={index}>
-                <chapter.chapterDiv id={chapter.id}>
-                  <Scene
-                    triggerElement={"#" + chapter.id}
-                    indicators={props.indicators}
-                    pin={chapter.sectionPin}
-                    duration={chapter.sectionDuration}
-                    offset={chapter.sectionOffset}
-                    reverse={true}
-                  >
-                    {(progress, event) => (
-                      <div style={{ color: "#B7990D", top: TOP_SCENE }}>
-                        <div>{chapter.text}</div>
+              <chapter.chapterDiv key={index} id={chapter.id}>
+                <Scene
+                  triggerElement={"#" + chapter.id}
+                  indicators={props.indicators}
+                  pin={chapter.text.sectionPin}
+                  duration={chapter.text.sectionDuration}
+                  offset={chapter.text.sectionOffset}
+                  reverse={true}
+                >
+                  {(progress, event) => (
+                    <chapter.text.Style>
+                      {chapter.text.value}
+                    </chapter.text.Style>
+                  )}
+                </Scene>
 
-                        <Timeline
-                          target={chapter.animation.targets.map((target) => {
-                            return target;
-                          })}
-                          totalProgress={progress}
-                          paused
-                        >
-                          {chapter.animation.tweens.map((tween, index) => {
-                            return <div key={index}>{tween}</div>;
-                          })}
-                        </Timeline>
-                      </div>
-                    )}
-                  </Scene>
-                </chapter.chapterDiv>
-              </div>
+                <Scene
+                  triggerElement={"#" + chapter.id}
+                  indicators={props.indicators}
+                  pin={chapter.sectionPin}
+                  duration={chapter.sectionDuration}
+                  offset={chapter.sectionOffset}
+                  reverse={true}
+                >
+                  {(progress, event) => (
+                    <div
+                      style={{
+                        backgroundColor: "#e56399",
+                        // display: "inline-block",
+                        // textAlign: "center",
+                        // position: "absolute",
+                      }}
+                    >
+                      <Timeline
+                        target={chapter.animation.targets}
+                        totalProgress={progress}
+                        paused
+                      >
+                        {chapter.animation.tweens.map((tween, index) => {
+                          return (
+                            <div
+                              style={{
+                                backgroundColor: "#e2856e",
+                                display: "inline-block",
+                                // textAlign: "center",
+                                // position: "absolute",
+                              }}
+                              key={index}
+                            >
+                              {tween}
+                            </div>
+                          );
+                        })}
+                        {/* {chapter.animation.tweens} */}
+                      </Timeline>
+                    </div>
+                  )}
+                </Scene>
+              </chapter.chapterDiv>
             );
           }
         })}

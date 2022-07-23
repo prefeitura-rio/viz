@@ -14,7 +14,7 @@ const TRAIL_LENGTH = 400;
 const windowWidth = window.innerWidth;
 
 const buildings3d = {
-  id: "add-3d-buildings",
+  id: "3d-buildings",
   source: "composite",
   "source-layer": "building",
   filter: ["==", "extrude", "true"],
@@ -52,6 +52,19 @@ const MAP_CSS = {
   height: "100vh",
   zIndex: "-1",
 };
+
+const textStyleIndicator = styled.div`
+  position: absolute;
+  background: #01baef;
+  text-align: "left";
+  font-size: 1.5rem;
+  color: #cfe795;
+  opacity: 1;
+  z-index: 1;
+  // top: 0;
+  // left: 0;
+`;
+
 const story = {
   animationSpeed: 3,
   animationLoopLength: 28000,
@@ -59,25 +72,27 @@ const story = {
     {
       id: "chapter-1",
       chapterType: "map",
-      text: "chapter-1",
+      text: {
+        value: "CHAPTER 1",
+        Style: textStyleIndicator,
+        sectionDuration: 700,
+        sectionPin: true,
+        sectionOffset: 0,
+      },
       sectionDuration: 600,
-      sectionOffset: 500,
+      sectionOffset: 0,
       sectionPin: false,
       chapterDiv: styled.div`
-        margin-top: 600px;
-        height: 600px;
+        margin-top: 400px;
+        height: 700px;
         width: 100%;
+        background: #000000;
+        opacity: 0.3;
       `,
       layers: [
         {
           layerType: "mapbox",
           layer: { ...buildings3d },
-        },
-        {
-          layerType: "mapbox-style",
-          layer: {
-            id: "linhasantigas",
-          },
         },
       ],
       map: {
@@ -106,10 +121,16 @@ const story = {
     {
       id: "chapter-2",
       chapterType: "map",
-      text: "chapter-2",
+      text: {
+        value: "CHAPTER 2",
+        Style: textStyleIndicator,
+        sectionDuration: "100%",
+        sectionPin: true,
+        sectionOffset: 0,
+      },
       sectionDuration: "100%",
       sectionOffset: 0,
-      sectionPin: true,
+      sectionPin: false,
       chapterDiv: styled.div`
         height: 100vh;
         width: 100%;
@@ -125,7 +146,7 @@ const story = {
             getPath: (d) => d.path,
             getTimestamps: (d) => d.timestamps,
             getColor: [244, 144, 44],
-            widthMinPixels: 20,
+            widthMinPixels: 5,
             fadeTrail: true,
             currentTime: 0,
             opacity: 1,
@@ -134,36 +155,44 @@ const story = {
             shadowEnabled: false,
           }),
         },
+        {
+          layerType: "reuse",
+          layer: {
+            id: "3d-buildings",
+          },
+        },
       ],
-
       map: {
         desktop: {
-          center: {
-            lon: -43.16562,
-            lat: -22.96719,
-          },
-          zoom: 14.78,
+          center: { lon: -43.19415, lat: -22.9795 },
+          zoom: 15.0,
           pitch: 60.0,
-          bearing: -68.06,
-          duration: 4000,
+          bearing: -37.07,
+          duration: 2000,
         },
         mobile: {
           center: {
             lat: -22.9121089,
             lon: -43.2301558,
           },
-          zoom: 9,
+          zoom: 15,
           bearing: 0,
           pitch: 0,
-          duration: 4000,
+          duration: 2000,
         },
       },
     },
     {
       id: "chapter-3",
       chapterType: "map",
-      text: "chapter-3",
-      sectionDuration: 600,
+      text: {
+        value: "CHAPTER 3",
+        Style: textStyleIndicator,
+        sectionDuration: 400,
+        sectionPin: true,
+        sectionOffset: 0,
+      },
+      sectionDuration: 400,
       sectionOffset: 0,
       sectionPin: false,
       chapterDiv: styled.div`
@@ -172,13 +201,9 @@ const story = {
       `,
       layers: [
         {
-          layerType: "mapbox",
-          layer: { ...buildings3d },
-        },
-        {
-          layerType: "mapbox-style",
+          layerType: "reuse",
           layer: {
-            id: "linhasantigas",
+            id: "3d-buildings",
           },
         },
       ],
@@ -208,24 +233,24 @@ const story = {
     {
       id: "chapter-4",
       chapterType: "map",
-      text: "chapter-4",
+      text: {
+        value: "CHAPTER 4",
+        Style: textStyleIndicator,
+        sectionDuration: 600,
+        sectionPin: true,
+        sectionOffset: 0,
+      },
       sectionDuration: 600,
       sectionOffset: 0,
       sectionPin: false,
       chapterDiv: styled.div`
-        height: 400px;
+        height: 600px;
         width: 100%;
       `,
       layers: [
         {
-          layerType: "mapbox",
-          layer: { ...buildings3d },
-        },
-        {
           layerType: "mapbox-style",
-          layer: {
-            id: "linhasantigas",
-          },
+          layer: { id: "linhasantigas" },
         },
       ],
       map: {
@@ -254,12 +279,18 @@ const story = {
     {
       id: "chapter-5",
       chapterType: "map",
-      text: "chapter-5",
+      text: {
+        value: "CHAPTER 5",
+        Style: textStyleIndicator,
+        sectionDuration: 400,
+        sectionPin: true,
+        sectionOffset: 0,
+      },
       sectionDuration: 400,
       sectionOffset: 0,
       sectionPin: false,
       chapterDiv: styled.div`
-        height: 400px;
+        height: 900px;
         width: 100%;
       `,
       layers: [

@@ -26,99 +26,154 @@ const MAP_CSS = {
   zIndex: "-1",
 };
 
-const DivChapterOne = styled.div`
+const DivChapter2 = styled.div`
+  height: 1900px;
+  width: 100 %;
+  // text-align: center;
+  // font-weight: 700;
+  // font-size: 1.9rem;
+`;
+
+const Block = styled.div`
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+  margin: 5px;
+`;
+
+const getTweenBlock = (props = { nBlocks: 1, duration: 0.01, position: 0 }) => {
+  // iterate over the number of blocks and return a tween for each one
+  const { nBlocks, duration, position } = props;
+  const tweenBlocks = [];
+  for (let i = 0; i < nBlocks; i++) {
+    tweenBlocks.push(
+      <Tween
+        from={{ opacity: 0 }}
+        to={{ opacity: 1 }}
+        position={position}
+        duration={duration}
+      >
+        <Block>{i}</Block>
+      </Tween>
+    );
+  }
+  return tweenBlocks;
+};
+
+const DivChapter1 = styled.div`
   margin-top: 50vh;
   height: 1200px;
   width: 100%;
   background: #232323;
-  // display: flex;
 
   // align-items: center;
   // justify-content: center;
   text-align: center;
   // display: inline-block;
 
-  font-weight: 700;
-  font-size: 1.4rem;
+  // font-weight: 700;
+  // font-size: 1.9rem;
   color: #e2856e;
 `;
 
-const Block = styled.h1`
-  width: 50px;
-  height: 50px;
-  justify-content: center;
-  background: #ffffff;
-  color: #e56399;
-  border-radius: 10px;
-  display: inline-block;
-  margin: 5px;
-`;
-
-const getTweenBlock = (props = { position: 10 }) => {
-  return (
-    <Tween
-      from={{ y: 0, opacity: 0 }}
-      to={{ opacity: 1 }}
-      position={props.position}
-      duration={20}
-    >
-      <Block />
-    </Tween>
-  );
-};
-
 const StyledText = styled.h1`
-  display: inline-block;
-  justify-content: center;
-  font-family: Poppins;
-  font-weight: 700;
-  font-size: 1.4rem;
+  // justify-content: center;
+  // text-align: center;
+  // font-family: Poppins;
+  // position: absolute;
+  // display: inline-block;
+  font-weight: 1000;
+  font-size: 4.5rem;
   color: #f6ae2d;
   background: #7f96ff;
 `;
 
-console.log("from sample.js", DivChapterOne);
+const textStyleIndicator = styled.div`
+  position: absolute;
+  background: #01baef;
+  text-align: "left";
+  font-size: 1.5rem;
+  color: #cfe795;
+  z-index: 1;
+  // top: 0;
+  // left: 0;
+`;
 
 const story = {
   chapters: [
     {
       id: "chapter-1",
       chapterType: "scrollmagic",
-      text: "CHAPTER 1",
-      sectionDuration: 500,
-      sectionOffset: 200,
+      text: {
+        value: "CHAPTER 1",
+        Style: textStyleIndicator,
+        sectionDuration: 1000,
+        sectionPin: true,
+        sectionOffset: 100,
+      },
+      sectionDuration: 300,
+      sectionOffset: 100,
       sectionPin: true,
-      sectionReverse: false,
-      chapterDiv: DivChapterOne,
+      sectionReverse: true,
+      chapterDiv: DivChapter1,
       animation: {
         targets: [
           <StyledText>1 minuto</StyledText>,
           // <StyledText>092309 minutos</StyledText>,
         ],
         tweens: [
-          getTweenBlock(0),
+          <Tween duration={100}></Tween>,
           <Tween
-            ease={"power4.out"}
-            from={{ opacity: 0, y: 200 }}
-            to={{ opacity: 1, y: 200 }}
-            duration={100}
             target={0}
+            // ease={"power4.out"}
+            from={{ opacity: 0, y: 0 }}
+            to={{ opacity: 1, y: 0 }}
             position={0}
+            duration={1}
           ></Tween>,
-        ].concat([
-          // 5 minutes
-          getTweenBlock({ position: 20 }),
-          getTweenBlock({ position: 20 }),
-          <Tween
-            text={"5 minutos"}
-            ease={"power4.out"}
-            from={{ opacity: 0, y: 200 }}
-            to={{ opacity: 1, y: 200 }}
-            duration={20}
-            // target={1}
-            position={20}
-          ></Tween>,
-        ]),
+          ...getTweenBlock({ nBlocks: 1, position: 0, duration: 10 }),
+        ]
+          .concat([
+            // 5 minutes
+            ...getTweenBlock({ nBlocks: 1, position: 10, duration: 30 }),
+            <Tween
+              text={"5 minutos"}
+              // ease={"power4.out"}
+              from={{ opacity: 0, y: 0 }}
+              to={{ opacity: 1, y: 0 }}
+              // target={1}
+              position={10}
+              duration={30}
+            ></Tween>,
+          ])
+          .concat([
+            // 5 minutes
+            ...getTweenBlock({ nBlocks: 1, position: 20, duration: 20 }),
+            // <Tween
+            //   text={"10 minutos"}
+            //   // ease={"power4.out"}
+            //   from={{ opacity: 0, y: 0 }}
+            //   to={{ opacity: 1, y: 0 }}
+            //   // target={1}
+            //   position={20}
+            //   duration={0}
+            // ></Tween>,
+          ])
+          .concat([
+            // 5 minutes
+            ...getTweenBlock({ nBlocks: 1, position: 10, duration: 30 }),
+            // <Tween
+            //   text={"20 minutos"}
+            //   // ease={"power4.out"}
+            //   from={{ opacity: 0, y: 0 }}
+            //   to={{ opacity: 1, y: 0 }}
+            //   // target={0}
+            //   position={10}
+            //   duration={0}
+            // ></Tween>,
+          ]),
       },
 
       //
@@ -148,14 +203,17 @@ const story = {
     {
       id: "chapter-2",
       chapterType: "map",
-      text: "chapter-2",
+      text: {
+        value: "CHAPTER 2",
+        Style: textStyleIndicator,
+        sectionDuration: 600,
+        sectionPin: true,
+        sectionOffset: 0,
+      },
       sectionDuration: 600,
       sectionOffset: 0,
-      sectionPin: false,
-      chapterDiv: styled.div`
-        height: 1400px;
-        width: 100%;
-      `,
+      sectionPin: true,
+      chapterDiv: DivChapter2,
       layers: [
         {
           layerType: "reuse",
