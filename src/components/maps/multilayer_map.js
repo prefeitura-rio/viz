@@ -29,7 +29,8 @@ class MultilayerMap extends React.Component {
         raster: ["raster-opacity"],
         "fill-extrusion": ["fill-extrusion-opacity"],
         heatmap: ["heatmap-opacity"]
-      }
+      },
+      time: 0
     };
   }
   // Chamado após o componente ser montado.
@@ -94,15 +95,31 @@ class MultilayerMap extends React.Component {
       }
     }
   }
+  // CUSTOM: inicia a animação do mapa.
+  startAnimation() {
+    const animate = () => {
+      let t = this.state.time;
+      t = (t + this.props.animationSpeed) % this.props.animationLoopLength;
+      this.setState({ ...this.state, time: t });
+      requestAnimationFrame(animate); // queue request for next frame
+    };
+    requestAnimationFrame(animate);
+  }
   // Chamado quando o componente for atualizado.
   componentDidUpdate(prevProps) {
-    // Change view state
-    const viewState = this.getViewState(this.props.location);
-    this.state.mapRef.current?.flyTo(viewState);
-    // Hide old layers
-    this.toggleLayers(prevProps.layers, false);
-    // Show new layers
-    this.toggleLayers(this.props.layers, true);
+    // If view state has been modified, update map view state.
+    if (prevProps.location !== this.props.location) {
+      // Change view state
+      const viewState = this.getViewState(this.props.location);
+      this.state.mapRef.current?.flyTo(viewState);
+    }
+    // If layers have been modified, update map layers.
+    if (prevProps.layers !== this.props.layers) {
+      // Hide old layers
+      this.toggleLayers(prevProps.layers, false);
+      // Show new layers
+      this.toggleLayers(this.props.layers, true);
+    }
   }
   // Render
   render() {
@@ -129,18 +146,19 @@ class MultilayerMap extends React.Component {
         {...this.state.mapSettings}
         onLoad={({ target }) => {
           this.toggleLayers(this.props.layers, true);
+          this.startAnimation();
         }}
         onRender={({ target }) => {
-          // this.props.layers.forEach((layerDict) => {
-          //   if (layerDict.layerType === "deckgl-trips") {
-          //     const currentLayer = target.getLayer(layerDict.layer.id);
-          //     if (currentLayer) {
-          //       currentLayer.implementation.setProps({
-          //         currentTime: time
-          //       });
-          //     }
-          //   }
-          // });
+          this.props.layers.forEach((layerDict) => {
+            if (layerDict.layerType === "deckgl-trips") {
+              const currentLayer = target.getLayer(layerDict.layer.id);
+              if (currentLayer) {
+                currentLayer.implementation.setProps({
+                  currentTime: this.state.time
+                });
+              }
+            }
+          });
         }}
       />
     );
@@ -150,6 +168,8 @@ class MultilayerMap extends React.Component {
 MultilayerMap.defaultProps = {
   interactive: false,
   scrollZoom: false,
+  animationSpeed: 3,
+  animationLoopLength: 28000,
   mapboxAccessToken: "",
   mapStyle: "",
   mapCSS: {

@@ -95,7 +95,7 @@ export default function TestMap() {
           getPath: (d) => d.path,
           getTimestamps: (d) => d.timestamps,
           getColor: [244, 144, 44],
-          widthMinPixels: 20,
+          widthMinPixels: 5,
           fadeTrail: true,
           currentTime: 0,
           opacity: 1,
