@@ -74,7 +74,7 @@ const story = {
       chapterType: "map",
       text: {
         value: "CHAPTER 1",
-        Style: textStyleIndicator,
+        style: textStyleIndicator,
         sectionDuration: 700,
         sectionPin: true,
         sectionOffset: 0,
@@ -123,7 +123,7 @@ const story = {
       chapterType: "map",
       text: {
         value: "CHAPTER 2",
-        Style: textStyleIndicator,
+        style: textStyleIndicator,
         sectionDuration: "100%",
         sectionPin: true,
         sectionOffset: 0,
@@ -187,7 +187,7 @@ const story = {
       chapterType: "map",
       text: {
         value: "CHAPTER 3",
-        Style: textStyleIndicator,
+        style: textStyleIndicator,
         sectionDuration: 400,
         sectionPin: true,
         sectionOffset: 0,
@@ -235,7 +235,7 @@ const story = {
       chapterType: "map",
       text: {
         value: "CHAPTER 4",
-        Style: textStyleIndicator,
+        style: textStyleIndicator,
         sectionDuration: 600,
         sectionPin: true,
         sectionOffset: 0,
@@ -281,7 +281,7 @@ const story = {
       chapterType: "map",
       text: {
         value: "CHAPTER 5",
-        Style: textStyleIndicator,
+        style: textStyleIndicator,
         sectionDuration: 400,
         sectionPin: true,
         sectionOffset: 0,

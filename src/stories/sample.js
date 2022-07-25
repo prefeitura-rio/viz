@@ -109,7 +109,7 @@ const story = {
       chapterType: "scrollmagic",
       text: {
         value: "CHAPTER 1",
-        Style: chapterIndicator,
+        style: chapterIndicator,
         sectionDuration: 1000,
         sectionPin: true,
         sectionOffset: 100,
@@ -206,7 +206,7 @@ const story = {
       chapterType: "map",
       text: {
         value: "CHAPTER 2",
-        Style: chapterIndicator,
+        style: chapterIndicator,
         sectionDuration: 600,
         sectionPin: true,
         sectionOffset: 0,

@@ -44,7 +44,7 @@ export default function ScrollMapboxGL(
           chapterType: "", // map, scrollmagic, etc.
           text: {
             value: "",
-            Style: "",
+            style: "",
             sectionDuration: "",
             sectionPin: "",
             sectionOffset: "",
@@ -299,9 +299,9 @@ export default function ScrollMapboxGL(
                   reverse={true}
                 >
                   {(progress, event) => (
-                    <chapter.text.Style>
+                    <chapter.text.style>
                       {chapter.text.value}
-                    </chapter.text.Style>
+                    </chapter.text.style>
                   )}
                 </Scene>
                 <Scene
@@ -356,9 +356,9 @@ export default function ScrollMapboxGL(
                   reverse={true}
                 >
                   {(progress, event) => (
-                    <chapter.text.Style>
+                    <chapter.text.style>
                       {chapter.text.value}
-                    </chapter.text.Style>
+                    </chapter.text.style>
                   )}
                 </Scene>
                 <Scene
