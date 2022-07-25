@@ -2,11 +2,17 @@
 
 Repositório para apoiar o desenvolvimento de visualizações de dados para o Escritório de Dados Rio.
 
+## Layer types
+
+- `mapbox`: definições nativas do mapbox
+- `mapbox-style`: reutilização de layers pré-definidas no style
+- `deckgl-trips`: TripsLayer do deck.gl
+- `reuse`: reutilização de layers anteriormente criadas (basta usar o mesmo ID)
 
 ## Como subir o servidor local:
 
 - Rodar `npm ci`
-- Rodar `npm start` 
+- Rodar `npm start`
 
 ## Como criar componentes exportáveis:
 
