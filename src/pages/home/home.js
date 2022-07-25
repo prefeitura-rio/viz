@@ -20,6 +20,9 @@ export default function Home() {
           <Link to="/sandbox/test"> Sandbox | Test </Link>
         </li>
         <li>
+          <Link to="/sandbox/test_map"> Sandbox | TestMap </Link>
+        </li>
+        <li>
           <Link to="/stories/sample"> Stories | Sample </Link>
         </li>
         <li></li>
