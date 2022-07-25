@@ -34,7 +34,7 @@ class MultilayerMap extends React.Component {
   }
   // Chamado após o componente ser montado.
   componentDidMount() {}
-  // Função auxiliar para montar o view state do mapa.
+  // CUSTOM: Função auxiliar para montar o view state do mapa.
   getViewState(location) {
     let viewState = isMobile
       ? {
@@ -56,13 +56,53 @@ class MultilayerMap extends React.Component {
     }
     return viewState;
   }
+  // CUSTOM: Função auxiliar para exibir ou esconder layers.
+  toggleLayers(layers, show) {
+    const mapInstance = this.state.mapRef.current?.getMap();
+    if (!mapInstance) return;
+    layers.forEach((layerDict) => {
+      if (
+        layerDict.layerType === "mapbox" ||
+        layerDict.layerType.startsWith("deckgl")
+      ) {
+        const mapLayer = mapInstance.getLayer(layerDict.layer.id);
+        if (!mapLayer) {
+          mapInstance.addLayer(layerDict.layer);
+        }
+      }
+    });
+    let opacity = show ? 1 : 0;
+    for (let i = 0; i < layers.length; i++) {
+      // layers from story
+      var layerId = layers[i].layer.id;
+      var layerType = layers[i].layerType;
+
+      // layers from map style
+      var mapLayer = mapInstance.getLayer(layerId);
+
+      // set opacity
+      if (layerType.startsWith("deckgl")) {
+        mapLayer?.implementation.setProps({
+          opacity: opacity
+        });
+      } else if (layerType.startsWith("mapbox")) {
+        if (mapLayer) {
+          this.state.layerTypes[mapLayer.type].forEach((paintType) => {
+            mapInstance.setPaintProperty(layerId, paintType, opacity);
+          });
+        }
+      }
+    }
+  }
   // Chamado quando o componente for atualizado.
   componentDidUpdate(prevProps) {
-    console.log("prevProps", prevProps);
-    console.log("this.props", this.props);
+    // Change view state
     const viewState = this.getViewState(this.props.location);
-    console.log("viewState", viewState);
     this.state.mapRef.current?.flyTo(viewState);
+    // Hide old layers
+    this.toggleLayers(prevProps.layers, false);
+    // Show new layers
+    this.toggleLayers(this.props.layers, true);
   }
   // Render
   render() {
@@ -88,47 +128,19 @@ class MultilayerMap extends React.Component {
         }
         {...this.state.mapSettings}
         onLoad={({ target }) => {
-          this.props.layers.forEach((layerDict) => {
-            if (
-              layerDict.layerType === "mapbox" ||
-              layerDict.layerType.startsWith("deckgl")
-            ) {
-              target.addLayer(layerDict.layer);
-            }
-          });
-          for (let i = 0; i < this.props.layers.length; i++) {
-            // layers from story
-            var layerId = this.props.layers[i].layer.id;
-            var layerType = this.props.layers[i].layerType;
-
-            // layers from map style
-            var mapLayer = target.getLayer(layerId);
-
-            // set opacity
-            if (layerType.startsWith("deckgl")) {
-              mapLayer?.implementation.setProps({
-                opacity: 1
-              });
-            } else if (layerType.startsWith("mapbox")) {
-              if (mapLayer) {
-                this.state.layerTypes[mapLayer.type].forEach((paintType) => {
-                  target.setPaintProperty(layerId, paintType, 1);
-                });
-              }
-            }
-          }
+          this.toggleLayers(this.props.layers, true);
         }}
         onRender={({ target }) => {
-          this.props.layers.forEach((layerDict) => {
-            if (layerDict.layerType === "deckgl-trips") {
-              const currentLayer = target.getLayer(layerDict.layer.id);
-              if (currentLayer) {
-                currentLayer.implementation.setProps({
-                  currentTime: time
-                });
-              }
-            }
-          });
+          // this.props.layers.forEach((layerDict) => {
+          //   if (layerDict.layerType === "deckgl-trips") {
+          //     const currentLayer = target.getLayer(layerDict.layer.id);
+          //     if (currentLayer) {
+          //       currentLayer.implementation.setProps({
+          //         currentTime: time
+          //       });
+          //     }
+          //   }
+          // });
         }}
       />
     );
