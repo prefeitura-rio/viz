@@ -139,11 +139,29 @@ export default function TestMap() {
     ]);
   };
 
+  const chapterFour = () => {
+    setPosition({
+      center: { lon: -43.32934, lat: -22.87653 },
+      zoom: 9.86,
+      pitch: 0.0,
+      bearing: 0.0
+    });
+    setLayers([
+      {
+        layerType: "reuse",
+        layer: {
+          id: "my-trips-layer"
+        }
+      }
+    ]);
+  };
+
   return (
     <div>
       <button onClick={chapterOne}>Chapter 1</button>
       <button onClick={chapterTwo}>Chapter 2</button>
       <button onClick={chapterThree}>Chapter 3</button>
+      <button onClick={chapterFour}>Chapter 4</button>
       <MultilayerMap
         interactive={true}
         scrollZoom={true}

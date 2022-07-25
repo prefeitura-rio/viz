@@ -30,7 +30,8 @@ class MultilayerMap extends React.Component {
         "fill-extrusion": ["fill-extrusion-opacity"],
         heatmap: ["heatmap-opacity"]
       },
-      time: 0
+      time: 0,
+      allLayers: []
     };
   }
   // Chamado após o componente ser montado.
@@ -69,6 +70,7 @@ class MultilayerMap extends React.Component {
         const mapLayer = mapInstance.getLayer(layerDict.layer.id);
         if (!mapLayer) {
           mapInstance.addLayer(layerDict.layer);
+          this.state.allLayers.push(layerDict);
         }
       }
     });
@@ -91,6 +93,27 @@ class MultilayerMap extends React.Component {
           this.state.layerTypes[mapLayer.type].forEach((paintType) => {
             mapInstance.setPaintProperty(layerId, paintType, opacity);
           });
+        }
+      } else if (layerType === "reuse") {
+        // Look for layer in `layers`
+        const reusableLayer = this.state.allLayers.find(
+          (l) => l.layer.id === layerId
+        );
+        const reusableLayerId = reusableLayer.layer.id;
+        const reusableLayerType = reusableLayer.layerType;
+        const reusableMapLayer = mapInstance.getLayer(layerId);
+        if (reusableMapLayer) {
+          if (reusableLayerType.startsWith("deckgl")) {
+            reusableMapLayer?.implementation.setProps({
+              opacity: opacity
+            });
+          } else if (reusableLayerType.startsWith("mapbox")) {
+            this.state.layerTypes[reusableMapLayer.type].forEach(
+              (paintType) => {
+                mapInstance.setPaintProperty(layerId, paintType, opacity);
+              }
+            );
+          }
         }
       }
     }
@@ -149,7 +172,7 @@ class MultilayerMap extends React.Component {
           this.startAnimation();
         }}
         onRender={({ target }) => {
-          this.props.layers.forEach((layerDict) => {
+          this.state.allLayers.forEach((layerDict) => {
             if (layerDict.layerType === "deckgl-trips") {
               const currentLayer = target.getLayer(layerDict.layer.id);
               if (currentLayer) {
