@@ -1,5 +1,5 @@
 // Mandatory
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MultilayerMap from "../../components/maps/multilayer_map";
 
 // CSS
@@ -21,18 +21,18 @@ export default function SubsidioSPPO() {
       zoom: 15.0,
       pitch: 60.0,
       bearing: -37.07,
-      duration: 2000,
+      duration: 2000
     },
     mobile: {
       center: {
         lat: -22.9121089,
-        lon: -43.2301558,
+        lon: -43.2301558
       },
       zoom: 15,
       bearing: 0,
       pitch: 0,
-      duration: 2000,
-    },
+      duration: 2000
+    }
   });
 
   const [layers, setLayers] = useState([]);
@@ -44,11 +44,11 @@ export default function SubsidioSPPO() {
     setLocation({
       ...location,
       desktop: {
-        ...desktopPosition,
+        ...desktopPosition
       },
       mobile: {
-        ...mobilePosition,
-      },
+        ...mobilePosition
+      }
     });
   };
 
@@ -66,18 +66,18 @@ export default function SubsidioSPPO() {
         zoom: 15.0,
         pitch: 60.0,
         bearing: -37.07,
-        duration: 2000,
+        duration: 2000
       },
       mobile: {
         center: {
           lat: -22.9121089,
-          lon: -43.2301558,
+          lon: -43.2301558
         },
         zoom: 15,
         bearing: 0,
         pitch: 0,
-        duration: 2000,
-      },
+        duration: 2000
+      }
     });
     setLayers([
       {
@@ -95,9 +95,9 @@ export default function SubsidioSPPO() {
           opacity: 1,
           rounded: true,
           trailLength: 500,
-          shadowEnabled: false,
-        }),
-      },
+          shadowEnabled: false
+        })
+      }
     ]);
   };
 
@@ -106,13 +106,13 @@ export default function SubsidioSPPO() {
       center: { lon: -43.20881, lat: -22.90198 },
       zoom: 16.74,
       pitch: 0.0,
-      bearing: 0.0,
+      bearing: 0.0
     });
     setLayers([
       {
         layerType: "mapbox",
-        layer: { ...buildings3d },
-      },
+        layer: { ...buildings3d }
+      }
     ]);
   };
 
@@ -121,15 +121,15 @@ export default function SubsidioSPPO() {
       center: { lon: -43.39513, lat: -22.97986 },
       zoom: 12.5,
       pitch: 0.0,
-      bearing: 0.0,
+      bearing: 0.0
     });
     setLayers([
       {
         layerType: "mapbox-style",
         layer: {
-          id: "linhasantigas",
-        },
-      },
+          id: "linhasantigas"
+        }
+      }
     ]);
   };
 
@@ -139,17 +139,39 @@ export default function SubsidioSPPO() {
       zoom: 9.86,
       pitch: 0.0,
       bearing: 0.0,
-      duration: 15000,
+      duration: 15000
     });
     setLayers([
       {
         layerType: "reuse",
         layer: {
-          id: "my-trips-layer",
-        },
-      },
+          id: "my-trips-layer"
+        }
+      }
     ]);
   };
+
+  const [chapterNumber, setChapterNumber] = useState(0);
+
+  useEffect(() => {
+    console.log("useEffect");
+    switch (chapterNumber) {
+      case 1:
+        chapterOne();
+        break;
+      case 2:
+        chapterTwo();
+        break;
+      case 3:
+        chapterThree();
+        break;
+      case 4:
+        chapterFour();
+        break;
+      default:
+        break;
+    }
+  }, [chapterNumber]);
 
   return (
     <div id="main-container">
@@ -166,7 +188,7 @@ export default function SubsidioSPPO() {
           left: "0",
           width: "100vw",
           height: "100vh",
-          zIndex: "-1",
+          zIndex: "-1"
         }}
       />
       <Controller>
@@ -179,7 +201,9 @@ export default function SubsidioSPPO() {
             offset={0}
             reverse={true}
           >
-            {(progress, event) => <>{event.type === "enter" && chapterOne()}</>}
+            {(progress, event) => (
+              <>{event.type === "enter" && setChapterNumber(3)}</>
+            )}
           </Scene>
         </ChapterOneDiv>
       </Controller>
