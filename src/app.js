@@ -9,6 +9,7 @@ import StorySPPO from "./pages/especial-sppo/story";
 import StorySample from "./stories/sample";
 import Test from "./pages/sandbox/test";
 import TestMap from "./pages/sandbox/test_map";
+import SubsidioSPPO from "./pages/sandbox/subsidio-sppo";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/especial-sppo/trips" element={<TripsMap />} />
-          <Route path="/especial-sppo/scrollmapbox" element={<StorySPPO />} />
+          <Route path="/especial-sppo/subsidio" element={<SubsidioSPPO />} />
           <Route path="/stories/sample" element={<StorySample />} />
           <Route path="/sandbox/test" element={<Test />} />
           <Route path="/sandbox/test_map" element={<TestMap />} />

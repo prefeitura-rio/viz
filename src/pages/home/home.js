@@ -12,9 +12,7 @@ export default function Home() {
           <Link to="/especial-sppo/trips"> Especial SPPO | Trips </Link>
         </li>
         <li>
-          <Link to="/especial-sppo/scrollmapbox">
-            Especial SPPO | ScrollMapboxGL
-          </Link>
+          <Link to="/especial-sppo/subsidio">Especial SPPO | Subsidio</Link>
         </li>
         <li>
           <Link to="/sandbox/test"> Sandbox | Test </Link>
