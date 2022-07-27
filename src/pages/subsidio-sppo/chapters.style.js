@@ -1,8 +1,8 @@
 // CSS
 import styled from "styled-components";
 
-export const TextStyleIndicator = styled.div`
-  // position: absolute;
+export const TextChapterIndicator = styled.div`
+  position: absolute;
   background: #01baef;
   text-align: "left";
   font-size: 1.5rem;
@@ -23,9 +23,8 @@ export const ChapterOneDiv = styled.div`
   // display: flex;
   // flex-direction: row;
   // text-align: center;
-
+  opacity: 0.5;
   background-color: #e8cee4;
-  opacity: 0.4;
   zindex: -1;
 `;
 
@@ -33,7 +32,6 @@ export const ChapterTwoDiv = styled.div`
   height: 600px;
   width: 100%;
   // background: #e8cee4;
-  opacity: 0.3;
   zindex: -1;
 `;
 
@@ -41,7 +39,6 @@ export const ChapterThreeDiv = styled.div`
   height: 600px;
   width: 100%;
   // background: #e8cee4;
-  opacity: 0.3;
   zindex: -1;
 `;
 

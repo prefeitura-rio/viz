@@ -7,8 +7,8 @@ import { Controller, Scene } from "react-scrollmagic";
 
 // Chapters
 import * as chapter from "./chapters";
-import * as styles from "./chapters.style";
 import * as card from "./components/text_div";
+import * as styles from "./chapters.style";
 
 export default function SubsidioSPPO() {
   const [location, setLocation] = useState({
@@ -125,7 +125,7 @@ export default function SubsidioSPPO() {
           <Scene
             triggerElement={"#chapter-1"}
             indicators={true}
-            pin={"#chapter-1-text"}
+            pin={"#card-1"}
             duration={600}
             offset={0}
             reverse={true}
@@ -133,7 +133,7 @@ export default function SubsidioSPPO() {
             {(progress, event) => (
               <>
                 {event.type === "enter" && setChapterNumber(1)}
-                <card.One id={"chapter-1-text"} />
+                <card.One id={"card-1"} />
               </>
             )}
           </Scene>
@@ -172,16 +172,16 @@ export default function SubsidioSPPO() {
           <Scene
             triggerElement={"#chapter-4"}
             indicators={true}
-            pin={"#chap4"}
+            pin={"#cap-4"}
             duration={600}
             offset={0}
             reverse={true}
           >
             {(progress, event) => (
               <>
-                <styles.TextStyleIndicator id={"cap4"}>
+                <styles.TextChapterIndicator id={"cap-4"}>
                   Chapter 4
-                </styles.TextStyleIndicator>
+                </styles.TextChapterIndicator>
                 {event.type === "enter" && setChapterNumber(4)}
               </>
             )}
