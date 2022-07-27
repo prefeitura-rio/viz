@@ -1,5 +1,5 @@
 // Mandatory
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MultilayerMap from "../../components/maps/multilayer_map";
 
 // CSS
@@ -14,6 +14,14 @@ import { MapboxLayer } from "@deck.gl/mapbox"; // Ref: https://deck.gl/docs/api-
 import { TripsLayer } from "@deck.gl/geo-layers";
 const TRIPS = require("../especial-sppo/data/trips.json");
 
+const ChapterOneDiv = styled.div`
+  margin-top: 500px;
+  height: 700px;
+  width: 100%;
+  background: #ffff;
+  opacity: 0.3;
+`;
+
 export default function SubsidioSPPO() {
   const [location, setLocation] = useState({
     desktop: {
@@ -21,18 +29,18 @@ export default function SubsidioSPPO() {
       zoom: 15.0,
       pitch: 60.0,
       bearing: -37.07,
-      duration: 2000,
+      duration: 2000
     },
     mobile: {
       center: {
         lat: -22.9121089,
-        lon: -43.2301558,
+        lon: -43.2301558
       },
       zoom: 15,
       bearing: 0,
       pitch: 0,
-      duration: 2000,
-    },
+      duration: 2000
+    }
   });
 
   const [layers, setLayers] = useState([]);
@@ -44,21 +52,14 @@ export default function SubsidioSPPO() {
     setLocation({
       ...location,
       desktop: {
-        ...desktopPosition,
+        ...desktopPosition
       },
       mobile: {
-        ...mobilePosition,
-      },
+        ...mobilePosition
+      }
     });
   };
 
-  const ChapterOneDiv = styled.div`
-    margin-top: 500px;
-    height: 700px;
-    width: 100%;
-    background: #ffff;
-    opacity: 0.3;
-  `;
   const chapterOne = () => {
     setPosition({
       desktop: {
@@ -66,18 +67,18 @@ export default function SubsidioSPPO() {
         zoom: 15.0,
         pitch: 60.0,
         bearing: -37.07,
-        duration: 2000,
+        duration: 2000
       },
       mobile: {
         center: {
           lat: -22.9121089,
-          lon: -43.2301558,
+          lon: -43.2301558
         },
         zoom: 15,
         bearing: 0,
         pitch: 0,
-        duration: 2000,
-      },
+        duration: 2000
+      }
     });
     setLayers([
       {
@@ -95,9 +96,9 @@ export default function SubsidioSPPO() {
           opacity: 1,
           rounded: true,
           trailLength: 500,
-          shadowEnabled: false,
-        }),
-      },
+          shadowEnabled: false
+        })
+      }
     ]);
   };
 
@@ -106,13 +107,13 @@ export default function SubsidioSPPO() {
       center: { lon: -43.20881, lat: -22.90198 },
       zoom: 16.74,
       pitch: 0.0,
-      bearing: 0.0,
+      bearing: 0.0
     });
     setLayers([
       {
         layerType: "mapbox",
-        layer: { ...buildings3d },
-      },
+        layer: { ...buildings3d }
+      }
     ]);
   };
 
@@ -121,15 +122,15 @@ export default function SubsidioSPPO() {
       center: { lon: -43.39513, lat: -22.97986 },
       zoom: 12.5,
       pitch: 0.0,
-      bearing: 0.0,
+      bearing: 0.0
     });
     setLayers([
       {
         layerType: "mapbox-style",
         layer: {
-          id: "linhasantigas",
-        },
-      },
+          id: "linhasantigas"
+        }
+      }
     ]);
   };
 
@@ -139,17 +140,38 @@ export default function SubsidioSPPO() {
       zoom: 9.86,
       pitch: 0.0,
       bearing: 0.0,
-      duration: 15000,
+      duration: 15000
     });
     setLayers([
       {
         layerType: "reuse",
         layer: {
-          id: "my-trips-layer",
-        },
-      },
+          id: "my-trips-layer"
+        }
+      }
     ]);
   };
+
+  const [chapterNumber, setChapterNumber] = useState(0);
+
+  useEffect(() => {
+    switch (chapterNumber) {
+      case 1:
+        chapterOne();
+        break;
+      case 2:
+        chapterTwo();
+        break;
+      case 3:
+        chapterThree();
+        break;
+      case 4:
+        chapterFour();
+        break;
+      default:
+        break;
+    }
+  }, [chapterNumber]);
 
   return (
     <div id="main-container">
@@ -166,22 +188,62 @@ export default function SubsidioSPPO() {
           left: "0",
           width: "100vw",
           height: "100vh",
-          zIndex: "-1",
+          zIndex: "-1"
         }}
       />
       <Controller>
-        <ChapterOneDiv id={"chapter-1"}>
-          <Scene
-            triggerElement={"#chapter-1"}
-            indicators={true}
-            pin={false}
-            duration={600}
-            offset={0}
-            reverse={true}
-          >
-            {(progress, event) => <>{event.type === "enter" && chapterOne()}</>}
-          </Scene>
-        </ChapterOneDiv>
+        <ChapterOneDiv id={"chapter-1"} />
+        <Scene
+          triggerElement={"#chapter-1"}
+          indicators={true}
+          pin={false}
+          duration={600}
+          offset={0}
+          reverse={true}
+        >
+          {(progress, event) => (
+            <>{event.type === "enter" && setChapterNumber(1)}</>
+          )}
+        </Scene>
+        <ChapterOneDiv id={"chapter-2"} />
+        <Scene
+          triggerElement={"#chapter-2"}
+          indicators={true}
+          pin={false}
+          duration={600}
+          offset={0}
+          reverse={true}
+        >
+          {(progress, event) => (
+            <>{event.type === "enter" && setChapterNumber(2)}</>
+          )}
+        </Scene>
+        <ChapterOneDiv id={"chapter-3"} />
+        <Scene
+          triggerElement={"#chapter-3"}
+          indicators={true}
+          pin={false}
+          duration={600}
+          offset={0}
+          reverse={true}
+        >
+          {(progress, event) => (
+            <>{event.type === "enter" && setChapterNumber(3)}</>
+          )}
+        </Scene>
+        <ChapterOneDiv id={"chapter-4"} />
+        <Scene
+          triggerElement={"#chapter-4"}
+          indicators={true}
+          pin={false}
+          duration={600}
+          offset={0}
+          reverse={true}
+        >
+          {(progress, event) => (
+            <>{event.type === "enter" && setChapterNumber(4)}</>
+          )}
+        </Scene>
       </Controller>
       {/* <button onClick={chapterOne}>Chapter 1</button>
       <button onClick={chapterTwo}>Chapter 2</button>
