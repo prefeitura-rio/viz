@@ -5,14 +5,10 @@ import MultilayerMap from "../../components/maps/multilayer_map";
 // Scrollmagic
 import { Controller, Scene } from "react-scrollmagic";
 
+// Chapters
 import { chapterOne, chapterTwo, chapterThree, chapterFour } from "./chapters";
-import {
-  ChapterOneDiv,
-  ChapterTwoDiv,
-  ChapterThreeDiv,
-  ChapterFourDiv,
-  TextStyleIndicator,
-} from "./chapters.style";
+// import * from "./chapters.style";
+import * as styles from "./chapters.style";
 
 export default function SubsidioSPPO() {
   const [location, setLocation] = useState({
@@ -96,7 +92,7 @@ export default function SubsidioSPPO() {
         }}
       />
       <Controller>
-        <ChapterOneDiv id={"chapter-1"}>
+        <styles.ChapterOneDiv id={"chapter-1"}>
           <Scene
             triggerElement={"#chapter-1"}
             indicators={true}
@@ -106,23 +102,20 @@ export default function SubsidioSPPO() {
             reverse={true}
           >
             {(progress, event) => (
-              <>{event.type === "enter" && setChapterNumber(1)}</>
+              <styles.Container>
+                <styles.TextCardTitulo11>300</styles.TextCardTitulo11>
+                <styles.TextCardTitulo12>ÔNIBUS</styles.TextCardTitulo12>
+                <styles.TextCardParagrafo>
+                  Com o acordo uma frota maior de veículos será necessária. A
+                  estimativa é que até o final do ano sejam adquiridos 300
+                  ônibus.
+                </styles.TextCardParagrafo>
+                <>{event.type === "enter" && setChapterNumber(1)}</>
+              </styles.Container>
             )}
           </Scene>
-          <Scene
-            triggerElement={"#chapter-1"}
-            indicators={true}
-            pin={true}
-            duration={700}
-            offset={0}
-            reverse={true}
-          >
-            {(progress, event) => (
-              <TextStyleIndicator>CAPITULO 1</TextStyleIndicator>
-            )}
-          </Scene>
-        </ChapterOneDiv>
-        <ChapterTwoDiv id={"chapter-2"}>
+        </styles.ChapterOneDiv>
+        <styles.ChapterTwoDiv id={"chapter-2"}>
           <Scene
             triggerElement={"#chapter-2"}
             indicators={true}
@@ -144,12 +137,12 @@ export default function SubsidioSPPO() {
             reverse={true}
           >
             {(progress, event) => (
-              <TextStyleIndicator>CAPITULO 2</TextStyleIndicator>
+              <styles.TextStyleIndicator>CAPITULO 2</styles.TextStyleIndicator>
             )}
           </Scene>
-        </ChapterTwoDiv>
+        </styles.ChapterTwoDiv>
 
-        <ChapterThreeDiv id={"chapter-3"}>
+        <styles.ChapterThreeDiv id={"chapter-3"}>
           <Scene
             triggerElement={"#chapter-3"}
             indicators={true}
@@ -171,12 +164,12 @@ export default function SubsidioSPPO() {
             reverse={true}
           >
             {(progress, event) => (
-              <TextStyleIndicator>CAPITULO 3</TextStyleIndicator>
+              <styles.TextStyleIndicator>CAPITULO 3</styles.TextStyleIndicator>
             )}
           </Scene>
-        </ChapterThreeDiv>
+        </styles.ChapterThreeDiv>
 
-        <ChapterFourDiv id={"chapter-4"}>
+        <styles.ChapterFourDiv id={"chapter-4"}>
           <Scene
             triggerElement={"#chapter-4"}
             indicators={true}
@@ -198,10 +191,10 @@ export default function SubsidioSPPO() {
             reverse={true}
           >
             {(progress, event) => (
-              <TextStyleIndicator>CAPITULO 4</TextStyleIndicator>
+              <styles.TextStyleIndicator>CAPITULO 4</styles.TextStyleIndicator>
             )}
           </Scene>
-        </ChapterFourDiv>
+        </styles.ChapterFourDiv>
       </Controller>
     </div>
   );
