@@ -50,9 +50,6 @@ export default function SubsidioSPPO() {
 
   const [chapterNumber, setChapterNumber] = useState(0);
 
-  console.log(chapterNumber, "location", location);
-  console.log(chapterNumber, "layers", layers);
-
   useEffect(() => {
     switch (chapterNumber) {
       case 1:
