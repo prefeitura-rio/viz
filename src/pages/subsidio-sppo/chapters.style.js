@@ -38,7 +38,7 @@ export const TextStyleIndicator = styled.div`
 `;
 
 export const ChapterOneDiv = styled.div`
-  margin-top: 400px;
+  margin-top: 100vh;
   height: 700px;
   width: 100%;
 

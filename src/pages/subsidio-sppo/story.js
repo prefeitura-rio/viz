@@ -74,7 +74,7 @@ export default function SubsidioSPPO() {
   }, [chapterNumber]);
 
   return (
-    <div id="main-container">
+    <>
       <MultilayerMap
         interactive={false}
         scrollZoom={true}
@@ -196,6 +196,6 @@ export default function SubsidioSPPO() {
           </Scene>
         </styles.ChapterFourDiv>
       </Controller>
-    </div>
+    </>
   );
 }
