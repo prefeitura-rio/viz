@@ -31,7 +31,8 @@ class MultilayerMap extends React.Component {
         heatmap: ["heatmap-opacity"]
       },
       time: 0,
-      allLayers: []
+      allLayers: [],
+      mapLoaded: false
     };
   }
   // Chamado após o componente ser montado.
@@ -60,6 +61,7 @@ class MultilayerMap extends React.Component {
   }
   // CUSTOM: Função auxiliar para exibir ou esconder layers.
   toggleLayers(layers, show) {
+    if (!this.state.mapLoaded) return;
     const mapInstance = this.state.mapRef.current?.getMap();
     if (!mapInstance) return;
     layers.forEach((layerDict) => {
@@ -99,6 +101,9 @@ class MultilayerMap extends React.Component {
         const reusableLayer = this.state.allLayers.find(
           (l) => l.layer.id === layerId
         );
+        if (!reusableLayer) {
+          break;
+        }
         const reusableLayerId = reusableLayer.layer.id;
         const reusableLayerType = reusableLayer.layerType;
         const reusableMapLayer = mapInstance.getLayer(layerId);
@@ -120,6 +125,7 @@ class MultilayerMap extends React.Component {
   }
   // CUSTOM: inicia a animação do mapa.
   startAnimation() {
+    if (!this.state.mapLoaded) return;
     const animate = () => {
       let t = this.state.time;
       t = (t + this.props.animationSpeed) % this.props.animationLoopLength;
@@ -168,6 +174,7 @@ class MultilayerMap extends React.Component {
         }
         {...this.state.mapSettings}
         onLoad={({ target }) => {
+          this.state.mapLoaded = true;
           this.toggleLayers(this.props.layers, true);
           this.startAnimation();
         }}
