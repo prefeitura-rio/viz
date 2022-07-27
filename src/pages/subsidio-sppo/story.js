@@ -47,7 +47,6 @@ export default function SubsidioSPPO() {
       },
     });
   };
-
   const [chapterNumber, setChapterNumber] = useState(0);
 
   useEffect(() => {
@@ -101,7 +100,6 @@ export default function SubsidioSPPO() {
       default:
         break;
     }
-    console.log(chapterNumber, chapter.Four().location);
   }, [chapterNumber]);
 
   return (

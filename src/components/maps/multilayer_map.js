@@ -142,7 +142,6 @@ class MultilayerMap extends React.Component {
       // Change view state
       const viewState = this.getViewState(this.props.location);
       this.state.mapRef.current?.flyTo(viewState);
-      // console.log("viewState", viewState);
     }
     // If layers have been modified, update map layers.
     if (prevProps.layers !== this.props.layers) {
