@@ -6,7 +6,13 @@ import MultilayerMap from "../../components/maps/multilayer_map";
 import { Controller, Scene } from "react-scrollmagic";
 
 import { chapterOne, chapterTwo, chapterThree, chapterFour } from "./chapters";
-import { ChapterOneDiv } from "./chapters.style";
+import {
+  ChapterOneDiv,
+  ChapterTwoDiv,
+  ChapterThreeDiv,
+  ChapterFourDiv,
+  TextStyleIndicator,
+} from "./chapters.style";
 
 export default function SubsidioSPPO() {
   const [location, setLocation] = useState({
@@ -35,7 +41,6 @@ export default function SubsidioSPPO() {
     const desktopPosition = position.desktop ? position.desktop : position;
     const mobilePosition = position.mobile ? position.mobile : position;
 
-    console.log(desktopPosition);
     setLocation({
       ...location,
       desktop: {
@@ -91,63 +96,113 @@ export default function SubsidioSPPO() {
         }}
       />
       <Controller>
-        <ChapterOneDiv id={"chapter-1"} />
-        <Scene
-          triggerElement={"#chapter-1"}
-          indicators={true}
-          pin={false}
-          duration={600}
-          offset={0}
-          reverse={true}
-        >
-          {(progress, event) => (
-            <>{event.type === "enter" && setChapterNumber(1)}</>
-          )}
-        </Scene>
-        <ChapterOneDiv id={"chapter-2"} />
-        <Scene
-          triggerElement={"#chapter-2"}
-          indicators={true}
-          pin={false}
-          duration={600}
-          offset={0}
-          reverse={true}
-        >
-          {(progress, event) => (
-            <>{event.type === "enter" && setChapterNumber(2)}</>
-          )}
-        </Scene>
-        <ChapterOneDiv id={"chapter-3"} />
-        <Scene
-          triggerElement={"#chapter-3"}
-          indicators={true}
-          pin={false}
-          duration={600}
-          offset={0}
-          reverse={true}
-        >
-          {(progress, event) => (
-            <>{event.type === "enter" && setChapterNumber(3)}</>
-          )}
-        </Scene>
-        <ChapterOneDiv id={"chapter-4"} />
-        <Scene
-          triggerElement={"#chapter-4"}
-          indicators={true}
-          pin={false}
-          duration={600}
-          offset={0}
-          reverse={true}
-        >
-          {(progress, event) => (
-            <>{event.type === "enter" && setChapterNumber(4)}</>
-          )}
-        </Scene>
+        <ChapterOneDiv id={"chapter-1"}>
+          <Scene
+            triggerElement={"#chapter-1"}
+            indicators={true}
+            pin={true}
+            duration={600}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <>{event.type === "enter" && setChapterNumber(1)}</>
+            )}
+          </Scene>
+          <Scene
+            triggerElement={"#chapter-1"}
+            indicators={true}
+            pin={true}
+            duration={700}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <TextStyleIndicator>CAPITULO 1</TextStyleIndicator>
+            )}
+          </Scene>
+        </ChapterOneDiv>
+        <ChapterTwoDiv id={"chapter-2"}>
+          <Scene
+            triggerElement={"#chapter-2"}
+            indicators={true}
+            pin={false}
+            duration={600}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <>{event.type === "enter" && setChapterNumber(2)}</>
+            )}
+          </Scene>
+          <Scene
+            triggerElement={"#chapter-2"}
+            indicators={true}
+            pin={true}
+            duration={600}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <TextStyleIndicator>CAPITULO 2</TextStyleIndicator>
+            )}
+          </Scene>
+        </ChapterTwoDiv>
+
+        <ChapterThreeDiv id={"chapter-3"}>
+          <Scene
+            triggerElement={"#chapter-3"}
+            indicators={true}
+            pin={false}
+            duration={600}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <>{event.type === "enter" && setChapterNumber(3)}</>
+            )}
+          </Scene>
+          <Scene
+            triggerElement={"#chapter-3"}
+            indicators={true}
+            pin={true}
+            duration={600}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <TextStyleIndicator>CAPITULO 3</TextStyleIndicator>
+            )}
+          </Scene>
+        </ChapterThreeDiv>
+
+        <ChapterFourDiv id={"chapter-4"}>
+          <Scene
+            triggerElement={"#chapter-4"}
+            indicators={true}
+            pin={false}
+            duration={600}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <>{event.type === "enter" && setChapterNumber(4)}</>
+            )}
+          </Scene>
+          <Scene
+            triggerElement={"#chapter-4"}
+            indicators={true}
+            pin={true}
+            duration={600}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <TextStyleIndicator>CAPITULO 4</TextStyleIndicator>
+            )}
+          </Scene>
+        </ChapterFourDiv>
       </Controller>
-      {/* <button onClick={chapterOne}>Chapter 1</button>
-      <button onClick={chapterTwo}>Chapter 2</button>
-      <button onClick={chapterThree}>Chapter 3</button>
-      <button onClick={chapterFour}>Chapter 4</button> */}
     </div>
   );
 }

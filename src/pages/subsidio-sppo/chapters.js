@@ -45,6 +45,10 @@ export const chapterOne = () => {
           shadowEnabled: false,
         }),
       },
+      {
+        layerType: "mapbox",
+        layer: { ...buildings3d },
+      },
     ],
   };
 };
@@ -60,8 +64,8 @@ export const chapterTwo = () => {
     },
     layers: [
       {
-        layerType: "mapbox",
-        layer: { ...buildings3d },
+        layerType: "reuse",
+        layer: { id: "3d-buildings" },
       },
     ],
   };

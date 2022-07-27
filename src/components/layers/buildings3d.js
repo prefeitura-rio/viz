@@ -1,6 +1,6 @@
 // 3D buildings layer
 export const buildings3d = {
-  id: "add-3d-buildings",
+  id: "3d-buildings",
   source: "composite",
   "source-layer": "building",
   filter: ["==", "extrude", "true"],
