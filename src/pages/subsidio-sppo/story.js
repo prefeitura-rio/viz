@@ -8,7 +8,7 @@ import { Controller, Scene } from "react-scrollmagic";
 // Chapters
 import * as chapter from "./chapters";
 import * as styles from "./chapters.style";
-import TextDiv from "./components/text_div";
+import * as card from "./components/text_div";
 
 export default function SubsidioSPPO() {
   const [location, setLocation] = useState({
@@ -133,13 +133,7 @@ export default function SubsidioSPPO() {
             {(progress, event) => (
               <>
                 {event.type === "enter" && setChapterNumber(1)}
-                <TextDiv
-                  id={"chapter-1-text"}
-                  textH1="300"
-                  textH2="ÔNIBUS"
-                  textParagraph="Com o acordo uma frota maior de veículos será necessária. A estimativa é que até o final do ano sejam adquiridos 300 ônibus."
-                  textAlign="right"
-                />
+                <card.One id={"chapter-1-text"} />
               </>
             )}
           </Scene>
