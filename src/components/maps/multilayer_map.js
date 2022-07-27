@@ -18,7 +18,7 @@ class MultilayerMap extends React.Component {
         mapboxAccessToken: props.mapboxAccessToken,
         mapStyle: props.mapStyle,
         interactive: props.interactive,
-        style: props.mapCSS
+        style: props.mapCSS,
       },
       mapRef: React.createRef(),
       layerTypes: {
@@ -28,11 +28,11 @@ class MultilayerMap extends React.Component {
         symbol: ["icon-opacity", "text-opacity"],
         raster: ["raster-opacity"],
         "fill-extrusion": ["fill-extrusion-opacity"],
-        heatmap: ["heatmap-opacity"]
+        heatmap: ["heatmap-opacity"],
       },
       time: 0,
       allLayers: [],
-      mapLoaded: false
+      mapLoaded: false,
     };
   }
   // Chamado após o componente ser montado.
@@ -45,14 +45,14 @@ class MultilayerMap extends React.Component {
           zoom: location.mobile.zoom,
           bearing: location.mobile.bearing,
           pitch: location.mobile.pitch,
-          duration: location.mobile.duration
+          duration: location.mobile.duration,
         }
       : {
           center: [location.desktop.center.lon, location.desktop.center.lat],
           zoom: location.desktop.zoom,
           bearing: location.desktop.bearing,
           pitch: location.desktop.pitch,
-          duration: location.desktop.duration
+          duration: location.desktop.duration,
         };
     if (!viewState.duration) {
       viewState.duration = 4000;
@@ -88,7 +88,7 @@ class MultilayerMap extends React.Component {
       // set opacity
       if (layerType.startsWith("deckgl")) {
         mapLayer?.implementation.setProps({
-          opacity: opacity
+          opacity: opacity,
         });
       } else if (layerType.startsWith("mapbox")) {
         if (mapLayer) {
@@ -110,7 +110,7 @@ class MultilayerMap extends React.Component {
         if (reusableMapLayer) {
           if (reusableLayerType.startsWith("deckgl")) {
             reusableMapLayer?.implementation.setProps({
-              opacity: opacity
+              opacity: opacity,
             });
           } else if (reusableLayerType.startsWith("mapbox")) {
             this.state.layerTypes[reusableMapLayer.type].forEach(
@@ -141,6 +141,7 @@ class MultilayerMap extends React.Component {
       // Change view state
       const viewState = this.getViewState(this.props.location);
       this.state.mapRef.current?.flyTo(viewState);
+      // console.log("viewState", viewState);
     }
     // If layers have been modified, update map layers.
     if (prevProps.layers !== this.props.layers) {
@@ -148,6 +149,7 @@ class MultilayerMap extends React.Component {
       this.toggleLayers(prevProps.layers, false);
       // Show new layers
       this.toggleLayers(this.props.layers, true);
+      // console.log("layers", this.props.layers);
     }
   }
   // Render
@@ -162,14 +164,14 @@ class MultilayerMap extends React.Component {
                 longitude: this.props.location.mobile.center.lon,
                 zoom: this.props.location.mobile.zoom,
                 bearing: this.props.location.mobile.bearing,
-                pitch: this.props.location.mobile.pitch
+                pitch: this.props.location.mobile.pitch,
               }
             : {
                 latitude: this.props.location.desktop.center.lat,
                 longitude: this.props.location.desktop.center.lon,
                 zoom: this.props.location.desktop.zoom,
                 bearing: this.props.location.desktop.bearing,
-                pitch: this.props.location.desktop.pitch
+                pitch: this.props.location.desktop.pitch,
               }
         }
         {...this.state.mapSettings}
@@ -184,7 +186,7 @@ class MultilayerMap extends React.Component {
               const currentLayer = target.getLayer(layerDict.layer.id);
               if (currentLayer) {
                 currentLayer.implementation.setProps({
-                  currentTime: this.state.time
+                  currentTime: this.state.time,
                 });
               }
             }
@@ -208,31 +210,31 @@ MultilayerMap.defaultProps = {
     left: "0",
     width: "100vw",
     height: "100vh",
-    zIndex: "-1"
+    zIndex: "-1",
   },
   layers: [],
   location: {
     desktop: {
       center: {
         lat: 0,
-        lon: 0
+        lon: 0,
       },
       zoom: 0,
       bearing: 0,
       pitch: 0,
-      duration: 4000
+      duration: 4000,
     },
     mobile: {
       center: {
         lat: 0,
-        lon: 0
+        lon: 0,
       },
       zoom: 0,
       bearing: 0,
       pitch: 0,
-      duration: 4000
-    }
-  }
+      duration: 4000,
+    },
+  },
 };
 
 export default MultilayerMap;

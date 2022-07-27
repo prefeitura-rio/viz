@@ -7,9 +7,7 @@ import { Controller, Scene } from "react-scrollmagic";
 
 // Chapters
 import * as chapter from "./chapters";
-// import * from "./chapters.style";
 import * as styles from "./chapters.style";
-
 import TextDiv from "./components/text_div";
 
 export default function SubsidioSPPO() {
@@ -52,6 +50,9 @@ export default function SubsidioSPPO() {
 
   const [chapterNumber, setChapterNumber] = useState(0);
 
+  console.log(chapterNumber, "position", location);
+  console.log(chapterNumber, "layers", layers);
+
   useEffect(() => {
     switch (chapterNumber) {
       case 1:
@@ -87,7 +88,6 @@ export default function SubsidioSPPO() {
       case 10:
         setPosition(chapter.Ten().location);
         setLayers(chapter.Ten().layers);
-
         break;
       default:
         break;
@@ -245,7 +245,7 @@ export default function SubsidioSPPO() {
         </styles.ChapterThreeDiv>
         <styles.ChapterThreeDiv id={"chapter-9"}>
           <Scene
-            triggerElement={"#chapter-4"}
+            triggerElement={"#chapter-9"}
             indicators={true}
             pin={false}
             duration={600}
@@ -257,9 +257,9 @@ export default function SubsidioSPPO() {
             )}
           </Scene>
         </styles.ChapterThreeDiv>
-        <styles.ChapterFourDiv id={"chapter-4"}>
+        <styles.ChapterFourDiv id={"chapter-10"}>
           <Scene
-            triggerElement={"#chapter-4"}
+            triggerElement={"#chapter-10"}
             indicators={true}
             pin={false}
             duration={600}

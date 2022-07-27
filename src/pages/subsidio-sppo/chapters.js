@@ -156,6 +156,12 @@ export const Four = () => {
           id: "unicalinha",
         },
       },
+      {
+        layerType: "reuse",
+        layer: {
+          id: "3d-buildings",
+        },
+      },
     ],
   };
 };
@@ -165,30 +171,30 @@ export const Five = () => {
     location: {
       mobile: {
         center: {
-          lon: -43.17224,
-          lat: -22.90651,
+          lon: -43.34443,
+          lat: -22.85287,
         },
-        zoom: 12.51,
+        zoom: 11.94,
         pitch: 60.0,
-        bearing: -70.4,
+        bearing: 85.53,
         duration: 2000,
       },
       desktop: {
         center: {
-          lon: -43.17224,
-          lat: -22.90651,
+          lon: -43.34443,
+          lat: -22.85287,
         },
-        zoom: 14.51,
+        zoom: 13.94,
         pitch: 60.0,
-        bearing: -70.4,
+        bearing: 85.53,
         duration: 2000,
       },
     },
     layers: [
       {
-        layerType: "reuse",
+        layerType: "mapbox-style",
         layer: {
-          id: "linhasantigas",
+          id: "unicalinha1",
         },
       },
     ],
@@ -200,22 +206,22 @@ export const Six = () => {
     location: {
       mobile: {
         center: {
-          lon: -43.54516,
-          lat: -22.98354,
+          lon: -43.24732,
+          lat: -22.9526,
         },
-        zoom: 9.86,
+        zoom: 10.33,
         pitch: 60.0,
-        bearing: 38.08,
+        bearing: -51.24,
         duration: 2000,
       },
       desktop: {
         center: {
-          lon: -43.54516,
-          lat: -22.98354,
+          lon: -43.24732,
+          lat: -22.9526,
         },
-        zoom: 11.86,
+        zoom: 12.33,
         pitch: 60.0,
-        bearing: 38.08,
+        bearing: -51.24,
         duration: 2000,
       },
     },
@@ -223,7 +229,7 @@ export const Six = () => {
       {
         layerType: "mapbox-style",
         layer: {
-          id: "linhasantigas",
+          id: "pontosantigos",
         },
       },
     ],
@@ -235,22 +241,22 @@ export const Seven = () => {
     location: {
       mobile: {
         center: {
-          lon: -43.54516,
-          lat: -22.98354,
+          lon: -43.45938,
+          lat: -22.94232,
         },
-        zoom: 9.86,
-        pitch: 60.0,
-        bearing: 38.08,
+        zoom: 8.67,
+        pitch: 7.0,
+        bearing: 0.0,
         duration: 2000,
       },
       desktop: {
         center: {
-          lon: -43.54516,
-          lat: -22.98354,
+          lon: -43.45938,
+          lat: -22.94232,
         },
-        zoom: 11.86,
-        pitch: 60.0,
-        bearing: 38.08,
+        zoom: 10.67,
+        pitch: 7.0,
+        bearing: 0.0,
         duration: 2000,
       },
     },
@@ -258,7 +264,7 @@ export const Seven = () => {
       {
         layerType: "mapbox-style",
         layer: {
-          id: "linhasantigas",
+          id: "pontosantigos1",
         },
       },
     ],
