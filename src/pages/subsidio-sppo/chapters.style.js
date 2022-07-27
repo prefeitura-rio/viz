@@ -49,7 +49,7 @@ export const ChapterOneDiv = styled.div`
   // text-align: center;
 
   background-color: #e8cee4;
-  // opacity: 0.3;
+  opacity: 0.3;
   zindex: -1;
 `;
 

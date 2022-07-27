@@ -80,8 +80,37 @@ export const Two = () => {
     layers: [
       {
         layerType: "reuse",
-        layer: { id: "3d-buildings" },
+        layer: { id: "my-trips-layer" },
       },
+    ],
+  };
+};
+
+export const Three = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.45938,
+          lat: -22.94232,
+        },
+        zoom: 8.67,
+        pitch: 7.0,
+        bearing: 0.0,
+        duration: 2000,
+      },
+      desktop: {
+        center: {
+          lon: -43.45938,
+          lat: -22.94232,
+        },
+        zoom: 10.67,
+        pitch: 7.0,
+        bearing: 0.0,
+        duration: 2000,
+      },
+    },
+    layers: [
       {
         layerType: "mapbox-style",
         layer: { id: "linhasantigas" },
@@ -90,7 +119,7 @@ export const Two = () => {
   };
 };
 
-export const Three = () => {
+export const Four = () => {
   return {
     location: {
       mobile: {
@@ -121,11 +150,15 @@ export const Three = () => {
           id: "linhasantigas",
         },
       },
+      {
+        layerType: "reuse",
+        layer: { id: "3d-buildings" },
+      },
     ],
   };
 };
 
-export const Four = () => {
+export const Five = () => {
   return {
     location: {
       mobile: {
@@ -143,7 +176,7 @@ export const Four = () => {
           lon: -43.17224,
           lat: -22.90651,
         },
-        zoom: 14.51,
+        zoom: 15.51,
         pitch: 60.0,
         bearing: -70.4,
         duration: 2000,
@@ -166,7 +199,7 @@ export const Four = () => {
   };
 };
 
-export const Five = () => {
+export const Six = () => {
   return {
     location: {
       mobile: {
@@ -201,7 +234,7 @@ export const Five = () => {
   };
 };
 
-export const Six = () => {
+export const Seven = () => {
   return {
     location: {
       mobile: {
@@ -236,7 +269,7 @@ export const Six = () => {
   };
 };
 
-export const Seven = () => {
+export const Eight = () => {
   return {
     location: {
       mobile: {
@@ -265,41 +298,6 @@ export const Seven = () => {
         layerType: "mapbox-style",
         layer: {
           id: "municipios",
-        },
-      },
-    ],
-  };
-};
-
-export const Eight = () => {
-  return {
-    location: {
-      mobile: {
-        center: {
-          lon: -43.54516,
-          lat: -22.98354,
-        },
-        zoom: 9.86,
-        pitch: 60.0,
-        bearing: 38.08,
-        duration: 2000,
-      },
-      desktop: {
-        center: {
-          lon: -43.54516,
-          lat: -22.98354,
-        },
-        zoom: 11.86,
-        pitch: 60.0,
-        bearing: 38.08,
-        duration: 2000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox-style",
-        layer: {
-          id: "linhasantigas",
         },
       },
     ],
@@ -375,3 +373,38 @@ export const Ten = () => {
     ],
   };
 };
+
+// export const Ten = () => {
+//   return {
+//     location: {
+//       mobile: {
+//         center: {
+//           lon: -43.54516,
+//           lat: -22.98354,
+//         },
+//         zoom: 9.86,
+//         pitch: 60.0,
+//         bearing: 38.08,
+//         duration: 2000,
+//       },
+//       desktop: {
+//         center: {
+//           lon: -43.54516,
+//           lat: -22.98354,
+//         },
+//         zoom: 11.86,
+//         pitch: 60.0,
+//         bearing: 38.08,
+//         duration: 2000,
+//       },
+//     },
+//     layers: [
+//       {
+//         layerType: "mapbox-style",
+//         layer: {
+//           id: "linhasantigas",
+//         },
+//       },
+//     ],
+//   };
+// };
