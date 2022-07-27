@@ -5,7 +5,7 @@ const TRIPS = require("../especial-sppo/data/trips.json");
 // For some custom layers
 import { buildings3d } from "../../components/layers/buildings3d";
 
-export const chapterOne = () => {
+export const One = () => {
   return {
     location: {
       desktop: {
@@ -53,32 +53,66 @@ export const chapterOne = () => {
   };
 };
 
-export const chapterTwo = () => {
+export const Two = () => {
   return {
     location: {
-      center: { lon: -43.20881, lat: -22.90198 },
-      zoom: 16.74,
-      pitch: 0.0,
-      bearing: 0.0,
-      duration: 2000,
+      mobile: {
+        center: {
+          lon: -43.45938,
+          lat: -22.94232,
+        },
+        zoom: 8.67,
+        pitch: 7.0,
+        bearing: 0.0,
+        duration: 2000,
+      },
+      desktop: {
+        center: {
+          lon: -43.45938,
+          lat: -22.94232,
+        },
+        zoom: 10.67,
+        pitch: 7.0,
+        bearing: 0.0,
+        duration: 2000,
+      },
     },
     layers: [
       {
         layerType: "reuse",
         layer: { id: "3d-buildings" },
       },
+      {
+        layerType: "mapbox-style",
+        layer: { id: "linhasantigas" },
+      },
     ],
   };
 };
 
-export const chapterThree = () => {
+export const Three = () => {
   return {
     location: {
-      center: { lon: -43.39513, lat: -22.97986 },
-      zoom: 12.5,
-      pitch: 0.0,
-      bearing: 0.0,
-      duration: 2000,
+      mobile: {
+        center: {
+          lon: -43.54516,
+          lat: -22.98354,
+        },
+        zoom: 9.86,
+        pitch: 60.0,
+        bearing: 38.08,
+        duration: 2000,
+      },
+      desktop: {
+        center: {
+          lon: -43.54516,
+          lat: -22.98354,
+        },
+        zoom: 11.86,
+        pitch: 60.0,
+        bearing: 38.08,
+        duration: 2000,
+      },
     },
     layers: [
       {
@@ -91,20 +125,245 @@ export const chapterThree = () => {
   };
 };
 
-export const chapterFour = () => {
+export const Four = () => {
   return {
     location: {
-      center: { lon: -43.32934, lat: -22.87653 },
-      zoom: 9.86,
-      pitch: 0.0,
-      bearing: 0.0,
-      duration: 4000,
+      mobile: {
+        center: {
+          lon: -43.17224,
+          lat: -22.90651,
+        },
+        zoom: 12.51,
+        pitch: 60.0,
+        bearing: -70.4,
+        duration: 2000,
+      },
+      desktop: {
+        center: {
+          lon: -43.17224,
+          lat: -22.90651,
+        },
+        zoom: 14.51,
+        pitch: 60.0,
+        bearing: -70.4,
+        duration: 2000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: {
+          id: "unicalinha",
+        },
+      },
+    ],
+  };
+};
+
+export const Five = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.17224,
+          lat: -22.90651,
+        },
+        zoom: 12.51,
+        pitch: 60.0,
+        bearing: -70.4,
+        duration: 2000,
+      },
+      desktop: {
+        center: {
+          lon: -43.17224,
+          lat: -22.90651,
+        },
+        zoom: 14.51,
+        pitch: 60.0,
+        bearing: -70.4,
+        duration: 2000,
+      },
     },
     layers: [
       {
         layerType: "reuse",
         layer: {
-          id: "my-trips-layer",
+          id: "linhasantigas",
+        },
+      },
+    ],
+  };
+};
+
+export const Six = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.54516,
+          lat: -22.98354,
+        },
+        zoom: 9.86,
+        pitch: 60.0,
+        bearing: 38.08,
+        duration: 2000,
+      },
+      desktop: {
+        center: {
+          lon: -43.54516,
+          lat: -22.98354,
+        },
+        zoom: 11.86,
+        pitch: 60.0,
+        bearing: 38.08,
+        duration: 2000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: {
+          id: "linhasantigas",
+        },
+      },
+    ],
+  };
+};
+
+export const Seven = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.54516,
+          lat: -22.98354,
+        },
+        zoom: 9.86,
+        pitch: 60.0,
+        bearing: 38.08,
+        duration: 2000,
+      },
+      desktop: {
+        center: {
+          lon: -43.54516,
+          lat: -22.98354,
+        },
+        zoom: 11.86,
+        pitch: 60.0,
+        bearing: 38.08,
+        duration: 2000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: {
+          id: "linhasantigas",
+        },
+      },
+    ],
+  };
+};
+
+export const Eight = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.54516,
+          lat: -22.98354,
+        },
+        zoom: 9.86,
+        pitch: 60.0,
+        bearing: 38.08,
+        duration: 2000,
+      },
+      desktop: {
+        center: {
+          lon: -43.54516,
+          lat: -22.98354,
+        },
+        zoom: 11.86,
+        pitch: 60.0,
+        bearing: 38.08,
+        duration: 2000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: {
+          id: "linhasantigas",
+        },
+      },
+    ],
+  };
+};
+
+export const Nine = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.54516,
+          lat: -22.98354,
+        },
+        zoom: 9.86,
+        pitch: 60.0,
+        bearing: 38.08,
+        duration: 2000,
+      },
+      desktop: {
+        center: {
+          lon: -43.54516,
+          lat: -22.98354,
+        },
+        zoom: 11.86,
+        pitch: 60.0,
+        bearing: 38.08,
+        duration: 2000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: {
+          id: "linhasantigas",
+        },
+      },
+    ],
+  };
+};
+
+export const Ten = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.54516,
+          lat: -22.98354,
+        },
+        zoom: 9.86,
+        pitch: 60.0,
+        bearing: 38.08,
+        duration: 2000,
+      },
+      desktop: {
+        center: {
+          lon: -43.54516,
+          lat: -22.98354,
+        },
+        zoom: 11.86,
+        pitch: 60.0,
+        bearing: 38.08,
+        duration: 2000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: {
+          id: "linhasantigas",
         },
       },
     ],

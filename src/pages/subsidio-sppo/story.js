@@ -6,7 +6,7 @@ import MultilayerMap from "../../components/maps/multilayer_map";
 import { Controller, Scene } from "react-scrollmagic";
 
 // Chapters
-import { chapterOne, chapterTwo, chapterThree, chapterFour } from "./chapters";
+import * as chapter from "./chapters";
 // import * from "./chapters.style";
 import * as styles from "./chapters.style";
 
@@ -19,21 +19,21 @@ export default function SubsidioSPPO() {
       zoom: 15.0,
       pitch: 60.0,
       bearing: -37.07,
-      duration: 2000
+      duration: 2000,
     },
     mobile: {
       center: {
         lat: -22.9121089,
-        lon: -43.2301558
+        lon: -43.2301558,
       },
       zoom: 15,
       bearing: 0,
       pitch: 0,
-      duration: 2000
-    }
+      duration: 2000,
+    },
   });
 
-  const [layers, setLayers] = useState(chapterOne().layers);
+  const [layers, setLayers] = useState(chapter.One().layers);
 
   const setPosition = (position) => {
     const desktopPosition = position.desktop ? position.desktop : position;
@@ -42,11 +42,11 @@ export default function SubsidioSPPO() {
     setLocation({
       ...location,
       desktop: {
-        ...desktopPosition
+        ...desktopPosition,
       },
       mobile: {
-        ...mobilePosition
-      }
+        ...mobilePosition,
+      },
     });
   };
 
@@ -55,20 +55,39 @@ export default function SubsidioSPPO() {
   useEffect(() => {
     switch (chapterNumber) {
       case 1:
-        setPosition(chapterOne().location);
-        setLayers(chapterOne().layers);
+        setPosition(chapter.One().location);
+        setLayers(chapter.One().layers);
         break;
       case 2:
-        setPosition(chapterTwo().location);
-        setLayers(chapterTwo().layers);
+        setPosition(chapter.Two().location);
+        setLayers(chapter.Two().layers);
         break;
       case 3:
-        setPosition(chapterThree().location);
-        setLayers(chapterThree().layers);
+        setPosition(chapter.Three().location);
+        setLayers(chapter.Three().layers);
         break;
       case 4:
-        setPosition(chapterFour().location);
-        setLayers(chapterFour().layers);
+        setPosition(chapter.Four().location);
+        setLayers(chapter.Four().layers);
+      case 5:
+        setPosition(chapter.Five().location);
+        setLayers(chapter.Five().layers);
+      case 6:
+        setPosition(chapter.Six().location);
+        setLayers(chapter.Six().layers);
+      case 7:
+        setPosition(chapter.Seven().location);
+        setLayers(chapter.Seven().layers);
+      case 8:
+        setPosition(chapter.Eight().location);
+        setLayers(chapter.Eight().layers);
+      case 9:
+        setPosition(chapter.Nine().location);
+        setLayers(chapter.Nine().layers);
+      case 10:
+        setPosition(chapter.Ten().location);
+        setLayers(chapter.Ten().layers);
+
         break;
       default:
         break;
@@ -90,7 +109,7 @@ export default function SubsidioSPPO() {
           left: "0",
           width: "100vw",
           height: "100vh",
-          zIndex: "-1"
+          zIndex: "-1",
         }}
       />
       <Controller>
@@ -130,18 +149,6 @@ export default function SubsidioSPPO() {
               <>{event.type === "enter" && setChapterNumber(2)}</>
             )}
           </Scene>
-          <Scene
-            triggerElement={"#chapter-2"}
-            indicators={true}
-            pin={true}
-            duration={600}
-            offset={0}
-            reverse={true}
-          >
-            {(progress, event) => (
-              <styles.TextStyleIndicator>CAPITULO 2</styles.TextStyleIndicator>
-            )}
-          </Scene>
         </styles.ChapterTwoDiv>
 
         <styles.ChapterThreeDiv id={"chapter-3"}>
@@ -157,20 +164,99 @@ export default function SubsidioSPPO() {
               <>{event.type === "enter" && setChapterNumber(3)}</>
             )}
           </Scene>
+        </styles.ChapterThreeDiv>
+
+        <styles.ChapterThreeDiv id={"chapter-4"}>
           <Scene
-            triggerElement={"#chapter-3"}
+            triggerElement={"#chapter-4"}
             indicators={true}
-            pin={true}
+            pin={"#chap4"}
             duration={600}
             offset={0}
             reverse={true}
           >
             {(progress, event) => (
-              <styles.TextStyleIndicator>CAPITULO 3</styles.TextStyleIndicator>
+              <>
+                <styles.TextStyleIndicator id={"cap4"}>
+                  Chapter 4
+                </styles.TextStyleIndicator>
+                {event.type === "enter" && setChapterNumber(4)}
+              </>
             )}
           </Scene>
         </styles.ChapterThreeDiv>
 
+        <styles.ChapterThreeDiv id={"chapter-5"}>
+          <Scene
+            triggerElement={"#chapter-5"}
+            indicators={true}
+            pin={false}
+            duration={600}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <>{event.type === "enter" && setChapterNumber(5)}</>
+            )}
+          </Scene>
+        </styles.ChapterThreeDiv>
+
+        <styles.ChapterThreeDiv id={"chapter-6"}>
+          <Scene
+            triggerElement={"#chapter-6"}
+            indicators={true}
+            pin={false}
+            duration={600}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <>{event.type === "enter" && setChapterNumber(6)}</>
+            )}
+          </Scene>
+        </styles.ChapterThreeDiv>
+        <styles.ChapterThreeDiv id={"chapter-7"}>
+          <Scene
+            triggerElement={"#chapter-7"}
+            indicators={true}
+            pin={false}
+            duration={600}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <>{event.type === "enter" && setChapterNumber(7)}</>
+            )}
+          </Scene>
+        </styles.ChapterThreeDiv>
+        <styles.ChapterThreeDiv id={"chapter-8"}>
+          <Scene
+            triggerElement={"#chapter-8"}
+            indicators={true}
+            pin={false}
+            duration={600}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <>{event.type === "enter" && setChapterNumber(8)}</>
+            )}
+          </Scene>
+        </styles.ChapterThreeDiv>
+        <styles.ChapterThreeDiv id={"chapter-9"}>
+          <Scene
+            triggerElement={"#chapter-4"}
+            indicators={true}
+            pin={false}
+            duration={600}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <>{event.type === "enter" && setChapterNumber(9)}</>
+            )}
+          </Scene>
+        </styles.ChapterThreeDiv>
         <styles.ChapterFourDiv id={"chapter-4"}>
           <Scene
             triggerElement={"#chapter-4"}
@@ -181,19 +267,7 @@ export default function SubsidioSPPO() {
             reverse={true}
           >
             {(progress, event) => (
-              <>{event.type === "enter" && setChapterNumber(4)}</>
-            )}
-          </Scene>
-          <Scene
-            triggerElement={"#chapter-4"}
-            indicators={true}
-            pin={true}
-            duration={600}
-            offset={0}
-            reverse={true}
-          >
-            {(progress, event) => (
-              <styles.TextStyleIndicator>CAPITULO 4</styles.TextStyleIndicator>
+              <>{event.type === "enter" && setChapterNumber(10)}</>
             )}
           </Scene>
         </styles.ChapterFourDiv>
