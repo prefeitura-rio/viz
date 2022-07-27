@@ -153,7 +153,7 @@ export const Four = () => {
       {
         layerType: "mapbox-style",
         layer: {
-          id: "unicalinha",
+          id: "novaslinhas",
         },
       },
       {
@@ -194,7 +194,7 @@ export const Five = () => {
       {
         layerType: "mapbox-style",
         layer: {
-          id: "unicalinha1",
+          id: "municipios",
         },
       },
     ],
@@ -264,7 +264,7 @@ export const Seven = () => {
       {
         layerType: "mapbox-style",
         layer: {
-          id: "pontosantigos1",
+          id: "municipios",
         },
       },
     ],

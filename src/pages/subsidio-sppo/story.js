@@ -50,7 +50,7 @@ export default function SubsidioSPPO() {
 
   const [chapterNumber, setChapterNumber] = useState(0);
 
-  console.log(chapterNumber, "position", location);
+  console.log(chapterNumber, "location", location);
   console.log(chapterNumber, "layers", layers);
 
   useEffect(() => {
@@ -70,21 +70,33 @@ export default function SubsidioSPPO() {
       case 4:
         setPosition(chapter.Four().location);
         setLayers(chapter.Four().layers);
+        break;
+
       case 5:
         setPosition(chapter.Five().location);
         setLayers(chapter.Five().layers);
+        break;
+
       case 6:
         setPosition(chapter.Six().location);
         setLayers(chapter.Six().layers);
+        break;
+
       case 7:
         setPosition(chapter.Seven().location);
         setLayers(chapter.Seven().layers);
+        break;
+
       case 8:
         setPosition(chapter.Eight().location);
         setLayers(chapter.Eight().layers);
+        break;
+
       case 9:
         setPosition(chapter.Nine().location);
         setLayers(chapter.Nine().layers);
+        break;
+
       case 10:
         setPosition(chapter.Ten().location);
         setLayers(chapter.Ten().layers);
@@ -92,6 +104,7 @@ export default function SubsidioSPPO() {
       default:
         break;
     }
+    console.log(chapterNumber, chapter.Four().location);
   }, [chapterNumber]);
 
   return (

@@ -64,6 +64,7 @@ class MultilayerMap extends React.Component {
     if (!this.state.mapLoaded) return;
     const mapInstance = this.state.mapRef.current?.getMap();
     if (!mapInstance) return;
+    console.log("allLyaers", mapInstance.getStyle().layers);
     layers.forEach((layerDict) => {
       if (
         layerDict.layerType === "mapbox" ||
@@ -149,7 +150,6 @@ class MultilayerMap extends React.Component {
       this.toggleLayers(prevProps.layers, false);
       // Show new layers
       this.toggleLayers(this.props.layers, true);
-      // console.log("layers", this.props.layers);
     }
   }
   // Render
