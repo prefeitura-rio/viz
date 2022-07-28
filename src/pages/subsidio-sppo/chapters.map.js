@@ -126,6 +126,10 @@ export const Three = () => {
         layerType: "mapbox-style",
         layer: { id: "sepetiba-linha" },
       },
+      {
+        layerType: "mapbox-style",
+        layer: { id: "linha-sepetiba" },
+      },
     ],
   };
 };
@@ -141,29 +145,27 @@ export const Four = () => {
         zoom: 9.86,
         pitch: 60.0,
         bearing: 38.08,
-        duration: 2000,
+        duration: 4000,
       },
       desktop: {
         center: {
-          lon: -43.54516,
-          lat: -22.98354,
+          lon: -43.44949,
+          lat: -22.94796,
         },
-        zoom: 11.86,
-        pitch: 60.0,
-        bearing: 38.08,
-        duration: 2000,
+        zoom: 10.7,
+        pitch: 6.0,
+        bearing: 0.03,
+        duration: 4000,
       },
     },
     layers: [
       {
         layerType: "mapbox-style",
-        layer: {
-          id: "linhasantigas",
-        },
+        layer: { id: "bairros" },
       },
       {
-        layerType: "reuse",
-        layer: { id: "3d-buildings" },
+        layerType: "mapbox-style",
+        layer: { id: "bairros-linha" },
       },
     ],
   };
@@ -184,28 +186,33 @@ export const Five = () => {
       },
       desktop: {
         center: {
-          lon: -43.17704,
-          lat: -22.8965,
+          lon: -43.44949,
+          lat: -22.94796,
         },
-        zoom: 15.63,
-        pitch: 60.0,
-        bearing: 139.3,
-        bearing: -70.4,
+        zoom: 10.7,
+        pitch: 6.0,
+        bearing: 0.03,
         duration: 2000,
       },
     },
     layers: [
       {
-        layerType: "mapbox-style",
-        layer: {
-          id: "novaslinhas",
-        },
-      },
-      {
-        layerType: "reuse",
-        layer: {
-          id: "3d-buildings",
-        },
+        layerType: "deckgl-trips",
+        layer: new MapboxLayer({
+          id: "my-trips-layer",
+          type: TripsLayer,
+          data: TRIPS,
+          getPath: (d) => d.path,
+          getTimestamps: (d) => d.timestamps,
+          getColor: [244, 144, 44],
+          widthMinPixels: 5,
+          fadeTrail: true,
+          currentTime: 0,
+          opacity: 1,
+          rounded: true,
+          trailLength: 500,
+          shadowEnabled: true,
+        }),
       },
     ],
   };

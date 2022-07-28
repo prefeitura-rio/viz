@@ -122,6 +122,16 @@ const TextParagraph1 = styled.div`
   text-align: left;
 `;
 
+const TextColor1 = styled.div`
+  padding: 0.3em;
+  margin: 0.3em;
+  width: 80px;
+  color: white;
+  background: #be5b5b;
+  border: none;
+  border-radius: 3px;
+`;
+
 const GridGeral = styled.div`
   display: flex;
   column-gap: 40px;
@@ -207,6 +217,54 @@ export function Three(
 ) {
   props = setDefaultProps(props);
   return (
+    <Container id={props.id}>
+      <TextParagraph>
+        As linhas 870, 871 voltaram em sepetiba, conectando o bairro com o BRT,
+        etc…
+      </TextParagraph>
+    </Container>
+  );
+}
+
+export function Four(
+  props = {
+    id: "",
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <Container id={props.id}>
+      <TextParagraph>
+        Outros bairros já estão vendo suas linhas voltarem. Junto com as X
+        linhas que já existiam, as 39 linhas estão voltando, completando o
+        sistema viário da cidade.
+      </TextParagraph>
+    </Container>
+  );
+}
+
+export function Five(
+  props = {
+    id: "",
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <Container id={props.id}>
+      <TextParagraph>
+        Mapa dos ônibus das linhas que voltaram com zoom out para a cidade toda
+      </TextParagraph>
+    </Container>
+  );
+}
+
+export function Six(
+  props = {
+    id: "",
+  }
+) {
+  props = setDefaultProps(props);
+  return (
     <Container1 id={props.id}>
       <Container2>
         <GridGeral>
@@ -241,45 +299,5 @@ export function Three(
         </GridGeral>
       </Container2>
     </Container1>
-  );
-}
-
-export function Four(
-  props = {
-    id: "",
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <Container id={props.id}>
-      <TextParagraph>
-        As linhas XXX, XXX, XXX voltaram em sepetiba, conectando o bairro com o
-        BRT
-      </TextParagraph>
-    </Container>
-  );
-}
-
-export function Five(
-  props = {
-    id: "",
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <Container id={props.id}>
-      <GridGeral>
-        <GridNumero>
-          <TextH1>300</TextH1>
-          <TextH2>ÔNIBUS</TextH2>
-        </GridNumero>
-        <div>
-          <TextParagraph>
-            Com o acordo uma frota maior de veículos será necessária. A
-            estimativa é que até o final do ano sejam adquiridos 300 ônibus.
-          </TextParagraph>
-        </div>
-      </GridGeral>
-    </Container>
   );
 }

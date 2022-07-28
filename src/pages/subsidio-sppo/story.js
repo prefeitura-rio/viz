@@ -166,15 +166,51 @@ export default function SubsidioSPPO() {
             {(progress, event) => (
               <>
                 <>{event.type === "enter" && setChapterNumberMap(3)}</>
+                <card.Three id={"card-3"} />
+              </>
+            )}
+          </Scene>
+        </styles.ChapterTwoDiv>
+
+        <styles.ChapterTwoDiv id={"chapter-4"}>
+          <Scene
+            triggerElement={"#chapter-4"}
+            indicators={true}
+            pin={false}
+            duration={"100%"}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <>
+                <>{event.type === "enter" && setChapterNumberMap(4)}</>
                 <card.Four id={"card-4"} />
               </>
             )}
           </Scene>
         </styles.ChapterTwoDiv>
 
-        <styles.ChapterThreeDiv id={"chapter-4"}>
+        <styles.ChapterTwoDiv id={"chapter-5"}>
           <Scene
-            triggerElement={"#chapter-4"}
+            triggerElement={"#chapter-5"}
+            indicators={true}
+            pin={false}
+            duration={"100%"}
+            offset={0}
+            reverse={true}
+          >
+            {(progress, event) => (
+              <>
+                <>{event.type === "enter" && setChapterNumberMap(5)}</>
+                <card.Five id={"card-5"} />
+              </>
+            )}
+          </Scene>
+        </styles.ChapterTwoDiv>
+
+        <styles.ChapterThreeDiv id={"chapter-5"}>
+          <Scene
+            triggerElement={"#chapter-5"}
             indicators={true}
             pin={""}
             duration={"100%"}
@@ -183,7 +219,7 @@ export default function SubsidioSPPO() {
           >
             {(progress, event) => (
               <>
-                <card.Three id={"card-3"} />
+                <card.Six id={"card-6"} />
               </>
             )}
           </Scene>
