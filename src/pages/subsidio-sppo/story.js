@@ -116,6 +116,7 @@ export default function SubsidioSPPO() {
           height: "100vh",
           zIndex: "-1",
         }}
+        animationLoopLength={21600}
       />
       <Controller>
         <styles.ChapterOneDiv id={"chapter-1"}>
