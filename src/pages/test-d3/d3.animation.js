@@ -8,19 +8,29 @@ class BarChart extends Component {
   }
 
   componentDidMount() {
+    this.draw();
+  }
+
+  componentDidUpdate() {
+    this.draw();
+  }
+
+  draw = () => {
     let chartRef = d3.select(this.myRef.current);
     const w = 500;
     const h = 400;
 
     const data = [2, 15, 22, 9, 30, 20, 22, 45];
 
-    chartRef
+    const canvas = chartRef
       .append("svg")
       .attr("width", w)
       .attr("height", h)
       .style("background", "#f0f0f0")
       .style("padding", "10px")
-      .style("margin-left", "50px")
+      .style("margin-left", "50px");
+
+    canvas
       .selectAll("rect")
       .data(data)
       .enter()
@@ -30,7 +40,7 @@ class BarChart extends Component {
       .attr("width", 35)
       .attr("height", (d, i) => d * 10)
       .attr("fill", (d, i) => (d >= 20 ? "red" : "green"));
-  }
+  };
 
   render() {
     return (
