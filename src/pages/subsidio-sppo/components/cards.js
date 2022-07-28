@@ -1,14 +1,15 @@
 import styled from "styled-components";
-// import logo from "./pages/subsidio-sppo/images/logo.png";
+import logo1 from "../images/logo1.png";
 
-import logo from "../images/logo.png";
-
-const HeaderImage = styled.div`
-  background-image: url(${logo});
-`;
+// export const HeaderImage = styled.div`
+//   background-image: url(${logo});
+//   position: absolute;
+//   bottom: 10%;
+//   width: 1000px;
+// `;
 
 const Container = styled.div`
-  min-height: 100px;
+  min-height: 50px;
   width: "50%";
   padding: 40px;
   margin-left: 30%;
@@ -19,7 +20,6 @@ const Container = styled.div`
 `;
 
 const Container1 = styled.div`
-  width: 100vw;
   height: 100vh;
   justify-content: center;
   display: flex;
@@ -44,12 +44,11 @@ const Container3 = styled.div`
   overflow: auto;
   min-height: 100px;
   padding: 40px;
-  text-align: center;
   position: "relative";
 `;
 
 const TextH1 = styled.div`
-  color: #11a686;
+  color: rgba(244, 144, 44);
   font-family: "poppins", sans-serif !important;
   font-weight: 700;
   font-size: 5.7rem;
@@ -60,7 +59,7 @@ const TextH1 = styled.div`
 `;
 
 const TextH2 = styled.div`
-  color: #11a686;
+  color: rgba(244, 144, 44);
   font-family: "poppins", sans-serif !important;
   font-weight: 700;
   font-size: 2.8rem;
@@ -92,6 +91,17 @@ const TextH4 = styled.div`
   text-align: center;
 `;
 
+const TextH5 = styled.div`
+  color: #ffffff;
+  font-family: "MetricWeb", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.3;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  text-align: center;
+`;
+
 const TextParagraph = styled.div`
   color: #dbdbdb;
   font-family: "Redaction", sans-serif;
@@ -100,11 +110,6 @@ const TextParagraph = styled.div`
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: left;
-`;
-
-const Photo = styled.div`
-  position: absolute;
-  bottom: 10%;
 `;
 
 const TextParagraph1 = styled.div`
@@ -126,6 +131,16 @@ const GridNumero = styled.div`
   display: grid;
   flex-direction: column;
   margin-bottom: 0px;
+`;
+
+const Photo = styled.div`
+  position: absolute;
+  top: 4%;
+  margin-left: 23%;
+`;
+
+const Blur = styled.div`
+  filter: blur(8px);
 `;
 
 const setDefaultProps = (providedProps) => {
@@ -154,24 +169,38 @@ export function One(
 ) {
   props = setDefaultProps(props);
   return (
-    <Container id={props.id}>
-      <GridGeral>
-        <GridNumero>
-          <TextH1>300</TextH1>
-          <TextH2>ÔNIBUS</TextH2>
-        </GridNumero>
-        <div>
-          <TextParagraph>
-            Com o acordo uma frota maior de veículos será necessária. A
-            estimativa é que até o final do ano sejam adquiridos 300 ônibus.
-          </TextParagraph>
-        </div>
-      </GridGeral>
-    </Container>
+    <Container3 id={props.id}>
+      <Photo>
+        <img src={logo1} width={120} alt="Logo" />
+      </Photo>
+      <TextH4>
+        Um ponto de virada na história do transporte municipal do Rio de Janeiro
+      </TextH4>
+      <TextH5>
+        Desenvolvido por <b>Escritório de Dados</b> e{" "}
+        <b>Secretaria Municipal de Transportes</b>
+      </TextH5>
+    </Container3>
   );
 }
 
 export function Two(
+  props = {
+    id: "",
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <Container id={props.id}>
+      <TextParagraph>
+        As mudanças começaram nos bairros que precisavam mais de transporte.
+        Sepetiba, viu o retorno de suas linhas.
+      </TextParagraph>
+    </Container>
+  );
+}
+
+export function Three(
   props = {
     id: "",
   }
@@ -215,18 +244,42 @@ export function Two(
   );
 }
 
-export function Three(
+export function Four(
   props = {
     id: "",
   }
 ) {
   props = setDefaultProps(props);
   return (
-    <Container3 id={props.id}>
-      <HeaderImage></HeaderImage>
-      <TextH4>
-        Um ponto de virada na história do transporte municipal do Rio de Janeiro
-      </TextH4>
-    </Container3>
+    <Container id={props.id}>
+      <TextParagraph>
+        As linhas XXX, XXX, XXX voltaram em sepetiba, conectando o bairro com o
+        BRT
+      </TextParagraph>
+    </Container>
+  );
+}
+
+export function Five(
+  props = {
+    id: "",
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <Container id={props.id}>
+      <GridGeral>
+        <GridNumero>
+          <TextH1>300</TextH1>
+          <TextH2>ÔNIBUS</TextH2>
+        </GridNumero>
+        <div>
+          <TextParagraph>
+            Com o acordo uma frota maior de veículos será necessária. A
+            estimativa é que até o final do ano sejam adquiridos 300 ônibus.
+          </TextParagraph>
+        </div>
+      </GridGeral>
+    </Container>
   );
 }

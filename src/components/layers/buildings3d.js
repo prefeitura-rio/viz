@@ -7,7 +7,7 @@ export const buildings3d = {
   type: "fill-extrusion",
   minzoom: 5,
   paint: {
-    "fill-extrusion-color": "#aaa",
+    "fill-extrusion-color": "#211f1c",
     "fill-extrusion-height": [
       "interpolate",
       ["linear"],
@@ -26,6 +26,6 @@ export const buildings3d = {
       10.05,
       ["get", "min_height"],
     ],
-    "fill-extrusion-opacity": 1,
+    "fill-extrusion-opacity": 0.5,
   },
 };

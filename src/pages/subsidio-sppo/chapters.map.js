@@ -9,21 +9,24 @@ export const One = () => {
   return {
     location: {
       desktop: {
-        center: { lon: -43.19415, lat: -22.9795 },
-        zoom: 15.0,
+        center: {
+          lon: -43.17672,
+          lat: -22.90574,
+        },
+        zoom: 15.2,
         pitch: 60.0,
-        bearing: -37.07,
-        duration: 2000,
+        bearing: -151.1,
+        duration: 4000,
       },
       mobile: {
         center: {
-          lat: -22.9121089,
-          lon: -43.2301558,
+          lon: -43.17704,
+          lat: -22.8965,
         },
-        zoom: 15,
-        bearing: 0,
-        pitch: 0,
-        duration: 2000,
+        zoom: 15.63,
+        pitch: 60.0,
+        bearing: 139.3,
+        duration: 4000,
       },
     },
     layers: [
@@ -42,7 +45,7 @@ export const One = () => {
           opacity: 1,
           rounded: true,
           trailLength: 500,
-          shadowEnabled: false,
+          shadowEnabled: true,
         }),
       },
       {
@@ -64,23 +67,27 @@ export const Two = () => {
         zoom: 8.67,
         pitch: 7.0,
         bearing: 0.0,
-        duration: 2000,
+        duration: 4000,
       },
       desktop: {
         center: {
-          lon: -43.45938,
-          lat: -22.94232,
+          lon: -43.69475,
+          lat: -22.96915,
         },
-        zoom: 10.67,
-        pitch: 7.0,
-        bearing: 0.0,
-        duration: 2000,
+        zoom: 13.26,
+        pitch: 36.5,
+        bearing: 45.45,
+        duration: 4000,
       },
     },
     layers: [
       {
-        layerType: "reuse",
-        layer: { id: "my-trips-layer" },
+        layerType: "mapbox-style",
+        layer: { id: "sepetiba" },
+      },
+      {
+        layerType: "mapbox-style",
+        layer: { id: "sepetiba-linha" },
       },
     ],
   };
@@ -97,23 +104,27 @@ export const Three = () => {
         zoom: 8.67,
         pitch: 7.0,
         bearing: 0.0,
-        duration: 2000,
+        duration: 4000,
       },
       desktop: {
         center: {
-          lon: -43.45938,
-          lat: -22.94232,
+          lon: -43.67922,
+          lat: -22.96874,
         },
-        zoom: 10.67,
-        pitch: 7.0,
-        bearing: 0.0,
-        duration: 2000,
+        zoom: 12.33,
+        pitch: 55.0,
+        bearing: 70.51,
+        duration: 4000,
       },
     },
     layers: [
       {
         layerType: "mapbox-style",
-        layer: { id: "linhasantigas" },
+        layer: { id: "sepetiba" },
+      },
+      {
+        layerType: "mapbox-style",
+        layer: { id: "sepetiba-linha" },
       },
     ],
   };
@@ -173,11 +184,12 @@ export const Five = () => {
       },
       desktop: {
         center: {
-          lon: -43.17224,
-          lat: -22.90651,
+          lon: -43.17704,
+          lat: -22.8965,
         },
-        zoom: 15.51,
+        zoom: 15.63,
         pitch: 60.0,
+        bearing: 139.3,
         bearing: -70.4,
         duration: 2000,
       },
