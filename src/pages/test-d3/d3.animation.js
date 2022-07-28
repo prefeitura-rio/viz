@@ -17,38 +17,37 @@ class BarChart extends Component {
 
   draw = () => {
     let chartRef = d3.select(this.myRef.current);
-    const w = 500;
-    const h = 400;
-
-    const data = [2, 15, 22, 9, 30, 20, 22, 45];
 
     const canvas = chartRef
       .append("svg")
-      .attr("width", w)
-      .attr("height", h)
-      .style("background", "#f0f0f0")
+      .attr("width", this.props.width)
+      .attr("height", this.props.height)
+      .style("background", "#e8cee4")
+      .style("opacity", 0.5)
       .style("padding", "10px")
       .style("margin-left", "50px");
 
     canvas
       .selectAll("rect")
-      .data(data)
+      .data(this.props.data)
       .enter()
       .append("rect")
       .attr("x", (d, i) => i * 65)
-      .attr("y", (d, i) => h - 10 * d)
+      .attr("y", (d, i) => this.props.height - 10 * d)
       .attr("width", 35)
       .attr("height", (d, i) => d * 10)
       .attr("fill", (d, i) => (d >= 20 ? "red" : "green"));
   };
 
   render() {
-    return (
-      <>
-        <div ref={this.myRef}></div>
-      </>
-    );
+    return <div ref={this.myRef}></div>;
   }
 }
+
+BarChart.defaultProps = {
+  width: 500,
+  height: 500,
+  data: [2, 15, 22, 9, 30, 20, 22, 45],
+};
 
 export default BarChart;
