@@ -14,7 +14,7 @@ export const TextChapterIndicator = styled.div`
 `;
 
 export const ChapterOneDiv = styled.div`
-  margin-top: 100vh;
+  margin-top: 50vh;
   height: 700px;
   width: 100%;
 
@@ -23,23 +23,26 @@ export const ChapterOneDiv = styled.div`
   // display: flex;
   // flex-direction: row;
   // text-align: center;
-  opacity: 0.5;
-  background-color: #e8cee4;
+  opacity: 1;
   zindex: -1;
 `;
 
 export const ChapterTwoDiv = styled.div`
-  height: 600px;
+  height: 100vh;
   width: 100%;
   // background: #e8cee4;
   zindex: -1;
 `;
 
 export const ChapterThreeDiv = styled.div`
-  height: 600px;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   // background: #e8cee4;
   zindex: -1;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
 `;
 
 export const ChapterFourDiv = styled.div`
