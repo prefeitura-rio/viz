@@ -23,7 +23,9 @@ export default function Home() {
         <li>
           <Link to="/sandbox/d3"> Sandbox | Test D3 </Link>
         </li>
-        <li></li>
+        <li>
+          <Link to="/sandbox/d3-react"> Sandbox | Test D3 React </Link>
+        </li>
       </lu>
     </div>
   );

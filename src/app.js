@@ -9,6 +9,7 @@ import StorySample from "./pages/sandbox/sample";
 import Test from "./pages/sandbox/test";
 import SubsidioSPPO from "./pages/subsidio-sppo/story";
 import BarChart from "./pages/test-d3/d3.animation";
+import Chart from "./pages/test-d3/react-d3-test";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/sandbox/sample" element={<StorySample />} />
           <Route path="/sandbox/test" element={<Test />} />
           <Route path="/sandbox/d3" element={<BarChart />} />
+          <Route path="/sandbox/d3-react" element={<Chart />}></Route>
         </Routes>
       </Router>
     </div>
