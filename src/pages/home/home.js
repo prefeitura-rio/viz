@@ -20,6 +20,9 @@ export default function Home() {
         <li>
           <Link to="/sandbox/sample"> Sandbox | Sample </Link>
         </li>
+        <li>
+          <Link to="/sandbox/d3"> Sandbox | Test D3 </Link>
+        </li>
         <li></li>
       </lu>
     </div>
