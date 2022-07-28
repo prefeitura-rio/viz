@@ -6,8 +6,8 @@ import MultilayerMap from "../../components/maps/multilayer_map";
 import { Controller, Scene } from "react-scrollmagic";
 
 // Chapters
-import * as chapter from "./chapters";
-import * as card from "./components/text_div";
+import * as chapter from "./chapters.map";
+import * as card from "./components/cards";
 import * as styles from "./chapters.style";
 
 export default function SubsidioSPPO() {
@@ -47,10 +47,10 @@ export default function SubsidioSPPO() {
       },
     });
   };
-  const [chapterNumber, setChapterNumber] = useState(0);
+  const [chapterNumberMap, setChapterNumberMap] = useState(0);
 
   useEffect(() => {
-    switch (chapterNumber) {
+    switch (chapterNumberMap) {
       case 1:
         setPosition(chapter.One().location);
         setLayers(chapter.One().layers);
@@ -67,32 +67,26 @@ export default function SubsidioSPPO() {
         setPosition(chapter.Four().location);
         setLayers(chapter.Four().layers);
         break;
-
       case 5:
         setPosition(chapter.Five().location);
         setLayers(chapter.Five().layers);
         break;
-
       case 6:
         setPosition(chapter.Six().location);
         setLayers(chapter.Six().layers);
         break;
-
       case 7:
         setPosition(chapter.Seven().location);
         setLayers(chapter.Seven().layers);
         break;
-
       case 8:
         setPosition(chapter.Eight().location);
         setLayers(chapter.Eight().layers);
         break;
-
       case 9:
         setPosition(chapter.Nine().location);
         setLayers(chapter.Nine().layers);
         break;
-
       case 10:
         setPosition(chapter.Ten().location);
         setLayers(chapter.Ten().layers);
@@ -100,7 +94,7 @@ export default function SubsidioSPPO() {
       default:
         break;
     }
-  }, [chapterNumber]);
+  }, [chapterNumberMap]);
 
   return (
     <>
@@ -132,7 +126,7 @@ export default function SubsidioSPPO() {
           >
             {(progress, event) => (
               <>
-                {event.type === "enter" && setChapterNumber(1)}
+                {event.type === "enter" && setChapterNumberMap(1)}
                 <card.One id={"card-1"} />
               </>
             )}
@@ -142,13 +136,13 @@ export default function SubsidioSPPO() {
           <Scene
             triggerElement={"#chapter-2"}
             indicators={true}
-            pin={false}
+            pin={"#card-2"}
             duration={600}
             offset={0}
             reverse={true}
           >
             {(progress, event) => (
-              <>{event.type === "enter" && setChapterNumber(2)}</>
+              <>{event.type === "enter" && setChapterNumberMap(2)}</>
             )}
           </Scene>
         </styles.ChapterTwoDiv>
@@ -163,7 +157,7 @@ export default function SubsidioSPPO() {
             reverse={true}
           >
             {(progress, event) => (
-              <>{event.type === "enter" && setChapterNumber(3)}</>
+              <>{event.type === "enter" && setChapterNumberMap(3)}</>
             )}
           </Scene>
         </styles.ChapterThreeDiv>
@@ -182,7 +176,7 @@ export default function SubsidioSPPO() {
                 <styles.TextChapterIndicator id={"cap-4"}>
                   Chapter 4
                 </styles.TextChapterIndicator>
-                {event.type === "enter" && setChapterNumber(4)}
+                {event.type === "enter" && setChapterNumberMap(4)}
               </>
             )}
           </Scene>
@@ -198,7 +192,7 @@ export default function SubsidioSPPO() {
             reverse={true}
           >
             {(progress, event) => (
-              <>{event.type === "enter" && setChapterNumber(5)}</>
+              <>{event.type === "enter" && setChapterNumberMap(5)}</>
             )}
           </Scene>
         </styles.ChapterThreeDiv>
@@ -213,7 +207,7 @@ export default function SubsidioSPPO() {
             reverse={true}
           >
             {(progress, event) => (
-              <>{event.type === "enter" && setChapterNumber(6)}</>
+              <>{event.type === "enter" && setChapterNumberMap(6)}</>
             )}
           </Scene>
         </styles.ChapterThreeDiv>
@@ -227,7 +221,7 @@ export default function SubsidioSPPO() {
             reverse={true}
           >
             {(progress, event) => (
-              <>{event.type === "enter" && setChapterNumber(7)}</>
+              <>{event.type === "enter" && setChapterNumberMap(7)}</>
             )}
           </Scene>
         </styles.ChapterThreeDiv>
@@ -241,7 +235,7 @@ export default function SubsidioSPPO() {
             reverse={true}
           >
             {(progress, event) => (
-              <>{event.type === "enter" && setChapterNumber(8)}</>
+              <>{event.type === "enter" && setChapterNumberMap(8)}</>
             )}
           </Scene>
         </styles.ChapterThreeDiv>
@@ -255,7 +249,7 @@ export default function SubsidioSPPO() {
             reverse={true}
           >
             {(progress, event) => (
-              <>{event.type === "enter" && setChapterNumber(9)}</>
+              <>{event.type === "enter" && setChapterNumberMap(9)}</>
             )}
           </Scene>
         </styles.ChapterThreeDiv>
@@ -269,7 +263,7 @@ export default function SubsidioSPPO() {
             reverse={true}
           >
             {(progress, event) => (
-              <>{event.type === "enter" && setChapterNumber(10)}</>
+              <>{event.type === "enter" && setChapterNumberMap(10)}</>
             )}
           </Scene>
         </styles.ChapterFourDiv>

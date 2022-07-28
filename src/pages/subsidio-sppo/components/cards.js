@@ -79,3 +79,21 @@ export function One(
     </Container>
   );
 }
+
+export function Two(
+  props = {
+    id: "",
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <Container id={props.id}>
+      <TextH1>30012-03921-039</TextH1>
+      <TextH2>ÔNIasdasdBUS</TextH2>
+      <TextParagraph>
+        Com o acordo uma frota maior de veículos será necessária. A estimativa é
+        que até o final do ano sejam adquiridos 300 ônibus.
+      </TextParagraph>
+    </Container>
+  );
+}

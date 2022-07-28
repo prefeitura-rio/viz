@@ -8,7 +8,6 @@ import TripsMap from "./pages/especial-sppo/tripsmap";
 import StorySample from "./pages/sandbox/sample";
 import Test from "./pages/sandbox/test";
 import SubsidioSPPO from "./pages/subsidio-sppo/story";
-// import SubsidioSPPO from "./pages/sandbox/subsidio-sppo";
 
 function App() {
   return (
