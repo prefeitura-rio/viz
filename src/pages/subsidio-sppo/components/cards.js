@@ -1,7 +1,7 @@
 import styled from "styled-components";
 // import logo from "./pages/subsidio-sppo/images/logo.png";
 
-import logo from "./pages/subsidio-sppo/images/logo.png";
+import logo from "../images/logo.png";
 
 const HeaderImage = styled.div`
   background-image: url(${logo});

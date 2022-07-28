@@ -18,10 +18,11 @@ class BarChart extends Component {
   draw = () => {
     let chartRef = d3.select(this.myRef.current);
 
+    const { width, height, data } = this.props;
     const canvas = chartRef
       .append("svg")
-      .attr("width", this.props.width)
-      .attr("height", this.props.height)
+      .attr("width", width)
+      .attr("height", height)
       .style("background", "#e8cee4")
       .style("opacity", 0.5)
       .style("padding", "10px")
@@ -29,11 +30,11 @@ class BarChart extends Component {
 
     canvas
       .selectAll("rect")
-      .data(this.props.data)
+      .data(data)
       .enter()
       .append("rect")
       .attr("x", (d, i) => i * 65)
-      .attr("y", (d, i) => this.props.height - 10 * d)
+      .attr("y", (d, i) => height - 10 * d)
       .attr("width", 35)
       .attr("height", (d, i) => d * 10)
       .attr("fill", (d, i) => (d >= 20 ? "red" : "green"));
