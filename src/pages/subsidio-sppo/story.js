@@ -15,26 +15,37 @@ export default function SubsidioSPPO() {
     desktop: {
       center: {
         lon: -43.17672,
-        lat: -22.90574,
+        lat: -22.90574
       },
       zoom: 14.57,
       pitch: 60.0,
       bearing: -151.1,
-      duration: 2000,
+      duration: 2000
     },
     mobile: {
       center: {
         lat: -22.9121089,
-        lon: -43.2301558,
+        lon: -43.2301558
       },
       zoom: 15,
       bearing: 0,
       pitch: 0,
-      duration: 2000,
-    },
+      duration: 2000
+    }
   });
 
   const [layers, setLayers] = useState(chapterMap.One().layers);
+
+  const [chartProgress, setChartProgress] = useState(0);
+
+  const animateChart = () => {
+    setChartProgress(0);
+    while (chartProgress < 1) {
+      setTimeout(() => {
+        setChartProgress((progress) => progress + 0.01);
+      }, 10);
+    }
+  };
 
   const setPosition = (position) => {
     const desktopPosition = position.desktop ? position.desktop : position;
@@ -43,11 +54,11 @@ export default function SubsidioSPPO() {
     setLocation({
       ...location,
       desktop: {
-        ...desktopPosition,
+        ...desktopPosition
       },
       mobile: {
-        ...mobilePosition,
-      },
+        ...mobilePosition
+      }
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState(0);
@@ -114,7 +125,7 @@ export default function SubsidioSPPO() {
           left: "0",
           width: "100vw",
           height: "100vh",
-          zIndex: "-1",
+          zIndex: "-1"
         }}
         animationLoopLength={21600}
         animationSpeed={1}
@@ -222,6 +233,32 @@ export default function SubsidioSPPO() {
                 </chapterDiv.Six>
               </Tween>
             </Timeline>
+          )}
+        </Scene>
+
+        <Scene
+          triggerElement={"#chapter-7"}
+          indicators={true}
+          pin={false}
+          duration={"100%"}
+          offset={0}
+          reverse={true}
+        >
+          {(progress, event) => (
+            <>
+              {/* Para crescer o gráfico com scroll */}
+              {/* <chapterDiv.Seven
+                id={"chapter-7"}
+                progress={progress + 0.5}
+              ></chapterDiv.Seven> */}
+
+              {/* TODO: Para crescer o gráfico de uma vez */}
+              <>{event.type === "enter" && animateChart()}</>
+              <chapterDiv.Seven
+                id={"chapter-7"}
+                progress={chartProgress}
+              ></chapterDiv.Seven>
+            </>
           )}
         </Scene>
       </Controller>

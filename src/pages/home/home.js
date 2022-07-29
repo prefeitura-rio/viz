@@ -26,6 +26,9 @@ export default function Home() {
         <li>
           <Link to="/sandbox/d3-react"> Sandbox | Test D3 React </Link>
         </li>
+        <li>
+          <Link to="/sandbox/test-linechart"> Sandbox | Test Line Chart </Link>
+        </li>
       </lu>
     </div>
   );
