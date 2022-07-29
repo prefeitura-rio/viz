@@ -81,6 +81,14 @@ const TextBlue = styled.div`
   margin: 5px;
 `;
 
+const TextLightBlue = styled.div`
+  background: #002d5a;
+  color: #fff;
+  display: inline-block;
+  padding: 1px 8px 1px 8px;
+  margin: 5px;
+`;
+
 const TextOrange = styled.div`
   background: #f4902c;
   color: #fff;
@@ -166,7 +174,8 @@ export function Three(
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <TextCard>
-          As <TextBlue>linhas</TextBlue> 870, 871 voltaram em sepetiba,
+          As <TextBlue>linhas</TextBlue> 870, 871 voltaram em{" "}
+          <TextRed>sepetiba,</TextRed>
           conectando o bairro com o BRT, etc…
         </TextCard>
       </ContainerCard>
@@ -184,9 +193,10 @@ export function Four(
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <TextCard>
-          Outros <TextRed>bairros</TextRed> já estão vendo suas linhas voltarem.
-          Junto com as X linhas que já existiam, as 39 linhas estão voltando,
-          completando o sistema viário da cidade.
+          Outros <TextRed>bairros</TextRed> já estão vendo suas{" "}
+          <TextBlue>linhas</TextBlue> voltarem. Junto com as X linhas que já
+          existiam, as 39 linhas estão voltando, completando o sistema viário da
+          cidade.
         </TextCard>
       </ContainerCard>{" "}
     </styles.ChapterGenericDiv>
@@ -203,8 +213,8 @@ export function Five(
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <TextCard>
-          Mapa dos <TextOrange>ônibus</TextOrange> das linhas que voltaram com
-          zoom out para a cidade toda
+          Aqui você vai ver as <TextBlue>linhas novas</TextBlue> e as{" "}
+          <TextLightBlue>antigas linhas.</TextLightBlue>
         </TextCard>
       </ContainerCard>
     </styles.ChapterGenericDiv>
@@ -228,7 +238,7 @@ export function Six(
         from={{ opacity: 0.5 }}
         to={{ opacity: 1 }}
         position={0}
-        duration={1}
+        duration={0.1}
       >
         <styles.ChapterSixDiv id={props.id}>
           <IntroTitle id={"intro"}>Introdução</IntroTitle>

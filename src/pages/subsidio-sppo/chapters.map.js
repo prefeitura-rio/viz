@@ -49,8 +49,12 @@ export const One = () => {
         }),
       },
       {
-        layerType: "mapbox",
-        layer: { ...buildings3d },
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion-red" },
+      },
+      {
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion" },
       },
     ],
   };
@@ -180,8 +184,20 @@ export const Four = () => {
         layer: { id: "bairros-linha" },
       },
       {
-        layerType: "mapbox-style",
-        layer: { id: "linhas-novas" },
+        layerType: "mapbox",
+        layer: {
+          ...{
+            id: "linhas-novas-azul",
+            type: "line",
+            source: "composite",
+            "source-layer": "linhas-novas-9sfk6t",
+            paint: {
+              "line-color": "#18b4c9",
+              "line-opacity": 0,
+              "line-width": 1,
+            },
+          },
+        },
       },
     ],
   };
@@ -212,23 +228,33 @@ export const Five = () => {
       },
     },
     layers: [
+      // {
+      //   layerType: "reuse",
+      //   layer: {
+      //     id: "linhas-novas-azul",
+      //   },
+      // },
       {
-        layerType: "deckgl-trips",
-        layer: new MapboxLayer({
-          id: "my-trips-layer",
-          type: TripsLayer,
-          data: TRIPS,
-          getPath: (d) => d.path,
-          getTimestamps: (d) => d.timestamps,
-          getColor: [244, 144, 44],
-          widthMinPixels: 5,
-          fadeTrail: true,
-          currentTime: 0,
-          opacity: 1,
-          rounded: true,
-          trailLength: 500,
-          shadowEnabled: true,
-        }),
+        layerType: "mapbox",
+        layer: {
+          ...{
+            id: "linhas-antigas-cor",
+            type: "line",
+            source: "composite",
+            "source-layer": "todas-linhas-bc14o2",
+            paint: {
+              "line-opacity": 1,
+              "line-color": "#be5b5b",
+              "line-width": 1,
+            },
+          },
+        },
+      },
+      {
+        layerType: "mapbox-style",
+        layer: {
+          id: "todas-linhas",
+        },
       },
     ],
   };
