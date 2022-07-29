@@ -119,7 +119,7 @@ const IntroText = styled.div`
   // margin: auto;
   color: #dbdbdb;
   font-family: "Redaction", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   opacity: 1;
 `;
@@ -254,9 +254,9 @@ export function Six(
           "custom",
           "M0,0,C0.084,0.61,0.214,0.802,0.28,0.856,0.356,0.918,0.374,1,1,1"
         )}
-        from={{ opacity: 0.5 }}
+        from={{ opacity: 0 }}
         to={{ opacity: 1 }}
-        position={0}
+        position={0.08}
         duration={0.1}
       >
         <styles.ChapterSixDiv id={props.id}>
