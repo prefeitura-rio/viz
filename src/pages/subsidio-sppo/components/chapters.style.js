@@ -40,6 +40,15 @@ export const ChapterGenericDiv = styled.div`
   align-items: center;
 `;
 
+export const ChapterLineChart = styled.div`
+  height: 100vh;
+  width: 100%;
+  // background: #e8cee4;
+  zindex: -1;
+  display: flex;
+  align-items: center;
+`;
+
 export const ChapterSixDiv = styled.div`
   height: 100vh;
   // width: 100%;

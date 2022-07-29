@@ -15,26 +15,38 @@ export default function SubsidioSPPO() {
     desktop: {
       center: {
         lon: -43.17672,
-        lat: -22.90574,
+        lat: -22.90574
       },
       zoom: 14.57,
       pitch: 60.0,
       bearing: -151.1,
-      duration: 2000,
+      duration: 2000
     },
     mobile: {
       center: {
         lat: -22.9121089,
-        lon: -43.2301558,
+        lon: -43.2301558
       },
       zoom: 15,
       bearing: 0,
       pitch: 0,
-      duration: 2000,
-    },
+      duration: 2000
+    }
   });
 
   const [layers, setLayers] = useState(chapterMap.One().layers);
+
+  const [chartProgress, setChartProgress] = useState(0);
+
+  const animateChart = () => {
+    setChartProgress(0);
+    var growProgress = setInterval(() => {
+      setChartProgress((progress) => progress + 0.01);
+    }, 20); // increase 1% every 20ms
+    setTimeout(() => {
+      clearInterval(growProgress);
+    }, 5000); // 5 seconds (make sure it's over)
+  };
 
   const setPosition = (position) => {
     const desktopPosition = position.desktop ? position.desktop : position;
@@ -43,11 +55,11 @@ export default function SubsidioSPPO() {
     setLocation({
       ...location,
       desktop: {
-        ...desktopPosition,
+        ...desktopPosition
       },
       mobile: {
-        ...mobilePosition,
-      },
+        ...mobilePosition
+      }
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState(0);
@@ -114,7 +126,7 @@ export default function SubsidioSPPO() {
           left: "0",
           width: "100vw",
           height: "100vh",
-          zIndex: "-1",
+          zIndex: "-1"
         }}
         animationLoopLength={21600}
         animationSpeed={1}
@@ -209,19 +221,34 @@ export default function SubsidioSPPO() {
           reverse={true}
         >
           {(progress, event) => (
-            <Timeline totalProgress={progress} paused>
-              <Tween
-                // ease={"power4.out"}
-                from={{ opacity: 1 }}
-                to={{ opacity: 0 }}
-                position={0}
-                duration={1}
-              >
-                <chapterDiv.Six id={"chapter-6"}>
-                  <>{event.type === "enter" && setChapterNumberMap(6)}</>
-                </chapterDiv.Six>
-              </Tween>
-            </Timeline>
+            <chapterDiv.Six id={"chapter-6"} progress={progress}>
+              <>{event.type === "enter" && setChapterNumberMap(6)}</>
+            </chapterDiv.Six>
+          )}
+        </Scene>
+
+        <Scene
+          triggerElement={"#chapter-7"}
+          indicators={true}
+          pin={false}
+          duration={"100%"}
+          offset={0}
+          reverse={true}
+        >
+          {(progress, event) => (
+            <>
+              {/* Para crescer o gráfico com scroll */}
+              {/* <chapterDiv.Seven
+                id={"chapter-7"}
+                progress={progress + 0.5}
+              ></chapterDiv.Seven> */}
+              {/* Para crescer o gráfico de uma vez */}
+              <>{event.type === "enter" && animateChart()}</>
+              <chapterDiv.Seven
+                id={"chapter-7"}
+                progress={chartProgress}
+              ></chapterDiv.Seven>{" "}
+            </>
           )}
         </Scene>
       </Controller>
