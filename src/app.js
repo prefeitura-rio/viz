@@ -11,6 +11,7 @@ import SubsidioSPPO from "./pages/subsidio-sppo/story";
 import BarChart from "./pages/test-d3/d3.animation";
 import Chart from "./pages/test-d3/react-d3-test";
 import TestLineChart from "./pages/sandbox/test_linechart";
+import TestMap from "./pages/sandbox/test_map";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             path="/sandbox/test-linechart"
             element={<TestLineChart />}
           ></Route>
+          <Route path="/sandbox/test-map" element={<TestMap />}></Route>
         </Routes>
       </Router>
     </div>
