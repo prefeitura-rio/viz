@@ -295,7 +295,7 @@ export function Seven(
   }
 ) {
   props = setDefaultProps(props);
-  console.log(props.progress);
+  // console.log(props.progress);
   return (
     <>
       <styles.ChapterLineChart id={props.id}>
