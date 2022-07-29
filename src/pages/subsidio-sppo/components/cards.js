@@ -1,19 +1,6 @@
 import styled from "styled-components";
 import logo1 from "../images/logo1.png";
 
-export const LogoImage = styled.img`
-  position: absolute;
-  margin: auto;
-  top: 10%;
-  left: 0;
-  right: 0;
-  width: 150px;
-`;
-
-const ContainerOne = styled.div`
-  margin: auto;
-`;
-
 const ContainerCard = styled.div`
   min-width: 250px;
   margin: auto;
@@ -30,32 +17,10 @@ const TextH3 = styled.div`
   font-weight: 700;
   font-size: 3rem;
   line-height: 1;
+
   margin-top: 0;
   margin-bottom: 0px;
   text-align: left;
-`;
-
-const TextH4 = styled.div`
-  color: #ffffff;
-  min-width: 250px;
-  font-family: "Redaction", sans-serif;
-  font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 1.3;
-  margin-top: 0;
-  margin-bottom: 0px;
-  text-align: center;
-`;
-
-const TextH5 = styled.div`
-  color: #ffffff;
-  font-family: "MetricWeb", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.3;
-  margin-top: 30px;
-  margin-bottom: 0px;
-  text-align: center;
 `;
 
 const TextParagraph = styled.div`
@@ -65,7 +30,7 @@ const TextParagraph = styled.div`
   line-height: 1.4;
   margin-top: 0px;
   margin-bottom: 0px;
-  text-align: left;
+  text-align: center;
 `;
 
 const TextParagraph1 = styled.div`
@@ -117,6 +82,44 @@ const Blur = styled.div`
   filter: blur(8px);
 `;
 
+export const Logo = styled.img`
+  width: 150px;
+  // background-color: #01baef;
+  margin-bottom: auto;
+  margin-top: 10%;
+  grid-area: top;
+`;
+
+const Title = styled.div`
+  width: 80%;
+
+  color: #ffffff;
+  font-family: "Redaction", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.3;
+  // background-color: #01baef;
+
+  margin: auto;
+  text-align: center;
+  grid-area: middle;
+`;
+
+const AuthorText = styled.div`
+  width: 80%;
+
+  color: #ffffff;
+  // background-color: #01baef;
+  font-family: "MetricWeb", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.3;
+
+  margin-bottom: auto;
+  text-align: center;
+  grid-area: bottom;
+`;
+
 export function One(
   props = {
     id: "",
@@ -124,19 +127,16 @@ export function One(
 ) {
   props = setDefaultProps(props);
   return (
-    <ContainerOne id={props.id}>
-      {/* <Photo>
-        <img src={logo1} width={120} alt="Logo" />
-      </Photo> */}
-      <LogoImage src={logo1}></LogoImage>
-      <TextH4>
+    <>
+      <Logo src={logo1}></Logo>
+      <Title>
         Um ponto de virada na história do transporte municipal do Rio de Janeiro
-      </TextH4>
-      <TextH5>
-        Desenvolvido por <b>Escritório de Dados</b> e{" "}
+      </Title>
+      <AuthorText>
+        Desenvolvido por <b>Escritório de Dados</b> e
         <b>Secretaria Municipal de Transportes</b>
-      </TextH5>
-    </ContainerOne>
+      </AuthorText>
+    </>
   );
 }
 

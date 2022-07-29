@@ -17,14 +17,14 @@ export const ChapterOneDiv = styled.div`
   height: 100vh;
   width: 100%;
   zindex: -1;
-  // background-color: #000;
-  // justify-content: center;
-  min-width: 300px;
-  display: flex;
-  flex-direction: row;
-  // position: absolute;
-  top: 0;
-  // left: -100;
+  display: grid;
+  grid-template-areas:
+    " top "
+    " middle "
+    " bottom ";
+  grid-template-rows: 5fr 1fr 5fr;
+  // grid-template-columns: ;
+  justify-items: center;
 `;
 
 export const ChapterGenericDiv = styled.div`
