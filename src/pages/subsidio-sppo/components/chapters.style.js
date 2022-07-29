@@ -18,11 +18,15 @@ export const ChapterOneDiv = styled.div`
   width: 100%;
   zindex: -1;
   display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-rows: 0.4fr 1.4fr 0.4fr 0.4fr 2.4fr;
+  gap: 20px 0px;
   grid-template-areas:
-    " top "
-    " middle "
-    " bottom ";
-  grid-template-rows: 5fr 1fr 5fr;
+    ". logo ."
+    ". . ."
+    ". titulo ."
+    ". subtitulo ."
+    ". . .";
   // grid-template-columns: ;
   justify-items: center;
 `;

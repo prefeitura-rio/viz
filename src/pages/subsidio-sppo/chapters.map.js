@@ -179,6 +179,10 @@ export const Four = () => {
         layerType: "mapbox-style",
         layer: { id: "bairros-linha" },
       },
+      {
+        layerType: "mapbox-style",
+        layer: { id: "linhas-novas" },
+      },
     ],
   };
 };

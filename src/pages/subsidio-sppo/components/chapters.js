@@ -6,8 +6,8 @@ export const Logo = styled.img`
   width: 150px;
   // background-color: #01baef;
   margin-bottom: auto;
-  margin-top: 10%;
-  grid-area: top;
+  margin-top: 2%;
+  grid-area: logo;
 `;
 
 const Title = styled.div`
@@ -22,7 +22,7 @@ const Title = styled.div`
 
   margin: auto;
   text-align: center;
-  grid-area: middle;
+  grid-area: titulo;
 `;
 
 const AuthorText = styled.div`
@@ -37,7 +37,7 @@ const AuthorText = styled.div`
 
   margin-bottom: auto;
   text-align: center;
-  grid-area: bottom;
+  grid-area: subtitulo;
 `;
 
 const ContainerCard = styled.div`
