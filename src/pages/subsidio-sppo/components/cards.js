@@ -1,6 +1,44 @@
 import styled from "styled-components";
 import logo1 from "../images/logo1.png";
 
+export const Logo = styled.img`
+  width: 150px;
+  // background-color: #01baef;
+  margin-bottom: auto;
+  margin-top: 10%;
+  grid-area: top;
+`;
+
+const Title = styled.div`
+  width: 80%;
+
+  color: #ffffff;
+  font-family: "Redaction", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.3;
+  // background-color: #01baef;
+
+  margin: auto;
+  text-align: center;
+  grid-area: middle;
+`;
+
+const AuthorText = styled.div`
+  width: 80%;
+
+  color: #ffffff;
+  // background-color: #01baef;
+  font-family: "MetricWeb", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.3;
+
+  margin-bottom: auto;
+  text-align: center;
+  grid-area: bottom;
+`;
+
 const ContainerCard = styled.div`
   min-width: 250px;
   margin: auto;
@@ -82,44 +120,6 @@ const Blur = styled.div`
   filter: blur(8px);
 `;
 
-export const Logo = styled.img`
-  width: 150px;
-  // background-color: #01baef;
-  margin-bottom: auto;
-  margin-top: 10%;
-  grid-area: top;
-`;
-
-const Title = styled.div`
-  width: 80%;
-
-  color: #ffffff;
-  font-family: "Redaction", sans-serif;
-  font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 1.3;
-  // background-color: #01baef;
-
-  margin: auto;
-  text-align: center;
-  grid-area: middle;
-`;
-
-const AuthorText = styled.div`
-  width: 80%;
-
-  color: #ffffff;
-  // background-color: #01baef;
-  font-family: "MetricWeb", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.3;
-
-  margin-bottom: auto;
-  text-align: center;
-  grid-area: bottom;
-`;
-
 export function One(
   props = {
     id: "",
@@ -133,7 +133,7 @@ export function One(
         Um ponto de virada na história do transporte municipal do Rio de Janeiro
       </Title>
       <AuthorText>
-        Desenvolvido por <b>Escritório de Dados</b> e
+        Desenvolvido por <b>Escritório de Dados</b> e{" "}
         <b>Secretaria Municipal de Transportes</b>
       </AuthorText>
     </>
