@@ -250,12 +250,6 @@ export const Five = () => {
           },
         },
       },
-      {
-        layerType: "mapbox-style",
-        layer: {
-          id: "todas-linhas",
-        },
-      },
     ],
   };
 };
