@@ -14,22 +14,22 @@ export default function SubsidioSPPO() {
   const [location, setLocation] = useState({
     desktop: {
       center: {
-        lon: -43.17672,
-        lat: -22.90574,
+        lon: -43.18228,
+        lat: -22.90825,
       },
-      zoom: 14.57,
+      zoom: 14.96,
       pitch: 60.0,
-      bearing: -151.1,
+      bearing: -146.41,
       duration: 2000,
     },
     mobile: {
       center: {
-        lat: -22.9121089,
-        lon: -43.2301558,
+        lon: -43.18228,
+        lat: -22.90825,
       },
-      zoom: 15,
-      bearing: 0,
-      pitch: 0,
+      zoom: 14.96,
+      pitch: 60.0,
+      bearing: -146.41,
       duration: 2000,
     },
   });
@@ -114,7 +114,7 @@ export default function SubsidioSPPO() {
   return (
     <>
       <MultilayerMap
-        interactive={false}
+        interactive={true}
         scrollZoom={true}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
         mapStyle="mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b"

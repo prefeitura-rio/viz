@@ -68,7 +68,7 @@ const TextRed = styled.div`
   color: #fff;
   display: inline-block;
   padding: 1px 8px 1px 8px;
-  margin: 5px;
+  margin: 3px;
 `;
 
 const TextBlue = styled.div`
@@ -76,7 +76,7 @@ const TextBlue = styled.div`
   color: #fff;
   display: inline-block;
   padding: 1px 8px 1px 8px;
-  margin: 5px;
+  margin: 3px;
 `;
 
 const TextLightBlue = styled.div`
@@ -84,7 +84,7 @@ const TextLightBlue = styled.div`
   color: #fff;
   display: inline-block;
   padding: 1px 8px 1px 8px;
-  margin: 5px;
+  margin: 3px;
 `;
 
 const TextOrange = styled.div`
@@ -92,7 +92,7 @@ const TextOrange = styled.div`
   color: #fff;
   display: inline-block;
   padding: 1px 8px 1px 8px;
-  margin: 5px;
+  margin: 3px;
 `;
 
 const IntroTitle = styled.div`
@@ -101,7 +101,7 @@ const IntroTitle = styled.div`
   color: #ffffff;
   font-family: "Redaction", sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.7rem;
   line-height: 1;
   text-align: left;
   opacity: 1;
@@ -256,7 +256,7 @@ export function Six(
         )}
         from={{ opacity: 0 }}
         to={{ opacity: 1 }}
-        position={0.08}
+        position={0.05}
         duration={0.1}
       >
         <styles.ChapterSixDiv id={props.id}>
