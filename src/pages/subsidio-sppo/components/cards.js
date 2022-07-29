@@ -83,6 +83,30 @@ const TextOrange = styled.div`
   margin: 5px;
 `;
 
+const IntroTitle = styled.div`
+  grid-area: title;
+  margin: auto;
+  color: #ffffff;
+  font-family: "Redaction", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1;
+  text-align: left;
+  opacity: 1;
+`;
+
+const IntroText = styled.div`
+  grid-area: text;
+  // background: #f4902c;
+  // margin: auto;
+  color: #dbdbdb;
+  font-family: "Redaction", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  text-align: justify;
+  opacity: 1;
+`;
+
 export function One(
   props = {
     id: "",
@@ -175,9 +199,9 @@ export function Six(
 ) {
   props = setDefaultProps(props);
   return (
-    <TextBlue>
-      <>Introdução</>
-      <>
+    <>
+      <IntroTitle>Introdução</IntroTitle>
+      <IntroText>
         Os cariocas sabem bem quais os problemas enfrentados todos os dias no
         transporte público da cidade do Rio de Janeiro. E é preciso reconhecer
         que o sistema por ônibus está ruim e precisa de ajuda. <br />
@@ -196,8 +220,8 @@ export function Six(
         prestado com base no quilômetro rodado. <br />
         <br />
         Nesta página explicaremos como a Prefeitura fará isso. <br />
-      </>
-    </TextBlue>
+      </IntroText>
+    </>
   );
 }
 

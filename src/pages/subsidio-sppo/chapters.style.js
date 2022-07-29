@@ -38,7 +38,18 @@ export const ChapterGenericDiv = styled.div`
 
 export const ChapterSixDiv = styled.div`
   height: 100vh;
-  width: 100%;
+  // width: 100%;
   opacity: 1;
   zindex: -1;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  grid-template-rows: 0.2fr 1fr 0.1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". title ."
+    ". text ."
+    ". . .";
+  justify-items: center;
+  background-color: rgba(0, 0, 0, 0.92);
+  opacity: 0.9;
 `;
