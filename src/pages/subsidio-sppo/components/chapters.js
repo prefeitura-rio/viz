@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import logo1 from "../images/logo1.png";
+import * as styles from "./chapters.style";
 
 export const Logo = styled.img`
   width: 150px;
@@ -97,13 +98,18 @@ const IntroTitle = styled.div`
 
 const IntroText = styled.div`
   grid-area: text;
-  // background: #f4902c;
+  background: #f4902c;
+  // justify-self: start;
+  // align-items: start;
+  text-align: justify;
+  margin-bottom: 30%;
+  margin-top: 5%;
+  vertical-align: middle;
   // margin: auto;
   color: #dbdbdb;
   font-family: "Redaction", sans-serif;
   font-size: 1.5rem;
-  line-height: 1.4;
-  text-align: justify;
+  line-height: 1.5;
   opacity: 1;
 `;
 
@@ -114,7 +120,7 @@ export function One(
 ) {
   props = setDefaultProps(props);
   return (
-    <>
+    <styles.ChapterOneDiv id={props.id}>
       <Logo src={logo1}></Logo>
       <Title>
         Um ponto de virada na história do transporte municipal do Rio de Janeiro
@@ -123,7 +129,7 @@ export function One(
         Desenvolvido por <b>Escritório de Dados</b> e{" "}
         <b>Secretaria Municipal de Transportes</b>
       </AuthorText>
-    </>
+    </styles.ChapterOneDiv>
   );
 }
 
@@ -134,12 +140,14 @@ export function Two(
 ) {
   props = setDefaultProps(props);
   return (
-    <ContainerCard id={props.id}>
-      <TextCard>
-        As mudanças começaram nos bairros que precisavam mais de transporte.
-        <TextRed>Sepetiba,</TextRed> viu o retorno de suas linhas.
-      </TextCard>
-    </ContainerCard>
+    <styles.ChapterGenericDiv id={props.id}>
+      <ContainerCard>
+        <TextCard>
+          As mudanças começaram nos bairros que precisavam mais de transporte.
+          <TextRed>Sepetiba,</TextRed> viu o retorno de suas linhas.
+        </TextCard>
+      </ContainerCard>
+    </styles.ChapterGenericDiv>
   );
 }
 
@@ -150,12 +158,14 @@ export function Three(
 ) {
   props = setDefaultProps(props);
   return (
-    <ContainerCard id={props.id}>
-      <TextCard>
-        As <TextBlue>linhas</TextBlue> 870, 871 voltaram em sepetiba, conectando
-        o bairro com o BRT, etc…
-      </TextCard>
-    </ContainerCard>
+    <styles.ChapterGenericDiv id={props.id}>
+      <ContainerCard>
+        <TextCard>
+          As <TextBlue>linhas</TextBlue> 870, 871 voltaram em sepetiba,
+          conectando o bairro com o BRT, etc…
+        </TextCard>
+      </ContainerCard>
+    </styles.ChapterGenericDiv>
   );
 }
 
@@ -166,13 +176,15 @@ export function Four(
 ) {
   props = setDefaultProps(props);
   return (
-    <ContainerCard id={props.id}>
-      <TextCard>
-        Outros <TextRed>bairros</TextRed> já estão vendo suas linhas voltarem.
-        Junto com as X linhas que já existiam, as 39 linhas estão voltando,
-        completando o sistema viário da cidade.
-      </TextCard>
-    </ContainerCard>
+    <styles.ChapterGenericDiv id={props.id}>
+      <ContainerCard>
+        <TextCard>
+          Outros <TextRed>bairros</TextRed> já estão vendo suas linhas voltarem.
+          Junto com as X linhas que já existiam, as 39 linhas estão voltando,
+          completando o sistema viário da cidade.
+        </TextCard>
+      </ContainerCard>{" "}
+    </styles.ChapterGenericDiv>
   );
 }
 
@@ -183,12 +195,14 @@ export function Five(
 ) {
   props = setDefaultProps(props);
   return (
-    <ContainerCard id={props.id}>
-      <TextCard>
-        Mapa dos <TextOrange>ônibus</TextOrange> das linhas que voltaram com
-        zoom out para a cidade toda
-      </TextCard>
-    </ContainerCard>
+    <styles.ChapterGenericDiv id={props.id}>
+      <ContainerCard>
+        <TextCard>
+          Mapa dos <TextOrange>ônibus</TextOrange> das linhas que voltaram com
+          zoom out para a cidade toda
+        </TextCard>
+      </ContainerCard>
+    </styles.ChapterGenericDiv>
   );
 }
 
@@ -199,7 +213,7 @@ export function Six(
 ) {
   props = setDefaultProps(props);
   return (
-    <>
+    <styles.ChapterSixDiv id={props.id}>
       <IntroTitle>Introdução</IntroTitle>
       <IntroText>
         Os cariocas sabem bem quais os problemas enfrentados todos os dias no
@@ -221,7 +235,7 @@ export function Six(
         <br />
         Nesta página explicaremos como a Prefeitura fará isso. <br />
       </IntroText>
-    </>
+    </styles.ChapterSixDiv>
   );
 }
 

@@ -238,7 +238,7 @@ export const Six = () => {
           lon: -43.34443,
           lat: -22.85287,
         },
-        zoom: 11.94,
+        zoom: 15.94,
         pitch: 60.0,
         bearing: 85.53,
         duration: 2000,
