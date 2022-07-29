@@ -228,26 +228,26 @@ export const Five = () => {
       },
     },
     layers: [
+      // {
+      //   layerType: "mapbox",
+      //   layer: {
+      //     ...{
+      //       id: "linhas-antigas-cor",
+      //       type: "line",
+      //       source: "composite",
+      //       "source-layer": "todas-linhas-bc14o2",
+      //       paint: {
+      //         "line-opacity": 1,
+      //         "line-color": "#fff",
+      //         "line-width": 1,
+      //       },
+      //     },
+      //   },
+      // },
       {
         layerType: "reuse",
         layer: {
           id: "linhas-novas-azul",
-        },
-      },
-      {
-        layerType: "mapbox",
-        layer: {
-          ...{
-            id: "linhas-antigas-cor",
-            type: "line",
-            source: "composite",
-            "source-layer": "todas-linhas-bc14o2",
-            paint: {
-              "line-opacity": 1,
-              "line-color": "#fff",
-              "line-width": 1,
-            },
-          },
         },
       },
     ],
