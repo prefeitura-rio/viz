@@ -23,7 +23,7 @@ export const ChapterOneDiv = styled.div`
   flex-direction: row;
 `;
 
-export const ChapterTwoDiv = styled.div`
+export const ChapterGenericDiv = styled.div`
   height: 100vh;
   width: 100%;
   // background: #e8cee4;
@@ -32,16 +32,9 @@ export const ChapterTwoDiv = styled.div`
   align-items: center;
 `;
 
-export const ChapterThreeDiv = styled.div`
+export const ChapterSixDiv = styled.div`
   height: 100vh;
   width: 100%;
   opacity: 1;
-  zindex: -1;
-`;
-
-export const ChapterFourDiv = styled.div`
-  height: 1400px;
-  width: 100%;
-  // background: #e8cee4;
   zindex: -1;
 `;

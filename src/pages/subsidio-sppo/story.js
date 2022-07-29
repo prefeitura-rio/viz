@@ -138,7 +138,7 @@ export default function SubsidioSPPO() {
           </Scene>
         </styles.ChapterOneDiv>
 
-        <styles.ChapterTwoDiv id={"chapter-2"}>
+        <styles.ChapterGenericDiv id={"chapter-2"}>
           <Scene
             triggerElement={"#chapter-2"}
             indicators={true}
@@ -154,9 +154,9 @@ export default function SubsidioSPPO() {
               </>
             )}
           </Scene>
-        </styles.ChapterTwoDiv>
+        </styles.ChapterGenericDiv>
 
-        <styles.ChapterTwoDiv id={"chapter-3"}>
+        <styles.ChapterGenericDiv id={"chapter-3"}>
           <Scene
             triggerElement={"#chapter-3"}
             indicators={true}
@@ -172,9 +172,9 @@ export default function SubsidioSPPO() {
               </>
             )}
           </Scene>
-        </styles.ChapterTwoDiv>
+        </styles.ChapterGenericDiv>
 
-        <styles.ChapterTwoDiv id={"chapter-4"}>
+        <styles.ChapterGenericDiv id={"chapter-4"}>
           <Scene
             triggerElement={"#chapter-4"}
             indicators={true}
@@ -190,9 +190,9 @@ export default function SubsidioSPPO() {
               </>
             )}
           </Scene>
-        </styles.ChapterTwoDiv>
+        </styles.ChapterGenericDiv>
 
-        <styles.ChapterTwoDiv id={"chapter-5"}>
+        <styles.ChapterGenericDiv id={"chapter-5"}>
           <Scene
             triggerElement={"#chapter-5"}
             indicators={true}
@@ -208,13 +208,13 @@ export default function SubsidioSPPO() {
               </>
             )}
           </Scene>
-        </styles.ChapterTwoDiv>
+        </styles.ChapterGenericDiv>
 
-        <styles.ChapterThreeDiv id={"chapter-5"}>
+        <styles.ChapterSixDiv id={"chapter-6"}>
           <Scene
-            triggerElement={"#chapter-5"}
+            triggerElement={"#chapter-6"}
             indicators={true}
-            pin={""}
+            pin={false}
             duration={"100%"}
             offset={0}
             reverse={true}
@@ -225,7 +225,7 @@ export default function SubsidioSPPO() {
               </>
             )}
           </Scene>
-        </styles.ChapterThreeDiv>
+        </styles.ChapterSixDiv>
       </Controller>
     </>
   );
