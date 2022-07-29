@@ -3,6 +3,9 @@ import logo1 from "../images/logo1.png";
 import * as styles from "./chapters.style";
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
+import { Tween, Timeline } from "react-gsap";
+import { gsap } from "gsap";
+import CustomEase from "gsap/CustomEase";
 
 export const Logo = styled.img`
   width: 150px;
@@ -117,7 +120,7 @@ const IntroText = styled.div`
 
 export function One(
   props = {
-    id: ""
+    id: "",
   }
 ) {
   props = setDefaultProps(props);
@@ -137,7 +140,7 @@ export function One(
 
 export function Two(
   props = {
-    id: ""
+    id: "",
   }
 ) {
   props = setDefaultProps(props);
@@ -155,7 +158,7 @@ export function Two(
 
 export function Three(
   props = {
-    id: ""
+    id: "",
   }
 ) {
   props = setDefaultProps(props);
@@ -173,7 +176,7 @@ export function Three(
 
 export function Four(
   props = {
-    id: ""
+    id: "",
   }
 ) {
   props = setDefaultProps(props);
@@ -192,7 +195,7 @@ export function Four(
 
 export function Five(
   props = {
-    id: ""
+    id: "",
   }
 ) {
   props = setDefaultProps(props);
@@ -210,41 +213,56 @@ export function Five(
 
 export function Six(
   props = {
-    id: ""
+    id: "",
+    progress: 0,
   }
 ) {
   props = setDefaultProps(props);
   return (
-    <styles.ChapterSixDiv id={props.id}>
-      <IntroTitle>Introdução</IntroTitle>
-      <IntroText>
-        Os cariocas sabem bem quais os problemas enfrentados todos os dias no
-        transporte público da cidade do Rio de Janeiro. E é preciso reconhecer
-        que o sistema por ônibus está ruim e precisa de ajuda. <br />
-        <br />
-        Uma série de fatores levou a este colapso, o que só resultou no
-        sofrimento da população que depende do transporte público da cidade para
-        se locomover. Por isso, a Prefeitura vai regularizar as linhas
-        operantes, retomar as inoperantes e implementar serviços noturnos.
-        <br />
-        <br />
-        Por meio de um acordo judicial, estabelecido entre a Prefeitura,
-        consórcios e o Ministério Público, linhas de ônibus serão retomadas e
-        criadas na capital fluminense. A partir de agora, o transporte público
-        por ônibus será subsidiado pelo município. As empresas, além da tarifa
-        de R$ 4,05, vão receber um valor adicional pelo serviço efetivamente
-        prestado com base no quilômetro rodado. <br />
-        <br />
-        Nesta página explicaremos como a Prefeitura fará isso. <br />
-      </IntroText>
-    </styles.ChapterSixDiv>
+    <Timeline totalProgress={props.progress} paused>
+      <Tween
+        ease={CustomEase.create(
+          "custom",
+          "M0,0,C0.084,0.61,0.214,0.802,0.28,0.856,0.356,0.918,0.374,1,1,1"
+        )}
+        from={{ opacity: 0.5 }}
+        to={{ opacity: 1 }}
+        position={0}
+        duration={1}
+      >
+        <styles.ChapterSixDiv id={props.id}>
+          <IntroTitle id={"intro"}>Introdução</IntroTitle>
+          <IntroText>
+            Os cariocas sabem bem quais os problemas enfrentados todos os dias
+            no transporte público da cidade do Rio de Janeiro. E é preciso
+            reconhecer que o sistema por ônibus está ruim e precisa de ajuda.{" "}
+            <br />
+            <br />
+            Uma série de fatores levou a este colapso, o que só resultou no
+            sofrimento da população que depende do transporte público da cidade
+            para se locomover. Por isso, a Prefeitura vai regularizar as linhas
+            operantes, retomar as inoperantes e implementar serviços noturnos.
+            <br />
+            <br />
+            Por meio de um acordo judicial, estabelecido entre a Prefeitura,
+            consórcios e o Ministério Público, linhas de ônibus serão retomadas
+            e criadas na capital fluminense. A partir de agora, o transporte
+            público por ônibus será subsidiado pelo município. As empresas, além
+            da tarifa de R$ 4,05, vão receber um valor adicional pelo serviço
+            efetivamente prestado com base no quilômetro rodado. <br />
+            <br />
+            Nesta página explicaremos como a Prefeitura fará isso. <br />
+          </IntroText>
+        </styles.ChapterSixDiv>
+      </Tween>
+    </Timeline>
   );
 }
 
 export function Seven(
   props = {
     id: "",
-    progress: 0
+    progress: 0,
   }
 ) {
   props = setDefaultProps(props);
@@ -280,7 +298,7 @@ export function Seven(
             { x: 22, y: 484 },
             { x: 23, y: 529 },
             { x: 24, y: 576 },
-            { x: 25, y: 625 }
+            { x: 25, y: 625 },
           ]}
           progress={props.progress}
         />
@@ -291,7 +309,7 @@ export function Seven(
 
 const setDefaultProps = (providedProps) => {
   const defaultProps = {
-    id: ""
+    id: "",
   };
 
   return { ...defaultProps, ...providedProps };

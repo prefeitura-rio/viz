@@ -221,19 +221,9 @@ export default function SubsidioSPPO() {
           reverse={true}
         >
           {(progress, event) => (
-            <Timeline totalProgress={progress} paused>
-              <Tween
-                // ease={"power4.out"}
-                from={{ opacity: 1 }}
-                to={{ opacity: 0 }}
-                position={0}
-                duration={1}
-              >
-                <chapterDiv.Six id={"chapter-6"}>
-                  <>{event.type === "enter" && setChapterNumberMap(6)}</>
-                </chapterDiv.Six>
-              </Tween>
-            </Timeline>
+            <chapterDiv.Six id={"chapter-6"} progress={progress}>
+              <>{event.type === "enter" && setChapterNumberMap(6)}</>
+            </chapterDiv.Six>
           )}
         </Scene>
 
@@ -252,13 +242,12 @@ export default function SubsidioSPPO() {
                 id={"chapter-7"}
                 progress={progress + 0.5}
               ></chapterDiv.Seven> */}
-
               {/* Para crescer o gráfico de uma vez */}
               <>{event.type === "enter" && animateChart()}</>
               <chapterDiv.Seven
                 id={"chapter-7"}
                 progress={chartProgress}
-              ></chapterDiv.Seven>
+              ></chapterDiv.Seven>{" "}
             </>
           )}
         </Scene>
