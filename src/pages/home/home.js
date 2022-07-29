@@ -29,6 +29,9 @@ export default function Home() {
         <li>
           <Link to="/sandbox/test-linechart"> Sandbox | Test Line Chart </Link>
         </li>
+        <li>
+          <Link to="/sandbox/test-map"> Sandbox | Test Map </Link>
+        </li>
       </lu>
     </div>
   );
