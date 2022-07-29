@@ -13,11 +13,11 @@ const Title = styled.div`
   width: 80%;
 
   color: #ffffff;
+  // background-color: #01baef;
   font-family: "Redaction", sans-serif;
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 1.3;
-  // background-color: #01baef;
 
   margin: auto;
   text-align: center;
@@ -49,29 +49,7 @@ const ContainerCard = styled.div`
   border-radius: 15px;
 `;
 
-const TextH3 = styled.div`
-  color: #ffffff;
-  font-family: "Redaction", sans-serif;
-  font-weight: 700;
-  font-size: 3rem;
-  line-height: 1;
-
-  margin-top: 0;
-  margin-bottom: 0px;
-  text-align: left;
-`;
-
-const TextParagraph = styled.div`
-  color: #dbdbdb;
-  font-family: "Redaction", sans-serif;
-  font-size: 1.3rem;
-  line-height: 1.4;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  text-align: center;
-`;
-
-const TextParagraph1 = styled.div`
+const TextCard = styled.div`
   color: #dbdbdb;
   font-family: "Redaction", sans-serif;
   font-size: 1.3rem;
@@ -81,7 +59,7 @@ const TextParagraph1 = styled.div`
   text-align: left;
 `;
 
-const TextColor1 = styled.div`
+const TextRed = styled.div`
   background: #be5b5b;
   color: #fff;
   display: inline-block;
@@ -89,7 +67,7 @@ const TextColor1 = styled.div`
   margin: 5px;
 `;
 
-const TextColor2 = styled.div`
+const TextBlue = styled.div`
   background: #18b4c9;
   color: #fff;
   display: inline-block;
@@ -97,27 +75,12 @@ const TextColor2 = styled.div`
   margin: 5px;
 `;
 
-const TextColor3 = styled.div`
+const TextOrange = styled.div`
   background: #f4902c;
   color: #fff;
   display: inline-block;
   padding: 1px 8px 1px 8px;
   margin: 5px;
-`;
-
-const GridGeral = styled.div`
-  display: flex;
-  column-gap: 40px;
-`;
-
-const GridNumero = styled.div`
-  display: grid;
-  flex-direction: column;
-  margin-bottom: 0px;
-`;
-
-const Blur = styled.div`
-  filter: blur(8px);
 `;
 
 export function One(
@@ -148,10 +111,10 @@ export function Two(
   props = setDefaultProps(props);
   return (
     <ContainerCard id={props.id}>
-      <TextParagraph>
+      <TextCard>
         As mudanças começaram nos bairros que precisavam mais de transporte.
-        <TextColor1>Sepetiba,</TextColor1> viu o retorno de suas linhas.
-      </TextParagraph>
+        <TextRed>Sepetiba,</TextRed> viu o retorno de suas linhas.
+      </TextCard>
     </ContainerCard>
   );
 }
@@ -164,10 +127,10 @@ export function Three(
   props = setDefaultProps(props);
   return (
     <ContainerCard id={props.id}>
-      <TextParagraph>
-        As <TextColor2>linhas</TextColor2> 870, 871 voltaram em sepetiba,
-        conectando o bairro com o BRT, etc…
-      </TextParagraph>
+      <TextCard>
+        As <TextBlue>linhas</TextBlue> 870, 871 voltaram em sepetiba, conectando
+        o bairro com o BRT, etc…
+      </TextCard>
     </ContainerCard>
   );
 }
@@ -180,11 +143,11 @@ export function Four(
   props = setDefaultProps(props);
   return (
     <ContainerCard id={props.id}>
-      <TextParagraph>
-        Outros <TextColor1>bairros</TextColor1> já estão vendo suas linhas
-        voltarem. Junto com as X linhas que já existiam, as 39 linhas estão
-        voltando, completando o sistema viário da cidade.
-      </TextParagraph>
+      <TextCard>
+        Outros <TextRed>bairros</TextRed> já estão vendo suas linhas voltarem.
+        Junto com as X linhas que já existiam, as 39 linhas estão voltando,
+        completando o sistema viário da cidade.
+      </TextCard>
     </ContainerCard>
   );
 }
@@ -197,10 +160,10 @@ export function Five(
   props = setDefaultProps(props);
   return (
     <ContainerCard id={props.id}>
-      <TextParagraph>
-        Mapa dos <TextColor3>ônibus</TextColor3> das linhas que voltaram com
+      <TextCard>
+        Mapa dos <TextOrange>ônibus</TextOrange> das linhas que voltaram com
         zoom out para a cidade toda
-      </TextParagraph>
+      </TextCard>
     </ContainerCard>
   );
 }
@@ -212,9 +175,9 @@ export function Six(
 ) {
   props = setDefaultProps(props);
   return (
-    <>
-      <TextH3>Introdução</TextH3>
-      <TextParagraph1>
+    <TextBlue>
+      <>Introdução</>
+      <>
         Os cariocas sabem bem quais os problemas enfrentados todos os dias no
         transporte público da cidade do Rio de Janeiro. E é preciso reconhecer
         que o sistema por ônibus está ruim e precisa de ajuda. <br />
@@ -233,8 +196,8 @@ export function Six(
         prestado com base no quilômetro rodado. <br />
         <br />
         Nesta página explicaremos como a Prefeitura fará isso. <br />
-      </TextParagraph1>
-    </>
+      </>
+    </TextBlue>
   );
 }
 

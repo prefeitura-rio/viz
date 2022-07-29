@@ -127,8 +127,20 @@ export const Three = () => {
         layer: { id: "sepetiba-linha" },
       },
       {
-        layerType: "mapbox-style",
-        layer: { id: "linha-sepetiba" },
+        layerType: "mapbox",
+        layer: {
+          ...{
+            id: "linha-sepetiba-blue",
+            type: "line",
+            source: "composite",
+            "source-layer": "linha-sepetiba-30dnx7",
+            paint: {
+              "line-color": "#18b4c9",
+              "line-width": 2,
+              "line-opacity": 1,
+            },
+          },
+        },
       },
     ],
   };
