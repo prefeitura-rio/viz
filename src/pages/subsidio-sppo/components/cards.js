@@ -123,13 +123,27 @@ const TextParagraph1 = styled.div`
 `;
 
 const TextColor1 = styled.div`
-  padding: 0.3em;
-  margin: 0.3em;
-  width: 80px;
-  color: white;
   background: #be5b5b;
-  border: none;
-  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  padding: 1px 8px 1px 8px;
+  margin: 5px;
+`;
+
+const TextColor2 = styled.div`
+  background: #18b4c9;
+  color: #fff;
+  display: inline-block;
+  padding: 1px 8px 1px 8px;
+  margin: 5px;
+`;
+
+const TextColor3 = styled.div`
+  background: #f4902c;
+  color: #fff;
+  display: inline-block;
+  padding: 1px 8px 1px 8px;
+  margin: 5px;
 `;
 
 const GridGeral = styled.div`
@@ -204,7 +218,7 @@ export function Two(
     <Container id={props.id}>
       <TextParagraph>
         As mudanças começaram nos bairros que precisavam mais de transporte.
-        Sepetiba, viu o retorno de suas linhas.
+        <TextColor1>Sepetiba,</TextColor1> viu o retorno de suas linhas.
       </TextParagraph>
     </Container>
   );
@@ -219,8 +233,8 @@ export function Three(
   return (
     <Container id={props.id}>
       <TextParagraph>
-        As linhas 870, 871 voltaram em sepetiba, conectando o bairro com o BRT,
-        etc…
+        As <TextColor2>linhas</TextColor2> 870, 871 voltaram em sepetiba,
+        conectando o bairro com o BRT, etc…
       </TextParagraph>
     </Container>
   );
@@ -235,9 +249,9 @@ export function Four(
   return (
     <Container id={props.id}>
       <TextParagraph>
-        Outros bairros já estão vendo suas linhas voltarem. Junto com as X
-        linhas que já existiam, as 39 linhas estão voltando, completando o
-        sistema viário da cidade.
+        Outros <TextColor1>bairros</TextColor1> já estão vendo suas linhas
+        voltarem. Junto com as X linhas que já existiam, as 39 linhas estão
+        voltando, completando o sistema viário da cidade.
       </TextParagraph>
     </Container>
   );
@@ -252,7 +266,8 @@ export function Five(
   return (
     <Container id={props.id}>
       <TextParagraph>
-        Mapa dos ônibus das linhas que voltaram com zoom out para a cidade toda
+        Mapa dos <TextColor3>ônibus</TextColor3> das linhas que voltaram com
+        zoom out para a cidade toda
       </TextParagraph>
     </Container>
   );
