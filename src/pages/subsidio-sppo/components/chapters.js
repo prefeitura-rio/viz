@@ -32,14 +32,12 @@ const Title = styled.div`
 
 const AuthorText = styled.div`
   width: 80%;
-
   color: #ffffff;
   // background-color: #01baef;
   font-family: "MetricWeb", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.3;
-
   margin-bottom: auto;
   text-align: center;
   grid-area: subtitulo;
@@ -98,7 +96,7 @@ const TextOrange = styled.div`
 `;
 
 const IntroTitle = styled.div`
-  grid-area: title;
+  grid-area: titulo;
   margin: auto;
   color: #ffffff;
   font-family: "Redaction", sans-serif;
@@ -110,8 +108,8 @@ const IntroTitle = styled.div`
 `;
 
 const IntroText = styled.div`
-  grid-area: text;
-  background: #f4902c;
+  grid-area: texto;
+  // background: #ffffff;
   // justify-self: start;
   // align-items: start;
   text-align: justify;
@@ -139,8 +137,29 @@ export function One(
         Um ponto de virada na história do transporte municipal do Rio de Janeiro
       </Title>
       <AuthorText>
-        Desenvolvido por <b>Escritório de Dados</b> e{" "}
-        <b>Secretaria Municipal de Transportes</b>
+        Desenvolvido por{" "}
+        <a
+          style={{ fontSize: "1rem", fontWeight: "700", color: "#ffffff" }}
+          href="https://www.dados.rio/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Escritório de Dados
+        </a>{" "}
+        e
+        <a
+          style={{
+            fontSize: "1rem",
+            fontWeight: "700",
+            color: "#ffffff",
+            margin: "4px",
+          }}
+          href="http://www.rio.rj.gov.br/web/smtr"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Secretaria Municipal de Transportes
+        </a>
       </AuthorText>
     </styles.ChapterOneDiv>
   );

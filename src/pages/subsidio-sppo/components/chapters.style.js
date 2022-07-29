@@ -55,14 +55,16 @@ export const ChapterSixDiv = styled.div`
   opacity: 1;
   zindex: -1;
   display: grid;
-  grid-template-columns: 0.2fr 1fr 0.2fr;
-  grid-template-rows: 0.2fr 1fr 0.1fr;
-  gap: 0px 0px;
+  grid-template-columns: 0.6fr 0.8fr 2fr 0.6fr;
+  grid-template-rows: 0.5fr 0.7fr 2fr 1fr;
+  gap: 0px 20px;
   grid-template-areas:
-    ". title ."
-    ". text ."
-    ". . .";
+    ". . . ."
+    ". titulo texto ."
+    ". . texto ."
+    ". . . .";
   justify-items: center;
+  align-items: top;
   background-color: rgba(0, 0, 0, 0.92);
-  opacity: 0.9;
+  // opacity: 0.9;
 `;
