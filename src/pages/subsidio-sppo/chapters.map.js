@@ -1,6 +1,6 @@
 import { MapboxLayer } from "@deck.gl/mapbox"; // Ref: https://deck.gl/docs/api-reference/mapbox/mapbox-layer
 import { TripsLayer } from "@deck.gl/geo-layers";
-const TRIPS = require("../especial-sppo/data/trips.json");
+const TRIPS = require("./data/trips.json");
 
 // For some custom layers
 import { buildings3d } from "../../components/layers/buildings3d";
