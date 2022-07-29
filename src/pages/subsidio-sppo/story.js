@@ -40,11 +40,12 @@ export default function SubsidioSPPO() {
 
   const animateChart = () => {
     setChartProgress(0);
-    while (chartProgress < 1) {
-      setTimeout(() => {
-        setChartProgress((progress) => progress + 0.01);
-      }, 10);
-    }
+    var growProgress = setInterval(() => {
+      setChartProgress((progress) => progress + 0.01);
+    }, 20); // increase 1% every 20ms
+    setTimeout(() => {
+      clearInterval(growProgress);
+    }, 5000); // 5 seconds (make sure it's over)
   };
 
   const setPosition = (position) => {
@@ -252,7 +253,7 @@ export default function SubsidioSPPO() {
                 progress={progress + 0.5}
               ></chapterDiv.Seven> */}
 
-              {/* TODO: Para crescer o gráfico de uma vez */}
+              {/* Para crescer o gráfico de uma vez */}
               <>{event.type === "enter" && animateChart()}</>
               <chapterDiv.Seven
                 id={"chapter-7"}
