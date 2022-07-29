@@ -221,19 +221,19 @@ export const Five = () => {
           lon: -43.44949,
           lat: -22.94796,
         },
-        zoom: 10.7,
+        zoom: 11.5,
         pitch: 6.0,
         bearing: 0.03,
         duration: 2000,
       },
     },
     layers: [
-      // {
-      //   layerType: "reuse",
-      //   layer: {
-      //     id: "linhas-novas-azul",
-      //   },
-      // },
+      {
+        layerType: "reuse",
+        layer: {
+          id: "linhas-novas-azul",
+        },
+      },
       {
         layerType: "mapbox",
         layer: {
@@ -244,7 +244,7 @@ export const Five = () => {
             "source-layer": "todas-linhas-bc14o2",
             paint: {
               "line-opacity": 1,
-              "line-color": "#be5b5b",
+              "line-color": "#fff",
               "line-width": 1,
             },
           },
