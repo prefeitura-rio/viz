@@ -118,13 +118,16 @@ export default function ScrollTriggerSubsidioSPPO() {
   const vw = (coef) => window.innerWidth * (coef / 100);
 
   useEffect(() => {
+    gsap.defaults({
+      ease: "none",
+    });
+
     gsap.from("#chapter-1", {
       scrollTrigger: {
         trigger: "#chapter-1",
-        // id: ,
         start: "top center",
         end: "bottom center",
-        markers: true,
+        // id: ,
         onEnter: () => {
           setChapterNumberMap(1);
         },
@@ -193,11 +196,14 @@ export default function ScrollTriggerSubsidioSPPO() {
         },
       },
     });
-    gsap.from("#chapter-6", {
+
+    const tl6 = gsap.timeline({
       scrollTrigger: {
         trigger: "#chapter-6",
         start: "top center",
         end: "bottom center",
+        // toggleActions: "play reverse play reverse",
+        scrub: true,
         // id: ,
         markers: true,
         onEnter: () => {
@@ -208,16 +214,31 @@ export default function ScrollTriggerSubsidioSPPO() {
         },
       },
     });
-    gsap.from("#chapter-7", {
-      scrollTrigger: {
-        trigger: "#chapter-7",
-        start: "top center",
-        end: "bottom center",
-        // id: ,
-        markers: true,
-        onEnter: () => {
-          animateChart();
-        },
+    tl6
+      .set("#chapter-6", { opacity: 0 })
+      .to("#chapter-6", { opacity: 0, duration: 0.1 })
+      .to("#chapter-6", { opacity: 1, duration: 0.1 })
+      .to("#chapter-6", { opacity: 1, duration: 0.2 })
+      .to("#chapter-6", { opacity: 0, duration: 0.4 });
+    // .to("#chapter-6", { opacity: 0, duration: 0.33 });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-6",
+      start: "top center",
+      end: "bottom center",
+      // toggleActions: "play reverse play reverse",
+      // id: ,
+      onUpdate: (self) => console.log("progress:", self.progress),
+    });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-7",
+      start: "top center",
+      end: "bottom center",
+      // toggleActions: "play reverse play reverse",
+      // id: ,
+      onUpdate: (self) => {
+        animateChart();
       },
     });
   }, []);
@@ -244,10 +265,10 @@ export default function ScrollTriggerSubsidioSPPO() {
         animationSpeed={1}
       />
       <chapterDiv.One id={"chapter-1"} />
-      <chapterDiv.Two id={"chapter-2"} />
+      {/* <chapterDiv.Two id={"chapter-2"} />
       <chapterDiv.Three id={"chapter-3"} />
       <chapterDiv.Four id={"chapter-4"} />
-      <chapterDiv.Five id={"chapter-5"} />
+      <chapterDiv.Five id={"chapter-5"} /> */}
       <chapterDiv.Six id={"chapter-6"} />
       <chapterDiv.Seven id={"chapter-7"} />
     </>

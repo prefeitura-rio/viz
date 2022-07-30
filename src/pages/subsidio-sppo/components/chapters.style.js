@@ -66,5 +66,5 @@ export const ChapterSixDiv = styled.div`
   justify-items: center;
   align-items: top;
   background-color: rgba(0, 0, 0, 0.92);
-  // opacity: 0.9;
+  opacity: 1;
 `;
