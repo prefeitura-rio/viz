@@ -50,13 +50,13 @@ export const ChapterLineChart = styled.div`
 `;
 
 export const ChapterSixDiv = styled.div`
-  height: 100vh;
+  height: 150vh;
   // width: 100%;
-  opacity: 1;
+  // opacity: 1;
   zindex: -1;
   display: grid;
   grid-template-columns: 0.6fr 0.8fr 2fr 0.6fr;
-  grid-template-rows: 0.5fr 0.5fr 2.2fr 1fr;
+  grid-template-rows: 1.1fr 0.5fr 2.2fr 1fr;
   gap: 0px 20px;
   grid-template-areas:
     ". . . ."

@@ -7,6 +7,9 @@ import { Tween, Timeline } from "react-gsap";
 import { gsap } from "gsap";
 import CustomEase from "gsap/CustomEase";
 
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 export const Logo = styled.img`
   width: 150px;
   // background-color: #01baef;
@@ -247,18 +250,12 @@ export function Six(
   }
 ) {
   props = setDefaultProps(props);
+
   return (
-    <Timeline totalProgress={props.progress} paused>
-      <Tween
-        ease={CustomEase.create(
-          "custom",
-          "M0,0,C0.084,0.61,0.214,0.802,0.28,0.856,0.356,0.918,0.374,1,1,1"
-        )}
-        from={{ opacity: 0 }}
-        to={{ opacity: 1 }}
-        position={0.05}
-        duration={0.1}
-      >
+    <Timeline
+      totalProgress={props.progress}
+      paused
+      target={
         <styles.ChapterSixDiv id={props.id}>
           <IntroTitle id={"intro"}>Introdução</IntroTitle>
           <IntroText>
@@ -283,7 +280,23 @@ export function Six(
             Nesta página explicaremos como a Prefeitura fará isso. <br />
           </IntroText>
         </styles.ChapterSixDiv>
-      </Tween>
+      }
+    >
+      <Tween
+        target={0}
+        ease={"ease.Linear"}
+        from={{ opacity: 0 }}
+        to={{ opacity: 1 }}
+        position={0}
+        duration={1.5}
+      />
+      {/* <Tween
+        target={0}
+        from={{ opacity: 1 }}
+        to={{ opacity: 0 }}
+        position={60}
+        duration={10}
+      /> */}
     </Timeline>
   );
 }

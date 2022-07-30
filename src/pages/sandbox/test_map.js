@@ -15,23 +15,23 @@ export default function SubsidioSPPO() {
     desktop: {
       center: {
         lon: -43.17672,
-        lat: -22.90574
+        lat: -22.90574,
       },
       zoom: 14.57,
       pitch: 60.0,
       bearing: -151.1,
-      duration: 2000
+      duration: 2000,
     },
     mobile: {
       center: {
         lat: -22.9121089,
-        lon: -43.2301558
+        lon: -43.2301558,
       },
       zoom: 15,
       bearing: 0,
       pitch: 0,
-      duration: 2000
-    }
+      duration: 2000,
+    },
   });
 
   const [layers, setLayers] = useState(chapterMap.One().layers);
@@ -43,11 +43,11 @@ export default function SubsidioSPPO() {
     setLocation({
       ...location,
       desktop: {
-        ...desktopPosition
+        ...desktopPosition,
       },
       mobile: {
-        ...mobilePosition
-      }
+        ...mobilePosition,
+      },
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState(0);
@@ -88,7 +88,7 @@ export default function SubsidioSPPO() {
             startLocation.desktop.center.lat,
             endLocation.desktop.center.lat,
             progress
-          )
+          ),
         },
         zoom: mapValue(
           startLocation.desktop.zoom,
@@ -109,7 +109,7 @@ export default function SubsidioSPPO() {
           startLocation.desktop.duration,
           endLocation.desktop.duration,
           progress
-        )
+        ),
       },
       mobile: {
         center: {
@@ -122,7 +122,7 @@ export default function SubsidioSPPO() {
             startLocation.mobile.center.lat,
             endLocation.mobile.center.lat,
             progress
-          )
+          ),
         },
         zoom: mapValue(
           startLocation.mobile.zoom,
@@ -143,8 +143,8 @@ export default function SubsidioSPPO() {
           startLocation.mobile.duration,
           endLocation.mobile.duration,
           progress
-        )
-      }
+        ),
+      },
     };
   };
 
@@ -172,7 +172,7 @@ export default function SubsidioSPPO() {
           left: "0",
           width: "100vw",
           height: "100vh",
-          zIndex: "-1"
+          zIndex: "-1",
         }}
         animationLoopLength={21600}
         animationSpeed={1}

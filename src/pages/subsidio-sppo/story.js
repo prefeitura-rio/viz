@@ -47,7 +47,6 @@ export default function SubsidioSPPO() {
       clearInterval(growProgress);
     }, 5000); // 5 seconds (make sure it's over)
   };
-
   const setPosition = (position) => {
     const desktopPosition = position.desktop ? position.desktop : position;
     const mobilePosition = position.mobile ? position.mobile : position;
@@ -63,7 +62,7 @@ export default function SubsidioSPPO() {
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState(0);
-  console.log(chapterNumberMap, layers);
+  // console.log(chapterNumberMap, layers);
   useEffect(() => {
     switch (chapterNumberMap) {
       case 1:
@@ -217,14 +216,15 @@ export default function SubsidioSPPO() {
           triggerElement={"#chapter-6"}
           indicators={true}
           pin={false}
-          duration={"100%"}
+          duration={"150%"}
           offset={0}
           reverse={true}
         >
           {(progress, event) => (
-            <chapterDiv.Six id={"chapter-6"} progress={progress}>
-              <>{event.type === "enter" && setChapterNumberMap(6)}</>
-            </chapterDiv.Six>
+            <chapterDiv.Six
+              id={"chapter-6"}
+              progress={progress}
+            ></chapterDiv.Six>
           )}
         </Scene>
 
