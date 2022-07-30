@@ -130,11 +130,12 @@ const IntroText = styled.div`
 export function One(
   props = {
     id: "",
+    ref: null,
   }
 ) {
   props = setDefaultProps(props);
   return (
-    <styles.ChapterOneDiv id={props.id}>
+    <styles.ChapterOneDiv id={props.id} ref={props.ref}>
       <Logo src={logo1}></Logo>
       <Title>
         Um ponto de virada na história do transporte municipal do Rio de Janeiro
@@ -171,11 +172,12 @@ export function One(
 export function Two(
   props = {
     id: "",
+    ref: null,
   }
 ) {
   props = setDefaultProps(props);
   return (
-    <styles.ChapterGenericDiv id={props.id}>
+    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <ContainerCard>
         <TextCard>
           As mudanças começaram nos bairros que precisavam mais de transporte.
@@ -252,52 +254,29 @@ export function Six(
   props = setDefaultProps(props);
 
   return (
-    <Timeline
-      totalProgress={props.progress}
-      paused
-      target={
-        <styles.ChapterSixDiv id={props.id}>
-          <IntroTitle id={"intro"}>Introdução</IntroTitle>
-          <IntroText>
-            Os cariocas sabem bem quais os problemas enfrentados todos os dias
-            no transporte público da cidade do Rio de Janeiro. E é preciso
-            reconhecer que o sistema por ônibus está ruim e precisa de ajuda.{" "}
-            <br />
-            <br />
-            Uma série de fatores levou a este colapso, o que só resultou no
-            sofrimento da população que depende do transporte público da cidade
-            para se locomover. Por isso, a Prefeitura vai regularizar as linhas
-            operantes, retomar as inoperantes e implementar serviços noturnos.
-            <br />
-            <br />
-            Por meio de um acordo judicial, estabelecido entre a Prefeitura,
-            consórcios e o Ministério Público, linhas de ônibus serão retomadas
-            e criadas na capital fluminense. A partir de agora, o transporte
-            público por ônibus será subsidiado pelo município. As empresas, além
-            da tarifa de R$ 4,05, vão receber um valor adicional pelo serviço
-            efetivamente prestado com base no quilômetro rodado. <br />
-            <br />
-            Nesta página explicaremos como a Prefeitura fará isso. <br />
-          </IntroText>
-        </styles.ChapterSixDiv>
-      }
-    >
-      <Tween
-        target={0}
-        ease={"ease.Linear"}
-        from={{ opacity: 0 }}
-        to={{ opacity: 1 }}
-        position={0}
-        duration={1.5}
-      />
-      {/* <Tween
-        target={0}
-        from={{ opacity: 1 }}
-        to={{ opacity: 0 }}
-        position={60}
-        duration={10}
-      /> */}
-    </Timeline>
+    <styles.ChapterSixDiv id={props.id}>
+      <IntroTitle id={"intro"}>Introdução</IntroTitle>
+      <IntroText>
+        Os cariocas sabem bem quais os problemas enfrentados todos os dias no
+        transporte público da cidade do Rio de Janeiro. E é preciso reconhecer
+        que o sistema por ônibus está ruim e precisa de ajuda. <br />
+        <br />
+        Uma série de fatores levou a este colapso, o que só resultou no
+        sofrimento da população que depende do transporte público da cidade para
+        se locomover. Por isso, a Prefeitura vai regularizar as linhas
+        operantes, retomar as inoperantes e implementar serviços noturnos.
+        <br />
+        <br />
+        Por meio de um acordo judicial, estabelecido entre a Prefeitura,
+        consórcios e o Ministério Público, linhas de ônibus serão retomadas e
+        criadas na capital fluminense. A partir de agora, o transporte público
+        por ônibus será subsidiado pelo município. As empresas, além da tarifa
+        de R$ 4,05, vão receber um valor adicional pelo serviço efetivamente
+        prestado com base no quilômetro rodado. <br />
+        <br />
+        Nesta página explicaremos como a Prefeitura fará isso. <br />
+      </IntroText>
+    </styles.ChapterSixDiv>
   );
 }
 

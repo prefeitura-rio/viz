@@ -15,6 +15,11 @@ export default function Home() {
           <Link to="/especial-sppo/subsidio">Especial SPPO | Subsidio</Link>
         </li>
         <li>
+          <Link to="/especial-sppo/scrolltrigger">
+            Especial SPPO | Scroll Trigger
+          </Link>
+        </li>
+        <li>
           <Link to="/sandbox/test"> Sandbox | Test </Link>
         </li>
         <li>
