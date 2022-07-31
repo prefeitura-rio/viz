@@ -104,10 +104,7 @@ export default function ScrollTriggerSubsidioSPPO() {
       markers: true,
       scrub: true,
       // toggleActions: "play reverse play reverse",
-      onEnter: () => {
-        setChapterNumberMap(1);
-      },
-      onEnterBack: () => {
+      onToggle: () => {
         setChapterNumberMap(1);
       },
     });
@@ -119,10 +116,7 @@ export default function ScrollTriggerSubsidioSPPO() {
       markers: true,
       scrub: true,
       // toggleActions: "play reverse play reverse",
-      onEnter: () => {
-        setChapterNumberMap(2);
-      },
-      onEnterBack: () => {
+      onToggle: () => {
         setChapterNumberMap(2);
       },
     });
@@ -134,10 +128,7 @@ export default function ScrollTriggerSubsidioSPPO() {
       markers: true,
       scrub: true,
       // toggleActions: "play reverse play reverse",
-      onEnter: () => {
-        setChapterNumberMap(3);
-      },
-      onEnterBack: () => {
+      onToggle: () => {
         setChapterNumberMap(3);
       },
     });
@@ -149,10 +140,7 @@ export default function ScrollTriggerSubsidioSPPO() {
       markers: true,
       scrub: true,
       // toggleActions: "play reverse play reverse",
-      onEnter: () => {
-        setChapterNumberMap(4);
-      },
-      onEnterBack: () => {
+      onToggle: () => {
         setChapterNumberMap(4);
       },
     });
@@ -164,10 +152,7 @@ export default function ScrollTriggerSubsidioSPPO() {
       markers: true,
       scrub: true,
       // toggleActions: "play reverse play reverse",
-      onEnter: () => {
-        setChapterNumberMap(5);
-      },
-      onEnterBack: () => {
+      onToggle: () => {
         setChapterNumberMap(5);
       },
     });
@@ -186,14 +171,10 @@ export default function ScrollTriggerSubsidioSPPO() {
       markers: true,
       scrub: true,
       // toggleActions: "play reverse play reverse",
-      onEnter: () => {
+      onToggle: () => {
         setChapterNumberMap(6);
       },
-      onEnterBack: () => {
-        setChapterNumberMap(6);
-      },
-
-      onUpdate: (self) => console.log("progress:", self.progress),
+      // onUpdate: (self) => console.log("progress:", self.progress),
     });
 
     ScrollTrigger.create({
