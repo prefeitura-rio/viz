@@ -95,6 +95,8 @@ export default function ScrollTriggerSubsidioSPPO() {
   const vw = (coef) => window.innerWidth * (coef / 100);
 
   useEffect(() => {
+    gsap.defaults({ ease: "none" });
+
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
@@ -166,7 +168,7 @@ export default function ScrollTriggerSubsidioSPPO() {
   return (
     <>
       <MultilayerMap
-        interactive={true}
+        interactive={false}
         scrollZoom={true}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
         mapStyle="mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b"
