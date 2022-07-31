@@ -7,7 +7,6 @@ import * as chapterMap from "./chapters.map";
 import * as chapterDiv from "./components/chapters";
 
 // Scroll and animation stuff
-import { Tween, Timeline } from "react-gsap";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
