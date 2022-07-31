@@ -97,13 +97,15 @@ export default function ScrollTriggerSubsidioSPPO() {
   const vw = (coef) => window.innerWidth * (coef / 100);
 
   useEffect(() => {
-    ScrollTrigger.create({
-      trigger: "#chapter-1",
+    ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
       markers: true,
       scrub: true,
       // toggleActions: "play reverse play reverse",
+    });
+    ScrollTrigger.create({
+      trigger: "#chapter-1",
       onToggle: () => {
         setChapterNumberMap(1);
       },
@@ -111,11 +113,6 @@ export default function ScrollTriggerSubsidioSPPO() {
 
     ScrollTrigger.create({
       trigger: "#chapter-2",
-      start: "top center",
-      end: "bottom center",
-      markers: true,
-      scrub: true,
-      // toggleActions: "play reverse play reverse",
       onToggle: () => {
         setChapterNumberMap(2);
       },
@@ -123,11 +120,6 @@ export default function ScrollTriggerSubsidioSPPO() {
 
     ScrollTrigger.create({
       trigger: "#chapter-3",
-      start: "top center",
-      end: "bottom center",
-      markers: true,
-      scrub: true,
-      // toggleActions: "play reverse play reverse",
       onToggle: () => {
         setChapterNumberMap(3);
       },
@@ -135,11 +127,6 @@ export default function ScrollTriggerSubsidioSPPO() {
 
     ScrollTrigger.create({
       trigger: "#chapter-4",
-      start: "top center",
-      end: "bottom center",
-      markers: true,
-      scrub: true,
-      // toggleActions: "play reverse play reverse",
       onToggle: () => {
         setChapterNumberMap(4);
       },
@@ -147,11 +134,6 @@ export default function ScrollTriggerSubsidioSPPO() {
 
     ScrollTrigger.create({
       trigger: "#chapter-5",
-      start: "top center",
-      end: "bottom center",
-      markers: true,
-      scrub: true,
-      // toggleActions: "play reverse play reverse",
       onToggle: () => {
         setChapterNumberMap(5);
       },
@@ -166,11 +148,6 @@ export default function ScrollTriggerSubsidioSPPO() {
     ScrollTrigger.create({
       animation: tl6,
       trigger: "#chapter-6",
-      start: "top center",
-      end: "bottom center",
-      markers: true,
-      scrub: true,
-      // toggleActions: "play reverse play reverse",
       onToggle: () => {
         setChapterNumberMap(6);
       },
@@ -179,12 +156,6 @@ export default function ScrollTriggerSubsidioSPPO() {
 
     ScrollTrigger.create({
       trigger: "#chapter-7",
-      start: "top center",
-      scrub: true,
-      markers: true, // id: ,
-      end: "bottom center",
-      // toggleActions: "play reverse play reverse",
-      // id: ,
       onUpdate: (self) => {
         animateChart();
       },
