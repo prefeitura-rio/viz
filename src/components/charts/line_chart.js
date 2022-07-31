@@ -6,7 +6,7 @@ class LineChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      maxIndex: this.props.data.length * this.props.progress
+      maxIndex: this.props.data.length * this.props.progress,
     };
     this.myRef = React.createRef();
   }
@@ -89,7 +89,7 @@ class LineChart extends Component {
     if (prevProps.progress !== this.props.progress) {
       if (this.getMaxIndex(this.props.progress) !== this.state.maxIndex) {
         this.setState({
-          maxIndex: this.getMaxIndex(this.props.progress)
+          maxIndex: this.getMaxIndex(this.props.progress),
         });
       }
     } else if (prevProps.data !== this.props.data) {
@@ -100,14 +100,15 @@ class LineChart extends Component {
   }
   // Render
   render() {
-    return <div ref={this.myRef}></div>;
+    return <div ref={this.myRef} id={this.props.id}></div>;
   }
 }
 
 LineChart.defaultProps = {
   canvasId: "body",
   data: [],
-  progress: 1
+  progress: 1,
+  id: "line-chart",
 };
 
 export default LineChart;

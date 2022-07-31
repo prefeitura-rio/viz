@@ -291,8 +291,8 @@ export function Seven(
   return (
     <>
       <styles.ChapterLineChart id={props.id}>
-        {" "}
         <LineChart
+          id="line-chart"
           canvasId="line-chart"
           data={[
             { x: 1, y: 1 },
