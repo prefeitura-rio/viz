@@ -1,16 +1,14 @@
 // Mandatory
 import { useEffect, useState, useRef } from "react";
 import MultilayerMap from "../../components/maps/multilayer_map";
-import { Tween, Timeline } from "react-gsap";
-import { gsap } from "gsap";
-// Scrollmagic
-import { Controller, Scene } from "react-scrollmagic";
 
 // Chapters
 import * as chapterMap from "./chapters.map";
 import * as chapterDiv from "./components/chapters";
 
-// import { Tween } from 'react-gsap';
+// Scroll and animation stuff
+import { Tween, Timeline } from "react-gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
