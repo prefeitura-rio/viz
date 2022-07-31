@@ -138,12 +138,15 @@ export default function ScrollTriggerSubsidioSPPO() {
         setChapterNumberMap(5);
       },
     });
+
     const tl6 = gsap.timeline();
     tl6
       .set("#chapter-6", { opacity: 0 })
-      .to("#chapter-6", { opacity: 0, duration: 0.1 })
-      .to("#chapter-6", { opacity: 1, duration: 0.1 })
-      .to("#chapter-6", { opacity: 0, duration: 0.1 });
+      .to("#chapter-6", { opacity: 0, duration: 10 })
+      .to("#chapter-6", { opacity: 1, duration: 30 })
+      .to("#chapter-6", { opacity: 1, duration: 20 })
+      .to("#chapter-6", { opacity: 0, duration: 30 })
+      .to("#chapter-6", { opacity: 0, duration: 10 });
 
     ScrollTrigger.create({
       animation: tl6,
@@ -151,14 +154,14 @@ export default function ScrollTriggerSubsidioSPPO() {
       onToggle: () => {
         setChapterNumberMap(6);
       },
-      // onUpdate: (self) => console.log("progress:", self.progress),
+      onUpdate: (self) => console.log("progress:", self.progress),
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-7",
-      onUpdate: (self) => {
-        animateChart();
-      },
+      // onUpdate: (self) => {
+      //   animateChart();
+      // },
     });
   }, []);
 
