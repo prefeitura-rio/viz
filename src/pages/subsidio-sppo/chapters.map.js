@@ -1,9 +1,11 @@
 import { MapboxLayer } from "@deck.gl/mapbox"; // Ref: https://deck.gl/docs/api-reference/mapbox/mapbox-layer
 import { TripsLayer } from "@deck.gl/geo-layers";
+import { GeoJsonLayer } from "@deck.gl/layers";
 const TRIPS = require("./data/trips.json");
-
+import Map, { Source, Layer } from "react-map-gl";
 // For some custom layers
 import { buildings3d } from "../../components/layers/buildings3d";
+import LINHAS_ANTIGAS from "./data/linhas_antigas.json";
 
 export const One = () => {
   return {
@@ -211,7 +213,7 @@ export const Five = () => {
           lon: -43.17224,
           lat: -22.90651,
         },
-        zoom: 12.51,
+        zoom: 10.51,
         pitch: 60.0,
         bearing: -70.4,
         duration: 2000,
@@ -221,33 +223,38 @@ export const Five = () => {
           lon: -43.44949,
           lat: -22.94796,
         },
-        zoom: 11.5,
+        zoom: 10.3,
         pitch: 6.0,
         bearing: 0.03,
-        duration: 2000,
+        duration: 4000,
       },
     },
     layers: [
-      // {
-      //   layerType: "mapbox",
-      //   layer: {
-      //     ...{
-      //       id: "linhas-antigas-cor",
-      //       type: "line",
-      //       source: "composite",
-      //       "source-layer": "todas-linhas-bc14o2",
-      //       paint: {
-      //         "line-opacity": 1,
-      //         "line-color": "#fff",
-      //         "line-width": 1,
-      //       },
-      //     },
-      //   },
-      // },
       {
-        layerType: "reuse",
+        layerType: "deckgl",
+        layer: new MapboxLayer({
+          id: "deck-linhas-antigas",
+          data: LINHAS_ANTIGAS,
+          type: GeoJsonLayer,
+          opacity: 1,
+          getLineColor: [0, 45, 90],
+          getLineWidth: 200,
+        }),
+      },
+      {
+        layerType: "mapbox",
         layer: {
-          id: "linhas-novas-azul",
+          ...{
+            id: "linhas-novas-azul-2",
+            type: "line",
+            source: "composite",
+            "source-layer": "linhas-novas-9sfk6t",
+            paint: {
+              "line-color": "#18b4c9",
+              "line-opacity": 0,
+              "line-width": 2,
+            },
+          },
         },
       },
     ],

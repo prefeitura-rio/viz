@@ -8,13 +8,16 @@ import * as chapterDiv from "./components/chapters";
 
 // Scroll and animation stuff
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+// import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ScrollTriggerSubsidioSPPO() {
   const [location, setLocation] = useState(chapterMap.One().location);
 
   const [layers, setLayers] = useState(chapterMap.One().layers);
+  console.log("ChapterLayers", layers);
 
   const [chartProgress, setChartProgress] = useState(0);
 
@@ -28,7 +31,6 @@ export default function ScrollTriggerSubsidioSPPO() {
     }, 5000); // 5 seconds (make sure it's over)
   };
   const chartRef = useRef(null);
-  console.log(chartRef);
 
   const setPosition = (position) => {
     const desktopPosition = position.desktop ? position.desktop : position;
