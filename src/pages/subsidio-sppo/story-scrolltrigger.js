@@ -15,28 +15,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ScrollTriggerSubsidioSPPO() {
-  const [location, setLocation] = useState({
-    desktop: {
-      center: {
-        lon: -43.18228,
-        lat: -22.90825,
-      },
-      zoom: 14.96,
-      pitch: 60.0,
-      bearing: -146.41,
-      duration: 2000,
-    },
-    mobile: {
-      center: {
-        lon: -43.18228,
-        lat: -22.90825,
-      },
-      zoom: 14.96,
-      pitch: 60.0,
-      bearing: -146.41,
-      duration: 2000,
-    },
-  });
+  const [location, setLocation] = useState(chapterMap.One().location);
 
   const [layers, setLayers] = useState(chapterMap.One().layers);
 
@@ -66,7 +45,7 @@ export default function ScrollTriggerSubsidioSPPO() {
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState(0);
-  // console.log(chapterNumberMap, layers);
+  // console.log(chapterNumberMap);
   useEffect(() => {
     switch (chapterNumberMap) {
       case 1:
@@ -118,122 +97,110 @@ export default function ScrollTriggerSubsidioSPPO() {
   const vw = (coef) => window.innerWidth * (coef / 100);
 
   useEffect(() => {
-    gsap.defaults({
-      ease: "none",
-    });
-
-    gsap.from("#chapter-1", {
-      scrollTrigger: {
-        trigger: "#chapter-1",
-        start: "top center",
-        end: "bottom center",
-        // id: ,
-        onEnter: () => {
-          setChapterNumberMap(1);
-        },
-        onEnterBack: () => {
-          setChapterNumberMap(1);
-        },
+    ScrollTrigger.create({
+      trigger: "#chapter-1",
+      start: "top center",
+      end: "bottom center",
+      markers: true,
+      scrub: true,
+      // toggleActions: "play reverse play reverse",
+      onEnter: () => {
+        setChapterNumberMap(1);
       },
-    });
-    gsap.from("#chapter-2", {
-      scrollTrigger: {
-        trigger: "#chapter-2",
-        start: "top center",
-        end: "bottom center",
-        // id: ,
-        markers: true,
-        onEnter: () => {
-          setChapterNumberMap(2);
-        },
-        onEnterBack: () => {
-          setChapterNumberMap(2);
-        },
-      },
-    });
-    gsap.from("#chapter-3", {
-      scrollTrigger: {
-        trigger: "#chapter-3",
-        start: "top center",
-        end: "bottom center",
-        // id: ,
-        markers: true,
-        onEnter: () => {
-          setChapterNumberMap(3);
-        },
-        onEnterBack: () => {
-          setChapterNumberMap(3);
-        },
-      },
-    });
-    gsap.from("#chapter-4", {
-      scrollTrigger: {
-        trigger: "#chapter-4",
-        start: "top center",
-        end: "bottom center",
-        // id: ,
-        markers: true,
-        onEnter: () => {
-          setChapterNumberMap(4);
-        },
-        onEnterBack: () => {
-          setChapterNumberMap(4);
-        },
-      },
-    });
-    gsap.from("#chapter-5", {
-      scrollTrigger: {
-        trigger: "#chapter-5",
-        start: "top center",
-        end: "bottom center",
-        // id: ,
-        markers: true,
-        onEnter: () => {
-          setChapterNumberMap(5);
-        },
-        onEnterBack: () => {
-          setChapterNumberMap(5);
-        },
+      onEnterBack: () => {
+        setChapterNumberMap(1);
       },
     });
 
-    const tl6 = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#chapter-6",
-        start: "top center",
-        end: "bottom center",
-        // toggleActions: "play reverse play reverse",
-        scrub: true,
-        // id: ,
-        markers: true,
-        onEnter: () => {
-          setChapterNumberMap(6);
-        },
-        onEnterBack: () => {
-          setChapterNumberMap(6);
-        },
+    ScrollTrigger.create({
+      trigger: "#chapter-2",
+      start: "top center",
+      end: "bottom center",
+      markers: true,
+      scrub: true,
+      // toggleActions: "play reverse play reverse",
+      onEnter: () => {
+        setChapterNumberMap(2);
+      },
+      onEnterBack: () => {
+        setChapterNumberMap(2);
       },
     });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-3",
+      start: "top center",
+      end: "bottom center",
+      markers: true,
+      scrub: true,
+      // toggleActions: "play reverse play reverse",
+      onEnter: () => {
+        setChapterNumberMap(3);
+      },
+      onEnterBack: () => {
+        setChapterNumberMap(3);
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-4",
+      start: "top center",
+      end: "bottom center",
+      markers: true,
+      scrub: true,
+      // toggleActions: "play reverse play reverse",
+      onEnter: () => {
+        setChapterNumberMap(4);
+      },
+      onEnterBack: () => {
+        setChapterNumberMap(4);
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-5",
+      start: "top center",
+      end: "bottom center",
+      markers: true,
+      scrub: true,
+      // toggleActions: "play reverse play reverse",
+      onEnter: () => {
+        setChapterNumberMap(5);
+      },
+      onEnterBack: () => {
+        setChapterNumberMap(5);
+      },
+    });
+    const tl6 = gsap.timeline();
     tl6
       .set("#chapter-6", { opacity: 0 })
       .to("#chapter-6", { opacity: 0, duration: 0.1 })
       .to("#chapter-6", { opacity: 1, duration: 0.1 })
-      .to("#chapter-6", { opacity: 1, duration: 0.2 })
-      .to("#chapter-6", { opacity: 0, duration: 0.4 });
-    // .to("#chapter-6", { opacity: 0, duration: 0.33 });
+      .to("#chapter-6", { opacity: 0, duration: 0.1 });
 
     ScrollTrigger.create({
+      animation: tl6,
       trigger: "#chapter-6",
       start: "top center",
       end: "bottom center",
+      markers: true,
+      scrub: true,
       // toggleActions: "play reverse play reverse",
-      // id: ,
+      onEnter: () => {
+        setChapterNumberMap(6);
+      },
+      onEnterBack: () => {
+        setChapterNumberMap(6);
+      },
+
       onUpdate: (self) => console.log("progress:", self.progress),
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-7",
       start: "top center",
+      scrub: true,
+      markers: true, // id: ,
       end: "bottom center",
       // toggleActions: "play reverse play reverse",
       // id: ,
@@ -265,10 +232,10 @@ export default function ScrollTriggerSubsidioSPPO() {
         animationSpeed={1}
       />
       <chapterDiv.One id={"chapter-1"} />
-      {/* <chapterDiv.Two id={"chapter-2"} />
+      <chapterDiv.Two id={"chapter-2"} />
       <chapterDiv.Three id={"chapter-3"} />
       <chapterDiv.Four id={"chapter-4"} />
-      <chapterDiv.Five id={"chapter-5"} /> */}
+      <chapterDiv.Five id={"chapter-5"} />
       <chapterDiv.Six id={"chapter-6"} />
       <chapterDiv.Seven id={"chapter-7"} />
     </>
