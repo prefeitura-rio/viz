@@ -113,67 +113,60 @@ export default function ScrollTriggerSubsidioSPPO() {
       },
     });
 
-    // ScrollTrigger.create({
-    //   trigger: "#chapter-2",
-    //   onToggle: () => {
-    //     setChapterNumberMap(2);
-    //   },
-    // });
-
-    // ScrollTrigger.create({
-    //   trigger: "#chapter-3",
-    //   onToggle: () => {
-    //     setChapterNumberMap(3);
-    //   },
-    // });
-
-    // ScrollTrigger.create({
-    //   trigger: "#chapter-4",
-    //   onToggle: () => {
-    //     setChapterNumberMap(4);
-    //   },
-    // });
-
-    // ScrollTrigger.create({
-    //   trigger: "#chapter-5",
-    //   onToggle: () => {
-    //     setChapterNumberMap(5);
-    //   },
-    // });
-
-    // const tl6 = gsap.timeline();
-    // tl6
-    //   .set("#chapter-6", { opacity: 0, x: -window.innerWidth })
-    //   .to("#chapter-6", { opacity: 0, duration: 10 })
-    //   .to("#chapter-6", { opacity: 1, duration: 30, x: 0 })
-    //   .to("#chapter-6", { opacity: 1, duration: 20 })
-    //   .to("#chapter-6", { opacity: 0, duration: 30, x: window.innerWidth })
-    //   .to("#chapter-6", { opacity: 0, duration: 10 });
-
-    // ScrollTrigger.create({
-    //   animation: tl6,
-    //   trigger: "#chapter-6",
-    //   onToggle: () => {
-    //     setChapterNumberMap(6);
-    //   },
-    //   onUpdate: (self) => console.log("progress:", self.progress),
-    // });
-    const tl7 = gsap.timeline();
-    tl7
-      .set("#line-chart", { opacity: 0 })
-      .to("#line-chart", { opacity: 1, duration: 0.2 })
-      .to("#line-chart", { opacity: 1, duration: 0.5 });
+    ScrollTrigger.create({
+      trigger: "#chapter-2",
+      onToggle: () => {
+        setChapterNumberMap(2);
+      },
+    });
 
     ScrollTrigger.create({
-      animation: tl7,
+      trigger: "#chapter-3",
+      onToggle: () => {
+        setChapterNumberMap(3);
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-4",
+      onToggle: () => {
+        setChapterNumberMap(4);
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-5",
+      onToggle: () => {
+        setChapterNumberMap(5);
+      },
+    });
+
+    const tl6 = gsap.timeline();
+    tl6
+      .set("#chapter-6", { opacity: 0, x: -window.innerWidth })
+      .to("#chapter-6", { opacity: 0, duration: 10 })
+      .to("#chapter-6", { opacity: 1, duration: 30, x: 0 })
+      .to("#chapter-6", { opacity: 1, duration: 20 })
+      .to("#chapter-6", { opacity: 0, duration: 30, x: window.innerWidth })
+      .to("#chapter-6", { opacity: 0, duration: 10 });
+
+    ScrollTrigger.create({
+      animation: tl6,
+      trigger: "#chapter-6",
+      onToggle: () => {
+        setChapterNumberMap(6);
+      },
+      onUpdate: (self) => console.log("progress:", self.progress),
+    });
+
+    ScrollTrigger.create({
       trigger: "#chapter-7",
       scrub: true,
-      // onUpdate: (self) => {
-      //   if (self.progress > 0.95) {
-      //   } else {
-      //     console.log(animateChart());
-      //   }
-      // },
+      onToggle: (self) => {
+        if (self.progress > 0.0) {
+          animateChart();
+        }
+      },
     });
   }, []);
 
@@ -199,12 +192,12 @@ export default function ScrollTriggerSubsidioSPPO() {
         animationSpeed={1}
       />
       <chapterDiv.One id={"chapter-1"} />
-      {/* <chapterDiv.Two id={"chapter-2"} />
+      <chapterDiv.Two id={"chapter-2"} />
       <chapterDiv.Three id={"chapter-3"} />
       <chapterDiv.Four id={"chapter-4"} />
       <chapterDiv.Five id={"chapter-5"} />
-      <chapterDiv.Six id={"chapter-6"} /> */}
-      <chapterDiv.Seven id={"chapter-7"} />
+      <chapterDiv.Six id={"chapter-6"} />
+      <chapterDiv.Seven id={"chapter-7"} progress={chartProgress} />
     </>
   );
 }
