@@ -17,7 +17,7 @@ export default function ScrollTriggerSubsidioSPPO() {
   const [location, setLocation] = useState(chapterMap.One().location);
 
   const [layers, setLayers] = useState(chapterMap.One().layers);
-  console.log("ChapterLayers", layers);
+  // console.log("ChapterLayers", layers);
 
   const [chartProgress, setChartProgress] = useState(0);
 
@@ -158,7 +158,7 @@ export default function ScrollTriggerSubsidioSPPO() {
       onToggle: () => {
         setChapterNumberMap(6);
       },
-      onUpdate: (self) => console.log("progress:", self.progress),
+      // onUpdate: (self) => console.log("progress:", self.progress),
     });
 
     ScrollTrigger.create({
