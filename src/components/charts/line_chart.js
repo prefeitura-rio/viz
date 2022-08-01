@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import * as d3 from "d3";
 
+// TODO: implement multiple data as input. use a list of lists for that. the current input must also
+// be supported. check if the input is a list of lists or a list of objects for differentiating
+// between the two.
+
 class LineChart extends Component {
   // Construtor: Chamado antes do componente ser montado.
   constructor(props) {
