@@ -19,7 +19,6 @@ export const ChapterOneDiv = styled.div`
   margin-left: -0.75%;
   margin-top: -0.5vh;
 
-  background-color: brown;
   z-index: -1;
   display: grid;
   grid-template-columns: 0.5fr 2fr 0.5fr;
