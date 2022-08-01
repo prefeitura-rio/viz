@@ -58,7 +58,7 @@ export const ChapterTwoDiv = styled.div`
   overflow-x: hidden;
   // width: 100%;
   // opacity: 1;
-  z-index: -1;
+  /* z-index: -1; */
   display: grid;
   grid-template-columns: 0.6fr 0.8fr 2fr 0.6fr;
   grid-template-rows: 0.5fr 1.3fr 0.3fr;
@@ -67,6 +67,6 @@ export const ChapterTwoDiv = styled.div`
     ". . . ."
     ". titulo texto ."
     ". . . .";
-  background-color: rgba(0, 0, 0, 0.93);
+  /* background-color: rgba(0, 0, 0, 0.93); */
   opacity: 1;
 `;

@@ -195,7 +195,7 @@ export default function SubsidioSPPO() {
           width: "100%",
           height: "100vh",
           // maxWidth: "100%",
-          zIndex: "-1",
+          zIndex: "-9999999",
         }}
         animationLoopLength={21600}
         animationSpeed={1}
