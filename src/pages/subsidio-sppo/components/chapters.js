@@ -128,7 +128,7 @@ const IntroText = styled.div`
 export function One(
   props = {
     id: "",
-    ref: null,
+    ref: null
   }
 ) {
   props = setDefaultProps(props);
@@ -154,7 +154,7 @@ export function One(
             fontSize: "1rem",
             fontWeight: "700",
             color: "#ffffff",
-            margin: "4px",
+            margin: "4px"
           }}
           href="http://www.rio.rj.gov.br/web/smtr"
           target="_blank"
@@ -170,7 +170,7 @@ export function One(
 export function Two(
   props = {
     id: "",
-    progress: 0,
+    progress: 0
   }
 ) {
   props = setDefaultProps(props);
@@ -209,7 +209,7 @@ export function Two(
 export function Three(
   props = {
     id: "",
-    ref: null,
+    ref: null
   }
 ) {
   props = setDefaultProps(props);
@@ -227,7 +227,7 @@ export function Three(
 
 export function Four(
   props = {
-    id: "",
+    id: ""
   }
 ) {
   props = setDefaultProps(props);
@@ -246,7 +246,7 @@ export function Four(
 
 export function Five(
   props = {
-    id: "",
+    id: ""
   }
 ) {
   props = setDefaultProps(props);
@@ -266,7 +266,7 @@ export function Five(
 
 export function Six(
   props = {
-    id: "",
+    id: ""
   }
 ) {
   props = setDefaultProps(props);
@@ -281,67 +281,78 @@ export function Six(
     </styles.ChapterGenericDiv>
   );
 }
+const IntroGestaoBG = styled.div`
+  background-color: rgba(0, 0, 0, 1);
+  position: relative;
+  z-index: -2;
+  height: 150vh;
+  width: 101%;
+  margin-left: -0.5%;
+  margin-bottom: -150vh;
+`;
 
 export function Seven(
   props = {
     id: "",
-    progress: 0,
+    progress: 0
   }
 ) {
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterTwoDiv id={props.id}>
-      <IntroTitle id={"intro"}>O fim da Caixa Preta</IntroTitle>
-      <IntroText>
-        Em 2010, a Secretaria Municipal de Transportes do Rio de Janeiro licitou
-        a prestação de serviço de transportes na cidade.{" "}
-        <TextOrange>
-          Com isso, toda a responsabilidade pelo transporte por ônibus ficou com
-          os consórcios.
-        </TextOrange>
-        Isso incluía não só a operação de todas as linhas municipais, como
-        também a fonte de renda do sistema, o Bilhete Único Carioca (BUC).
-        <br />
-        <br />
-        Após anos em vigor, a concessão, entretanto, apresentou problemas: a má
-        gestão dos concessionários com o serviço oferecido e uma grande crise
-        reputacional do sistema, envolvida em diversos escândalos.
-        <br />
-        <br />A falta de transparência da bilhetagem do sistema de bilhete único
-        também era um problema.{" "}
-        <TextOrange>
-          Uma verdadeira caixa-preta era formada com os dados de arrecadação e
-          distribuição dos lucros da bilhetagem.
-        </TextOrange>
-        <br />
-        <br />
-        Com um transporte público sofrido, de ônibus depredados e superlotados,
-        somou-se o fator pandemia e inflação. Historicamente, o número de
-        passageiros já vinha diminuindo. Com a chegada da Covid-19, a situação
-        se agravou.
-        <br />
-        <br />
-        Além disso, o preço do diesel apresentou um aumento de quase 131% em
-        dois anos, segundo dados da Agência Nacional do Petróleo, Gás Natural e
-        Biocombustíveis (ANP). O preço de peças para reposição nos veículos
-        também sofreu inflação, com a desvalorização do real frente a moeda
-        americana. Com isso, as empresas responsáveis pelo transporte optaram
-        por diminuir a frota em lugares que sem muitos passageiros, chegando a
-        cancelar a circulação de algumas linhas.
-      </IntroText>
-    </styles.ChapterTwoDiv>
+    <>
+      <IntroGestaoBG id={"gestao-blur"} />
+      <styles.ChapterTwoDiv id={props.id}>
+        <IntroTitle id={"intro"}>O fim da Caixa Preta</IntroTitle>
+        <IntroText>
+          Em 2010, a Secretaria Municipal de Transportes do Rio de Janeiro
+          licitou a prestação de serviço de transportes na cidade.{" "}
+          <TextOrange>
+            Com isso, toda a responsabilidade pelo transporte por ônibus ficou
+            com os consórcios.
+          </TextOrange>
+          Isso incluía não só a operação de todas as linhas municipais, como
+          também a fonte de renda do sistema, o Bilhete Único Carioca (BUC).
+          <br />
+          <br />
+          Após anos em vigor, a concessão, entretanto, apresentou problemas: a
+          má gestão dos concessionários com o serviço oferecido e uma grande
+          crise reputacional do sistema, envolvida em diversos escândalos.
+          <br />
+          <br />A falta de transparência da bilhetagem do sistema de bilhete
+          único também era um problema.{" "}
+          <TextOrange>
+            Uma verdadeira caixa-preta era formada com os dados de arrecadação e
+            distribuição dos lucros da bilhetagem.
+          </TextOrange>
+          <br />
+          <br />
+          Com um transporte público sofrido, de ônibus depredados e
+          superlotados, somou-se o fator pandemia e inflação. Historicamente, o
+          número de passageiros já vinha diminuindo. Com a chegada da Covid-19,
+          a situação se agravou.
+          <br />
+          <br />
+          Além disso, o preço do diesel apresentou um aumento de quase 131% em
+          dois anos, segundo dados da Agência Nacional do Petróleo, Gás Natural
+          e Biocombustíveis (ANP). O preço de peças para reposição nos veículos
+          também sofreu inflação, com a desvalorização do real frente a moeda
+          americana. Com isso, as empresas responsáveis pelo transporte optaram
+          por diminuir a frota em lugares que sem muitos passageiros, chegando a
+          cancelar a circulação de algumas linhas.
+        </IntroText>
+      </styles.ChapterTwoDiv>
+    </>
   );
 }
 
 export function Eight(
   props = {
     id: "",
-    progress: 0,
+    progress: 0
   }
 ) {
   props = setDefaultProps(props);
-  // console.log(props.progress);
   return (
     <>
       <styles.ChapterLineChart id={props.id}>
@@ -373,9 +384,8 @@ export function Eight(
             { x: 22, y: 484 },
             { x: 23, y: 529 },
             { x: 24, y: 576 },
-            { x: 25, y: 625 },
+            { x: 25, y: 625 }
           ]}
-          progress={props.progress}
         />
       </styles.ChapterLineChart>
     </>
@@ -384,7 +394,7 @@ export function Eight(
 
 const setDefaultProps = (providedProps) => {
   const defaultProps = {
-    id: "",
+    id: ""
   };
 
   return { ...defaultProps, ...providedProps };
