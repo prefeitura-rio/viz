@@ -283,13 +283,8 @@ export function Seven(
   props = setDefaultProps(props);
 
   return (
-<<<<<<< HEAD
-    <styles.ChapterSixDiv id={props.id}>
-      <IntroTitle id={"intro"}>O fim da Caixa Preta</IntroTitle>
-=======
     <styles.ChapterTwoDiv id={props.id}>
-      <IntroTitle id={"intro"}>Fim da Caixa Preta</IntroTitle>
->>>>>>> 8a04ff3ab9428f88753e8fd7af5d657a3afa0c50
+      <IntroTitle id={"intro"}>O fim da Caixa Preta</IntroTitle>
       <IntroText>
         Em 2010, a Secretaria Municipal de Transportes do Rio de Janeiro licitou
         a prestação de serviço de transportes na cidade.{" "}
