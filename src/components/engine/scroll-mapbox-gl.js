@@ -23,7 +23,7 @@ var layerTypes = {
   symbol: ["icon-opacity", "text-opacity"],
   raster: ["raster-opacity"],
   "fill-extrusion": ["fill-extrusion-opacity"],
-  heatmap: ["heatmap-opacity"],
+  heatmap: ["heatmap-opacity"]
 };
 
 export default function ScrollMapboxGL(
@@ -47,7 +47,7 @@ export default function ScrollMapboxGL(
             style: "",
             sectionDuration: "",
             sectionPin: "",
-            sectionOffset: "",
+            sectionOffset: ""
           },
           // textStyle: "",
           sectionDuration: 0,
@@ -60,27 +60,27 @@ export default function ScrollMapboxGL(
             desktop: {
               center: {
                 lat: 0,
-                lon: 0,
+                lon: 0
               },
               zoom: 0,
               bearing: 0,
               pitch: 0,
-              duration: 4000,
+              duration: 4000
             },
             mobile: {
               center: {
                 lat: 0,
-                lon: 0,
+                lon: 0
               },
               zoom: 0,
               bearing: 0,
               pitch: 0,
-              duration: 4000,
-            },
-          },
-        },
-      ],
-    },
+              duration: 4000
+            }
+          }
+        }
+      ]
+    }
   }
 ) {
   /* Map configurations */
@@ -89,7 +89,7 @@ export default function ScrollMapboxGL(
     mapboxAccessToken: props.mapboxAccessToken,
     mapStyle: props.mapStyle,
     interactive: props.interactive,
-    style: props.mapCSS,
+    style: props.mapCSS
   });
 
   /* Animation stuff */
@@ -124,7 +124,7 @@ export default function ScrollMapboxGL(
 
   function setOpacityDeckglLayer(mapLayer, opacity) {
     mapLayer?.implementation.setProps({
-      opacity: opacity,
+      opacity: opacity
     });
   }
 
@@ -247,14 +247,14 @@ export default function ScrollMapboxGL(
                 longitude: props.story.chapters[0].map.mobile.center.lon,
                 zoom: props.story.chapters[0].map.mobile.zoom,
                 bearing: props.story.chapters[0].map.mobile.bearing,
-                pitch: props.story.chapters[0].map.mobile.pitch,
+                pitch: props.story.chapters[0].map.mobile.pitch
               }
             : {
                 latitude: props.story.chapters[0].map.desktop.center.lat,
                 longitude: props.story.chapters[0].map.desktop.center.lon,
                 zoom: props.story.chapters[0].map.desktop.zoom,
                 bearing: props.story.chapters[0].map.desktop.bearing,
-                pitch: props.story.chapters[0].map.desktop.pitch,
+                pitch: props.story.chapters[0].map.desktop.pitch
               }
         }
         {...settings}
@@ -267,7 +267,7 @@ export default function ScrollMapboxGL(
               target.addLayer(layerDict.layer);
             }
           });
-          showLayers();
+          // showLayers();
         }}
         onRender={({ target }) => {
           layers.forEach((layerDict) => {
@@ -275,7 +275,7 @@ export default function ScrollMapboxGL(
               const currentLayer = target.getLayer(layerDict.layer.id);
               if (currentLayer) {
                 currentLayer.implementation.setProps({
-                  currentTime: time,
+                  currentTime: time
                 });
               }
             }
@@ -318,24 +318,24 @@ export default function ScrollMapboxGL(
                         flyToNextStep({
                           center: [
                             chapter.map.mobile.center.lon,
-                            chapter.map.mobile.center.lat,
+                            chapter.map.mobile.center.lat
                           ],
                           zoom: chapter.map.mobile.zoom,
                           bearing: chapter.map.mobile.bearing,
                           pitch: chapter.map.mobile.pitch,
-                          duration: chapter.map.mobile.duration,
+                          duration: chapter.map.mobile.duration
                         })}
                       {event.type === "enter" &&
                         !isMobile &&
                         flyToNextStep({
                           center: [
                             chapter.map.desktop.center.lon,
-                            chapter.map.desktop.center.lat,
+                            chapter.map.desktop.center.lat
                           ],
                           zoom: chapter.map.desktop.zoom,
                           bearing: chapter.map.desktop.bearing,
                           pitch: chapter.map.desktop.pitch,
-                          duration: chapter.map.desktop.duration,
+                          duration: chapter.map.desktop.duration
                         })}
                       {event.type === "enter" && setLayerOpacity(index)}
                     </div>
@@ -372,7 +372,7 @@ export default function ScrollMapboxGL(
                   {(progress, event) => (
                     <div
                       style={{
-                        backgroundColor: "#e56399",
+                        backgroundColor: "#e56399"
                         // display: "inline-block",
                         // textAlign: "center",
                         // position: "absolute",
@@ -387,7 +387,7 @@ export default function ScrollMapboxGL(
                           return (
                             <div
                               style={{
-                                backgroundColor: "#e2856e",
+                                backgroundColor: "#e2856e"
                                 // display: "inline-block",
                                 // textAlign: "center",
                                 // position: "absolute",
