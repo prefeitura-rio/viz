@@ -168,7 +168,7 @@ export function Two(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterSixDiv id={props.id}>
+    <styles.ChapterTwoDiv id={props.id}>
       <IntroTitle id={"intro"}>Introdução</IntroTitle>
       <IntroText>
         Os cariocas sabem bem quais os problemas enfrentados todos os dias no
@@ -194,7 +194,7 @@ export function Two(
         <br />
         Nesta página explicaremos como a Prefeitura fará isso. <br />
       </IntroText>
-    </styles.ChapterSixDiv>
+    </styles.ChapterTwoDiv>
   );
 }
 
@@ -283,8 +283,13 @@ export function Seven(
   props = setDefaultProps(props);
 
   return (
+<<<<<<< HEAD
     <styles.ChapterSixDiv id={props.id}>
       <IntroTitle id={"intro"}>O fim da Caixa Preta</IntroTitle>
+=======
+    <styles.ChapterTwoDiv id={props.id}>
+      <IntroTitle id={"intro"}>Fim da Caixa Preta</IntroTitle>
+>>>>>>> 8a04ff3ab9428f88753e8fd7af5d657a3afa0c50
       <IntroText>
         Em 2010, a Secretaria Municipal de Transportes do Rio de Janeiro licitou
         a prestação de serviço de transportes na cidade.{" "}
@@ -322,7 +327,7 @@ export function Seven(
         por diminuir a frota em lugares que sem muitos passageiros, chegando a
         cancelar a circulação de algumas linhas.
       </IntroText>
-    </styles.ChapterSixDiv>
+    </styles.ChapterTwoDiv>
   );
 }
 

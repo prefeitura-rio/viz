@@ -15,7 +15,7 @@ import TestMap from "./pages/sandbox/test_map";
 
 function App() {
   return (
-    <div>
+    <div id={"main"}>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
