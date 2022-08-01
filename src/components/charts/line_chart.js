@@ -6,7 +6,7 @@ class LineChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      maxIndex: this.props.data.length * this.props.progress,
+      maxIndex: this.props.data.length * this.props.progress
     };
     this.myRef = React.createRef();
   }
@@ -17,9 +17,9 @@ class LineChart extends Component {
 
   drawGraph = async () => {
     // set the dimensions and margins of the graph
-    var margin = { top: 20, right: 20, bottom: 50, left: 70 };
-    var width = 960 - margin.left - margin.right;
-    var height = 500 - margin.top - margin.bottom;
+    var margin = this.props.style.margin;
+    var width = this.props.style.width - margin.left - margin.right;
+    var height = this.props.style.height - margin.top - margin.bottom;
 
     var svg = d3.select(this.myRef.current).select("svg");
     if (!svg.empty()) {
@@ -39,22 +39,41 @@ class LineChart extends Component {
     var data = this.props.data.slice(0, this.state.maxIndex);
 
     // Add X axis and Y axis
-    var x = d3
-      .scaleLinear()
-      .range([0, width])
-      .domain(
-        d3.extent(this.props.data, (d) => {
-          return d.x;
-        })
-      );
-    var y = d3
-      .scaleLinear()
-      .range([height, 0])
-      .domain(
-        d3.extent(this.props.data, (d) => {
-          return d.y;
-        })
-      );
+    if (this.props.pinnedScale) {
+      var x = d3
+        .scaleLinear()
+        .range([0, width])
+        .domain(
+          d3.extent(this.props.data, (d) => {
+            return d.x;
+          })
+        );
+      var y = d3
+        .scaleLinear()
+        .range([height, 0])
+        .domain(
+          d3.extent(this.props.data, (d) => {
+            return d.y;
+          })
+        );
+    } else {
+      var x = d3
+        .scaleLinear()
+        .range([0, width])
+        .domain(
+          d3.extent(data, (d) => {
+            return d.x;
+          })
+        );
+      var y = d3
+        .scaleLinear()
+        .range([height, 0])
+        .domain(
+          d3.extent(data, (d) => {
+            return d.y;
+          })
+        );
+    }
     svg
       .append("g")
       .attr("transform", `translate(0, ${height})`)
@@ -76,8 +95,8 @@ class LineChart extends Component {
       .data([data])
       .attr("class", "line")
       .attr("fill", "none")
-      .attr("stroke", "steelblue")
-      .attr("stroke-width", 1.5)
+      .attr("stroke", this.props.style.lineColor)
+      .attr("stroke-width", this.props.style.lineWidth)
       .attr("d", valueLine);
   };
   // Chamado após o componente ser montado.
@@ -89,7 +108,7 @@ class LineChart extends Component {
     if (prevProps.progress !== this.props.progress) {
       if (this.getMaxIndex(this.props.progress) !== this.state.maxIndex) {
         this.setState({
-          maxIndex: this.getMaxIndex(this.props.progress),
+          maxIndex: this.getMaxIndex(this.props.progress)
         });
       }
     } else if (prevProps.data !== this.props.data) {
@@ -109,6 +128,19 @@ LineChart.defaultProps = {
   data: [],
   progress: 1,
   id: "line-chart",
+  pinnedScale: true,
+  style: {
+    margin: {
+      top: 20,
+      right: 20,
+      bottom: 50,
+      left: 70
+    },
+    width: 960,
+    height: 500,
+    lineColor: "steelblue",
+    lineWidth: 1.5
+  }
 };
 
 export default LineChart;
