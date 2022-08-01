@@ -182,7 +182,7 @@ export default function SubsidioSPPO() {
   return (
     <>
       <MultilayerMap
-        interactive={false}
+        interactive={true}
         scrollZoom={true}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
         mapStyle="mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b"

@@ -51,9 +51,9 @@ const ContainerCard = styled.div`
   margin: auto;
   width: 40%;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.92);
+  background-color: rgba(20, 19, 18, 0.85);
   opacity: 1;
-  border-radius: 15px;
+  border-radius: 10px;
 `;
 
 const TextCard = styled.div`
@@ -83,7 +83,15 @@ const TextBlue = styled.div`
 `;
 
 const TextOrange = styled.div`
-  background: #c67121;
+  background: #c36a2d;
+  color: #fff;
+  display: inline;
+  padding: 1px 8px 1px 8px;
+  margin: 2px;
+`;
+
+const TextOrange1 = styled.div`
+  background: #c4a011;
   color: #fff;
   display: inline;
   padding: 1px 8px 1px 8px;
@@ -227,9 +235,9 @@ export function Four(
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <TextCard>
-          As <TextOrange>linhas</TextOrange> 870, 871 voltaram em{" "}
-          <TextRed>sepetiba,</TextRed>
-          conectando o bairro com o BRT, etc…
+          As linhas <TextOrange> 870,</TextOrange> e{" "}
+          <TextOrange1>871</TextOrange1> voltaram em sepetiba, conectando o
+          bairro com o BRT, etc…
         </TextCard>
       </ContainerCard>
     </styles.ChapterGenericDiv>

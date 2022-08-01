@@ -89,11 +89,9 @@ export const Three = () => {
     layers: [
       {
         layerType: "mapbox-style",
-        layer: { id: "sepetiba" },
-      },
-      {
-        layerType: "mapbox-style",
-        layer: { id: "sepetiba-linha" },
+        layer: {
+          id: "sepetiba",
+        },
       },
     ],
   };
@@ -129,21 +127,33 @@ export const Four = () => {
         layer: { id: "sepetiba" },
       },
       {
-        layerType: "mapbox-style",
-        layer: { id: "sepetiba-linha" },
+        layerType: "mapbox",
+        layer: {
+          ...{
+            id: "linha870-orange",
+            type: "line",
+            source: "composite",
+            "source-layer": "linha870-byrh8i",
+            paint: {
+              "line-color": "#C36A2D",
+              "line-opacity": 0,
+              "line-width": 2,
+            },
+          },
+        },
       },
       {
         layerType: "mapbox",
         layer: {
           ...{
-            id: "linha-sepetiba-blue",
+            id: "linha871-orange1",
             type: "line",
             source: "composite",
-            "source-layer": "linha-sepetiba-30dnx7",
+            "source-layer": "linha871-9h5hot",
             paint: {
-              "line-color": "#f4902c",
+              "line-color": "#c4a011",
+              "line-opacity": 0,
               "line-width": 2,
-              "line-opacity": 1,
             },
           },
         },
@@ -194,7 +204,7 @@ export const Five = () => {
             source: "composite",
             "source-layer": "linhas-novas-9sfk6t",
             paint: {
-              "line-color": "#c67121",
+              "line-color": "#C36A2D",
               "line-opacity": 0,
               "line-width": 1.3,
             },
@@ -250,7 +260,7 @@ export const Six = () => {
             source: "composite",
             "source-layer": "linhas-novas-9sfk6t",
             paint: {
-              "line-color": "#c67121",
+              "line-color": "#C36A2D",
               "line-opacity": 0,
               "line-width": 1.3,
             },
