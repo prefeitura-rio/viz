@@ -5,7 +5,7 @@ const TRIPS = require("./data/trips.json");
 import Map, { Source, Layer } from "react-map-gl";
 // For some custom layers
 import { buildings3d } from "../../components/layers/buildings3d";
-import LINHAS_ANTIGAS from "./data/linhas_antigas.json";
+// import LINHAS_ANTIGAS from "./data/linhas_antigas.json";
 
 export const One = () => {
   return {
@@ -51,26 +51,9 @@ export const One = () => {
         }),
       },
       {
-        layerType: "mapbox",
-        layer: {
-          ...{
-            id: "building-extrusion-red",
-            type: "fill-extrusion",
-            source: "composite",
-            "source-layer": "building",
-            minzoom: 15,
-            filter: [
-              "all",
-              ["==", ["get", "underground"], "false"],
-              ["!=", ["get", "extrude"], "false"],
-            ],
-            paint: {
-              "fill-extrusion-color": "hsl(0, 56%, 35%)",
-            },
-          },
-        },
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion-red" },
       },
-
       {
         layerType: "mapbox-style",
         layer: { id: "building-extrusion" },
@@ -247,17 +230,17 @@ export const Five = () => {
       },
     },
     layers: [
-      {
-        layerType: "deckgl",
-        layer: new MapboxLayer({
-          id: "deck-linhas-antigas",
-          data: LINHAS_ANTIGAS,
-          type: GeoJsonLayer,
-          opacity: 1,
-          getLineColor: [204, 136, 0],
-          getLineWidth: 60,
-        }),
-      },
+      // {
+      //   layerType: "deckgl",
+      //   layer: new MapboxLayer({
+      //     id: "deck-linhas-antigas",
+      //     data: LINHAS_ANTIGAS,
+      //     type: GeoJsonLayer,
+      //     opacity: 1,
+      //     getLineColor: [0, 45, 90],
+      //     getLineWidth: 200,
+      //   }),
+      // },
       {
         layerType: "mapbox",
         layer: {

@@ -14,8 +14,11 @@ export const TextChapterIndicator = styled.div`
 `;
 
 export const ChapterOneDiv = styled.div`
-  height: 100vh;
-  width: 100%;
+  width: 101.5%;
+  height: 102vh;
+  margin-left: -0.75%;
+  margin-top: -0.5vh;
+
   z-index: -1;
   display: grid;
   grid-template-columns: 0.5fr 2fr 0.5fr;
@@ -51,6 +54,8 @@ export const ChapterLineChart = styled.div`
 
 export const ChapterSixDiv = styled.div`
   height: 150vh;
+  width: 101.5%;
+  margin-left: -0.75%;
   // width: 100%;
   // opacity: 1;
   z-index: -1;

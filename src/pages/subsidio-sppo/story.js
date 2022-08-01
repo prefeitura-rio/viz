@@ -21,17 +21,6 @@ export default function SubsidioSPPO() {
 
   const [chartProgress, setChartProgress] = useState(0);
 
-  const animateChart = () => {
-    setChartProgress(0);
-    var growProgress = setInterval(() => {
-      setChartProgress((progress) => progress + 0.01);
-    }, 20); // increase 1% every 20ms
-    setTimeout(() => {
-      clearInterval(growProgress);
-    }, 5000); // 5 seconds (make sure it's over)
-  };
-  const chartRef = useRef(null);
-
   const setPosition = (position) => {
     const desktopPosition = position.desktop ? position.desktop : position;
     const mobilePosition = position.mobile ? position.mobile : position;
@@ -166,10 +155,8 @@ export default function SubsidioSPPO() {
     ScrollTrigger.create({
       trigger: "#chapter-7",
       scrub: true,
-      onToggle: (self) => {
-        if (self.progress > 0.0) {
-          animateChart();
-        }
+      onUpdate: (self) => {
+        setChartProgress(self.progress + 0.47);
       },
     });
   }, []);
@@ -187,7 +174,7 @@ export default function SubsidioSPPO() {
           position: "fixed",
           top: "0",
           left: "0",
-          width: "100vw",
+          width: "100%",
           height: "100vh",
           // maxWidth: "100%",
           zIndex: "-1",
