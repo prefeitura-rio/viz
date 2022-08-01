@@ -61,15 +61,12 @@ export const ChapterSixDiv = styled.div`
   z-index: -1;
   display: grid;
   grid-template-columns: 0.6fr 0.8fr 2fr 0.6fr;
-  grid-template-rows: 1.1fr 0.5fr 2.2fr 1fr;
-  gap: 0px 20px;
+  grid-template-rows: 0.5fr 1.3fr 0.3fr;
+  gap: 0px 50px;
   grid-template-areas:
     ". . . ."
     ". titulo texto ."
-    ". . texto ."
     ". . . .";
-  justify-items: center;
-  align-items: top;
   background-color: rgba(0, 0, 0, 0.93);
   opacity: 1;
 `;

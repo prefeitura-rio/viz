@@ -69,44 +69,35 @@ const TextCard = styled.div`
 const TextRed = styled.div`
   background: #be5b5b;
   color: #fff;
-  display: inline-block;
+  display: inline;
   padding: 1px 8px 1px 8px;
-  margin: 3px;
+  margin: 2px;
 `;
 
 const TextBlue = styled.div`
   background: #18b4c9;
   color: #fff;
-  display: inline-block;
+  display: inline;
   padding: 1px 8px 1px 8px;
-  margin: 3px;
-`;
-
-const TextOrange1 = styled.div`
-  background: #cc8800;
-  color: #fff;
-  display: inline-block;
-  padding: 1px 8px 1px 8px;
-  margin: 3px;
+  margin: 2px;
 `;
 
 const TextOrange = styled.div`
-  background: #f4902c;
+  background: #c67121;
   color: #fff;
-  display: inline-block;
+  display: inline;
   padding: 1px 8px 1px 8px;
-  margin: 3px;
+  margin: 2px;
 `;
 
 const IntroTitle = styled.div`
   grid-area: titulo;
-  margin: auto;
   color: #ffffff;
   font-family: "Redaction", sans-serif;
   font-weight: 700;
   font-size: 2.7rem;
   line-height: 1;
-  text-align: left;
+  text-align: right;
   opacity: 1;
 `;
 
@@ -117,7 +108,6 @@ const IntroText = styled.div`
   // align-items: start;
   text-align: justify;
   margin-bottom: 30%;
-  margin-top: 5%;
   vertical-align: middle;
   // margin: auto;
   color: #dbdbdb;
@@ -187,8 +177,12 @@ export function Two(
         <br />
         Uma série de fatores levou a este colapso, o que só resultou no
         sofrimento da população que depende do transporte público da cidade para
-        se locomover. Por isso, a Prefeitura vai regularizar as linhas
-        operantes, retomar as inoperantes e implementar serviços noturnos.
+        se locomover. Por isso,{" "}
+        <TextOrange>
+          a Prefeitura vai regularizar as linhas operantes,
+        </TextOrange>{" "}
+        <TextOrange>retomar as inoperantes</TextOrange> e{" "}
+        <TextOrange>implementar serviços noturnos.</TextOrange>
         <br />
         <br />
         Por meio de um acordo judicial, estabelecido entre a Prefeitura,
@@ -233,7 +227,7 @@ export function Four(
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <TextCard>
-          As <TextBlue>linhas</TextBlue> 870, 871 voltaram em{" "}
+          As <TextOrange>linhas</TextOrange> 870, 871 voltaram em{" "}
           <TextRed>sepetiba,</TextRed>
           conectando o bairro com o BRT, etc…
         </TextCard>
@@ -253,7 +247,7 @@ export function Five(
       <ContainerCard>
         <TextCard>
           Outros <TextRed>bairros</TextRed> já estão vendo suas{" "}
-          <TextBlue>linhas</TextBlue> voltarem. Junto com as X linhas que já
+          <TextOrange>linhas</TextOrange> voltarem. Junto com as X linhas que já
           existiam, as 39 linhas estão voltando, completando o sistema viário da
           cidade.
         </TextCard>
@@ -272,8 +266,8 @@ export function Six(
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <TextCard>
-          Aqui você vai ver as <TextBlue>linhas novas</TextBlue> e as{" "}
-          <TextOrange1>antigas linhas.</TextOrange1>
+          Aqui você vai ver as <TextOrange>linhas novas</TextOrange> e as{" "}
+          <TextBlue>antigas linhas.</TextBlue>
         </TextCard>
       </ContainerCard>
     </styles.ChapterGenericDiv>
@@ -290,26 +284,43 @@ export function Seven(
 
   return (
     <styles.ChapterSixDiv id={props.id}>
-      <IntroTitle id={"intro"}>Fim da Caixa Preta</IntroTitle>
+      <IntroTitle id={"intro"}>O fim da Caixa Preta</IntroTitle>
       <IntroText>
-        Os cariocas sabem bem quais os problemas enfrentados todos os dias no
-        transporte público da cidade do Rio de Janeiro. E é preciso reconhecer
-        que o sistema por ônibus está ruim e precisa de ajuda. <br />
+        Em 2010, a Secretaria Municipal de Transportes do Rio de Janeiro licitou
+        a prestação de serviço de transportes na cidade.{" "}
+        <TextOrange>
+          Com isso, toda a responsabilidade pelo transporte por ônibus ficou com
+          os consórcios.
+        </TextOrange>
+        Isso incluía não só a operação de todas as linhas municipais, como
+        também a fonte de renda do sistema, o Bilhete Único Carioca (BUC).
         <br />
-        Uma série de fatores levou a este colapso, o que só resultou no
-        sofrimento da população que depende do transporte público da cidade para
-        se locomover. Por isso, a Prefeitura vai regularizar as linhas
-        operantes, retomar as inoperantes e implementar serviços noturnos.
+        <br />
+        Após anos em vigor, a concessão, entretanto, apresentou problemas: a má
+        gestão dos concessionários com o serviço oferecido e uma grande crise
+        reputacional do sistema, envolvida em diversos escândalos.
+        <br />
+        <br />A falta de transparência da bilhetagem do sistema de bilhete único
+        também era um problema.{" "}
+        <TextOrange>
+          Uma verdadeira caixa-preta era formada com os dados de arrecadação e
+          distribuição dos lucros da bilhetagem.
+        </TextOrange>
         <br />
         <br />
-        Por meio de um acordo judicial, estabelecido entre a Prefeitura,
-        consórcios e o Ministério Público, linhas de ônibus serão retomadas e
-        criadas na capital fluminense. A partir de agora, o transporte público
-        por ônibus será subsidiado pelo município. As empresas, além da tarifa
-        de R$ 4,05, vão receber um valor adicional pelo serviço efetivamente
-        prestado com base no quilômetro rodado. <br />
+        Com um transporte público sofrido, de ônibus depredados e superlotados,
+        somou-se o fator pandemia e inflação. Historicamente, o número de
+        passageiros já vinha diminuindo. Com a chegada da Covid-19, a situação
+        se agravou.
         <br />
-        Nesta página explicaremos como a Prefeitura fará isso. <br />
+        <br />
+        Além disso, o preço do diesel apresentou um aumento de quase 131% em
+        dois anos, segundo dados da Agência Nacional do Petróleo, Gás Natural e
+        Biocombustíveis (ANP). O preço de peças para reposição nos veículos
+        também sofreu inflação, com a desvalorização do real frente a moeda
+        americana. Com isso, as empresas responsáveis pelo transporte optaram
+        por diminuir a frota em lugares que sem muitos passageiros, chegando a
+        cancelar a circulação de algumas linhas.
       </IntroText>
     </styles.ChapterSixDiv>
   );

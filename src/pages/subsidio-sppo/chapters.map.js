@@ -141,7 +141,7 @@ export const Four = () => {
             source: "composite",
             "source-layer": "linha-sepetiba-30dnx7",
             paint: {
-              "line-color": "#18b4c9",
+              "line-color": "#f4902c",
               "line-width": 2,
               "line-opacity": 1,
             },
@@ -194,7 +194,7 @@ export const Five = () => {
             source: "composite",
             "source-layer": "linhas-novas-9sfk6t",
             paint: {
-              "line-color": "#18b4c9",
+              "line-color": "#c67121",
               "line-opacity": 0,
               "line-width": 1.3,
             },
@@ -250,7 +250,7 @@ export const Six = () => {
             source: "composite",
             "source-layer": "linhas-novas-9sfk6t",
             paint: {
-              "line-color": "#18b4c9",
+              "line-color": "#c67121",
               "line-opacity": 0,
               "line-width": 1.3,
             },
