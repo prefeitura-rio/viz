@@ -178,7 +178,7 @@ export function Two(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterSixDiv id={props.id}>
+    <styles.ChapterTwoDiv id={props.id}>
       <IntroTitle id={"intro"}>Introdução</IntroTitle>
       <IntroText>
         Os cariocas sabem bem quais os problemas enfrentados todos os dias no
@@ -200,7 +200,7 @@ export function Two(
         <br />
         Nesta página explicaremos como a Prefeitura fará isso. <br />
       </IntroText>
-    </styles.ChapterSixDiv>
+    </styles.ChapterTwoDiv>
   );
 }
 
@@ -289,7 +289,7 @@ export function Seven(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterSixDiv id={props.id}>
+    <styles.ChapterTwoDiv id={props.id}>
       <IntroTitle id={"intro"}>Fim da Caixa Preta</IntroTitle>
       <IntroText>
         Os cariocas sabem bem quais os problemas enfrentados todos os dias no
@@ -311,7 +311,7 @@ export function Seven(
         <br />
         Nesta página explicaremos como a Prefeitura fará isso. <br />
       </IntroText>
-    </styles.ChapterSixDiv>
+    </styles.ChapterTwoDiv>
   );
 }
 

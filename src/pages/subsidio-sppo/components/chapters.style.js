@@ -52,10 +52,11 @@ export const ChapterLineChart = styled.div`
   align-items: center;
 `;
 
-export const ChapterSixDiv = styled.div`
+export const ChapterTwoDiv = styled.div`
   height: 150vh;
   width: 101.5%;
   margin-left: -0.75%;
+  overflow-x: hidden;
   // width: 100%;
   // opacity: 1;
   z-index: -1;
