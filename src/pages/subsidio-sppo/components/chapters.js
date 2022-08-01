@@ -82,8 +82,8 @@ const TextBlue = styled.div`
   margin: 3px;
 `;
 
-const TextLightBlue = styled.div`
-  background: #002d5a;
+const TextOrange1 = styled.div`
+  background: #cc8800;
   color: #fff;
   display: inline-block;
   padding: 1px 8px 1px 8px;
@@ -238,7 +238,7 @@ export function Five(
       <ContainerCard>
         <TextCard>
           Aqui você vai ver as <TextBlue>linhas novas</TextBlue> e as{" "}
-          <TextLightBlue>antigas linhas.</TextLightBlue>
+          <TextOrange1>antigas linhas.</TextOrange1>
         </TextCard>
       </ContainerCard>
     </styles.ChapterGenericDiv>

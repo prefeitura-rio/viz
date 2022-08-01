@@ -139,6 +139,7 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       trigger: "#chapter-5",
+      pin: ".pin",
       onToggle: () => {
         setChapterNumberMap(5);
       },
@@ -146,12 +147,12 @@ export default function SubsidioSPPO() {
 
     const tl6 = gsap.timeline();
     tl6
-      .set("#chapter-6", { opacity: 0, x: -window.innerWidth })
+      .set("#chapter-6", { opacity: 0 })
+      .to("#chapter-6", { opacity: 0, duration: 30 })
+      .to("#chapter-6", { opacity: 1, duration: 10 })
+      .to("#chapter-6", { opacity: 1, duration: 12 })
       .to("#chapter-6", { opacity: 0, duration: 10 })
-      .to("#chapter-6", { opacity: 1, duration: 30, x: 0 })
-      .to("#chapter-6", { opacity: 1, duration: 20 })
-      .to("#chapter-6", { opacity: 0, duration: 30, x: window.innerWidth })
-      .to("#chapter-6", { opacity: 0, duration: 10 });
+      .to("#chapter-6", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl6,

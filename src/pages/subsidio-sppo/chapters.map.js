@@ -213,7 +213,7 @@ export const Four = () => {
             paint: {
               "line-color": "#18b4c9",
               "line-opacity": 0,
-              "line-width": 1,
+              "line-width": 1.3,
             },
           },
         },
@@ -254,8 +254,8 @@ export const Five = () => {
           data: LINHAS_ANTIGAS,
           type: GeoJsonLayer,
           opacity: 1,
-          getLineColor: [0, 45, 90],
-          getLineWidth: 200,
+          getLineColor: [204, 136, 0],
+          getLineWidth: 60,
         }),
       },
       {
@@ -269,7 +269,7 @@ export const Five = () => {
             paint: {
               "line-color": "#18b4c9",
               "line-opacity": 0,
-              "line-width": 2,
+              "line-width": 1.3,
             },
           },
         },
