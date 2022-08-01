@@ -67,6 +67,6 @@ export const ChapterTwoDiv = styled.div`
     ". . . ."
     ". titulo texto ."
     ". . . .";
-  /* background-color: rgba(0, 0, 0, 0.93); */
+  background-color: rgba(0, 0, 0, 0.93);
   opacity: 1;
 `;
