@@ -172,82 +172,6 @@ export function One(
 export function Two(
   props = {
     id: "",
-    ref: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
-      <ContainerCard>
-        <TextCard>
-          As mudanças começaram nos bairros que precisavam mais de transporte.
-          <TextRed>Sepetiba,</TextRed> viu o retorno de suas linhas.
-        </TextCard>
-      </ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function Three(
-  props = {
-    id: "",
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterGenericDiv id={props.id}>
-      <ContainerCard>
-        <TextCard>
-          As <TextBlue>linhas</TextBlue> 870, 871 voltaram em{" "}
-          <TextRed>sepetiba,</TextRed>
-          conectando o bairro com o BRT, etc…
-        </TextCard>
-      </ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function Four(
-  props = {
-    id: "",
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterGenericDiv id={props.id}>
-      <ContainerCard>
-        <TextCard>
-          Outros <TextRed>bairros</TextRed> já estão vendo suas{" "}
-          <TextBlue>linhas</TextBlue> voltarem. Junto com as X linhas que já
-          existiam, as 39 linhas estão voltando, completando o sistema viário da
-          cidade.
-        </TextCard>
-      </ContainerCard>{" "}
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function Five(
-  props = {
-    id: "",
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterGenericDiv id={props.id}>
-      <ContainerCard>
-        <TextCard>
-          Aqui você vai ver as <TextBlue>linhas novas</TextBlue> e as{" "}
-          <TextOrange1>antigas linhas.</TextOrange1>
-        </TextCard>
-      </ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function Six(
-  props = {
-    id: "",
     progress: 0,
   }
 ) {
@@ -280,7 +204,118 @@ export function Six(
   );
 }
 
+export function Three(
+  props = {
+    id: "",
+    ref: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+      <ContainerCard>
+        <TextCard>
+          As mudanças começaram nos bairros que precisavam mais de transporte.
+          <TextRed>Sepetiba,</TextRed> viu o retorno de suas linhas.
+        </TextCard>
+      </ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Four(
+  props = {
+    id: "",
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id}>
+      <ContainerCard>
+        <TextCard>
+          As <TextBlue>linhas</TextBlue> 870, 871 voltaram em{" "}
+          <TextRed>sepetiba,</TextRed>
+          conectando o bairro com o BRT, etc…
+        </TextCard>
+      </ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Five(
+  props = {
+    id: "",
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id}>
+      <ContainerCard>
+        <TextCard>
+          Outros <TextRed>bairros</TextRed> já estão vendo suas{" "}
+          <TextBlue>linhas</TextBlue> voltarem. Junto com as X linhas que já
+          existiam, as 39 linhas estão voltando, completando o sistema viário da
+          cidade.
+        </TextCard>
+      </ContainerCard>{" "}
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Six(
+  props = {
+    id: "",
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id}>
+      <ContainerCard>
+        <TextCard>
+          Aqui você vai ver as <TextBlue>linhas novas</TextBlue> e as{" "}
+          <TextOrange1>antigas linhas.</TextOrange1>
+        </TextCard>
+      </ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
 export function Seven(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterSixDiv id={props.id}>
+      <IntroTitle id={"intro"}>Fim da Caixa Preta</IntroTitle>
+      <IntroText>
+        Os cariocas sabem bem quais os problemas enfrentados todos os dias no
+        transporte público da cidade do Rio de Janeiro. E é preciso reconhecer
+        que o sistema por ônibus está ruim e precisa de ajuda. <br />
+        <br />
+        Uma série de fatores levou a este colapso, o que só resultou no
+        sofrimento da população que depende do transporte público da cidade para
+        se locomover. Por isso, a Prefeitura vai regularizar as linhas
+        operantes, retomar as inoperantes e implementar serviços noturnos.
+        <br />
+        <br />
+        Por meio de um acordo judicial, estabelecido entre a Prefeitura,
+        consórcios e o Ministério Público, linhas de ônibus serão retomadas e
+        criadas na capital fluminense. A partir de agora, o transporte público
+        por ônibus será subsidiado pelo município. As empresas, além da tarifa
+        de R$ 4,05, vão receber um valor adicional pelo serviço efetivamente
+        prestado com base no quilômetro rodado. <br />
+        <br />
+        Nesta página explicaremos como a Prefeitura fará isso. <br />
+      </IntroText>
+    </styles.ChapterSixDiv>
+  );
+}
+
+export function Eight(
   props = {
     id: "",
     progress: 0,

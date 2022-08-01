@@ -44,8 +44,8 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.One().layers);
         break;
       case 2:
-        setPosition(chapterMap.Two().location);
-        setLayers(chapterMap.Two().layers);
+        setPosition(chapterMap.One().location);
+        setLayers(chapterMap.One().layers);
         break;
       case 3:
         setPosition(chapterMap.Three().location);
@@ -105,10 +105,20 @@ export default function SubsidioSPPO() {
       },
     });
 
+    const tl2 = gsap.timeline();
+    tl2
+      .set("#chapter-2", { opacity: 0 })
+      .to("#chapter-2", { opacity: 0, duration: 30 })
+      .to("#chapter-2", { opacity: 1, duration: 10 })
+      .to("#chapter-2", { opacity: 1, duration: 12 })
+      .to("#chapter-2", { opacity: 0, duration: 10 })
+      .to("#chapter-2", { opacity: 0, duration: 28 });
+
     ScrollTrigger.create({
+      animation: tl2,
       trigger: "#chapter-2",
       onToggle: () => {
-        setChapterNumberMap(2);
+        setChapterNumberMap(1);
       },
     });
 
@@ -134,17 +144,7 @@ export default function SubsidioSPPO() {
       },
     });
 
-    const tl6 = gsap.timeline();
-    tl6
-      .set("#chapter-6", { opacity: 0 })
-      .to("#chapter-6", { opacity: 0, duration: 30 })
-      .to("#chapter-6", { opacity: 1, duration: 10 })
-      .to("#chapter-6", { opacity: 1, duration: 12 })
-      .to("#chapter-6", { opacity: 0, duration: 10 })
-      .to("#chapter-6", { opacity: 0, duration: 28 });
-
     ScrollTrigger.create({
-      animation: tl6,
       trigger: "#chapter-6",
       onToggle: () => {
         setChapterNumberMap(6);
@@ -152,8 +152,26 @@ export default function SubsidioSPPO() {
       // onUpdate: (self) => console.log("progress:", self.progress),
     });
 
+    const tl7 = gsap.timeline();
+    tl7
+      .set("#chapter-7", { opacity: 0 })
+      .to("#chapter-7", { opacity: 0, duration: 30 })
+      .to("#chapter-7", { opacity: 1, duration: 10 })
+      .to("#chapter-7", { opacity: 1, duration: 12 })
+      .to("#chapter-7", { opacity: 0, duration: 10 })
+      .to("#chapter-7", { opacity: 0, duration: 28 });
+
     ScrollTrigger.create({
+      animation: tl7,
       trigger: "#chapter-7",
+      onToggle: () => {
+        setChapterNumberMap(6);
+      },
+      // onUpdate: (self) => console.log("progress:", self.progress),
+    });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-8",
       scrub: true,
       onUpdate: (self) => {
         setChartProgress(self.progress + 0.47);
@@ -188,7 +206,8 @@ export default function SubsidioSPPO() {
       <chapterDiv.Four id={"chapter-4"} />
       <chapterDiv.Five id={"chapter-5"} />
       <chapterDiv.Six id={"chapter-6"} />
-      <chapterDiv.Seven id={"chapter-7"} progress={chartProgress} />
+      <chapterDiv.Seven id={"chapter-7"} />
+      <chapterDiv.Eight id={"chapter-8"} progress={chartProgress} />
     </>
   );
 }

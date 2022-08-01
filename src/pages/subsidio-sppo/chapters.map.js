@@ -62,7 +62,7 @@ export const One = () => {
   };
 };
 
-export const Two = () => {
+export const Three = () => {
   return {
     location: {
       mobile: {
@@ -99,7 +99,7 @@ export const Two = () => {
   };
 };
 
-export const Three = () => {
+export const Four = () => {
   return {
     location: {
       mobile: {
@@ -152,7 +152,7 @@ export const Three = () => {
   };
 };
 
-export const Four = () => {
+export const Five = () => {
   return {
     location: {
       mobile: {
@@ -205,7 +205,7 @@ export const Four = () => {
   };
 };
 
-export const Five = () => {
+export const Six = () => {
   return {
     location: {
       mobile: {
@@ -255,41 +255,6 @@ export const Five = () => {
               "line-width": 1.3,
             },
           },
-        },
-      },
-    ],
-  };
-};
-
-export const Six = () => {
-  return {
-    location: {
-      mobile: {
-        center: {
-          lon: -43.34443,
-          lat: -22.85287,
-        },
-        zoom: 15.94,
-        pitch: 60.0,
-        bearing: 85.53,
-        duration: 2000,
-      },
-      desktop: {
-        center: {
-          lon: -43.34443,
-          lat: -22.85287,
-        },
-        zoom: 13.94,
-        pitch: 60.0,
-        bearing: 85.53,
-        duration: 2000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox-style",
-        layer: {
-          id: "municipios",
         },
       },
     ],
