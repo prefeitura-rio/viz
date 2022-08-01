@@ -16,7 +16,7 @@ export const TextChapterIndicator = styled.div`
 export const ChapterOneDiv = styled.div`
   height: 100vh;
   width: 100%;
-  zindex: -1;
+  z-index: -1;
   display: grid;
   grid-template-columns: 0.5fr 2fr 0.5fr;
   grid-template-rows: 0.4fr 1.4fr 0.4fr 0.4fr 2.4fr;
@@ -35,7 +35,7 @@ export const ChapterGenericDiv = styled.div`
   height: 100vh;
   width: 100%;
   // background: #e8cee4;
-  zindex: -1;
+  z-index: -1;
   display: flex;
   align-items: center;
 `;
@@ -44,7 +44,7 @@ export const ChapterLineChart = styled.div`
   height: 100vh;
   width: 100%;
   // background: #e8cee4;
-  zindex: -1;
+  z-index: -1;
   display: flex;
   align-items: center;
 `;
@@ -53,7 +53,7 @@ export const ChapterSixDiv = styled.div`
   height: 150vh;
   // width: 100%;
   // opacity: 1;
-  zindex: -1;
+  z-index: -1;
   display: grid;
   grid-template-columns: 0.6fr 0.8fr 2fr 0.6fr;
   grid-template-rows: 1.1fr 0.5fr 2.2fr 1fr;
