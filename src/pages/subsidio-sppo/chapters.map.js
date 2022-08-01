@@ -5,7 +5,7 @@ const TRIPS = require("./data/trips.json");
 import Map, { Source, Layer } from "react-map-gl";
 // For some custom layers
 import { buildings3d } from "../../components/layers/buildings3d";
-import LINHAS_ANTIGAS from "./data/linhas_antigas.json";
+// import LINHAS_ANTIGAS from "./data/linhas_antigas.json";
 
 export const One = () => {
   return {
@@ -247,17 +247,17 @@ export const Five = () => {
       },
     },
     layers: [
-      {
-        layerType: "deckgl",
-        layer: new MapboxLayer({
-          id: "deck-linhas-antigas",
-          data: LINHAS_ANTIGAS,
-          type: GeoJsonLayer,
-          opacity: 1,
-          getLineColor: [0, 45, 90],
-          getLineWidth: 200,
-        }),
-      },
+      // {
+      //   layerType: "deckgl",
+      //   layer: new MapboxLayer({
+      //     id: "deck-linhas-antigas",
+      //     data: LINHAS_ANTIGAS,
+      //     type: GeoJsonLayer,
+      //     opacity: 1,
+      //     getLineColor: [0, 45, 90],
+      //     getLineWidth: 200,
+      //   }),
+      // },
       {
         layerType: "mapbox",
         layer: {
