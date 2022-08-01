@@ -108,6 +108,7 @@ export default function ScrollTriggerSubsidioSPPO() {
       scrub: true,
       // toggleActions: "play reverse play reverse",
     });
+
     ScrollTrigger.create({
       trigger: "#chapter-1",
       onToggle: () => {
