@@ -28,11 +28,11 @@ export default function SubsidioSPPO() {
     setLocation({
       ...location,
       desktop: {
-        ...desktopPosition
+        ...desktopPosition,
       },
       mobile: {
-        ...mobilePosition
-      }
+        ...mobilePosition,
+      },
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState(0);
@@ -94,7 +94,7 @@ export default function SubsidioSPPO() {
       start: "top center",
       end: "bottom center",
       markers: true,
-      scrub: true
+      scrub: true,
       // toggleActions: "play reverse play reverse",
     });
 
@@ -102,35 +102,35 @@ export default function SubsidioSPPO() {
       trigger: "#chapter-1",
       onToggle: () => {
         setChapterNumberMap(1);
-      }
+      },
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-2",
       onToggle: () => {
         setChapterNumberMap(2);
-      }
+      },
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-3",
       onToggle: () => {
         setChapterNumberMap(3);
-      }
+      },
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-4",
       onToggle: () => {
         setChapterNumberMap(4);
-      }
+      },
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-5",
       onToggle: () => {
         setChapterNumberMap(5);
-      }
+      },
     });
 
     const tl6 = gsap.timeline();
@@ -147,7 +147,7 @@ export default function SubsidioSPPO() {
       trigger: "#chapter-6",
       onToggle: () => {
         setChapterNumberMap(6);
-      }
+      },
       // onUpdate: (self) => console.log("progress:", self.progress),
     });
 
@@ -156,7 +156,7 @@ export default function SubsidioSPPO() {
       scrub: true,
       onUpdate: (self) => {
         setChartProgress(self.progress + 0.47);
-      }
+      },
     });
   }, []);
 
@@ -173,10 +173,10 @@ export default function SubsidioSPPO() {
           position: "fixed",
           top: "0",
           left: "0",
-          width: "100vw",
+          width: "100%",
           height: "100vh",
           // maxWidth: "100%",
-          zIndex: "-1"
+          zIndex: "-1",
         }}
         animationLoopLength={21600}
         animationSpeed={1}
