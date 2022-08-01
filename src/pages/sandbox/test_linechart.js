@@ -3,20 +3,8 @@ import { useState, useEffect } from "react";
 import LineChart from "../../components/charts/line_chart";
 
 const TestLineChart = () => {
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    setInterval(() => {
-      setProgress((progress) => progress + 0.01);
-    }, 10);
-  }, []);
-
   return (
     <div>
-      <button onClick={() => setProgress(0.25)}>25%</button>
-      <button onClick={() => setProgress(0.5)}>50%</button>
-      <button onClick={() => setProgress(0.75)}>75%</button>
-      <button onClick={() => setProgress(1)}>100%</button>
       <LineChart
         data={[
           { x: 1, y: 1 },
@@ -45,7 +33,6 @@ const TestLineChart = () => {
           { x: 24, y: 576 },
           { x: 25, y: 625 }
         ]}
-        progress={progress}
       />
     </div>
   );
