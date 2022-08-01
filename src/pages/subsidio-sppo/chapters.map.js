@@ -51,26 +51,9 @@ export const One = () => {
         }),
       },
       {
-        layerType: "mapbox",
-        layer: {
-          ...{
-            id: "building-extrusion-red",
-            type: "fill-extrusion",
-            source: "composite",
-            "source-layer": "building",
-            minzoom: 15,
-            filter: [
-              "all",
-              ["==", ["get", "underground"], "false"],
-              ["!=", ["get", "extrude"], "false"],
-            ],
-            paint: {
-              "fill-extrusion-color": "hsl(0, 56%, 35%)",
-            },
-          },
-        },
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion-red" },
       },
-
       {
         layerType: "mapbox-style",
         layer: { id: "building-extrusion" },
