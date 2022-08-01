@@ -12,7 +12,6 @@ import BarChart from "./pages/test-d3/d3.animation";
 import Chart from "./pages/test-d3/react-d3-test";
 import TestLineChart from "./pages/sandbox/test_linechart";
 import TestMap from "./pages/sandbox/test_map";
-import ScrollTriggerSubsidioSPPO from "./pages/subsidio-sppo/story-scrolltrigger";
 
 function App() {
   return (
@@ -22,10 +21,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/especial-sppo/trips" element={<TripsMap />} />
           <Route path="/especial-sppo/subsidio" element={<SubsidioSPPO />} />
-          <Route
-            path="/especial-sppo/scrolltrigger"
-            element={<ScrollTriggerSubsidioSPPO />}
-          />
           <Route path="/sandbox/sample" element={<StorySample />} />
           <Route path="/sandbox/test" element={<Test />} />
           <Route path="/sandbox/d3" element={<BarChart />} />

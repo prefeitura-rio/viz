@@ -1,40 +1,23 @@
 // Mandatory
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import MultilayerMap from "../../components/maps/multilayer_map";
-import { Tween, Timeline } from "react-gsap";
-import { gsap } from "gsap";
-// Scrollmagic
-import { Controller, Scene } from "react-scrollmagic";
 
 // Chapters
 import * as chapterMap from "./chapters.map";
 import * as chapterDiv from "./components/chapters";
 
+// Scroll and animation stuff
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+// import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+gsap.registerPlugin(ScrollTrigger);
+
 export default function SubsidioSPPO() {
-  const [location, setLocation] = useState({
-    desktop: {
-      center: {
-        lon: -43.18228,
-        lat: -22.90825,
-      },
-      zoom: 14.96,
-      pitch: 60.0,
-      bearing: -146.41,
-      duration: 2000,
-    },
-    mobile: {
-      center: {
-        lon: -43.18228,
-        lat: -22.90825,
-      },
-      zoom: 14.96,
-      pitch: 60.0,
-      bearing: -146.41,
-      duration: 2000,
-    },
-  });
+  const [location, setLocation] = useState(chapterMap.One().location);
 
   const [layers, setLayers] = useState(chapterMap.One().layers);
+  // console.log("ChapterLayers", layers);
 
   const [chartProgress, setChartProgress] = useState(0);
 
@@ -47,6 +30,8 @@ export default function SubsidioSPPO() {
       clearInterval(growProgress);
     }, 5000); // 5 seconds (make sure it's over)
   };
+  const chartRef = useRef(null);
+
   const setPosition = (position) => {
     const desktopPosition = position.desktop ? position.desktop : position;
     const mobilePosition = position.mobile ? position.mobile : position;
@@ -62,7 +47,7 @@ export default function SubsidioSPPO() {
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState(0);
-  // console.log(chapterNumberMap, layers);
+  // console.log(chapterNumberMap);
   useEffect(() => {
     switch (chapterNumberMap) {
       case 1:
@@ -110,6 +95,84 @@ export default function SubsidioSPPO() {
     }
   }, [chapterNumberMap]);
 
+  const vh = (coef) => window.innerHeight * (coef / 100);
+  const vw = (coef) => window.innerWidth * (coef / 100);
+
+  useEffect(() => {
+    gsap.defaults({ ease: "none" });
+
+    ScrollTrigger.defaults({
+      start: "top center",
+      end: "bottom center",
+      markers: true,
+      scrub: true,
+      // toggleActions: "play reverse play reverse",
+    });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-1",
+      onToggle: () => {
+        setChapterNumberMap(1);
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-2",
+      onToggle: () => {
+        setChapterNumberMap(2);
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-3",
+      onToggle: () => {
+        setChapterNumberMap(3);
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-4",
+      onToggle: () => {
+        setChapterNumberMap(4);
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-5",
+      onToggle: () => {
+        setChapterNumberMap(5);
+      },
+    });
+
+    const tl6 = gsap.timeline();
+    tl6
+      .set("#chapter-6", { opacity: 0, x: -window.innerWidth })
+      .to("#chapter-6", { opacity: 0, duration: 10 })
+      .to("#chapter-6", { opacity: 1, duration: 30, x: 0 })
+      .to("#chapter-6", { opacity: 1, duration: 20 })
+      .to("#chapter-6", { opacity: 0, duration: 30, x: window.innerWidth })
+      .to("#chapter-6", { opacity: 0, duration: 10 });
+
+    ScrollTrigger.create({
+      animation: tl6,
+      trigger: "#chapter-6",
+      onToggle: () => {
+        setChapterNumberMap(6);
+      },
+      // onUpdate: (self) => console.log("progress:", self.progress),
+    });
+
+    ScrollTrigger.create({
+      trigger: "#chapter-7",
+      scrub: true,
+      onToggle: (self) => {
+        if (self.progress > 0.0) {
+          animateChart();
+        }
+      },
+    });
+  }, []);
+
   return (
     <>
       <MultilayerMap
@@ -131,128 +194,13 @@ export default function SubsidioSPPO() {
         animationLoopLength={21600}
         animationSpeed={1}
       />
-      <Controller>
-        <Scene
-          triggerElement={"#chapter-1"}
-          indicators={true}
-          pin={false}
-          duration={"100%"}
-          offset={0}
-          reverse={true}
-        >
-          {(progress, event) => (
-            <>
-              {event.type === "enter" && setChapterNumberMap(1)}
-              <chapterDiv.One id={"chapter-1"} />
-            </>
-          )}
-        </Scene>
-
-        <Scene
-          triggerElement={"#chapter-2"}
-          indicators={true}
-          pin={false}
-          duration={"100%"}
-          offset={0}
-          reverse={true}
-        >
-          {(progress, event) => (
-            <>
-              <>{event.type === "enter" && setChapterNumberMap(2)}</>
-              <chapterDiv.Two id={"chapter-2"} />
-            </>
-          )}
-        </Scene>
-
-        <Scene
-          triggerElement={"#chapter-3"}
-          indicators={true}
-          pin={false}
-          duration={"100%"}
-          offset={0}
-          reverse={true}
-        >
-          {(progress, event) => (
-            <>
-              <>{event.type === "enter" && setChapterNumberMap(3)}</>
-              <chapterDiv.Three id={"chapter-3"} />
-            </>
-          )}
-        </Scene>
-
-        <Scene
-          triggerElement={"#chapter-4"}
-          indicators={true}
-          pin={false}
-          duration={"100%"}
-          offset={0}
-          reverse={true}
-        >
-          {(progress, event) => (
-            <>
-              <>{event.type === "enter" && setChapterNumberMap(4)}</>
-              <chapterDiv.Four id={"chapter-4"} />
-            </>
-          )}
-        </Scene>
-
-        <Scene
-          triggerElement={"#chapter-5"}
-          indicators={true}
-          pin={false}
-          duration={"100%"}
-          offset={0}
-          reverse={true}
-        >
-          {(progress, event) => (
-            <>
-              <>{event.type === "enter" && setChapterNumberMap(5)}</>
-              <chapterDiv.Five id={"chapter-5"} />
-            </>
-          )}
-        </Scene>
-
-        <Scene
-          triggerElement={"#chapter-6"}
-          indicators={true}
-          pin={false}
-          duration={"150%"}
-          offset={0}
-          reverse={true}
-        >
-          {(progress, event) => (
-            <chapterDiv.Six
-              id={"chapter-6"}
-              progress={progress}
-            ></chapterDiv.Six>
-          )}
-        </Scene>
-
-        <Scene
-          triggerElement={"#chapter-7"}
-          indicators={true}
-          pin={false}
-          duration={"100%"}
-          offset={0}
-          reverse={true}
-        >
-          {(progress, event) => (
-            <>
-              {/* Para crescer o gráfico com scroll */}
-              {/* <chapterDiv.Seven
-                id={"chapter-7"}
-                progress={progress + 0.5}
-              ></chapterDiv.Seven> */}
-              {/* Para crescer o gráfico de uma vez */}
-              <>{event.type === "enter" && animateChart()}</>
-              <chapterDiv.Seven
-                id={"chapter-7"}
-                progress={chartProgress}
-              ></chapterDiv.Seven>{" "}
-            </>
-          )}
-        </Scene>
-      </Controller>
+      <chapterDiv.One id={"chapter-1"} />
+      <chapterDiv.Two id={"chapter-2"} />
+      <chapterDiv.Three id={"chapter-3"} />
+      <chapterDiv.Four id={"chapter-4"} />
+      <chapterDiv.Five id={"chapter-5"} />
+      <chapterDiv.Six id={"chapter-6"} />
+      <chapterDiv.Seven id={"chapter-7"} progress={chartProgress} />
     </>
   );
 }
