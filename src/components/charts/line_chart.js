@@ -5,15 +5,8 @@ class LineChart extends Component {
   // Construtor: Chamado antes do componente ser montado.
   constructor(props) {
     super(props);
-    this.state = {
-      maxIndex: this.props.data.length * this.props.progress
-    };
     this.myRef = React.createRef();
   }
-
-  getMaxIndex = (progress) => {
-    return Math.floor(progress * this.props.data.length);
-  };
 
   drawGraph = async () => {
     // set the dimensions and margins of the graph
@@ -35,8 +28,7 @@ class LineChart extends Component {
       .append("g")
       .attr("transform", `translate(${margin.left},     ${margin.top})`);
 
-    // Crop data according to progress
-    var data = this.props.data.slice(0, this.state.maxIndex);
+    var data = this.props.data;
 
     // Add X axis and Y axis
     if (this.props.pinnedScale) {
@@ -90,14 +82,26 @@ class LineChart extends Component {
         return y(d.y);
       });
 
-    svg
+    const path = svg
       .append("path")
       .data([data])
       .attr("class", "line")
       .attr("fill", "none")
       .attr("stroke", this.props.style.lineColor)
+      .attr("stroke-linejoin", "round")
+      .attr("stroke-linecap", "round")
       .attr("stroke-width", this.props.style.lineWidth)
       .attr("d", valueLine);
+
+    const pathLength = path.node().getTotalLength();
+
+    const transitionPath = d3.transition().ease(d3.easeSin).duration(2500);
+
+    path
+      .attr("stroke-dashoffset", pathLength)
+      .attr("stroke-dasharray", pathLength)
+      .transition(transitionPath)
+      .attr("stroke-dashoffset", 0);
   };
   // Chamado após o componente ser montado.
   componentDidMount() {
@@ -105,15 +109,7 @@ class LineChart extends Component {
   }
   // Chamado quando o componente for atualizado.
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.progress !== this.props.progress) {
-      if (this.getMaxIndex(this.props.progress) !== this.state.maxIndex) {
-        this.setState({
-          maxIndex: this.getMaxIndex(this.props.progress)
-        });
-      }
-    } else if (prevProps.data !== this.props.data) {
-      this.drawGraph();
-    } else if (prevState.maxIndex !== this.state.maxIndex) {
+    if (prevProps.data !== this.props.data) {
       this.drawGraph();
     }
   }
@@ -126,7 +122,6 @@ class LineChart extends Component {
 LineChart.defaultProps = {
   canvasId: "body",
   data: [],
-  progress: 1,
   id: "line-chart",
   pinnedScale: true,
   style: {

@@ -28,11 +28,11 @@ export default function SubsidioSPPO() {
     setLocation({
       ...location,
       desktop: {
-        ...desktopPosition,
+        ...desktopPosition
       },
       mobile: {
-        ...mobilePosition,
-      },
+        ...mobilePosition
+      }
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState(0);
@@ -94,7 +94,7 @@ export default function SubsidioSPPO() {
       start: "top center",
       end: "bottom center",
       markers: true,
-      scrub: true,
+      scrub: true
       // toggleActions: "play reverse play reverse",
     });
 
@@ -102,7 +102,7 @@ export default function SubsidioSPPO() {
       trigger: "#chapter-1",
       onToggle: () => {
         setChapterNumberMap(1);
-      },
+      }
     });
 
     const tl2 = gsap.timeline();
@@ -119,21 +119,21 @@ export default function SubsidioSPPO() {
       trigger: "#chapter-2",
       onToggle: () => {
         setChapterNumberMap(1);
-      },
+      }
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-3",
       onToggle: () => {
         setChapterNumberMap(3);
-      },
+      }
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-4",
       onToggle: () => {
         setChapterNumberMap(4);
-      },
+      }
     });
 
     ScrollTrigger.create({
@@ -141,14 +141,14 @@ export default function SubsidioSPPO() {
       pin: ".pin",
       onToggle: () => {
         setChapterNumberMap(5);
-      },
+      }
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-6",
       onToggle: () => {
         setChapterNumberMap(6);
-      },
+      }
       // onUpdate: (self) => console.log("progress:", self.progress),
     });
 
@@ -166,16 +166,16 @@ export default function SubsidioSPPO() {
       trigger: "#chapter-7",
       onToggle: () => {
         setChapterNumberMap(6);
-      },
+      }
       // onUpdate: (self) => console.log("progress:", self.progress),
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-8",
       scrub: true,
-      onUpdate: (self) => {
+      onEnter: (self) => {
         setChartProgress(self.progress + 0.47);
-      },
+      }
     });
   }, []);
 
@@ -195,7 +195,7 @@ export default function SubsidioSPPO() {
           width: "100%",
           height: "100vh",
           // maxWidth: "100%",
-          zIndex: "-1",
+          zIndex: "-1"
         }}
         animationLoopLength={21600}
         animationSpeed={1}
@@ -207,7 +207,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Five id={"chapter-5"} />
       <chapterDiv.Six id={"chapter-6"} />
       <chapterDiv.Seven id={"chapter-7"} />
-      <chapterDiv.Eight id={"chapter-8"} progress={chartProgress} />
+      <chapterDiv.Eight id={"chapter-8"} />
     </>
   );
 }
