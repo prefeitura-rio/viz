@@ -21,17 +21,6 @@ export default function SubsidioSPPO() {
 
   const [chartProgress, setChartProgress] = useState(0);
 
-  const animateChart = () => {
-    setChartProgress(0);
-    var growProgress = setInterval(() => {
-      setChartProgress((progress) => progress + 0.01);
-    }, 20); // increase 1% every 20ms
-    setTimeout(() => {
-      clearInterval(growProgress);
-    }, 5000); // 5 seconds (make sure it's over)
-  };
-  const chartRef = useRef(null);
-
   const setPosition = (position) => {
     const desktopPosition = position.desktop ? position.desktop : position;
     const mobilePosition = position.mobile ? position.mobile : position;
@@ -39,11 +28,11 @@ export default function SubsidioSPPO() {
     setLocation({
       ...location,
       desktop: {
-        ...desktopPosition,
+        ...desktopPosition
       },
       mobile: {
-        ...mobilePosition,
-      },
+        ...mobilePosition
+      }
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState(0);
@@ -105,7 +94,7 @@ export default function SubsidioSPPO() {
       start: "top center",
       end: "bottom center",
       markers: true,
-      scrub: true,
+      scrub: true
       // toggleActions: "play reverse play reverse",
     });
 
@@ -113,35 +102,35 @@ export default function SubsidioSPPO() {
       trigger: "#chapter-1",
       onToggle: () => {
         setChapterNumberMap(1);
-      },
+      }
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-2",
       onToggle: () => {
         setChapterNumberMap(2);
-      },
+      }
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-3",
       onToggle: () => {
         setChapterNumberMap(3);
-      },
+      }
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-4",
       onToggle: () => {
         setChapterNumberMap(4);
-      },
+      }
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-5",
       onToggle: () => {
         setChapterNumberMap(5);
-      },
+      }
     });
 
     const tl6 = gsap.timeline();
@@ -158,18 +147,16 @@ export default function SubsidioSPPO() {
       trigger: "#chapter-6",
       onToggle: () => {
         setChapterNumberMap(6);
-      },
+      }
       // onUpdate: (self) => console.log("progress:", self.progress),
     });
 
     ScrollTrigger.create({
       trigger: "#chapter-7",
       scrub: true,
-      onToggle: (self) => {
-        if (self.progress > 0.0) {
-          animateChart();
-        }
-      },
+      onUpdate: (self) => {
+        setChartProgress(self.progress + 0.47);
+      }
     });
   }, []);
 
@@ -189,7 +176,7 @@ export default function SubsidioSPPO() {
           width: "100vw",
           height: "100vh",
           // maxWidth: "100%",
-          zIndex: "-1",
+          zIndex: "-1"
         }}
         animationLoopLength={21600}
         animationSpeed={1}
