@@ -120,7 +120,7 @@ const IntroText = styled.div`
 export function One(
   props = {
     id: "",
-    ref: null,
+    ref: null
   }
 ) {
   props = setDefaultProps(props);
@@ -146,7 +146,7 @@ export function One(
             fontSize: "1rem",
             fontWeight: "700",
             color: "#ffffff",
-            margin: "4px",
+            margin: "4px"
           }}
           href="http://www.rio.rj.gov.br/web/smtr"
           target="_blank"
@@ -162,7 +162,7 @@ export function One(
 export function Two(
   props = {
     id: "",
-    progress: 0,
+    progress: 0
   }
 ) {
   props = setDefaultProps(props);
@@ -201,7 +201,7 @@ export function Two(
 export function Three(
   props = {
     id: "",
-    ref: null,
+    ref: null
   }
 ) {
   props = setDefaultProps(props);
@@ -219,7 +219,7 @@ export function Three(
 
 export function Four(
   props = {
-    id: "",
+    id: ""
   }
 ) {
   props = setDefaultProps(props);
@@ -238,7 +238,7 @@ export function Four(
 
 export function Five(
   props = {
-    id: "",
+    id: ""
   }
 ) {
   props = setDefaultProps(props);
@@ -258,7 +258,7 @@ export function Five(
 
 export function Six(
   props = {
-    id: "",
+    id: ""
   }
 ) {
   props = setDefaultProps(props);
@@ -286,7 +286,7 @@ const IntroGestaoBG = styled.div`
 export function Seven(
   props = {
     id: "",
-    progress: 0,
+    progress: 0
   }
 ) {
   props = setDefaultProps(props);
@@ -341,11 +341,10 @@ export function Seven(
 export function Eight(
   props = {
     id: "",
-    progress: 0,
+    progress: 0
   }
 ) {
   props = setDefaultProps(props);
-  // console.log(props.progress);
   return (
     <>
       <styles.ChapterLineChart id={props.id}>
@@ -377,9 +376,8 @@ export function Eight(
             { x: 22, y: 484 },
             { x: 23, y: 529 },
             { x: 24, y: 576 },
-            { x: 25, y: 625 },
+            { x: 25, y: 625 }
           ]}
-          progress={props.progress}
         />
       </styles.ChapterLineChart>
     </>
@@ -388,7 +386,7 @@ export function Eight(
 
 const setDefaultProps = (providedProps) => {
   const defaultProps = {
-    id: "",
+    id: ""
   };
 
   return { ...defaultProps, ...providedProps };

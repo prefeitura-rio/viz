@@ -173,7 +173,7 @@ export default function SubsidioSPPO() {
     ScrollTrigger.create({
       trigger: "#chapter-8",
       scrub: true,
-      onUpdate: (self) => {
+      onEnter: (self) => {
         setChartProgress(self.progress + 0.47);
       },
     });
@@ -195,7 +195,7 @@ export default function SubsidioSPPO() {
           width: "100%",
           height: "100vh",
           // maxWidth: "100%",
-          zIndex: "-9999999",
+          zIndex: "-9999",
         }}
         animationLoopLength={21600}
         animationSpeed={1}
@@ -207,7 +207,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Five id={"chapter-5"} />
       <chapterDiv.Six id={"chapter-6"} />
       <chapterDiv.Seven id={"chapter-7"} />
-      <chapterDiv.Eight id={"chapter-8"} progress={chartProgress} />
+      <chapterDiv.Eight id={"chapter-8"} />
     </>
   );
 }
