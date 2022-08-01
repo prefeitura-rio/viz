@@ -14,9 +14,8 @@ export const TextChapterIndicator = styled.div`
 `;
 
 export const ChapterOneDiv = styled.div`
-  width: 101.5%;
+  width: 100%;
   height: 102vh;
-  margin-left: -0.75%;
   margin-top: -0.5vh;
 
   z-index: -1;
@@ -54,8 +53,8 @@ export const ChapterLineChart = styled.div`
 
 export const ChapterTwoDiv = styled.div`
   height: 150vh;
-  width: 101.5%;
-  margin-left: -0.75%;
+  width: 101%;
+  margin-left: -0.5%;
   overflow-x: hidden;
   // width: 100%;
   // opacity: 1;
