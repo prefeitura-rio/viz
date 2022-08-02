@@ -130,7 +130,7 @@ const IntroText = styled.div`
   margin-bottom: 30%;
   vertical-align: middle;
   // margin: auto;
-  color: #dbdbdb;
+  color: #ffffff;
   font-family: "Redaction", sans-serif;
   font-size: 1.2rem;
   line-height: 1.5;
@@ -176,7 +176,7 @@ export function One(
         </a>
       </AuthorText>
       <Interactive>
-        Para interagir com o mapa{" "}
+        Para navegar pelo mapa{" "}
         <a
           style={{
             fontSize: "1rem",
@@ -310,14 +310,14 @@ export function Six(
   );
 }
 const IntroGestaoBG = styled.div`
-  background-color: rgba(0, 0, 0, 0.6);
+  /* background-color: rgba(0, 0, 0, 0.6); */
   position: relative;
   z-index: -2;
   height: 150vh;
   width: 101%;
   margin-left: -0.5%;
   margin-bottom: -150vh;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
 `;
 
 export function Seven(
@@ -420,6 +420,7 @@ export function Eight(
     </>
   );
 }
+
 
 const setDefaultProps = (providedProps) => {
   const defaultProps = {

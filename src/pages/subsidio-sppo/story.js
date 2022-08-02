@@ -177,6 +177,7 @@ export default function SubsidioSPPO() {
         setChartProgress(self.progress + 0.47);
       },
     });
+
   }, []);
 
   return (

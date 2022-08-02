@@ -19,10 +19,10 @@ export const ChapterOneDiv = styled.div`
   margin-top: -0.5vh;
 
   z-index: -1;
-  display: grid;
-  grid-template-columns: 0.5fr 2fr 0.5fr;
-  grid-template-rows: 0.4fr 1.4fr 0.4fr 0.4fr 3.2fr 0.2fr;
-  gap: 0px 20px;
+  display: grid; 
+  grid-template-columns: 0.5fr 2fr 0.5fr; 
+  grid-template-rows: .4fr 1.7fr 0.6fr 0.5fr 2.5fr 0.3fr; 
+  gap: 20px 20px;
   grid-template-areas:
     ". logo ."
     ". . ."
@@ -57,9 +57,6 @@ export const ChapterTwoDiv = styled.div`
   width: 101%;
   margin-left: -0.5%;
   overflow-x: hidden;
-  // width: 100%;
-  // opacity: 1;
-  /* z-index: -1; */
   display: grid;
   grid-template-columns: 0.6fr 0.8fr 2fr 0.6fr;
   grid-template-rows: 0.5fr 1.3fr 0.3fr;
@@ -68,6 +65,8 @@ export const ChapterTwoDiv = styled.div`
     ". . . ."
     ". titulo texto ."
     ". . . .";
-  background-color: rgba(0, 0, 0, 0.93);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
   opacity: 1;
 `;
+
