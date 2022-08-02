@@ -63,7 +63,7 @@ const ContainerCard = styled.div`
   margin: auto;
   width: 40%;
   padding: 20px;
-  background-color: rgba(20, 19, 18, 0.85);
+  background-color: rgba(20, 19, 18, 0.6);
   opacity: 1;
   border-radius: 10px;
 `;
@@ -310,14 +310,14 @@ export function Six(
   );
 }
 const IntroGestaoBG = styled.div`
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
   position: relative;
   z-index: -2;
   height: 150vh;
   width: 101%;
   margin-left: -0.5%;
   margin-bottom: -150vh;
-  // filter: blur(50px);
+  backdrop-filter: blur(10px);
 `;
 
 export function Seven(
