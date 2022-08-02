@@ -13,6 +13,7 @@ const BarChart = lazy(() => import("./pages/test-d3/d3.animation"));
 const Chart = lazy(() => import("./pages/test-d3/react-d3-test"));
 const TestLineChart = lazy(() => import("./pages/sandbox/test_linechart"));
 const TestMap = lazy(() => import("./pages/sandbox/test_map"));
+const Interactive = lazy(() => import("./pages/subsidio-sppo/interactive"));
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/sandbox/test" element={<Test />} />
             <Route path="/sandbox/d3" element={<BarChart />} />
             <Route path="/sandbox/d3-react" element={<Chart />}></Route>
+            <Route path="/especial-sppo/interactive" element={<Interactive />}></Route>
             <Route
               path="/sandbox/test-linechart"
               element={<TestLineChart />}

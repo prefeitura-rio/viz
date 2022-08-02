@@ -184,7 +184,7 @@ export function One(
             color: "#ffffff",
             margin: "4px",
           }}
-          href="https://viz.dados.rio/#/especial-sppo/trips"
+          href="https://viz.dados.rio/#/especial-sppo/interactive"
           target="_blank"
           rel="noreferrer"
         >
