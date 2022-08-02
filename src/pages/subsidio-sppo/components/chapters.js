@@ -27,7 +27,6 @@ const Title = styled.div`
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 1.3;
-
   margin: auto;
   text-align: center;
   grid-area: titulo;
@@ -44,6 +43,19 @@ const AuthorText = styled.div`
   margin-bottom: auto;
   text-align: center;
   grid-area: subtitulo;
+`;
+
+const Interactive = styled.div`
+  width: 80%;
+  color: #ffffff;
+  // background-color: #01baef;
+  font-family: "MetricWeb", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.3;
+  margin: auto;
+  text-align: center;
+  grid-area: nova;
 `;
 
 const ContainerCard = styled.div`
@@ -128,7 +140,7 @@ const IntroText = styled.div`
 export function One(
   props = {
     id: "",
-    ref: null
+    ref: null,
   }
 ) {
   props = setDefaultProps(props);
@@ -154,7 +166,7 @@ export function One(
             fontSize: "1rem",
             fontWeight: "700",
             color: "#ffffff",
-            margin: "4px"
+            margin: "4px",
           }}
           href="http://www.rio.rj.gov.br/web/smtr"
           target="_blank"
@@ -163,6 +175,22 @@ export function One(
           Secretaria Municipal de Transportes
         </a>
       </AuthorText>
+      <Interactive>
+        Para interagir com o mapa{" "}
+        <a
+          style={{
+            fontSize: "1rem",
+            fontWeight: "700",
+            color: "#ffffff",
+            margin: "4px",
+          }}
+          href="https://viz.dados.rio/#/especial-sppo/trips"
+          target="_blank"
+          rel="noreferrer"
+        >
+          clique aqui
+        </a>
+      </Interactive>
     </styles.ChapterOneDiv>
   );
 }
@@ -170,7 +198,7 @@ export function One(
 export function Two(
   props = {
     id: "",
-    progress: 0
+    progress: 0,
   }
 ) {
   props = setDefaultProps(props);
@@ -209,7 +237,7 @@ export function Two(
 export function Three(
   props = {
     id: "",
-    ref: null
+    ref: null,
   }
 ) {
   props = setDefaultProps(props);
@@ -227,7 +255,7 @@ export function Three(
 
 export function Four(
   props = {
-    id: ""
+    id: "",
   }
 ) {
   props = setDefaultProps(props);
@@ -246,7 +274,7 @@ export function Four(
 
 export function Five(
   props = {
-    id: ""
+    id: "",
   }
 ) {
   props = setDefaultProps(props);
@@ -266,7 +294,7 @@ export function Five(
 
 export function Six(
   props = {
-    id: ""
+    id: "",
   }
 ) {
   props = setDefaultProps(props);
@@ -282,19 +310,20 @@ export function Six(
   );
 }
 const IntroGestaoBG = styled.div`
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0);
   position: relative;
   z-index: -2;
   height: 150vh;
   width: 101%;
   margin-left: -0.5%;
   margin-bottom: -150vh;
+  // filter: blur(50px);
 `;
 
 export function Seven(
   props = {
     id: "",
-    progress: 0
+    progress: 0,
   }
 ) {
   props = setDefaultProps(props);
@@ -349,7 +378,7 @@ export function Seven(
 export function Eight(
   props = {
     id: "",
-    progress: 0
+    progress: 0,
   }
 ) {
   props = setDefaultProps(props);
@@ -384,7 +413,7 @@ export function Eight(
             { x: 22, y: 484 },
             { x: 23, y: 529 },
             { x: 24, y: 576 },
-            { x: 25, y: 625 }
+            { x: 25, y: 625 },
           ]}
         />
       </styles.ChapterLineChart>
@@ -394,7 +423,7 @@ export function Eight(
 
 const setDefaultProps = (providedProps) => {
   const defaultProps = {
-    id: ""
+    id: "",
   };
 
   return { ...defaultProps, ...providedProps };

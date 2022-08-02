@@ -21,13 +21,14 @@ export const ChapterOneDiv = styled.div`
   z-index: -1;
   display: grid;
   grid-template-columns: 0.5fr 2fr 0.5fr;
-  grid-template-rows: 0.4fr 1.4fr 0.4fr 0.4fr 2.4fr;
-  gap: 20px 0px;
+  grid-template-rows: 0.4fr 1.4fr 0.4fr 0.4fr 3.2fr 0.2fr;
+  gap: 0px 20px;
   grid-template-areas:
     ". logo ."
     ". . ."
     ". titulo ."
     ". subtitulo ."
+    ". nova ."
     ". . .";
   // grid-template-columns: ;
   justify-items: center;
