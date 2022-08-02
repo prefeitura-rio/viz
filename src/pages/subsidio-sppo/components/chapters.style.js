@@ -53,13 +53,13 @@ export const ChapterLineChart = styled.div`
 `;
 
 export const ChapterTwoDiv = styled.div`
-  height: 150vh;
+  height: 200vh;
   width: 101%;
   margin-left: -0.5%;
   overflow-x: hidden;
   display: grid;
   grid-template-columns: 0.6fr 0.8fr 2fr 0.6fr;
-  grid-template-rows: 0.5fr 1.3fr 0.3fr;
+  grid-template-rows: 1fr 1.3fr 0.3fr;
   gap: 0px 50px;
   grid-template-areas:
     ". . . ."

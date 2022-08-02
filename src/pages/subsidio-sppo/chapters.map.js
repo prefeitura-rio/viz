@@ -91,10 +91,6 @@ export const Three = () => {
         layerType: "mapbox-style",
         layer: { id: "sepetiba" },
       },
-      {
-        layerType: "mapbox-style",
-        layer: { id: "sepetiba-linha" },
-      },
     ],
   };
 };
@@ -129,19 +125,31 @@ export const Four = () => {
         layer: { id: "sepetiba" },
       },
       {
-        layerType: "mapbox-style",
-        layer: { id: "sepetiba-linha" },
+        layerType: "mapbox",
+        layer: {
+          ...{
+            id: "linha870-cor",
+            type: "line",
+            source: "composite",
+            "source-layer": "linha870-byrh8i",
+            paint: {
+              "line-color": "#c36a2d",
+              "line-width": 2,
+              "line-opacity": 1,
+            },
+          },
+        },
       },
       {
         layerType: "mapbox",
         layer: {
           ...{
-            id: "linha-sepetiba-blue",
+            id: "linha871-cor",
             type: "line",
             source: "composite",
-            "source-layer": "linha-sepetiba-30dnx7",
+            "source-layer": "linha871-9h5hot",
             paint: {
-              "line-color": "#f4902c",
+              "line-color": "#dd9f75",
               "line-width": 2,
               "line-opacity": 1,
             },
@@ -189,14 +197,14 @@ export const Five = () => {
         layerType: "mapbox",
         layer: {
           ...{
-            id: "linhas-novas-azul",
+            id: "linhas-novas-oranje",
             type: "line",
             source: "composite",
             "source-layer": "linhas-novas-9sfk6t",
             paint: {
-              "line-color": "#c67121",
+              "line-color": "#c36a2d",
               "line-opacity": 0,
-              "line-width": 1.3,
+              "line-width": 1.7,
             },
           },
         },
@@ -230,17 +238,22 @@ export const Six = () => {
       },
     },
     layers: [
-      // {
-      //   layerType: "deckgl",
-      //   layer: new MapboxLayer({
-      //     id: "deck-linhas-antigas",
-      //     data: LINHAS_ANTIGAS,
-      //     type: GeoJsonLayer,
-      //     opacity: 1,
-      //     getLineColor: [0, 45, 90],
-      //     getLineWidth: 200,
-      //   }),
-      // },
+      {
+        layerType: "mapbox",
+        layer: {
+          ...{
+            id: "final-linhas-cor",
+            type: "line",
+            source: "composite",
+            "source-layer": "final-linhas-24q8pr",
+            paint: {
+              "line-color": "#18b4c9",
+              "line-opacity": 0.5,
+              "line-width": 0.8,
+            },
+          },
+        },
+      },
       {
         layerType: "mapbox",
         layer: {
@@ -250,9 +263,9 @@ export const Six = () => {
             source: "composite",
             "source-layer": "linhas-novas-9sfk6t",
             paint: {
-              "line-color": "#c67121",
+              "line-color": "#c36a2d",
               "line-opacity": 0,
-              "line-width": 1.3,
+              "line-width": 1.7,
             },
           },
         },
