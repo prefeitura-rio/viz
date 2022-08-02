@@ -137,6 +137,17 @@ const IntroText = styled.div`
   opacity: 1;
 `;
 
+const IntroGestaoBG = styled.div`
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  position: relative;
+  z-index: -2;
+  height: 150vh;
+  width: 101%;
+  margin-left: -0.5%;
+  margin-bottom: -150vh;
+  /* backdrop-filter: blur(10px); */
+`;
+
 export function One(
   props = {
     id: "",
@@ -309,16 +320,6 @@ export function Six(
     </styles.ChapterGenericDiv>
   );
 }
-const IntroGestaoBG = styled.div`
-  /* background-color: rgba(0, 0, 0, 0.6); */
-  position: relative;
-  z-index: -2;
-  height: 150vh;
-  width: 101%;
-  margin-left: -0.5%;
-  margin-bottom: -150vh;
-  /* backdrop-filter: blur(10px); */
-`;
 
 export function Seven(
   props = {
@@ -329,49 +330,46 @@ export function Seven(
   props = setDefaultProps(props);
 
   return (
-    <>
-      <IntroGestaoBG id={"gestao-blur"} />
-      <styles.ChapterTwoDiv id={props.id}>
-        <IntroTitle id={"intro"}>O fim da Caixa Preta</IntroTitle>
-        <IntroText>
-          Em 2010, a Secretaria Municipal de Transportes do Rio de Janeiro
-          licitou a prestação de serviço de transportes na cidade.{" "}
-          <TextOrange>
-            Com isso, toda a responsabilidade pelo transporte por ônibus ficou
-            com os consórcios.
-          </TextOrange>
-          Isso incluía não só a operação de todas as linhas municipais, como
-          também a fonte de renda do sistema, o Bilhete Único Carioca (BUC).
-          <br />
-          <br />
-          Após anos em vigor, a concessão, entretanto, apresentou problemas: a
-          má gestão dos concessionários com o serviço oferecido e uma grande
-          crise reputacional do sistema, envolvida em diversos escândalos.
-          <br />
-          <br />A falta de transparência da bilhetagem do sistema de bilhete
-          único também era um problema.{" "}
-          <TextOrange>
-            Uma verdadeira caixa-preta era formada com os dados de arrecadação e
-            distribuição dos lucros da bilhetagem.
-          </TextOrange>
-          <br />
-          <br />
-          Com um transporte público sofrido, de ônibus depredados e
-          superlotados, somou-se o fator pandemia e inflação. Historicamente, o
-          número de passageiros já vinha diminuindo. Com a chegada da Covid-19,
-          a situação se agravou.
-          <br />
-          <br />
-          Além disso, o preço do diesel apresentou um aumento de quase 131% em
-          dois anos, segundo dados da Agência Nacional do Petróleo, Gás Natural
-          e Biocombustíveis (ANP). O preço de peças para reposição nos veículos
-          também sofreu inflação, com a desvalorização do real frente a moeda
-          americana. Com isso, as empresas responsáveis pelo transporte optaram
-          por diminuir a frota em lugares que sem muitos passageiros, chegando a
-          cancelar a circulação de algumas linhas.
-        </IntroText>
-      </styles.ChapterTwoDiv>
-    </>
+    <styles.ChapterTwoDiv id={props.id}>
+      <IntroTitle id={"intro"}>O fim da Caixa Preta</IntroTitle>
+      <IntroText>
+        Em 2010, a Secretaria Municipal de Transportes do Rio de Janeiro licitou
+        a prestação de serviço de transportes na cidade.{" "}
+        <TextOrange>
+          Com isso, toda a responsabilidade pelo transporte por ônibus ficou com
+          os consórcios.
+        </TextOrange>
+        Isso incluía não só a operação de todas as linhas municipais, como
+        também a fonte de renda do sistema, o Bilhete Único Carioca (BUC).
+        <br />
+        <br />
+        Após anos em vigor, a concessão, entretanto, apresentou problemas: a má
+        gestão dos concessionários com o serviço oferecido e uma grande crise
+        reputacional do sistema, envolvida em diversos escândalos.
+        <br />
+        <br />A falta de transparência da bilhetagem do sistema de bilhete único
+        também era um problema.{" "}
+        <TextOrange>
+          Uma verdadeira caixa-preta era formada com os dados de arrecadação e
+          distribuição dos lucros da bilhetagem.
+        </TextOrange>
+        <br />
+        <br />
+        Com um transporte público sofrido, de ônibus depredados e superlotados,
+        somou-se o fator pandemia e inflação. Historicamente, o número de
+        passageiros já vinha diminuindo. Com a chegada da Covid-19, a situação
+        se agravou.
+        <br />
+        <br />
+        Além disso, o preço do diesel apresentou um aumento de quase 131% em
+        dois anos, segundo dados da Agência Nacional do Petróleo, Gás Natural e
+        Biocombustíveis (ANP). O preço de peças para reposição nos veículos
+        também sofreu inflação, com a desvalorização do real frente a moeda
+        americana. Com isso, as empresas responsáveis pelo transporte optaram
+        por diminuir a frota em lugares que sem muitos passageiros, chegando a
+        cancelar a circulação de algumas linhas.
+      </IntroText>
+    </styles.ChapterTwoDiv>
   );
 }
 
@@ -420,7 +418,6 @@ export function Eight(
     </>
   );
 }
-
 
 const setDefaultProps = (providedProps) => {
   const defaultProps = {
