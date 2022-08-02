@@ -151,7 +151,7 @@ export const Four = () => {
             source: "composite",
             "source-layer": "linha871-9h5hot",
             paint: {
-              "line-color": "#c4a011",
+              "line-color": "#dd9f75",
               "line-opacity": 0,
               "line-width": 2,
             },

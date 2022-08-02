@@ -63,7 +63,7 @@ const ContainerCard = styled.div`
   margin: auto;
   width: 40%;
   padding: 20px;
-  background-color: rgba(20, 19, 18, 0.6);
+  background-color: rgba(20, 19, 18, 0.8);
   opacity: 1;
   border-radius: 10px;
 `;
@@ -103,7 +103,7 @@ const TextOrange = styled.div`
 `;
 
 const TextOrange1 = styled.div`
-  background: #c4a011;
+  background: #dd9f75;
   color: #fff;
   display: inline;
   padding: 1px 8px 1px 8px;
@@ -123,13 +123,9 @@ const IntroTitle = styled.div`
 
 const IntroText = styled.div`
   grid-area: texto;
-  // background: #ffffff;
-  // justify-self: start;
-  // align-items: start;
   text-align: justify;
   margin-bottom: 30%;
   vertical-align: middle;
-  // margin: auto;
   color: #ffffff;
   font-family: "Redaction", sans-serif;
   font-size: 1.2rem;
@@ -239,7 +235,7 @@ export function Two(
         de R$ 4,05, vão receber um valor adicional pelo serviço efetivamente
         prestado com base no quilômetro rodado. <br />
         <br />
-        Nesta página explicaremos como a Prefeitura fará isso. <br />
+        Nesta reportagem especial explicaremos como a Prefeitura fará isso. <br />
       </IntroText>
     </styles.ChapterTwoDiv>
   );
@@ -256,8 +252,8 @@ export function Three(
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <ContainerCard>
         <TextCard>
-          As mudanças começaram nos bairros que precisavam mais de transporte.
-          <TextRed>Sepetiba,</TextRed> viu o retorno de suas linhas.
+        O restabelecimento das linhas será feito com prioridade nas áreas mais necessitadas. O bairro de{" "}   
+          <TextRed>Sepetiba,</TextRed> um dos mais afastados do centro da cidade, começa a ter as primeiras linhas reestabelecidas do sistema.
         </TextCard>
       </ContainerCard>
     </styles.ChapterGenericDiv>
@@ -274,9 +270,9 @@ export function Four(
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <TextCard>
-          As linhas <TextOrange> 870,</TextOrange> e{" "}
-          <TextOrange1>871</TextOrange1> voltaram em sepetiba, conectando o
-          bairro com o BRT, etc…
+          Podemos ver como exemplo as linhas <TextOrange> 870</TextOrange> e{" "}
+          <TextOrange1>871</TextOrange1> que voltaram no início do mês de junho. Elas conectam o
+          bairro com o BRT. O cronograma com as novas linhas e os novos horários de circulação será lançado em breve e poderá ser acompanhado pelas redes sociais da Prefeitura.
         </TextCard>
       </ContainerCard>
     </styles.ChapterGenericDiv>
@@ -293,10 +289,8 @@ export function Five(
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <TextCard>
-          Outros <TextRed>bairros</TextRed> já estão vendo suas{" "}
-          <TextOrange>linhas</TextOrange> voltarem. Junto com as X linhas que já
-          existiam, as 39 linhas estão voltando, completando o sistema viário da
-          cidade.
+          Os <TextRed>bairros</TextRed> em destaque já estão vendo suas{" "}
+          <TextOrange>linhas</TextOrange> voltarem. Esses bairros são os que mais receberam novas linhas desde do início do acordo. Até o momento 43 linhas ja foram reestabelecidas ou incorporadas ao novo sistema de transporte.
         </TextCard>
       </ContainerCard>{" "}
     </styles.ChapterGenericDiv>
@@ -313,8 +307,9 @@ export function Six(
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <TextCard>
-          Aqui você vai ver as <TextOrange>linhas novas</TextOrange> e as{" "}
-          <TextBlue>antigas linhas.</TextBlue>
+         É possível comparar nesse mapa as <TextOrange>novas linhas</TextOrange> com o{" "}
+          <TextBlue>sistema de transporte atual.</TextBlue> Vale lembrar que com o plano devidamente implementado - e isso não acontece do dia para a noite - vai permitir um transporte com qualidade e transparência para a população carioca.
+
         </TextCard>
       </ContainerCard>
     </styles.ChapterGenericDiv>
@@ -417,6 +412,56 @@ export function Eight(
       </styles.ChapterLineChart>
     </>
   );
+}
+
+export function Nine(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterNineDiv id={props.id}>
+      <IntroTitle id={"intro"}>Autores
+      <br />
+      <br />
+      <br />
+      <br />
+      Agradecimentos
+      <br />
+      <br />
+      <br />
+      <br />
+      Prefeito
+      </IntroTitle>
+      <IntroText>
+        Caio Jacintho
+        <br />
+        Diego Oliveira
+        <br />
+        Gabriel Gazola
+        <br />
+        João Carabetta
+
+        <br />
+        <br />
+        <br />
+        Fernanda Scovino
+        <br />
+        Guilherme Braga
+        <br />
+        Bernardo Serra
+        <br />
+        Lauro Silvestre
+        <br />
+        <br />
+        <br />
+        Eduardo Paes
+      </IntroText>
+    </styles.ChapterNineDiv>
+      );
 }
 
 const setDefaultProps = (providedProps) => {

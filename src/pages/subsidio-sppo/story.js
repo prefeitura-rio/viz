@@ -178,6 +178,24 @@ export default function SubsidioSPPO() {
       },
     });
 
+    const tl9 = gsap.timeline();
+    tl9
+      .set("#chapter-9", { opacity: 0 })
+      .to("#chapter-9", { opacity: 0, duration: 30 })
+      .to("#chapter-9", { opacity: 1, duration: 6 })
+      .to("#chapter-9", { opacity: 1, duration: 20 })
+      .to("#chapter-9", { opacity: 1, duration: 6 })
+      .to("#chapter-9", { opacity: 1, duration: 28 });
+
+    ScrollTrigger.create({
+      animation: tl9,
+      trigger: "#chapter-9",
+      onToggle: () => {
+        setChapterNumberMap(6);
+      },
+      // onUpdate: (self) => console.log("progress:", self.progress),
+    });
+
   }, []);
 
   return (
@@ -209,6 +227,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Six id={"chapter-6"} />
       <chapterDiv.Seven id={"chapter-7"} />
       <chapterDiv.Eight id={"chapter-8"} />
+      <chapterDiv.Nine id={"chapter-9"} />
     </>
   );
 }
