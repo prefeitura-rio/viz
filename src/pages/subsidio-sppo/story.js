@@ -109,9 +109,9 @@ export default function SubsidioSPPO() {
     tl2
       .set("#chapter-2", { opacity: 0 })
       .to("#chapter-2", { opacity: 0, duration: 30 })
-      .to("#chapter-2", { opacity: 1, duration: 10 })
-      .to("#chapter-2", { opacity: 1, duration: 12 })
-      .to("#chapter-2", { opacity: 0, duration: 10 })
+      .to("#chapter-2", { opacity: 1, duration: 6 })
+      .to("#chapter-2", { opacity: 1, duration: 20 })
+      .to("#chapter-2", { opacity: 0, duration: 6 })
       .to("#chapter-2", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
@@ -156,9 +156,9 @@ export default function SubsidioSPPO() {
     tl7
       .set("#chapter-7", { opacity: 0 })
       .to("#chapter-7", { opacity: 0, duration: 30 })
-      .to("#chapter-7", { opacity: 1, duration: 10 })
-      .to("#chapter-7", { opacity: 1, duration: 12 })
-      .to("#chapter-7", { opacity: 0, duration: 10 })
+      .to("#chapter-7", { opacity: 1, duration: 6 })
+      .to("#chapter-7", { opacity: 1, duration: 20 })
+      .to("#chapter-7", { opacity: 0, duration: 6 })
       .to("#chapter-7", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
