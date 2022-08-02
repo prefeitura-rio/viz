@@ -235,7 +235,8 @@ export function Two(
         de R$ 4,05, vão receber um valor adicional pelo serviço efetivamente
         prestado com base no quilômetro rodado. <br />
         <br />
-        Nesta reportagem especial explicaremos como a Prefeitura fará isso. <br />
+        Nesta reportagem especial explicaremos como a Prefeitura fará isso.{" "}
+        <br />
       </IntroText>
     </styles.ChapterTwoDiv>
   );
@@ -252,8 +253,10 @@ export function Three(
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <ContainerCard>
         <TextCard>
-        O restabelecimento das linhas será feito com prioridade nas áreas mais necessitadas. O bairro de{" "}   
-          <TextRed>Sepetiba,</TextRed> um dos mais afastados do centro da cidade, começa a ter as primeiras linhas reestabelecidas do sistema.
+          O restabelecimento das linhas será feito com prioridade nas áreas mais
+          necessitadas. O bairro de <TextRed>Sepetiba,</TextRed> um dos mais
+          afastados do centro da cidade, começa a ter as primeiras linhas
+          reestabelecidas do sistema.
         </TextCard>
       </ContainerCard>
     </styles.ChapterGenericDiv>
@@ -271,8 +274,10 @@ export function Four(
       <ContainerCard>
         <TextCard>
           Podemos ver como exemplo as linhas <TextOrange> 870</TextOrange> e{" "}
-          <TextOrange1>871</TextOrange1> que voltaram no início do mês de junho. Elas conectam o
-          bairro com o BRT. O cronograma com as novas linhas e os novos horários de circulação será lançado em breve e poderá ser acompanhado pelas redes sociais da Prefeitura.
+          <TextOrange1>871</TextOrange1> que voltaram no início do mês de junho.
+          Elas conectam o bairro com o BRT. O cronograma com as novas linhas e
+          os novos horários de circulação será lançado em breve e poderá ser
+          acompanhado pelas redes sociais da Prefeitura.
         </TextCard>
       </ContainerCard>
     </styles.ChapterGenericDiv>
@@ -290,7 +295,10 @@ export function Five(
       <ContainerCard>
         <TextCard>
           Os <TextRed>bairros</TextRed> em destaque já estão vendo suas{" "}
-          <TextOrange>linhas</TextOrange> voltarem. Esses bairros são os que mais receberam novas linhas desde do início do acordo. Até o momento 43 linhas ja foram reestabelecidas ou incorporadas ao novo sistema de transporte.
+          <TextOrange>linhas</TextOrange> voltarem. Esses bairros são os que
+          mais receberam novas linhas desde do início do acordo. Até o momento
+          43 linhas ja foram reestabelecidas ou incorporadas ao novo sistema de
+          transporte.
         </TextCard>
       </ContainerCard>{" "}
     </styles.ChapterGenericDiv>
@@ -307,9 +315,12 @@ export function Six(
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <TextCard>
-         É possível comparar nesse mapa as <TextOrange>novas linhas</TextOrange> com o{" "}
-          <TextBlue>sistema de transporte atual.</TextBlue> Vale lembrar que com o plano devidamente implementado - e isso não acontece do dia para a noite - vai permitir um transporte com qualidade e transparência para a população carioca.
-
+          É possível comparar nesse mapa as{" "}
+          <TextOrange>novas linhas</TextOrange> com o{" "}
+          <TextBlue>sistema de transporte atual.</TextBlue> Vale lembrar que com
+          o plano devidamente implementado - e isso não acontece do dia para a
+          noite - vai permitir um transporte com qualidade e transparência para
+          a população carioca.
         </TextCard>
       </ContainerCard>
     </styles.ChapterGenericDiv>
@@ -414,7 +425,7 @@ export function Eight(
   );
 }
 
-export function Nine(
+export function Creditos(
   props = {
     id: "",
     progress: 0,
@@ -423,18 +434,19 @@ export function Nine(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterNineDiv id={props.id}>
-      <IntroTitle id={"intro"}>Autores
-      <br />
-      <br />
-      <br />
-      <br />
-      Agradecimentos
-      <br />
-      <br />
-      <br />
-      <br />
-      Prefeito
+    <styles.CreditosDiv id={props.id}>
+      <IntroTitle id={"intro"}>
+        Autores
+        <br />
+        <br />
+        <br />
+        <br />
+        Agradecimentos
+        <br />
+        <br />
+        <br />
+        <br />
+        Prefeito
       </IntroTitle>
       <IntroText>
         Caio Jacintho
@@ -444,7 +456,6 @@ export function Nine(
         Gabriel Gazola
         <br />
         João Carabetta
-
         <br />
         <br />
         <br />
@@ -460,8 +471,8 @@ export function Nine(
         <br />
         Eduardo Paes
       </IntroText>
-    </styles.ChapterNineDiv>
-      );
+    </styles.CreditosDiv>
+  );
 }
 
 const setDefaultProps = (providedProps) => {

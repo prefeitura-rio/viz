@@ -72,8 +72,8 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Eight().layers);
         break;
       case 9:
-        setPosition(chapterMap.Nine().location);
-        setLayers(chapterMap.Nine().layers);
+        setPosition(chapterMap.Creditos().location);
+        setLayers(chapterMap.Creditos().layers);
         break;
       case 10:
         setPosition(chapterMap.Ten().location);
@@ -195,7 +195,6 @@ export default function SubsidioSPPO() {
       },
       // onUpdate: (self) => console.log("progress:", self.progress),
     });
-
   }, []);
 
   return (
@@ -227,7 +226,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Six id={"chapter-6"} />
       <chapterDiv.Seven id={"chapter-7"} />
       <chapterDiv.Eight id={"chapter-8"} />
-      <chapterDiv.Nine id={"chapter-9"} />
+      <chapterDiv.Creditos id={"chapter-9"} />
     </>
   );
 }

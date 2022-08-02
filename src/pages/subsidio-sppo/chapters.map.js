@@ -89,9 +89,11 @@ export const Three = () => {
     layers: [
       {
         layerType: "mapbox-style",
-        layer: {
-          id: "sepetiba",
-        },
+        layer: { id: "sepetiba" },
+      },
+      {
+        layerType: "mapbox-style",
+        layer: { id: "sepetiba-linha" },
       },
     ],
   };
@@ -127,33 +129,21 @@ export const Four = () => {
         layer: { id: "sepetiba" },
       },
       {
-        layerType: "mapbox",
-        layer: {
-          ...{
-            id: "linha870-orange",
-            type: "line",
-            source: "composite",
-            "source-layer": "linha870-byrh8i",
-            paint: {
-              "line-color": "#C36A2D",
-              "line-opacity": 0,
-              "line-width": 2,
-            },
-          },
-        },
+        layerType: "mapbox-style",
+        layer: { id: "sepetiba-linha" },
       },
       {
         layerType: "mapbox",
         layer: {
           ...{
-            id: "linha871-orange1",
+            id: "linha-sepetiba-blue",
             type: "line",
             source: "composite",
-            "source-layer": "linha871-9h5hot",
+            "source-layer": "linha-sepetiba-30dnx7",
             paint: {
-              "line-color": "#dd9f75",
-              "line-opacity": 0,
+              "line-color": "#f4902c",
               "line-width": 2,
+              "line-opacity": 1,
             },
           },
         },
@@ -204,7 +194,7 @@ export const Five = () => {
             source: "composite",
             "source-layer": "linhas-novas-9sfk6t",
             paint: {
-              "line-color": "#C36A2D",
+              "line-color": "#c67121",
               "line-opacity": 0,
               "line-width": 1.3,
             },
@@ -260,7 +250,7 @@ export const Six = () => {
             source: "composite",
             "source-layer": "linhas-novas-9sfk6t",
             paint: {
-              "line-color": "#C36A2D",
+              "line-color": "#c67121",
               "line-opacity": 0,
               "line-width": 1.3,
             },
@@ -341,7 +331,7 @@ export const Eight = () => {
   };
 };
 
-export const Nine = () => {
+export const Creditos = () => {
   return {
     location: {
       mobile: {
