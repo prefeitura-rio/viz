@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as d3 from "d3";
-
+import plotData from "../data/data.json";
 class LineChart extends Component {
   // Construtor: Chamado antes do componente ser montado.
   constructor(props) {
@@ -10,6 +10,21 @@ class LineChart extends Component {
     this.state = {
       data: [],
     };
+
+    function convertPlotData(data) {
+      var convertedData = [];
+      //pandas gives each column the same number of
+      //objects, arbitrarily choose one to iterate over
+      for (var i in data[Object.keys(data)[0]]) {
+        var convertedDatum = {};
+        for (var key in data) {
+          convertedDatum[key] = data[key][i];
+        }
+        convertedData.push(convertedDatum);
+      }
+      return convertedData;
+    }
+    console.log("convertPlotData", convertPlotData(plotData));
     this.state.data = props.data;
     this.myRef = React.createRef();
   }
@@ -100,7 +115,6 @@ class LineChart extends Component {
       .y((d) => {
         return y(d.y);
       });
-    console.log(valueLine);
     // transition
     const path = svg
       .append("path")
@@ -143,6 +157,7 @@ class LineChart extends Component {
       .style("fill", "#000")
       .attr("alignment-baseline", "middle");
   };
+
   // Chamado após o componente ser montado.
   componentDidMount() {
     this.drawGraph();
@@ -161,7 +176,7 @@ class LineChart extends Component {
 
 LineChart.defaultProps = {
   canvasId: "body",
-  data: [],
+  data: {},
   id: "line-chart",
   pinnedScale: true,
   style: {
