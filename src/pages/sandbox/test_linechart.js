@@ -72,11 +72,29 @@ const TestLineChart = () => {
           width: 960,
           height: 500,
           lineColor: ["steelblue", "red"],
-          lineWidth: [1.5, 5]
+          lineWidth: [1.5, 5],
+          axisColor: "black",
+          axisFontSize: "15px"
         }}
         animation={{
           delay: [0, 2000],
           duration: [2000, 2000]
+        }}
+        legend={{
+          style: {
+            fontSize: "15px",
+            fontFamily: "sans-serif",
+            fontColor: "#000",
+            verticalOffset: 30,
+            horizontalOffset: 20,
+            iconSize: 6
+          },
+          position: {
+            top: 0.45,
+            left: 0.9
+          },
+          type: "circle",
+          text: ["Line 1", "Line 2"]
         }}
       />
     </div>
