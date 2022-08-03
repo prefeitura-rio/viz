@@ -9,9 +9,6 @@ export default function Home() {
           <Link to="/"> Home </Link>
         </li>
         <li>
-          <Link to="/especial-sppo/trips"> Especial SPPO | Trips </Link>
-        </li>
-        <li>
           <Link to="/especial-sppo/subsidio">Especial SPPO | Subsidio</Link>
         </li>
         <li>
@@ -25,16 +22,7 @@ export default function Home() {
         </li>
 
         <li>
-          <Link to="/sandbox/test"> Sandbox | Test </Link>
-        </li>
-        <li>
           <Link to="/sandbox/sample"> Sandbox | Sample </Link>
-        </li>
-        <li>
-          <Link to="/sandbox/d3"> Sandbox | Test D3 </Link>
-        </li>
-        <li>
-          <Link to="/sandbox/d3-react"> Sandbox | Test D3 React </Link>
         </li>
         <li>
           <Link to="/sandbox/test-linechart"> Sandbox | Test Line Chart </Link>

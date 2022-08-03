@@ -7,7 +7,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 import styled from "styled-components";
 
 import ScrollMapboxGL from "../../components/engine/scroll-mapbox-gl";
-import busao from "../especial-sppo/scroll-sppo/school-bus.png";
+import busao from "../subsidio-sppo/images/school-bus.png";
 
 gsap.registerPlugin(TextPlugin);
 
