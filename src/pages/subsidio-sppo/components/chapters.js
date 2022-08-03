@@ -147,7 +147,7 @@ const IntroGestaoBG = styled.div`
 export function One(
   props = {
     id: "",
-    ref: null
+    ref: null,
   }
 ) {
   props = setDefaultProps(props);
@@ -173,7 +173,7 @@ export function One(
             fontSize: "1rem",
             fontWeight: "700",
             color: "#ffffff",
-            margin: "4px"
+            margin: "4px",
           }}
           href="http://www.rio.rj.gov.br/web/smtr"
           target="_blank"
@@ -189,7 +189,7 @@ export function One(
             fontSize: "1rem",
             fontWeight: "700",
             color: "#ffffff",
-            margin: "4px"
+            margin: "4px",
           }}
           href="https://viz.dados.rio/#/especial-sppo/interactive"
           target="_blank"
@@ -205,7 +205,7 @@ export function One(
 export function Two(
   props = {
     id: "",
-    progress: 0
+    progress: 0,
   }
 ) {
   props = setDefaultProps(props);
@@ -245,7 +245,7 @@ export function Two(
 export function Three(
   props = {
     id: "",
-    ref: null
+    ref: null,
   }
 ) {
   props = setDefaultProps(props);
@@ -265,7 +265,7 @@ export function Three(
 
 export function Four(
   props = {
-    id: ""
+    id: "",
   }
 ) {
   props = setDefaultProps(props);
@@ -286,7 +286,7 @@ export function Four(
 
 export function Five(
   props = {
-    id: ""
+    id: "",
   }
 ) {
   props = setDefaultProps(props);
@@ -307,7 +307,7 @@ export function Five(
 
 export function Six(
   props = {
-    id: ""
+    id: "",
   }
 ) {
   props = setDefaultProps(props);
@@ -330,7 +330,7 @@ export function Six(
 export function Seven(
   props = {
     id: "",
-    progress: 0
+    progress: 0,
   }
 ) {
   props = setDefaultProps(props);
@@ -382,7 +382,7 @@ export function Seven(
 export function Eight(
   props = {
     id: "",
-    progress: 0
+    progress: 0,
   }
 ) {
   props = setDefaultProps(props);
@@ -417,21 +417,21 @@ export function Eight(
             { x: 22, y: 484 },
             { x: 23, y: 529 },
             { x: 24, y: 576 },
-            { x: 25, y: 625 }
+            { x: 25, y: 625 },
           ]}
           style={{
             margin: {
               top: 20,
               right: 20,
               bottom: 50,
-              left: 70
+              left: 70,
             },
             width: 960,
             height: 500,
             lineColor: "steelblue",
             lineWidth: 1.5,
             axisColor: "white",
-            axisFontSize: "15px"
+            axisFontSize: "15px",
           }}
           legend={{
             style: {
@@ -440,14 +440,14 @@ export function Eight(
               fontColor: "#fff",
               verticalOffset: 30,
               horizontalOffset: 20,
-              iconSize: 6
+              iconSize: 6,
             },
             position: {
               top: 0.45,
-              left: 0.9
+              left: 0.9,
             },
             type: "circle",
-            text: "Line 1"
+            text: "Line 1",
           }}
         />
       </styles.ChapterLineChart>
@@ -458,7 +458,7 @@ export function Eight(
 export function Creditos(
   props = {
     id: "",
-    progress: 0
+    progress: 0,
   }
 ) {
   props = setDefaultProps(props);
@@ -507,7 +507,7 @@ export function Creditos(
 
 const setDefaultProps = (providedProps) => {
   const defaultProps = {
-    id: ""
+    id: "",
   };
 
   return { ...defaultProps, ...providedProps };

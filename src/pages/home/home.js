@@ -15,8 +15,15 @@ export default function Home() {
           <Link to="/especial-sppo/subsidio">Especial SPPO | Subsidio</Link>
         </li>
         <li>
-          <Link to="/especial-sppo/interactive"> Especial SPPO | Interactive </Link>
+          <Link to="/especial-sppo/interactive">
+            Especial SPPO | Interactive
+          </Link>
         </li>
+
+        <li>
+          <Link to="/especial-seop/demolicoes">Especial SEOP | Demolicoes</Link>
+        </li>
+
         <li>
           <Link to="/sandbox/test"> Sandbox | Test </Link>
         </li>
@@ -35,7 +42,6 @@ export default function Home() {
         <li>
           <Link to="/sandbox/test-map"> Sandbox | Test Map </Link>
         </li>
-
       </lu>
     </div>
   );
