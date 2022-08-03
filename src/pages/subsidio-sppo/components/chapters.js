@@ -2,7 +2,7 @@ import styled from "styled-components";
 import logo1 from "../images/logo1.png";
 import * as styles from "./chapters.style";
 // TODO: REMOVE
-import LineChart from "../../../components/charts/line_chart";
+import LineChart from "./line.chart";
 import { Tween, Timeline } from "react-gsap";
 import { gsap } from "gsap";
 import CustomEase from "gsap/CustomEase";
@@ -432,22 +432,6 @@ export function Eight(
             lineWidth: 1.5,
             axisColor: "white",
             axisFontSize: "15px",
-          }}
-          legend={{
-            style: {
-              fontSize: "15px",
-              fontFamily: "sans-serif",
-              fontColor: "#fff",
-              verticalOffset: 30,
-              horizontalOffset: 20,
-              iconSize: 6,
-            },
-            position: {
-              top: 0.45,
-              left: 0.9,
-            },
-            type: "circle",
-            text: "Line 1",
           }}
         />
       </styles.ChapterLineChart>
