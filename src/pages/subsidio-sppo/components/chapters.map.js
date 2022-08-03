@@ -1,10 +1,7 @@
 import { MapboxLayer } from "@deck.gl/mapbox"; // Ref: https://deck.gl/docs/api-reference/mapbox/mapbox-layer
 import { TripsLayer } from "@deck.gl/geo-layers";
 import { GeoJsonLayer } from "@deck.gl/layers";
-const TRIPS = require("./data/trips.json");
-import Map, { Source, Layer } from "react-map-gl";
-// For some custom layers
-import { buildings3d } from "../../components/layers/buildings3d";
+const TRIPS = require("../data/trips.json");
 // import LINHAS_ANTIGAS from "./data/linhas_antigas.json";
 
 export const One = () => {

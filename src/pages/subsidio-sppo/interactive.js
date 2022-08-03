@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import MultilayerMap from "../../components/maps/multilayer_map";
 
 // Chapters
-import * as chapterMap from "./chapters.map";
+import * as chapterMap from "./components/chapters.map";
 import * as chapterDiv from "./components/chapters";
 
 // Scroll and animation stuff
@@ -18,9 +18,8 @@ export default function Interactive() {
 
   const [layers, setLayers] = useState(chapterMap.One().layers);
   // console.log("ChapterLayers", layers);
-   
-  
-    return (
+
+  return (
     <>
       <MultilayerMap
         interactive={true}
@@ -41,7 +40,6 @@ export default function Interactive() {
         animationLoopLength={21600}
         animationSpeed={1}
       />
-
     </>
   );
 }

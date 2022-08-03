@@ -3,7 +3,7 @@ import { TripsLayer } from "@deck.gl/geo-layers";
 import { GeoJsonLayer } from "@deck.gl/layers";
 import Map, { Source, Layer } from "react-map-gl";
 // For some custom layers
-import { buildings3d } from "../../components/layers/buildings3d";
+import { buildings3d } from "../../../components/layers/buildings3d";
 // import LINHAS_ANTIGAS from "./data/linhas_antigas.json";
 
 export const One = () => {

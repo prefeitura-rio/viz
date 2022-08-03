@@ -5,7 +5,7 @@ import MultilayerMap from "../../components/maps/multilayer_map";
 import { Controller, Scene } from "react-scrollmagic";
 
 // Chapters
-import * as chapterMap from "../subsidio-sppo/chapters.map";
+import * as chapterMap from "../subsidio-sppo/components/chapters.map";
 import * as chapterDiv from "../subsidio-sppo/components/chapters";
 
 export default function SubsidioSPPO() {
