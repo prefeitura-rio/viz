@@ -17,7 +17,6 @@ export const ChapterOneDiv = styled.div`
   width: 100%;
   height: 102vh;
   margin-top: -0.5vh;
-
   z-index: -1;
   display: grid;
   grid-template-columns: 0.5fr 2fr 0.5fr;
@@ -31,7 +30,8 @@ export const ChapterOneDiv = styled.div`
     ". nova ."
     ". . .";
   // grid-template-columns: ;
-  justify-items: center;
+  justify-items: left;
+  background-color: #000000;
 `;
 
 export const ChapterGenericDiv = styled.div`

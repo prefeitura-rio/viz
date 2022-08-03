@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import logo1 from "../images/logo1.png";
+import capa from "../images/capa.gif";
 import * as styles from "./chapters.style";
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -18,17 +19,23 @@ export const Logo = styled.img`
   grid-area: logo;
 `;
 
+export const Capa = styled.img`
+  width: 150px;
+  margin-bottom: auto;
+  margin-top: 2%;
+  grid-area: logo;
+`;
+
 const Title = styled.div`
   width: 80%;
 
   color: #ffffff;
   // background-color: #01baef;
-  font-family: "Redaction", sans-serif;
+  font-family: "Poppins", serif;
   font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 1.3;
-  margin: auto;
-  text-align: center;
+  font-size: 5rem;
+  line-height: 1;
+  text-align: left;
   grid-area: titulo;
 `;
 
@@ -41,7 +48,8 @@ const AuthorText = styled.div`
   font-size: 1rem;
   line-height: 1.3;
   margin-bottom: auto;
-  text-align: center;
+  margin-top: 30px;
+  text-align: left;
   grid-area: subtitulo;
 `;
 
@@ -86,11 +94,13 @@ export function One(
   return (
     <styles.ChapterOneDiv id={props.id} ref={props.ref}>
       <Logo src={logo1}></Logo>
+      {/* <Capa src={capa}></Capa> */}
       <Title>
-        Um ponto de virada na história do transporte municipal do Rio de Janeiro
+        1000 <br /> DEMO <br />
+        LIÇÕES
       </Title>
       <AuthorText>
-        Desenvolvido por{" "}
+        Desenvolvido por <br />
         <a
           style={{ fontSize: "1rem", fontWeight: "700", color: "#ffffff" }}
           href="https://www.dados.rio/"
@@ -99,19 +109,18 @@ export function One(
         >
           Escritório de Dados
         </a>{" "}
-        e
+        e<br />
         <a
           style={{
             fontSize: "1rem",
             fontWeight: "700",
             color: "#ffffff",
-            margin: "4px",
           }}
-          href="http://www.rio.rj.gov.br/web/smtr"
+          href="http://www.rio.rj.gov.br/web/seop"
           target="_blank"
           rel="noreferrer"
         >
-          Secretaria Municipal de Transportes
+          Secretaria Municipal de Ordem Pública
         </a>
       </AuthorText>
     </styles.ChapterOneDiv>
