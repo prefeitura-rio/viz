@@ -77,11 +77,16 @@ class MultilayerMap extends React.Component {
         }
       }
     });
-    let opacity = show ? 1 : 0;
+    let opacity = 0;
     for (let i = 0; i < layers.length; i++) {
       // layers from story
       var layerId = layers[i].layer.id;
       var layerType = layers[i].layerType;
+      if (layers[i].targetOpacity !== undefined) {
+        opacity = show ? layers[i].targetOpacity : 0;
+      } else {
+        opacity = show ? 1 : 0;
+      }
 
       // layers from map style
       var mapLayer = mapInstance.getLayer(layerId);

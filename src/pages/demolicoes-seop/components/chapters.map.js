@@ -70,6 +70,7 @@ export const Three = () => {
     layers: [
       {
         layerType: "mapbox",
+        targetOpacity: 0.5,
         layer: {
           ...{
             id: "mapa-geral-cor",
@@ -172,6 +173,10 @@ export const Four = () => {
       },
     },
     layers: [
+      {
+        layerType: "reuse",
+        layer: { id: "mapa-geral-cor" },
+      },
       {
         layerType: "mapbox-style",
         layer: { id: "building-extrusion-red" },
