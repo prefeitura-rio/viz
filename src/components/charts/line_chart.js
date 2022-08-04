@@ -12,7 +12,7 @@ class LineChart extends Component {
       lineColors: [],
       lineWidths: [],
       delay: [],
-      duration: []
+      duration: [],
     };
     // Now we check if the data is a list of lists or a list of objects.
     if (Array.isArray(props.data[0])) {
@@ -282,21 +282,21 @@ LineChart.defaultProps = {
   pinnedScale: true,
   animation: {
     delay: 0,
-    duration: 2000
+    duration: 2000,
   },
   style: {
     margin: {
       top: 20,
       right: 20,
       bottom: 50,
-      left: 70
+      left: 70,
     },
     width: 960,
     height: 500,
     lineColor: "steelblue",
     lineWidth: 1.5,
     axisColor: "black",
-    axisFontSize: "15px"
+    axisFontSize: "15px",
   },
   legend: {
     style: {
@@ -305,15 +305,15 @@ LineChart.defaultProps = {
       fontColor: "#000",
       verticalOffset: 30,
       horizontalOffset: 20,
-      iconSize: 6
+      iconSize: 6,
     },
     position: {
       top: 0.2,
-      left: 0.2
+      left: 0.2,
     },
     type: "circle",
-    text: ""
-  }
+    text: "",
+  },
 };
 
 export default LineChart;

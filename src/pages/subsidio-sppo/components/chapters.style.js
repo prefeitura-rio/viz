@@ -46,7 +46,7 @@ export const ChapterGenericDiv = styled.div`
 export const ChapterLineChart = styled.div`
   height: 100vh;
   width: 100%;
-  // background: #e8cee4;
+  background: #e8cee4;
   z-index: -1;
   display: flex;
   align-items: center;
