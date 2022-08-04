@@ -44,12 +44,10 @@ export const Capa = styled.img`
 
 const Title = styled.div`
   width: 80%;
-
-  color: #1a374d;
-  // background-color: #01baef;
+  color: #ffffff;
   font-family: "Poppins", serif;
   font-weight: 700;
-  font-size: 5rem;
+  font-size: 7rem;
   line-height: 1;
   text-align: right;
   grid-area: titulo;
@@ -57,8 +55,7 @@ const Title = styled.div`
 
 const AuthorText = styled.div`
   width: 80%;
-  color: #1a374d;
-  // background-color: #01baef;
+  color: #ffffff;
   font-family: "Poppins", serif;
   font-weight: 500;
   font-size: 1rem;
@@ -105,7 +102,8 @@ const BigNumber1 = styled.div`
 
 const IntroText = styled.div`
   grid-area: texto;
-  text-align: right;
+  text-align: justify;
+  direction: rtl;
   margin-bottom: 30%;
   vertical-align: middle;
   color: #ffffff;
@@ -120,7 +118,7 @@ const TextOrange = styled.div`
   color: #fff;
   display: inline;
   padding: 1px 8px 1px 8px;
-  margin: 2px;
+  margin: 3px;
 `;
 
 const TextBlue = styled.div`
@@ -128,7 +126,7 @@ const TextBlue = styled.div`
   color: #fff;
   display: inline;
   padding: 1px 8px 1px 8px;
-  margin: 2px;
+  margin: 3px;
 `;
 
 const ContainerCard = styled.div`
@@ -157,7 +155,7 @@ const TextCard = styled.div`
   color: #dbdbdb;
   font-family: "Redaction", sans-serif;
   font-size: 1.2rem;
-  line-height: 1.4;
+  line-height: 1.5;
   text-align: left;
 `;
 
@@ -210,14 +208,13 @@ export function One(
     <styles.ChapterOneDiv id={props.id} ref={props.ref}>
       <Logo src={logo1}></Logo>
       <Title>
-        1000 <br /> DEMO <br />
-        LIÇÕES
+        1000 <br /> DEMOLIÇÕES
       </Title>
       <AuthorText>
         {/* <DWChart title="Map" src="//datawrapper.dwcdn.net/AYB0f/" /> */}
         Desenvolvido por <br />
         <a
-          style={{ fontSize: "1rem", fontWeight: "700", color: "#1A374D" }}
+          style={{ fontSize: "1rem", fontWeight: "700", color: "#ffffff" }}
           href="https://www.dados.rio/"
           target="_blank"
           rel="noreferrer"
@@ -229,7 +226,7 @@ export function One(
           style={{
             fontSize: "1rem",
             fontWeight: "700",
-            color: "#1A374D",
+            color: "#ffffff",
           }}
           href="http://www.rio.rj.gov.br/web/seop"
           target="_blank"
@@ -254,18 +251,33 @@ export function Two(
     <styles.ChapterTwoDiv id={props.id}>
       <IntroTitle id={"intro"}>Introdução</IntroTitle>
       <IntroText>
-        Os cariocas sabem bem quais os problemas enfrentados todos os dias no
-        transporte público da cidade do Rio de Janeiro. E é preciso reconhecer
-        que o sistema por ônibus está ruim e precisa de ajuda. <br />
-        <br />
-        Uma série de fatores levou a este colapso, o que só resultou no
-        sofrimento da população que depende do transporte público da cidade para
-        se locomover. Por isso,{" "}
+        A proliferação de construções irregulares é um problema que tomou conta
+        da cidade do Rio há algumas décadas. Em áreas sob influência do crime
+        organizado a preocupação é ainda maior. Estudos apontam que{" "}
         <TextBlue>
-          a Prefeitura vai regularizar as linhas operantes,
+          a atividade imobiliária se tornou um dos principais sustentáculos
+          financeiros de alguns grupos criminosos (HIRATA, 2021).
         </TextBlue>{" "}
-        <TextBlue>retomar as inoperantes</TextBlue> e{" "}
-        <TextBlue>implementar serviços noturnos.</TextBlue>
+        Essas construções são realizadas sem autorização da Prefeitura, em
+        alguns casos em área pública e erguidas, muitas vezes, sem nenhum
+        acompanhamento técnico. Não à toa a cidade já presenciou desastres
+        envolvendo construções irregulares, com inúmeras vítimas fatais.
+        <br /> <br />
+        Exatamente para combater o crescimento desordenado da cidade, preservar
+        vidas e asfixiar financeiramente o crime organizado que, desde meados de
+        2021,{" "}
+        <TextBlue>
+          a Secretaria de Ordem Pública tem realizado operações constantes de
+          demolição dessas construções sem regularização.
+        </TextBlue>{" "}
+        De lá para cá, foram 1.000 demolições! Isso mesmo, MIL construções
+        irregulares postas abaixo em um ano e meio de trabalho.
+        <br /> <br />
+        Aqui cabe um destaque: o foco das operações é em{" "}
+        <TextBlue>
+          imóveis não habitados, erguidos de forma ilegal e que tragam risco à
+          população.
+        </TextBlue>
       </IntroText>
     </styles.ChapterTwoDiv>
   );
@@ -283,12 +295,13 @@ export function Three(
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an <TextBlue>unknown printer</TextBlue> took a
-          galley of type and scrambled it to make a type specimen book. It has
-          survived not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged.
+          Apesar de ocorrerem em todas as regiões da cidade, as construções
+          irregulares têm uma{" "}
+          <TextBlue>incidência maior na Zona Oeste</TextBlue> do Município, onde
+          ocorrem cerca de <TextBlue>xxx%</TextBlue> das demolições realizadas
+          pela Secretaria de Ordem Pública. Áreas como Recreio, Rio das Pedras e
+          Muzema, por exemplo, são bairros extremamente afetados por essas
+          irregularidades.
         </TextCard>
       </ContainerCard>
     </styles.ChapterGenericDiv>
@@ -308,14 +321,25 @@ export function Four(
       <ContainerCard>
         <Grid>
           <Grid1>
-            <BigNumber id="numbers">0</BigNumber>
+            <BigNumber id="numbers">150</BigNumber>
             <BigNumber1>milhões</BigNumber1>
           </Grid1>
           <TextCard>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an <TextBlue>unknown printer</TextBlue>{" "}
-            took a galley of type and scrambled it to make a type specimen book.
+            Por trás de tanta construção ilegal em área sob influência do crime
+            organizado, há um grande interesse econômico. Estudos apontam que{" "}
+            <TextBlue>
+              os grupos criminais, principalmente as milícias, obtiveram um
+              aumento de seus ganhos através do mercado imobiliário,
+            </TextBlue>{" "}
+            a partir da oferta e da proteção para execução de construções
+            irregulares (HIRATA, 2021).
+            <br /> <br />
+            E, muito também, para atingi-los no bolso é que a SEOP tem realizado
+            suas operações com foco nessas regiões. Prova disso é que{" "}
+            <TextBlue>
+              desde 2021 as operações da secretaria acarretaram em um prejuízo
+              estimado em R$ xxx milhões para os cofres do crime organizado.
+            </TextBlue>
           </TextCard>
         </Grid>
       </ContainerCard>
@@ -347,12 +371,13 @@ export function Five(
         {/* <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script> */}
         <TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an <TextBlue>unknown printer</TextBlue> took a
-          galley of type and scrambled it to make a type specimen book. It has
-          survived not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged.
+          Analisando as prioridades da Secretaria de Ordem Pública e da própria
+          Prefeitura, dá para notar que o tema construções irregulares é tratado
+          com a <TextBlue>absoluta relevância</TextBlue> que o assunto merece.
+          Se olharmos historicamente, porém, nem sempre a análise foi essa. Na
+          gestão anterior foram feitas 359 ao longo de quatro anos. Desde que a
+          atual gestão assumiu{" "}
+          <TextBlue>1.000 demolições em apenas um ano e meio.</TextBlue>
         </TextCard>
       </ContainerCard>
     </styles.ChapterGenericDiv>

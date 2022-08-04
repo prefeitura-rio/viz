@@ -1,6 +1,6 @@
 // CSS
 import styled from "styled-components";
-import capa from "../images/capa.gif"
+import capa from "../images/capa.gif";
 
 export const TextChapterIndicator = styled.div`
   position: absolute;
@@ -51,7 +51,7 @@ export const ChapterTwoDiv = styled.div`
   margin-left: -0.5%;
   overflow-x: hidden;
   display: grid;
-  grid-template-columns: 1.4fr 1.1fr 0.52fr;
+  grid-template-columns: 1fr 1.2fr 0.4fr;
   grid-template-rows: 1fr 1fr 0.5fr 1.5fr 1fr;
   gap: 30px 20px;
   grid-template-areas:
