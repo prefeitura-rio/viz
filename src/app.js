@@ -3,6 +3,7 @@
 
 import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { createGlobalStyle } from 'styled-components';
 
 const Home = lazy(() => import("./pages/home/home"));
 const StorySample = lazy(() => import("./pages/sandbox/sample"));
@@ -13,10 +14,18 @@ const TestLineChart = lazy(() => import("./pages/sandbox/test_linechart"));
 const TestMap = lazy(() => import("./pages/sandbox/test_map"));
 const DemolicoesSEOP = lazy(() => import("./pages/demolicoes-seop/story"));
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+  }
+`
+
 DemolicoesSEOP;
 function App() {
   return (
     <div id={"main"}>
+      <GlobalStyle/>
       <Router>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>

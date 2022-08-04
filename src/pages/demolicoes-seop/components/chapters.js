@@ -38,8 +38,8 @@ export const NewsImage = styled.img`
 `;
 
 export const Capa = styled.img`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 `;
 
 const Title = styled.div`
@@ -238,7 +238,6 @@ export function One(
           Secretaria Municipal de Ordem Pública
         </a>
       </AuthorText>
-      {/* <Capa src={capa}></Capa> */}
     </styles.ChapterOneDiv>
   );
 }
@@ -309,7 +308,7 @@ export function Four(
       <ContainerCard>
         <Grid>
           <Grid1>
-            <BigNumber>150</BigNumber>
+            <BigNumber id="numbers">0</BigNumber>
             <BigNumber1>milhões</BigNumber1>
           </Grid1>
           <TextCard>

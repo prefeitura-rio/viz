@@ -1,5 +1,6 @@
 // CSS
 import styled from "styled-components";
+import capa from "../images/capa.gif"
 
 export const TextChapterIndicator = styled.div`
   position: absolute;
@@ -15,7 +16,7 @@ export const TextChapterIndicator = styled.div`
 
 export const ChapterOneDiv = styled.div`
   width: 100%;
-  height: 102vh;
+  height: 100vh;
   margin-top: -0.5vh;
   z-index: -1;
   display: grid;
@@ -30,8 +31,9 @@ export const ChapterOneDiv = styled.div`
     ". nova ."
     ". . .";
   // grid-template-columns: ;
+  background-image: url(${capa});
+  background-size: cover;
   justify-items: right;
-  background-color: #000000;
 `;
 
 export const ChapterGenericDiv = styled.div`
