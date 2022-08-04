@@ -10,7 +10,7 @@ class LineChart extends Component {
     this.state = {
       data: [],
     };
-    this.state.data = props.data;
+    this.state.data = plotData;
     this.myRef = React.createRef();
   }
 
@@ -35,71 +35,36 @@ class LineChart extends Component {
       .attr("transform", `translate(${margin.left},     ${margin.top})`);
 
     var data = this.state.data;
-
+    console.log(data);
     // Add X axis and Y axis
-    if (this.props.pinnedScale) {
-      var x = d3
-        .scaleLinear()
-        .range([0, width])
-        .domain(
-          d3.extent(data, (d) => {
-            return d.x;
-          })
-        );
-      var y = d3
-        .scaleLinear()
-        .range([height, 0])
-        .domain(
-          d3.extent(data, (d) => {
-            return d.y;
-          })
-        );
-    } else {
-      var x = d3
-        .scaleLinear()
-        .range([0, width])
-        .domain(
-          d3.extent(data, (d) => {
-            return d.x;
-          })
-        );
-      var y = d3
-        .scaleLinear()
-        .range([height, 0])
-        .domain(
-          d3.extent(data, (d) => {
-            return d.y;
-          })
-        );
-    }
-    var axisBottom = svg
-      .append("g")
-      .attr("transform", `translate(0, ${height})`)
-      .call(d3.axisBottom(x));
-    axisBottom.selectAll("line").style("stroke", this.props.style.axisColor);
-    axisBottom.selectAll("path").style("stroke", this.props.style.axisColor);
-    axisBottom.selectAll("text").style("fill", this.props.style.axisColor);
-    axisBottom
-      .selectAll("text")
-      .style("font-size", this.props.style.axisFontSize);
-
-    var axisLeft = svg.append("g").call(d3.axisLeft(y));
-    axisLeft.selectAll("line").style("stroke", this.props.style.axisColor);
-    axisLeft.selectAll("path").style("stroke", this.props.style.axisColor);
-    axisLeft.selectAll("text").style("fill", this.props.style.axisColor);
-    axisLeft
-      .selectAll("text")
-      .style("font-size", this.props.style.axisFontSize);
+    var x = d3
+      .scaleOrdinal()
+      .range([0, width])
+      .domain(
+        d3.extent(data, (d) => {
+          console.log(d.semana);
+          return d.semana;
+        })
+      );
+    var y = d3
+      .scaleLinear()
+      .range([height, 0])
+      .domain(
+        d3.extent(data, (d) => {
+          return d.mean;
+        })
+      );
 
     // // add the Line
     var valueLine = d3
       .line()
       .x((d) => {
-        return x(d.x);
+        return x(d.semana);
       })
       .y((d) => {
-        return y(d.y);
+        return y(d.mean);
       });
+
     // transition
     const path = svg
       .append("path")
@@ -124,6 +89,25 @@ class LineChart extends Component {
       .attr("stroke-dasharray", pathLength)
       .transition(transitionPath)
       .attr("stroke-dashoffset", 0);
+
+    var axisBottom = svg
+      .append("g")
+      .attr("transform", `translate(0, ${height})`)
+      .call(d3.axisBottom(x));
+    axisBottom.selectAll("line").style("stroke", this.props.style.axisColor);
+    axisBottom.selectAll("path").style("stroke", this.props.style.axisColor);
+    axisBottom.selectAll("text").style("fill", this.props.style.axisColor);
+    axisBottom
+      .selectAll("text")
+      .style("font-size", this.props.style.axisFontSize);
+
+    var axisLeft = svg.append("g").call(d3.axisLeft(y));
+    axisLeft.selectAll("line").style("stroke", this.props.style.axisColor);
+    axisLeft.selectAll("path").style("stroke", this.props.style.axisColor);
+    axisLeft.selectAll("text").style("fill", this.props.style.axisColor);
+    axisLeft
+      .selectAll("text")
+      .style("font-size", this.props.style.axisFontSize);
 
     // add the Legend
     svg
@@ -161,7 +145,6 @@ class LineChart extends Component {
 
 LineChart.defaultProps = {
   canvasId: "body",
-  data: {},
   id: "line-chart",
   pinnedScale: true,
   style: {
