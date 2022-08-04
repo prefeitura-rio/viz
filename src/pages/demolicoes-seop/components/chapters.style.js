@@ -21,7 +21,7 @@ export const ChapterOneDiv = styled.div`
   display: grid;
   grid-template-columns: 0.5fr 2fr 0.5fr;
   grid-template-rows: 0.4fr 1.7fr 0.6fr 0.5fr 2.5fr 0.3fr;
-  gap: 20px 20px;
+  gap: 40px 20px;
   grid-template-areas:
     ". logo ."
     ". . ."
@@ -30,7 +30,7 @@ export const ChapterOneDiv = styled.div`
     ". nova ."
     ". . .";
   // grid-template-columns: ;
-  justify-items: left;
+  justify-items: right;
   background-color: #000000;
 `;
 
@@ -49,13 +49,15 @@ export const ChapterTwoDiv = styled.div`
   margin-left: -0.5%;
   overflow-x: hidden;
   display: grid;
-  grid-template-columns: 0.6fr 0.8fr 2fr 0.6fr;
-  grid-template-rows: 1fr 1.3fr 0.3fr;
-  gap: 0px 50px;
+  grid-template-columns: 1.4fr 1.1fr 0.52fr;
+  grid-template-rows: 1fr 1fr 0.5fr 1.5fr 1fr;
+  gap: 30px 20px;
   grid-template-areas:
-    ". . . ."
-    ". titulo texto ."
-    ". . . .";
+    ". . ."
+    ". imagem ."
+    ". titulo ."
+    ". texto ."
+    ". . .";
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
   opacity: 1;
