@@ -5,8 +5,8 @@ import muzema from "../images/muzema.png";
 import capa from "../images/capa.gif";
 import * as styles from "./chapters.style";
 
-import ReactDOM from "react-dom";
-import DWChart from "react-datawrapper-chart";
+// import ReactDOM from "react-dom";
+// import DWChart from "react-datawrapper-chart";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -210,7 +210,7 @@ export function One(
         LIÇÕES
       </Title>
       <AuthorText>
-        <DWChart title="Map" src="//datawrapper.dwcdn.net/AYB0f/" />
+        {/* <DWChart title="Map" src="//datawrapper.dwcdn.net/AYB0f/" /> */}
         Desenvolvido por <br />
         <a
           style={{ fontSize: "1rem", fontWeight: "700", color: "#1A374D" }}
