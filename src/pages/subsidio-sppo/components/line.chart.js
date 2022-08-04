@@ -10,21 +10,6 @@ class LineChart extends Component {
     this.state = {
       data: [],
     };
-
-    function convertPlotData(data) {
-      var convertedData = [];
-      //pandas gives each column the same number of
-      //objects, arbitrarily choose one to iterate over
-      for (var i in data[Object.keys(data)[0]]) {
-        var convertedDatum = {};
-        for (var key in data) {
-          convertedDatum[key] = data[key][i];
-        }
-        convertedData.push(convertedDatum);
-      }
-      return convertedData;
-    }
-    console.log("convertPlotData", convertPlotData(plotData));
     this.state.data = props.data;
     this.myRef = React.createRef();
   }
