@@ -1,12 +1,15 @@
 import styled from "styled-components";
-import logo1 from "../images/logo1.png";
-import riodaspedras from "../images/riodaspedras.png";
-import muzema from "../images/muzema.png";
-import capa from "../images/capa.gif";
 import * as styles from "./chapters.style";
 
 // import ReactDOM from "react-dom";
 // import DWChart from "react-datawrapper-chart";
+
+// IMAGENS
+import logo1 from "../images/logo1.png";
+import riodaspedras from "../images/riodaspedras.png";
+import muzema from "../images/muzema.png";
+import salgueiro from "../images/salgueiro.png";
+import capa from "../images/capa.gif";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -35,7 +38,8 @@ export const NewsImage = styled.img`
 `;
 
 export const Capa = styled.img`
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
 `;
 
 const Title = styled.div`
@@ -234,7 +238,7 @@ export function One(
           Secretaria Municipal de Ordem Pública
         </a>
       </AuthorText>
-      <Capa src={capa}></Capa>
+      {/* <Capa src={capa}></Capa> */}
     </styles.ChapterOneDiv>
   );
 }
@@ -280,13 +284,12 @@ export function Three(
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <TextCard>
-          <b>Onde estão - nível cidade. </b>Lorem Ipsum is simply dummy text of
-          the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an{" "}
-          <TextBlue>unknown printer</TextBlue> took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an <TextBlue>unknown printer</TextBlue> took a
+          galley of type and scrambled it to make a type specimen book. It has
+          survived not only five centuries, but also the leap into electronic
+          typesetting, remaining essentially unchanged.
         </TextCard>
       </ContainerCard>
     </styles.ChapterGenericDiv>
@@ -310,13 +313,10 @@ export function Four(
             <BigNumber1>milhões</BigNumber1>
           </Grid1>
           <TextCard>
-            <b>Prejuizo. </b>Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an{" "}
-            <TextBlue>unknown printer</TextBlue> took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only
-            five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an <TextBlue>unknown printer</TextBlue>{" "}
+            took a galley of type and scrambled it to make a type specimen book.
           </TextCard>
         </Grid>
       </ContainerCard>
@@ -348,7 +348,6 @@ export function Five(
         {/* <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script> */}
         <TextCard>
-          Comparação com gráfico <br />
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an <TextBlue>unknown printer</TextBlue> took a
@@ -402,7 +401,6 @@ export function Seven(
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <TextCard>
-          Zona Oeste <br />
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an <TextBlue>unknown printer</TextBlue> took a
@@ -489,6 +487,42 @@ export function Nine(
 }
 
 export function Ten(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv id={props.id}>
+      <ContainerCard1>
+        <NewsImage src={salgueiro}></NewsImage>
+        <NewsTitle>
+          <a
+            style={{
+              fontSize: "2.2rem",
+              fontWeight: "700",
+              color: "#ffffff",
+            }}
+            href="https://www1.folha.uol.com.br/cotidiano/2021/11/predio-de-4-andares-desaba-no-rio-e-deixa-um-morto-e-tres-feridos.shtml"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Prédio de 4 andares desaba no Rio e deixa um morto e três feridos
+          </a>
+        </NewsTitle>
+        <TextCard1>
+          Um prédio de quatro andares desabou no Morro do Salgueiro, na zona
+          norte do Rio de Janeiro, nesta quarta-feira (17) e deixou um morto e
+          três feridos, de acordo com o Corpo de Bombeiros
+        </TextCard1>
+      </ContainerCard1>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Eleven(
   props = {
     id: "",
     progress: 0,

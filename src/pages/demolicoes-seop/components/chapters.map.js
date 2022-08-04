@@ -352,6 +352,34 @@ export const Ten = () => {
     location: {
       desktop: {
         center: {
+          lon: -43.22702,
+          lat: -22.93045,
+        },
+        zoom: 17.19,
+        pitch: 51.0,
+        bearing: 113.23,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.22711,
+          lat: -22.93024,
+        },
+        zoom: 17.35,
+        pitch: 52.0,
+        bearing: 109.23,
+        duration: 4000,
+      },
+    },
+    layers: [],
+  };
+};
+
+export const Eleven = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
           lon: -43.45632,
           lat: -22.92106,
         },

@@ -79,6 +79,10 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Ten().location);
         setLayers(chapterMap.Ten().layers);
         break;
+      case 11:
+        setPosition(chapterMap.Eleven().location);
+        setLayers(chapterMap.Eleven().layers);
+        break;
       default:
         break;
     }
@@ -181,20 +185,27 @@ export default function SubsidioSPPO() {
       },
     });
 
-    const tl10 = gsap.timeline();
-    tl10
-      .set("#chapter-10", { opacity: 0 })
-      .to("#chapter-10", { opacity: 0, duration: 30 })
-      .to("#chapter-10", { opacity: 1, duration: 6 })
-      .to("#chapter-10", { opacity: 1, duration: 20 })
-      .to("#chapter-10", { opacity: 1, duration: 6 })
-      .to("#chapter-10", { opacity: 1, duration: 28 });
-
     ScrollTrigger.create({
-      animation: tl10,
       trigger: "#chapter-10",
       onToggle: () => {
-        setChapterNumberMap(6);
+        setChapterNumberMap(10);
+      },
+    });
+
+    const tl11 = gsap.timeline();
+    tl11
+      .set("#chapter-11", { opacity: 0 })
+      .to("#chapter-11", { opacity: 0, duration: 30 })
+      .to("#chapter-11", { opacity: 1, duration: 6 })
+      .to("#chapter-11", { opacity: 1, duration: 20 })
+      .to("#chapter-11", { opacity: 1, duration: 6 })
+      .to("#chapter-11", { opacity: 1, duration: 28 });
+
+    ScrollTrigger.create({
+      animation: tl11,
+      trigger: "#chapter-11",
+      onToggle: () => {
+        setChapterNumberMap(11);
       },
     });
   }, []);
@@ -230,6 +241,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Eight id={"chapter-8"} />
       <chapterDiv.Nine id={"chapter-9"} />
       <chapterDiv.Ten id={"chapter-10"} />
+      <chapterDiv.Eleven id={"chapter-11"} />
     </>
   );
 }
