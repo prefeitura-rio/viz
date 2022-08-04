@@ -190,8 +190,8 @@ const Grid = styled.div`
 
 const Grid1 = styled.div`
   display: grid;
-  grid-template-rows: 100px 100px;
-  gap: 20px 0px;
+  grid-template-rows: 110px 60px;
+  aling-items: center;
 `;
 
 const GifCapa = styled.div`
