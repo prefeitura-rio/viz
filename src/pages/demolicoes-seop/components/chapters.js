@@ -85,7 +85,7 @@ const BigNumber = styled.div`
   font-family: "Redaction", sans-serif;
   font-weight: 700;
   font-size: 8rem;
-  line-height: 1;
+  line-height: 0.8;
   opacity: 1;
   align-self: end;
 `;
@@ -94,7 +94,7 @@ const BigNumber1 = styled.div`
   color: #1a374d;
   font-family: "Redaction", sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 5rem;
   line-height: 1;
   opacity: 1;
   align-self: end;
@@ -103,6 +103,7 @@ const BigNumber1 = styled.div`
 const IntroText = styled.div`
   grid-area: texto;
   text-align: justify;
+  text-align-last: right;
   /* direction: rtl; */
   margin-bottom: 30%;
   vertical-align: middle;
@@ -142,7 +143,7 @@ const ContainerCard = styled.div`
 
 const ContainerCard1 = styled.div`
   min-width: 250px;
-  margin: auto 200px auto auto;
+  margin: auto auto auto 250px;
   width: 25%;
   padding: 40px;
   background-color: rgba(0, 0, 0, 0.2);
@@ -191,6 +192,7 @@ const Grid1 = styled.div`
   aling-items: end;
   justify-content: start;
   margin-bottom: 20px;
+  gap: 0px 20px;
 `;
 
 const GifCapa = styled.div`
