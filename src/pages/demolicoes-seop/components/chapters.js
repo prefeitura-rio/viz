@@ -39,10 +39,10 @@ export const NewsImage = styled.img`
   margin-bottom: 30px;
 `;
 
-export const Capa = styled.img`
-  width: 100%;
-  height: 100%;
-`;
+// export const CapaImg = styled.img`
+//   width: 100%;
+//   height: 100%;
+// `;
 
 const Title = styled.div`
   width: 80%;
@@ -200,7 +200,7 @@ const GifCapa = styled.div`
   height: 100%;
 `;
 
-export function One(
+export function Capa(
   props = {
     id: "",
     ref: null,
@@ -208,7 +208,7 @@ export function One(
 ) {
   props = setDefaultProps(props);
   return (
-    <styles.ChapterOneDiv id={props.id} ref={props.ref}>
+    <styles.CapaDiv id={props.id} ref={props.ref}>
       <Logo src={logo}></Logo>
       <Title>
         1000 <br /> DEMOLIÇÕES
@@ -238,11 +238,11 @@ export function One(
           Secretaria Municipal de Ordem Pública
         </a>
       </AuthorText>
-    </styles.ChapterOneDiv>
+    </styles.CapaDiv>
   );
 }
 
-export function Two(
+export function Intro(
   props = {
     id: "",
     progress: 0,
@@ -251,7 +251,7 @@ export function Two(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterTwoDiv id={props.id}>
+    <styles.IntroDiv id={props.id}>
       <IntroTitle id={"intro"}>Como tudo começou</IntroTitle>
       <IntroText>
         A proliferação de construções irregulares é um problema que tomou conta
@@ -283,7 +283,7 @@ export function Two(
           população.
         </TextBlue>
       </IntroText>
-    </styles.ChapterTwoDiv>
+    </styles.IntroDiv>
   );
 }
 
@@ -548,7 +548,7 @@ export function Fim(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterTwoDiv id={props.id}>
+    <styles.IntroDiv id={props.id}>
       <IntroTitle id={"intro"}>Fim</IntroTitle>
       <IntroText>
         É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
@@ -568,7 +568,7 @@ export function Fim(
         meios de novas tecnologias, que incluem drones, ortofotos e imagens de
         satélites
       </IntroText>
-    </styles.ChapterTwoDiv>
+    </styles.IntroDiv>
   );
 }
 
@@ -581,7 +581,7 @@ export function Acompanhe(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterTwoDiv id={props.id}>
+    <styles.IntroDiv id={props.id}>
       <IntroTitle id={"intro"}>Acompanhe as ações da SEOP</IntroTitle>
       <IntroText>
         É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
@@ -601,7 +601,7 @@ export function Acompanhe(
         meios de novas tecnologias, que incluem drones, ortofotos e imagens de
         satélites
       </IntroText>
-    </styles.ChapterTwoDiv>
+    </styles.IntroDiv>
   );
 }
 
@@ -614,7 +614,7 @@ export function Oeste(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterTwoDiv id={props.id}>
+    <styles.IntroDiv id={props.id}>
       <IntroTitle id={"intro"}>Onde atuamos e o foco na Zona Oeste</IntroTitle>
       <IntroText>
         Apesar de ocorrerem em todas as regiões da cidade, as construções
@@ -624,7 +624,7 @@ export function Oeste(
         Recreio, Rio das Pedras e Muzema, por exemplo, são bairros extremamente
         afetados por essas irregularidades.
       </IntroText>
-    </styles.ChapterTwoDiv>
+    </styles.IntroDiv>
   );
 }
 

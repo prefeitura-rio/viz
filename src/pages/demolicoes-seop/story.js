@@ -14,9 +14,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SubsidioSPPO() {
-  const [location, setLocation] = useState(chapterMap.One().location);
-
-  const [layers, setLayers] = useState(chapterMap.One().layers);
   // console.log("ChapterLayers", layers);
 
   const [chartProgress, setChartProgress] = useState(0);
@@ -35,13 +32,21 @@ export default function SubsidioSPPO() {
       },
     });
   };
-  const [chapterNumberMap, setChapterNumberMap] = useState(0);
-  // console.log(chapterNumberMap);
+  const [chapterNumberMap, setChapterNumberMap] = useState("capa");
+  console.log(chapterNumberMap);
   useEffect(() => {
     switch (chapterNumberMap) {
-      case 1:
-        setPosition(chapterMap.One().location);
-        setLayers(chapterMap.One().layers);
+      case "capa":
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
+        break;
+      case "intro":
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
+        break;
+      case "exemplo1":
+        setPosition(chapterMap.Exemplo1().location);
+        setLayers(chapterMap.Exemplo1().layers);
         break;
       case "prejuizo":
         setPosition(chapterMap.Prejuizo().location);
@@ -50,10 +55,6 @@ export default function SubsidioSPPO() {
       case "grafico":
         setPosition(chapterMap.Grafico().location);
         setLayers(chapterMap.Grafico().layers);
-        break;
-      case "exemplo1":
-        setPosition(chapterMap.Exemplo1().location);
-        setLayers(chapterMap.Exemplo1().layers);
         break;
       case "exemplo2":
         setPosition(chapterMap.Exemplo2().location);
@@ -88,6 +89,10 @@ export default function SubsidioSPPO() {
     }
   }, [chapterNumberMap]);
 
+  const [location, setLocation] = useState(chapterMap.Capa().location);
+
+  const [layers, setLayers] = useState(chapterMap.Capa().layers);
+
   const vh = (coef) => window.innerHeight * (coef / 100);
   const vw = (coef) => window.innerWidth * (coef / 100);
 
@@ -103,33 +108,64 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#chapter-1",
+      trigger: "#capa",
       onToggle: () => {
-        setChapterNumberMap(1);
+        setChapterNumberMap("capa");
       },
     });
 
     const tl2 = gsap.timeline();
     tl2
-      .set("#chapter-2", { opacity: 1 })
-      .to("#chapter-2", { opacity: 1, duration: 30 })
-      .to("#chapter-2", { opacity: 1, duration: 6 })
-      .to("#chapter-2", { opacity: 1, duration: 20 })
-      .to("#chapter-2", { opacity: 0, duration: 6 })
-      .to("#chapter-2", { opacity: 0, duration: 28 });
+      .set("#intro", { opacity: 1 })
+      .to("#intro", { opacity: 1, duration: 30 })
+      .to("#intro", { opacity: 1, duration: 6 })
+      .to("#intro", { opacity: 1, duration: 20 })
+      .to("#intro", { opacity: 0, duration: 6 })
+      .to("#intro", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl2,
-      trigger: "#chapter-2",
+      trigger: "#intro",
       onToggle: () => {
-        setChapterNumberMap(1);
+        setChapterNumberMap("intro");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#chapter-prejuizo",
+      trigger: "#exemplo1",
       onToggle: () => {
-        setChapterNumberMap("prejuizo");
+        setChapterNumberMap("exemplo1");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#exemplo2",
+      onToggle: () => {
+        setChapterNumberMap("exemplo2");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#exemplo3",
+      onToggle: () => {
+        setChapterNumberMap("exemplo3");
+      },
+    });
+
+    const tl13 = gsap.timeline();
+    tl13
+      .set("#oeste", { opacity: 0 })
+      .to("#oeste", { opacity: 0, duration: 30 })
+      .to("#oeste", { opacity: 1, duration: 6 })
+      .to("#oeste", { opacity: 1, duration: 20 })
+      .to("#oeste", { opacity: 0, duration: 6 })
+      .to("#oeste", { opacity: 0, duration: 28 });
+
+    ScrollTrigger.create({
+      animation: tl13,
+      trigger: "#oeste",
+      onToggle: () => {
+        setChapterNumberMap("oeste");
       },
     });
 
@@ -145,10 +181,16 @@ export default function SubsidioSPPO() {
       duration: 2,
       onUpdate: changeNumber,
     });
-
     ScrollTrigger.create({
       animation: tl4,
-      trigger: "#chapter-4",
+      trigger: "#prejuizo",
+      onToggle: () => {
+        setChapterNumberMap("prejuizo");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#grafico",
       scrub: false,
       toggleActions: "play reverse play reverse",
       onToggle: () => {
@@ -156,56 +198,18 @@ export default function SubsidioSPPO() {
       },
     });
 
-    ScrollTrigger.create({
-      trigger: "#chapter-exemplo1",
-      onToggle: () => {
-        setChapterNumberMap("exemplo1");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#chapter-exemplo2",
-      onToggle: () => {
-        setChapterNumberMap("exemplo2");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#chapter-exemplo3",
-      onToggle: () => {
-        setChapterNumberMap("exemplo3");
-      },
-    });
-
-    const tl13 = gsap.timeline();
-    tl13
-      .set("#chapter-oeste", { opacity: 0 })
-      .to("#chapter-oeste", { opacity: 0, duration: 30 })
-      .to("#chapter-oeste", { opacity: 1, duration: 6 })
-      .to("#chapter-oeste", { opacity: 1, duration: 20 })
-      .to("#chapter-oeste", { opacity: 0, duration: 6 })
-      .to("#chapter-oeste", { opacity: 0, duration: 28 });
-
-    ScrollTrigger.create({
-      animation: tl13,
-      trigger: "#chapter-oeste",
-      onToggle: () => {
-        setChapterNumberMap("oeste");
-      },
-    });
-
     const tl12 = gsap.timeline();
     tl12
-      .set("#chapter-acompanhe", { opacity: 0 })
-      .to("#chapter-acompanhe", { opacity: 0, duration: 30 })
-      .to("#chapter-acompanhe", { opacity: 1, duration: 6 })
-      .to("#chapter-acompanhe", { opacity: 1, duration: 20 })
-      .to("#chapter-acompanhe", { opacity: 0, duration: 6 })
-      .to("#chapter-acompanhe", { opacity: 0, duration: 28 });
+      .set("#acompanhe", { opacity: 0 })
+      .to("#acompanhe", { opacity: 0, duration: 30 })
+      .to("#acompanhe", { opacity: 1, duration: 6 })
+      .to("#acompanhe", { opacity: 1, duration: 20 })
+      .to("#acompanhe", { opacity: 0, duration: 6 })
+      .to("#acompanhe", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl12,
-      trigger: "#chapter-acompanhe",
+      trigger: "#acompanhe",
       onToggle: () => {
         setChapterNumberMap("acompanhe");
       },
@@ -213,16 +217,16 @@ export default function SubsidioSPPO() {
 
     const tl11 = gsap.timeline();
     tl11
-      .set("#chapter-fim", { opacity: 0 })
-      .to("#chapter-fim", { opacity: 0, duration: 30 })
-      .to("#chapter-fim", { opacity: 1, duration: 6 })
-      .to("#chapter-fim", { opacity: 1, duration: 20 })
-      .to("#chapter-fim", { opacity: 1, duration: 6 })
-      .to("#chapter-fim", { opacity: 1, duration: 28 });
+      .set("#fim", { opacity: 0 })
+      .to("#fim", { opacity: 0, duration: 30 })
+      .to("#fim", { opacity: 1, duration: 6 })
+      .to("#fim", { opacity: 1, duration: 20 })
+      .to("#fim", { opacity: 1, duration: 6 })
+      .to("#fim", { opacity: 1, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl11,
-      trigger: "#chapter-fim",
+      trigger: "#fim",
       onToggle: () => {
         setChapterNumberMap("fim");
       },
@@ -250,18 +254,18 @@ export default function SubsidioSPPO() {
         animationLoopLength={21600}
         animationSpeed={1}
       />
-      <chapterDiv.One id={"chapter-1"} />
-      <chapterDiv.Two id={"chapter-2"} />
-      <chapterDiv.Exemplo1 id={"chapter-exemplo1"} />
-      <chapterDiv.Exemplo2 id={"chapter-exemplo2"} />
-      <chapterDiv.Exemplo3 id={"chapter-exemplo3"} />
-      <chapterDiv.Oeste id={"chapter-oeste"} />
-      <chapterDiv.Prejuizo id={"chapter-prejuizo"} />
-      <chapterDiv.Grafico id={"chapter-grafico"} />
-      <chapterDiv.Acompanhe id={"chapter-acompanhe"} />
-      <chapterDiv.Seop1 id={"chapter-seop1"} />
-      <chapterDiv.Seop2 id={"chapter-seop2"} />
-      <chapterDiv.Fim id={"chapter-fim"} />
+      <chapterDiv.Capa id={"capa"} />
+      <chapterDiv.Intro id={"intro"} />
+      <chapterDiv.Exemplo1 id={"exemplo1"} />
+      <chapterDiv.Exemplo2 id={"exemplo2"} />
+      <chapterDiv.Exemplo3 id={"exemplo3"} />
+      <chapterDiv.Oeste id={"oeste"} />
+      <chapterDiv.Prejuizo id={"prejuizo"} />
+      <chapterDiv.Grafico id={"grafico"} />
+      <chapterDiv.Acompanhe id={"acompanhe"} />
+      <chapterDiv.Seop1 id={"seop1"} />
+      <chapterDiv.Seop2 id={"seop2"} />
+      <chapterDiv.Fim id={"fim"} />
     </>
   );
 }
