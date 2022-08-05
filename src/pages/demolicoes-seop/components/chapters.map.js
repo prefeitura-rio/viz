@@ -294,54 +294,17 @@ export const Grafico = () => {
   };
 };
 
-export const Exemplo1 = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.32192,
-          lat: -22.98894,
-        },
-        zoom: 16.82,
-        pitch: 44.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.18213,
-          lat: -22.90645,
-        },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox-style",
-        layer: { id: "building-extrusion-red" },
-      },
-      {
-        layerType: "mapbox-style",
-        layer: { id: "building-extrusion" },
-      },
-    ],
-  };
-};
-
 export const Seop1 = () => {
   return {
     location: {
       desktop: {
         center: {
-          lon: -43.32192,
-          lat: -22.98894,
+          lon: -43.341,
+          lat: -22.98112,
         },
-        zoom: 16.82,
-        pitch: 44.0,
-        bearing: 0.0,
+        zoom: 17.8,
+        pitch: 46.5,
+        bearing: 19.9,
         duration: 4000,
       },
       mobile: {
@@ -373,12 +336,12 @@ export const Seop2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.32192,
-          lat: -22.98894,
+          lon: -43.48128,
+          lat: -23.00913,
         },
-        zoom: 16.82,
-        pitch: 44.0,
-        bearing: 0.0,
+        zoom: 13.92,
+        pitch: 43.0,
+        bearing: -55.6,
         duration: 4000,
       },
       mobile: {
@@ -479,17 +442,54 @@ export const Oeste = () => {
   };
 };
 
+export const Exemplo1 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.3226,
+          lat: -22.9855,
+        },
+        zoom: 17.4,
+        pitch: 50.5,
+        bearing: 7.1,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.18213,
+          lat: -22.90645,
+        },
+        zoom: 15.11,
+        pitch: 60.0,
+        bearing: -146.41,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion-red" },
+      },
+      {
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion" },
+      },
+    ],
+  };
+};
+
 export const Exemplo2 = () => {
   return {
     location: {
       desktop: {
         center: {
-          lon: -43.33404,
-          lat: -22.97523,
+          lon: -43.341,
+          lat: -22.98112,
         },
-        zoom: 16.69,
-        pitch: 52.5,
-        bearing: 91.61,
+        zoom: 17.8,
+        pitch: 46.5,
+        bearing: 19.9,
         duration: 4000,
       },
       mobile: {
@@ -521,12 +521,12 @@ export const Exemplo3 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.22702,
-          lat: -22.93045,
+          lon: -43.23085,
+          lat: -22.92998,
         },
-        zoom: 17.19,
-        pitch: 51.0,
-        bearing: 113.23,
+        zoom: 17.56,
+        pitch: 46.5,
+        bearing: 19.9,
         duration: 4000,
       },
       mobile: {
