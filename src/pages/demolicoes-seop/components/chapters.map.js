@@ -6,7 +6,7 @@ import Map, { Source, Layer } from "react-map-gl";
 import { buildings3d } from "../../../components/layers/buildings3d";
 // import LINHAS_ANTIGAS from "./data/linhas_antigas.json";
 
-export const One = () => {
+export const Capa = () => {
   return {
     location: {
       desktop: {

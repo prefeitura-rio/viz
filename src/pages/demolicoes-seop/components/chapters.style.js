@@ -14,7 +14,7 @@ export const TextChapterIndicator = styled.div`
   // left: 0;
 `;
 
-export const ChapterOneDiv = styled.div`
+export const CapaDiv = styled.div`
   width: 100%;
   height: 100vh;
   z-index: -1;
@@ -44,7 +44,7 @@ export const ChapterGenericDiv = styled.div`
   align-items: center;
 `;
 
-export const ChapterTwoDiv = styled.div`
+export const IntroDiv = styled.div`
   height: 200vh;
   width: 100%;
   overflow-x: hidden;
