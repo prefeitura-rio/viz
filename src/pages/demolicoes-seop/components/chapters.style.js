@@ -30,7 +30,7 @@ export const CapaDiv = styled.div`
     ". . ."
     ". . .";
   // grid-template-columns: ;
-  /* background-image: url(${capa}); */
+  background-image: url(${capa});
   background-size: cover;
   justify-items: right;
 `;

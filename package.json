@@ -38,6 +38,7 @@
     "react-scrollmagic": "^2.3.0",
     "style-loader": "^3.3.1",
     "styled-components": "^5.3.5",
+    "tailwind-styled-components": "^2.1.8",
     "url-loader": "^4.1.1",
     "worker-loader": "^3.0.8"
   },

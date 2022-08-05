@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import * as styles from "./chapters.style";
-
+import tw from "tailwind-styled-components";
 // import ReactDOM from "react-dom";
 // import DWChart from "react-datawrapper-chart";
 
@@ -252,9 +252,6 @@ export function Intro(
 
   return (
     <styles.IntroDiv id={props.id}>
-      <h1 className="text-3xl font-bold underline bg-white">
-        POASKDOPASKDPOASDKPASODKaPSODK
-      </h1>
       <IntroTitle id={"intro"}>Como tudo começou</IntroTitle>
       <IntroText>
         A proliferação de construções irregulares é um problema que tomou conta
