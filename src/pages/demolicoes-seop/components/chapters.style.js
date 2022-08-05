@@ -20,14 +20,14 @@ export const CapaDiv = styled.div`
   z-index: -1;
   display: grid;
   grid-template-columns: 0.5fr 2fr 0.5fr;
-  grid-template-rows: 0.6fr 1.7fr 0.6fr 0.5fr 2.5fr 0.3fr;
+  grid-template-rows: 0.6fr 1.9fr 0.6fr 0.6fr 2fr 0.3fr;
   gap: 10px 20px;
   grid-template-areas:
-    ". logo ."
     ". . ."
+    ". logo ."
     ". titulo ."
     ". subtitulo ."
-    ". nova ."
+    ". . ."
     ". . .";
   // grid-template-columns: ;
   background-image: url(${capa});

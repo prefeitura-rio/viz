@@ -64,7 +64,7 @@ class MultilayerMap extends React.Component {
     if (!this.state.mapLoaded) return;
     const mapInstance = this.state.mapRef.current?.getMap();
     if (!mapInstance) return;
-    // console.log("allLyaers", mapInstance.getStyle().layers);
+    console.log("allLyaers", mapInstance.getStyle().layers);
     layers.forEach((layerDict) => {
       if (
         layerDict.layerType === "mapbox" ||

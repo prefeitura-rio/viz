@@ -35,7 +35,7 @@ export default function SubsidioSPPO() {
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState("capa");
-  console.log(chapterNumberMap);
+  // console.log(chapterNumberMap);
   useEffect(() => {
     switch (chapterNumberMap) {
       case "capa":
@@ -43,8 +43,8 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Capa().layers);
         break;
       case "intro":
-        setPosition(chapterMap.Capa().location);
-        setLayers(chapterMap.Capa().layers);
+        setPosition(chapterMap.Intro().location);
+        setLayers(chapterMap.Intro().layers);
         break;
       case "exemplo1":
         setPosition(chapterMap.Exemplo1().location);
@@ -100,7 +100,7 @@ export default function SubsidioSPPO() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: true,
+      markers: false,
       scrub: true,
       // toggleActions: "play reverse play reverse",
     });
@@ -182,6 +182,8 @@ export default function SubsidioSPPO() {
     ScrollTrigger.create({
       animation: tl4,
       trigger: "#prejuizo",
+      scrub: false,
+      toggleActions: "play reverse play reverse",
       onToggle: () => {
         setChapterNumberMap("prejuizo");
       },
@@ -210,6 +212,20 @@ export default function SubsidioSPPO() {
       trigger: "#acompanhe",
       onToggle: () => {
         setChapterNumberMap("acompanhe");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#seop1",
+      onToggle: () => {
+        setChapterNumberMap("seop1");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#seop2",
+      onToggle: () => {
+        setChapterNumberMap("seop2");
       },
     });
 

@@ -3,7 +3,7 @@
 
 import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const Home = lazy(() => import("./pages/home/home"));
 const StorySample = lazy(() => import("./pages/sandbox/sample"));
@@ -19,15 +19,30 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-`
+`;
 
 DemolicoesSEOP;
 function App() {
   return (
     <div id={"main"}>
-      <GlobalStyle/>
+      <GlobalStyle />
       <Router>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense
+          fallback={
+            <div
+            // style={{
+            //   fontSize: "3rem",
+            //   fontWeight: "700",
+            //   color: "#406882",
+            //   backgroundColor: "#000000",
+            //   width: "100vw",
+            //   height: "100vh",
+            // }}
+            >
+              carregando...
+            </div>
+          }
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/especial-sppo/subsidio" element={<SubsidioSPPO />} />
