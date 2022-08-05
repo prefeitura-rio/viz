@@ -319,7 +319,7 @@ export function Four(
       <ContainerCard>
         <Grid>
           <Grid1>
-            <BigNumber id="kkkk">0</BigNumber>
+            <BigNumber id="number">0</BigNumber>
             <BigNumber1>milhões</BigNumber1>
           </Grid1>
           <TextCard>
