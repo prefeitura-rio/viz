@@ -28,7 +28,22 @@ function App() {
     <div id={"main"}>
       <GlobalStyle />
       <Router>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense
+          fallback={
+            <div
+            // style={{
+            //   fontSize: "3rem",
+            //   fontWeight: "700",
+            //   color: "#406882",
+            //   backgroundColor: "#000000",
+            //   width: "100vw",
+            //   height: "100vh",
+            // }}
+            >
+              carregando...
+            </div>
+          }
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/especial-sppo/subsidio" element={<SubsidioSPPO />} />

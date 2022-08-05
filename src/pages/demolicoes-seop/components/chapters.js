@@ -78,6 +78,7 @@ const IntroTitle = styled.div`
   text-align: right;
   opacity: 1;
   align-self: end;
+  z-index: 999;
 `;
 
 const BigNumber = styled.div`
@@ -214,7 +215,6 @@ export function Capa(
         1000 <br /> DEMOLIÇÕES
       </Title>
       <AuthorText>
-        {/* <DWChart title="Map" src="//datawrapper.dwcdn.net/AYB0f/" /> */}
         Desenvolvido por <br />
         <a
           style={{ fontSize: "1rem", fontWeight: "700", color: "#406882" }}
@@ -552,7 +552,7 @@ export function Fim(
 
   return (
     <styles.IntroDiv id={props.id}>
-      <IntroTitle id={"intro"}>Fim</IntroTitle>
+      <IntroTitle id={"fimTitle"}>Fim</IntroTitle>
       <IntroText>
         É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
         gestão, é extremamente importante. Mostra que estamos atuantes e que
@@ -569,7 +569,7 @@ export function Fim(
         capacidade de identificação de novas construções, seja através uma
         apuração refinada das denúncias feitas pela população, como também por
         meios de novas tecnologias, que incluem drones, ortofotos e imagens de
-        satélites
+        satélites.
       </IntroText>
     </styles.IntroDiv>
   );
@@ -585,7 +585,7 @@ export function Acompanhe(
 
   return (
     <styles.IntroDiv id={props.id}>
-      <IntroTitle id={"intro"}>Acompanhe as ações da SEOP</IntroTitle>
+      <IntroTitle id={"acompanheTitle"}>Acompanhe as ações da SEOP</IntroTitle>
       <IntroText>
         É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
         gestão, é extremamente importante. Mostra que estamos atuantes e que
@@ -602,7 +602,7 @@ export function Acompanhe(
         capacidade de identificação de novas construções, seja através uma
         apuração refinada das denúncias feitas pela população, como também por
         meios de novas tecnologias, que incluem drones, ortofotos e imagens de
-        satélites
+        satélites.
       </IntroText>
     </styles.IntroDiv>
   );
@@ -618,7 +618,9 @@ export function Oeste(
 
   return (
     <styles.IntroDiv id={props.id}>
-      <IntroTitle id={"intro"}>Onde atuamos e o foco na Zona Oeste</IntroTitle>
+      <IntroTitle id={"zonaOesteTitle"}>
+        Onde atuamos e o foco na Zona Oeste
+      </IntroTitle>
       <IntroText>
         Apesar de ocorrerem em todas as regiões da cidade, as construções
         irregulares têm uma <TextBlue>incidência maior na Zona Oeste</TextBlue>{" "}
