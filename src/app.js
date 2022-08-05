@@ -3,7 +3,9 @@
 
 import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+
 import { createGlobalStyle } from "styled-components";
+import mapboxCss from "mapbox-gl/dist/mapbox-gl.css";
 import "./tailwind.css";
 
 const Home = lazy(() => import("./pages/home/home"));
