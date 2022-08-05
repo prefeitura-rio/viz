@@ -47,41 +47,45 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.One().location);
         setLayers(chapterMap.One().layers);
         break;
-      case 3:
-        setPosition(chapterMap.Three().location);
-        setLayers(chapterMap.Three().layers);
+      case "prejuizo":
+        setPosition(chapterMap.Prejuizo().location);
+        setLayers(chapterMap.Prejuizo().layers);
         break;
-      case 4:
-        setPosition(chapterMap.Four().location);
-        setLayers(chapterMap.Four().layers);
+      case "grafico":
+        setPosition(chapterMap.Grafico().location);
+        setLayers(chapterMap.Grafico().layers);
         break;
-      case 5:
-        setPosition(chapterMap.Five().location);
-        setLayers(chapterMap.Five().layers);
+      case "exemplo1":
+        setPosition(chapterMap.Exemplo1().location);
+        setLayers(chapterMap.Exemplo1().layers);
         break;
-      case 6:
-        setPosition(chapterMap.Six().location);
-        setLayers(chapterMap.Six().layers);
+      case "exemplo2":
+        setPosition(chapterMap.Exemplo2().location);
+        setLayers(chapterMap.Exemplo2().layers);
         break;
-      case 7:
-        setPosition(chapterMap.Seven().location);
-        setLayers(chapterMap.Seven().layers);
+      case "exemplo3":
+        setPosition(chapterMap.Exemplo3().location);
+        setLayers(chapterMap.Exemplo3().layers);
         break;
-      case 8:
-        setPosition(chapterMap.Eight().location);
-        setLayers(chapterMap.Eight().layers);
+      case "fim":
+        setPosition(chapterMap.Fim().location);
+        setLayers(chapterMap.Fim().layers);
         break;
-      case 9:
-        setPosition(chapterMap.Nine().location);
-        setLayers(chapterMap.Nine().layers);
+      case "seop1":
+        setPosition(chapterMap.Seop1().location);
+        setLayers(chapterMap.Seop1().layers);
         break;
-      case 10:
-        setPosition(chapterMap.Ten().location);
-        setLayers(chapterMap.Ten().layers);
+      case "seop2":
+        setPosition(chapterMap.Seop2().location);
+        setLayers(chapterMap.Seop2().layers);
         break;
-      case 11:
-        setPosition(chapterMap.Eleven().location);
-        setLayers(chapterMap.Eleven().layers);
+      case "acompanhe":
+        setPosition(chapterMap.Acompanhe().location);
+        setLayers(chapterMap.Acompanhe().layers);
+        break;
+      case "oeste":
+        setPosition(chapterMap.Oeste().location);
+        setLayers(chapterMap.Oeste().layers);
         break;
       default:
         break;
@@ -127,85 +131,88 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#chapter-3",
+      trigger: "#chapter-prejuizo",
       onToggle: () => {
-        setChapterNumberMap(3);
+        setChapterNumberMap("prejuizo");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#chapter-4",
+      trigger: "#chapter-grafico",
       onToggle: () => {
-        setChapterNumberMap(3);
+        setChapterNumberMap("grafico");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#chapter-5",
+      trigger: "#chapter-exemplo1",
       onToggle: () => {
-        setChapterNumberMap(3);
-      },
-    });
-
-    const tl6 = gsap.timeline();
-    tl6
-      .set("#chapter-6", { opacity: 0 })
-      .to("#chapter-6", { opacity: 0, duration: 30 })
-      .to("#chapter-6", { opacity: 1, duration: 6 })
-      .to("#chapter-6", { opacity: 1, duration: 20 })
-      .to("#chapter-6", { opacity: 0, duration: 6 })
-      .to("#chapter-6", { opacity: 0, duration: 28 });
-
-    ScrollTrigger.create({
-      animation: tl6,
-      trigger: "#chapter-6",
-      onToggle: () => {
-        setChapterNumberMap(3);
+        setChapterNumberMap("exemplo1");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#chapter-7",
+      trigger: "#chapter-exemplo2",
       onToggle: () => {
-        setChapterNumberMap(7);
+        setChapterNumberMap("exemplo2");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#chapter-8",
+      trigger: "#chapter-exemplo3",
       onToggle: () => {
-        setChapterNumberMap(8);
+        setChapterNumberMap("exemplo3");
       },
     });
 
+    const tl13 = gsap.timeline();
+    tl13
+      .set("#chapter-oeste", { opacity: 0 })
+      .to("#chapter-oeste", { opacity: 0, duration: 30 })
+      .to("#chapter-oeste", { opacity: 1, duration: 6 })
+      .to("#chapter-oeste", { opacity: 1, duration: 20 })
+      .to("#chapter-oeste", { opacity: 0, duration: 6 })
+      .to("#chapter-oeste", { opacity: 0, duration: 28 });
+
     ScrollTrigger.create({
-      trigger: "#chapter-9",
+      animation: tl13,
+      trigger: "#chapter-oeste",
       onToggle: () => {
-        setChapterNumberMap(9);
+        setChapterNumberMap("oeste");
       },
     });
 
+    const tl12 = gsap.timeline();
+    tl12
+      .set("#chapter-acompanhe", { opacity: 0 })
+      .to("#chapter-acompanhe", { opacity: 0, duration: 30 })
+      .to("#chapter-acompanhe", { opacity: 1, duration: 6 })
+      .to("#chapter-acompanhe", { opacity: 1, duration: 20 })
+      .to("#chapter-acompanhe", { opacity: 0, duration: 6 })
+      .to("#chapter-acompanhe", { opacity: 0, duration: 28 });
+
     ScrollTrigger.create({
-      trigger: "#chapter-10",
+      animation: tl12,
+      trigger: "#chapter-acompanhe",
       onToggle: () => {
-        setChapterNumberMap(10);
+        setChapterNumberMap("acompanhe");
       },
     });
 
     const tl11 = gsap.timeline();
     tl11
-      .set("#chapter-11", { opacity: 0 })
-      .to("#chapter-11", { opacity: 0, duration: 30 })
-      .to("#chapter-11", { opacity: 1, duration: 6 })
-      .to("#chapter-11", { opacity: 1, duration: 20 })
-      .to("#chapter-11", { opacity: 1, duration: 6 })
-      .to("#chapter-11", { opacity: 1, duration: 28 });
+      .set("#chapter-fim", { opacity: 0 })
+      .to("#chapter-fim", { opacity: 0, duration: 30 })
+      .to("#chapter-fim", { opacity: 1, duration: 6 })
+      .to("#chapter-fim", { opacity: 1, duration: 20 })
+      .to("#chapter-fim", { opacity: 1, duration: 6 })
+      .to("#chapter-fim", { opacity: 1, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl11,
-      trigger: "#chapter-11",
+      trigger: "#chapter-fim",
       onToggle: () => {
-        setChapterNumberMap(11);
+        setChapterNumberMap("fim");
       },
     });
   }, []);
@@ -233,15 +240,16 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.One id={"chapter-1"} />
       <chapterDiv.Two id={"chapter-2"} />
-      <chapterDiv.Three id={"chapter-3"} />
-      <chapterDiv.Four id={"chapter-4"} />
-      <chapterDiv.Five id={"chapter-5"} />
-      <chapterDiv.Six id={"chapter-6"} />
-      <chapterDiv.Seven id={"chapter-7"} />
-      <chapterDiv.Eight id={"chapter-8"} />
-      <chapterDiv.Nine id={"chapter-9"} />
-      <chapterDiv.Ten id={"chapter-10"} />
-      <chapterDiv.Eleven id={"chapter-11"} />
+      <chapterDiv.Exemplo1 id={"chapter-exemplo1"} />
+      <chapterDiv.Exemplo2 id={"chapter-exemplo2"} />
+      <chapterDiv.Exemplo3 id={"chapter-exemplo3"} />
+      <chapterDiv.Oeste id={"chapter-oeste"} />
+      <chapterDiv.Prejuizo id={"chapter-prejuizo"} />
+      <chapterDiv.Grafico id={"chapter-grafico"} />
+      <chapterDiv.Acompanhe id={"chapter-acompanhe"} />
+      <chapterDiv.Seop1 id={"chapter-seop1"} />
+      <chapterDiv.Seop2 id={"chapter-seop2"} />
+      <chapterDiv.Fim id={"chapter-fim"} />
     </>
   );
 }

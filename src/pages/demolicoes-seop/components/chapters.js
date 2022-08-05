@@ -5,11 +5,13 @@ import * as styles from "./chapters.style";
 // import DWChart from "react-datawrapper-chart";
 
 // IMAGENS
-import logo1 from "../images/logo1.png";
+import logo from "../images/logo.png";
 import riodaspedras from "../images/riodaspedras.png";
 import muzema from "../images/muzema.png";
 import salgueiro from "../images/salgueiro.png";
-import capa from "../images/capa.gif";
+import seop1 from "../images/seop1.png";
+import seop2 from "../images/seop2.png";
+import grafico from "../images/grafico.png";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -44,7 +46,7 @@ export const Capa = styled.img`
 
 const Title = styled.div`
   width: 80%;
-  color: #ffffff;
+  color: #406882;
   font-family: "Poppins", serif;
   font-weight: 700;
   font-size: 7rem;
@@ -55,7 +57,7 @@ const Title = styled.div`
 
 const AuthorText = styled.div`
   width: 80%;
-  color: #ffffff;
+  color: #406882;
   font-family: "Poppins", serif;
   font-weight: 500;
   font-size: 1rem;
@@ -79,25 +81,23 @@ const IntroTitle = styled.div`
 `;
 
 const BigNumber = styled.div`
-  color: #6998ab;
+  color: #1a374d;
   font-family: "Redaction", sans-serif;
   font-weight: 700;
   font-size: 8rem;
   line-height: 1;
-  /* text-align: right; */
   opacity: 1;
-  /* align-self: end; */
+  align-self: end;
 `;
 
 const BigNumber1 = styled.div`
-  color: #6998ab;
+  color: #1a374d;
   font-family: "Redaction", sans-serif;
   font-weight: 700;
   font-size: 3rem;
-  /* line-height: 1; */
-  /* text-align: right; */
+  line-height: 1;
   opacity: 1;
-  /* align-self: end; */
+  align-self: end;
 `;
 
 const IntroText = styled.div`
@@ -125,8 +125,8 @@ const TextBlue = styled.div`
   background: #1a374d;
   color: #fff;
   display: inline;
-  padding: 1px 8px 1px 8px;
-  margin: 3px;
+  /* padding: 2px 8px 2px 8px; */
+  /* margin: 4px; */
 `;
 
 const ContainerCard = styled.div`
@@ -182,14 +182,15 @@ const NewsTitle = styled.div`
 `;
 
 const Grid = styled.div`
-  display: flex;
+  display: block;
   gap: 0px 30px;
 `;
 
 const Grid1 = styled.div`
-  display: grid;
-  grid-template-rows: 110px 60px;
-  aling-items: center;
+  display: flex;
+  aling-items: end;
+  justify-content: start;
+  margin-bottom: 20px;
 `;
 
 const GifCapa = styled.div`
@@ -206,7 +207,7 @@ export function One(
   props = setDefaultProps(props);
   return (
     <styles.ChapterOneDiv id={props.id} ref={props.ref}>
-      <Logo src={logo1}></Logo>
+      <Logo src={logo}></Logo>
       <Title>
         1000 <br /> DEMOLIÇÕES
       </Title>
@@ -214,7 +215,7 @@ export function One(
         {/* <DWChart title="Map" src="//datawrapper.dwcdn.net/AYB0f/" /> */}
         Desenvolvido por <br />
         <a
-          style={{ fontSize: "1rem", fontWeight: "700", color: "#ffffff" }}
+          style={{ fontSize: "1rem", fontWeight: "700", color: "#406882" }}
           href="https://www.dados.rio/"
           target="_blank"
           rel="noreferrer"
@@ -226,7 +227,7 @@ export function One(
           style={{
             fontSize: "1rem",
             fontWeight: "700",
-            color: "#ffffff",
+            color: "#406882",
           }}
           href="http://www.rio.rj.gov.br/web/seop"
           target="_blank"
@@ -249,7 +250,7 @@ export function Two(
 
   return (
     <styles.ChapterTwoDiv id={props.id}>
-      <IntroTitle id={"intro"}>Introdução</IntroTitle>
+      <IntroTitle id={"intro"}>Como tudo começou</IntroTitle>
       <IntroText>
         A proliferação de construções irregulares é um problema que tomou conta
         da cidade do Rio há algumas décadas. Em áreas sob influência do crime
@@ -261,7 +262,8 @@ export function Two(
         Essas construções são realizadas sem autorização da Prefeitura, em
         alguns casos em área pública e erguidas, muitas vezes, sem nenhum
         acompanhamento técnico. Não à toa a cidade já presenciou desastres
-        envolvendo construções irregulares, com inúmeras vítimas fatais.
+        envolvendo construções irregulares, com inúmeras vítimas fatais. Você
+        verá a seguir alguns exemplos.
         <br /> <br />
         Exatamente para combater o crescimento desordenado da cidade, preservar
         vidas e asfixiar financeiramente o crime organizado que, desde meados de
@@ -283,32 +285,7 @@ export function Two(
   );
 }
 
-export function Three(
-  props = {
-    id: "",
-    progress: 0,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv id={props.id}>
-      <ContainerCard>
-        <TextCard>
-          Apesar de ocorrerem em todas as regiões da cidade, as construções
-          irregulares têm uma{" "}
-          <TextBlue>incidência maior na Zona Oeste</TextBlue> do Município, onde
-          ocorrem cerca de <TextBlue>xxx%</TextBlue> das demolições realizadas
-          pela Secretaria de Ordem Pública. Áreas como Recreio, Rio das Pedras e
-          Muzema, por exemplo, são bairros extremamente afetados por essas
-          irregularidades.
-        </TextCard>
-      </ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function Four(
+export function Prejuizo(
   props = {
     id: "",
     progress: 0,
@@ -347,7 +324,7 @@ export function Four(
   );
 }
 
-export function Five(
+export function Grafico(
   props = {
     id: "",
     progress: 0,
@@ -370,6 +347,7 @@ export function Five(
         ></iframe> */}
         {/* <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script> */}
+        <NewsImage src={grafico}></NewsImage>
         <TextCard>
           Analisando as prioridades da Secretaria de Ordem Pública e da própria
           Prefeitura, dá para notar que o tema construções irregulares é tratado
@@ -384,60 +362,7 @@ export function Five(
   );
 }
 
-export function Six(
-  props = {
-    id: "",
-    progress: 0,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterTwoDiv id={props.id}>
-      <IntroTitle id={"intro"}>Exemplos</IntroTitle>
-      <IntroText>
-        Os cariocas sabem bem quais os problemas enfrentados todos os dias no
-        transporte público da cidade do Rio de Janeiro. E é preciso reconhecer
-        que o sistema por ônibus está ruim e precisa de ajuda. <br />
-        <br />
-        Uma série de fatores levou a este colapso, o que só resultou no
-        sofrimento da população que depende do transporte público da cidade para
-        se locomover. Por isso,{" "}
-        <TextBlue>
-          a Prefeitura vai regularizar as linhas operantes,
-        </TextBlue>{" "}
-        <TextBlue>retomar as inoperantes</TextBlue> e{" "}
-        <TextBlue>implementar serviços noturnos.</TextBlue>
-      </IntroText>
-    </styles.ChapterTwoDiv>
-  );
-}
-
-export function Seven(
-  props = {
-    id: "",
-    progress: 0,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv id={props.id}>
-      <ContainerCard>
-        <TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an <TextBlue>unknown printer</TextBlue> took a
-          galley of type and scrambled it to make a type specimen book. It has
-          survived not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged.
-        </TextCard>
-      </ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function Eight(
+export function Exemplo1(
   props = {
     id: "",
     progress: 0,
@@ -474,7 +399,7 @@ export function Eight(
   );
 }
 
-export function Nine(
+export function Exemplo2(
   props = {
     id: "",
     progress: 0,
@@ -510,7 +435,7 @@ export function Nine(
   );
 }
 
-export function Ten(
+export function Exemplo3(
   props = {
     id: "",
     progress: 0,
@@ -546,7 +471,75 @@ export function Ten(
   );
 }
 
-export function Eleven(
+export function Seop1(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv id={props.id}>
+      <ContainerCard1>
+        <NewsImage src={seop1}></NewsImage>
+        <NewsTitle>
+          <a
+            style={{
+              fontSize: "2.2rem",
+              fontWeight: "700",
+              color: "#ffffff",
+            }}
+            href="https://g1.globo.com/rj/rio-de-janeiro/bom-dia-rio/video/construcao-irregular-e-demolida-na-muzema-10771066.ghtml"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Construção irregular é demolida na Muzema
+          </a>
+        </NewsTitle>
+        <TextCard1>
+          Força-tarefa demole prédio de três andares que fica a menos de 100
+          metros do condomínio que desabou, em 2019, deixando 24 mortos
+        </TextCard1>
+      </ContainerCard1>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Seop2(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv id={props.id}>
+      <ContainerCard1>
+        <NewsImage src={seop2}></NewsImage>
+        <NewsTitle>
+          <a
+            style={{
+              fontSize: "2.2rem",
+              fontWeight: "700",
+              color: "#ffffff",
+            }}
+            href="https://g1.globo.com/rj/rio-de-janeiro/rj1/video/predio-irregular-e-demolido-pela-prefeitura-no-recreio-dos-bandeirantes-na-zona-oeste-10565435.ghtml"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Prédio irregular é demolido pela prefeitura, no Recreio dos
+            Bandeirantes, na Zona Oeste
+          </a>
+        </NewsTitle>
+        <TextCard1>Liminar impediu demolição no dia 25 de abril.</TextCard1>
+      </ContainerCard1>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Fim(
   props = {
     id: "",
     progress: 0,
@@ -558,18 +551,78 @@ export function Eleven(
     <styles.ChapterTwoDiv id={props.id}>
       <IntroTitle id={"intro"}>Fim</IntroTitle>
       <IntroText>
-        Os cariocas sabem bem quais os problemas enfrentados todos os dias no
-        transporte público da cidade do Rio de Janeiro. E é preciso reconhecer
-        que o sistema por ônibus está ruim e precisa de ajuda. <br />
-        <br />
-        Uma série de fatores levou a este colapso, o que só resultou no
-        sofrimento da população que depende do transporte público da cidade para
-        se locomover. Por isso,{" "}
+        É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
+        gestão, é extremamente importante. Mostra que estamos atuantes e que
+        seguiremos firmes no combate a ocupação desordenada da cidade, na
+        proteção de vidas e em asfixiar financeiramente o crime organizado. Isso
+        tudo só reforça a convicção que o trabalho precisa seguir .{" "}
         <TextBlue>
-          a Prefeitura vai regularizar as linhas operantes,
+          Por isso, a Secretaria de Ordem Pública permanecerá atenta, colocando
+          abaixo aquelas estruturas erguidas irregularmente.
         </TextBlue>{" "}
-        <TextBlue>retomar as inoperantes</TextBlue> e{" "}
-        <TextBlue>implementar serviços noturnos.</TextBlue>
+        Além disso, a secretaria entende a importância de ter uma ação cada vez
+        mais estratégica, que saiba apontar prioridades e aja nos pontos mais
+        sensíveis da cidade. Por isso a SEOP está investindo na melhoria da sua
+        capacidade de identificação de novas construções, seja através uma
+        apuração refinada das denúncias feitas pela população, como também por
+        meios de novas tecnologias, que incluem drones, ortofotos e imagens de
+        satélites
+      </IntroText>
+    </styles.ChapterTwoDiv>
+  );
+}
+
+export function Acompanhe(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterTwoDiv id={props.id}>
+      <IntroTitle id={"intro"}>Acompanhe as ações da SEOP</IntroTitle>
+      <IntroText>
+        É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
+        gestão, é extremamente importante. Mostra que estamos atuantes e que
+        seguiremos firmes no combate a ocupação desordenada da cidade, na
+        proteção de vidas e em asfixiar financeiramente o crime organizado. Isso
+        tudo só reforça a convicção que o trabalho precisa seguir .{" "}
+        <TextBlue>
+          Por isso, a Secretaria de Ordem Pública permanecerá atenta, colocando
+          abaixo aquelas estruturas erguidas irregularmente.
+        </TextBlue>{" "}
+        Além disso, a secretaria entende a importância de ter uma ação cada vez
+        mais estratégica, que saiba apontar prioridades e aja nos pontos mais
+        sensíveis da cidade. Por isso a SEOP está investindo na melhoria da sua
+        capacidade de identificação de novas construções, seja através uma
+        apuração refinada das denúncias feitas pela população, como também por
+        meios de novas tecnologias, que incluem drones, ortofotos e imagens de
+        satélites
+      </IntroText>
+    </styles.ChapterTwoDiv>
+  );
+}
+
+export function Oeste(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterTwoDiv id={props.id}>
+      <IntroTitle id={"intro"}>Onde atuamos e o foco na Zona Oeste</IntroTitle>
+      <IntroText>
+        Apesar de ocorrerem em todas as regiões da cidade, as construções
+        irregulares têm uma <TextBlue>incidência maior na Zona Oeste</TextBlue>{" "}
+        do Município, onde ocorrem cerca de <TextBlue>66%</TextBlue> das
+        demolições realizadas pela Secretaria de Ordem Pública. Áreas como
+        Recreio, Rio das Pedras e Muzema, por exemplo, são bairros extremamente
+        afetados por essas irregularidades.
       </IntroText>
     </styles.ChapterTwoDiv>
   );

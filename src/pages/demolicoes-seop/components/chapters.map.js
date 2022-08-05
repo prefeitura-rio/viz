@@ -11,226 +11,6 @@ export const One = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
-        },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.18213,
-          lat: -22.90645,
-        },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox-style",
-        layer: { id: "building-extrusion-red" },
-      },
-      {
-        layerType: "mapbox-style",
-        layer: { id: "building-extrusion" },
-      },
-    ],
-  };
-};
-
-export const Three = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.45632,
-          lat: -22.92106,
-        },
-        zoom: 10.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.18213,
-          lat: -22.90645,
-        },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.5,
-        layer: {
-          ...{
-            id: "mapa-geral-cor",
-            type: "fill",
-            source: "composite",
-            "source-layer": "mapa-geral-2l3yzm",
-            filter: [
-              "match",
-              ["get", "acoes_demo"],
-              [
-                "1",
-                "2",
-                "3",
-                "4",
-                "5",
-                "6",
-                "7",
-                "9",
-                "10",
-                "13",
-                "14",
-                "190",
-                "178",
-                "90",
-                "44",
-                "42",
-                "38",
-                "32",
-                "25",
-                "30",
-                "24",
-                "23",
-                "22",
-                "21",
-                "16",
-                "18",
-                "19",
-              ],
-              true,
-              false,
-            ],
-            paint: {
-              "fill-color": [
-                "match",
-                ["get", "acoes_demo"],
-                [
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "6",
-                  "5",
-                  "7",
-                  "9",
-                  "10",
-                  "13",
-                  "14",
-                  "18",
-                  "16",
-                  "19",
-                ],
-                "hsl(197, 28%, 54%)",
-                ["21", "22", "23", "24", "25", "30", "32", "38", "42", "44"],
-                "#406882",
-                ["90", "178", "190"],
-                "hsl(206, 50%, 20%)",
-                "#000000",
-              ],
-              "fill-opacity": 0,
-            },
-          },
-        },
-      },
-    ],
-  };
-};
-
-export const Four = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.18213,
-          lat: -22.90645,
-        },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.18213,
-          lat: -22.90645,
-        },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "reuse",
-        layer: { id: "mapa-geral-cor" },
-      },
-      {
-        layerType: "mapbox-style",
-        layer: { id: "building-extrusion-red" },
-      },
-      {
-        layerType: "mapbox-style",
-        layer: { id: "building-extrusion" },
-      },
-    ],
-  };
-};
-
-export const Five = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.18213,
-          lat: -22.90645,
-        },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.18213,
-          lat: -22.90645,
-        },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox-style",
-        layer: { id: "building-extrusion-red" },
-      },
-      {
-        layerType: "mapbox-style",
-        layer: { id: "building-extrusion" },
-      },
-    ],
-  };
-};
-
-export const Six = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
           lon: -43.45632,
           lat: -22.92106,
         },
@@ -263,17 +43,122 @@ export const Six = () => {
   };
 };
 
-export const Seven = () => {
+// export const Geral = () => {
+//   return {
+//     location: {
+//       desktop: {
+//         center: {
+//           lon: -43.45632,
+//           lat: -22.92106,
+//         },
+//         zoom: 10.38,
+//         pitch: 0.0,
+//         bearing: 0.0,
+//         duration: 4000,
+//       },
+//       mobile: {
+//         center: {
+//           lon: -43.18213,
+//           lat: -22.90645,
+//         },
+//         zoom: 15.11,
+//         pitch: 60.0,
+//         bearing: -146.41,
+//         duration: 4000,
+//       },
+//     },
+//     layers: [
+//       {
+//         layerType: "mapbox",
+//         targetOpacity: 0.4,
+//         layer: {
+//           ...{
+//             id: "mapa-geral-cor",
+//             type: "fill",
+//             source: "composite",
+//             "source-layer": "mapa-geral-2l3yzm",
+//             filter: [
+//               "match",
+//               ["get", "acoes_demo"],
+//               [
+//                 "1",
+//                 "2",
+//                 "3",
+//                 "4",
+//                 "5",
+//                 "6",
+//                 "7",
+//                 "9",
+//                 "10",
+//                 "13",
+//                 "14",
+//                 "190",
+//                 "178",
+//                 "90",
+//                 "44",
+//                 "42",
+//                 "38",
+//                 "32",
+//                 "25",
+//                 "30",
+//                 "24",
+//                 "23",
+//                 "22",
+//                 "21",
+//                 "16",
+//                 "18",
+//                 "19",
+//               ],
+//               true,
+//               false,
+//             ],
+//             paint: {
+//               "fill-color": [
+//                 "match",
+//                 ["get", "acoes_demo"],
+//                 [
+//                   "1",
+//                   "2",
+//                   "3",
+//                   "4",
+//                   "6",
+//                   "5",
+//                   "7",
+//                   "9",
+//                   "10",
+//                   "13",
+//                   "14",
+//                   "18",
+//                   "16",
+//                   "19",
+//                 ],
+//                 "#6998AB",
+//                 ["21", "22", "23", "24", "25", "30", "32", "38", "42", "44"],
+//                 "#406882",
+//                 ["90", "178", "190"],
+//                 "#19364D",
+//                 "#000000",
+//               ],
+//               "fill-opacity": 0,
+//             },
+//           },
+//         },
+//       },
+//     ],
+//   };
+// };
+
+export const Prejuizo = () => {
   return {
     location: {
       desktop: {
         center: {
-          lon: -43.52115,
-          lat: -22.94752,
+          lon: -43.18213,
+          lat: -22.90645,
         },
-        zoom: 10.84,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 15.11,
+        pitch: 60.0,
+        bearing: -146.41,
         duration: 4000,
       },
       mobile: {
@@ -290,6 +175,7 @@ export const Seven = () => {
     layers: [
       {
         layerType: "mapbox",
+        targetOpacity: 0.4,
         layer: {
           ...{
             id: "mapa-zonas-cor",
@@ -355,11 +241,11 @@ export const Seven = () => {
                   "16",
                   "19",
                 ],
-                "hsl(197, 28%, 54%)",
+                "#6998AB",
                 ["21", "22", "23", "24", "25", "30", "32", "38", "42", "44"],
                 "#406882",
                 ["90", "178", "190"],
-                "hsl(206, 50%, 20%)",
+                "#19364D",
                 "#000000",
               ],
               "fill-opacity": 0,
@@ -371,7 +257,44 @@ export const Seven = () => {
   };
 };
 
-export const Eight = () => {
+export const Grafico = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.18213,
+          lat: -22.90645,
+        },
+        zoom: 15.11,
+        pitch: 60.0,
+        bearing: -146.41,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.18213,
+          lat: -22.90645,
+        },
+        zoom: 15.11,
+        pitch: 60.0,
+        bearing: -146.41,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion-red" },
+      },
+      {
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion" },
+      },
+    ],
+  };
+};
+
+export const Exemplo1 = () => {
   return {
     location: {
       desktop: {
@@ -408,7 +331,155 @@ export const Eight = () => {
   };
 };
 
-export const Nine = () => {
+export const Seop1 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.32192,
+          lat: -22.98894,
+        },
+        zoom: 16.82,
+        pitch: 44.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.18213,
+          lat: -22.90645,
+        },
+        zoom: 15.11,
+        pitch: 60.0,
+        bearing: -146.41,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion-red" },
+      },
+      {
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion" },
+      },
+    ],
+  };
+};
+
+export const Seop2 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.32192,
+          lat: -22.98894,
+        },
+        zoom: 16.82,
+        pitch: 44.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.18213,
+          lat: -22.90645,
+        },
+        zoom: 15.11,
+        pitch: 60.0,
+        bearing: -146.41,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion-red" },
+      },
+      {
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion" },
+      },
+    ],
+  };
+};
+
+export const Acompanhe = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.32192,
+          lat: -22.98894,
+        },
+        zoom: 16.82,
+        pitch: 44.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.18213,
+          lat: -22.90645,
+        },
+        zoom: 15.11,
+        pitch: 60.0,
+        bearing: -146.41,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion-red" },
+      },
+      {
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion" },
+      },
+    ],
+  };
+};
+
+export const Oeste = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.32192,
+          lat: -22.98894,
+        },
+        zoom: 16.82,
+        pitch: 44.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.18213,
+          lat: -22.90645,
+        },
+        zoom: 15.11,
+        pitch: 60.0,
+        bearing: -146.41,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion-red" },
+      },
+      {
+        layerType: "mapbox-style",
+        layer: { id: "building-extrusion" },
+      },
+    ],
+  };
+};
+
+export const Exemplo2 = () => {
   return {
     location: {
       desktop: {
@@ -445,7 +516,7 @@ export const Nine = () => {
   };
 };
 
-export const Ten = () => {
+export const Exemplo3 = () => {
   return {
     location: {
       desktop: {
@@ -473,7 +544,7 @@ export const Ten = () => {
   };
 };
 
-export const Eleven = () => {
+export const Fim = () => {
   return {
     location: {
       desktop: {
@@ -497,15 +568,6 @@ export const Eleven = () => {
         duration: 4000,
       },
     },
-    layers: [
-      {
-        layerType: "mapbox-style",
-        layer: { id: "building-extrusion-red" },
-      },
-      {
-        layerType: "mapbox-style",
-        layer: { id: "building-extrusion" },
-      },
-    ],
+    layers: [],
   };
 };
