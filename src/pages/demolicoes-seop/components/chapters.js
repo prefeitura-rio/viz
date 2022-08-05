@@ -103,7 +103,7 @@ const BigNumber1 = styled.div`
 const IntroText = styled.div`
   grid-area: texto;
   text-align: justify;
-  direction: rtl;
+  /* direction: rtl; */
   margin-bottom: 30%;
   vertical-align: middle;
   color: #ffffff;

@@ -43,10 +43,6 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.One().location);
         setLayers(chapterMap.One().layers);
         break;
-      case 2:
-        setPosition(chapterMap.One().location);
-        setLayers(chapterMap.One().layers);
-        break;
       case "prejuizo":
         setPosition(chapterMap.Prejuizo().location);
         setLayers(chapterMap.Prejuizo().layers);
