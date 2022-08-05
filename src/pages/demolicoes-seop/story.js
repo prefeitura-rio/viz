@@ -11,6 +11,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 // import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SubsidioSPPO() {
@@ -104,7 +105,6 @@ export default function SubsidioSPPO() {
       scrub: true,
       // toggleActions: "play reverse play reverse",
     });
-
     ScrollTrigger.create({
       trigger: "#capa",
       onToggle: () => {
@@ -252,6 +252,7 @@ export default function SubsidioSPPO() {
       <MultilayerMap
         interactive={true}
         scrollZoom={true}
+        showLayers={false}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
         mapStyle="mapbox://styles/escritoriodedados/cl6e3p6as001814qxcun8bjo1"
         layers={layers}

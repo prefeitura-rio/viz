@@ -18,6 +18,7 @@ class MultilayerMap extends React.Component {
         mapboxAccessToken: props.mapboxAccessToken,
         mapStyle: props.mapStyle,
         interactive: props.interactive,
+        showLayers: props.showLayers,
         style: props.mapCSS,
       },
       mapRef: React.createRef(),
@@ -64,7 +65,9 @@ class MultilayerMap extends React.Component {
     if (!this.state.mapLoaded) return;
     const mapInstance = this.state.mapRef.current?.getMap();
     if (!mapInstance) return;
-    console.log("allLyaers", mapInstance.getStyle().layers);
+    if (this.props.showLayers) {
+      console.log("allLyaers", mapInstance.getStyle().layers);
+    }
     layers.forEach((layerDict) => {
       if (
         layerDict.layerType === "mapbox" ||
@@ -214,6 +217,7 @@ class MultilayerMap extends React.Component {
 MultilayerMap.defaultProps = {
   interactive: false,
   scrollZoom: false,
+  showLayer: false,
   animationSpeed: 3,
   animationLoopLength: 28000,
   animated: true,

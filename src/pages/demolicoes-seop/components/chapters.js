@@ -204,12 +204,12 @@ const GifCapa = styled.div`
 export function Capa(
   props = {
     id: "",
-    ref: null,
+    chapRef: null,
   }
 ) {
   props = setDefaultProps(props);
   return (
-    <styles.CapaDiv id={props.id} ref={props.ref}>
+    <styles.CapaDiv id={props.id} ref={props.chapRef}>
       <Logo src={logo}></Logo>
       <Title>
         1000 <br /> DEMOLIÇÕES
@@ -245,13 +245,13 @@ export function Capa(
 export function Intro(
   props = {
     id: "",
-    progress: 0,
+    chapRef: null,
   }
 ) {
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv id={props.id}>
+    <styles.IntroDiv ref={props.chapRef} id={props.id}>
       <IntroTitle id={"intro"}>Como tudo começou</IntroTitle>
       <IntroText>
         A proliferação de construções irregulares é um problema que tomou conta
@@ -290,11 +290,11 @@ export function Intro(
 export function Prejuizo(
   props = {
     id: "",
-    progress: 0,
+    chapRef: null,
   }
 ) {
   return (
-    <styles.ChapterGenericDiv id={props.id}>
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <ContainerCard>
         <Grid>
           <Grid1>
@@ -327,13 +327,13 @@ export function Prejuizo(
 export function Grafico(
   props = {
     id: "",
-    progress: 0,
+    chapRef: null,
   }
 ) {
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv id={props.id}>
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <ContainerCard>
         {/* <iframe
           title="1000 demolições desde o início da gestão"
@@ -365,13 +365,13 @@ export function Grafico(
 export function Exemplo1(
   props = {
     id: "",
-    progress: 0,
+    chapRef: null,
   }
 ) {
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv id={props.id}>
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <ContainerCard1>
         <NewsImage src={riodaspedras}></NewsImage>
         <NewsTitle>
@@ -402,13 +402,13 @@ export function Exemplo1(
 export function Exemplo2(
   props = {
     id: "",
-    progress: 0,
+    chapRef: null,
   }
 ) {
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv id={props.id}>
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <ContainerCard1>
         <NewsImage src={muzema}></NewsImage>
         <NewsTitle>
@@ -438,13 +438,13 @@ export function Exemplo2(
 export function Exemplo3(
   props = {
     id: "",
-    progress: 0,
+    chapRef: null,
   }
 ) {
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv id={props.id}>
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <ContainerCard1>
         <NewsImage src={salgueiro}></NewsImage>
         <NewsTitle>
@@ -474,13 +474,13 @@ export function Exemplo3(
 export function Seop1(
   props = {
     id: "",
-    progress: 0,
+    chapRef: null,
   }
 ) {
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv id={props.id}>
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <ContainerCard1>
         <NewsImage src={seop1}></NewsImage>
         <NewsTitle>
@@ -509,13 +509,13 @@ export function Seop1(
 export function Seop2(
   props = {
     id: "",
-    progress: 0,
+    chapRef: null,
   }
 ) {
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv id={props.id}>
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <ContainerCard1>
         <NewsImage src={seop2}></NewsImage>
         <NewsTitle>
@@ -542,13 +542,13 @@ export function Seop2(
 export function Fim(
   props = {
     id: "",
-    progress: 0,
+    chapRef: null,
   }
 ) {
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv id={props.id}>
+    <styles.IntroDiv ref={props.chapRef} id={props.id}>
       <IntroTitle id={"fimTitle"}>Fim</IntroTitle>
       <IntroText>
         É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
@@ -575,13 +575,13 @@ export function Fim(
 export function Acompanhe(
   props = {
     id: "",
-    progress: 0,
+    chapRef: null,
   }
 ) {
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv id={props.id}>
+    <styles.IntroDiv ref={props.chapRef} id={props.id}>
       <IntroTitle id={"acompanheTitle"}>Acompanhe as ações da SEOP</IntroTitle>
       <IntroText>
         É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
@@ -608,13 +608,13 @@ export function Acompanhe(
 export function Oeste(
   props = {
     id: "",
-    progress: 0,
+    chapRef: null,
   }
 ) {
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv id={props.id}>
+    <styles.IntroDiv ref={props.chapRef} id={props.id}>
       <IntroTitle id={"zonaOesteTitle"}>
         Onde atuamos e o foco na Zona Oeste
       </IntroTitle>
