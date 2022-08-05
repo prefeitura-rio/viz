@@ -291,14 +291,12 @@ export function Prejuizo(
     progress: 0,
   }
 ) {
-  props = setDefaultProps(props);
-
   return (
     <styles.ChapterGenericDiv id={props.id}>
       <ContainerCard>
         <Grid>
           <Grid1>
-            <BigNumber id="numbers">150</BigNumber>
+            <BigNumber id="number">0</BigNumber>
             <BigNumber1>milhões</BigNumber1>
           </Grid1>
           <TextCard>
