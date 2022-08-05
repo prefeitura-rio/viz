@@ -14,6 +14,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SubsidioSPPO() {
+  const [location, setLocation] = useState(chapterMap.Capa().location);
+  const [layers, setLayers] = useState(chapterMap.Capa().layers);
   // console.log("ChapterLayers", layers);
 
   const [chartProgress, setChartProgress] = useState(0);
@@ -88,10 +90,6 @@ export default function SubsidioSPPO() {
         break;
     }
   }, [chapterNumberMap]);
-
-  const [location, setLocation] = useState(chapterMap.Capa().location);
-
-  const [layers, setLayers] = useState(chapterMap.Capa().layers);
 
   const vh = (coef) => window.innerHeight * (coef / 100);
   const vw = (coef) => window.innerWidth * (coef / 100);
