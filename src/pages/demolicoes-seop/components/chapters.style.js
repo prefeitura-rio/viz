@@ -46,7 +46,7 @@ export const ChapterGenericDiv = styled.div`
 
 export const ChapterTwoDiv = styled.div`
   height: 200vh;
-  width: 101%;
+  width: 100%;
   overflow-x: hidden;
   display: grid;
   grid-template-columns: 1fr 1.2fr 0.4fr;
