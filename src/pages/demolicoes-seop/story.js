@@ -133,8 +133,23 @@ export default function SubsidioSPPO() {
       },
     });
 
+    var startCount = 0,
+      num = { var: startCount };
+    function changeNumber() {
+      kkkk.innerHTML = num.var.toFixed();
+    }
+    const tl4 = gsap.timeline();
+    tl4.to(num, {
+      var: 150,
+      duration: 2,
+      onUpdate: changeNumber,
+    });
+
     ScrollTrigger.create({
+      animation: tl4,
       trigger: "#chapter-4",
+      scrub: false,
+      toggleActions: "play reverse play reverse",
       onToggle: () => {
         setChapterNumberMap(3);
       },
