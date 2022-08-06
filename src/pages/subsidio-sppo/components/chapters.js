@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import logo1 from "../images/logo1.png";
 import * as styles from "./chapters.style";
+import tw from "tailwind-styled-components";
 // TODO: REMOVE
 import LineChart from "./line.chart";
 import { Tween, Timeline } from "react-gsap";
@@ -10,17 +11,8 @@ import CustomEase from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export const Logo = styled.img`
-  width: 150px;
-  // background-color: #01baef;
-  margin-bottom: auto;
-  margin-top: 2%;
-  grid-area: logo;
-`;
-
 const Title = styled.div`
   width: 80%;
-
   color: #ffffff;
   // background-color: #01baef;
   font-family: "Redaction", sans-serif;
@@ -153,51 +145,41 @@ export function One(
   props = setDefaultProps(props);
   return (
     <styles.ChapterOneDiv id={props.id} ref={props.ref}>
-      <Logo src={logo1}></Logo>
-      <Title>
+      <img src={logo1} className="w-[150px]  mt-[2vh]"></img>
+      <styles.Title>
         Um ponto de virada na história do transporte municipal do Rio de Janeiro
-      </Title>
-      <AuthorText>
+      </styles.Title>
+      <styles.AuthorText>
         Desenvolvido por{" "}
         <a
-          style={{ fontSize: "1rem", fontWeight: "700", color: "#ffffff" }}
+          className="font-bold text-base text-white"
           href="https://www.dados.rio/"
           target="_blank"
           rel="noreferrer"
         >
-          Escritório de Dados
-        </a>{" "}
-        e
+          Escritório de Dados{" "}
+        </a>
+        e{" "}
         <a
-          style={{
-            fontSize: "1rem",
-            fontWeight: "700",
-            color: "#ffffff",
-            margin: "4px",
-          }}
+          className="font-bold text-base text-white m1"
           href="http://www.rio.rj.gov.br/web/smtr"
           target="_blank"
           rel="noreferrer"
         >
           Secretaria Municipal de Transportes
         </a>
-      </AuthorText>
-      <Interactive>
+      </styles.AuthorText>
+      <styles.Interactive>
         Para navegar pelo mapa{" "}
         <a
-          style={{
-            fontSize: "1rem",
-            fontWeight: "700",
-            color: "#ffffff",
-            margin: "4px",
-          }}
+          className="font-bold text-base text-white m1"
           href="https://viz.dados.rio/#/especial-sppo/interactive"
           target="_blank"
           rel="noreferrer"
         >
           clique aqui
         </a>
-      </Interactive>
+      </styles.Interactive>
     </styles.ChapterOneDiv>
   );
 }
@@ -212,8 +194,8 @@ export function Two(
 
   return (
     <styles.ChapterTwoDiv id={props.id}>
-      <IntroTitle id={"intro"}>Introdução</IntroTitle>
-      <IntroText>
+      <styles.IntroTitle id={"intro"}>Introdução</styles.IntroTitle>
+      <styles.IntroText>
         Os cariocas sabem bem quais os problemas enfrentados todos os dias no
         transporte público da cidade do Rio de Janeiro. E é preciso reconhecer
         que o sistema por ônibus está ruim e precisa de ajuda. <br />
@@ -221,9 +203,9 @@ export function Two(
         Uma série de fatores levou a este colapso, o que só resultou no
         sofrimento da população que depende do transporte público da cidade para
         se locomover. Por isso,{" "}
-        <TextOrange>
+        <styles.TextOrange>
           a Prefeitura vai regularizar as linhas operantes,
-        </TextOrange>{" "}
+        </styles.TextOrange>{" "}
         <TextOrange>retomar as inoperantes</TextOrange> e{" "}
         <TextOrange>implementar serviços noturnos.</TextOrange>
         <br />
@@ -237,7 +219,7 @@ export function Two(
         <br />
         Nesta reportagem especial explicaremos como a Prefeitura fará isso.{" "}
         <br />
-      </IntroText>
+      </styles.IntroText>
     </styles.ChapterTwoDiv>
   );
 }

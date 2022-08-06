@@ -38,8 +38,8 @@ function App() {
             //   fontWeight: "700",
             //   color: "#406882",
             //   backgroundColor: "#000000",
-            //   width: "100vw",
-            //   height: "100vh",
+            //   width: "100%",
+            //   height: "100%",
             // }}
             >
               carregando...

@@ -1,5 +1,6 @@
 // CSS
 import styled from "styled-components";
+import tw from "tailwind-styled-components";
 
 export const TextChapterIndicator = styled.div`
   position: absolute;
@@ -13,57 +14,93 @@ export const TextChapterIndicator = styled.div`
   // left: 0;
 `;
 
-export const ChapterOneDiv = styled.div`
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  display: grid;
-  grid-template-columns: 0.5fr 2fr 0.5fr;
-  grid-template-rows: 0.4fr 1.7fr 0.6fr 0.5fr 2.5fr 0.3fr;
-  gap: 20px 20px;
-  grid-template-areas:
-    ". logo ."
-    ". . ."
-    ". titulo ."
-    ". subtitulo ."
-    ". nova ."
-    ". . .";
-  // grid-template-columns: ;
-  justify-items: center;
+export const ChapterOneDiv = tw.div`
+  h-screen
+  w-full
+  flex
+  flex-col
+  items-center
+  justify-start
 `;
 
-export const ChapterGenericDiv = styled.div`
-  height: 100vh;
-  width: 100%;
-  // background: #e8cee4;
-  z-index: -1;
-  display: flex;
-  align-items: center;
+export const Title = tw.div`
+  font-bold 
+  text-4xl 
+  text-center 
+  text-white
+  w-[50vw]
+  mt-[30vh]
+`;
+
+export const AuthorText = tw.div`
+  font-medium 
+  text-base 
+  text-center 
+  text-white
+  w-[30vw]
+  mt-6
+`;
+
+export const Interactive = tw.div`
+  font-medium 
+  text-base 
+  text-center
+  text-white
+  mt-[25vh]
+`;
+
+export const ChapterTwoDiv = tw.div`
+  w-full
+  h-200
+  gap-8
+  bg-opacity-40
+  backdrop-blur
+  flex 
+  items-start 
+  pr-[15%]
+  pl-[15%]
+  `;
+
+export const IntroTitle = tw.div`
+  font-bold 
+  text-5xl 
+  text-right
+  text-white
+  mt-[120%]
+`;
+
+export const IntroText = tw.div`
+  text-justify 
+  align-middle
+  text-white 
+  text-xl 
+  leading-normal 
+  opacity-100
+  mt-[120%]
+`;
+
+export const TextOrange = tw.div`
+  bg-orange-700 
+  text-white
+  inline 
+`;
+
+export const ChapterGenericDiv = tw.div`
+  h-screen 
+  w-full
+  flex
+  text-white
+  items-center
+  -z-10
 `;
 
 export const ChapterLineChart = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: #e8cee4;
   z-index: -1;
   display: flex;
   align-items: center;
-`;
-
-export const ChapterTwoDiv = styled.div`
-  height: 200vh;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 0.6fr 0.8fr 2fr 0.6fr;
-  grid-template-rows: 1fr 1.3fr 0.3fr;
-  gap: 0px 50px;
-  grid-template-areas:
-    ". . . ."
-    ". titulo texto ."
-    ". . . .";
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
-  opacity: 1;
 `;
 
 export const CreditosDiv = styled.div`

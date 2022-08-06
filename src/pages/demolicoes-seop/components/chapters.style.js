@@ -16,7 +16,7 @@ export const TextChapterIndicator = styled.div`
 
 export const CapaDiv = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
   display: grid;
   grid-template-columns: 0.5fr 2fr 0.5fr;
@@ -36,7 +36,7 @@ export const CapaDiv = styled.div`
 `;
 
 export const ChapterGenericDiv = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100%;
 
   z-index: -1;
