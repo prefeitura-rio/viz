@@ -25,6 +25,7 @@ export const ChapterOneDiv = tw.div`
 
 export const Title = tw.div`
   font-bold 
+  font-roboto
   text-4xl 
   text-center 
   text-white
@@ -34,6 +35,7 @@ export const Title = tw.div`
 
 export const AuthorText = tw.div`
   font-medium 
+  font-roboto
   text-base 
   text-center 
   text-white
@@ -63,6 +65,7 @@ export const ChapterTwoDiv = tw.div`
 
 export const IntroTitle = tw.div`
   font-bold 
+  font-roboto
   text-5xl 
   text-right
   text-white
@@ -72,6 +75,7 @@ export const IntroTitle = tw.div`
 export const IntroText = tw.div`
   text-justify 
   align-middle
+  font-roboto
   text-white 
   text-xl 
   leading-normal 
@@ -80,6 +84,7 @@ export const IntroText = tw.div`
 `;
 
 export const TextOrange = tw.div`
+  font-roboto
   bg-orange-700 
   text-white
   inline 
