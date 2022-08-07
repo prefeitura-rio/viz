@@ -11,45 +11,6 @@ import CustomEase from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const Title = styled.div`
-  width: 80%;
-  color: #ffffff;
-  // background-color: #01baef;
-  font-family: "Redaction", sans-serif;
-  font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 1.3;
-  margin: auto;
-  text-align: center;
-  grid-area: titulo;
-`;
-
-const AuthorText = styled.div`
-  width: 80%;
-  color: #ffffff;
-  // background-color: #01baef;
-  font-family: "MetricWeb", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.3;
-  margin-bottom: auto;
-  text-align: center;
-  grid-area: subtitulo;
-`;
-
-const Interactive = styled.div`
-  width: 80%;
-  color: #ffffff;
-  // background-color: #01baef;
-  font-family: "MetricWeb", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.3;
-  margin: auto;
-  text-align: center;
-  grid-area: nova;
-`;
-
 const ContainerCard = styled.div`
   min-width: 250px;
   margin: auto;
@@ -123,17 +84,6 @@ const IntroText = styled.div`
   font-size: 1.2rem;
   line-height: 1.5;
   opacity: 1;
-`;
-
-const IntroGestaoBG = styled.div`
-  /* background-color: rgba(0, 0, 0, 0.6); */
-  position: relative;
-  z-index: -2;
-  height: 150vh;
-  width: 101%;
-  margin-left: -0.5%;
-  margin-bottom: -150vh;
-  /* backdrop-filter: blur(10px); */
 `;
 
 export function One(

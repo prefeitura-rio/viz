@@ -2,25 +2,15 @@
 import styled from "styled-components";
 import tw from "tailwind-styled-components";
 
-export const TextChapterIndicator = styled.div`
-  position: absolute;
-  background: #01baef;
-  text-align: "left";
-  font-size: 1.5rem;
-  color: #cfe795;
-  // opacity: 1;
-  z-index: 9999;
-  // top: 0;
-  // left: 0;
-`;
-
 export const ChapterOneDiv = tw.div`
   flex flex-col
-  h-screen w-full 
+  h-screen w-full
   items-center
   pl-5 pr-5
-  lg:mr-20 lg:ml-20 
+  lg:mr-20 lg:ml-20
   sm:ml-30 sm:mr-30
+  sm:w
+  
 `;
 
 export const Title = tw.div`
