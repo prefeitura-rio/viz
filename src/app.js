@@ -4,7 +4,7 @@
 import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
-import { createGlobalStyle } from "styled-components";
+import style, { createGlobalStyle } from "styled-components";
 import mapboxCss from "mapbox-gl/dist/mapbox-gl.css";
 import "./tailwind.css";
 
@@ -22,6 +22,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  .mapboxgl-control-container {
+    display: none !important;
+  } 
 `;
 
 DemolicoesSEOP;

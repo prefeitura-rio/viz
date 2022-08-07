@@ -220,13 +220,13 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.One id={"chapter-1"} />
       <chapterDiv.Two id={"chapter-2"} />
-      <chapterDiv.Three id={"chapter-3"} />
+      {/* <chapterDiv.Three id={"chapter-3"} />
       <chapterDiv.Four id={"chapter-4"} />
       <chapterDiv.Five id={"chapter-5"} />
       <chapterDiv.Six id={"chapter-6"} />
       <chapterDiv.Seven id={"chapter-7"} />
       <chapterDiv.Eight id={"chapter-8"} />
-      <chapterDiv.Creditos id={"chapter-9"} />
+      <chapterDiv.Creditos id={"chapter-9"} /> */}
     </>
   );
 }

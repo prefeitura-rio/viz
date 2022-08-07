@@ -35,14 +35,14 @@ class LineChart extends Component {
       .attr("transform", `translate(${margin.left},     ${margin.top})`);
 
     var data = this.state.data;
-    console.log(data);
+    // console.log(data);
     // Add X axis and Y axis
     var x = d3
       .scaleOrdinal()
       .range([0, width])
       .domain(
         d3.extent(data, (d) => {
-          console.log(d.semana);
+          // console.log(d.semana);
           return d.semana;
         })
       );
