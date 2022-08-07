@@ -15,69 +15,73 @@ export const TextChapterIndicator = styled.div`
 `;
 
 export const ChapterOneDiv = tw.div`
-  h-screen
-  w-full
-  flex
-  flex-col
+  flex flex-col
+  h-screen w-full 
   items-center
-  justify-start
+  pl-5 pr-5
+  lg:mr-20 lg:ml-20 
+  sm:ml-30 sm:mr-30
 `;
 
 export const Title = tw.div`
-  font-bold 
-  font-roboto
-  text-4xl 
-  text-center 
-  text-white
-  w-[50vw]
-  mt-[30vh]
-`;
+  font-roboto font-bold  
+  text-3xl text-center text-white    
+  mt-28
+  sm:mt-44
+  lg:text-4xl  
+  lg:mt-36
+  xl:text-5xl
+  xl:mt-48
+  2xl:mt-64
+  `;
 
 export const AuthorText = tw.div`
-  font-medium 
   font-roboto
-  text-base 
-  text-center 
-  text-white
-  w-[30vw]
+  text-sm text-center text-white
   mt-6
+  sm:mt-12
+  lg:text-base
+  lg:mt-5
+  xl:mt-8
+  2xl:mt-10
 `;
 
 export const Interactive = tw.div`
-  font-medium 
-  text-base 
-  text-center
-  text-white
-  mt-[25vh]
+  font-roboto
+  text-sm text-center text-white
+  mt-24
+
+  sm:mt-44
+  
+  lg:text-base
+  lg:mt-36
+
+  xl:mt-48
+
+  2xl:mt-64
 `;
 
 export const ChapterTwoDiv = tw.div`
-  w-full
-  h-200
+
+  w-full h-200
   gap-8
-  bg-opacity-40
-  backdrop-blur
-  flex 
-  items-start 
-  pr-[15%]
-  pl-[15%]
-  `;
+  bg-opacity-40 backdrop-blur
+  flex items-start 
+  pr-[15%] pl-[15%]
+  
+`;
 
 export const IntroTitle = tw.div`
-  font-bold 
-  font-roboto
-  text-5xl 
-  text-right
-  text-white
+  font-bold  font-roboto
+  text-5xl text-right text-white
+  
   mt-[120%]
 `;
 
 export const IntroText = tw.div`
-  text-justify 
+  font-roboto  
   align-middle
-  font-roboto
-  text-white 
-  text-xl 
+  text-xl text-justify text-white 
   leading-normal 
   opacity-100
   mt-[120%]
@@ -91,11 +95,10 @@ export const TextOrange = tw.div`
 `;
 
 export const ChapterGenericDiv = tw.div`
-  h-screen 
-  w-full
   flex
-  text-white
+  w-full h-screen 
   items-center
+  text-white
   -z-10
 `;
 

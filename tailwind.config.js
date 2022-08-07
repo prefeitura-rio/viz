@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
+  mode: "jit",
   // You are missing this block that defines what files tailwind should scan for usage
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {

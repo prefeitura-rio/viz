@@ -145,14 +145,14 @@ export function One(
   props = setDefaultProps(props);
   return (
     <styles.ChapterOneDiv id={props.id} ref={props.ref}>
-      <img src={logo1} className="w-[150px]  mt-[2vh]"></img>
+      <img src={logo1} className="h-16 mt-[2vh]  lg:h-16"></img>
       <styles.Title>
         Um ponto de virada na história do transporte municipal do Rio de Janeiro
       </styles.Title>
       <styles.AuthorText>
         Desenvolvido por{" "}
         <a
-          className="font-bold text-base text-white"
+          className="text-sm font-bold text-white lg:text-base"
           href="https://www.dados.rio/"
           target="_blank"
           rel="noreferrer"
@@ -161,7 +161,7 @@ export function One(
         </a>
         e{" "}
         <a
-          className="font-bold text-base text-white m1"
+          className="text-sm font-bold text-white lg:text-base"
           href="http://www.rio.rj.gov.br/web/smtr"
           target="_blank"
           rel="noreferrer"
@@ -172,7 +172,7 @@ export function One(
       <styles.Interactive>
         Para navegar pelo mapa{" "}
         <a
-          className="font-bold text-base text-white m1"
+          className="text-sm font-bold text-white lg:text-base"
           href="https://viz.dados.rio/#/especial-sppo/interactive"
           target="_blank"
           rel="noreferrer"
