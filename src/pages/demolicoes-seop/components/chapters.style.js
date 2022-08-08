@@ -4,16 +4,21 @@ import styled from "styled-components";
 import tw from "tailwind-styled-components";
 import capa from "../images/capa.gif";
 
-export const CapaDiv = tw.div`
+export const CapaDivSC = styled.div`
+  background-image: url(${capa});
+  background-size: cover;
+`;
+
+export const CapaDiv = tw(CapaDivSC)`
   flex flex-col
   h-screen w-full
   items-center
   pl-5 pr-5
-  lg:mr-20 lg:ml-20
-  sm:ml-30 sm:mr-30
-  sm:w
-`;
 
+`;
+// lg:mr-20 lg:ml-20
+// sm:ml-30 sm:mr-30
+// sm:w
 export const Title = tw.div`
   font-roboto font-bold  
   text-3xl text-center text-white    
@@ -35,7 +40,6 @@ export const AuthorText = tw.div`
 export const IntroTitle = tw.div`
   font-bold  font-roboto
   text-5xl text-right text-white
-  
   mt-[120%]
 `;
 
@@ -127,7 +131,6 @@ export const Grid = tw.div`
 
 const BigNumberSC = styled.div`
   color: #1a374d;
-  font-family: "Redaction", sans-serif;
   font-weight: 700;
 `;
 
