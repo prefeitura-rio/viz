@@ -93,7 +93,7 @@ export const ChapterGenericDiv = tw.div`
 `;
 
 export const ChapterLineChart = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background: #e8cee4;
   z-index: -1;
