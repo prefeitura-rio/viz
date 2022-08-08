@@ -13,7 +13,7 @@ export const CapaDiv = tw(CapaDivSC)`
 h-screen w-full
   flex flex-col 
   justify-between items-center 
-  pl-5 pr-5
+  pl-5 pr-5  
 `;
 // lg:mr-20 lg:ml-20
 // sm:ml-30 sm:mr-30
@@ -21,29 +21,25 @@ h-screen w-full
 export const Title = tw.div`
   mt-44
   lg:mt-80    
-  mb-2
-  lg:mb-5
   font-georgia font-bold  
   text-4xl text-center text-white
   lg:text-5xl
-  max-w-4xl
+  max-w-5xl
   `;
 
-export const Subtitle = tw.div`
-  font-georgia
-  text-base text-center text-white
-  lg:text-xl
-  max-w-4xl
-`;
+// export const Subtitle = tw.div`
+//   font-georgia
+//   text-base text-center text-white
+//   lg:text-xl
+//   max-w-4xl
+// `;
 
 export const AuthorText = tw.div`
   mb-44
-  lg:mb-80
-  mt-24
-  lg:mt-44
+  lg:mb-96
   font-georgia
   text-sm text-center text-white
-  lg:text-base
+  lg:text-lg
   max-w-4xl
 `;
 
@@ -63,6 +59,15 @@ export const IntroText = tw.div`
 `;
 
 export const ChapterGenericDiv = tw.div`
+  flex
+  w-full h-screen 
+  items-center
+  justify-center
+  text-white
+  -z-10
+  `;
+
+export const ChapterGenericDiv1 = tw.div`
   flex
   w-full h-screen 
   items-center

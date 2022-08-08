@@ -403,22 +403,22 @@ export const Seop4 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.3214,
-          lat: -22.98621,
+          lon: -43.31962,
+          lat: -22.99497,
         },
-        zoom: 15.32,
-        pitch: 60.0,
-        bearing: 66.07,
+        zoom: 15.77,
+        pitch: 59.0,
+        bearing: 124.47,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.3214,
-          lat: -22.98621,
+          lon: -43.31962,
+          lat: -22.99497,
         },
-        zoom: 15.32,
-        pitch: 60.0,
-        bearing: 66.07,
+        zoom: 15.77,
+        pitch: 59.0,
+        bearing: 124.47,
         duration: 4000,
       },
     },

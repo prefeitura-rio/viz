@@ -33,10 +33,10 @@ export function Capa(
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       <img src={logo} className="w-24 mt-[2vh]  lg:w-36"></img>
       <styles.Title>Demolição de construções irregulares</styles.Title>
-      <styles.Subtitle>
+      {/* <styles.Subtitle>
         Segurança para os moradores, Prejuízo para o crime organizado,
         Preservação das áreas verdes
-      </styles.Subtitle>
+      </styles.Subtitle> */}
       <div>
         <styles.AuthorText>
           Desenvolvido por{" "}
@@ -55,7 +55,7 @@ export function Capa(
             target="_blank"
             rel="noreferrer"
           >
-            Secretaria Municipal de Ordem Pública{" "}
+            SEOP{" "}
           </a>
           e{" "}
           <a
@@ -64,7 +64,7 @@ export function Capa(
             target="_blank"
             rel="noreferrer"
           >
-            Secretaria Municipal de Meio Ambiente e Cidade
+            SMAC
           </a>
         </styles.AuthorText>
       </div>
@@ -180,8 +180,9 @@ export function Exemplo1(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
+        <styles.NewsImage src={muzema}></styles.NewsImage>
         <styles.TextCard1>
           Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, 40
           anos, morreram após o desabamento de dois prédios, construídos
@@ -201,7 +202,7 @@ export function Exemplo1(
           que ocorreu em abril de 2019.
         </styles.TextCard1>
       </styles.ContainerCard1>
-    </styles.ChapterGenericDiv>
+    </styles.ChapterGenericDiv1>
   );
 }
 
@@ -214,8 +215,9 @@ export function Exemplo2(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
+        <styles.NewsImage src={riodaspedras}></styles.NewsImage>
         <styles.TextCard1>
           Maitê Gomes Abreu, de 2 anos, e seu pai, Natan Gomes, de 30 anos,
           foram encontrados mortos após nove horas de buscas entre os escombros.
@@ -235,7 +237,7 @@ export function Exemplo2(
           na Zona Oeste em junho do ano passado. O imóvel era irregular.
         </styles.TextCard1>
       </styles.ContainerCard1>
-    </styles.ChapterGenericDiv>
+    </styles.ChapterGenericDiv1>
   );
 }
 
