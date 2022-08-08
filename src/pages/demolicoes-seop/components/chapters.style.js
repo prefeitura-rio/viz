@@ -5,7 +5,7 @@ import tw from "tailwind-styled-components";
 import capa from "../images/capa.gif";
 
 export const CapaDivSC = styled.div`
-  /* background-image: url(${capa}); */
+  background-image: url(${capa});
   background-size: cover;
 `;
 
@@ -21,23 +21,36 @@ h-screen w-full
 export const Title = tw.div`
   mt-44
   lg:mt-80    
+  mb-2
+  lg:mb-5
   font-georgia font-bold  
   text-4xl text-center text-white
   lg:text-5xl
   max-w-4xl
   `;
 
+export const Subtitle = tw.div`
+  font-georgia
+  text-base text-center text-white
+  lg:text-xl
+  max-w-4xl
+`;
+
 export const AuthorText = tw.div`
   mb-44
   lg:mb-80
+  mt-24
+  lg:mt-44
   font-georgia
   text-sm text-center text-white
+  lg:text-base
   max-w-4xl
 `;
 
 export const IntroTitle = tw.div`
   font-bold  font-georgia
   text-3xl text-left text-white
+  self-start
   mb-6
   lg:self-start
 `;
@@ -83,11 +96,11 @@ export const NewsTitle = tw.div`
 `;
 
 export const ContainerCard = tw.div`
-  m-auto
-  w-2/5
-  p-10
-  bg-opacity-70 backdrop-blur-sm
-  bg-black/75
+  p-5
+  bg-opacity-[20%] backdrop-blur-sm
+bg-black/75
+  max-w-xs
+  lg:max-w-3xl
 `;
 
 export const ContainerCard1 = tw.div`
@@ -139,20 +152,22 @@ const BigNumberSC = styled.div`
 export const BigNumber = tw(BigNumberSC)`
   font-georgia  
   font-bold
-  text-9xl
+  text-7xl
   text-left
   self-end
+  lg:text-8xl
 `;
 
 export const BigNumber1 = tw(BigNumber)`
-  text-7xl
+  text-2xl
+  lg:text-5xl
 `;
 
-const TextBlueSC = styled.div`
+const TextyellowSC = styled.div`
   background: #a96e04;
 `;
 
-export const TextBlue = tw(TextBlueSC)`
+export const Textyellow = tw(TextyellowSC)`
   text-white
   inline
 `;

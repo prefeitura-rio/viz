@@ -21,12 +21,12 @@ export const Capa = () => {
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
     },
@@ -49,12 +49,12 @@ export const Intro = () => {
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
     },
@@ -77,12 +77,12 @@ export const Prejuizo = () => {
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
     },
@@ -186,12 +186,12 @@ export const Grafico = () => {
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
     },
@@ -285,22 +285,22 @@ export const Seop1 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.3226,
-          lat: -22.9855,
+          lon: -43.32127,
+          lat: -22.9864,
         },
-        zoom: 17.4,
-        pitch: 50.5,
-        bearing: 7.1,
+        zoom: 15.85,
+        pitch: 41.0,
+        bearing: 17.2,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.32127,
+          lat: -22.9864,
         },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
+        zoom: 15.85,
+        pitch: 41.0,
+        bearing: 17.2,
         duration: 4000,
       },
     },
@@ -310,14 +310,15 @@ export const Seop1 = () => {
         targetOpacity: 1,
         layer: {
           ...{
-            id: "latlong",
+            id: "demolicao-icone",
             type: "symbol",
             source: "composite",
-            "source-layer": "latlong-54kzsi",
+            "source-layer": "demolicao-ar7k7f",
             layout: {
-              "icon-image": "destino",
-              "icon-size": 0.13,
+              "icon-image": "hospital",
+              "icon-rotate": 45,
               "icon-allow-overlap": true,
+              "icon-size": 2,
             },
             paint: {
               "icon-opacity": 0,
@@ -334,45 +335,30 @@ export const Seop2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.48128,
-          lat: -23.00913,
+          lon: -43.4785,
+          lat: -23.02842,
         },
-        zoom: 13.92,
-        pitch: 43.0,
-        bearing: -55.6,
+        zoom: 14.71,
+        pitch: 51.0,
+        bearing: 11.2,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.4785,
+          lat: -23.02842,
         },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
+        zoom: 14.71,
+        pitch: 51.0,
+        bearing: 11.2,
         duration: 4000,
       },
     },
     layers: [
       {
-        layerType: "mapbox",
+        layerType: "reuse",
         targetOpacity: 1,
-        layer: {
-          ...{
-            id: "latlong",
-            type: "symbol",
-            source: "composite",
-            "source-layer": "latlong-54kzsi",
-            layout: {
-              "icon-image": "destino",
-              "icon-size": 0.13,
-              "icon-allow-overlap": true,
-            },
-            paint: {
-              "icon-opacity": 0,
-            },
-          },
-        },
+        layer: { id: "demolicao-icone" },
       },
     ],
   };
@@ -383,45 +369,30 @@ export const Seop3 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.48128,
-          lat: -23.00913,
+          lon: -43.4785,
+          lat: -23.02842,
         },
-        zoom: 13.92,
-        pitch: 43.0,
-        bearing: -55.6,
+        zoom: 14.71,
+        pitch: 52.5,
+        bearing: -53.6,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.4785,
+          lat: -23.02842,
         },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
+        zoom: 14.71,
+        pitch: 52.5,
+        bearing: -53.6,
         duration: 4000,
       },
     },
     layers: [
       {
-        layerType: "mapbox",
+        layerType: "reuse",
         targetOpacity: 1,
-        layer: {
-          ...{
-            id: "latlong",
-            type: "symbol",
-            source: "composite",
-            "source-layer": "latlong-54kzsi",
-            layout: {
-              "icon-image": "destino",
-              "icon-size": 0.13,
-              "icon-allow-overlap": true,
-            },
-            paint: {
-              "icon-opacity": 0,
-            },
-          },
-        },
+        layer: { id: "demolicao-icone" },
       },
     ],
   };
@@ -432,45 +403,30 @@ export const Seop4 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.48128,
-          lat: -23.00913,
+          lon: -43.3214,
+          lat: -22.98621,
         },
-        zoom: 13.92,
-        pitch: 43.0,
-        bearing: -55.6,
+        zoom: 15.32,
+        pitch: 60.0,
+        bearing: 66.07,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.3214,
+          lat: -22.98621,
         },
-        zoom: 15.11,
+        zoom: 15.32,
         pitch: 60.0,
-        bearing: -146.41,
+        bearing: 66.07,
         duration: 4000,
       },
     },
     layers: [
       {
-        layerType: "mapbox",
+        layerType: "reuse",
         targetOpacity: 1,
-        layer: {
-          ...{
-            id: "latlong",
-            type: "symbol",
-            source: "composite",
-            "source-layer": "latlong-54kzsi",
-            layout: {
-              "icon-image": "destino",
-              "icon-size": 0.13,
-              "icon-allow-overlap": true,
-            },
-            paint: {
-              "icon-opacity": 0,
-            },
-          },
-        },
+        layer: { id: "demolicao-icone" },
       },
     ],
   };
@@ -491,12 +447,12 @@ export const Acompanhe = () => {
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
     },
@@ -519,12 +475,12 @@ export const Oeste = () => {
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
     },
@@ -628,12 +584,12 @@ export const Exemplo1 = () => {
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.32127,
+          lat: -22.9864,
         },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
+        zoom: 15.85,
+        pitch: 41.0,
+        bearing: 17.2,
         duration: 4000,
       },
     },
@@ -641,7 +597,7 @@ export const Exemplo1 = () => {
       {
         layerType: "reuse",
         targetOpacity: 1,
-        layer: { id: "desmatamento" },
+        layer: { id: "desabamento-icone" },
       },
     ],
   };
@@ -662,12 +618,12 @@ export const Exemplo2 = () => {
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.33913,
+          lat: -22.98032,
         },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
+        zoom: 15.85,
+        pitch: 44.5,
+        bearing: 46.0,
         duration: 4000,
       },
     },
@@ -675,67 +631,67 @@ export const Exemplo2 = () => {
       {
         layerType: "reuse",
         targetOpacity: 1,
-        layer: { id: "desmatamento" },
+        layer: { id: "desabamento-icone" },
       },
     ],
   };
 };
 
-export const Exemplo3 = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.22925,
-          lat: -22.93012,
-        },
-        zoom: 15.72,
-        pitch: 45.5,
-        bearing: 12.4,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.22711,
-          lat: -22.93024,
-        },
-        zoom: 17.35,
-        pitch: 52.0,
-        bearing: 109.23,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 1,
-        layer: { id: "desmatamento" },
-      },
-    ],
-  };
-};
+// export const Exemplo3 = () => {
+//   return {
+//     location: {
+//       desktop: {
+//         center: {
+//           lon: -43.22925,
+//           lat: -22.93012,
+//         },
+//         zoom: 15.72,
+//         pitch: 45.5,
+//         bearing: 12.4,
+//         duration: 4000,
+//       },
+//       mobile: {
+//         center: {
+//           lon: -43.22925,
+//           lat: -22.93012,
+//         },
+//         zoom: 15.72,
+//         pitch: 45.5,
+//         bearing: 12.4,
+//         duration: 4000,
+//       },
+//     },
+//     layers: [
+//       {
+//         layerType: "reuse",
+//         targetOpacity: 1,
+//         layer: { id: "desabamento-icone" },
+//       },
+//     ],
+//   };
+// };
 
 export const Zoom = () => {
   return {
     location: {
       desktop: {
         center: {
-          lon: -43.29594,
-          lat: -22.96129,
+          lon: -43.32838,
+          lat: -22.98401,
         },
-        zoom: 12.69,
+        zoom: 13.6,
         pitch: 0.0,
-        bearing: -0.46,
+        bearing: 0.0,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.22711,
-          lat: -22.93024,
+          lon: -43.32838,
+          lat: -22.98401,
         },
-        zoom: 17.35,
-        pitch: 52.0,
-        bearing: 109.23,
+        zoom: 13.6,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
     },
@@ -745,10 +701,10 @@ export const Zoom = () => {
         targetOpacity: 1,
         layer: {
           ...{
-            id: "desabamento",
+            id: "desabamento-icone",
             type: "symbol",
             source: "composite",
-            "source-layer": "desabamento-a9knsj",
+            "source-layer": "desabamento-1f3n6k",
             layout: {
               "icon-image": "hospital",
               "icon-size": 2,
@@ -780,12 +736,12 @@ export const Mapa = () => {
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
     },
@@ -889,12 +845,12 @@ export const Fim = () => {
       },
       mobile: {
         center: {
-          lon: -43.18213,
-          lat: -22.90645,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 15.11,
-        pitch: 60.0,
-        bearing: -146.41,
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
     },

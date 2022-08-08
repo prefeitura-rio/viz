@@ -32,7 +32,11 @@ export function Capa(
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       <img src={logo} className="w-24 mt-[2vh]  lg:w-36"></img>
-      <styles.Title>1.000 demolições de construções irregulares</styles.Title>
+      <styles.Title>Demolição de construções irregulares</styles.Title>
+      <styles.Subtitle>
+        Segurança para os moradores, Prejuízo para o crime organizado,
+        Preservação das áreas verdes
+      </styles.Subtitle>
       <div>
         <styles.AuthorText>
           Desenvolvido por{" "}
@@ -78,16 +82,16 @@ export function Intro(
 
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle>
+      {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
       <styles.IntroText>
         A proliferação de construções irregulares é um problema que tomou conta
         da cidade do Rio há algumas décadas. Em áreas sob influência do crime
         organizado a preocupação é ainda maior. <br /> <br />
         Estudos apontam que{" "}
-        <styles.TextBlue>
+        <styles.Textyellow>
           a atividade imobiliária se tornou uma das principais fontes
           financeiras de alguns grupos criminosos.
-        </styles.TextBlue>{" "}
+        </styles.Textyellow>{" "}
         Essas construções são realizadas sem autorização da Prefeitura, em áreas
         públicas, e erguidas sem nenhum acompanhamento técnico. <br /> <br />{" "}
         Por trás de cada prédio construído ilegalmente, e sem fiscalização, há
@@ -113,21 +117,15 @@ export function Prejuizo(
             <styles.BigNumber1>milhões</styles.BigNumber1>
           </styles.Grid1>
           <styles.TextCard>
-            Por trás de tanta construção ilegal em área sob influência do crime
-            organizado, há um grande interesse econômico. Estudos apontam que{" "}
-            <styles.TextBlue>
-              os grupos criminais, principalmente as milícias, obtiveram um
-              aumento de seus ganhos através do mercado imobiliário,
-            </styles.TextBlue>{" "}
-            a partir da oferta e da proteção para execução de construções
-            irregulares (HIRATA, 2021).
-            <br /> <br />
-            E, muito também, para atingi-los no bolso é que a SEOP tem realizado
-            suas operações com foco nessas regiões. Prova disso é que{" "}
-            <styles.TextBlue>
-              desde 2021 as operações da secretaria acarretaram em um prejuízo
-              estimado em R$ xxx milhões para os cofres do crime organizado.
-            </styles.TextBlue>
+            Por trás de cada construção ilegal em área sob influência do crime
+            organizado, há um grande interesse econômico. Estudos apontam que os
+            grupos criminais, principalmente as milícias, obtiveram um aumento
+            de seus ganhos através do mercado imobiliário, a partir da oferta e
+            da proteção para execução de construções irregulares. Graças as
+            operações realizadas pela SEOP, essas organizações ilegais também
+            sentiram no bolso. Desde 2021, as operações da secretaria
+            acarretaram um prejuízo estimado em R$ XX milhões para os cofres do
+            crime organizado.
           </styles.TextCard>
         </styles.Grid>
       </styles.ContainerCard>
@@ -160,15 +158,13 @@ export function Grafico(
 </script> */}
         <styles.NewsImage src={grafico}></styles.NewsImage>
         <styles.TextCard>
-          Analisando as prioridades da Secretaria de Ordem Pública e da própria
-          Prefeitura, dá para notar que o tema construções irregulares é tratado
-          com a <styles.TextBlue>absoluta relevância</styles.TextBlue> que o
-          assunto merece. Se olharmos historicamente, porém, nem sempre a
-          análise foi essa. Na gestão anterior foram feitas 359 ao longo de
-          quatro anos. Desde que a atual gestão assumiu{" "}
-          <styles.TextBlue>
-            1.000 demolições em apenas um ano e meio.
-          </styles.TextBlue>
+          Analisando as prioridades da SEOP e da Prefeitura, já deu para
+          perceber que o assunto é tratado com a relevância que necessita. Isto,
+          entretanto, nem sempre foi assim. Analisando os dados históricos de
+          demolições realizadas na cidade, é possível perceber que, ao longo da
+          gestão anterior, apenas 359 demolições foram realizadas, número
+          inferior as mil demolições feitas em apenas um ano e meio pela atual
+          gestão.
         </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -186,28 +182,23 @@ export function Exemplo1(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        {/* <styles.NewsImage src={riodaspedras}></styles.NewsImage> */}
-        {/* <styles.NewsTitle>
-          <a
-            style={{
-              fontSize: "2.2rem",
-              fontWeight: "700",
-              color: "#ffffff",
-            }}
-            href="https://veja.abril.com.br/brasil/predio-desaba-em-comunidade-dominada-por-milicianos-no-rio-de-janeiro/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Prédio desaba em comunidade dominada por milicianos no Rio de
-            Janeiro
-          </a>
-        </styles.NewsTitle> */}
         <styles.TextCard1>
-          Maitê Gomes Abreu, de 2 anos, e seu pai, Natan Gomes, de 30 anos,
-          foram encontrados mortos após nove horas de buscas entre os escombros.
-          Pai e sua filha foram vítimas do desabamento de um prédio de quatro
-          andares em Rio das Pedras, na Zona Oeste em junho do ano passado. O
-          imóvel era irregular.
+          Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, 40
+          anos, morreram após o desabamento de dois prédios, construídos
+          irregularmente na região de{" "}
+          <styles.Textyellow>
+            {" "}
+            <a
+              className="p-1"
+              href="https://g1.globo.com/rj/rio-de-janeiro/noticia/2019/04/22/morre-a-24a-vitima-do-desabamento-na-muzema.ghtml"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Muzema,
+            </a>
+          </styles.Textyellow>{" "}
+          no Itanhangá, Zona Oeste. Ao todo, 24 pessoas morreram no desastre,
+          que ocorreu em abril de 2019.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
@@ -225,67 +216,62 @@ export function Exemplo2(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        {/* <styles.NewsImage src={muzema}></styles.NewsImage> */}
-        {/* <styles.NewsTitle>
-          <a
-            style={{
-              fontSize: "2.2rem",
-              fontWeight: "700",
-              color: "#ffffff",
-            }}
-            href="https://g1.globo.com/rj/rio-de-janeiro/noticia/2019/04/22/morre-a-24a-vitima-do-desabamento-na-muzema.ghtml"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Morre a 24ª vítima do desabamento na Muzema
-          </a>
-        </styles.NewsTitle> */}
         <styles.TextCard1>
-          Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, 40
-          anos, morreram após o desabamento de dois prédios, construídos
-          irregularmente na região de Muzema, no Itanhangá, Zona Oeste. Ao todo,
-          24 pessoas morreram no desastre, que ocorreu em abril de 2019.
+          Maitê Gomes Abreu, de 2 anos, e seu pai, Natan Gomes, de 30 anos,
+          foram encontrados mortos após nove horas de buscas entre os escombros.
+          Pai e sua filha foram vítimas do desabamento de um prédio de quatro
+          andares em{" "}
+          <styles.Textyellow>
+            {" "}
+            <a
+              className="p-1"
+              href="https://veja.abril.com.br/brasil/predio-desaba-em-comunidade-dominada-por-milicianos-no-rio-de-janeiro/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Rio das Pedras,
+            </a>
+          </styles.Textyellow>{" "}
+          na Zona Oeste em junho do ano passado. O imóvel era irregular.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
   );
 }
 
-export function Exemplo3(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
+// export function Exemplo3(
+//   props = {
+//     id: "",
+//     chapRef: null,
+//   }
+// ) {
+//   props = setDefaultProps(props);
 
-  return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        {/* <styles.NewsImage src={salgueiro}></styles.NewsImage> */}
-        {/* <styles.NewsTitle>
-          <a
-            style={{
-              fontSize: "2.2rem",
-              fontWeight: "700",
-              color: "#ffffff",
-            }}
-            href="https://www1.folha.uol.com.br/cotidiano/2021/11/predio-de-4-andares-desaba-no-rio-e-deixa-um-morto-e-tres-feridos.shtml"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Prédio de 4 andares desaba no Rio e deixa um morto e três feridos
-          </a>
-        </styles.NewsTitle> */}
-        <styles.TextCard1>
-          Um prédio de quatro andares desabou no Morro do Salgueiro, na zona
-          norte do Rio de Janeiro, nesta quarta-feira (17) e deixou um morto e
-          três feridos, de acordo com o Corpo de Bombeiros
-        </styles.TextCard1>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv>
-  );
-}
+//   return (
+//     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+//       <styles.ContainerCard1>
+//         <styles.TextCard1>
+//           Em novembro de 2021, uma tragédia: um prédio de quatro andares desabou
+//           no{" "}
+//           <styles.Textyellow>
+//             {" "}
+//             <a
+//               className="p-1"
+//               href="https://www1.folha.uol.com.br/cotidiano/2021/11/predio-de-4-andares-desaba-no-rio-e-deixa-um-morto-e-tres-feridos.shtml"
+//               target="_blank"
+//               rel="noreferrer"
+//             >
+//               Morro do Salgueiro,
+//             </a>
+//           </styles.Textyellow>{" "}
+//           na Zona Norte. Um homem de 22 anos faleceu e outras três pessoas
+//           ficaram feridas. Entre elas, uma criança de apenas quatro anos. A
+//           construção também não tinha alvará.
+//         </styles.TextCard1>
+//       </styles.ContainerCard1>
+//     </styles.ChapterGenericDiv>
+//   );
+// }
 
 export function Seop1(
   props = {
@@ -314,7 +300,9 @@ export function Seop1(
           </a>
         </styles.NewsTitle> */}
         <styles.TextCard1>
-          Construção irregular é demolida na Muzema
+          Este foi o caso de uma construção irregular, identificada em Muzema. A
+          construção de três andares, não tinha aval técnico, e foi colocada
+          baixo pela equipe da Força-Tarefa no mês passado.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
@@ -334,8 +322,10 @@ export function Seop2(
       <styles.ContainerCard1>
         {/* <styles.NewsImage src={seop2}></styles.NewsImage> */}
         <styles.TextCard1>
-          Prédio irregular é demolido pela prefeitura, no Recreio dos
-          Bandeirantes, na Zona Oeste
+          Há 2 meses, um imóvel de sete andares, construída na região do
+          Terreirão, no Recreio, área dominada pela milícia. O prédio não
+          atendia nenhum requisito para construção no local, e foi demolido pela
+          Prefeitura.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
@@ -355,8 +345,12 @@ export function Seop3(
       <styles.ContainerCard1>
         {/* <styles.NewsImage src={seop2}></styles.NewsImage> */}
         <styles.TextCard1>
-          Força-tarefa começa demolição de prédio irregular no Recreio dos
-          Bandeirantes, Zona Oeste do Rio
+          No começo deste ano, outro imóvel também localizado no Recreio dos
+          Bandeirantes foi abaixo. Com três andares já construídos e um quarto
+          em desenvolvimento, o prédio irregular possuía cinco apartamentos por
+          andar. A estimativa é que cada unidade, construída sem nenhum parecer
+          técnico que aprovasse a sua segurança, seria vendida por R$ 300 mil
+          para os moradores.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
@@ -440,22 +434,17 @@ export function Fim(
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
       <styles.IntroTitle id={"fimTitle"}>Fim</styles.IntroTitle>
       <styles.IntroText>
-        É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
-        gestão, é extremamente importante. Mostra que estamos atuantes e que
-        seguiremos firmes no combate a ocupação desordenada da cidade, na
-        proteção de vidas e em asfixiar financeiramente o crime organizado. Isso
-        tudo só reforça a convicção que o trabalho precisa seguir .{" "}
-        <styles.TextBlue>
-          Por isso, a Secretaria de Ordem Pública permanecerá atenta, colocando
-          abaixo aquelas estruturas erguidas irregularmente.
-        </styles.TextBlue>{" "}
-        Além disso, a secretaria entende a importância de ter uma ação cada vez
-        mais estratégica, que saiba apontar prioridades e aja nos pontos mais
-        sensíveis da cidade. Por isso a SEOP está investindo na melhoria da sua
-        capacidade de identificação de novas construções, seja através uma
-        apuração refinada das denúncias feitas pela população, como também por
-        meios de novas tecnologias, que incluem drones, ortofotos e imagens de
-        satélites.
+        A marca de mil demolições, em apenas um ano e meio de gestão, é
+        extremamente importante para a cidade. Para continuar seu trabalho, a
+        Prefeitura do Rio de Janeiro vem investindo na melhoria capacidade de
+        identificação de novas construções, por meio de denúncias recebidas, e
+        também através do uso de novas tecnologias, como o uso de drones,
+        fotografias aéreas (ortofotos) e imagens de satélites. A Prefeitura do
+        Rio de Janeiro e a Secretaria de Ordem Pública seguem atentos, colocando
+        abaixo aquelas estruturas erguidas irregularmente em nosso município.
+        Continuaremos atuantes e firmes no combate à ocupação desordenada na
+        cidade e no asfixiamento financeiro do crime organizado. A preservação
+        de vidas é, e sempre será, o nosso objetivo.
       </styles.IntroText>
     </styles.IntroDiv>
   );
@@ -472,25 +461,16 @@ export function Acompanhe(
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
       <styles.IntroTitle id={"acompanheTitle"}>
-        Acompanhe as ações da SEOP
+        As ações da SEOP
       </styles.IntroTitle>
       <styles.IntroText>
-        É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
-        gestão, é extremamente importante. Mostra que estamos atuantes e que
-        seguiremos firmes no combate a ocupação desordenada da cidade, na
-        proteção de vidas e em asfixiar financeiramente o crime organizado. Isso
-        tudo só reforça a convicção que o trabalho precisa seguir .{" "}
-        <styles.TextBlue>
-          Por isso, a Secretaria de Ordem Pública permanecerá atenta, colocando
-          abaixo aquelas estruturas erguidas irregularmente.
-        </styles.TextBlue>{" "}
-        Além disso, a secretaria entende a importância de ter uma ação cada vez
-        mais estratégica, que saiba apontar prioridades e aja nos pontos mais
-        sensíveis da cidade. Por isso a SEOP está investindo na melhoria da sua
-        capacidade de identificação de novas construções, seja através uma
-        apuração refinada das denúncias feitas pela população, como também por
-        meios de novas tecnologias, que incluem drones, ortofotos e imagens de
-        satélites.
+        As operações realizadas pela Ordem Pública reúnem diversos órgãos da
+        Prefeitura, como a Guarda Municipal, Comlurb, Secretaria de Conservação
+        e Subprefeituras, além das concessionárias de luz e água. Na maioria das
+        ações, o apoio das forças policiais também é necessário, devido à
+        influência do crime organizado nas regiões visitadas. Uma força-tarefa
+        entre a SEOP e o Ministério Público atua na realização das demolições e
+        na investigação das construções irregulares e seus responsáveis.
       </styles.IntroText>
     </styles.IntroDiv>
   );
@@ -507,16 +487,17 @@ export function Oeste(
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
       <styles.IntroTitle id={"zonaOesteTitle"}>
-        Onde atuamos e o foco na Zona Oeste
+        Onde estão localizadas as construções irregulares
       </styles.IntroTitle>
       <styles.IntroText>
         Apesar de ocorrerem em todas as regiões da cidade, as construções
         irregulares têm uma{" "}
-        <styles.TextBlue>incidência maior na Zona Oeste</styles.TextBlue> do
-        Município, onde ocorrem cerca de <styles.TextBlue>66%</styles.TextBlue>{" "}
-        das demolições realizadas pela Secretaria de Ordem Pública. Áreas como
-        Recreio, Rio das Pedras e Muzema, por exemplo, são bairros extremamente
-        afetados por essas irregularidades.
+        <styles.Textyellow>incidência maior na Zona Oeste</styles.Textyellow> do
+        Município, onde ocorrem cerca de{" "}
+        <styles.Textyellow>+ de 70%</styles.Textyellow> das demolições
+        realizadas pela Secretaria de Ordem Pública. Áreas como Recreio, Rio das
+        Pedras e Muzema, por exemplo, são bairros extremamente afetados por
+        essas irregularidades.
       </styles.IntroText>
     </styles.IntroDiv>
   );

@@ -60,10 +60,10 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Exemplo2().location);
         setLayers(chapterMap.Exemplo2().layers);
         break;
-      case "exemplo3":
-        setPosition(chapterMap.Exemplo3().location);
-        setLayers(chapterMap.Exemplo3().layers);
-        break;
+      // case "exemplo3":
+      //   setPosition(chapterMap.Exemplo3().location);
+      //   setLayers(chapterMap.Exemplo3().layers);
+      //   break;
       case "mapa":
         setPosition(chapterMap.Mapa().location);
         setLayers(chapterMap.Mapa().layers);
@@ -167,24 +167,24 @@ export default function SubsidioSPPO() {
       },
     });
 
-    ScrollTrigger.create({
-      trigger: "#exemplo3",
-      onToggle: () => {
-        setChapterNumberMap("exemplo3");
-      },
-    });
+    // ScrollTrigger.create({
+    //   trigger: "#exemplo3",
+    //   onToggle: () => {
+    //     setChapterNumberMap("exemplo3");
+    //   },
+    // });
 
-    // const tl13 = gsap.timeline();
-    // tl13
-    //   .set("#oeste", { opacity: 0 })
-    //   .to("#oeste", { opacity: 0, duration: 30 })
-    //   .to("#oeste", { opacity: 1, duration: 6 })
-    //   .to("#oeste", { opacity: 1, duration: 20 })
-    //   .to("#oeste", { opacity: 0, duration: 6 })
-    //   .to("#oeste", { opacity: 0, duration: 28 });
+    const tl13 = gsap.timeline();
+    tl13
+      .set("#oeste", { opacity: 0 })
+      .to("#oeste", { opacity: 0, duration: 30 })
+      .to("#oeste", { opacity: 1, duration: 6 })
+      .to("#oeste", { opacity: 1, duration: 20 })
+      .to("#oeste", { opacity: 0, duration: 6 })
+      .to("#oeste", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
-      // animation: tl13,
+      animation: tl13,
       trigger: "#oeste",
       onToggle: () => {
         setChapterNumberMap("oeste");
@@ -229,17 +229,17 @@ export default function SubsidioSPPO() {
       },
     });
 
-    // const tl12 = gsap.timeline();
-    // tl12
-    //   .set("#acompanhe", { opacity: 0 })
-    //   .to("#acompanhe", { opacity: 0, duration: 30 })
-    //   .to("#acompanhe", { opacity: 1, duration: 6 })
-    //   .to("#acompanhe", { opacity: 1, duration: 20 })
-    //   .to("#acompanhe", { opacity: 0, duration: 6 })
-    //   .to("#acompanhe", { opacity: 0, duration: 28 });
+    const tl12 = gsap.timeline();
+    tl12
+      .set("#acompanhe", { opacity: 0 })
+      .to("#acompanhe", { opacity: 0, duration: 30 })
+      .to("#acompanhe", { opacity: 1, duration: 6 })
+      .to("#acompanhe", { opacity: 1, duration: 20 })
+      .to("#acompanhe", { opacity: 0, duration: 6 })
+      .to("#acompanhe", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
-      // animation: tl12,
+      animation: tl12,
       trigger: "#acompanhe",
       onToggle: () => {
         setChapterNumberMap("acompanhe");
@@ -274,17 +274,17 @@ export default function SubsidioSPPO() {
       },
     });
 
-    // const tl11 = gsap.timeline();
-    // tl11
-    //   .set("#fim", { opacity: 0 })
-    //   .to("#fim", { opacity: 0, duration: 30 })
-    //   .to("#fim", { opacity: 1, duration: 6 })
-    //   .to("#fim", { opacity: 1, duration: 20 })
-    //   .to("#fim", { opacity: 1, duration: 6 })
-    //   .to("#fim", { opacity: 1, duration: 28 });
+    const tl11 = gsap.timeline();
+    tl11
+      .set("#fim", { opacity: 0 })
+      .to("#fim", { opacity: 0, duration: 30 })
+      .to("#fim", { opacity: 1, duration: 6 })
+      .to("#fim", { opacity: 1, duration: 20 })
+      .to("#fim", { opacity: 1, duration: 6 })
+      .to("#fim", { opacity: 1, duration: 28 });
 
     ScrollTrigger.create({
-      // animation: tl11,
+      animation: tl11,
       trigger: "#fim",
       onToggle: () => {
         setChapterNumberMap("fim");
@@ -319,7 +319,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Zoom id={"zoom"} />
       <chapterDiv.Exemplo1 id={"exemplo1"} />
       <chapterDiv.Exemplo2 id={"exemplo2"} />
-      <chapterDiv.Exemplo3 id={"exemplo3"} />
+      {/* <chapterDiv.Exemplo3 id={"exemplo3"} /> */}
       <chapterDiv.Oeste id={"oeste"} />
       <chapterDiv.Mapa id={"mapa"} />
       <chapterDiv.Prejuizo id={"prejuizo"} />
