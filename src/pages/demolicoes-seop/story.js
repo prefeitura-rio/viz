@@ -47,17 +47,14 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Intro().location);
         setLayers(chapterMap.Intro().layers);
         break;
+        break;
+      case "zoom":
+        setPosition(chapterMap.Zoom().location);
+        setLayers(chapterMap.Zoom().layers);
+        break;
       case "exemplo1":
         setPosition(chapterMap.Exemplo1().location);
         setLayers(chapterMap.Exemplo1().layers);
-        break;
-      case "prejuizo":
-        setPosition(chapterMap.Prejuizo().location);
-        setLayers(chapterMap.Prejuizo().layers);
-        break;
-      case "grafico":
-        setPosition(chapterMap.Grafico().location);
-        setLayers(chapterMap.Grafico().layers);
         break;
       case "exemplo2":
         setPosition(chapterMap.Exemplo2().location);
@@ -66,6 +63,18 @@ export default function SubsidioSPPO() {
       case "exemplo3":
         setPosition(chapterMap.Exemplo3().location);
         setLayers(chapterMap.Exemplo3().layers);
+        break;
+      case "mapa":
+        setPosition(chapterMap.Mapa().location);
+        setLayers(chapterMap.Mapa().layers);
+        break;
+      case "prejuizo":
+        setPosition(chapterMap.Prejuizo().location);
+        setLayers(chapterMap.Prejuizo().layers);
+        break;
+      case "grafico":
+        setPosition(chapterMap.Grafico().location);
+        setLayers(chapterMap.Grafico().layers);
         break;
       case "fim":
         setPosition(chapterMap.Fim().location);
@@ -112,20 +121,27 @@ export default function SubsidioSPPO() {
       },
     });
 
-    const tl2 = gsap.timeline();
-    tl2
-      .set("#intro", { opacity: 1 })
-      .to("#intro", { opacity: 1, duration: 30 })
-      .to("#intro", { opacity: 1, duration: 6 })
-      .to("#intro", { opacity: 1, duration: 20 })
-      .to("#intro", { opacity: 0, duration: 6 })
-      .to("#intro", { opacity: 0, duration: 28 });
+    // const tl2 = gsap.timeline();
+    // tl2
+    //   .set("#intro", { opacity: 1 })
+    //   .to("#intro", { opacity: 1, duration: 30 })
+    //   .to("#intro", { opacity: 1, duration: 6 })
+    //   .to("#intro", { opacity: 1, duration: 20 })
+    //   .to("#intro", { opacity: 0, duration: 6 })
+    //   .to("#intro", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
-      animation: tl2,
+      // animation: tl2,
       trigger: "#intro",
       onToggle: () => {
         setChapterNumberMap("intro");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#zoom",
+      onToggle: () => {
+        setChapterNumberMap("zoom");
       },
     });
 
@@ -150,20 +166,27 @@ export default function SubsidioSPPO() {
       },
     });
 
-    const tl13 = gsap.timeline();
-    tl13
-      .set("#oeste", { opacity: 0 })
-      .to("#oeste", { opacity: 0, duration: 30 })
-      .to("#oeste", { opacity: 1, duration: 6 })
-      .to("#oeste", { opacity: 1, duration: 20 })
-      .to("#oeste", { opacity: 0, duration: 6 })
-      .to("#oeste", { opacity: 0, duration: 28 });
+    // const tl13 = gsap.timeline();
+    // tl13
+    //   .set("#oeste", { opacity: 0 })
+    //   .to("#oeste", { opacity: 0, duration: 30 })
+    //   .to("#oeste", { opacity: 1, duration: 6 })
+    //   .to("#oeste", { opacity: 1, duration: 20 })
+    //   .to("#oeste", { opacity: 0, duration: 6 })
+    //   .to("#oeste", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
-      animation: tl13,
+      // animation: tl13,
       trigger: "#oeste",
       onToggle: () => {
         setChapterNumberMap("oeste");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#mapa",
+      onToggle: () => {
+        setChapterNumberMap("mapa");
       },
     });
 
@@ -175,8 +198,8 @@ export default function SubsidioSPPO() {
     }
     const tl4 = gsap.timeline();
     tl4.to(num, {
-      var: 150,
-      duration: 2,
+      var: 646,
+      duration: 1,
       onUpdate: changeNumber,
     });
     ScrollTrigger.create({
@@ -198,17 +221,17 @@ export default function SubsidioSPPO() {
       },
     });
 
-    const tl12 = gsap.timeline();
-    tl12
-      .set("#acompanhe", { opacity: 0 })
-      .to("#acompanhe", { opacity: 0, duration: 30 })
-      .to("#acompanhe", { opacity: 1, duration: 6 })
-      .to("#acompanhe", { opacity: 1, duration: 20 })
-      .to("#acompanhe", { opacity: 0, duration: 6 })
-      .to("#acompanhe", { opacity: 0, duration: 28 });
+    // const tl12 = gsap.timeline();
+    // tl12
+    //   .set("#acompanhe", { opacity: 0 })
+    //   .to("#acompanhe", { opacity: 0, duration: 30 })
+    //   .to("#acompanhe", { opacity: 1, duration: 6 })
+    //   .to("#acompanhe", { opacity: 1, duration: 20 })
+    //   .to("#acompanhe", { opacity: 0, duration: 6 })
+    //   .to("#acompanhe", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
-      animation: tl12,
+      // animation: tl12,
       trigger: "#acompanhe",
       onToggle: () => {
         setChapterNumberMap("acompanhe");
@@ -229,17 +252,17 @@ export default function SubsidioSPPO() {
       },
     });
 
-    const tl11 = gsap.timeline();
-    tl11
-      .set("#fim", { opacity: 0 })
-      .to("#fim", { opacity: 0, duration: 30 })
-      .to("#fim", { opacity: 1, duration: 6 })
-      .to("#fim", { opacity: 1, duration: 20 })
-      .to("#fim", { opacity: 1, duration: 6 })
-      .to("#fim", { opacity: 1, duration: 28 });
+    // const tl11 = gsap.timeline();
+    // tl11
+    //   .set("#fim", { opacity: 0 })
+    //   .to("#fim", { opacity: 0, duration: 30 })
+    //   .to("#fim", { opacity: 1, duration: 6 })
+    //   .to("#fim", { opacity: 1, duration: 20 })
+    //   .to("#fim", { opacity: 1, duration: 6 })
+    //   .to("#fim", { opacity: 1, duration: 28 });
 
     ScrollTrigger.create({
-      animation: tl11,
+      // animation: tl11,
       trigger: "#fim",
       onToggle: () => {
         setChapterNumberMap("fim");
@@ -252,7 +275,7 @@ export default function SubsidioSPPO() {
       <MultilayerMap
         interactive={false}
         scrollZoom={true}
-        showLayers={false}
+        showLayers={true}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
         mapStyle="mapbox://styles/escritoriodedados/cl6e3p6as001814qxcun8bjo1"
         layers={layers}
@@ -271,10 +294,12 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
+      <chapterDiv.Zoom id={"zoom"} />
       <chapterDiv.Exemplo1 id={"exemplo1"} />
       <chapterDiv.Exemplo2 id={"exemplo2"} />
       <chapterDiv.Exemplo3 id={"exemplo3"} />
       <chapterDiv.Oeste id={"oeste"} />
+      <chapterDiv.Mapa id={"mapa"} />
       <chapterDiv.Prejuizo id={"prejuizo"} />
       <chapterDiv.Grafico id={"grafico"} />
       <chapterDiv.Acompanhe id={"acompanhe"} />

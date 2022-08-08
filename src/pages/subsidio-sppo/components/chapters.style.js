@@ -14,7 +14,7 @@ export const ChapterOneDiv = tw.div`
 `;
 
 export const Title = tw.div`
-  font-roboto font-bold  
+  font-georgia font-bold  
   text-3xl text-center text-white    
   mt-28
   sm:mt-44
@@ -26,7 +26,7 @@ export const Title = tw.div`
   `;
 
 export const AuthorText = tw.div`
-  font-roboto
+  font-georgia
   text-sm text-center text-white
   mt-6
   sm:mt-12
@@ -37,7 +37,7 @@ export const AuthorText = tw.div`
 `;
 
 export const Interactive = tw.div`
-  font-roboto
+  font-georgia
   text-sm text-center text-white
   mt-24
 
@@ -62,14 +62,14 @@ export const ChapterTwoDiv = tw.div`
 `;
 
 export const IntroTitle = tw.div`
-  font-bold  font-roboto
+  font-bold  font-georgia
   text-5xl text-right text-white
   
   mt-[120%]
 `;
 
 export const IntroText = tw.div`
-  font-roboto  
+  font-georgia  
   align-middle
   text-xl text-justify text-white 
   leading-normal 
@@ -78,7 +78,7 @@ export const IntroText = tw.div`
 `;
 
 export const TextOrange = tw.div`
-  font-roboto
+  font-georgia
   bg-orange-700 
   text-white
   inline 

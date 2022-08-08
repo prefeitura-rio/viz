@@ -20,7 +20,7 @@ export const CapaDiv = tw(CapaDivSC)`
 // sm:ml-30 sm:mr-30
 // sm:w
 export const Title = tw.div`
-  font-roboto font-bold  
+  font-georgia font-bold  
   text-3xl text-center text-white    
   mt-28
   sm:mt-44
@@ -29,7 +29,7 @@ export const Title = tw.div`
   `;
 
 export const AuthorText = tw.div`
-  font-roboto
+  font-georgia
   text-sm text-center text-white
   mt-6
   sm:mt-12
@@ -38,18 +38,16 @@ export const AuthorText = tw.div`
 `;
 
 export const IntroTitle = tw.div`
-  font-bold  font-roboto
-  text-5xl text-right text-white
-  mt-[120%]
+  font-bold  font-georgia
+  text-5xl text-left text-white
+  mb-6
 `;
 
 export const IntroText = tw.div`
-  font-roboto  
-  align-middle
-  text-xl text-justify text-white 
+  font-georgia  
+  text-lg text-justify text-white 
   leading-normal 
   opacity-100
-  mt-[120%]
 `;
 
 export const ChapterGenericDiv = tw.div`
@@ -62,21 +60,21 @@ export const ChapterGenericDiv = tw.div`
 
 export const IntroDiv = tw.div`
   w-full h-200
-  gap-8
   bg-opacity-40 backdrop-blur
-  flex items-start 
-  pr-[15%] pl-[15%]
+  block
+  bg-black/50
+  pr-[25%] pl-[25%]
 `;
 
 export const NewsImage = tw.img`
 w-full
-mb-auto
+mb-8
 mt-[2%]
 `;
 
 export const NewsTitle = tw.div`
   text-white
-  font-roboto
+  font-georgia
   text-4xl
   mb-[15px]
 `;
@@ -86,7 +84,7 @@ export const ContainerCard = tw.div`
   w-2/5
   p-10
   bg-opacity-70 backdrop-blur-sm
-
+  bg-black/75
 `;
 
 export const ContainerCard1 = tw.div`
@@ -94,21 +92,22 @@ export const ContainerCard1 = tw.div`
   w-2/5
   p-10
   bg-opacity-[20%] backdrop-blur-sm
+  bg-black/75
 `;
 
 const TextCardSC = styled.div`
-  color: #dbdbdb;
+  color: #ffffff;
 `;
 
 export const TextCard = tw(TextCardSC)`
-  font-roboto  
-  text-base
+  font-georgia  
+  text-lg
   text-left
 `;
 
 export const TextCard1 = tw(TextCardSC)`
-  font-roboto  
-  text-base
+  font-georgia  
+  text-lg
   text-left
   mt-0
   mb-0
@@ -130,12 +129,12 @@ export const Grid = tw.div`
 `;
 
 const BigNumberSC = styled.div`
-  color: #1a374d;
+  color: #a96e04;
   font-weight: 700;
 `;
 
 export const BigNumber = tw(BigNumberSC)`
-  font-roboto  
+  font-georgia  
   font-bold
   text-9xl
   text-left
@@ -147,7 +146,7 @@ export const BigNumber1 = tw(BigNumber)`
 `;
 
 const TextBlueSC = styled.div`
-  background: #1a374d;
+  background: #a96e04;
 `;
 
 export const TextBlue = tw(TextBlueSC)`

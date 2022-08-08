@@ -31,10 +31,8 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
-      <img src={logo} className="w-24 mt-[2vh]  lg:w-10"></img>
-      <styles.Title>
-        1000 <br /> DEMOLIÇÕES
-      </styles.Title>
+      <img src={logo} className="w-24 mt-[2vh]  lg:w-55"></img>
+      <styles.Title>1.000 demolições de construções irregulares</styles.Title>
       <styles.AuthorText>
         Desenvolvido por <br />
         <a
@@ -53,6 +51,15 @@ export function Capa(
           rel="noreferrer"
         >
           Secretaria Municipal de Ordem Pública
+        </a>
+        <br />
+        <a
+          className="font-bold"
+          href="http://www.rio.rj.gov.br/web/smac"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Secretaria Municipal de Meio Ambiente e Cidade
         </a>
       </styles.AuthorText>
     </styles.CapaDiv>
@@ -192,8 +199,8 @@ export function Exemplo1(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={riodaspedras}></styles.NewsImage>
-        <styles.NewsTitle>
+        {/* <styles.NewsImage src={riodaspedras}></styles.NewsImage> */}
+        {/* <styles.NewsTitle>
           <a
             style={{
               fontSize: "2.2rem",
@@ -207,7 +214,7 @@ export function Exemplo1(
             Prédio desaba em comunidade dominada por milicianos no Rio de
             Janeiro
           </a>
-        </styles.NewsTitle>
+        </styles.NewsTitle> */}
         <styles.TextCard1>
           Criança e pai foram localizados mortos sob escombros após nove horas
           de buscas em Rio das Pedras, na Zona Oeste; quatro adultos foram
@@ -229,8 +236,8 @@ export function Exemplo2(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={muzema}></styles.NewsImage>
-        <styles.NewsTitle>
+        {/* <styles.NewsImage src={muzema}></styles.NewsImage> */}
+        {/* <styles.NewsTitle>
           <a
             style={{
               fontSize: "2.2rem",
@@ -243,7 +250,7 @@ export function Exemplo2(
           >
             Morre a 24ª vítima do desabamento na Muzema
           </a>
-        </styles.NewsTitle>
+        </styles.NewsTitle> */}
         <styles.TextCard1>
           Adilma Rodrigues, de 35 anos, era casada com o pastor Cláudio,
           primeira vítima da queda dos prédios. Os dois prédios que caíram dia
@@ -265,8 +272,8 @@ export function Exemplo3(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={salgueiro}></styles.NewsImage>
-        <styles.NewsTitle>
+        {/* <styles.NewsImage src={salgueiro}></styles.NewsImage> */}
+        {/* <styles.NewsTitle>
           <a
             style={{
               fontSize: "2.2rem",
@@ -279,7 +286,7 @@ export function Exemplo3(
           >
             Prédio de 4 andares desaba no Rio e deixa um morto e três feridos
           </a>
-        </styles.NewsTitle>
+        </styles.NewsTitle> */}
         <styles.TextCard1>
           Um prédio de quatro andares desabou no Morro do Salgueiro, na zona
           norte do Rio de Janeiro, nesta quarta-feira (17) e deixou um morto e
@@ -301,8 +308,8 @@ export function Seop1(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={seop1}></styles.NewsImage>
-        <styles.NewsTitle>
+        {/* <styles.NewsImage src={seop1}></styles.NewsImage> */}
+        {/* <styles.NewsTitle>
           <a
             style={{
               fontSize: "2.2rem",
@@ -315,7 +322,7 @@ export function Seop1(
           >
             Construção irregular é demolida na Muzema
           </a>
-        </styles.NewsTitle>
+        </styles.NewsTitle> */}
         <styles.TextCard1>
           Força-tarefa demole prédio de três andares que fica a menos de 100
           metros do condomínio que desabou, em 2019, deixando 24 mortos
@@ -336,8 +343,8 @@ export function Seop2(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={seop2}></styles.NewsImage>
-        <styles.NewsTitle>
+        {/* <styles.NewsImage src={seop2}></styles.NewsImage> */}
+        {/* <styles.NewsTitle>
           <a
             style={{
               fontSize: "2.2rem",
@@ -351,9 +358,55 @@ export function Seop2(
             Prédio irregular é demolido pela prefeitura, no Recreio dos
             Bandeirantes, na Zona Oeste
           </a>
-        </styles.NewsTitle>
+        </styles.NewsTitle> */}
         <styles.TextCard1>
           Liminar impediu demolição no dia 25 de abril.
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Zoom(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.TextCard1>
+          É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
+          gestão, é extremamente importante. Mostra que estamos atuantes e que
+          seguiremos firmes no combate a ocupação desordenada da cidade, na
+          proteção de vidas e em asfixiar financeiramente o crime organizado.
+          Isso tudo só reforça a convicção que o trabalho precisa seguir .
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Mapa(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.TextCard1>
+          É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
+          gestão, é extremamente importante. Mostra que estamos atuantes e que
+          seguiremos firmes no combate a ocupação desordenada da cidade, na
+          proteção de vidas e em asfixiar financeiramente o crime organizado.
+          Isso tudo só reforça a convicção que o trabalho precisa seguir .
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
