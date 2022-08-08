@@ -217,7 +217,7 @@ class MultilayerMap extends React.Component {
 MultilayerMap.defaultProps = {
   interactive: false,
   scrollZoom: false,
-  showLayer: false,
+  showLayers: false,
   animationSpeed: 3,
   animationLoopLength: 28000,
   animated: true,
