@@ -183,6 +183,7 @@ export function Exemplo1(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={muzema}></styles.NewsImage>
+        <styles.Credito>Reprodução G1</styles.Credito>
         <styles.TextCard1>
           Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, 40
           anos, morreram após o desabamento de dois prédios, construídos
@@ -218,6 +219,7 @@ export function Exemplo2(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={riodaspedras}></styles.NewsImage>
+        <styles.Credito>Reprodução Veja</styles.Credito>
         <styles.TextCard1>
           Maitê Gomes Abreu, de 2 anos, e seu pai, Natan Gomes, de 30 anos,
           foram encontrados mortos após nove horas de buscas entre os escombros.

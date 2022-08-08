@@ -43,6 +43,15 @@ export const AuthorText = tw.div`
   max-w-4xl
 `;
 
+export const Credito = tw.div`
+  mb-3
+  lg:mb-4
+  font-georgia
+  text-sm text-left text-white
+  lg:text-sm
+  lg:text-left
+`;
+
 export const IntroTitle = tw.div`
   font-bold  font-georgia
   text-3xl text-left text-white
@@ -89,7 +98,7 @@ export const IntroDiv = tw.div`
 
 export const NewsImage = tw.img`
 w-full
-mb-8
+mb-3
 mt-[2%]
 `;
 
