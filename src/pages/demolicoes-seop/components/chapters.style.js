@@ -50,6 +50,7 @@ export const Credito = tw.div`
   text-sm text-left text-white
   lg:text-sm
   lg:text-left
+  
 `;
 
 export const IntroTitle = tw.div`
