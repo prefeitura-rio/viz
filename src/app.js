@@ -3,6 +3,7 @@
 
 import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Loading } from "./components/loading/loading";
 
 import style, { createGlobalStyle } from "styled-components";
 import mapboxCss from "mapbox-gl/dist/mapbox-gl.css";
@@ -34,22 +35,7 @@ function App() {
     <div id={"main"}>
       <GlobalStyle />
       <Router>
-        <Suspense
-          fallback={
-            <div
-            // style={{
-            //   fontSize: "3rem",
-            //   fontWeight: "700",
-            //   color: "#406882",
-            //   backgroundColor: "#000000",
-            //   width: "100%",
-            //   height: "100%",
-            // }}
-            >
-              carregando...
-            </div>
-          }
-        >
+        <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/especial-sppo/subsidio" element={<SubsidioSPPO />} />
