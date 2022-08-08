@@ -14,30 +14,32 @@ h-screen w-full
   flex flex-col 
   justify-between items-center 
   pl-5 pr-5
-  mb-44
 `;
 // lg:mr-20 lg:ml-20
 // sm:ml-30 sm:mr-30
 // sm:w
 export const Title = tw.div`
-  font-georgia font-bold  
-  text-3xl text-center text-white    
   mt-44
-  sm:mt-44
-  lg:text-4xl  
-  lg:mt-36
+  lg:mt-80    
+  font-georgia font-bold  
+  text-4xl text-center text-white
+  lg:text-5xl
+  max-w-4xl
   `;
 
 export const AuthorText = tw.div`
+  mb-44
+  lg:mb-80
   font-georgia
   text-sm text-center text-white
-  my-44
+  max-w-4xl
 `;
 
 export const IntroTitle = tw.div`
   font-bold  font-georgia
   text-3xl text-left text-white
   mb-6
+  lg:self-start
 `;
 
 export const IntroText = tw.div`
@@ -51,16 +53,20 @@ export const ChapterGenericDiv = tw.div`
   flex
   w-full h-screen 
   items-center
+  justify-center
   text-white
   -z-10
-`;
+  `;
 
 export const IntroDiv = tw.div`
   w-full h-200
   bg-opacity-40 backdrop-blur
-  block items-center
+  flex flex-col 
+  justify-center items-center 
   bg-black/50
-  pr-[25%] pl-[25%]
+  pr-[10%] pl-[10%]
+  lg:pr-[25%]
+  lg:pl-[25%]
 `;
 
 export const NewsImage = tw.img`
@@ -85,11 +91,11 @@ export const ContainerCard = tw.div`
 `;
 
 export const ContainerCard1 = tw.div`
-  m-auto
-  w-2/5
-  p-10
+  p-5
   bg-opacity-[20%] backdrop-blur-sm
   bg-black/75
+  max-w-xs
+  lg:max-w-3xl
 `;
 
 const TextCardSC = styled.div`

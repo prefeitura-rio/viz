@@ -129,17 +129,17 @@ export default function SubsidioSPPO() {
       },
     });
 
-    // const tl2 = gsap.timeline();
-    // tl2
-    //   .set("#intro", { opacity: 1 })
-    //   .to("#intro", { opacity: 1, duration: 30 })
-    //   .to("#intro", { opacity: 1, duration: 6 })
-    //   .to("#intro", { opacity: 1, duration: 20 })
-    //   .to("#intro", { opacity: 0, duration: 6 })
-    //   .to("#intro", { opacity: 0, duration: 28 });
+    const tl2 = gsap.timeline();
+    tl2
+      .set("#intro", { opacity: 1 })
+      .to("#intro", { opacity: 1, duration: 30 })
+      .to("#intro", { opacity: 1, duration: 6 })
+      .to("#intro", { opacity: 1, duration: 20 })
+      .to("#intro", { opacity: 0, duration: 6 })
+      .to("#intro", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
-      // animation: tl2,
+      animation: tl2,
       trigger: "#intro",
       onToggle: () => {
         setChapterNumberMap("intro");
@@ -315,7 +315,7 @@ export default function SubsidioSPPO() {
         animationSpeed={1}
       />
       <chapterDiv.Capa id={"capa"} />
-      {/* <chapterDiv.Intro id={"intro"} />
+      <chapterDiv.Intro id={"intro"} />
       <chapterDiv.Zoom id={"zoom"} />
       <chapterDiv.Exemplo1 id={"exemplo1"} />
       <chapterDiv.Exemplo2 id={"exemplo2"} />
@@ -329,7 +329,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Seop2 id={"seop2"} />
       <chapterDiv.Seop3 id={"seop3"} />
       <chapterDiv.Seop4 id={"seop4"} />
-      <chapterDiv.Fim id={"fim"} /> */}
+      <chapterDiv.Fim id={"fim"} />
     </>
   );
 }

@@ -31,37 +31,39 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
-      <img src={logo} className="w-24 mt-[2vh]  lg:w-55"></img>
+      <img src={logo} className="w-24 mt-[2vh]  lg:w-36"></img>
       <styles.Title>1.000 demolições de construções irregulares</styles.Title>
-      <styles.AuthorText>
-        Desenvolvido por <br />
-        <a
-          className="font-bold"
-          href="https://www.dados.rio/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Escritório de Dados
-        </a>{" "}
-        <br />
-        <a
-          className="font-bold"
-          href="http://www.rio.rj.gov.br/web/seop"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Secretaria Municipal de Ordem Pública
-        </a>
-        <br />
-        <a
-          className="font-bold"
-          href="http://www.rio.rj.gov.br/web/smac"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Secretaria Municipal de Meio Ambiente e Cidade
-        </a>
-      </styles.AuthorText>
+      <div>
+        <styles.AuthorText>
+          Desenvolvido por{" "}
+          <a
+            className="font-bold underline"
+            href="https://www.dados.rio/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Escritório de Dados
+          </a>
+          ,{" "}
+          <a
+            className="font-bold underline"
+            href="http://www.rio.rj.gov.br/web/seop"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Secretaria Municipal de Ordem Pública{" "}
+          </a>
+          e{" "}
+          <a
+            className="font-bold underline"
+            href="http://www.rio.rj.gov.br/web/smac"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Secretaria Municipal de Meio Ambiente e Cidade
+          </a>
+        </styles.AuthorText>
+      </div>
     </styles.CapaDiv>
   );
 }

@@ -639,25 +639,9 @@ export const Exemplo1 = () => {
     },
     layers: [
       {
-        layerType: "mapbox",
+        layerType: "reuse",
         targetOpacity: 1,
-        layer: {
-          ...{
-            id: "latlongfinal",
-            type: "symbol",
-            source: "composite",
-            "source-layer": "latlongfinal-3i2jjr",
-            layout: {
-              "icon-image": "hospital",
-              "icon-rotate": 45,
-              "icon-allow-overlap": true,
-              "icon-size": 1.4,
-            },
-            paint: {
-              "icon-opacity": 0,
-            },
-          },
-        },
+        layer: { id: "desmatamento" },
       },
     ],
   };
@@ -689,25 +673,9 @@ export const Exemplo2 = () => {
     },
     layers: [
       {
-        layerType: "mapbox",
+        layerType: "reuse",
         targetOpacity: 1,
-        layer: {
-          ...{
-            id: "latlongfinal",
-            type: "symbol",
-            source: "composite",
-            "source-layer": "latlongfinal-3i2jjr",
-            layout: {
-              "icon-image": "hospital",
-              "icon-rotate": 45,
-              "icon-allow-overlap": true,
-              "icon-size": 1.4,
-            },
-            paint: {
-              "icon-opacity": 0,
-            },
-          },
-        },
+        layer: { id: "desmatamento" },
       },
     ],
   };
@@ -739,25 +707,9 @@ export const Exemplo3 = () => {
     },
     layers: [
       {
-        layerType: "mapbox",
+        layerType: "reuse",
         targetOpacity: 1,
-        layer: {
-          ...{
-            id: "latlongfinal",
-            type: "symbol",
-            source: "composite",
-            "source-layer": "latlongfinal-3i2jjr",
-            layout: {
-              "icon-image": "hospital",
-              "icon-rotate": 45,
-              "icon-allow-overlap": true,
-              "icon-size": 1.4,
-            },
-            paint: {
-              "icon-opacity": 0,
-            },
-          },
-        },
+        layer: { id: "desmatamento" },
       },
     ],
   };
@@ -793,15 +745,15 @@ export const Zoom = () => {
         targetOpacity: 1,
         layer: {
           ...{
-            id: "latlongfinal",
+            id: "desabamento",
             type: "symbol",
             source: "composite",
-            "source-layer": "latlongfinal-3i2jjr",
+            "source-layer": "desabamento-a9knsj",
             layout: {
               "icon-image": "hospital",
+              "icon-size": 2,
               "icon-rotate": 45,
               "icon-allow-overlap": true,
-              "icon-size": 1.4,
             },
             paint: {
               "icon-opacity": 0,
