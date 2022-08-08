@@ -378,6 +378,104 @@ export const Seop2 = () => {
   };
 };
 
+export const Seop3 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.48128,
+          lat: -23.00913,
+        },
+        zoom: 13.92,
+        pitch: 43.0,
+        bearing: -55.6,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.18213,
+          lat: -22.90645,
+        },
+        zoom: 15.11,
+        pitch: 60.0,
+        bearing: -146.41,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            id: "latlong",
+            type: "symbol",
+            source: "composite",
+            "source-layer": "latlong-54kzsi",
+            layout: {
+              "icon-image": "destino",
+              "icon-size": 0.13,
+              "icon-allow-overlap": true,
+            },
+            paint: {
+              "icon-opacity": 0,
+            },
+          },
+        },
+      },
+    ],
+  };
+};
+
+export const Seop4 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.48128,
+          lat: -23.00913,
+        },
+        zoom: 13.92,
+        pitch: 43.0,
+        bearing: -55.6,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.18213,
+          lat: -22.90645,
+        },
+        zoom: 15.11,
+        pitch: 60.0,
+        bearing: -146.41,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            id: "latlong",
+            type: "symbol",
+            source: "composite",
+            "source-layer": "latlong-54kzsi",
+            layout: {
+              "icon-image": "destino",
+              "icon-size": 0.13,
+              "icon-allow-overlap": true,
+            },
+            paint: {
+              "icon-opacity": 0,
+            },
+          },
+        },
+      },
+    ],
+  };
+};
+
 export const Acompanhe = () => {
   return {
     location: {

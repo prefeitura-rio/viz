@@ -88,6 +88,14 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Seop2().location);
         setLayers(chapterMap.Seop2().layers);
         break;
+      case "seop3":
+        setPosition(chapterMap.Seop3().location);
+        setLayers(chapterMap.Seop3().layers);
+        break;
+      case "seop4":
+        setPosition(chapterMap.Seop4().location);
+        setLayers(chapterMap.Seop4().layers);
+        break;
       case "acompanhe":
         setPosition(chapterMap.Acompanhe().location);
         setLayers(chapterMap.Acompanhe().layers);
@@ -110,7 +118,7 @@ export default function SubsidioSPPO() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: true,
+      markers: false,
       scrub: true,
       // toggleActions: "play reverse play reverse",
     });
@@ -252,6 +260,20 @@ export default function SubsidioSPPO() {
       },
     });
 
+    ScrollTrigger.create({
+      trigger: "#seop3",
+      onToggle: () => {
+        setChapterNumberMap("seop3");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#seop4",
+      onToggle: () => {
+        setChapterNumberMap("seop4");
+      },
+    });
+
     // const tl11 = gsap.timeline();
     // tl11
     //   .set("#fim", { opacity: 0 })
@@ -293,7 +315,7 @@ export default function SubsidioSPPO() {
         animationSpeed={1}
       />
       <chapterDiv.Capa id={"capa"} />
-      <chapterDiv.Intro id={"intro"} />
+      {/* <chapterDiv.Intro id={"intro"} />
       <chapterDiv.Zoom id={"zoom"} />
       <chapterDiv.Exemplo1 id={"exemplo1"} />
       <chapterDiv.Exemplo2 id={"exemplo2"} />
@@ -305,7 +327,9 @@ export default function SubsidioSPPO() {
       <chapterDiv.Acompanhe id={"acompanhe"} />
       <chapterDiv.Seop1 id={"seop1"} />
       <chapterDiv.Seop2 id={"seop2"} />
-      <chapterDiv.Fim id={"fim"} />
+      <chapterDiv.Seop3 id={"seop3"} />
+      <chapterDiv.Seop4 id={"seop4"} />
+      <chapterDiv.Fim id={"fim"} /> */}
     </>
   );
 }

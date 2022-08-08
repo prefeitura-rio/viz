@@ -10,7 +10,7 @@ export const CapaDivSC = styled.div`
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
-  flex flex-col
+  flex flex-col justify-between items-center space-y-3
   h-screen w-full
   items-center
   pl-5 pr-5
@@ -22,7 +22,7 @@ export const CapaDiv = tw(CapaDivSC)`
 export const Title = tw.div`
   font-georgia font-bold  
   text-3xl text-center text-white    
-  mt-28
+  mt-44
   sm:mt-44
   lg:text-4xl  
   lg:mt-36
@@ -31,15 +31,12 @@ export const Title = tw.div`
 export const AuthorText = tw.div`
   font-georgia
   text-sm text-center text-white
-  mt-6
-  sm:mt-12
-  lg:text-base
-  lg:mt-5
+  my-44
 `;
 
 export const IntroTitle = tw.div`
   font-bold  font-georgia
-  text-5xl text-left text-white
+  text-3xl text-left text-white
   mb-6
 `;
 
@@ -61,7 +58,7 @@ export const ChapterGenericDiv = tw.div`
 export const IntroDiv = tw.div`
   w-full h-200
   bg-opacity-40 backdrop-blur
-  block
+  block items-center
   bg-black/50
   pr-[25%] pl-[25%]
 `;

@@ -80,32 +80,17 @@ export function Intro(
       <styles.IntroText>
         A proliferação de construções irregulares é um problema que tomou conta
         da cidade do Rio há algumas décadas. Em áreas sob influência do crime
-        organizado a preocupação é ainda maior. Estudos apontam que{" "}
+        organizado a preocupação é ainda maior. <br /> <br />
+        Estudos apontam que{" "}
         <styles.TextBlue>
-          a atividade imobiliária se tornou um dos principais sustentáculos
-          financeiros de alguns grupos criminosos (HIRATA, 2021).
+          a atividade imobiliária se tornou uma das principais fontes
+          financeiras de alguns grupos criminosos.
         </styles.TextBlue>{" "}
-        Essas construções são realizadas sem autorização da Prefeitura, em
-        alguns casos em área pública e erguidas, muitas vezes, sem nenhum
-        acompanhamento técnico. Não à toa a cidade já presenciou desastres
-        envolvendo construções irregulares, com inúmeras vítimas fatais. Você
-        verá a seguir alguns exemplos.
-        <br /> <br />
-        Exatamente para combater o crescimento desordenado da cidade, preservar
-        vidas e asfixiar financeiramente o crime organizado que, desde meados de
-        2021,{" "}
-        <styles.TextBlue>
-          a Secretaria de Ordem Pública tem realizado operações constantes de
-          demolição dessas construções sem regularização.
-        </styles.TextBlue>{" "}
-        De lá para cá, foram 1.000 demolições! Isso mesmo, MIL construções
-        irregulares postas abaixo em um ano e meio de trabalho.
-        <br /> <br />
-        Aqui cabe um destaque: o foco das operações é em{" "}
-        <styles.TextBlue>
-          imóveis não habitados, erguidos de forma ilegal e que tragam risco à
-          população.
-        </styles.TextBlue>
+        Essas construções são realizadas sem autorização da Prefeitura, em áreas
+        públicas, e erguidas sem nenhum acompanhamento técnico. <br /> <br />{" "}
+        Por trás de cada prédio construído ilegalmente, e sem fiscalização, há
+        inúmeras famílias que vivendo sob o risco de perderem, a qualquer
+        momento, suas casas, sua história e também suas vidas.
       </styles.IntroText>
     </styles.IntroDiv>
   );
@@ -216,9 +201,11 @@ export function Exemplo1(
           </a>
         </styles.NewsTitle> */}
         <styles.TextCard1>
-          Criança e pai foram localizados mortos sob escombros após nove horas
-          de buscas em Rio das Pedras, na Zona Oeste; quatro adultos foram
-          resgatados.
+          Maitê Gomes Abreu, de 2 anos, e seu pai, Natan Gomes, de 30 anos,
+          foram encontrados mortos após nove horas de buscas entre os escombros.
+          Pai e sua filha foram vítimas do desabamento de um prédio de quatro
+          andares em Rio das Pedras, na Zona Oeste em junho do ano passado. O
+          imóvel era irregular.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
@@ -252,9 +239,10 @@ export function Exemplo2(
           </a>
         </styles.NewsTitle> */}
         <styles.TextCard1>
-          Adilma Rodrigues, de 35 anos, era casada com o pastor Cláudio,
-          primeira vítima da queda dos prédios. Os dois prédios que caíram dia
-          12 após fortes chuvas eram irregulares.
+          Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, 40
+          anos, morreram após o desabamento de dois prédios, construídos
+          irregularmente na região de Muzema, no Itanhangá, Zona Oeste. Ao todo,
+          24 pessoas morreram no desastre, que ocorreu em abril de 2019.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
@@ -324,8 +312,7 @@ export function Seop1(
           </a>
         </styles.NewsTitle> */}
         <styles.TextCard1>
-          Força-tarefa demole prédio de três andares que fica a menos de 100
-          metros do condomínio que desabou, em 2019, deixando 24 mortos
+          Construção irregular é demolida na Muzema
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
@@ -344,23 +331,51 @@ export function Seop2(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         {/* <styles.NewsImage src={seop2}></styles.NewsImage> */}
-        {/* <styles.NewsTitle>
-          <a
-            style={{
-              fontSize: "2.2rem",
-              fontWeight: "700",
-              color: "#ffffff",
-            }}
-            href="https://g1.globo.com/rj/rio-de-janeiro/rj1/video/predio-irregular-e-demolido-pela-prefeitura-no-recreio-dos-bandeirantes-na-zona-oeste-10565435.ghtml"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Prédio irregular é demolido pela prefeitura, no Recreio dos
-            Bandeirantes, na Zona Oeste
-          </a>
-        </styles.NewsTitle> */}
         <styles.TextCard1>
-          Liminar impediu demolição no dia 25 de abril.
+          Prédio irregular é demolido pela prefeitura, no Recreio dos
+          Bandeirantes, na Zona Oeste
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Seop3(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        {/* <styles.NewsImage src={seop2}></styles.NewsImage> */}
+        <styles.TextCard1>
+          Força-tarefa começa demolição de prédio irregular no Recreio dos
+          Bandeirantes, Zona Oeste do Rio
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Seop4(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        {/* <styles.NewsImage src={seop2}></styles.NewsImage> */}
+        <styles.TextCard1>
+          Prédio da milícia de Rio das Pedras é demolido em ação do MP com a
+          Prefeitura
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
@@ -379,11 +394,9 @@ export function Zoom(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
-          gestão, é extremamente importante. Mostra que estamos atuantes e que
-          seguiremos firmes no combate a ocupação desordenada da cidade, na
-          proteção de vidas e em asfixiar financeiramente o crime organizado.
-          Isso tudo só reforça a convicção que o trabalho precisa seguir .
+          Infelizmente, nos últimos anos, casos recorrentes de desabamentos de
+          prédios e casas foram registrados na cidade. Famílias inteiras
+          perderam seus lares e suas vidas.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
