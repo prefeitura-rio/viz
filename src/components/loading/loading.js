@@ -6,24 +6,24 @@ const LoadingDiv = tw.div`
 w-full h-screen
 flex 
 flex-col
-items-center justify-center 
+items-center justify-between 
 text-white 
 text-3xl
-lg:text-6xl
+lg:text-3xl
 bg-black
 `;
 
 const LoadingImage = tw.img`
-lg:w-44
-w-20
-mb-8
+w-24
+lg:w-36
+mt-[2vh]
 `;
 
 export function Loading() {
   return (
     <LoadingDiv>
       <LoadingImage src={logo}></LoadingImage>
-      <div>LOADING...</div>
+      <div className="mb-96">carregando ...</div>
     </LoadingDiv>
   );
 }
