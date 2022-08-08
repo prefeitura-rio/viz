@@ -5,16 +5,16 @@ import tw from "tailwind-styled-components";
 import capa from "../images/capa.gif";
 
 export const CapaDivSC = styled.div`
-  background-image: url(${capa});
+  /* background-image: url(${capa}); */
   background-size: cover;
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
-  flex flex-col justify-between items-center space-y-3
-  h-screen w-full
-  items-center
+h-screen w-full
+  flex flex-col 
+  justify-between items-center 
   pl-5 pr-5
-
+  mb-44
 `;
 // lg:mr-20 lg:ml-20
 // sm:ml-30 sm:mr-30
