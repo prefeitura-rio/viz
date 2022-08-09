@@ -5,6 +5,7 @@ import Map, { Source, Layer } from "react-map-gl";
 // For some custom layers
 import { buildings3d } from "../../../components/layers/buildings3d";
 // import LINHAS_ANTIGAS from "./data/linhas_antigas.json";
+import { isMobile } from "react-device-detect";
 
 export const Capa = () => {
   return {
@@ -12,25 +13,25 @@ export const Capa = () => {
       desktop: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 10.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 8.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
-    layers: [],
+    layers: []
   };
 };
 
@@ -40,25 +41,25 @@ export const Intro = () => {
       desktop: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 10.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 8.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
-    layers: [],
+    layers: []
   };
 };
 
@@ -68,31 +69,31 @@ export const Prejuizo = () => {
       desktop: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 10.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 8.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     layers: [
       {
         layerType: "reuse",
         targetOpacity: 0.5,
-        layer: { id: "consolidado-cor" },
-      },
-    ],
+        layer: { id: "consolidado-cor" }
+      }
+    ]
   };
 };
 
@@ -102,31 +103,31 @@ export const Grafico = () => {
       desktop: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 10.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 8.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     layers: [
       {
         layerType: "reuse",
         targetOpacity: 0.5,
-        layer: { id: "consolidado-cor" },
-      },
-    ],
+        layer: { id: "consolidado-cor" }
+      }
+    ]
   };
 };
 
@@ -136,23 +137,23 @@ export const Seop1 = () => {
       desktop: {
         center: {
           lon: -43.32527,
-          lat: -22.9864,
+          lat: -22.9864
         },
         zoom: 15.85,
         pitch: 41.0,
         bearing: 17.2,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.32127,
-          lat: -22.9864,
+          lat: -22.9864
         },
         zoom: 15.85,
         pitch: 41.0,
         bearing: 17.2,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     layers: [
       {
@@ -168,15 +169,15 @@ export const Seop1 = () => {
               "icon-image": "hospital",
               "icon-rotate": 45,
               "icon-allow-overlap": true,
-              "icon-size": 2,
+              "icon-size": 2
             },
             paint: {
-              "icon-opacity": 0,
-            },
-          },
-        },
-      },
-    ],
+              "icon-opacity": 0
+            }
+          }
+        }
+      }
+    ]
   };
 };
 
@@ -186,31 +187,31 @@ export const Seop2 = () => {
       desktop: {
         center: {
           lon: -43.4885,
-          lat: -23.02842,
+          lat: -23.02842
         },
         zoom: 14.71,
         pitch: 51.0,
         bearing: 11.2,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.4785,
-          lat: -23.02842,
+          lat: -23.02842
         },
         zoom: 14.71,
         pitch: 51.0,
         bearing: 11.2,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     layers: [
       {
         layerType: "reuse",
         targetOpacity: 1,
-        layer: { id: "demolicao-icone" },
-      },
-    ],
+        layer: { id: "demolicao-icone" }
+      }
+    ]
   };
 };
 
@@ -220,31 +221,31 @@ export const Seop3 = () => {
       desktop: {
         center: {
           lon: -43.4885,
-          lat: -23.02842,
+          lat: -23.02842
         },
         zoom: 14.71,
         pitch: 52.5,
         bearing: -53.6,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.4785,
-          lat: -23.02842,
+          lat: -23.02842
         },
         zoom: 14.71,
         pitch: 52.5,
         bearing: -53.6,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     layers: [
       {
         layerType: "reuse",
         targetOpacity: 1,
-        layer: { id: "demolicao-icone" },
-      },
-    ],
+        layer: { id: "demolicao-icone" }
+      }
+    ]
   };
 };
 
@@ -254,31 +255,31 @@ export const Seop4 = () => {
       desktop: {
         center: {
           lon: -43.31816,
-          lat: -22.99102,
+          lat: -22.99102
         },
         zoom: 15.77,
         pitch: 59.0,
         bearing: 124.47,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.31962,
-          lat: -22.99497,
+          lat: -22.99497
         },
         zoom: 15.77,
         pitch: 59.0,
         bearing: 124.47,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     layers: [
       {
         layerType: "reuse",
         targetOpacity: 1,
-        layer: { id: "demolicao-icone" },
-      },
-    ],
+        layer: { id: "demolicao-icone" }
+      }
+    ]
   };
 };
 
@@ -288,25 +289,25 @@ export const Acompanhe = () => {
       desktop: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 10.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 8.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
-    layers: [],
+    layers: []
   };
 };
 
@@ -316,23 +317,23 @@ export const Oeste = () => {
       desktop: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 10.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 8.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     layers: [
       {
@@ -349,10 +350,10 @@ export const Oeste = () => {
                 "match",
                 ["get", "total_demolicoes"],
                 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 16],
-                7,
+                isMobile ? 3 : 7,
                 [21, 23, 24, 27, 25, 29, 31, 38, 44, 54, 33],
-                25,
-                50,
+                isMobile ? 10 : 25,
+                isMobile ? 20 : 50
               ],
               "circle-color": [
                 "match",
@@ -361,14 +362,14 @@ export const Oeste = () => {
                 "#f1d6a5",
                 [21, 23, 24, 25, 27, 29, 31, 33, 38, 44, 54],
                 "#d5aa5d",
-                "#a96e04",
+                "#a96e04"
               ],
-              "circle-opacity": 0,
-            },
-          },
-        },
-      },
-    ],
+              "circle-opacity": 0
+            }
+          }
+        }
+      }
+    ]
   };
 };
 
@@ -378,31 +379,31 @@ export const Exemplo1 = () => {
       desktop: {
         center: {
           lon: -43.32527,
-          lat: -22.9864,
+          lat: -22.9864
         },
         zoom: 15.85,
         pitch: 41.0,
         bearing: 17.2,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.32127,
-          lat: -22.9864,
+          lat: -22.9864
         },
         zoom: 15.85,
         pitch: 41.0,
         bearing: 17.2,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     layers: [
       {
         layerType: "reuse",
         targetOpacity: 1,
-        layer: { id: "desabamento-icone" },
-      },
-    ],
+        layer: { id: "desabamento-icone" }
+      }
+    ]
   };
 };
 
@@ -412,31 +413,31 @@ export const Exemplo2 = () => {
       desktop: {
         center: {
           lon: -43.34213,
-          lat: -22.98032,
+          lat: -22.98032
         },
         zoom: 15.85,
         pitch: 44.5,
         bearing: 46.0,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.33913,
-          lat: -22.98032,
+          lat: -22.98032
         },
         zoom: 15.85,
         pitch: 44.5,
         bearing: 46.0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     layers: [
       {
         layerType: "reuse",
         targetOpacity: 1,
-        layer: { id: "desabamento-icone" },
-      },
-    ],
+        layer: { id: "desabamento-icone" }
+      }
+    ]
   };
 };
 
@@ -480,23 +481,23 @@ export const Zoom = () => {
       desktop: {
         center: {
           lon: -43.32838,
-          lat: -22.98401,
+          lat: -22.98401
         },
         zoom: 13.6,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.32838,
-          lat: -22.98401,
+          lat: -22.98401
         },
         zoom: 12.6,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     layers: [
       {
@@ -512,15 +513,15 @@ export const Zoom = () => {
               "icon-image": "hospital",
               "icon-rotate": 45,
               "icon-allow-overlap": true,
-              "icon-size": 2,
+              "icon-size": 2
             },
             paint: {
-              "icon-opacity": 0,
-            },
-          },
-        },
-      },
-    ],
+              "icon-opacity": 0
+            }
+          }
+        }
+      }
+    ]
   };
 };
 
@@ -530,31 +531,31 @@ export const Mapa = () => {
       desktop: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 10.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 8.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
     layers: [
       {
         layerType: "reuse",
         targetOpacity: 0.5,
-        layer: { id: "consolidado-cor" },
-      },
-    ],
+        layer: { id: "consolidado-cor" }
+      }
+    ]
   };
 };
 
@@ -564,24 +565,24 @@ export const Fim = () => {
       desktop: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 10.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
+        duration: 4000
       },
       mobile: {
         center: {
           lon: -43.45632,
-          lat: -22.92106,
+          lat: -22.92106
         },
         zoom: 10.38,
         pitch: 0.0,
         bearing: 0.0,
-        duration: 4000,
-      },
+        duration: 4000
+      }
     },
-    layers: [],
+    layers: []
   };
 };
