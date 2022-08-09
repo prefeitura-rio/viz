@@ -15,8 +15,9 @@ bg-black
 
 const LoadingImage = tw.img`
 w-24
-lg:w-36
+lg:w-32
 mt-[2vh]
+lg:mr-5
 `;
 
 export function Loading() {
