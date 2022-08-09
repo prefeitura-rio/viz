@@ -100,8 +100,7 @@ export function Intro(
         públicas e protegidas, e erguidas sem nenhum acompanhamento técnico.
         <br /> <br /> Por trás de cada prédio construído ilegalmente e sem
         fiscalização, há inúmeras famílias que vivem sob o risco de terem suas
-        casas desabadas, e perderem, a qualquer momento, suas casas, sua
-        história e também suas vidas.
+        casas desabadas, e perderem, a qualquer momento, sua história e também suas vidas.
       </styles.IntroText>
     </styles.IntroDiv>
   );
@@ -118,7 +117,7 @@ export function Solucao(
       <styles.IntroTitle id={"solucaoTitle"}>
         A solução
       </styles.IntroTitle>
-      <styles.IntroText>Para combater o crescimento desordenado a 
+      <styles.IntroText>Para combater o crescimento desordenado da 
         cidade, o avanço de construções irregulares em áreas ambientalmente 
         protegidas, preservar vidas e asfixiar financeiramente o crime organizado, a{" "}
       <styles.Textyellow>
@@ -212,7 +211,7 @@ export function Exemplo1(
           Imagem: Prefeitura da Cidade do Rio Janeiro
         </styles.Credito>
         <styles.TextCard1>
-          Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, 40
+          Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, de 40
           anos, morreram após o desabamento de dois prédios, construídos
           irregularmente na região de{" "}
           <styles.Textyellow>
@@ -395,7 +394,7 @@ export function Seop2(
         </styles.Credito>
         <styles.TextCard1>
           Outro imóvel também localizado no Recreio dos Bandeirantes foi abaixo
-          no começo deste ano. Com três andares já construídos e um quarto em
+          no começo deste ano. Com três andares já construídos, e um quarto em
           desenvolvimento, o prédio irregular possuía cinco apartamentos por
           andar. A estimativa é que cada unidade,{" "}
           <styles.Textyellow>
@@ -446,7 +445,7 @@ export function Seop1(
               construído irregularmente
             </a>
           </styles.Textyellow>{" "}
-          na Estrada do Itanhangá, em Muzema. Uma estimativa feita em parceria
+          na Estrada do Itanhangá, em Muzema, foi demolido pela Prefeitura. Uma estimativa feita em parceria
           com o Ministério Público avaliou que criminosos investiram
           aproximadamente R$ 5 milhões no empreendimento irregular.
         </styles.TextCard1>
@@ -467,8 +466,8 @@ export function Zoom(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          Infelizmente, nos últimos anos, casos recorrentes de desabamentos de
-          prédios e casas foram registrados na cidade.{" "}
+          Infelizmente, nos últimos anos, casos recorrentes de desabamentos
+          foram registrados na cidade.{" "}
           <styles.Textyellow>
             Prédios construídos pelo crime organizado, sem a infraestrutura e os
             cuidados técnicos necessários, vieram abaixo.
@@ -496,7 +495,7 @@ export function Mapa(
           demolições), Gardênia Azul (178 demolições), Jacarepaguá (90
           demolições) e Campo Grande (67 demolições) foram os cinco bairros com
           mais ações realizadas. Outros bairros localizados na Zona Sul, como
-          Botafogo (33 demolições) e São Conrado (27 demolições),e da Zona
+          Botafogo (33 demolições) e São Conrado (27 demolições), e da Zona
           Norte, como Del Castilho (38 demolições) e Mangueira (14 demolições)
           também tiveram construções irregulares identificadas e demolidas pelo
           poder público.
@@ -524,7 +523,7 @@ export function Fim(
         extremamente importante para a cidade.
         <br /> <br />
         Para continuar seu trabalho, a Prefeitura do Rio de Janeiro vem
-        investindo na melhoria capacidade de identificação de novas construções,
+        investindo na melhoria da capacidade de identificação de novas construções,
         por meio de denúncias recebidas, e também através do{" "}
         <styles.Textyellow>
           uso de novas tecnologias, como o uso de drones, fotografias aéreas
@@ -532,10 +531,10 @@ export function Fim(
           <br /> <br />
         </styles.Textyellow>{" "}
         A Prefeitura, juntamente com as secretarias de Ordem Pública e Meio
-        Ambiente da Cidade, seguem atentos, colocando abaixo aquelas estruturas
+        Ambiente da Cidade, seguem atentas, colocando abaixo aquelas estruturas
         erguidas irregularmente em nosso município. Continuaremos atuantes e
         firmes no combate à ocupação desordenada na cidade e no asfixiamento
-        financeiro do crime organizado.{" "}
+        financeiro do crime organizado.<br /> <br />{" "}
         <styles.Textyellow>
           A preservação de vidas é, e sempre será, o nosso objetivo.
         </styles.Textyellow>{" "}
@@ -589,8 +588,8 @@ export function Oeste(
           construções irregulares têm maior incidência na Zona Oeste do
           município.
         </styles.Textyellow>{" "}
-        De todas as demolições realizadas pela Prefeitura durante este período,
-        mais de 70% estavam localizadas na região. Rio das Pedras, Muzema e
+        De todas as demolições realizadas pela atual gestão da Prefeitura,
+        mais de 70% estavam localizadas nesta região. Rio das Pedras, Muzema e
         Recreio dos Bandeirantes, por exemplo, são locais em que são registradas
         constantemente estas irregularidades.
       </styles.IntroText>
