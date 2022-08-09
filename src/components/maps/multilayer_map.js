@@ -62,22 +62,6 @@ class MultilayerMap extends React.Component {
     return viewState;
   }
 
-  updateSizes = (map, layers, locations) => {
-    const rescale = locations.mobile.rescale;
-    if (rescale !== undefined) {
-      layers.forEach((layer) => {
-        // console.log("antes", layer.layer["paint"]["circle-radius"]);
-        const targetLayer = layer.layer;
-        if (targetLayer.type == "circle") {
-          targetLayer.paint["circle-radius"].forEach((radius) => {
-            if (typeof radius === "number") {
-              console.log("radius", radius);
-            }
-          });
-        }
-      });
-    }
-  };
   // CUSTOM: Função auxiliar para exibir ou esconder layers.
   toggleLayers(layers, show) {
     if (!this.state.mapLoaded) return;
@@ -86,7 +70,6 @@ class MultilayerMap extends React.Component {
     if (this.props.showLayers) {
       console.log("allLyaers", mapInstance.getStyle().layers);
     }
-    this.updateSizes(mapInstance, this.props.layers, this.props.location);
     layers.forEach((layerDict) => {
       if (
         layerDict.layerType === "mapbox" ||
