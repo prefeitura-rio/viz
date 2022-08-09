@@ -116,9 +116,23 @@ export function Solucao(
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
       <styles.IntroTitle id={"solucaoTitle"}>
-        Aqui vai o titulo
+        A solução
       </styles.IntroTitle>
-      <styles.IntroText>Aqui vai o texto</styles.IntroText>
+      <styles.IntroText>Para combater o crescimento desordenado a 
+        cidade, o avanço de construções irregulares em áreas ambientalmente 
+        protegidas, preservar vidas e asfixiar financeiramente o crime organizado, a{" "}
+      <styles.Textyellow>
+        Secretaria Municipal de Ordem Pública (SEOP) e a Secretaria Municipal de Meio 
+        Ambiente da Cidade (SMAC) têm realizado operações constantes de demolição destas 
+        construções,
+      </styles.Textyellow>{" "}
+        desde o começo de 2021. <br /> <br />De lá para cá,{" "}
+      <styles.Textyellow>
+        mais de 1.300 imóveis não habitados, não finalizados, erguidos ilegalmente e que traziam  
+        riscos à população, foram colocados abaixo.
+      </styles.Textyellow>{" "}
+        Essas ações pouparam a vida de milhares de cariocas que viviam em áreas de risco.
+      </styles.IntroText>
     </styles.IntroDiv>
   );
 }
