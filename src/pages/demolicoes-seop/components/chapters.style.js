@@ -7,6 +7,7 @@ import capa from "../images/capa.gif";
 export const CapaDivSC = styled.div`
   background-image: url(${capa});
   background-size: cover;
+  background-position: center;
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
@@ -19,8 +20,8 @@ h-screen w-full
 // sm:ml-30 sm:mr-30
 // sm:w
 export const Title = tw.div`
-  mt-44
-  lg:mt-80    
+  mt-[30%]
+  lg:mt-[24%]    
   font-georgia font-bold  
   text-4xl text-center text-white
   lg:text-5xl
@@ -35,8 +36,8 @@ export const Title = tw.div`
 // `;
 
 export const AuthorText = tw.div`
-  mb-44
-  lg:mb-96
+  mb-[50%]
+  lg:mb-[80%]
   font-georgia
   text-sm text-center text-white
   lg:text-lg
@@ -123,7 +124,7 @@ export const ContainerCard1 = tw.div`
   bg-opacity-[20%] backdrop-blur-sm
   bg-black/75
   max-w-xs
-  lg:max-w-3xl
+  lg:max-w-lg
 `;
 
 const TextCardSC = styled.div`

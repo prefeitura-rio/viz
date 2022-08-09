@@ -7,9 +7,9 @@ w-full h-screen
 flex 
 flex-col
 items-center justify-between 
-text-white 
-text-3xl
-lg:text-3xl
+text-yellow-600 
+text-2xl
+lg:text-2xl
 bg-black
 `;
 
