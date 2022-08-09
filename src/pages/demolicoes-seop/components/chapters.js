@@ -99,8 +99,8 @@ export function Intro(
         Essas construções são realizadas sem autorização da Prefeitura, em áreas
         públicas e protegidas, e erguidas sem nenhum acompanhamento técnico.
         <br /> <br /> Por trás de cada prédio construído ilegalmente e sem
-        fiscalização, há inúmeras famílias que vivem sob o risco de perderem, a
-        qualquer momento, suas casas, sua história e também suas vidas.
+        fiscalização, há inúmeras famílias que vivem sob o risco de terem suas casas desabadas,
+        e perderem, a qualquer momento, suas casas, sua história e também suas vidas.
       </styles.IntroText>
     </styles.IntroDiv>
   );
@@ -122,14 +122,12 @@ export function Prejuizo(
             <styles.BigNumber1>milhões</styles.BigNumber1>
           </styles.Grid1>
           <styles.TextCard>
-            Por trás de cada construção ilegal em área sob influência do crime
-            organizado, há um grande interesse econômico. Estudos apontam que{" "}
-            <styles.Textyellow>
-              os grupos criminais, principalmente as milícias, obtiveram um
-              aumento de seus ganhos através do mercado imobiliário,
-            </styles.Textyellow>{" "}
-            a partir da oferta e da proteção para execução de construções
-            irregulares.
+            Graças as operações realizadas pela Prefeitura, essas organizações ilegais
+            também sentiram no bolso.{" "}
+          <styles.Textyellow>
+            Desde 2021, as operações da secretaria acarretaram
+            um prejuízo estimado em R$646 milhões para os cofres do crime organizado.
+          </styles.Textyellow>{" "}
           </styles.TextCard>
         </styles.Grid>
       </styles.ContainerCard>
@@ -159,7 +157,7 @@ export function Grafico(
           </styles.Textyellow>{" "}
           número inferior as{" "}
           <styles.Textyellow>
-            1.312 demolições feitas em apenas um ano e meio pela atual gestão.
+            1.313 demolições feitas em apenas um ano e meio pela atual gestão.
           </styles.Textyellow>{" "}
         </styles.TextCard>
       </styles.ContainerCard>
@@ -179,7 +177,7 @@ export function Exemplo1(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={exemplo1}></styles.NewsImage>
-        <styles.Credito>Prefeitura do Rio</styles.Credito>
+        <styles.Credito>Imagem: Prefeitura da Cidade do Rio Janeiro</styles.Credito>
         <styles.TextCard1>
           Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, 40
           anos, morreram após o desabamento de dois prédios, construídos
@@ -195,8 +193,8 @@ export function Exemplo1(
               Muzema,
             </a>
           </styles.Textyellow>{" "}
-          na região de Muzema, no Itanhangá, Zona Oeste. Ao todo, 24 pessoas
-          morreram no desastre, que ocorreu em abril de 2019.
+          no Itanhangá, Zona Oeste. Ao todo, 24 pessoas morreram no desastre, que 
+          ocorreu em abril de 2019.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
@@ -215,11 +213,11 @@ export function Exemplo2(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={exemplo2}></styles.NewsImage>
-        <styles.Credito>Prefeitura do Rio</styles.Credito>
+        <styles.Credito>Imagem: Prefeitura da Cidade do Rio Janeiro</styles.Credito>
         <styles.TextCard1>
           Maitê Gomes Abreu, de 2 anos, e seu pai, Natan Gomes, de 30 anos,
           foram encontrados mortos após nove horas de buscas entre os escombros.
-          Pai e sua filha foram vítimas do desabamento de um prédio de quatro
+          Pai e filha foram vítimas do desabamento de um prédio de quatro
           andares em{" "}
           <styles.Textyellow>
             {" "}
@@ -285,7 +283,7 @@ export function Seop4(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={seop4}></styles.NewsImage>
-        <styles.Credito>Prefeitura do Rio</styles.Credito>
+        <styles.Credito>Imagem: Prefeitura da Cidade do Rio Janeiro</styles.Credito>
         <styles.TextCard1>
           Também em Muzema,{" "}
           <styles.Textyellow>
@@ -319,7 +317,7 @@ export function Seop3(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={seop3}></styles.NewsImage>
-        <styles.Credito>Prefeitura do Rio</styles.Credito>
+        <styles.Credito>Imagem: Prefeitura da Cidade do Rio Janeiro</styles.Credito>
         <styles.TextCard1>
           Há quatro meses, um imóvel de sete andares, construído na região do
           Terreirão, também no Recreio, foi demolido.{" "}
@@ -353,7 +351,7 @@ export function Seop2(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={seop2}></styles.NewsImage>
-        <styles.Credito>Prefeitura do Rio</styles.Credito>
+        <styles.Credito>Imagem: Prefeitura da Cidade do Rio Janeiro</styles.Credito>
         <styles.TextCard1>
           Outro imóvel também localizado no Recreio dos Bandeirantes foi abaixo
           no começo deste ano. Com três andares já construídos e um quarto em
@@ -390,7 +388,7 @@ export function Seop1(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={seop1}></styles.NewsImage>
-        <styles.Credito>Prefeitura do Rio</styles.Credito>
+        <styles.Credito>Imagem: Prefeitura da Cidade do Rio Janeiro</styles.Credito>
         <styles.TextCard1>
           No fim do ano passado, um imóvel onde funcionaria um supermercado, com
           garagem subterrânea e espaços alugados, estava sendo{" "}
@@ -427,8 +425,12 @@ export function Zoom(
       <styles.ContainerCard1>
         <styles.TextCard1>
           Infelizmente, nos últimos anos, casos recorrentes de desabamentos de
-          prédios e casas foram registrados na cidade. Famílias inteiras
-          perderam seus lares e suas vidas:
+          prédios e casas foram registrados na cidade.{" "}
+        <styles.Textyellow>
+          Prédios construídos pelo crime organizado, sem a infraestrutura e os 
+          cuidados técnicos necessários, vieram abaixo. 
+        </styles.Textyellow>{" "}
+        Famílias inteiras perderam seus lares e suas vidas:
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
@@ -545,9 +547,8 @@ export function Oeste(
           município.
         </styles.Textyellow>{" "}
         De todas as demolições realizadas pela Prefeitura durante este período,
-        mais de 70% estavam localizadas na região. Os bairros do Recreio e
-        Gardênia Azul, por exemplo, são os que registram maior incidência destas
-        irregularidades.
+        mais de 70% estavam localizadas na região. Rio das Pedras, Muzema e Recreio dos Bandeirantes, 
+        por exemplo, são locais em que são registradas constantemente estas irregularidades.
       </styles.IntroText>
     </styles.IntroDiv>
   );
