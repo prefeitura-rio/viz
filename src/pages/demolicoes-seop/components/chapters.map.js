@@ -97,6 +97,40 @@ export const Prejuizo = () => {
   };
 };
 
+export const Solucao = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.45632,
+          lat: -22.92106,
+        },
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.45632,
+          lat: -22.92106,
+        },
+        zoom: 8.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "reuse",
+        targetOpacity: 0.5,
+        layer: { id: "consolidado-cor" },
+      },
+    ],
+  };
+};
+
 export const Grafico = () => {
   return {
     location: {

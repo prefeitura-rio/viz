@@ -106,6 +106,21 @@ export function Intro(
   );
 }
 
+export function Solucao(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.TextCard>Aqui vai o texto da solução</styles.TextCard>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
 export function Prejuizo(
   props = {
     id: "",

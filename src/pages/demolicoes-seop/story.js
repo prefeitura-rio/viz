@@ -68,6 +68,10 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Mapa().location);
         setLayers(chapterMap.Mapa().layers);
         break;
+      case "solucao":
+        setPosition(chapterMap.Solucao().location);
+        setLayers(chapterMap.Solucao().layers);
+        break;
       case "prejuizo":
         setPosition(chapterMap.Prejuizo().location);
         setLayers(chapterMap.Prejuizo().layers);
@@ -198,6 +202,13 @@ export default function SubsidioSPPO() {
       },
     });
 
+    ScrollTrigger.create({
+      trigger: "#solucao",
+      onToggle: () => {
+        setChapterNumberMap("solucao");
+      },
+    });
+
     var startCount = 0,
       num = { var: startCount };
     function changeNumber() {
@@ -322,6 +333,7 @@ export default function SubsidioSPPO() {
       {/* <chapterDiv.Exemplo3 id={"exemplo3"} /> */}
       <chapterDiv.Oeste id={"oeste"} />
       <chapterDiv.Mapa id={"mapa"} />
+      <chapterDiv.Solucao id={"solucao"} />
       <chapterDiv.Prejuizo id={"prejuizo"} />
       <chapterDiv.Grafico id={"grafico"} />
       <chapterDiv.Acompanhe id={"acompanhe"} />
