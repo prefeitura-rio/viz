@@ -507,12 +507,12 @@ export const Zoom = () => {
             id: "desabamento-icone",
             type: "symbol",
             source: "composite",
-            "source-layer": "desabamento-1f3n6k",
+            "source-layer": "desabamento1-9gi1wf",
             layout: {
               "icon-image": "hospital",
-              "icon-size": 2,
               "icon-rotate": 45,
               "icon-allow-overlap": true,
+              "icon-size": 2,
             },
             paint: {
               "icon-opacity": 0,

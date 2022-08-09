@@ -32,8 +32,10 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
-      <img src={logo} className="w-24 mt-[2vh]  lg:w-36"></img>
-      <styles.Title>Mais de 1.300 construções irregulares na cidade Rio de Janeiro</styles.Title>
+      <img src={logo} className="w-24 mt-[2vh]  lg:w-32"></img>
+      <styles.Title>
+        Mais de 1.300 construções irregulares na cidade Rio de Janeiro
+      </styles.Title>
       {/* <styles.Subtitle>
         Segurança para os moradores, Prejuízo para o crime organizado,
         Preservação das áreas verdes
@@ -85,15 +87,15 @@ export function Intro(
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
       <styles.IntroText>
-        A proliferação de construções irregulares é um problema que tomou conta 
-        da cidade do Rio há algumas décadas. Em áreas sob influência do crime 
+        A proliferação de construções irregulares é um problema que tomou conta
+        da cidade do Rio há algumas décadas. Em áreas sob influência do crime
         organizado a preocupação é ainda maior. <br /> <br />
         Estudos apontam que{" "}
         <styles.Textyellow>
-        a atividade imobiliária se tornou uma das principais fontes financeiras 
-        de alguns grupos criminosos.
+          a atividade imobiliária se tornou uma das principais fontes
+          financeiras de alguns grupos criminosos.
         </styles.Textyellow>{" "}
-        Essas construções são realizadas sem autorização da Prefeitura, em áreas 
+        Essas construções são realizadas sem autorização da Prefeitura, em áreas
         públicas, e erguidas sem nenhum acompanhamento técnico. <br /> <br />{" "}
         Por trás de cada prédio construído ilegalmente, e sem fiscalização, há
         inúmeras famílias que vivendo sob o risco de perderem, a qualquer
@@ -119,15 +121,14 @@ export function Prejuizo(
             <styles.BigNumber1>milhões</styles.BigNumber1>
           </styles.Grid1>
           <styles.TextCard>
-          Por trás de cada construção ilegal em área sob influência 
-          do crime organizado, há um grande interesse econômico. Estudos 
-          apontam que {" "} 
-          <styles.Textyellow>
-          os grupos criminais, principalmente as milícias, obtiveram um 
-          aumento de seus ganhos através do mercado imobiliário, 
-          </styles.Textyellow>{" "}
-          a partir da oferta e da proteção para execução de construções 
-          irregulares.
+            Por trás de cada construção ilegal em área sob influência do crime
+            organizado, há um grande interesse econômico. Estudos apontam que{" "}
+            <styles.Textyellow>
+              os grupos criminais, principalmente as milícias, obtiveram um
+              aumento de seus ganhos através do mercado imobiliário,
+            </styles.Textyellow>{" "}
+            a partir da oferta e da proteção para execução de construções
+            irregulares.
           </styles.TextCard>
         </styles.Grid>
       </styles.ContainerCard>
@@ -160,18 +161,17 @@ export function Grafico(
 </script> */}
         <styles.NewsImage src={grafico}></styles.NewsImage>
         <styles.TextCard>
-        Analisando as prioridades da Prefeitura, já deu para perceber 
-        que o assunto é tratado com a relevância que necessita. Isto, 
-        entretanto, nem sempre foi assim. Analisando os dados históricos 
-        de demolições realizadas na cidade, é possível perceber que, ao 
-        longo da {" "} 
-        <styles.Textyellow>
-        gestão anterior, apenas 359 demolições foram realizadas, 
-        </styles.Textyellow>{" "}
-        número inferior as {" "} 
-        <styles.Textyellow>
-        1.312 demolições feitas em apenas um ano e meio pela atual gestão. 
-        </styles.Textyellow>{" "}
+          Analisando as prioridades da Prefeitura, já deu para perceber que o
+          assunto é tratado com a relevância que necessita. Isto, entretanto,
+          nem sempre foi assim. Analisando os dados históricos de demolições
+          realizadas na cidade, é possível perceber que, ao longo da{" "}
+          <styles.Textyellow>
+            gestão anterior, apenas 359 demolições foram realizadas,
+          </styles.Textyellow>{" "}
+          número inferior as{" "}
+          <styles.Textyellow>
+            1.312 demolições feitas em apenas um ano e meio pela atual gestão.
+          </styles.Textyellow>{" "}
         </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -192,9 +192,9 @@ export function Exemplo1(
         <styles.NewsImage src={exemplo1}></styles.NewsImage>
         <styles.Credito>Prefeitura do Rio</styles.Credito>
         <styles.TextCard1>
-        Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, 
-        40 anos, morreram após o desabamento de dois prédios, construídos 
-        irregularmente na região de {" "}
+          Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, 40
+          anos, morreram após o desabamento de dois prédios, construídos
+          irregularmente na região de{" "}
           <styles.Textyellow>
             {" "}
             <a
@@ -206,7 +206,7 @@ export function Exemplo1(
               Muzema,
             </a>
           </styles.Textyellow>{" "}
-          na região de Muzema, no Itanhangá, Zona Oeste. Ao todo, 24 pessoas 
+          na região de Muzema, no Itanhangá, Zona Oeste. Ao todo, 24 pessoas
           morreram no desastre, que ocorreu em abril de 2019.
         </styles.TextCard1>
       </styles.ContainerCard1>
@@ -228,10 +228,10 @@ export function Exemplo2(
         <styles.NewsImage src={exemplo2}></styles.NewsImage>
         <styles.Credito>Prefeitura do Rio</styles.Credito>
         <styles.TextCard1>
-        Maitê Gomes Abreu, de 2 anos, e seu pai, Natan Gomes, de 30 anos, 
-        foram encontrados mortos após nove horas de buscas entre os escombros. 
-        Pai e sua filha foram vítimas do desabamento de um prédio de quatro 
-        andares em{" "}
+          Maitê Gomes Abreu, de 2 anos, e seu pai, Natan Gomes, de 30 anos,
+          foram encontrados mortos após nove horas de buscas entre os escombros.
+          Pai e sua filha foram vítimas do desabamento de um prédio de quatro
+          andares em{" "}
           <styles.Textyellow>
             {" "}
             <a
@@ -243,7 +243,7 @@ export function Exemplo2(
               Rio das Pedras,
             </a>
           </styles.Textyellow>{" "}
-          na Zona Oeste em junho do ano passado. O imóvel era irregular. 
+          na Zona Oeste em junho do ano passado. O imóvel era irregular.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
@@ -391,9 +391,9 @@ export function Zoom(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-        Infelizmente, nos últimos anos, casos recorrentes de desabamentos 
-        de prédios e casas foram registrados na cidade. Famílias inteiras 
-        perderam seus lares e suas vidas:
+          Infelizmente, nos últimos anos, casos recorrentes de desabamentos de
+          prédios e casas foram registrados na cidade. Famílias inteiras
+          perderam seus lares e suas vidas:
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
@@ -411,9 +411,7 @@ export function Mapa(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
-        <styles.TextCard1>
-xx
-        </styles.TextCard1>
+        <styles.TextCard1>xx</styles.TextCard1>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -431,27 +429,23 @@ export function Fim(
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
       <styles.IntroTitle id={"fimTitle"}>Fim</styles.IntroTitle>
       <styles.IntroText>
-      A marca de{" "} 
+        A marca de <styles.Textyellow>1.313 demolições,</styles.Textyellow> em
+        apenas <styles.Textyellow>um ano e meio de gestão,</styles.Textyellow> é
+        extremamente importante para a cidade.
+        <br /> <br />
+        Para continuar seu trabalho, a Prefeitura do Rio de Janeiro vem
+        investindo na melhoria capacidade de identificação de novas construções,
+        por meio de denúncias recebidas, e também através do{" "}
         <styles.Textyellow>
-          1.313 demolições, 
+          uso de novas tecnologias, como o uso de drones, fotografias aéreas
+          (ortofotos) e imagens de satélites.
+          <br /> <br />
         </styles.Textyellow>{" "}
-          em apenas{" "} 
-        <styles.Textyellow>
-          um ano e meio de gestão, 
-        </styles.Textyellow>{" "}
-          é extremamente importante para a cidade.<br /> <br />
-          Para continuar seu trabalho, a Prefeitura do Rio de Janeiro 
-          vem investindo na melhoria capacidade de identificação de novas 
-          construções, por meio de denúncias recebidas, e também através do{" "} 
-        <styles.Textyellow>
-          uso de novas tecnologias, como o uso de drones, fotografias aéreas 
-          (ortofotos) e imagens de satélites.<br /> <br />
-        </styles.Textyellow>{" "}
-          A Prefeitura, juntamente com as secretarias de Ordem Pública e Meio 
-          Ambiente da Cidade, seguem atentos, colocando abaixo aquelas estruturas 
-          erguidas irregularmente em nosso município. Continuaremos atuantes e firmes 
-          no combate à ocupação desordenada na cidade e no asfixiamento financeiro do 
-          crime organizado.{" "} 
+        A Prefeitura, juntamente com as secretarias de Ordem Pública e Meio
+        Ambiente da Cidade, seguem atentos, colocando abaixo aquelas estruturas
+        erguidas irregularmente em nosso município. Continuaremos atuantes e
+        firmes no combate à ocupação desordenada na cidade e no asfixiamento
+        financeiro do crime organizado.{" "}
         <styles.Textyellow>
           A preservação de vidas é, e sempre será, o nosso objetivo.
         </styles.Textyellow>{" "}
@@ -474,13 +468,13 @@ export function Acompanhe(
         As ações da SEOP
       </styles.IntroTitle>
       <styles.IntroText>
-      As operações realizadas pela Ordem Pública reúnem diversos 
-      órgãos da Prefeitura, como a Guarda Municipal, Comlurb, Secretaria 
-      de Conservação e Subprefeituras, além das concessionárias de luz e 
-      água. Na maioria das ações, o apoio das forças policiais também é 
-      necessário, devido à influência do crime organizado nas regiões visitadas. 
-      Uma força-tarefa entre a SEOP e o Ministério Público atua na realização das 
-      demolições e na investigação das construções irregulares e seus responsáveis.
+        As operações realizadas pela Ordem Pública reúnem diversos órgãos da
+        Prefeitura, como a Guarda Municipal, Comlurb, Secretaria de Conservação
+        e Subprefeituras, além das concessionárias de luz e água. Na maioria das
+        ações, o apoio das forças policiais também é necessário, devido à
+        influência do crime organizado nas regiões visitadas. Uma força-tarefa
+        entre a SEOP e o Ministério Público atua na realização das demolições e
+        na investigação das construções irregulares e seus responsáveis.
       </styles.IntroText>
     </styles.IntroDiv>
   );
@@ -500,13 +494,14 @@ export function Oeste(
         Onde estão localizadas as construções irregulares
       </styles.IntroTitle>
       <styles.IntroText>
-        Apesar de estarem presentes em todas as regiões da cidade, as {" "}
-      <styles.Textyellow>construções irregulares têm maior incidência na Zona
-        Oeste do município.
-      </styles.Textyellow>{" "}
-        De todas as demolições realizadas pela Prefeitura durante este período, 
-        mais de 70% estavam localizadas na região. Os bairros do Recreio, Rio 
-        das Pedras e Muzema, por exemplo, são os que registram maior incidência 
+        Apesar de estarem presentes em todas as regiões da cidade, as{" "}
+        <styles.Textyellow>
+          construções irregulares têm maior incidência na Zona Oeste do
+          município.
+        </styles.Textyellow>{" "}
+        De todas as demolições realizadas pela Prefeitura durante este período,
+        mais de 70% estavam localizadas na região. Os bairros do Recreio, Rio
+        das Pedras e Muzema, por exemplo, são os que registram maior incidência
         destas irregularidades.
       </styles.IntroText>
     </styles.IntroDiv>

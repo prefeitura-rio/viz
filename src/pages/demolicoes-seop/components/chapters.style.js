@@ -24,8 +24,8 @@ export const Title = tw.div`
   lg:mt-[24%]    
   font-georgia font-bold  
   text-4xl text-center text-white
-  lg:text-5xl
-  max-w-5xl
+  lg:text-4xl
+  max-w-3xl
   `;
 
 // export const Subtitle = tw.div`
@@ -37,10 +37,10 @@ export const Title = tw.div`
 
 export const AuthorText = tw.div`
   mb-[15%]
-  lg:mb-[80%]
+  lg:mb-[39%]
   font-georgia
   text-sm text-center text-white
-  lg:text-lg
+  lg:text-base
   max-w-4xl
 `;
 
