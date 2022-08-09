@@ -202,7 +202,17 @@ export default function SubsidioSPPO() {
       },
     });
 
+    const tl14 = gsap.timeline();
+    tl14
+      .set("#solucao", { opacity: 0 })
+      .to("#solucao", { opacity: 0, duration: 30 })
+      .to("#solucao", { opacity: 1, duration: 6 })
+      .to("#solucao", { opacity: 1, duration: 20 })
+      .to("#solucao", { opacity: 0, duration: 6 })
+      .to("#solucao", { opacity: 0, duration: 28 });
+
     ScrollTrigger.create({
+      animation: tl14,
       trigger: "#solucao",
       onToggle: () => {
         setChapterNumberMap("solucao");

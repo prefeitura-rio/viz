@@ -99,8 +99,9 @@ export function Intro(
         Essas construções são realizadas sem autorização da Prefeitura, em áreas
         públicas e protegidas, e erguidas sem nenhum acompanhamento técnico.
         <br /> <br /> Por trás de cada prédio construído ilegalmente e sem
-        fiscalização, há inúmeras famílias que vivem sob o risco de terem suas casas desabadas,
-        e perderem, a qualquer momento, suas casas, sua história e também suas vidas.
+        fiscalização, há inúmeras famílias que vivem sob o risco de terem suas
+        casas desabadas, e perderem, a qualquer momento, suas casas, sua
+        história e também suas vidas.
       </styles.IntroText>
     </styles.IntroDiv>
   );
@@ -113,11 +114,12 @@ export function Solucao(
   }
 ) {
   return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.TextCard>Aqui vai o texto da solução</styles.TextCard>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
+    <styles.IntroDiv ref={props.chapRef} id={props.id}>
+      <styles.IntroTitle id={"solucaoTitle"}>
+        Aqui vai o titulo
+      </styles.IntroTitle>
+      <styles.IntroText>Aqui vai o texto</styles.IntroText>
+    </styles.IntroDiv>
   );
 }
 
@@ -137,12 +139,12 @@ export function Prejuizo(
             <styles.BigNumber1>milhões</styles.BigNumber1>
           </styles.Grid1>
           <styles.TextCard>
-            Graças as operações realizadas pela Prefeitura, essas organizações ilegais
-            também sentiram no bolso.{" "}
-          <styles.Textyellow>
-            Desde 2021, as operações da secretaria acarretaram
-            um prejuízo estimado em R$646 milhões para os cofres do crime organizado.
-          </styles.Textyellow>{" "}
+            Graças as operações realizadas pela Prefeitura, essas organizações
+            ilegais também sentiram no bolso.{" "}
+            <styles.Textyellow>
+              Desde 2021, as operações da secretaria acarretaram um prejuízo
+              estimado em R$646 milhões para os cofres do crime organizado.
+            </styles.Textyellow>{" "}
           </styles.TextCard>
         </styles.Grid>
       </styles.ContainerCard>
@@ -192,7 +194,9 @@ export function Exemplo1(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={exemplo1}></styles.NewsImage>
-        <styles.Credito>Imagem: Prefeitura da Cidade do Rio Janeiro</styles.Credito>
+        <styles.Credito>
+          Imagem: Prefeitura da Cidade do Rio Janeiro
+        </styles.Credito>
         <styles.TextCard1>
           Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, 40
           anos, morreram após o desabamento de dois prédios, construídos
@@ -208,8 +212,8 @@ export function Exemplo1(
               Muzema,
             </a>
           </styles.Textyellow>{" "}
-          no Itanhangá, Zona Oeste. Ao todo, 24 pessoas morreram no desastre, que 
-          ocorreu em abril de 2019.
+          no Itanhangá, Zona Oeste. Ao todo, 24 pessoas morreram no desastre,
+          que ocorreu em abril de 2019.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
@@ -228,7 +232,9 @@ export function Exemplo2(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={exemplo2}></styles.NewsImage>
-        <styles.Credito>Imagem: Prefeitura da Cidade do Rio Janeiro</styles.Credito>
+        <styles.Credito>
+          Imagem: Prefeitura da Cidade do Rio Janeiro
+        </styles.Credito>
         <styles.TextCard1>
           Maitê Gomes Abreu, de 2 anos, e seu pai, Natan Gomes, de 30 anos,
           foram encontrados mortos após nove horas de buscas entre os escombros.
@@ -298,7 +304,9 @@ export function Seop4(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={seop4}></styles.NewsImage>
-        <styles.Credito>Imagem: Prefeitura da Cidade do Rio Janeiro</styles.Credito>
+        <styles.Credito>
+          Imagem: Prefeitura da Cidade do Rio Janeiro
+        </styles.Credito>
         <styles.TextCard1>
           Também em Muzema,{" "}
           <styles.Textyellow>
@@ -332,7 +340,9 @@ export function Seop3(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={seop3}></styles.NewsImage>
-        <styles.Credito>Imagem: Prefeitura da Cidade do Rio Janeiro</styles.Credito>
+        <styles.Credito>
+          Imagem: Prefeitura da Cidade do Rio Janeiro
+        </styles.Credito>
         <styles.TextCard1>
           Há quatro meses, um imóvel de sete andares, construído na região do
           Terreirão, também no Recreio, foi demolido.{" "}
@@ -366,7 +376,9 @@ export function Seop2(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={seop2}></styles.NewsImage>
-        <styles.Credito>Imagem: Prefeitura da Cidade do Rio Janeiro</styles.Credito>
+        <styles.Credito>
+          Imagem: Prefeitura da Cidade do Rio Janeiro
+        </styles.Credito>
         <styles.TextCard1>
           Outro imóvel também localizado no Recreio dos Bandeirantes foi abaixo
           no começo deste ano. Com três andares já construídos e um quarto em
@@ -403,7 +415,9 @@ export function Seop1(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={seop1}></styles.NewsImage>
-        <styles.Credito>Imagem: Prefeitura da Cidade do Rio Janeiro</styles.Credito>
+        <styles.Credito>
+          Imagem: Prefeitura da Cidade do Rio Janeiro
+        </styles.Credito>
         <styles.TextCard1>
           No fim do ano passado, um imóvel onde funcionaria um supermercado, com
           garagem subterrânea e espaços alugados, estava sendo{" "}
@@ -441,11 +455,11 @@ export function Zoom(
         <styles.TextCard1>
           Infelizmente, nos últimos anos, casos recorrentes de desabamentos de
           prédios e casas foram registrados na cidade.{" "}
-        <styles.Textyellow>
-          Prédios construídos pelo crime organizado, sem a infraestrutura e os 
-          cuidados técnicos necessários, vieram abaixo. 
-        </styles.Textyellow>{" "}
-        Famílias inteiras perderam seus lares e suas vidas:
+          <styles.Textyellow>
+            Prédios construídos pelo crime organizado, sem a infraestrutura e os
+            cuidados técnicos necessários, vieram abaixo.
+          </styles.Textyellow>{" "}
+          Famílias inteiras perderam seus lares e suas vidas:
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
@@ -562,8 +576,9 @@ export function Oeste(
           município.
         </styles.Textyellow>{" "}
         De todas as demolições realizadas pela Prefeitura durante este período,
-        mais de 70% estavam localizadas na região. Rio das Pedras, Muzema e Recreio dos Bandeirantes, 
-        por exemplo, são locais em que são registradas constantemente estas irregularidades.
+        mais de 70% estavam localizadas na região. Rio das Pedras, Muzema e
+        Recreio dos Bandeirantes, por exemplo, são locais em que são registradas
+        constantemente estas irregularidades.
       </styles.IntroText>
     </styles.IntroDiv>
   );
