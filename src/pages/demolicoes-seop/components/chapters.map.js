@@ -135,7 +135,7 @@ export const Seop1 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.32127,
+          lon: -43.32527,
           lat: -22.9864,
         },
         zoom: 15.85,
@@ -185,7 +185,7 @@ export const Seop2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.4785,
+          lon: -43.4885,
           lat: -23.02842,
         },
         zoom: 14.71,
@@ -219,7 +219,7 @@ export const Seop3 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.4785,
+          lon: -43.4885,
           lat: -23.02842,
         },
         zoom: 14.71,
@@ -253,8 +253,8 @@ export const Seop4 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.31962,
-          lat: -22.99497,
+          lon: -43.31816,
+          lat: -22.99102,
         },
         zoom: 15.77,
         pitch: 59.0,
@@ -377,7 +377,7 @@ export const Exemplo1 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.32127,
+          lon: -43.32527,
           lat: -22.9864,
         },
         zoom: 15.85,
@@ -411,7 +411,7 @@ export const Exemplo2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.33913,
+          lon: -43.34213,
           lat: -22.98032,
         },
         zoom: 15.85,
