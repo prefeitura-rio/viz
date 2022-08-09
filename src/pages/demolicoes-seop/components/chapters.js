@@ -525,19 +525,19 @@ export function Fim(
         Para continuar seu trabalho, a Prefeitura do Rio de Janeiro vem
         investindo na melhoria da capacidade de identificação de novas construções,
         por meio de denúncias recebidas, e também através do{" "}
-        <styles.Textyellow>
-          uso de novas tecnologias, como o uso de drones, fotografias aéreas
-          (ortofotos) e imagens de satélites.
-          <br /> <br />
-        </styles.Textyellow>{" "}
+      <styles.Textyellow>
+        uso de novas tecnologias, como o uso de drones, fotografias aéreas
+        (ortofotos) e imagens de satélites.
+        <br /> <br />
+      </styles.Textyellow>{" "}
         A Prefeitura, juntamente com as secretarias de Ordem Pública e Meio
         Ambiente da Cidade, seguem atentas, colocando abaixo aquelas estruturas
         erguidas irregularmente em nosso município. Continuaremos atuantes e
         firmes no combate à ocupação desordenada na cidade e no asfixiamento
         financeiro do crime organizado.<br /> <br />{" "}
-        <styles.Textyellow>
-          A preservação de vidas é, e sempre será, o nosso objetivo.
-        </styles.Textyellow>{" "}
+      <styles.Textyellow>
+        A preservação de vidas é, e sempre será, o nosso objetivo.
+      </styles.Textyellow>{" "}
       </styles.IntroText>
     </styles.IntroDiv>
   );
