@@ -544,7 +544,9 @@ export function Fim(
           A preservação de vidas é, e sempre será, o nosso objetivo.
         </styles.Textyellow>{" "}
       </styles.IntroText>
-      <img src={logoed} className="w-44 mt-[50%] lg:mt-[50%] lg:w-56"></img>
+      <a href={"https://www.dados.rio/"}>
+        <img src={logoed} className="w-44 mt-[50%] lg:mt-[50%] lg:w-56"></img>
+      </a>
     </styles.IntroDiv>
   );
 }
