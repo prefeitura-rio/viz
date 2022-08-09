@@ -5,6 +5,7 @@ import Map, { Source, Layer } from "react-map-gl";
 // For some custom layers
 import { buildings3d } from "../../../components/layers/buildings3d";
 // import LINHAS_ANTIGAS from "./data/linhas_antigas.json";
+import { isMobile } from "react-device-detect";
 
 export const Capa = () => {
   return {
@@ -349,10 +350,10 @@ export const Oeste = () => {
                 "match",
                 ["get", "total_demolicoes"],
                 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 16],
-                7,
+                isMobile ? 3 : 7,
                 [21, 23, 24, 27, 25, 29, 31, 38, 44, 54, 33],
-                25,
-                50,
+                isMobile ? 10 : 25,
+                isMobile ? 20 : 50,
               ],
               "circle-color": [
                 "match",
