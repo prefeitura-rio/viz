@@ -333,7 +333,7 @@ export function Seop4(
               target="_blank"
               rel="noreferrer"
             >
-              uma construção irregular foi colocada abaixo
+              uma construção irregular foi colocada abaixo.
             </a>
           </styles.Textyellow>{" "}
           O prédio, com três andares, foi demolido pela equipe da Força-Tarefa
