@@ -72,7 +72,7 @@ export const IntroText = tw.div`
 
 export const ChapterGenericDiv = tw.div`
   flex
-  w-full h-screen 
+  w-full h-[150vh]
   items-center
   justify-center
   text-white
@@ -81,9 +81,10 @@ export const ChapterGenericDiv = tw.div`
 
 export const ChapterGenericDiv1 = tw.div`
   flex
-  w-full h-screen 
+  w-full h-[150vh] 
   items-center
-  justify-center
+  justify-left
+  lg:ml-[10%]
   text-white
   -z-10
   `;
