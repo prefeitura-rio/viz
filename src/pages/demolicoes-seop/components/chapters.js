@@ -363,7 +363,7 @@ export function Seop2(
             {" "}
             <a
               className="p-1"
-              href="https://prefeitura.rio/ordem-publica/seop-e-gaeco-realizam-megaoperacao-para-demolicao-de-construcoes-irregulares-no-recreio-dos-bandeirantes/https://assistenciasocial.prefeitura.rio/noticias/prefeitura-atua-para-minimizar-os-impactos-do-desabamento-de-um-imovel-em-rio-das-pedras/"
+              href="https://prefeitura.rio/ordem-publica/seop-e-gaeco-realizam-megaoperacao-para-demolicao-de-construcoes-irregulares-no-recreio-dos-bandeirantes/"
               target="_blank"
               rel="noreferrer"
             >

@@ -108,9 +108,11 @@ mt-[2%]
 `;
 
 export const NewsImage1 = tw.img`
-w-[65%]
+w-[100%]
+lg:w-[60%]
 mb-3
-mt-[2%]
+mt-[8%]
+lg:mt-[3%]
 `;
 
 export const NewsTitle = tw.div`
@@ -177,10 +179,10 @@ const BigNumberSC = styled.div`
 export const BigNumber = tw(BigNumberSC)`
   font-georgia  
   font-bold
-  text-7xl
+  text-4xl
   text-left
   self-end
-  lg:text-8xl
+  lg:text-7xl
 `;
 
 export const BigNumber1 = tw(BigNumber)`
