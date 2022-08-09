@@ -83,8 +83,9 @@ export const ChapterGenericDiv1 = tw.div`
   flex
   w-full h-[150vh] 
   items-center
-  justify-left
-  lg:ml-[10%]
+  justify-center
+  lg:justify-start
+  lg:p-[10%]
   text-white
   -z-10
   `;
