@@ -20,7 +20,7 @@ h-screen w-full
 // sm:ml-30 sm:mr-30
 // sm:w
 export const Title = tw.div`
-  mt-[30%]
+  mt-[10%]
   lg:mt-[21%]
   lg:mb-3    
   font-georgia font-bold  
@@ -46,8 +46,8 @@ export const AuthorText = tw.div`
 `;
 
 export const Credito = tw.div`
-  mb-3
-  lg:mb-4
+  mb-7
+  lg:mb-7
   font-georgia
   text-sm text-left text-white
   lg:text-sm
@@ -179,7 +179,7 @@ const BigNumberSC = styled.div`
 export const BigNumber = tw(BigNumberSC)`
   font-georgia  
   font-bold
-  text-4xl
+  text-5xl
   text-left
   self-end
   lg:text-7xl
@@ -187,6 +187,8 @@ export const BigNumber = tw(BigNumberSC)`
 
 export const BigNumber1 = tw(BigNumber)`
   text-2xl
+  ml-2
+  lg:ml-3
   lg:text-5xl
 `;
 
