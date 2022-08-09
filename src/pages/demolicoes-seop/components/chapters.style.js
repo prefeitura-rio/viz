@@ -7,6 +7,7 @@ import capa from "../images/capa.gif";
 export const CapaDivSC = styled.div`
   background-image: url(${capa});
   background-size: cover;
+  background-position: center;
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
