@@ -446,7 +446,16 @@ export function Mapa(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
-        <styles.TextCard1>xx</styles.TextCard1>
+        <styles.TextCard1>
+          Manguinhos (219 demolições), Recreio dos Bandeirantes (214
+          demolições), Gardênia Azul (178 demolições), Jacarepaguá (90
+          demolições) e Campo Grande (67 demolições) foram os cinco bairros com
+          mais ações realizadas. Outros bairros localizados na Zona Sul, como
+          Botafogo (33 demolições) e São Conrado (27 demolições),e da Zona
+          Norte, como Del Castilho (38 demolições) e Mangueira (14 demolições)
+          também tiveram construções irregulares identificadas e demolidas pelo
+          poder público.
+        </styles.TextCard1>
         <styles.NewsImage1 src={legenda}></styles.NewsImage1>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -536,9 +545,9 @@ export function Oeste(
           município.
         </styles.Textyellow>{" "}
         De todas as demolições realizadas pela Prefeitura durante este período,
-        mais de 70% estavam localizadas na região. Os bairros do Recreio, Rio
-        das Pedras e Muzema, por exemplo, são os que registram maior incidência
-        destas irregularidades.
+        mais de 70% estavam localizadas na região. Os bairros do Recreio e
+        Gardênia Azul, por exemplo, são os que registram maior incidência destas
+        irregularidades.
       </styles.IntroText>
     </styles.IntroDiv>
   );
