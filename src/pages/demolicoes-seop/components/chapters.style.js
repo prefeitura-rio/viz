@@ -183,6 +183,7 @@ export const BigNumber = tw(BigNumberSC)`
   text-left
   self-end
   lg:text-7xl
+  lg:mb-3
 `;
 
 export const BigNumber1 = tw(BigNumber)`
