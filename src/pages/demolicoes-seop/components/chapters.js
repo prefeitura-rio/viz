@@ -526,6 +526,7 @@ export function Fim(
           A preservação de vidas é, e sempre será, o nosso objetivo.
         </styles.Textyellow>{" "}
       </styles.IntroText>
+      <img src={logo} className="w-24 mt-[50%] lg:mt-[50%] lg:w-32"></img>
     </styles.IntroDiv>
   );
 }

@@ -87,11 +87,22 @@ export const ChapterGenericDiv1 = tw.div`
   lg:justify-start
   lg:p-[10%]
   text-white
-  -z-10
+  -z-10 
   `;
 
 export const IntroDiv = tw.div`
   w-full h-200
+  bg-opacity-40 backdrop-blur
+  flex flex-col 
+  justify-center items-center 
+  bg-black/50
+  pr-[10%] pl-[10%]
+  lg:pr-[25%]
+  lg:pl-[25%]
+`;
+
+export const Footer = tw.div`
+  w-full h-[20%]
   bg-opacity-40 backdrop-blur
   flex flex-col 
   justify-center items-center 
