@@ -404,7 +404,7 @@ export function Mapa(
 
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
+      <styles.ContainerCard>
         <styles.TextCard1>
           É inegável que o marco de 1.000 demolições, em apenas um ano e meio de
           gestão, é extremamente importante. Mostra que estamos atuantes e que
@@ -412,7 +412,7 @@ export function Mapa(
           proteção de vidas e em asfixiar financeiramente o crime organizado.
           Isso tudo só reforça a convicção que o trabalho precisa seguir .
         </styles.TextCard1>
-      </styles.ContainerCard1>
+      </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
 }
