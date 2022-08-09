@@ -36,7 +36,7 @@ export const Title = tw.div`
 // `;
 
 export const AuthorText = tw.div`
-  mb-[50%]
+  mb-[15%]
   lg:mb-[80%]
   font-georgia
   text-sm text-center text-white
