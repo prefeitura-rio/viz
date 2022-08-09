@@ -398,7 +398,7 @@ export function Seop1(
             {" "}
             <a
               className="p-1"
-              href="https://assistenciasocial.prefeitura.rio/noticias/prefeitura-atua-para-minimizar-os-impactos-do-desabamento-de-um-imovel-em-rio-das-pedras/"
+              href="https://prefeitura.rio/ordem-publica/seop-e-mprj-realizam-operacao-para-demolir-construcao-irregular-erguida-pela-milicia-de-rio-das-pedras/"
               target="_blank"
               rel="noreferrer"
             >
