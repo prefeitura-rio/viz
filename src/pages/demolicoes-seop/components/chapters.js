@@ -147,18 +147,6 @@ export function Grafico(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
-        {/* <iframe
-          title="1000 demolições desde o início da gestão"
-          aria-label="Gráfico de coluna"
-          id="datawrapper-chart-RNXfM"
-          src="https://datawrapper.dwcdn.net/RNXfM/1/"
-          scrolling="no"
-          frameborder="0"
-          style="width: 0; min-width: 100% !important; border: none;"
-          height="416"
-        ></iframe> */}
-        {/* <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script> */}
         <styles.NewsImage src={grafico}></styles.NewsImage>
         <styles.TextCard>
           Analisando as prioridades da Prefeitura, já deu para perceber que o

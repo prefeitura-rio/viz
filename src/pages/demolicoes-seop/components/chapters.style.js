@@ -21,7 +21,8 @@ h-screen w-full
 // sm:w
 export const Title = tw.div`
   mt-[30%]
-  lg:mt-[24%]    
+  lg:mt-[21%]
+  lg:mb-3    
   font-georgia font-bold  
   text-4xl text-center text-white
   lg:text-4xl
@@ -37,7 +38,7 @@ export const Title = tw.div`
 
 export const AuthorText = tw.div`
   mb-[15%]
-  lg:mb-[39%]
+  lg:mb-[45%]
   font-georgia
   text-sm text-center text-white
   lg:text-base
