@@ -14,6 +14,7 @@ import seop3 from "../images/seop3.png";
 import seop4 from "../images/seop4.png";
 import grafico from "../images/grafico.png";
 import legenda from "../images/legenda.png";
+import logoed from "../images/logoed.png";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -100,7 +101,8 @@ export function Intro(
         públicas e protegidas, e erguidas sem nenhum acompanhamento técnico.
         <br /> <br /> Por trás de cada prédio construído ilegalmente e sem
         fiscalização, há inúmeras famílias que vivem sob o risco de terem suas
-        casas desabadas, e perderem, a qualquer momento, sua história e também suas vidas.
+        casas desabadas, e perderem, a qualquer momento, sua história e também
+        suas vidas.
       </styles.IntroText>
     </styles.IntroDiv>
   );
@@ -114,23 +116,24 @@ export function Solucao(
 ) {
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"solucaoTitle"}>
-        A solução
-      </styles.IntroTitle>
-      <styles.IntroText>Para combater o crescimento desordenado da 
-        cidade, o avanço de construções irregulares em áreas ambientalmente 
-        protegidas, preservar vidas e asfixiar financeiramente o crime organizado, a{" "}
-      <styles.Textyellow>
-        Secretaria Municipal de Ordem Pública (SEOP) e a Secretaria Municipal de Meio 
-        Ambiente da Cidade (SMAC) têm realizado operações constantes de demolição destas 
-        construções,
-      </styles.Textyellow>{" "}
-        desde o começo de 2021. <br /> <br />De lá para cá,{" "}
-      <styles.Textyellow>
-        mais de 1.300 imóveis não habitados, não finalizados, erguidos ilegalmente e que traziam  
-        riscos à população, foram colocados abaixo.
-      </styles.Textyellow>{" "}
-        Essas ações pouparam a vida de milhares de cariocas que viviam em áreas de risco.
+      <styles.IntroTitle id={"solucaoTitle"}>A solução</styles.IntroTitle>
+      <styles.IntroText>
+        Para combater o crescimento desordenado da cidade, o avanço de
+        construções irregulares em áreas ambientalmente protegidas, preservar
+        vidas e asfixiar financeiramente o crime organizado, a{" "}
+        <styles.Textyellow>
+          Secretaria Municipal de Ordem Pública (SEOP) e a Secretaria Municipal
+          de Meio Ambiente da Cidade (SMAC) têm realizado operações constantes
+          de demolição destas construções,
+        </styles.Textyellow>{" "}
+        desde o começo de 2021. <br /> <br />
+        De lá para cá,{" "}
+        <styles.Textyellow>
+          mais de 1.300 imóveis não habitados, não finalizados, erguidos
+          ilegalmente e que traziam riscos à população, foram colocados abaixo.
+        </styles.Textyellow>{" "}
+        Essas ações pouparam a vida de milhares de cariocas que viviam em áreas
+        de risco.
       </styles.IntroText>
     </styles.IntroDiv>
   );
@@ -445,9 +448,10 @@ export function Seop1(
               construído irregularmente
             </a>
           </styles.Textyellow>{" "}
-          na Estrada do Itanhangá, em Muzema, foi demolido pela Prefeitura. Uma estimativa feita em parceria
-          com o Ministério Público avaliou que criminosos investiram
-          aproximadamente R$ 5 milhões no empreendimento irregular.
+          na Estrada do Itanhangá, em Muzema, foi demolido pela Prefeitura. Uma
+          estimativa feita em parceria com o Ministério Público avaliou que
+          criminosos investiram aproximadamente R$ 5 milhões no empreendimento
+          irregular.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
@@ -523,23 +527,24 @@ export function Fim(
         extremamente importante para a cidade.
         <br /> <br />
         Para continuar seu trabalho, a Prefeitura do Rio de Janeiro vem
-        investindo na melhoria da capacidade de identificação de novas construções,
-        por meio de denúncias recebidas, e também através do{" "}
-      <styles.Textyellow>
-        uso de novas tecnologias, como o uso de drones, fotografias aéreas
-        (ortofotos) e imagens de satélites.
-        <br /> <br />
-      </styles.Textyellow>{" "}
+        investindo na melhoria da capacidade de identificação de novas
+        construções, por meio de denúncias recebidas, e também através do{" "}
+        <styles.Textyellow>
+          uso de novas tecnologias, como o uso de drones, fotografias aéreas
+          (ortofotos) e imagens de satélites.
+          <br /> <br />
+        </styles.Textyellow>{" "}
         A Prefeitura, juntamente com as secretarias de Ordem Pública e Meio
         Ambiente da Cidade, seguem atentas, colocando abaixo aquelas estruturas
         erguidas irregularmente em nosso município. Continuaremos atuantes e
         firmes no combate à ocupação desordenada na cidade e no asfixiamento
-        financeiro do crime organizado.<br /> <br />{" "}
-      <styles.Textyellow>
-        A preservação de vidas é, e sempre será, o nosso objetivo.
-      </styles.Textyellow>{" "}
+        financeiro do crime organizado.
+        <br /> <br />{" "}
+        <styles.Textyellow>
+          A preservação de vidas é, e sempre será, o nosso objetivo.
+        </styles.Textyellow>{" "}
       </styles.IntroText>
-      <img src={logo} className="w-24 mt-[50%] lg:mt-[50%] lg:w-32"></img>
+      <img src={logoed} className="w-44 mt-[50%] lg:mt-[50%] lg:w-56"></img>
     </styles.IntroDiv>
   );
 }
@@ -589,8 +594,8 @@ export function Oeste(
           construções irregulares têm maior incidência na Zona Oeste do
           município.
         </styles.Textyellow>{" "}
-        De todas as demolições realizadas pela atual gestão da Prefeitura,
-        mais de 70% estavam localizadas nesta região. Rio das Pedras, Muzema e
+        De todas as demolições realizadas pela atual gestão da Prefeitura, mais
+        de 70% estavam localizadas nesta região. Rio das Pedras, Muzema e
         Recreio dos Bandeirantes, por exemplo, são locais em que são registradas
         constantemente estas irregularidades.
       </styles.IntroText>
