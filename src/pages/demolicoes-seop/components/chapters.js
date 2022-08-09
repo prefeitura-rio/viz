@@ -545,7 +545,10 @@ export function Fim(
         </styles.Textyellow>{" "}
       </styles.IntroText>
       <a href={"https://www.dados.rio/"}>
-        <img src={logoed} className="w-44 mt-[50%] lg:mt-[50%] lg:w-56"></img>
+        <img
+          src={logoed}
+          className="w-44 mt-[200px] lg:mt-[500px] lg:w-56"
+        ></img>
       </a>
     </styles.IntroDiv>
   );
