@@ -33,9 +33,7 @@ export function Capa(
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       <img src={logo} className="w-24 mt-[2vh]  lg:w-32"></img>
-      <styles.Title>
-        Mais de 1.300 construções irregulares na cidade Rio de Janeiro
-      </styles.Title>
+      <styles.Title>Mais de 1.300 construções irregulares a menos no Rio de Janeiro</styles.Title>
       {/* <styles.Subtitle>
         Segurança para os moradores, Prejuízo para o crime organizado,
         Preservação das áreas verdes
@@ -95,10 +93,10 @@ export function Intro(
           a atividade imobiliária se tornou uma das principais fontes
           financeiras de alguns grupos criminosos.
         </styles.Textyellow>{" "}
-        Essas construções são realizadas sem autorização da Prefeitura, em áreas
-        públicas, e erguidas sem nenhum acompanhamento técnico. <br /> <br />{" "}
-        Por trás de cada prédio construído ilegalmente, e sem fiscalização, há
-        inúmeras famílias que vivendo sob o risco de perderem, a qualquer
+        Essas construções são realizadas sem autorização da Prefeitura, em áreas 
+        públicas e protegidas, e erguidas sem nenhum acompanhamento técnico.<br /> <br />{" "}
+        Por trás de cada prédio construído ilegalmente e sem fiscalização, há
+        inúmeras famílias que vivem sob o risco de perderem, a qualquer
         momento, suas casas, sua história e também suas vidas.
       </styles.IntroText>
     </styles.IntroDiv>
@@ -149,17 +147,18 @@ export function Grafico(
       <styles.ContainerCard>
         <styles.NewsImage src={grafico}></styles.NewsImage>
         <styles.TextCard>
-          Analisando as prioridades da Prefeitura, já deu para perceber que o
-          assunto é tratado com a relevância que necessita. Isto, entretanto,
-          nem sempre foi assim. Analisando os dados históricos de demolições
-          realizadas na cidade, é possível perceber que, ao longo da{" "}
-          <styles.Textyellow>
-            gestão anterior, apenas 359 demolições foram realizadas,
-          </styles.Textyellow>{" "}
-          número inferior as{" "}
-          <styles.Textyellow>
-            1.312 demolições feitas em apenas um ano e meio pela atual gestão.
-          </styles.Textyellow>{" "}
+        Analisando as prioridades da Prefeitura, é possível perceber
+        que o assunto é tratado com a relevância necessária. Isto, 
+        entretanto, nem sempre foi assim. Analisando os dados históricos 
+        de demolições realizadas na cidade, é possível perceber que, ao 
+        longo da {" "} 
+        <styles.Textyellow>
+        gestão anterior, apenas 359 demolições foram realizadas, 
+        </styles.Textyellow>{" "}
+        número inferior as {" "} 
+        <styles.Textyellow>
+        1.312 demolições feitas em apenas um ano e meio pela atual gestão. 
+        </styles.Textyellow>{" "}
         </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -272,7 +271,7 @@ export function Exemplo2(
 //   );
 // }
 
-export function Seop1(
+export function Seop4(
   props = {
     id: "",
     chapRef: null,
@@ -283,36 +282,22 @@ export function Seop1(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={seop1}></styles.NewsImage>
+        <styles.NewsImage src={seop4}></styles.NewsImage>
         <styles.Credito>Prefeitura do Rio</styles.Credito>
         <styles.TextCard1>
-          Este foi o caso de uma construção irregular, identificada em Muzema. A
-          construção de três andares, não tinha aval técnico, e foi colocada
-          baixo pela equipe da Força-Tarefa no mês passado.
-        </styles.TextCard1>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function Seop2(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <styles.NewsImage src={seop2}></styles.NewsImage>
-        <styles.Credito>Prefeitura do Rio</styles.Credito>
-        <styles.TextCard1>
-          Há 2 meses, um imóvel de sete andares, construída na região do
-          Terreirão, no Recreio, área dominada pela milícia. O prédio não
-          atendia nenhum requisito para construção no local, e foi demolido pela
-          Prefeitura.
+          Também em Muzema,{" "}
+        <styles.Textyellow>
+          {" "}
+          <a
+            className="p-1"
+            href="https://prefeitura.rio/ordem-publica/prefeitura-faz-demolicao-de-predio-de-tres-andares-no-valor-de-r-3-milhoes-na-muzema/"
+            target="_blank"
+            rel="noreferrer"
+          >
+          uma construção irregular foi colocada abaixo
+          </a>
+        </styles.Textyellow>{" "}
+          O prédio, com três andares, foi demolido pela equipe da Força-Tarefa no mês passado.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
@@ -333,19 +318,26 @@ export function Seop3(
         <styles.NewsImage src={seop3}></styles.NewsImage>
         <styles.Credito>Prefeitura do Rio</styles.Credito>
         <styles.TextCard1>
-          No começo deste ano, outro imóvel também localizado no Recreio dos
-          Bandeirantes foi abaixo. Com três andares já construídos e um quarto
-          em desenvolvimento, o prédio irregular possuía cinco apartamentos por
-          andar. A estimativa é que cada unidade, construída sem nenhum parecer
-          técnico que aprovasse a sua segurança, seria vendida por R$ 300 mil
-          para os moradores.
+          Há quatro meses, um imóvel de sete andares, construído na 
+          região do Terreirão, também no Recreio, foi demolido. {" "}
+        <styles.Textyellow>
+          {" "}
+          <a
+            className="p-1"
+            href="https://prefeitura.rio/ordem-publica/seop-faz-a-demolicao-de-predio-de-sete-andares-construido-irregularmente-no-recreio/"
+            target="_blank"
+            rel="noreferrer"
+          >
+          O prédio não atendia nenhum requisito técnico para construção no local. 
+          </a>
+        </styles.Textyellow>{" "}
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
   );
 }
 
-export function Seop4(
+export function Seop2(
   props = {
     id: "",
     chapRef: null,
@@ -356,11 +348,61 @@ export function Seop4(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={seop4}></styles.NewsImage>
+        <styles.NewsImage src={seop2}></styles.NewsImage>
         <styles.Credito>Prefeitura do Rio</styles.Credito>
         <styles.TextCard1>
-          Prédio da milícia de Rio das Pedras é demolido em ação do MP com a
-          Prefeitura
+          Outro imóvel também localizado no Recreio dos Bandeirantes foi 
+          abaixo no começo deste ano. Com três andares já construídos e um 
+          quarto em desenvolvimento, o prédio irregular possuía cinco apartamentos 
+          por andar. A estimativa é que cada unidade,{" "}
+        <styles.Textyellow>
+          {" "}
+          <a
+            className="p-1"
+            href="https://prefeitura.rio/ordem-publica/seop-e-gaeco-realizam-megaoperacao-para-demolicao-de-construcoes-irregulares-no-recreio-dos-bandeirantes/https://assistenciasocial.prefeitura.rio/noticias/prefeitura-atua-para-minimizar-os-impactos-do-desabamento-de-um-imovel-em-rio-das-pedras/"
+            target="_blank"
+            rel="noreferrer"
+          >
+          construída sem nenhum parecer técnico 
+          </a>
+        </styles.Textyellow>{" "}
+          que aprovasse a sua segurança, seria vendida por R$ 300 mil para os moradores.
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Seop1(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.NewsImage src={seop1}></styles.NewsImage>
+        <styles.Credito>Prefeitura do Rio</styles.Credito>
+        <styles.TextCard1>
+          No fim do ano passado, um imóvel onde funcionaria um supermercado, 
+          com garagem subterrânea e espaços alugados, estava sendo{" "}
+        <styles.Textyellow>
+          {" "}
+          <a
+            className="p-1"
+            href="https://assistenciasocial.prefeitura.rio/noticias/prefeitura-atua-para-minimizar-os-impactos-do-desabamento-de-um-imovel-em-rio-das-pedras/"
+            target="_blank"
+            rel="noreferrer"
+          >
+          construído irregularmente
+          </a>
+        </styles.Textyellow>{" "}
+          na Estrada do Itanhangá, em Muzema. Uma estimativa feita em parceria 
+          com o Ministério Público avaliou que criminosos investiram aproximadamente 
+          R$ 5 milhões no empreendimento irregular.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv>
@@ -415,7 +457,7 @@ export function Fim(
 
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"fimTitle"}>Fim</styles.IntroTitle>
+      <styles.IntroTitle id={"fimTitle"}>Próximos passos</styles.IntroTitle>
       <styles.IntroText>
         A marca de <styles.Textyellow>1.313 demolições,</styles.Textyellow> em
         apenas <styles.Textyellow>um ano e meio de gestão,</styles.Textyellow> é
@@ -453,7 +495,7 @@ export function Acompanhe(
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
       <styles.IntroTitle id={"acompanheTitle"}>
-        As ações da SEOP
+        As ações da Prefeitura
       </styles.IntroTitle>
       <styles.IntroText>
         As operações realizadas pela Ordem Pública reúnem diversos órgãos da
