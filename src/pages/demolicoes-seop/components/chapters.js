@@ -6,11 +6,12 @@ import tw from "tailwind-styled-components";
 
 // IMAGENS
 import logo from "../images/logo.png";
-import riodaspedras from "../images/riodaspedras.png";
-import muzema from "../images/muzema.png";
-import salgueiro from "../images/salgueiro.png";
+import exemplo1 from "../images/exemplo1.png";
+import exemplo2 from "../images/exemplo2.png";
 import seop1 from "../images/seop1.png";
 import seop2 from "../images/seop2.png";
+import seop3 from "../images/seop3.png";
+import seop4 from "../images/seop4.png";
 import grafico from "../images/grafico.png";
 
 // TODO: REMOVE
@@ -182,8 +183,8 @@ export function Exemplo1(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={muzema}></styles.NewsImage>
-        <styles.Credito>Reprodução G1</styles.Credito>
+        <styles.NewsImage src={exemplo1}></styles.NewsImage>
+        <styles.Credito>Prefeitura do Rio</styles.Credito>
         <styles.TextCard1>
           Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, 40
           anos, morreram após o desabamento de dois prédios, construídos
@@ -218,8 +219,8 @@ export function Exemplo2(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={riodaspedras}></styles.NewsImage>
-        <styles.Credito>Reprodução Veja</styles.Credito>
+        <styles.NewsImage src={exemplo2}></styles.NewsImage>
+        <styles.Credito>Prefeitura do Rio</styles.Credito>
         <styles.TextCard1>
           Maitê Gomes Abreu, de 2 anos, e seu pai, Natan Gomes, de 30 anos,
           foram encontrados mortos após nove horas de buscas entre os escombros.
@@ -288,21 +289,8 @@ export function Seop1(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        {/* <styles.NewsImage src={seop1}></styles.NewsImage> */}
-        {/* <styles.NewsTitle>
-          <a
-            style={{
-              fontSize: "2.2rem",
-              fontWeight: "700",
-              color: "#ffffff",
-            }}
-            href="https://g1.globo.com/rj/rio-de-janeiro/bom-dia-rio/video/construcao-irregular-e-demolida-na-muzema-10771066.ghtml"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Construção irregular é demolida na Muzema
-          </a>
-        </styles.NewsTitle> */}
+        <styles.NewsImage src={seop1}></styles.NewsImage>
+        <styles.Credito>Prefeitura do Rio</styles.Credito>
         <styles.TextCard1>
           Este foi o caso de uma construção irregular, identificada em Muzema. A
           construção de três andares, não tinha aval técnico, e foi colocada
@@ -324,7 +312,8 @@ export function Seop2(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        {/* <styles.NewsImage src={seop2}></styles.NewsImage> */}
+        <styles.NewsImage src={seop2}></styles.NewsImage>
+        <styles.Credito>Prefeitura do Rio</styles.Credito>
         <styles.TextCard1>
           Há 2 meses, um imóvel de sete andares, construída na região do
           Terreirão, no Recreio, área dominada pela milícia. O prédio não
@@ -347,7 +336,8 @@ export function Seop3(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        {/* <styles.NewsImage src={seop2}></styles.NewsImage> */}
+        <styles.NewsImage src={seop3}></styles.NewsImage>
+        <styles.Credito>Prefeitura do Rio</styles.Credito>
         <styles.TextCard1>
           No começo deste ano, outro imóvel também localizado no Recreio dos
           Bandeirantes foi abaixo. Com três andares já construídos e um quarto
@@ -372,7 +362,8 @@ export function Seop4(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        {/* <styles.NewsImage src={seop2}></styles.NewsImage> */}
+        <styles.NewsImage src={seop4}></styles.NewsImage>
+        <styles.Credito>Prefeitura do Rio</styles.Credito>
         <styles.TextCard1>
           Prédio da milícia de Rio das Pedras é demolido em ação do MP com a
           Prefeitura
