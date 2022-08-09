@@ -13,6 +13,7 @@ import seop2 from "../images/seop2.png";
 import seop3 from "../images/seop3.png";
 import seop4 from "../images/seop4.png";
 import grafico from "../images/grafico.png";
+import legenda from "../images/legenda.png";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -446,6 +447,7 @@ export function Mapa(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard1>xx</styles.TextCard1>
+        <styles.NewsImage1 src={legenda}></styles.NewsImage1>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );

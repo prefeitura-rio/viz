@@ -107,6 +107,12 @@ mb-3
 mt-[2%]
 `;
 
+export const NewsImage1 = tw.img`
+w-[65%]
+mb-3
+mt-[2%]
+`;
+
 export const NewsTitle = tw.div`
   text-white
   font-georgia
