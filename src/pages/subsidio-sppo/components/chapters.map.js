@@ -157,7 +157,7 @@ export const SepetibaLinhas = () => {
   };
 };
 
-export const Five = () => {
+export const LinhasBairros = () => {
   return {
     location: {
       mobile: {
@@ -210,7 +210,7 @@ export const Five = () => {
   };
 };
 
-export const Six = () => {
+export const SistemaAtual = () => {
   return {
     location: {
       mobile: {
@@ -271,42 +271,7 @@ export const Six = () => {
   };
 };
 
-export const Seven = () => {
-  return {
-    location: {
-      mobile: {
-        center: {
-          lon: -43.24732,
-          lat: -22.9526,
-        },
-        zoom: 10.33,
-        pitch: 60.0,
-        bearing: -51.24,
-        duration: 2000,
-      },
-      desktop: {
-        center: {
-          lon: -43.24732,
-          lat: -22.9526,
-        },
-        zoom: 12.33,
-        pitch: 60.0,
-        bearing: -51.24,
-        duration: 2000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox-style",
-        layer: {
-          id: "pontosantigos",
-        },
-      },
-    ],
-  };
-};
-
-export const Eight = () => {
+export const CxGrafico1 = () => {
   return {
     location: {
       mobile: {

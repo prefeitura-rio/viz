@@ -142,7 +142,7 @@ export function SepetibaLinhas(
   );
 }
 
-export function Five(
+export function LinhasBairros(
   props = {
     id: "",
   }
@@ -163,7 +163,7 @@ export function Five(
   );
 }
 
-export function Six(
+export function SistemaAtual(
   props = {
     id: "",
   }
@@ -185,7 +185,7 @@ export function Six(
   );
 }
 
-export function Seven(
+export function CxIntro(
   props = {
     id: "",
     progress: 0,
@@ -237,7 +237,7 @@ export function Seven(
   );
 }
 
-export function Eight(
+export function CxGrafico1(
   props = {
     id: "",
     progress: 0,

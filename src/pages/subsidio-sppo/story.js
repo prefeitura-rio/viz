@@ -56,20 +56,20 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.SepetibaLinhas().layers);
         break;
       case "linhas-bairros":
-        setPosition(chapterMap.Five().location);
-        setLayers(chapterMap.Five().layers);
+        setPosition(chapterMap.LinhasBairros().location);
+        setLayers(chapterMap.LinhasBairros().layers);
         break;
       case "sistema-atual":
-        setPosition(chapterMap.Six().location);
-        setLayers(chapterMap.Six().layers);
+        setPosition(chapterMap.SistemaAtual().location);
+        setLayers(chapterMap.SistemaAtual().layers);
         break;
-      case "caixa-preta-intro":
-        setPosition(chapterMap.Six().location);
-        setLayers(chapterMap.Six().layers);
+      case "cx-intro":
+        setPosition(chapterMap.SistemaAtual().location);
+        setLayers(chapterMap.SistemaAtual().layers);
         break;
-      case "caixa-preta-grafico-1":
-        setPosition(chapterMap.Eight().location);
-        setLayers(chapterMap.Eight().layers);
+      case "cx-grafico-1":
+        setPosition(chapterMap.CxGrafico1().location);
+        setLayers(chapterMap.CxGrafico1().layers);
         break;
       case "creditos":
         setPosition(chapterMap.Creditos().location);
@@ -149,23 +149,23 @@ export default function SubsidioSPPO() {
 
     const tl7 = gsap.timeline();
     tl7
-      .set("#caixa-preta-intro", { opacity: 0 })
-      .to("#caixa-preta-intro", { opacity: 0, duration: 30 })
-      .to("#caixa-preta-intro", { opacity: 1, duration: 6 })
-      .to("#caixa-preta-intro", { opacity: 1, duration: 20 })
-      .to("#caixa-preta-intro", { opacity: 0, duration: 6 })
-      .to("#caixa-preta-intro", { opacity: 0, duration: 28 });
+      .set("#cx-intro", { opacity: 0 })
+      .to("#cx-intro", { opacity: 0, duration: 30 })
+      .to("#cx-intro", { opacity: 1, duration: 6 })
+      .to("#cx-intro", { opacity: 1, duration: 20 })
+      .to("#cx-intro", { opacity: 0, duration: 6 })
+      .to("#cx-intro", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl7,
-      trigger: "#caixa-preta-intro",
+      trigger: "#cx-intro",
       onToggle: () => {
-        setChapterNumberMap("caixa-preta-intro");
+        setChapterNumberMap("cx-intro");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#caixa-preta-grafico-1",
+      trigger: "#cx-grafico-1",
       scrub: true,
       onEnter: (self) => {
         setChartProgress(self.progress + 0.47);
@@ -175,16 +175,16 @@ export default function SubsidioSPPO() {
 
     const tl9 = gsap.timeline();
     tl9
-      .set("#caixa-preta-creditos", { opacity: 0 })
-      .to("#caixa-preta-creditos", { opacity: 0, duration: 30 })
-      .to("#caixa-preta-creditos", { opacity: 1, duration: 6 })
-      .to("#caixa-preta-creditos", { opacity: 1, duration: 20 })
-      .to("#caixa-preta-creditos", { opacity: 1, duration: 6 })
-      .to("#caixa-preta-creditos", { opacity: 1, duration: 28 });
+      .set("#cx-creditos", { opacity: 0 })
+      .to("#cx-creditos", { opacity: 0, duration: 30 })
+      .to("#cx-creditos", { opacity: 1, duration: 6 })
+      .to("#cx-creditos", { opacity: 1, duration: 20 })
+      .to("#cx-creditos", { opacity: 1, duration: 6 })
+      .to("#cx-creditos", { opacity: 1, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl9,
-      trigger: "#caixa-preta-creditos",
+      trigger: "#cx-creditos",
       onToggle: () => {
         setChapterNumberMap(6);
       },
@@ -216,11 +216,11 @@ export default function SubsidioSPPO() {
       <chapterDiv.Intro id={"intro"} />
       <chapterDiv.SepetibaBairro id={"sepetiba-bairro"} />
       <chapterDiv.SepetibaLinhas id={"sepetiba-linhas"} />
-      <chapterDiv.Five id={"linhas-bairros"} />
-      <chapterDiv.Six id={"sistema-atual"} />
-      <chapterDiv.Seven id={"caixa-preta-intro"} />
-      <chapterDiv.Eight id={"caixa-preta-grafico-1"} />
-      <chapterDiv.Creditos id={"caixa-preta-creditos"} />
+      <chapterDiv.LinhasBairros id={"linhas-bairros"} />
+      <chapterDiv.SistemaAtual id={"sistema-atual"} />
+      <chapterDiv.CxIntro id={"cx-intro"} />
+      <chapterDiv.CxGrafico1 id={"cx-grafico-1"} />
+      <chapterDiv.Creditos id={"cx-creditos"} />
     </>
   );
 }
