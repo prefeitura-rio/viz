@@ -1,4 +1,4 @@
-name: React app deployment
+name: Deployment - Production (viz.dados.rio)
 
 on:
   push:

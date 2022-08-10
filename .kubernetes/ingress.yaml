@@ -3,7 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: viz-dados-rio-ingress
-  namespace: viz-dados-rio
+  namespace: viz-dados-rio-staging
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /
@@ -13,10 +13,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - viz.dados.rio
+        - viz-staging.dados.rio
       secretName: viz-dados-rio-tls
   rules:
-    - host: viz.dados.rio
+    - host: viz-staging.dados.rio
       http:
         paths:
           - path: /
