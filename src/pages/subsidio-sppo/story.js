@@ -14,9 +14,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SubsidioSPPO() {
-  const [location, setLocation] = useState(chapterMap.One().location);
+  const [location, setLocation] = useState(chapterMap.Capa().location);
 
-  const [layers, setLayers] = useState(chapterMap.One().layers);
+  const [layers, setLayers] = useState(chapterMap.Capa().layers);
   // console.log("ChapterLayers", layers);
 
   const [chartProgress, setChartProgress] = useState(0);
@@ -39,13 +39,13 @@ export default function SubsidioSPPO() {
   // console.log(chapterNumberMap);
   useEffect(() => {
     switch (chapterNumberMap) {
-      case 1:
-        setPosition(chapterMap.One().location);
-        setLayers(chapterMap.One().layers);
+      case "capa":
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
-      case 2:
-        setPosition(chapterMap.One().location);
-        setLayers(chapterMap.One().layers);
+      case "intro":
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
       case 3:
         setPosition(chapterMap.Three().location);
@@ -99,7 +99,7 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#chapter-1",
+      trigger: "#capa",
       onToggle: () => {
         setChapterNumberMap(1);
       },
@@ -107,16 +107,16 @@ export default function SubsidioSPPO() {
 
     const tl2 = gsap.timeline();
     tl2
-      .set("#chapter-2", { opacity: 0 })
-      .to("#chapter-2", { opacity: 0, duration: 30 })
-      .to("#chapter-2", { opacity: 1, duration: 6 })
-      .to("#chapter-2", { opacity: 1, duration: 20 })
-      .to("#chapter-2", { opacity: 0, duration: 6 })
-      .to("#chapter-2", { opacity: 0, duration: 28 });
+      .set("#intro", { opacity: 0 })
+      .to("#intro", { opacity: 0, duration: 30 })
+      .to("#intro", { opacity: 1, duration: 6 })
+      .to("#intro", { opacity: 1, duration: 20 })
+      .to("#intro", { opacity: 0, duration: 6 })
+      .to("#intro", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl2,
-      trigger: "#chapter-2",
+      trigger: "#intro",
       onToggle: () => {
         setChapterNumberMap(1);
       },
@@ -218,8 +218,8 @@ export default function SubsidioSPPO() {
         animationLoopLength={21600}
         animationSpeed={1}
       />
-      <chapterDiv.One id={"chapter-1"} />
-      <chapterDiv.Two id={"chapter-2"} />
+      <chapterDiv.Capa id={"capa"} />
+      <chapterDiv.Intro id={"intro"} />
       <chapterDiv.Three id={"chapter-3"} />
       <chapterDiv.Four id={"chapter-4"} />
       <chapterDiv.Five id={"chapter-5"} />

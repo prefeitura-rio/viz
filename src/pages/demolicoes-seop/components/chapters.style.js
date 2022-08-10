@@ -11,7 +11,7 @@ export const CapaDivSC = styled.div`
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
-h-screen w-full
+  h-screen w-full
   flex flex-col 
   justify-between items-center 
   pl-5 pr-5  

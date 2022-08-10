@@ -11,7 +11,7 @@ import CustomEase from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export function One(
+export function Capa(
   props = {
     id: "",
     ref: null,
@@ -59,7 +59,7 @@ export function One(
   );
 }
 
-export function Two(
+export function Intro(
   props = {
     id: "",
     progress: 0,
