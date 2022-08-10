@@ -37,7 +37,7 @@ function App() {
       <Router>
         <Suspense fallback={<Loading />}>
           <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<Home />} />
             <Route path="/especial-sppo/subsidio" element={<SubsidioSPPO />} />
             <Route path="/sandbox/sample" element={<StorySample />} />
             <Route
