@@ -101,7 +101,7 @@ export default function SubsidioSPPO() {
     ScrollTrigger.create({
       trigger: "#capa",
       onToggle: () => {
-        setChapterNumberMap(1);
+        setChapterNumberMap("capa");
       },
     });
 
@@ -118,7 +118,7 @@ export default function SubsidioSPPO() {
       animation: tl2,
       trigger: "#intro",
       onToggle: () => {
-        setChapterNumberMap(1);
+        setChapterNumberMap("intro");
       },
     });
 

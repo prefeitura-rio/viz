@@ -152,11 +152,11 @@ export function Five(
     <styles.ChapterGenericDiv id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard>
-          Os <TextRed>bairros</TextRed> em destaque já estão vendo suas{" "}
-          <styles.TextOrange>linhas</styles.TextOrange> voltarem. Esses bairros
-          são os que mais receberam novas linhas desde do início do acordo. Até
-          o momento 43 linhas ja foram reestabelecidas ou incorporadas ao novo
-          sistema de transporte.
+          Os <styles.TextRed>bairros</styles.TextRed> em destaque já estão vendo
+          suas <styles.TextOrange>linhas</styles.TextOrange> voltarem. Esses
+          bairros são os que mais receberam novas linhas desde do início do
+          acordo. Até o momento 43 linhas ja foram reestabelecidas ou
+          incorporadas ao novo sistema de transporte.
         </styles.TextCard>
       </styles.ContainerCard>{" "}
     </styles.ChapterGenericDiv>
