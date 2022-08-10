@@ -50,5 +50,5 @@ jobs:
       - name: Deploy
         run: |-
           ./kustomize edit set image gcr.io/PROJECT_ID/IMAGE_NAME:TAG=$IMAGE_NAME:$GITHUB_SHA
-          ./kustomize build . | kubectl apply -n viz-dados-rio -f -
-          kubectl rollout status -w -n viz-dados-rio deployment/viz-dados-rio
+          ./kustomize build . | kubectl apply -n viz-dados-rio-staging -f -
+          kubectl rollout status -w -n viz-dados-rio-staging deployment/viz-dados-rio
