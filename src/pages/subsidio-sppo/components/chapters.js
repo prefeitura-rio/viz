@@ -99,7 +99,7 @@ export function Intro(
   );
 }
 
-export function Three(
+export function SepetibaBairro(
   props = {
     id: "",
     ref: null,
@@ -120,7 +120,7 @@ export function Three(
   );
 }
 
-export function Four(
+export function SepetibaLinhas(
   props = {
     id: "",
   }

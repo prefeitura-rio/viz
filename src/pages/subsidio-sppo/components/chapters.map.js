@@ -59,7 +59,7 @@ export const Capa = () => {
   };
 };
 
-export const Three = () => {
+export const SepetibaBairro = () => {
   return {
     location: {
       mobile: {
@@ -92,7 +92,7 @@ export const Three = () => {
   };
 };
 
-export const Four = () => {
+export const SepetibaLinhas = () => {
   return {
     location: {
       mobile: {

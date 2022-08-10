@@ -47,37 +47,33 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Capa().location);
         setLayers(chapterMap.Capa().layers);
         break;
-      case 3:
-        setPosition(chapterMap.Three().location);
-        setLayers(chapterMap.Three().layers);
+      case "sepetiba-bairro":
+        setPosition(chapterMap.SepetibaBairro().location);
+        setLayers(chapterMap.SepetibaBairro().layers);
         break;
-      case 4:
-        setPosition(chapterMap.Four().location);
-        setLayers(chapterMap.Four().layers);
+      case "sepetiba-linhas":
+        setPosition(chapterMap.SepetibaLinhas().location);
+        setLayers(chapterMap.SepetibaLinhas().layers);
         break;
-      case 5:
+      case "linhas-bairros":
         setPosition(chapterMap.Five().location);
         setLayers(chapterMap.Five().layers);
         break;
-      case 6:
+      case "sistema-atual":
         setPosition(chapterMap.Six().location);
         setLayers(chapterMap.Six().layers);
         break;
-      case 7:
-        setPosition(chapterMap.Seven().location);
-        setLayers(chapterMap.Seven().layers);
+      case "caixa-preta-intro":
+        setPosition(chapterMap.Six().location);
+        setLayers(chapterMap.Six().layers);
         break;
-      case 8:
+      case "caixa-preta-grafico-1":
         setPosition(chapterMap.Eight().location);
         setLayers(chapterMap.Eight().layers);
         break;
-      case 9:
+      case "creditos":
         setPosition(chapterMap.Creditos().location);
         setLayers(chapterMap.Creditos().layers);
-        break;
-      case 10:
-        setPosition(chapterMap.Ten().location);
-        setLayers(chapterMap.Ten().layers);
         break;
       default:
         break;
@@ -123,77 +119,75 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#chapter-3",
+      trigger: "#sepetiba-bairro",
       onToggle: () => {
-        setChapterNumberMap(3);
+        setChapterNumberMap("sepetiba-bairro");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#chapter-4",
+      trigger: "#sepetiba-linhas",
       onToggle: () => {
-        setChapterNumberMap(4);
+        setChapterNumberMap("sepetiba-linhas");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#chapter-5",
+      trigger: "#linhas-bairros",
       pin: ".pin",
       onToggle: () => {
-        setChapterNumberMap(5);
+        setChapterNumberMap("linhas-bairros");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#chapter-6",
+      trigger: "#sistema-atual",
       onToggle: () => {
-        setChapterNumberMap(6);
+        setChapterNumberMap("sistema-atual");
       },
-      // onUpdate: (self) => console.log("progress:", self.progress),
     });
 
     const tl7 = gsap.timeline();
     tl7
-      .set("#chapter-7", { opacity: 0 })
-      .to("#chapter-7", { opacity: 0, duration: 30 })
-      .to("#chapter-7", { opacity: 1, duration: 6 })
-      .to("#chapter-7", { opacity: 1, duration: 20 })
-      .to("#chapter-7", { opacity: 0, duration: 6 })
-      .to("#chapter-7", { opacity: 0, duration: 28 });
+      .set("#caixa-preta-intro", { opacity: 0 })
+      .to("#caixa-preta-intro", { opacity: 0, duration: 30 })
+      .to("#caixa-preta-intro", { opacity: 1, duration: 6 })
+      .to("#caixa-preta-intro", { opacity: 1, duration: 20 })
+      .to("#caixa-preta-intro", { opacity: 0, duration: 6 })
+      .to("#caixa-preta-intro", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl7,
-      trigger: "#chapter-7",
+      trigger: "#caixa-preta-intro",
       onToggle: () => {
-        setChapterNumberMap(6);
+        setChapterNumberMap("caixa-preta-intro");
       },
-      // onUpdate: (self) => console.log("progress:", self.progress),
     });
 
     ScrollTrigger.create({
-      trigger: "#chapter-8",
+      trigger: "#caixa-preta-grafico-1",
       scrub: true,
       onEnter: (self) => {
         setChartProgress(self.progress + 0.47);
       },
+      // onUpdate: (self) => console.log("progress:", self.progress),
     });
 
     const tl9 = gsap.timeline();
     tl9
-      .set("#chapter-9", { opacity: 0 })
-      .to("#chapter-9", { opacity: 0, duration: 30 })
-      .to("#chapter-9", { opacity: 1, duration: 6 })
-      .to("#chapter-9", { opacity: 1, duration: 20 })
-      .to("#chapter-9", { opacity: 1, duration: 6 })
-      .to("#chapter-9", { opacity: 1, duration: 28 });
+      .set("#caixa-preta-creditos", { opacity: 0 })
+      .to("#caixa-preta-creditos", { opacity: 0, duration: 30 })
+      .to("#caixa-preta-creditos", { opacity: 1, duration: 6 })
+      .to("#caixa-preta-creditos", { opacity: 1, duration: 20 })
+      .to("#caixa-preta-creditos", { opacity: 1, duration: 6 })
+      .to("#caixa-preta-creditos", { opacity: 1, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl9,
-      trigger: "#chapter-9",
+      trigger: "#caixa-preta-creditos",
       onToggle: () => {
         setChapterNumberMap(6);
       },
-      onUpdate: (self) => console.log("progress:", self.progress),
     });
   }, []);
 
@@ -220,13 +214,13 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
-      <chapterDiv.Three id={"chapter-3"} />
-      <chapterDiv.Four id={"chapter-4"} />
-      <chapterDiv.Five id={"chapter-5"} />
-      <chapterDiv.Six id={"chapter-6"} />
-      <chapterDiv.Seven id={"chapter-7"} />
-      <chapterDiv.Eight id={"chapter-8"} />
-      <chapterDiv.Creditos id={"chapter-9"} />
+      <chapterDiv.SepetibaBairro id={"sepetiba-bairro"} />
+      <chapterDiv.SepetibaLinhas id={"sepetiba-linhas"} />
+      <chapterDiv.Five id={"linhas-bairros"} />
+      <chapterDiv.Six id={"sistema-atual"} />
+      <chapterDiv.Seven id={"caixa-preta-intro"} />
+      <chapterDiv.Eight id={"caixa-preta-grafico-1"} />
+      <chapterDiv.Creditos id={"caixa-preta-creditos"} />
     </>
   );
 }

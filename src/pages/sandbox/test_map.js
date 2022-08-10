@@ -63,8 +63,8 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Capa().layers);
         break;
       case 3:
-        setPosition(chapterMap.Three().location);
-        setLayers(chapterMap.Three().layers);
+        setPosition(chapterMap.SepetibaBairro().location);
+        setLayers(chapterMap.SepetibaBairro().layers);
         break;
       default:
         break;
@@ -216,7 +216,7 @@ export default function SubsidioSPPO() {
                 {event.state === "DURING" &&
                   fadeMapLocation(
                     chapterMap.Capa().location,
-                    chapterMap.Three().location,
+                    chapterMap.SepetibaBairro().location,
                     progress
                   )}
               </>
@@ -236,7 +236,7 @@ export default function SubsidioSPPO() {
           {(progress, event) => (
             <>
               <>{event.type === "enter" && setChapterNumberMap(3)}</>
-              <chapterDiv.Three id={"chapter-3"} />
+              <chapterDiv.SepetibaBairro id={"chapter-3"} />
             </>
           )}
         </Scene>
