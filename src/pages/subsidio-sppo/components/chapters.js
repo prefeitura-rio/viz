@@ -11,81 +11,6 @@ import CustomEase from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const ContainerCard = styled.div`
-  min-width: 250px;
-  margin: auto;
-  width: 40%;
-  padding: 20px;
-  background-color: rgba(20, 19, 18, 0.8);
-  opacity: 1;
-  border-radius: 10px;
-`;
-
-const TextCard = styled.div`
-  color: #dbdbdb;
-  font-family: "Redaction", sans-serif;
-  font-size: 1.3rem;
-  line-height: 1.4;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  text-align: left;
-`;
-
-const TextRed = styled.div`
-  background: #be5b5b;
-  color: #fff;
-  display: inline;
-  padding: 1px 8px 1px 8px;
-  margin: 2px;
-`;
-
-const TextBlue = styled.div`
-  background: #18b4c9;
-  color: #fff;
-  display: inline;
-  padding: 1px 8px 1px 8px;
-  margin: 2px;
-`;
-
-const TextOrange = styled.div`
-  background: #c36a2d;
-  color: #fff;
-  display: inline;
-  padding: 1px 8px 1px 8px;
-  margin: 2px;
-`;
-
-const TextOrange1 = styled.div`
-  background: #dd9f75;
-  color: #fff;
-  display: inline;
-  padding: 1px 8px 1px 8px;
-  margin: 2px;
-`;
-
-const IntroTitle = styled.div`
-  grid-area: titulo;
-  color: #ffffff;
-  font-family: "Redaction", sans-serif;
-  font-weight: 700;
-  font-size: 2.7rem;
-  line-height: 1;
-  text-align: right;
-  opacity: 1;
-`;
-
-const IntroText = styled.div`
-  grid-area: texto;
-  text-align: justify;
-  margin-bottom: 30%;
-  vertical-align: middle;
-  color: #ffffff;
-  font-family: "Redaction", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  opacity: 1;
-`;
-
 export function One(
   props = {
     id: "",
@@ -94,7 +19,7 @@ export function One(
 ) {
   props = setDefaultProps(props);
   return (
-    <styles.ChapterOneDiv id={props.id} ref={props.ref}>
+    <styles.CapaDiv id={props.id} ref={props.ref}>
       <img src={logo1} className="h-16 mt-[2vh]  lg:h-16"></img>
       <styles.Title>
         Um ponto de virada na história do transporte municipal do Rio de Janeiro
@@ -130,7 +55,7 @@ export function One(
           clique aqui
         </a>
       </styles.Interactive>
-    </styles.ChapterOneDiv>
+    </styles.CapaDiv>
   );
 }
 
@@ -143,7 +68,7 @@ export function Two(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterTwoDiv id={props.id}>
+    <styles.IntroDiv id={props.id}>
       <styles.IntroTitle id={"intro"}>Introdução</styles.IntroTitle>
       <styles.IntroText>
         Os cariocas sabem bem quais os problemas enfrentados todos os dias no
@@ -156,8 +81,8 @@ export function Two(
         <styles.TextOrange>
           a Prefeitura vai regularizar as linhas operantes,
         </styles.TextOrange>{" "}
-        <TextOrange>retomar as inoperantes</TextOrange> e{" "}
-        <TextOrange>implementar serviços noturnos.</TextOrange>
+        <styles.TextOrange>retomar as inoperantes</styles.TextOrange> e{" "}
+        <styles.TextOrange>implementar serviços noturnos.</styles.TextOrange>
         <br />
         <br />
         Por meio de um acordo judicial, estabelecido entre a Prefeitura,
@@ -170,7 +95,7 @@ export function Two(
         Nesta reportagem especial explicaremos como a Prefeitura fará isso.{" "}
         <br />
       </styles.IntroText>
-    </styles.ChapterTwoDiv>
+    </styles.IntroDiv>
   );
 }
 
@@ -183,14 +108,14 @@ export function Three(
   props = setDefaultProps(props);
   return (
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
-      <ContainerCard>
-        <TextCard>
+      <styles.ContainerCard>
+        <styles.TextCard>
           O restabelecimento das linhas será feito com prioridade nas áreas mais
-          necessitadas. O bairro de <TextRed>Sepetiba,</TextRed> um dos mais
-          afastados do centro da cidade, começa a ter as primeiras linhas
-          reestabelecidas do sistema.
-        </TextCard>
-      </ContainerCard>
+          necessitadas. O bairro de <styles.TextRed>Sepetiba,</styles.TextRed>{" "}
+          um dos mais afastados do centro da cidade, começa a ter as primeiras
+          linhas reestabelecidas do sistema.
+        </styles.TextCard>
+      </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
 }
@@ -203,15 +128,16 @@ export function Four(
   props = setDefaultProps(props);
   return (
     <styles.ChapterGenericDiv id={props.id}>
-      <ContainerCard>
-        <TextCard>
-          Podemos ver como exemplo as linhas <TextOrange> 870</TextOrange> e{" "}
-          <TextOrange1>871</TextOrange1> que voltaram no início do mês de junho.
-          Elas conectam o bairro com o BRT. O cronograma com as novas linhas e
-          os novos horários de circulação será lançado em breve e poderá ser
-          acompanhado pelas redes sociais da Prefeitura.
-        </TextCard>
-      </ContainerCard>
+      <styles.ContainerCard>
+        <styles.TextCard>
+          Podemos ver como exemplo as linhas{" "}
+          <styles.TextOrange> 870</styles.TextOrange> e{" "}
+          <styles.TextOrange1>871</styles.TextOrange1> que voltaram no início do
+          mês de junho. Elas conectam o bairro com o BRT. O cronograma com as
+          novas linhas e os novos horários de circulação será lançado em breve e
+          poderá ser acompanhado pelas redes sociais da Prefeitura.
+        </styles.TextCard>
+      </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
 }
@@ -224,15 +150,15 @@ export function Five(
   props = setDefaultProps(props);
   return (
     <styles.ChapterGenericDiv id={props.id}>
-      <ContainerCard>
-        <TextCard>
+      <styles.ContainerCard>
+        <styles.TextCard>
           Os <TextRed>bairros</TextRed> em destaque já estão vendo suas{" "}
-          <TextOrange>linhas</TextOrange> voltarem. Esses bairros são os que
-          mais receberam novas linhas desde do início do acordo. Até o momento
-          43 linhas ja foram reestabelecidas ou incorporadas ao novo sistema de
-          transporte.
-        </TextCard>
-      </ContainerCard>{" "}
+          <styles.TextOrange>linhas</styles.TextOrange> voltarem. Esses bairros
+          são os que mais receberam novas linhas desde do início do acordo. Até
+          o momento 43 linhas ja foram reestabelecidas ou incorporadas ao novo
+          sistema de transporte.
+        </styles.TextCard>
+      </styles.ContainerCard>{" "}
     </styles.ChapterGenericDiv>
   );
 }
@@ -245,16 +171,16 @@ export function Six(
   props = setDefaultProps(props);
   return (
     <styles.ChapterGenericDiv id={props.id}>
-      <ContainerCard>
-        <TextCard>
+      <styles.ContainerCard>
+        <styles.TextCard>
           É possível comparar nesse mapa as{" "}
-          <TextOrange>novas linhas</TextOrange> com o{" "}
-          <TextBlue>sistema de transporte atual.</TextBlue> Vale lembrar que com
-          o plano devidamente implementado - e isso não acontece do dia para a
-          noite - vai permitir um transporte com qualidade e transparência para
-          a população carioca.
-        </TextCard>
-      </ContainerCard>
+          <styles.TextOrange>novas linhas</styles.TextOrange> com o{" "}
+          <styles.TextBlue>sistema de transporte atual.</styles.TextBlue> Vale
+          lembrar que com o plano devidamente implementado - e isso não acontece
+          do dia para a noite - vai permitir um transporte com qualidade e
+          transparência para a população carioca.
+        </styles.TextCard>
+      </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
 }
@@ -268,15 +194,15 @@ export function Seven(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterTwoDiv id={props.id}>
-      <IntroTitle id={"intro"}>O fim da Caixa Preta</IntroTitle>
-      <IntroText>
+    <styles.IntroDiv id={props.id}>
+      <styles.IntroTitle id={"intro"}>O fim da Caixa Preta</styles.IntroTitle>
+      <styles.IntroText>
         Em 2010, a Secretaria Municipal de Transportes do Rio de Janeiro licitou
         a prestação de serviço de transportes na cidade.{" "}
-        <TextOrange>
+        <styles.TextOrange>
           Com isso, toda a responsabilidade pelo transporte por ônibus ficou com
           os consórcios.
-        </TextOrange>
+        </styles.TextOrange>
         Isso incluía não só a operação de todas as linhas municipais, como
         também a fonte de renda do sistema, o Bilhete Único Carioca (BUC).
         <br />
@@ -287,10 +213,10 @@ export function Seven(
         <br />
         <br />A falta de transparência da bilhetagem do sistema de bilhete único
         também era um problema.{" "}
-        <TextOrange>
+        <styles.TextOrange>
           Uma verdadeira caixa-preta era formada com os dados de arrecadação e
           distribuição dos lucros da bilhetagem.
-        </TextOrange>
+        </styles.TextOrange>
         <br />
         <br />
         Com um transporte público sofrido, de ônibus depredados e superlotados,
@@ -306,8 +232,8 @@ export function Seven(
         americana. Com isso, as empresas responsáveis pelo transporte optaram
         por diminuir a frota em lugares que sem muitos passageiros, chegando a
         cancelar a circulação de algumas linhas.
-      </IntroText>
-    </styles.ChapterTwoDiv>
+      </styles.IntroText>
+    </styles.IntroDiv>
   );
 }
 
@@ -381,7 +307,7 @@ export function Creditos(
 
   return (
     <styles.CreditosDiv id={props.id}>
-      <IntroTitle id={"intro"}>
+      <styles.IntroTitle id={"intro"}>
         Autores
         <br />
         <br />
@@ -393,8 +319,8 @@ export function Creditos(
         <br />
         <br />
         Prefeito
-      </IntroTitle>
-      <IntroText>
+      </styles.IntroTitle>
+      <styles.IntroText>
         Caio Jacintho
         <br />
         Diego Oliveira
@@ -416,7 +342,7 @@ export function Creditos(
         <br />
         <br />
         Eduardo Paes
-      </IntroText>
+      </styles.IntroText>
     </styles.CreditosDiv>
   );
 }

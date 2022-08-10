@@ -37,8 +37,8 @@ function App() {
       <Router>
         <Suspense fallback={<Loading />}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            {/* <Route path="/especial-sppo/subsidio" element={<SubsidioSPPO />} />
+            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/especial-sppo/subsidio" element={<SubsidioSPPO />} />
             <Route path="/sandbox/sample" element={<StorySample />} />
             <Route
               path="/especial-sppo/interactive"
@@ -48,7 +48,7 @@ function App() {
               path="/sandbox/test-linechart"
               element={<TestLineChart />}
             ></Route>
-            <Route path="/sandbox/test-map" element={<TestMap />}></Route> */}
+            <Route path="/sandbox/test-map" element={<TestMap />}></Route>
             <Route
               path="/especial-seop/demolicoes"
               element={<DemolicoesSEOP />}

@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import tw from "tailwind-styled-components";
 
-export const ChapterOneDiv = tw.div`
+export const CapaDiv = tw.div`
   flex flex-col
   h-screen w-full
   items-center
@@ -51,7 +51,7 @@ export const Interactive = tw.div`
   2xl:mt-64
 `;
 
-export const ChapterTwoDiv = tw.div`
+export const IntroDiv = tw.div`
 
   w-full h-200
   gap-8
@@ -82,6 +82,14 @@ export const TextOrange = tw.div`
   bg-orange-700 
   text-white
   inline 
+`;
+
+export const TextOrange1 = styled.div`
+  background: #dd9f75;
+  color: #fff;
+  display: inline;
+  padding: 1px 8px 1px 8px;
+  margin: 2px;
 `;
 
 export const ChapterGenericDiv = tw.div`
@@ -116,4 +124,40 @@ export const CreditosDiv = styled.div`
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
   opacity: 1;
+`;
+
+export const ContainerCard = styled.div`
+  min-width: 250px;
+  margin: auto;
+  width: 40%;
+  padding: 20px;
+  background-color: rgba(20, 19, 18, 0.8);
+  opacity: 1;
+  border-radius: 10px;
+`;
+
+export const TextCard = styled.div`
+  color: #dbdbdb;
+  font-family: "Redaction", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+`;
+
+export const TextRed = styled.div`
+  background: #be5b5b;
+  color: #fff;
+  display: inline;
+  padding: 1px 8px 1px 8px;
+  margin: 2px;
+`;
+
+export const TextBlue = styled.div`
+  background: #18b4c9;
+  color: #fff;
+  display: inline;
+  padding: 1px 8px 1px 8px;
+  margin: 2px;
 `;

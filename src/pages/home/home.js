@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <div>
       <lu>
-        {/* <li>
-          <Link to="/"> Home </Link>
+        <li>
+          <Link to="/especial-seop/demolicoes">Especial SEOP | Demolicoes</Link>
         </li>
         <li>
           <Link to="/especial-sppo/subsidio">Especial SPPO | Subsidio</Link>
@@ -15,13 +15,8 @@ export default function Home() {
           <Link to="/especial-sppo/interactive">
             Especial SPPO | Interactive
           </Link>
-        </li> */}
-
-        <li>
-          <Link to="/especial-seop/demolicoes">Especial SEOP | Demolicoes</Link>
         </li>
-
-        {/* <li>
+        <li>
           <Link to="/sandbox/sample"> Sandbox | Sample </Link>
         </li>
         <li>
@@ -29,7 +24,7 @@ export default function Home() {
         </li>
         <li>
           <Link to="/sandbox/test-map"> Sandbox | Test Map </Link>
-        </li> */}
+        </li>
       </lu>
     </div>
   );
