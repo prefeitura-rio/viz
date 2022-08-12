@@ -4,10 +4,15 @@
 import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Loading } from "./components/loading/loading";
+import ReactGA from "react-ga";
 
 import style, { createGlobalStyle } from "styled-components";
 import mapboxCss from "mapbox-gl/dist/mapbox-gl.css";
 import "./tailwind.css";
+
+const TRACKING_ID = "G-4D5Q6SRW62";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const Home = lazy(() => import("./pages/home/home"));
 const StorySample = lazy(() => import("./pages/sandbox/sample"));
