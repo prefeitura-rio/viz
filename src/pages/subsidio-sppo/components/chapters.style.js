@@ -3,78 +3,65 @@ import styled from "styled-components";
 import tw from "tailwind-styled-components";
 
 export const CapaDiv = tw.div`
-  flex flex-col
   h-screen w-full
-  items-center
+  flex flex-col 
+  justify-between items-center 
   pl-5 pr-5
-  lg:mr-20 lg:ml-20
-  sm:ml-30 sm:mr-30
-  sm:w
-  
+  bg-opacity-10
+  selection:bg-yellow-600 selection:text-black
 `;
 
 export const Title = tw.div`
   font-georgia font-bold  
-  text-3xl text-center text-white    
+  text-3xl text-center text-black
   mt-28
-  sm:mt-44
   lg:text-4xl  
-  lg:mt-36
-  xl:text-5xl
-  xl:mt-48
-  2xl:mt-64
+  lg:mt-[22%]
+  lg:max-w-[865px]
   `;
 
 export const AuthorText = tw.div`
   font-georgia
-  text-sm text-center text-white
+  text-sm text-center text-black
   mt-6
-  sm:mt-12
   lg:text-base
-  lg:mt-5
-  xl:mt-8
-  2xl:mt-10
+  lg:mb-[20%]
+  lg:max-w-3xl
 `;
 
 export const Interactive = tw.div`
   font-georgia
-  text-sm text-center text-white
-  mt-24
-
-  sm:mt-44
-  
+  text-sm text-center text-black
+  lg:mb-[20%]
   lg:text-base
-  lg:mt-36
-
-  xl:mt-48
-
-  2xl:mt-64
+  lg:max-w-3xl
 `;
 
 export const IntroDiv = tw.div`
-
-  w-full h-200
-  gap-8
-  bg-opacity-40 backdrop-blur
-  flex items-start 
-  pr-[15%] pl-[15%]
-  
+  w-full h-[200vh]
+  bg-opacity-40 backdrop-blur-sm
+  flex
+  items-start
+  justify-center
+  gap-x-8
+  selection:bg-yellow-600 selection:text-black
 `;
 
 export const IntroTitle = tw.div`
   font-bold  font-georgia
-  text-5xl text-right text-white
-  
-  mt-[120%]
+  text-5xl text-right text-black
+  lg:max-w-3xl
+  mt-[50%]
 `;
 
 export const IntroText = tw.div`
   font-georgia  
   align-middle
-  text-xl text-justify text-white 
+  text-xl text-justify text-black 
   leading-normal 
   opacity-100
-  mt-[120%]
+  lg:max-w-3xl
+  mt-[50%]
 `;
 
 export const TextOrange = tw.div`

@@ -27,7 +27,7 @@ export function Capa(
       <styles.AuthorText>
         Desenvolvido por{" "}
         <a
-          className="text-sm font-bold text-white lg:text-base"
+          className="text-base font-bold text-black leading-snug bg-yellow-600 inline px-1 decoration-clone"
           href="https://www.dados.rio/"
           target="_blank"
           rel="noreferrer"
@@ -36,7 +36,7 @@ export function Capa(
         </a>
         e{" "}
         <a
-          className="text-sm font-bold text-white lg:text-base"
+          className="text-base font-bold text-black leading-snug bg-yellow-600 inline px-1 decoration-clone"
           href="http://www.rio.rj.gov.br/web/smtr"
           target="_blank"
           rel="noreferrer"
@@ -47,7 +47,7 @@ export function Capa(
       <styles.Interactive>
         Para navegar pelo mapa{" "}
         <a
-          className="text-sm font-bold text-white lg:text-base"
+          className="text-base font-bold text-black leading-snug bg-yellow-600 inline px-1 decoration-clone"
           href="https://viz.dados.rio/#/especial-sppo/interactive"
           target="_blank"
           rel="noreferrer"
@@ -71,28 +71,34 @@ export function Intro(
     <styles.IntroDiv id={props.id}>
       <styles.IntroTitle id={"intro"}>Introdução</styles.IntroTitle>
       <styles.IntroText>
-        Os cariocas sabem bem quais os problemas enfrentados todos os dias no
-        transporte público da cidade do Rio de Janeiro. E é preciso reconhecer
-        que o sistema por ônibus está ruim e precisa de ajuda. <br />
-        <br />
-        Uma série de fatores levou a este colapso, o que só resultou no
-        sofrimento da população que depende do transporte público da cidade para
-        se locomover. Por isso,{" "}
-        <styles.TextOrange>
-          a Prefeitura vai regularizar as linhas operantes,
-        </styles.TextOrange>{" "}
-        <styles.TextOrange>retomar as inoperantes</styles.TextOrange> e{" "}
-        <styles.TextOrange>implementar serviços noturnos.</styles.TextOrange>
+        <div className="text-xl font-bold text-black leading-snug bg-yellow-600 inline px-2 decoration-clone">
+          Os cariocas sabem bem quais os problemas enfrentados todos os dias no
+          transporte público da cidade do Rio de Janeiro. E é preciso reconhecer
+          que o sistema por ônibus está ruim e precisa de ajuda.{" "}
+        </div>{" "}
         <br />
         <br />
-        Por meio de um acordo judicial, estabelecido entre a Prefeitura,
-        consórcios e o Ministério Público, linhas de ônibus serão retomadas e
-        criadas na capital fluminense. A partir de agora, o transporte público
-        por ônibus será subsidiado pelo município. As empresas, além da tarifa
-        de R$ 4,05, vão receber um valor adicional pelo serviço efetivamente
-        prestado com base no quilômetro rodado. <br />
+        <div className="text-xl font-bold text-black leading-snug bg-yellow-600 inline px-2 decoration-clone">
+          Uma série de fatores levou a este colapso, o que só resultou no
+          sofrimento da população que depende do transporte público da cidade
+          para se locomover. Por isso, a Prefeitura vai regularizar as linhas
+          operantes, retomar as inoperantes implementar serviços noturnos.
+        </div>
         <br />
-        Nesta reportagem especial explicaremos como a Prefeitura fará isso.{" "}
+        <br />
+        <div className="text-xl font-bold text-black leading-snug bg-yellow-600 inline px-2 decoration-clone">
+          Por meio de um acordo judicial, estabelecido entre a Prefeitura,
+          consórcios e o Ministério Público, linhas de ônibus serão retomadas e
+          criadas na capital fluminense. A partir de agora, o transporte público
+          por ônibus será subsidiado pelo município. As empresas, além da tarifa
+          de R$ 4,05, vão receber um valor adicional pelo serviço efetivamente
+          prestado com base no quilômetro rodado.
+        </div>{" "}
+        <br />
+        <br />
+        <div className="text-xl font-bold text-black leading-snug bg-yellow-600 inline px-2 decoration-clone">
+          Nesta reportagem especial explicaremos como a Prefeitura fará isso.{" "}
+        </div>
         <br />
       </styles.IntroText>
     </styles.IntroDiv>
