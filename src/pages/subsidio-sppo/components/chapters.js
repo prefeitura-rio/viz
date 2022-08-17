@@ -27,7 +27,7 @@ export function Capa(
       <styles.AuthorText>
         Desenvolvido por{" "}
         <a
-          className="text-base font-bold text-black leading-snug bg-yellow-600 inline px-1 decoration-clone"
+          className="underline decoration-1 underline-offset-1"
           href="https://www.dados.rio/"
           target="_blank"
           rel="noreferrer"
@@ -36,7 +36,7 @@ export function Capa(
         </a>
         e{" "}
         <a
-          className="text-base font-bold text-black leading-snug bg-yellow-600 inline px-1 decoration-clone"
+          className="underline decoration-1 underline-offset-1"
           href="http://www.rio.rj.gov.br/web/smtr"
           target="_blank"
           rel="noreferrer"
@@ -47,7 +47,7 @@ export function Capa(
       <styles.Interactive>
         Para navegar pelo mapa{" "}
         <a
-          className="text-base font-bold text-black leading-snug bg-yellow-600 inline px-1 decoration-clone"
+          className="underline decoration-1 underline-offset-1 font-bold"
           href="https://viz.dados.rio/#/especial-sppo/interactive"
           target="_blank"
           rel="noreferrer"
@@ -69,37 +69,21 @@ export function Intro(
 
   return (
     <styles.IntroDiv id={props.id}>
-      <styles.IntroTitle id={"intro"}>Introdução</styles.IntroTitle>
+      {/* <styles.IntroTitle id={"intro"}>Introdução</styles.IntroTitle> */}
       <styles.IntroText>
-        <div className="text-xl font-bold text-black leading-snug bg-yellow-600 inline px-2 decoration-clone">
-          Os cariocas sabem bem quais os problemas enfrentados todos os dias no
-          transporte público da cidade do Rio de Janeiro. E é preciso reconhecer
-          que o sistema por ônibus está ruim e precisa de ajuda.{" "}
-        </div>{" "}
-        <br />
-        <br />
-        <div className="text-xl font-bold text-black leading-snug bg-yellow-600 inline px-2 decoration-clone">
-          Uma série de fatores levou a este colapso, o que só resultou no
-          sofrimento da população que depende do transporte público da cidade
-          para se locomover. Por isso, a Prefeitura vai regularizar as linhas
-          operantes, retomar as inoperantes implementar serviços noturnos.
-        </div>
-        <br />
-        <br />
-        <div className="text-xl font-bold text-black leading-snug bg-yellow-600 inline px-2 decoration-clone">
-          Por meio de um acordo judicial, estabelecido entre a Prefeitura,
-          consórcios e o Ministério Público, linhas de ônibus serão retomadas e
-          criadas na capital fluminense. A partir de agora, o transporte público
-          por ônibus será subsidiado pelo município. As empresas, além da tarifa
-          de R$ 4,05, vão receber um valor adicional pelo serviço efetivamente
-          prestado com base no quilômetro rodado.
-        </div>{" "}
-        <br />
-        <br />
-        <div className="text-xl font-bold text-black leading-snug bg-yellow-600 inline px-2 decoration-clone">
-          Nesta reportagem especial explicaremos como a Prefeitura fará isso.{" "}
-        </div>
-        <br />
+      Desde o dia 1º de junho deste ano, quando o acordo entre Prefeitura, Ministério Público e empresas de ônibus entrou em vigor, os cariocas puderam ver, assim como no mapa acima, a volta de 40 linhas de ônibus nas ruas da capital fluminense.
+      <br />
+      <br />
+      Isso só foi possível graças a um acordo judicial, estabelecido entre a Prefeitura, consórcios de ônibus e o Ministério Público. Graças a ele, a cidade terá a regularização das linhas operantes, a retomada das inoperantes e a implementação dos serviços noturnos.
+      <br />
+      <br />
+      Isto, sem o aumento da passagem de R$ 4,05, que será subsidiada pelo município com base no serviço e quilômetro rodado. 
+      <br />
+      <br />
+      Os cariocas sabem bem quais são os problemas cotidianos enfrentados no transporte público da cidade do Rio de Janeiro. E é por isso que a Prefeitura está trabalhando para melhorar a mobilidade na nossa cidade maravilhosa!
+      <br />
+      <br />
+      Nesta reportagem especial, feita pelo Escritório de Dados, explicaremos como já estamos fazendo isso.
       </styles.IntroText>
     </styles.IntroDiv>
   );
@@ -116,10 +100,7 @@ export function SepetibaBairro(
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <styles.ContainerCard>
         <styles.TextCard>
-          O restabelecimento das linhas será feito com prioridade nas áreas mais
-          necessitadas. O bairro de <styles.TextRed>Sepetiba,</styles.TextRed>{" "}
-          um dos mais afastados do centro da cidade, começa a ter as primeiras
-          linhas reestabelecidas do sistema.
+        Desde os anos 60, o sistema de transporte por ônibus na cidade do Rio de Janeiro funcionava por meio de permissões dadas às empresas. Entretanto, sem contratos ou licitações, o processo era feito sem muito controle público ou monitoramento do serviço pela cidade.
         </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -136,12 +117,7 @@ export function SepetibaLinhas(
     <styles.ChapterGenericDiv id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard>
-          Podemos ver como exemplo as linhas{" "}
-          <styles.TextOrange> 870</styles.TextOrange> e{" "}
-          <styles.TextOrange1>871</styles.TextOrange1> que voltaram no início do
-          mês de junho. Elas conectam o bairro com o BRT. O cronograma com as
-          novas linhas e os novos horários de circulação será lançado em breve e
-          poderá ser acompanhado pelas redes sociais da Prefeitura.
+        Foi em 2010, que a Secretaria Municipal de Transportes do Rio de Janeiro realizou a primeira licitação para a prestação do serviço na cidade. A partir de então, os consórcios selecionados passaram a operar as linhas de ônibus do município, em regime de concessão. 
         </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -158,11 +134,7 @@ export function LinhasBairros(
     <styles.ChapterGenericDiv id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard>
-          Os <styles.TextRed>bairros</styles.TextRed> em destaque já estão vendo
-          suas <styles.TextOrange>linhas</styles.TextOrange> voltarem. Esses
-          bairros são os que mais receberam novas linhas desde do início do
-          acordo. Até o momento 43 linhas ja foram reestabelecidas ou
-          incorporadas ao novo sistema de transporte.
+        As empresas vencedoras tinham então a responsabilidade pelo transporte, ficando não só responsáveis pela a operação de todas as linhas municipais, como também da fonte de renda do sistema, o Bilhete Único Carioca (BUC).
         </styles.TextCard>
       </styles.ContainerCard>{" "}
     </styles.ChapterGenericDiv>
@@ -179,13 +151,14 @@ export function SistemaAtual(
     <styles.ChapterGenericDiv id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard>
-          É possível comparar nesse mapa as{" "}
-          <styles.TextOrange>novas linhas</styles.TextOrange> com o{" "}
-          <styles.TextBlue>sistema de transporte atual.</styles.TextBlue> Vale
-          lembrar que com o plano devidamente implementado - e isso não acontece
-          do dia para a noite - vai permitir um transporte com qualidade e
-          transparência para a população carioca.
-        </styles.TextCard>
+        Após anos em vigor, a concessão, entretanto, apresentou problemas: a má gestão dos concessionários com o serviço oferecido e uma grande crise reputacional do sistema, envolvida em diversos escândalos. 
+        <br />
+        <br />
+        Além disso, havia a falta de transparência da arrecadação do sistema de bilhete único. Uma verdadeira caixa-preta era formada com os dados de arrecadação e distribuição dos lucros adquiridos pelas empresas. 
+        <br />
+        <br />
+        Os valores não tinham publicidade, mesmo com os recorrentes pedidos da Prefeitura para ter acesso às quantias ganhas pelos concessionários nas operações
+ </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -201,14 +174,12 @@ export function CxIntro(
 
   return (
     <styles.IntroDiv id={props.id}>
-      <styles.IntroTitle id={"intro"}>O fim da Caixa Preta</styles.IntroTitle>
+      {/* <styles.IntroTitle id={"intro"}>O fim da Caixa Preta</styles.IntroTitle> */}
       <styles.IntroText>
         Em 2010, a Secretaria Municipal de Transportes do Rio de Janeiro licitou
         a prestação de serviço de transportes na cidade.{" "}
-        <styles.TextOrange>
-          Com isso, toda a responsabilidade pelo transporte por ônibus ficou com
-          os consórcios.
-        </styles.TextOrange>
+        Com isso, toda a responsabilidade pelo transporte por ônibus ficou com
+        os consórcios.
         Isso incluía não só a operação de todas as linhas municipais, como
         também a fonte de renda do sistema, o Bilhete Único Carioca (BUC).
         <br />
@@ -219,10 +190,8 @@ export function CxIntro(
         <br />
         <br />A falta de transparência da bilhetagem do sistema de bilhete único
         também era um problema.{" "}
-        <styles.TextOrange>
-          Uma verdadeira caixa-preta era formada com os dados de arrecadação e
-          distribuição dos lucros da bilhetagem.
-        </styles.TextOrange>
+        Uma verdadeira caixa-preta era formada com os dados de arrecadação e
+        distribuição dos lucros da bilhetagem.
         <br />
         <br />
         Com um transporte público sofrido, de ônibus depredados e superlotados,

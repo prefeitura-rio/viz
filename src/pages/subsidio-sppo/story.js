@@ -219,7 +219,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.LinhasBairros id={"linhas-bairros"} />
       <chapterDiv.SistemaAtual id={"sistema-atual"} />
       <chapterDiv.CxIntro id={"cx-intro"} />
-      <chapterDiv.CxGrafico1 id={"cx-grafico-1"} />
+      {/* <chapterDiv.CxGrafico1 id={"cx-grafico-1"} /> */}
       <chapterDiv.Creditos id={"cx-creditos"} />
     </>
   );

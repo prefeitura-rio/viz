@@ -6,18 +6,21 @@ export const CapaDiv = tw.div`
   h-screen w-full
   flex flex-col 
   justify-between items-center 
-  pl-5 pr-5
-  bg-opacity-10
   selection:bg-yellow-600 selection:text-black
-`;
+  `;
 
 export const Title = tw.div`
   font-georgia font-bold  
   text-3xl text-center text-black
   mt-28
   lg:text-4xl  
-  lg:mt-[22%]
+  lg:mt-[18%]
   lg:max-w-[865px]
+  bg-yellow-600
+  inline
+  px-3
+  decoration-clone
+  leading-snug
   `;
 
 export const AuthorText = tw.div`
@@ -25,8 +28,12 @@ export const AuthorText = tw.div`
   text-sm text-center text-black
   mt-6
   lg:text-base
-  lg:mb-[20%]
+  lg:mb-[12%]
   lg:max-w-3xl
+  bg-yellow-600
+  inline
+  px-4
+  decoration-clone
 `;
 
 export const Interactive = tw.div`
@@ -35,11 +42,16 @@ export const Interactive = tw.div`
   lg:mb-[20%]
   lg:text-base
   lg:max-w-3xl
+  bg-yellow-600
+  inline
+  px-4
+  decoration-clone
 `;
 
 export const IntroDiv = tw.div`
-  w-full h-[200vh]
-  bg-opacity-40 backdrop-blur-sm
+  w-full h-[240vh]
+  bg-opacity-90 backdrop-blur-xl
+  bg-slate-50/60
   flex
   items-start
   justify-center
@@ -55,10 +67,10 @@ export const IntroTitle = tw.div`
 `;
 
 export const IntroText = tw.div`
-  font-georgia  
+  font-georgia  font-medium
   align-middle
   text-xl text-justify text-black 
-  leading-normal 
+  leading-snug
   opacity-100
   lg:max-w-3xl
   mt-[50%]
@@ -83,7 +95,6 @@ export const ChapterGenericDiv = tw.div`
   flex
   w-full h-screen 
   items-center
-  text-white
   -z-10
 `;
 
@@ -97,7 +108,7 @@ export const ChapterLineChart = styled.div`
 `;
 
 export const CreditosDiv = styled.div`
-  height: 150vh;
+  height: 200vh;
   width: 100%;
   overflow-x: hidden;
   display: grid;
@@ -108,7 +119,7 @@ export const CreditosDiv = styled.div`
     ". . . ."
     ". titulo texto ."
     ". . . .";
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(8px);
   opacity: 1;
 `;
@@ -116,15 +127,15 @@ export const CreditosDiv = styled.div`
 export const ContainerCard = styled.div`
   min-width: 250px;
   margin: auto;
-  width: 40%;
-  padding: 20px;
-  background-color: rgba(20, 19, 18, 0.8);
+  width: 865px;
+  padding: 35px 50px;
   opacity: 1;
-  border-radius: 10px;
+  border-radius: 5px;
+  backdrop-filter: blur(50px);
 `;
 
 export const TextCard = styled.div`
-  color: #dbdbdb;
+  color: #000000;
   font-family: "Redaction", sans-serif;
   font-size: 1.3rem;
   line-height: 1.4;
