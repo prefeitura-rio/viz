@@ -80,7 +80,7 @@ export function Intro(
       Isto, sem o aumento da passagem de R$ 4,05, que será subsidiada pelo município com base no serviço e quilômetro rodado. 
       <br />
       <br />
-      Os cariocas sabem bem quais são os problemas cotidianos enfrentados no transporte público da cidade do Rio de Janeiro. E é por isso que a Prefeitura está trabalhando para melhorar a mobilidade na nossa cidade maravilhosa!
+      Os cariocas sabem bem qu  ais são os problemas cotidianos enfrentados no transporte público da cidade do Rio de Janeiro. E é por isso que a Prefeitura está trabalhando para melhorar a mobilidade na nossa cidade maravilhosa!
       <br />
       <br />
       Nesta reportagem especial, feita pelo Escritório de Dados, explicaremos como já estamos fazendo isso.
@@ -101,7 +101,12 @@ export function SepetibaBairro(
       <styles.ContainerCard>
         <styles.TextCard>
         Desde os anos 60, o sistema de transporte por ônibus na cidade do Rio de Janeiro funcionava por meio de permissões dadas às empresas. Entretanto, sem contratos ou licitações, o processo era feito sem muito controle público ou monitoramento do serviço pela cidade.
-        </styles.TextCard>
+        <br />
+        <br />
+        Foi em 2010, que a Secretaria Municipal de Transportes do Rio de Janeiro realizou a primeira licitação para a prestação do serviço na cidade. A partir de então, os consórcios selecionados passaram a operar as linhas de ônibus do município, em regime de concessão. 
+        <br />
+        <br />
+        As empresas vencedoras tinham então a responsabilidade pelo transporte, ficando não só responsáveis pela a operação de todas as linhas municipais, como também da fonte de renda do sistema, o Bilhete Único Carioca (BUC). </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -117,47 +122,13 @@ export function SepetibaLinhas(
     <styles.ChapterGenericDiv id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard>
-        Foi em 2010, que a Secretaria Municipal de Transportes do Rio de Janeiro realizou a primeira licitação para a prestação do serviço na cidade. A partir de então, os consórcios selecionados passaram a operar as linhas de ônibus do município, em regime de concessão. 
-        </styles.TextCard>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function LinhasBairros(
-  props = {
-    id: "",
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterGenericDiv id={props.id}>
-      <styles.ContainerCard>
-        <styles.TextCard>
-        As empresas vencedoras tinham então a responsabilidade pelo transporte, ficando não só responsáveis pela a operação de todas as linhas municipais, como também da fonte de renda do sistema, o Bilhete Único Carioca (BUC).
-        </styles.TextCard>
-      </styles.ContainerCard>{" "}
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function SistemaAtual(
-  props = {
-    id: "",
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterGenericDiv id={props.id}>
-      <styles.ContainerCard>
-        <styles.TextCard>
         Após anos em vigor, a concessão, entretanto, apresentou problemas: a má gestão dos concessionários com o serviço oferecido e uma grande crise reputacional do sistema, envolvida em diversos escândalos. 
         <br />
         <br />
         Além disso, havia a falta de transparência da arrecadação do sistema de bilhete único. Uma verdadeira caixa-preta era formada com os dados de arrecadação e distribuição dos lucros adquiridos pelas empresas. 
         <br />
         <br />
-        Os valores não tinham publicidade, mesmo com os recorrentes pedidos da Prefeitura para ter acesso às quantias ganhas pelos concessionários nas operações
+        Os valores não tinham publicidade, mesmo com os recorrentes pedidos da Prefeitura para ter acesso às quantias ganhas pelos concessionários nas operações.
  </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>

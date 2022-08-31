@@ -157,6 +157,7 @@ export const SepetibaLinhas = () => {
   };
 };
 
+/*
 export const LinhasBairros = () => {
   return {
     location: {
@@ -270,6 +271,7 @@ export const SistemaAtual = () => {
     ],
   };
 };
+*/
 
 export const CxGrafico1 = () => {
   return {

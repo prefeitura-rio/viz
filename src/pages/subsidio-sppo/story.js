@@ -55,18 +55,6 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.SepetibaLinhas().location);
         setLayers(chapterMap.SepetibaLinhas().layers);
         break;
-      case "linhas-bairros":
-        setPosition(chapterMap.LinhasBairros().location);
-        setLayers(chapterMap.LinhasBairros().layers);
-        break;
-      case "sistema-atual":
-        setPosition(chapterMap.SistemaAtual().location);
-        setLayers(chapterMap.SistemaAtual().layers);
-        break;
-      case "cx-intro":
-        setPosition(chapterMap.SistemaAtual().location);
-        setLayers(chapterMap.SistemaAtual().layers);
-        break;
       case "cx-grafico-1":
         setPosition(chapterMap.CxGrafico1().location);
         setLayers(chapterMap.CxGrafico1().layers);
@@ -129,21 +117,6 @@ export default function SubsidioSPPO() {
       trigger: "#sepetiba-linhas",
       onToggle: () => {
         setChapterNumberMap("sepetiba-linhas");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#linhas-bairros",
-      pin: ".pin",
-      onToggle: () => {
-        setChapterNumberMap("linhas-bairros");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#sistema-atual",
-      onToggle: () => {
-        setChapterNumberMap("sistema-atual");
       },
     });
 
@@ -216,8 +189,6 @@ export default function SubsidioSPPO() {
       <chapterDiv.Intro id={"intro"} />
       <chapterDiv.SepetibaBairro id={"sepetiba-bairro"} />
       <chapterDiv.SepetibaLinhas id={"sepetiba-linhas"} />
-      <chapterDiv.LinhasBairros id={"linhas-bairros"} />
-      <chapterDiv.SistemaAtual id={"sistema-atual"} />
       <chapterDiv.CxIntro id={"cx-intro"} />
       {/* <chapterDiv.CxGrafico1 id={"cx-grafico-1"} /> */}
       <chapterDiv.Creditos id={"cx-creditos"} />
