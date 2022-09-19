@@ -134,6 +134,12 @@ export const ContainerCard = styled.div`
   backdrop-filter: blur(50px);
 `;
 
+export const ContainerCard1 = styled.div`
+  min-width: 250px;
+  margin: auto;
+  width: 865px;
+`;
+
 export const TextCard = styled.div`
   color: #000000;
   font-family: "Redaction", sans-serif;

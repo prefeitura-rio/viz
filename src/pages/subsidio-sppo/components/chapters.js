@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import logo1 from "../images/logo1.png";
+import historia from "../images/historia.gif";
 import * as styles from "./chapters.style";
 import tw from "tailwind-styled-components";
 // TODO: REMOVE
@@ -71,25 +72,36 @@ export function Intro(
     <styles.IntroDiv id={props.id}>
       {/* <styles.IntroTitle id={"intro"}>Introdução</styles.IntroTitle> */}
       <styles.IntroText>
-      Desde o dia 1º de junho deste ano, quando o acordo entre Prefeitura, Ministério Público e empresas de ônibus entrou em vigor, os cariocas puderam ver, assim como no mapa acima, a volta de 40 linhas de ônibus nas ruas da capital fluminense.
-      <br />
-      <br />
-      Isso só foi possível graças a um acordo judicial, estabelecido entre a Prefeitura, consórcios de ônibus e o Ministério Público. Graças a ele, a cidade terá a regularização das linhas operantes, a retomada das inoperantes e a implementação dos serviços noturnos.
-      <br />
-      <br />
-      Isto, sem o aumento da passagem de R$ 4,05, que será subsidiada pelo município com base no serviço e quilômetro rodado. 
-      <br />
-      <br />
-      Os cariocas sabem bem qu  ais são os problemas cotidianos enfrentados no transporte público da cidade do Rio de Janeiro. E é por isso que a Prefeitura está trabalhando para melhorar a mobilidade na nossa cidade maravilhosa!
-      <br />
-      <br />
-      Nesta reportagem especial, feita pelo Escritório de Dados, explicaremos como já estamos fazendo isso.
+        Desde o dia 1º de junho deste ano, quando o acordo entre Prefeitura,
+        Ministério Público e empresas de ônibus entrou em vigor, os cariocas
+        puderam ver, assim como no mapa acima, a volta de 40 linhas de ônibus
+        nas ruas da capital fluminense.
+        <br />
+        <br />
+        Isso só foi possível graças a um acordo judicial, estabelecido entre a
+        Prefeitura, consórcios de ônibus e o Ministério Público. Graças a ele, a
+        cidade terá a regularização das linhas operantes, a retomada das
+        inoperantes e a implementação dos serviços noturnos.
+        <br />
+        <br />
+        Isto, sem o aumento da passagem de R$ 4,05, que será subsidiada pelo
+        município com base no serviço e quilômetro rodado.
+        <br />
+        <br />
+        Os cariocas sabem bem qu ais são os problemas cotidianos enfrentados no
+        transporte público da cidade do Rio de Janeiro. E é por isso que a
+        Prefeitura está trabalhando para melhorar a mobilidade na nossa cidade
+        maravilhosa!
+        <br />
+        <br />
+        Nesta reportagem especial, feita pelo Escritório de Dados, explicaremos
+        como já estamos fazendo isso.
       </styles.IntroText>
     </styles.IntroDiv>
   );
 }
 
-export function SepetibaBairro(
+export function Historia1(
   props = {
     id: "",
     ref: null,
@@ -100,19 +112,45 @@ export function SepetibaBairro(
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <styles.ContainerCard>
         <styles.TextCard>
-        Desde os anos 60, o sistema de transporte por ônibus na cidade do Rio de Janeiro funcionava por meio de permissões dadas às empresas. Entretanto, sem contratos ou licitações, o processo era feito sem muito controle público ou monitoramento do serviço pela cidade.
-        <br />
-        <br />
-        Foi em 2010, que a Secretaria Municipal de Transportes do Rio de Janeiro realizou a primeira licitação para a prestação do serviço na cidade. A partir de então, os consórcios selecionados passaram a operar as linhas de ônibus do município, em regime de concessão. 
-        <br />
-        <br />
-        As empresas vencedoras tinham então a responsabilidade pelo transporte, ficando não só responsáveis pela a operação de todas as linhas municipais, como também da fonte de renda do sistema, o Bilhete Único Carioca (BUC). </styles.TextCard>
+          Desde os anos 60, o sistema de transporte por ônibus na cidade do Rio
+          de Janeiro funcionava por meio de permissões dadas às empresas.
+          Entretanto, sem contratos ou licitações, o processo era feito sem
+          muito controle público ou monitoramento do serviço pela cidade.
+          <br />
+          <br />
+          Foi em 2010, que a Secretaria Municipal de Transportes do Rio de
+          Janeiro realizou a primeira licitação para a prestação do serviço na
+          cidade. A partir de então, os consórcios selecionados passaram a
+          operar as linhas de ônibus do município, em regime de concessão.
+          <br />
+          <br />
+          As empresas vencedoras tinham então a responsabilidade pelo
+          transporte, ficando não só responsáveis pela a operação de todas as
+          linhas municipais, como também da fonte de renda do sistema, o Bilhete
+          Único Carioca (BUC).{" "}
+        </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
 }
 
-export function SepetibaLinhas(
+export function HistoriaFoto(
+  props = {
+    id: "",
+    ref: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+      <styles.ContainerCard1>
+        <img src={historia} className="h-full lg:h-full"></img>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Historia2(
   props = {
     id: "",
   }
@@ -122,14 +160,20 @@ export function SepetibaLinhas(
     <styles.ChapterGenericDiv id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard>
-        Após anos em vigor, a concessão, entretanto, apresentou problemas: a má gestão dos concessionários com o serviço oferecido e uma grande crise reputacional do sistema, envolvida em diversos escândalos. 
-        <br />
-        <br />
-        Além disso, havia a falta de transparência da arrecadação do sistema de bilhete único. Uma verdadeira caixa-preta era formada com os dados de arrecadação e distribuição dos lucros adquiridos pelas empresas. 
-        <br />
-        <br />
-        Os valores não tinham publicidade, mesmo com os recorrentes pedidos da Prefeitura para ter acesso às quantias ganhas pelos concessionários nas operações.
- </styles.TextCard>
+          Após anos em vigor, a concessão, entretanto, apresentou problemas: a
+          má gestão dos concessionários com o serviço oferecido e uma grande
+          crise reputacional do sistema, envolvida em diversos escândalos.
+          <br />
+          <br />
+          Além disso, havia a falta de transparência da arrecadação do sistema
+          de bilhete único. Uma verdadeira caixa-preta era formada com os dados
+          de arrecadação e distribuição dos lucros adquiridos pelas empresas.
+          <br />
+          <br />
+          Os valores não tinham publicidade, mesmo com os recorrentes pedidos da
+          Prefeitura para ter acesso às quantias ganhas pelos concessionários
+          nas operações.
+        </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -148,9 +192,8 @@ export function CxIntro(
       {/* <styles.IntroTitle id={"intro"}>O fim da Caixa Preta</styles.IntroTitle> */}
       <styles.IntroText>
         Em 2010, a Secretaria Municipal de Transportes do Rio de Janeiro licitou
-        a prestação de serviço de transportes na cidade.{" "}
-        Com isso, toda a responsabilidade pelo transporte por ônibus ficou com
-        os consórcios.
+        a prestação de serviço de transportes na cidade. Com isso, toda a
+        responsabilidade pelo transporte por ônibus ficou com os consórcios.
         Isso incluía não só a operação de todas as linhas municipais, como
         também a fonte de renda do sistema, o Bilhete Único Carioca (BUC).
         <br />
@@ -160,9 +203,8 @@ export function CxIntro(
         reputacional do sistema, envolvida em diversos escândalos.
         <br />
         <br />A falta de transparência da bilhetagem do sistema de bilhete único
-        também era um problema.{" "}
-        Uma verdadeira caixa-preta era formada com os dados de arrecadação e
-        distribuição dos lucros da bilhetagem.
+        também era um problema. Uma verdadeira caixa-preta era formada com os
+        dados de arrecadação e distribuição dos lucros da bilhetagem.
         <br />
         <br />
         Com um transporte público sofrido, de ônibus depredados e superlotados,

@@ -47,13 +47,17 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Capa().location);
         setLayers(chapterMap.Capa().layers);
         break;
-      case "sepetiba-bairro":
-        setPosition(chapterMap.SepetibaBairro().location);
-        setLayers(chapterMap.SepetibaBairro().layers);
+      case "historia-1":
+        setPosition(chapterMap.Historia1().location);
+        setLayers(chapterMap.Historia1().layers);
         break;
-      case "sepetiba-linhas":
-        setPosition(chapterMap.SepetibaLinhas().location);
-        setLayers(chapterMap.SepetibaLinhas().layers);
+      case "historia-foto":
+        setPosition(chapterMap.Historia1().location);
+        setLayers(chapterMap.Historia1().layers);
+        break;
+      case "historia-2":
+        setPosition(chapterMap.Historia1().location);
+        setLayers(chapterMap.Historia1().layers);
         break;
       case "cx-grafico-1":
         setPosition(chapterMap.CxGrafico1().location);
@@ -107,16 +111,23 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#sepetiba-bairro",
+      trigger: "#historia-1",
       onToggle: () => {
-        setChapterNumberMap("sepetiba-bairro");
+        setChapterNumberMap("historia-1");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#sepetiba-linhas",
+      trigger: "#historia-foto",
       onToggle: () => {
-        setChapterNumberMap("sepetiba-linhas");
+        setChapterNumberMap("historia-foto");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#historia-2",
+      onToggle: () => {
+        setChapterNumberMap("historia-2");
       },
     });
 
@@ -187,8 +198,9 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
-      <chapterDiv.SepetibaBairro id={"sepetiba-bairro"} />
-      <chapterDiv.SepetibaLinhas id={"sepetiba-linhas"} />
+      <chapterDiv.Historia1 id={"historia-1"} />
+      <chapterDiv.HistoriaFoto id={"historia-foto"} />
+      <chapterDiv.Historia2 id={"historia-2"} />
       <chapterDiv.CxIntro id={"cx-intro"} />
       {/* <chapterDiv.CxGrafico1 id={"cx-grafico-1"} /> */}
       <chapterDiv.Creditos id={"cx-creditos"} />
