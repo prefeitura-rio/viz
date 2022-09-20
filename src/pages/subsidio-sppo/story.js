@@ -376,7 +376,7 @@ export default function SubsidioSPPO() {
       animation: tl9,
       trigger: "#creditos",
       onToggle: () => {
-        setChapterNumberMap(6);
+        setChapterNumberMap("creditos");
       },
     });
   }, []);
