@@ -148,6 +148,10 @@ export const TextCard = styled.div`
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: left;
+  ::selection {
+    background: #ca8a03;
+    color: #000000;
+  }
 `;
 
 export const TextRed = styled.div`
