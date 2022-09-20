@@ -10,85 +10,97 @@ export const CapaDiv = tw.div`
   `;
 
 export const Title = tw.div`
-  font-georgia font-bold  
-  text-3xl text-center text-black
+  font-poppins font-bold  
+  text-4xl text-center text-[#ffffff]
   mt-28
-  lg:text-4xl  
+  p-7
+  lg:text-4xl
+  lg:leading-10  
   lg:mt-[18%]
   lg:max-w-[865px]
-  bg-yellow-600
-  inline
-  px-3
-  decoration-clone
-  leading-snug
   `;
 
+// inline
+// px-3
+// decoration-clone
+// leading-snug
+
 export const AuthorText = tw.div`
-  font-georgia
-  text-sm text-center text-black
-  mt-6
+  font-poppins
+  text-sm text-center text-[#ffffff]
+  mt-2
   lg:text-base
   lg:mb-[12%]
   lg:max-w-3xl
-  bg-yellow-600
   inline
   px-4
   decoration-clone
-`;
+  p-1
+  `;
 
 export const Interactive = tw.div`
-  font-georgia
-  text-sm text-center text-black
+  font-poppins
+  text-sm text-center text-[#d69108]
   lg:mb-[20%]
   lg:text-base
   lg:max-w-3xl
-  bg-yellow-600
-  inline
-  px-4
-  decoration-clone
+  p-1
 `;
 
 export const IntroDiv = tw.div`
   w-full h-[240vh]
-  bg-opacity-90 backdrop-blur-xl
+  bg-opacity-90 backdrop-blur-2xl
   bg-slate-50/60
   flex
   items-start
   justify-center
-  gap-x-8
   selection:bg-yellow-600 selection:text-black
 `;
 
 export const IntroTitle = tw.div`
-  font-bold  font-georgia
-  text-5xl text-right text-black
+  font-black  font-poppins
+  text-3xl text-left text-yellow-600 mr-[20vw]
   lg:max-w-3xl
-  mt-[50%]
-`;
+  lg:mb-10
+  selection:bg-yellow-600 selection:text-black
+  `;
+
+export const FimTitle = tw.div`
+  font-black  font-poppins
+  text-3xl text-left text-yellow-600 mr-[20vw]
+  lg:max-w-3xl
+  mb-5
+  mt-16
+  selection:bg-yellow-600 selection:text-black
+  `;
 
 export const IntroText = tw.div`
-  font-georgia  font-medium
+  font-poppins  font-medium
   align-middle
-  text-xl text-justify text-black 
+  text-lg text-justify text-[#57250a]
   leading-snug
   opacity-100
   lg:max-w-3xl
   mt-[50%]
+  selection:bg-yellow-600 selection:text-black
+`;
+
+export const FimText = tw.div`
+  font-poppins  font-medium
+  align-middle
+  text-lg text-justify text-[#57250a]
+  leading-snug
+  opacity-100
+  lg:max-w-3xl
+  mt-[50%]
+  selection:bg-yellow-600 selection:text-black
 `;
 
 export const TextOrange = tw.div`
-  font-georgia
+  font-poppins
   bg-orange-700 
   text-white
   inline 
-`;
-
-export const TextOrange1 = styled.div`
-  background: #dd9f75;
-  color: #fff;
-  display: inline;
-  padding: 1px 8px 1px 8px;
-  margin: 2px;
 `;
 
 export const ChapterGenericDiv = tw.div`
@@ -96,6 +108,23 @@ export const ChapterGenericDiv = tw.div`
   w-full h-screen 
   items-center
   -z-10
+`;
+
+export const ChapterMap = tw.div`
+  flex
+  relative
+  w-full h-[400vh]
+  mt-60
+  mb-60
+  items-center
+  `;
+
+export const TextOrange1 = styled.div`
+  background: #dd9f75;
+  color: #fff;
+  display: inline;
+  padding: 1px 8px 1px 8px;
+  margin: 2px;
 `;
 
 export const ChapterLineChart = styled.div`
@@ -108,7 +137,7 @@ export const ChapterLineChart = styled.div`
 `;
 
 export const CreditosDiv = styled.div`
-  height: 200vh;
+  height: 400vh;
   width: 100%;
   overflow-x: hidden;
   display: grid;
@@ -128,10 +157,22 @@ export const ContainerCard = styled.div`
   min-width: 250px;
   margin: auto;
   width: 865px;
-  padding: 35px 50px;
+  padding: 70px 70px;
   opacity: 1;
-  border-radius: 5px;
-  backdrop-filter: blur(50px);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* backdrop-filter: blur(50px); */
+`;
+
+export const ContainerCard2 = styled.div`
+  min-width: 250px;
+  margin: auto;
+  width: 865px;
+  padding: 70px 70px;
+  opacity: 1;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255);
+  /* backdrop-filter: blur(50px); */
 `;
 
 export const ContainerCard1 = styled.div`
@@ -141,15 +182,16 @@ export const ContainerCard1 = styled.div`
 `;
 
 export const TextCard = styled.div`
-  color: #000000;
-  font-family: "Redaction", sans-serif;
-  font-size: 1.3rem;
+  color: #57250a;
+  font-family: "poppins", sans-serif;
+  font-size: 1.1rem;
   line-height: 1.4;
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: left;
+  width: auto;
   ::selection {
-    background: #ca8a03;
+    background-color: #ca8a04;
     color: #000000;
   }
 `;

@@ -40,12 +40,16 @@ export default function SubsidioSPPO() {
   useEffect(() => {
     switch (chapterNumberMap) {
       case "capa":
-        setPosition(chapterMap.Capa().location);
-        setLayers(chapterMap.Capa().layers);
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
         break;
       case "intro":
         setPosition(chapterMap.Capa().location);
         setLayers(chapterMap.Capa().layers);
+        break;
+      case "vazio":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
         break;
       case "historia-1":
         setPosition(chapterMap.Historia1().location);
@@ -59,10 +63,67 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Historia1().location);
         setLayers(chapterMap.Historia1().layers);
         break;
-      case "cx-grafico-1":
-        setPosition(chapterMap.CxGrafico1().location);
-        setLayers(chapterMap.CxGrafico1().layers);
+      case "pandemia":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
         break;
+      case "grafico-passageiros":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+      case "grafico-dolar":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+      case "grafico-diesel":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+      case "virada":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+      case "caixa":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+      case "foco":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+      case "antes":
+        setPosition(chapterMap.Antes().location);
+        setLayers(chapterMap.Antes().layers);
+        break;
+      case "depois":
+        setPosition(chapterMap.Depois().location);
+        setLayers(chapterMap.Depois().layers);
+        break;
+      case "saude":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+      case "educacao":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+      case "trabalho":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+      case "passagem":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+      case "fluxo":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+      case "fim":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+
       case "creditos":
         setPosition(chapterMap.Creditos().location);
         setLayers(chapterMap.Creditos().layers);
@@ -110,6 +171,23 @@ export default function SubsidioSPPO() {
       },
     });
 
+    const tl10 = gsap.timeline();
+    tl10
+      .set("#vazio", { opacity: 0 })
+      .to("#vazio", { opacity: 0, duration: 30 })
+      .to("#vazio", { opacity: 1, duration: 6 })
+      .to("#vazio", { opacity: 1, duration: 20 })
+      .to("#vazio", { opacity: 0, duration: 6 })
+      .to("#vazio", { opacity: 0, duration: 28 });
+
+    ScrollTrigger.create({
+      animation: tl10,
+      trigger: "#vazio",
+      onToggle: () => {
+        setChapterNumberMap("vazio");
+      },
+    });
+
     ScrollTrigger.create({
       trigger: "#historia-1",
       onToggle: () => {
@@ -117,7 +195,17 @@ export default function SubsidioSPPO() {
       },
     });
 
+    const tl13 = gsap.timeline();
+    tl13
+      .set("#historia-foto", { opacity: 0 })
+      .to("#historia-foto", { opacity: 0, duration: 36 })
+      .to("#historia-foto", { opacity: 1, duration: 2 })
+      .to("#historia-foto", { opacity: 1, duration: 10 })
+      .to("#historia-foto", { opacity: 0, duration: 2 })
+      .to("#historia-foto", { opacity: 0, duration: 36 });
+
     ScrollTrigger.create({
+      animation: tl13,
       trigger: "#historia-foto",
       onToggle: () => {
         setChapterNumberMap("historia-foto");
@@ -131,30 +219,135 @@ export default function SubsidioSPPO() {
       },
     });
 
-    const tl7 = gsap.timeline();
-    tl7
-      .set("#cx-intro", { opacity: 0 })
-      .to("#cx-intro", { opacity: 0, duration: 30 })
-      .to("#cx-intro", { opacity: 1, duration: 6 })
-      .to("#cx-intro", { opacity: 1, duration: 20 })
-      .to("#cx-intro", { opacity: 0, duration: 6 })
-      .to("#cx-intro", { opacity: 0, duration: 28 });
+    const tl15 = gsap.timeline();
+    tl15
+      .set("#pandemia", { opacity: 0 })
+      .to("#pandemia", { opacity: 0, duration: 30 })
+      .to("#pandemia", { opacity: 1, duration: 6 })
+      .to("#pandemia", { opacity: 1, duration: 20 })
+      .to("#pandemia", { opacity: 0, duration: 6 })
+      .to("#pandemia", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
-      animation: tl7,
-      trigger: "#cx-intro",
+      animation: tl15,
+      trigger: "#pandemia",
       onToggle: () => {
-        setChapterNumberMap("cx-intro");
+        setChapterNumberMap("pandemia");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#cx-grafico-1",
-      scrub: true,
-      onEnter: (self) => {
-        setChartProgress(self.progress + 0.47);
+      trigger: "#grafico-passageiros",
+      onToggle: () => {
+        setChapterNumberMap("grafico-passageiros");
       },
-      // onUpdate: (self) => console.log("progress:", self.progress),
+    });
+
+    const tl20 = gsap.timeline();
+    tl20
+      .set("#virada", { opacity: 0 })
+      .to("#virada", { opacity: 0, duration: 30 })
+      .to("#virada", { opacity: 1, duration: 6 })
+      .to("#virada", { opacity: 1, duration: 20 })
+      .to("#virada", { opacity: 0, duration: 6 })
+      .to("#virada", { opacity: 0, duration: 28 });
+
+    ScrollTrigger.create({
+      animation: tl20,
+      trigger: "#virada",
+      onToggle: () => {
+        setChapterNumberMap("virada");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#caixa",
+      onToggle: () => {
+        setChapterNumberMap("caixa");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#foco",
+      onToggle: () => {
+        setChapterNumberMap("foco");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#antes",
+      onToggle: () => {
+        setChapterNumberMap("antes");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#depois",
+      onToggle: () => {
+        setChapterNumberMap("depois");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#saude",
+      onToggle: () => {
+        setChapterNumberMap("saude");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#educacao",
+      onToggle: () => {
+        setChapterNumberMap("educacao");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#trabalho",
+      onToggle: () => {
+        setChapterNumberMap("trabalho");
+      },
+    });
+
+    const tl25 = gsap.timeline();
+    tl25
+      .set("#passagem", { opacity: 0 })
+      .to("#passagem", { opacity: 0, duration: 30 })
+      .to("#passagem", { opacity: 1, duration: 6 })
+      .to("#passagem", { opacity: 1, duration: 20 })
+      .to("#passagem", { opacity: 0, duration: 6 })
+      .to("#passagem", { opacity: 0, duration: 28 });
+
+    ScrollTrigger.create({
+      animation: tl25,
+      trigger: "#passagem",
+      onToggle: () => {
+        setChapterNumberMap("passagem");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#fluxo",
+      onToggle: () => {
+        setChapterNumberMap("fluxo");
+      },
+    });
+
+    const tl30 = gsap.timeline();
+    tl30
+      .set("#fim", { opacity: 0 })
+      .to("#fim", { opacity: 0, duration: 30 })
+      .to("#fim", { opacity: 1, duration: 6 })
+      .to("#fim", { opacity: 1, duration: 20 })
+      .to("#fim", { opacity: 0, duration: 6 })
+      .to("#fim", { opacity: 0, duration: 28 });
+
+    ScrollTrigger.create({
+      animation: tl30,
+      trigger: "#fim",
+      onToggle: () => {
+        setChapterNumberMap("fim");
+      },
     });
 
     const tl9 = gsap.timeline();
@@ -198,11 +391,25 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
+      <chapterDiv.Vazio id={"vazio"} />
       <chapterDiv.Historia1 id={"historia-1"} />
       <chapterDiv.HistoriaFoto id={"historia-foto"} />
       <chapterDiv.Historia2 id={"historia-2"} />
-      <chapterDiv.CxIntro id={"cx-intro"} />
-      {/* <chapterDiv.CxGrafico1 id={"cx-grafico-1"} /> */}
+      <chapterDiv.Pandemia id={"pandemia"} />
+      <chapterDiv.GraficoPassageiros id={"grafico-passageiros"} />
+      <chapterDiv.GraficoDolar id={"grafico-dolar"} />
+      <chapterDiv.GraficoDiesel id={"grafico-diesel"} />
+      <chapterDiv.Virada id={"virada"} />
+      <chapterDiv.Caixa id={"caixa"} />
+      <chapterDiv.Foco id={"foco"} />
+      <chapterDiv.Antes id={"antes"} />
+      <chapterDiv.Depois id={"depois"} />
+      <chapterDiv.Saude id={"saude"} />
+      <chapterDiv.Educacao id={"educação"} />
+      <chapterDiv.Trabalho id={"trabalho"} />
+      <chapterDiv.Passagem id={"passagem"} />
+      <chapterDiv.Fluxo id={"fluxo"} />
+      <chapterDiv.Fim id={"fim"} />
       <chapterDiv.Creditos id={"cx-creditos"} />
     </>
   );

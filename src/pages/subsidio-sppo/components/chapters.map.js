@@ -38,7 +38,7 @@ export const Capa = () => {
           getPath: (d) => d.path,
           getTimestamps: (d) => d.timestamps,
           getColor: [214, 142, 0],
-          widthMinPixels: 10,
+          widthMinPixels: 8,
           fadeTrail: true,
           currentTime: 0,
           opacity: 1,
@@ -60,6 +60,147 @@ export const Capa = () => {
 };
 
 export const Historia1 = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.45317,
+          lat: -22.9158,
+        },
+        zoom: 8.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
+      },
+      desktop: {
+        center: {
+          lon: -43.45317,
+          lat: -22.9158,
+        },
+        zoom: 10.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "deckgl-trips",
+        layer: new MapboxLayer({
+          id: "my-trips-layer",
+          type: TripsLayer,
+          data: TRIPS,
+          getPath: (d) => d.path,
+          getTimestamps: (d) => d.timestamps,
+          getColor: [214, 142, 0],
+          widthMinPixels: 10,
+          fadeTrail: true,
+          currentTime: 0,
+          opacity: 1,
+          rounded: true,
+          trailLength: 500,
+          shadowEnabled: true,
+        }),
+      },
+    ],
+  };
+};
+
+export const Vazio = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.45317,
+          lat: -22.9158,
+        },
+        zoom: 8.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
+      },
+      desktop: {
+        center: {
+          lon: -43.45317,
+          lat: -22.9158,
+        },
+        zoom: 10.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "deckgl-trips",
+        layer: new MapboxLayer({
+          id: "my-trips-layer",
+          type: TripsLayer,
+          data: TRIPS,
+          getPath: (d) => d.path,
+          getTimestamps: (d) => d.timestamps,
+          getColor: [214, 142, 0],
+          widthMinPixels: 8,
+          fadeTrail: true,
+          currentTime: 0,
+          opacity: 1,
+          rounded: true,
+          trailLength: 500,
+          shadowEnabled: true,
+        }),
+      },
+    ],
+  };
+};
+
+export const Antes = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.45317,
+          lat: -22.9158,
+        },
+        zoom: 8.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
+      },
+      desktop: {
+        center: {
+          lon: -43.45317,
+          lat: -22.9158,
+        },
+        zoom: 10.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "deckgl-trips",
+        layer: new MapboxLayer({
+          id: "my-trips-layer",
+          type: TripsLayer,
+          data: TRIPS,
+          getPath: (d) => d.path,
+          getTimestamps: (d) => d.timestamps,
+          getColor: [214, 142, 0],
+          widthMinPixels: 10,
+          fadeTrail: true,
+          currentTime: 0,
+          opacity: 1,
+          rounded: true,
+          trailLength: 500,
+          shadowEnabled: true,
+        }),
+      },
+    ],
+  };
+};
+
+export const Depois = () => {
   return {
     location: {
       mobile: {
