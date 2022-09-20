@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import logo1 from "../images/logo1.png";
+import queda from "../images/queda.png";
+import dolar from "../images/dolar.png";
+import diesel from "../images/diesel.png";
+import saude from "../images/saude.png";
+import educacao from "../images/educacao.png";
+import trabalho from "../images/trabalho.png";
 import historia from "../images/historia.gif";
+import fluxo from "../images/fluxo.gif";
 import * as styles from "./chapters.style";
 import tw from "tailwind-styled-components";
 // TODO: REMOVE
@@ -25,10 +32,10 @@ export function Capa(
       <styles.Title>
         Um ponto de virada na história do transporte municipal do Rio de Janeiro
       </styles.Title>
-      <styles.AuthorText>
+      <styles.AuthorText className="p-2">
         Desenvolvido por{" "}
         <a
-          className="underline decoration-1 underline-offset-1"
+          className="font-bold decoration-1 underline-offset-1"
           href="https://www.dados.rio/"
           target="_blank"
           rel="noreferrer"
@@ -37,7 +44,7 @@ export function Capa(
         </a>
         e{" "}
         <a
-          className="underline decoration-1 underline-offset-1"
+          className="font-bold decoration-1 underline-offset-1"
           href="http://www.rio.rj.gov.br/web/smtr"
           target="_blank"
           rel="noreferrer"
@@ -48,7 +55,7 @@ export function Capa(
       <styles.Interactive>
         Para navegar pelo mapa{" "}
         <a
-          className="underline decoration-1 underline-offset-1 font-bold"
+          className="decoration-1 underline-offset-1 font-bold"
           href="https://viz.dados.rio/#/especial-sppo/interactive"
           target="_blank"
           rel="noreferrer"
@@ -70,8 +77,8 @@ export function Intro(
 
   return (
     <styles.IntroDiv id={props.id}>
-      {/* <styles.IntroTitle id={"intro"}>Introdução</styles.IntroTitle> */}
       <styles.IntroText>
+        {/* <styles.IntroTitle>Introdução</styles.IntroTitle> */}
         Desde o dia 1º de junho deste ano, quando o acordo entre Prefeitura,
         Ministério Público e empresas de ônibus entrou em vigor, os cariocas
         puderam ver, assim como no mapa acima, a volta de 40 linhas de ônibus
@@ -88,7 +95,7 @@ export function Intro(
         município com base no serviço e quilômetro rodado.
         <br />
         <br />
-        Os cariocas sabem bem qu ais são os problemas cotidianos enfrentados no
+        Os cariocas sabem bem quais são os problemas cotidianos enfrentados no
         transporte público da cidade do Rio de Janeiro. E é por isso que a
         Prefeitura está trabalhando para melhorar a mobilidade na nossa cidade
         maravilhosa!
@@ -98,6 +105,22 @@ export function Intro(
         como já estamos fazendo isso.
       </styles.IntroText>
     </styles.IntroDiv>
+  );
+}
+
+export function Vazio(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv
+      id={props.id}
+      ref={props.ref}
+    ></styles.ChapterGenericDiv>
   );
 }
 
@@ -111,6 +134,9 @@ export function Historia1(
   return (
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <styles.ContainerCard>
+        <styles.IntroTitle>
+          A história do transporte por ônibus na cidade
+        </styles.IntroTitle>
         <styles.TextCard>
           Desde os anos 60, o sistema de transporte por ônibus na cidade do Rio
           de Janeiro funcionava por meio de permissões dadas às empresas.
@@ -119,15 +145,15 @@ export function Historia1(
           <br />
           <br />
           Foi em 2010, que a Secretaria Municipal de Transportes do Rio de
-          Janeiro realizou a primeira licitação para a prestação do serviço na
-          cidade. A partir de então, os consórcios selecionados passaram a
-          operar as linhas de ônibus do município, em regime de concessão.
+          Janeiro realizou a primeira licitação para a prestação do serviço. A
+          partir de então, os consórcios selecionados passaram a operar as
+          linhas de ônibus do município, em regime de concessão.
           <br />
           <br />
           As empresas vencedoras tinham então a responsabilidade pelo
           transporte, ficando não só responsáveis pela a operação de todas as
           linhas municipais, como também da fonte de renda do sistema, o Bilhete
-          Único Carioca (BUC).{" "}
+          Único Carioca (BUC).
         </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -142,11 +168,9 @@ export function HistoriaFoto(
 ) {
   props = setDefaultProps(props);
   return (
-    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
-      <styles.ContainerCard1>
-        <img src={historia} className="h-full lg:h-full"></img>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv>
+    <styles.ChapterMap id={props.id} ref={props.ref}>
+      <img src={historia} className="h-screen w-full center"></img>
+    </styles.ChapterMap>
   );
 }
 
@@ -179,7 +203,7 @@ export function Historia2(
   );
 }
 
-export function CxIntro(
+export function Pandemia(
   props = {
     id: "",
     progress: 0,
@@ -189,101 +213,394 @@ export function CxIntro(
 
   return (
     <styles.IntroDiv id={props.id}>
-      {/* <styles.IntroTitle id={"intro"}>O fim da Caixa Preta</styles.IntroTitle> */}
       <styles.IntroText>
-        Em 2010, a Secretaria Municipal de Transportes do Rio de Janeiro licitou
-        a prestação de serviço de transportes na cidade. Com isso, toda a
-        responsabilidade pelo transporte por ônibus ficou com os consórcios.
-        Isso incluía não só a operação de todas as linhas municipais, como
-        também a fonte de renda do sistema, o Bilhete Único Carioca (BUC).
-        <br />
-        <br />
-        Após anos em vigor, a concessão, entretanto, apresentou problemas: a má
-        gestão dos concessionários com o serviço oferecido e uma grande crise
-        reputacional do sistema, envolvida em diversos escândalos.
-        <br />
-        <br />A falta de transparência da bilhetagem do sistema de bilhete único
-        também era um problema. Uma verdadeira caixa-preta era formada com os
-        dados de arrecadação e distribuição dos lucros da bilhetagem.
-        <br />
-        <br />
-        Com um transporte público sofrido, de ônibus depredados e superlotados,
-        somou-se o fator pandemia e inflação. Historicamente, o número de
-        passageiros já vinha diminuindo. Com a chegada da Covid-19, a situação
-        se agravou.
-        <br />
-        <br />
-        Além disso, o preço do diesel apresentou um aumento de quase 131% em
-        dois anos, segundo dados da Agência Nacional do Petróleo, Gás Natural e
-        Biocombustíveis (ANP). O preço de peças para reposição nos veículos
-        também sofreu inflação, com a desvalorização do real frente a moeda
-        americana. Com isso, as empresas responsáveis pelo transporte optaram
-        por diminuir a frota em lugares que sem muitos passageiros, chegando a
-        cancelar a circulação de algumas linhas.
+        Com a chegada da Covid-19, a situação se agravou. Com as restrições
+        sanitárias e a redução do PIB, o transporte público ficou menos
+        movimentado e o número de passageiros, que já apresentava queda nos
+        últimos anos, diminuiu ainda mais.
       </styles.IntroText>
     </styles.IntroDiv>
   );
 }
 
-export function CxGrafico1(
+export function GraficoPassageiros(
   props = {
     id: "",
     progress: 0,
   }
 ) {
   props = setDefaultProps(props);
+
   return (
-    <>
-      <styles.ChapterLineChart id={props.id}>
-        <LineChart
-          id="line-chart"
-          canvasId="line-chart"
-          data={[
-            { x: 1, y: 1 },
-            { x: 2, y: 4 },
-            { x: 3, y: 9 },
-            { x: 4, y: 16 },
-            { x: 5, y: 25 },
-            { x: 6, y: 36 },
-            { x: 7, y: 49 },
-            { x: 8, y: 64 },
-            { x: 9, y: 81 },
-            { x: 10, y: 100 },
-            { x: 11, y: 121 },
-            { x: 12, y: 144 },
-            { x: 13, y: 169 },
-            { x: 14, y: 196 },
-            { x: 15, y: 225 },
-            { x: 16, y: 256 },
-            { x: 17, y: 289 },
-            { x: 18, y: 324 },
-            { x: 19, y: 361 },
-            { x: 20, y: 400 },
-            { x: 21, y: 441 },
-            { x: 22, y: 484 },
-            { x: 23, y: 529 },
-            { x: 24, y: 576 },
-            { x: 25, y: 625 },
-          ]}
-          style={{
-            margin: {
-              top: 20,
-              right: 20,
-              bottom: 50,
-              left: 70,
-            },
-            width: 960,
-            height: 500,
-            lineColor: "steelblue",
-            lineWidth: 1.5,
-            axisColor: "white",
-            axisFontSize: "15px",
-          }}
-        />
-      </styles.ChapterLineChart>
-    </>
+    <styles.ChapterGenericDiv id={props.id}>
+      <styles.ContainerCard>
+        <styles.TextCard>
+          Além disso, veículos que já estavam depredados ou sem a devida
+          conservação ficaram largados. A alta do dólar durante a crise
+          sanitária que assolou o mundo explica essa equação: como as peças e
+          ferramentas são feitas fora do país, o seu valor subiu
+          substancialmente nos últimos anos e consertar ou comprar novos
+          veículos ficou ainda mais caro.
+        </styles.TextCard>
+        <img src={queda} className="mt-12"></img>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
   );
 }
+
+export function GraficoDolar(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv id={props.id}>
+      <styles.ContainerCard>
+        <styles.TextCard>
+          Soma-se a isso outro problema, conhecido pelos brasileiros: a alta dos
+          combustíveis no país. Para efeitos de comparação, o valor do diesel
+          subiu de R$3,75/L em 2019 para R$6,91/L em 2022.
+        </styles.TextCard>
+        <img src={dolar} className="mt-12"></img>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function GraficoDiesel(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv id={props.id}>
+      <styles.ContainerCard>
+        <styles.TextCard>
+          Ou seja, com um número menor de passageiros e o aumento de peças e
+          diesel, o custo para operar o sistema aumentou enquanto a receita
+          diminuiu. Como resultado, vemos mais veículos lotados e a cobertura do
+          transporte público diminuindo na cidade.
+        </styles.TextCard>
+        <img src={diesel} className="mt-12"></img>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Virada(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.IntroDiv id={props.id}>
+      <styles.IntroText>
+        <styles.IntroTitle>O ponto de virada</styles.IntroTitle>
+        Com uma situação alarmante e o descrédito do transporte por ônibus na
+        cidade, a Prefeitura decidiu reformular este sistema. Entretanto, para
+        que isso fosse implementado, foi preciso muito diálogo.
+        <br />
+        <br />
+        Foi exigido um grande esforço de negociação entre as diversas partes,
+        com muita transparência. Afinal de contas, não bastava um entendimento
+        entre prefeitura e empresas de ônibus, Era preciso também o envolvimento
+        do Ministério Público e do judiciário, chancelando e acompanhando
+        qualquer decisão tomada.
+        <br />
+        <br />
+        Assim, uma nova proposta de administração foi então pensada e aprovada.
+      </styles.IntroText>
+    </styles.IntroDiv>
+  );
+}
+
+export function Caixa(
+  props = {
+    id: "",
+    ref: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+      <styles.ContainerCard>
+        <styles.IntroTitle>O fim da caixa preta</styles.IntroTitle>
+        <styles.TextCard>
+          Agora, com o novo acordo judicial, os consórcios renunciam a
+          administração do BRT e da bilhetagem, além de serem obrigadas a enviar
+          todas as informações de arrecadação.
+          <br />
+          <br />O sistema de bilhetagem será feito por meio de concessão
+          pública. Agora, todo o dinheiro arrecadado irá para o Fundo
+          Fiduciário, onde a Prefeitura e a sociedade conseguirão ter um maior
+          controle das finanças da operação.
+        </styles.TextCard>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Foco(
+  props = {
+    id: "",
+    ref: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+      <styles.ContainerCard>
+        <styles.IntroTitle>Foco onde mais precisa</styles.IntroTitle>
+        <styles.TextCard>
+          O restabelecimento das linhas canceladas também está previsto no
+          acordo. A prioridade é que elas voltem a circular justamente nas áreas
+          mais necessitadas.
+          <br />
+          <br />
+          Até o momento, XX linhas já retornaram, a maioria delas na região XX.
+          A previsão é de que mais XX linhas retornem às ruas até o fim de XX.
+          <br />
+          <br />O bairro de Santa Cruz, por exemplo, é um dos maiores
+          beneficiados. Nas imagens a seguir podemos observar como estava a
+          situação do bairro
+        </styles.TextCard>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Antes(
+  props = {
+    id: "",
+    ref: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+      <styles.ContainerCard>
+        <styles.IntroTitle>Mapa antes</styles.IntroTitle>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Depois(
+  props = {
+    id: "",
+    ref: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+      <styles.ContainerCard>
+        <styles.IntroTitle>Mapa depois</styles.IntroTitle>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Saude(
+  props = {
+    id: "",
+    ref: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+      <styles.ContainerCard>
+        <img src={saude} className="mt-12"></img>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Educacao(
+  props = {
+    id: "",
+    ref: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+      <styles.ContainerCard>
+        <img src={educacao} className="mt-12"></img>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Trabalho(
+  props = {
+    id: "",
+    ref: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+      <styles.ContainerCard>
+        <img src={trabalho} className="mt-12"></img>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Passagem(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.IntroDiv id={props.id}>
+      <styles.IntroText>
+        <styles.IntroTitle>A passagem continua a mesma</styles.IntroTitle>A
+        passagem continua a R$4,05 e a Prefeitura passa a pagar a diferença do
+        valor real da tarifa, impedindo que a população pague mais. Isso se dará
+        com a implantação de um sistema em que a prefeitura pagará as
+        concessionárias por km rodado em cada linha.
+        <br />
+        <br />
+        Na prática, a tarifa que o cidadão paga na hora de embarcar no ônibus se
+        mantém. O que muda é a remuneração adicional por quilômetro rodado que
+        será paga pela Prefeitura desde que haja a correta prestação do serviço.
+        <br />
+        <br />
+        Tudo será controlado por meio do monitoramento em tempo real dos GPS
+        instalados na frota de ônibus cariocas. Os recursos serão somente
+        repassados para as empresas que estiverem com GPS funcionando
+        corretamente associados às linhas que estiverem operando.
+        <br />
+        <br />
+        Em caso de não cumprimento do acordo, ou seja, caso o empresário não
+        volte com as linhas ou não cumpra com a quilometragem requisitada pela
+        Prefeitura, nenhum valor adicional da tarifa de R$ 4,05 será repassado e
+        sua concessão será cancelada.
+      </styles.IntroText>
+    </styles.IntroDiv>
+  );
+}
+
+export function Fluxo(
+  props = {
+    id: "",
+    ref: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+      <styles.ContainerCard2>
+        <img src={fluxo} className="mt-12 mb-12"></img>
+      </styles.ContainerCard2>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Fim(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.IntroDiv id={props.id}>
+      <styles.IntroText>
+        <styles.IntroTitle>
+          Comprometimento da Prefeitura para melhoria da vida do carioca
+        </styles.IntroTitle>
+        O contrato de concessão atual teve seu prazo reduzido em 2 anos e apenas
+        a Prefeitura tem a prerrogativa de rever o acordo em caso de
+        descumprimento por parte dos operadores, garantindo o comprometimento
+        desta nova gestão do transporte na cidade.
+        <br />
+        <br />
+        O plano devidamente implementado, permitirá um transporte com qualidade
+        e transparência para a população carioca.
+        <br />
+        <br />
+        Link para acessar o site com o antes e o depois do acordo
+      </styles.IntroText>
+    </styles.IntroDiv>
+  );
+}
+
+// export function CxGrafico1(
+//   props = {
+//     id: "",
+//     progress: 0,
+//   }
+// ) {
+//   props = setDefaultProps(props);
+//   return (
+//     <>
+//       <styles.ChapterLineChart id={props.id}>
+//         <LineChart
+//           id="line-chart"
+//           canvasId="line-chart"
+//           data={[
+//             { x: 1, y: 1 },
+//             { x: 2, y: 4 },
+//             { x: 3, y: 9 },
+//             { x: 4, y: 16 },
+//             { x: 5, y: 25 },
+//             { x: 6, y: 36 },
+//             { x: 7, y: 49 },
+//             { x: 8, y: 64 },
+//             { x: 9, y: 81 },
+//             { x: 10, y: 100 },
+//             { x: 11, y: 121 },
+//             { x: 12, y: 144 },
+//             { x: 13, y: 169 },
+//             { x: 14, y: 196 },
+//             { x: 15, y: 225 },
+//             { x: 16, y: 256 },
+//             { x: 17, y: 289 },
+//             { x: 18, y: 324 },
+//             { x: 19, y: 361 },
+//             { x: 20, y: 400 },
+//             { x: 21, y: 441 },
+//             { x: 22, y: 484 },
+//             { x: 23, y: 529 },
+//             { x: 24, y: 576 },
+//             { x: 25, y: 625 },
+//           ]}
+//           style={{
+//             margin: {
+//               top: 20,
+//               right: 20,
+//               bottom: 50,
+//               left: 70,
+//             },
+//             width: 960,
+//             height: 500,
+//             lineColor: "steelblue",
+//             lineWidth: 1.5,
+//             axisColor: "white",
+//             axisFontSize: "15px",
+//           }}
+//         />
+//       </styles.ChapterLineChart>
+//     </>
+//   );
+// }
 
 export function Creditos(
   props = {
@@ -294,44 +611,24 @@ export function Creditos(
   props = setDefaultProps(props);
 
   return (
-    <styles.CreditosDiv id={props.id}>
-      <styles.IntroTitle id={"intro"}>
-        Autores
-        <br />
-        <br />
-        <br />
-        <br />
-        Agradecimentos
-        <br />
-        <br />
-        <br />
-        <br />
-        Prefeito
-      </styles.IntroTitle>
-      <styles.IntroText>
-        Caio Jacintho
-        <br />
-        Diego Oliveira
-        <br />
-        Gabriel Gazola
-        <br />
-        João Carabetta
-        <br />
-        <br />
-        <br />
-        Fernanda Scovino
-        <br />
-        Guilherme Braga
-        <br />
-        Bernardo Serra
-        <br />
+    <styles.IntroDiv id={props.id}>
+      <styles.FimText>
+        <styles.FimTitle>Autores</styles.FimTitle>
+        Caio Jacintho <br />
+        Diego Oliveira <br />
+        Gabriel Gazola <br />
+        João Carabetta <br />
+        Judite Cypreste
+        <styles.FimTitle>Agradecimentos</styles.FimTitle>
+        Fernanda Scovino <br />
+        Guilherme Braga <br />
+        Bernardo Serra <br />
         Lauro Silvestre
-        <br />
-        <br />
-        <br />
-        Eduardo Paes
-      </styles.IntroText>
-    </styles.CreditosDiv>
+        <styles.FimTitle>Prefeito</styles.FimTitle>
+        Eduardo Paes <br />
+        <img src={logo1} className="h-16 mt-[12vh]  lg:h-16"></img>
+      </styles.FimText>
+    </styles.IntroDiv>
   );
 }
 
