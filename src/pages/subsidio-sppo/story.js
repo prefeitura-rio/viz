@@ -40,8 +40,8 @@ export default function SubsidioSPPO() {
   useEffect(() => {
     switch (chapterNumberMap) {
       case "capa":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
       case "intro":
         setPosition(chapterMap.Capa().location);
@@ -123,7 +123,6 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
-
       case "creditos":
         setPosition(chapterMap.Creditos().location);
         setLayers(chapterMap.Creditos().layers);
@@ -243,6 +242,20 @@ export default function SubsidioSPPO() {
       },
     });
 
+    ScrollTrigger.create({
+      trigger: "#grafico-dolar",
+      onToggle: () => {
+        setChapterNumberMap("grafico-dolar");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#grafico-diesel",
+      onToggle: () => {
+        setChapterNumberMap("grafico-diesel");
+      },
+    });
+
     const tl20 = gsap.timeline();
     tl20
       .set("#virada", { opacity: 0 })
@@ -352,16 +365,16 @@ export default function SubsidioSPPO() {
 
     const tl9 = gsap.timeline();
     tl9
-      .set("#cx-creditos", { opacity: 0 })
-      .to("#cx-creditos", { opacity: 0, duration: 30 })
-      .to("#cx-creditos", { opacity: 1, duration: 6 })
-      .to("#cx-creditos", { opacity: 1, duration: 20 })
-      .to("#cx-creditos", { opacity: 1, duration: 6 })
-      .to("#cx-creditos", { opacity: 1, duration: 28 });
+      .set("#creditos", { opacity: 0 })
+      .to("#creditos", { opacity: 0, duration: 30 })
+      .to("#creditos", { opacity: 1, duration: 6 })
+      .to("#creditos", { opacity: 1, duration: 20 })
+      .to("#creditos", { opacity: 1, duration: 6 })
+      .to("#creditos", { opacity: 1, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl9,
-      trigger: "#cx-creditos",
+      trigger: "#creditos",
       onToggle: () => {
         setChapterNumberMap(6);
       },
@@ -410,7 +423,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Passagem id={"passagem"} />
       <chapterDiv.Fluxo id={"fluxo"} />
       <chapterDiv.Fim id={"fim"} />
-      <chapterDiv.Creditos id={"cx-creditos"} />
+      <chapterDiv.Creditos id={"creditos"} />
     </>
   );
 }

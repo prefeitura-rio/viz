@@ -169,7 +169,9 @@ export function HistoriaFoto(
   props = setDefaultProps(props);
   return (
     <styles.ChapterMap id={props.id} ref={props.ref}>
-      <img src={historia} className="h-screen w-full center"></img>
+      <styles.ContainerCard>
+        <img src={historia} className="h-auto w-[500px] center"></img>
+      </styles.ContainerCard>
     </styles.ChapterMap>
   );
 }
