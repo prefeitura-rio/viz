@@ -58,7 +58,7 @@ export function Capa(
       <styles.Interactive>
         Para navegar pelo mapa{" "}
         <a
-          className="decoration-1 underline-offset-1 font-bold"
+          className="font-bold decoration-1 underline-offset-1"
           href="/#/especial-sppo/interactive"
           target="_blank"
           rel="noreferrer"
@@ -247,7 +247,15 @@ export function GraficoPassageiros(
           substancialmente nos últimos anos e consertar ou comprar novos
           veículos ficou ainda mais caro.
         </styles.TextCard>
-        <img src={queda} className="mt-12"></img>
+        <iframe
+          class="w-full aspect-video"
+          title="Mais de 1000 demolições desde o início da gestão"
+          scrolling="no"
+          frameborder="0"
+          id="datawrapper-chart-RNXfM"
+          aria-label="Gráfico de coluna"
+          src="https://datawrapper.dwcdn.net/RNXfM/5/"
+        ></iframe>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
