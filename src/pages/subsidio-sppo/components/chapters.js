@@ -59,7 +59,7 @@ export function Capa(
         Para navegar pelo mapa{" "}
         <a
           className="decoration-1 underline-offset-1 font-bold"
-          href="https://viz.dados.rio/#/especial-sppo/interactive"
+          href="/#/especial-sppo/interactive"
           target="_blank"
           rel="noreferrer"
         >
@@ -84,7 +84,7 @@ export function Intro(
         {/* <styles.IntroTitle>Introdução</styles.IntroTitle> */}
         Desde o dia 1º de junho deste ano, quando o acordo entre Prefeitura,
         Ministério Público e empresas de ônibus entrou em vigor, os cariocas
-        puderam ver, assim como no mapa acima, a volta de 40 linhas de ônibus
+        puderam ver, assim como no mapa abaixo, a volta de 40 linhas de ônibus
         nas ruas da capital fluminense.
         <br />
         <br />
@@ -410,6 +410,23 @@ export function Depois(
       id={props.id}
       ref={props.ref}
     ></styles.ChapterGenericDiv>
+  );
+}
+
+export function Graficos(
+  props = {
+    id: "",
+    ref: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+      <styles.ContainerCard>
+        <styles.IntroTitle>Texto</styles.IntroTitle>
+        <styles.TextCard>Aqui vai o texto antes dos graficos</styles.TextCard>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
   );
 }
 

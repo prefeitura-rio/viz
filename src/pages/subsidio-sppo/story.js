@@ -99,6 +99,10 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Depois().location);
         setLayers(chapterMap.Depois().layers);
         break;
+      case "graficos":
+        setPosition(chapterMap.Depois().location);
+        setLayers(chapterMap.Depois().layers);
+        break;
       case "saude":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
@@ -302,6 +306,13 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
+      trigger: "#graficos",
+      onToggle: () => {
+        setChapterNumberMap("graficos");
+      },
+    });
+
+    ScrollTrigger.create({
       trigger: "#saude",
       onToggle: () => {
         setChapterNumberMap("saude");
@@ -417,6 +428,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Foco id={"foco"} />
       <chapterDiv.Antes id={"antes"} />
       <chapterDiv.Depois id={"depois"} />
+      <chapterDiv.Graficos id={"graficos"} />
       <chapterDiv.Saude id={"saude"} />
       <chapterDiv.Educacao id={"educacao"} />
       <chapterDiv.Trabalho id={"trabalho"} />
