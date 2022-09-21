@@ -12,8 +12,10 @@ export const CapaDiv = tw.div`
 
 export const Title = tw.div`
   font-poppins font-bold  
-  text-4xl text-center text-[#ffffff]
+  text-2xl text-center text-[#ffffff]
   p-2
+  leading-10
+  mt-[30%]
   lg:text-4xl
   lg:leading-10  
   lg:mt-[15%]
@@ -36,6 +38,7 @@ export const AuthorText = tw.div`
 export const Interactive = tw.div`
   font-poppins
   text-sm text-center text-[#ffffff]
+  mb-[30%]
   lg:mb-[20%]
   lg:text-base
   lg:max-w-3xl
@@ -43,20 +46,24 @@ export const Interactive = tw.div`
 `;
 
 export const IntroDiv = tw.div`
-  w-full h-[240vh]
+  w-full lg:h-[240vh] h-[320vh]
   bg-opacity-90 backdrop-blur-2xl
   bg-slate-50/60
   flex
-  items-start
+  items-center
+  lg:items-start
   justify-center
   selection:bg-yellow-600 selection:text-black
 `;
 
 export const IntroTitle = tw.div`
   font-black  font-poppins
-  text-3xl text-left text-yellow-600 mr-[20vw]
+  text-2xl text-left text-yellow-600
+  mb-6
+  lg:mr-[20vw]
+  lg:text-3xl
   lg:max-w-3xl
-  lg:mb-10
+  lg:mb-8
   selection:bg-yellow-600 selection:text-black
   `;
 
@@ -72,9 +79,12 @@ export const FimTitle = tw.div`
 export const IntroText = tw.div`
   font-poppins  font-medium
   align-middle
-  text-lg text-justify text-[#57250a]
+  text-base text-justify text-[#57250a]
   leading-snug
   opacity-100
+  p-10
+  lg:p-0
+  lg:text-lg
   lg:max-w-3xl
   mt-[50%]
   selection:bg-yellow-600 selection:text-black
@@ -83,9 +93,10 @@ export const IntroText = tw.div`
 export const TextCard = tw.div`
   font-poppins  font-medium
   align-middle
-  text-lg text-justify text-[#57250a]
+  text-base text-justify text-[#57250a]
   leading-snug
   opacity-100
+  lg:text-lg
   lg:max-w-3xl
   mb-3
   selection:bg-yellow-600 selection:text-black
@@ -128,7 +139,8 @@ export const ChapterMap = tw.div`
 export const ContainerCard = tw.div`
   bg-[#ffffff]
   rounded
-  p-20  
+  p-10
+  lg:p-20  
   bg-opacity-90
   m-auto
   w-[865px]
