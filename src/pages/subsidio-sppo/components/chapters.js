@@ -440,7 +440,7 @@ export function Saude(
   return (
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <styles.ContainerCard>
-        <img src={saude} className="mt-12"></img>
+        <img src={saude}></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -456,7 +456,7 @@ export function Educacao(
   return (
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <styles.ContainerCard>
-        <img src={educacao} className="mt-12"></img>
+        <img src={educacao}></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -472,7 +472,7 @@ export function Trabalho(
   return (
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <styles.ContainerCard>
-        <img src={trabalho} className="mt-12"></img>
+        <img src={trabalho}></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );

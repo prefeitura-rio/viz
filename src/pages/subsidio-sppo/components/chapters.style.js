@@ -125,39 +125,35 @@ export const ChapterMap = tw.div`
   items-center
   `;
 
-export const ContainerCard = styled.div`
-  min-width: 250px;
-  margin: auto;
-  width: 865px;
-  padding: 70px 70px;
-  opacity: 1;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.9);
-  /* backdrop-filter: blur(50px); */
+export const ContainerCard = tw.div`
+  bg-[#ffffff]
+  rounded
+  p-20  
+  bg-opacity-90
+  m-auto
+  w-[865px]
+  min-w-[250px]
 `;
 
-export const ContainerCard1 = styled.div`
-  min-width: 250px;
-  margin: auto;
-  width: 865px;
+export const ContainerCard1 = tw.div`
+  m-auto
+  w-[865px]
+  min-w-[250px]
 `;
 
-export const ContainerCard2 = styled.div`
-  min-width: 250px;
-  margin: auto;
-  width: 865px;
-  padding: 70px 70px;
-  opacity: 1;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255);
-  /* backdrop-filter: blur(50px); */
+export const ContainerCard2 = tw.div`
+  bg-[#ffffff]
+  rounded
+  p-20  
+  m-auto
+  w-[865px]
+  min-w-[250px]
 `;
 
-export const ContainerCard3 = styled.div`
-  min-width: 250px;
-  margin: auto;
-  width: 616px;
-  opacity: 1;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255);
+export const ContainerCard3 = tw.div`
+  bg-[#ffffff]
+  rounded
+  m-auto
+  w-[616px]
+  min-w-[250px]
 `;
