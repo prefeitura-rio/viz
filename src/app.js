@@ -4,6 +4,7 @@
 import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Loading } from "./components/loading/loading";
+import { LoadingSubsidioSPPO } from "./pages/subsidio-sppo/loading";
 
 import style, { createGlobalStyle } from "styled-components";
 import mapboxCss from "mapbox-gl/dist/mapbox-gl.css";
@@ -37,8 +38,20 @@ function App() {
       <Router>
         <Suspense fallback={<Loading />}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/especial-seop/demolicoes"
+              element={<DemolicoesSEOP />}
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<LoadingSubsidioSPPO />}>
+          <Routes>
             <Route path="/especial-sppo/subsidio" element={<SubsidioSPPO />} />
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/sandbox/sample" element={<StorySample />} />
             <Route
               path="/especial-sppo/interactive"
@@ -49,10 +62,6 @@ function App() {
               element={<TestLineChart />}
             ></Route>
             <Route path="/sandbox/test-map" element={<TestMap />}></Route>
-            <Route
-              path="/especial-seop/demolicoes"
-              element={<DemolicoesSEOP />}
-            ></Route>
           </Routes>
         </Suspense>
       </Router>
