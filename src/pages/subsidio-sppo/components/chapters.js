@@ -8,6 +8,7 @@ import saude from "../images/saude.png";
 import educacao from "../images/educacao.png";
 import trabalho from "../images/trabalho.png";
 import historia from "../images/historia.gif";
+import scroll from "../images/scroll.gif";
 import fluxo from "../images/fluxo.gif";
 import * as styles from "./chapters.style";
 import tw from "tailwind-styled-components";
@@ -29,7 +30,7 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.ref}>
-      <img src={logo2} className="h-14 mt-[2vh]  lg:h-14"></img>
+      <img src={logo2} className="h-14 mt-[7vh]  lg:h-14"></img>
       <styles.Title>
         Um ponto de virada na história do transporte municipal do Rio de Janeiro
       </styles.Title>
@@ -53,6 +54,7 @@ export function Capa(
           Secretaria Municipal de Transportes
         </a>
       </styles.AuthorText>
+      <img src={scroll} className="h-14 mb-[3%] lg:h-14"></img>
       <styles.Interactive>
         Para navegar pelo mapa{" "}
         <a

@@ -13,11 +13,10 @@ export const CapaDiv = tw.div`
 export const Title = tw.div`
   font-poppins font-bold  
   text-4xl text-center text-[#ffffff]
-  mt-28
   p-2
   lg:text-4xl
   lg:leading-10  
-  lg:mt-[17%]
+  lg:mt-[15%]
   lg:max-w-[800px]
   `;
 
@@ -30,7 +29,7 @@ export const AuthorText = tw.div`
   font-poppins
   text-sm text-center text-[#ffffff]
   lg:text-base
-  lg:mb-[8%]
+  lg:mb-[2%]
   lg:max-w-3xl
   `;
 
