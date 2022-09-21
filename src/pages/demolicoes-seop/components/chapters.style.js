@@ -23,14 +23,14 @@ export const Title = tw.div`
   mt-[10%]
   lg:mt-[21%]
   lg:mb-3    
-  font-georgia font-bold  
+  font-serif font-bold  
   text-4xl text-center text-white
   lg:text-4xl
   max-w-3xl
   `;
 
 // export const Subtitle = tw.div`
-//   font-georgia
+//   font-serif
 //   text-base text-center text-white
 //   lg:text-xl
 //   max-w-4xl
@@ -39,7 +39,7 @@ export const Title = tw.div`
 export const AuthorText = tw.div`
   mb-[15%]
   lg:mb-[45%]
-  font-georgia
+  font-serif
   text-sm text-center text-white
   lg:text-base
   max-w-4xl
@@ -48,7 +48,7 @@ export const AuthorText = tw.div`
 export const Credito = tw.div`
   mb-7
   lg:mb-7
-  font-georgia
+  font-serif
   text-sm text-left text-white
   lg:text-sm
   lg:text-left
@@ -56,7 +56,7 @@ export const Credito = tw.div`
 `;
 
 export const IntroTitle = tw.div`
-  font-bold  font-georgia
+  font-bold  font-serif
   text-3xl text-left text-white
   self-start
   mb-6
@@ -64,7 +64,7 @@ export const IntroTitle = tw.div`
 `;
 
 export const IntroText = tw.div`
-  font-georgia  
+  font-serif  
   text-lg text-justify text-white 
   leading-normal 
   opacity-100
@@ -128,7 +128,7 @@ lg:mt-[3%]
 
 export const NewsTitle = tw.div`
   text-white
-  font-georgia
+  font-serif
   text-4xl
   mb-[15px]
 `;
@@ -154,13 +154,13 @@ const TextCardSC = styled.div`
 `;
 
 export const TextCard = tw(TextCardSC)`
-  font-georgia  
+  font-serif  
   text-lg
   text-left
 `;
 
 export const TextCard1 = tw(TextCardSC)`
-  font-georgia  
+  font-serif  
   text-lg
   text-left
   mt-0
@@ -188,7 +188,7 @@ const BigNumberSC = styled.div`
 `;
 
 export const BigNumber = tw(BigNumberSC)`
-  font-georgia  
+  font-serif  
   font-bold
   text-5xl
   text-left

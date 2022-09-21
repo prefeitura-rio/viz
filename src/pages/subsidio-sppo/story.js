@@ -48,20 +48,20 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Capa().layers);
         break;
       case "vazio":
+        setPosition(chapterMap.Cheio().location);
+        setLayers(chapterMap.Cheio().layers);
+        break;
+      case "historia-1":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
-      case "historia-1":
-        setPosition(chapterMap.Historia1().location);
-        setLayers(chapterMap.Historia1().layers);
-        break;
       case "historia-foto":
-        setPosition(chapterMap.Historia1().location);
-        setLayers(chapterMap.Historia1().layers);
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
         break;
       case "historia-2":
-        setPosition(chapterMap.Historia1().location);
-        setLayers(chapterMap.Historia1().layers);
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
         break;
       case "pandemia":
         setPosition(chapterMap.Vazio().location);
@@ -116,10 +116,6 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Vazio().layers);
         break;
       case "passagem":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
-      case "fluxo":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
@@ -350,13 +346,6 @@ export default function SubsidioSPPO() {
       },
     });
 
-    ScrollTrigger.create({
-      trigger: "#fluxo",
-      onToggle: () => {
-        setChapterNumberMap("fluxo");
-      },
-    });
-
     const tl30 = gsap.timeline();
     tl30
       .set("#fim", { opacity: 0 })
@@ -433,8 +422,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Educacao id={"educacao"} />
       <chapterDiv.Trabalho id={"trabalho"} />
       <chapterDiv.Passagem id={"passagem"} />
-      <chapterDiv.Fluxo id={"fluxo"} />
-      <chapterDiv.Fim id={"fim"} />
+      {/* <chapterDiv.Fim id={"fim"} /> */}
       <chapterDiv.Creditos id={"creditos"} />
     </>
   );

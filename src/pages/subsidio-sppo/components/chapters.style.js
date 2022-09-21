@@ -11,7 +11,7 @@ export const CapaDiv = tw.div`
   `;
 
 export const Title = tw.div`
-  font-poppins font-bold  
+  font-serif font-bold  
   text-2xl text-center text-[#ffffff]
   p-2
   leading-10
@@ -28,7 +28,7 @@ export const Title = tw.div`
 // leading-snug
 
 export const AuthorText = tw.div`
-  font-poppins
+  font-serif
   text-sm text-center text-[#ffffff]
   lg:text-base
   lg:mb-[2%]
@@ -36,7 +36,7 @@ export const AuthorText = tw.div`
   `;
 
 export const Interactive = tw.div`
-  font-poppins
+  font-serif
   text-sm text-center text-[#ffffff]
   mb-[30%]
   lg:mb-[20%]
@@ -57,7 +57,7 @@ export const IntroDiv = tw.div`
 `;
 
 export const IntroTitle = tw.div`
-  font-black  font-poppins
+  font-black  font-serif
   text-2xl text-left text-yellow-600
   mb-6
   lg:mr-[20vw]
@@ -68,7 +68,7 @@ export const IntroTitle = tw.div`
   `;
 
 export const FimTitle = tw.div`
-  font-black  font-poppins
+  font-black  font-serif
   text-3xl text-left text-yellow-600 mr-[20vw]
   lg:max-w-3xl
   mb-5
@@ -77,7 +77,7 @@ export const FimTitle = tw.div`
   `;
 
 export const IntroText = tw.div`
-  font-poppins  font-medium
+  font-serif  font-medium
   align-middle
   text-base text-justify text-[#57250a]
   leading-snug
@@ -91,7 +91,7 @@ export const IntroText = tw.div`
 `;
 
 export const TextCard = tw.div`
-  font-poppins  font-medium
+  font-serif  font-medium
   align-middle
   text-base text-justify text-[#57250a]
   leading-snug
@@ -103,7 +103,7 @@ export const TextCard = tw.div`
 `;
 
 export const FimText = tw.div`
-  font-poppins  font-medium
+  font-serif  font-medium
   align-middle
   text-lg text-justify text-[#57250a]
   leading-snug
@@ -114,7 +114,7 @@ export const FimText = tw.div`
 `;
 
 export const TextOrange = tw.div`
-  font-poppins
+  font-serif
   bg-orange-700 
   text-white
   inline 
@@ -145,6 +145,7 @@ export const ContainerCard = tw.div`
   m-auto
   w-[865px]
   min-w-[250px]
+  lg:leading-5
 `;
 
 export const ContainerCard1 = tw.div`
