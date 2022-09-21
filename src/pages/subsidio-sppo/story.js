@@ -146,7 +146,17 @@ export default function SubsidioSPPO() {
       // toggleActions: "play reverse play reverse",
     });
 
+    const tl00 = gsap.timeline();
+    tl00
+      .set("#capa", { opacity: 0.9 })
+      .to("#capa", { opacity: 0.9, duration: 30 })
+      .to("#capa", { opacity: 0.9, duration: 6 })
+      .to("#capa", { opacity: 0.9, duration: 10 })
+      .to("#capa", { opacity: 0, duration: 6 })
+      .to("#capa", { opacity: 0, duration: 38 });
+
     ScrollTrigger.create({
+      animation: tl00,
       trigger: "#capa",
       onToggle: () => {
         setChapterNumberMap("capa");
@@ -194,17 +204,7 @@ export default function SubsidioSPPO() {
       },
     });
 
-    const tl13 = gsap.timeline();
-    tl13
-      .set("#historia-foto", { opacity: 0 })
-      .to("#historia-foto", { opacity: 0, duration: 36 })
-      .to("#historia-foto", { opacity: 1, duration: 2 })
-      .to("#historia-foto", { opacity: 1, duration: 10 })
-      .to("#historia-foto", { opacity: 0, duration: 2 })
-      .to("#historia-foto", { opacity: 0, duration: 36 });
-
     ScrollTrigger.create({
-      animation: tl13,
       trigger: "#historia-foto",
       onToggle: () => {
         setChapterNumberMap("historia-foto");
@@ -418,7 +418,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Antes id={"antes"} />
       <chapterDiv.Depois id={"depois"} />
       <chapterDiv.Saude id={"saude"} />
-      <chapterDiv.Educacao id={"educação"} />
+      <chapterDiv.Educacao id={"educacao"} />
       <chapterDiv.Trabalho id={"trabalho"} />
       <chapterDiv.Passagem id={"passagem"} />
       <chapterDiv.Fluxo id={"fluxo"} />

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import logo1 from "../images/logo1.png";
+import logo2 from "../images/logo2.png";
 import queda from "../images/queda.png";
 import dolar from "../images/dolar.png";
 import diesel from "../images/diesel.png";
@@ -28,7 +29,7 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.ref}>
-      <img src={logo1} className="h-16 mt-[2vh]  lg:h-16"></img>
+      <img src={logo2} className="h-14 mt-[2vh]  lg:h-14"></img>
       <styles.Title>
         Um ponto de virada na história do transporte municipal do Rio de Janeiro
       </styles.Title>
@@ -169,9 +170,9 @@ export function HistoriaFoto(
   props = setDefaultProps(props);
   return (
     <styles.ChapterMap id={props.id} ref={props.ref}>
-      <styles.ContainerCard>
-        <img src={historia} className="h-auto w-[500px] center"></img>
-      </styles.ContainerCard>
+      <styles.ContainerCard3>
+        <img src={historia}></img>
+      </styles.ContainerCard3>
     </styles.ChapterMap>
   );
 }
@@ -388,11 +389,10 @@ export function Antes(
 ) {
   props = setDefaultProps(props);
   return (
-    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
-      <styles.ContainerCard>
-        <styles.IntroTitle>Mapa antes</styles.IntroTitle>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
+    <styles.ChapterGenericDiv
+      id={props.id}
+      ref={props.ref}
+    ></styles.ChapterGenericDiv>
   );
 }
 
@@ -404,11 +404,10 @@ export function Depois(
 ) {
   props = setDefaultProps(props);
   return (
-    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
-      <styles.ContainerCard>
-        <styles.IntroTitle>Mapa depois</styles.IntroTitle>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
+    <styles.ChapterGenericDiv
+      id={props.id}
+      ref={props.ref}
+    ></styles.ChapterGenericDiv>
   );
 }
 

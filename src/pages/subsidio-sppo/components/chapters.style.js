@@ -7,17 +7,18 @@ export const CapaDiv = tw.div`
   flex flex-col 
   justify-between items-center 
   selection:bg-yellow-600 selection:text-black
+  backdrop-blur-xl
   `;
 
 export const Title = tw.div`
   font-poppins font-bold  
   text-4xl text-center text-[#ffffff]
   mt-28
-  p-7
+  p-2
   lg:text-4xl
   lg:leading-10  
-  lg:mt-[18%]
-  lg:max-w-[865px]
+  lg:mt-[17%]
+  lg:max-w-[800px]
   `;
 
 // inline
@@ -28,19 +29,14 @@ export const Title = tw.div`
 export const AuthorText = tw.div`
   font-poppins
   text-sm text-center text-[#ffffff]
-  mt-2
   lg:text-base
-  lg:mb-[12%]
+  lg:mb-[8%]
   lg:max-w-3xl
-  inline
-  px-4
-  decoration-clone
-  p-1
   `;
 
 export const Interactive = tw.div`
   font-poppins
-  text-sm text-center text-[#d69108]
+  text-sm text-center text-[#ffffff]
   lg:mb-[20%]
   lg:text-base
   lg:max-w-3xl
@@ -113,7 +109,7 @@ export const ChapterGenericDiv = tw.div`
 export const ChapterMap = tw.div`
   flex
   relative
-  w-full h-[400vh]
+  w-full h-screen
   mt-60
   mb-60
   items-center
@@ -164,6 +160,12 @@ export const ContainerCard = styled.div`
   /* backdrop-filter: blur(50px); */
 `;
 
+export const ContainerCard1 = styled.div`
+  min-width: 250px;
+  margin: auto;
+  width: 865px;
+`;
+
 export const ContainerCard2 = styled.div`
   min-width: 250px;
   margin: auto;
@@ -175,10 +177,13 @@ export const ContainerCard2 = styled.div`
   /* backdrop-filter: blur(50px); */
 `;
 
-export const ContainerCard1 = styled.div`
+export const ContainerCard3 = styled.div`
   min-width: 250px;
   margin: auto;
-  width: 865px;
+  width: 616px;
+  opacity: 1;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255);
 `;
 
 export const TextCard = styled.div`
