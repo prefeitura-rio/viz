@@ -80,6 +80,17 @@ export const IntroText = tw.div`
   selection:bg-yellow-600 selection:text-black
 `;
 
+export const TextCard = tw.div`
+  font-poppins  font-medium
+  align-middle
+  text-lg text-justify text-[#57250a]
+  leading-snug
+  opacity-100
+  lg:max-w-3xl
+  mb-3
+  selection:bg-yellow-600 selection:text-black
+`;
+
 export const FimText = tw.div`
   font-poppins  font-medium
   align-middle
@@ -113,40 +124,6 @@ export const ChapterMap = tw.div`
   mb-60
   items-center
   `;
-
-export const TextOrange1 = styled.div`
-  background: #dd9f75;
-  color: #fff;
-  display: inline;
-  padding: 1px 8px 1px 8px;
-  margin: 2px;
-`;
-
-export const ChapterLineChart = styled.div`
-  height: 100vh;
-  width: 100%;
-  background: #e8cee4;
-  z-index: -1;
-  display: flex;
-  align-items: center;
-`;
-
-export const CreditosDiv = styled.div`
-  height: 400vh;
-  width: 100%;
-  overflow-x: hidden;
-  display: grid;
-  grid-template-columns: 2fr 0.8fr 2fr 2fr;
-  grid-template-rows: 1fr 0.5fr 1fr;
-  gap: 0px 50px;
-  grid-template-areas:
-    ". . . ."
-    ". titulo texto ."
-    ". . . .";
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  opacity: 1;
-`;
 
 export const ContainerCard = styled.div`
   min-width: 250px;
@@ -183,35 +160,4 @@ export const ContainerCard3 = styled.div`
   opacity: 1;
   border-radius: 4px;
   background-color: rgba(255, 255, 255);
-`;
-
-export const TextCard = styled.div`
-  color: #57250a;
-  font-family: "poppins", sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.4;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  text-align: left;
-  width: auto;
-  ::selection {
-    background-color: #ca8a04;
-    color: #000000;
-  }
-`;
-
-export const TextRed = styled.div`
-  background: #be5b5b;
-  color: #fff;
-  display: inline;
-  padding: 1px 8px 1px 8px;
-  margin: 2px;
-`;
-
-export const TextBlue = styled.div`
-  background: #18b4c9;
-  color: #fff;
-  display: inline;
-  padding: 1px 8px 1px 8px;
-  margin: 2px;
 `;
