@@ -281,15 +281,6 @@ export function CardPassageiros(
           seu valor subiu substancialmente nos últimos anos e consertar ou
           comprar novos veículos ficou ainda mais caro.
         </styles.TextCard>
-        <iframe
-          class="w-full aspect-video"
-          title="Preço médio do dólar"
-          scrolling="no"
-          frameborder="0"
-          id="datawrapper-chart-bv5y3"
-          aria-label="Gráfico de coluna"
-          src="https://datawrapper.dwcdn.net/bv5y3/2/"
-        ></iframe>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
