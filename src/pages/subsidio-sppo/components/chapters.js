@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import logo1 from "../images/logo1.png";
 import logo2 from "../images/logo2.png";
-import queda from "../images/queda.png";
-import dolar from "../images/dolar.png";
-import diesel from "../images/diesel.png";
 import saude from "../images/saude.png";
 import educacao from "../images/educacao.png";
 import trabalho from "../images/trabalho.png";
@@ -56,14 +53,23 @@ export function Capa(
       </styles.AuthorText>
       <img src={scroll} className="h-14 mb-[3%] lg:h-14"></img>
       <styles.Interactive>
-        Para navegar pelo mapa{" "}
+        Mapas interativos:{" "}
         <a
-          className="decoration-1 underline-offset-1 font-bold"
+          className="font-bold decoration-1 underline-offset-1"
           href="/#/especial-sppo/interactive"
           target="_blank"
           rel="noreferrer"
         >
-          clique aqui
+          Linhas que voltaram
+        </a>
+        <br />e{" "}
+        <a
+          className="font-bold decoration-1 underline-offset-1"
+          href="https://mapa-subsidio.dados.rio/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Até onde você consegue chegar em 2h de ônibus?
         </a>
       </styles.Interactive>
     </styles.CapaDiv>
@@ -81,7 +87,7 @@ export function Intro(
   return (
     <styles.IntroDiv id={props.id}>
       <styles.IntroText>
-        {/* <styles.IntroTitle>Introdução</styles.IntroTitle> */}
+        <styles.IntroTitle>Introdução</styles.IntroTitle>
         Desde o dia 1º de junho deste ano, quando o acordo entre Prefeitura,
         Ministério Público e empresas de ônibus entrou em vigor, os cariocas
         viram a volta de XX linhas de ônibus nas ruas da capital fluminense.
@@ -136,9 +142,9 @@ export function Historia1(
   return (
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <styles.ContainerCard>
-        <styles.IntroTitle>
+        {/* <styles.IntroTitle>
           A história do transporte por ônibus na cidade
-        </styles.IntroTitle>
+        </styles.IntroTitle> */}
         <styles.TextCard>
           Desde os anos 60, o sistema de transporte por ônibus na cidade do Rio
           de Janeiro funcionava por meio de permissões dadas às empresas.
@@ -218,7 +224,11 @@ export function Pandemia(
   return (
     <styles.IntroDiv id={props.id}>
       <styles.IntroText>
+<<<<<<< HEAD
         <styles.IntroTitle>A pandemia</styles.IntroTitle>
+=======
+        <styles.IntroTitle>Pandemia</styles.IntroTitle>
+>>>>>>> 8c04c3def9674fdcf7970cf3bea4cec125ccba34
         Com a chegada da Covid-19, a situação se agravou. Com as restrições
         sanitárias e a redução do PIB, o transporte público ficou menos
         movimentado e o número de passageiros, que já apresentava queda nos
@@ -246,7 +256,6 @@ export function GraficoPassageiros(
           seu valor subiu substancialmente nos últimos anos e consertar ou
           comprar novos veículos ficou ainda mais caro.
         </styles.TextCard>
-        <img src={queda} className="mt-12"></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -268,7 +277,6 @@ export function GraficoDolar(
           combustíveis no país. Para efeitos de comparação, o valor do diesel
           subiu de R$3,75/L em 2019 para R$6,91/L em 2022.
         </styles.TextCard>
-        <img src={dolar} className="mt-12"></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -291,7 +299,15 @@ export function GraficoDiesel(
           diminuiu. Como resultado, vemos mais veículos lotados e a cobertura do
           transporte público diminuindo na cidade.
         </styles.TextCard>
-        <img src={diesel} className="mt-12"></img>
+        <iframe
+          class="w-full aspect-video"
+          title="Preço médio do diesel"
+          scrolling="no"
+          frameborder="0"
+          id="datawrapper-chart-8l6Uo"
+          aria-label="Gráfico de coluna"
+          src="https://datawrapper.dwcdn.net/8l6Uo/2/"
+        ></iframe>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -308,7 +324,9 @@ export function Virada(
   return (
     <styles.IntroDiv id={props.id}>
       <styles.IntroText>
-        <styles.IntroTitle>O ponto de virada</styles.IntroTitle>
+        <styles.IntroTitle>
+          O ponto de virada e o fim da caixa preta
+        </styles.IntroTitle>
         Com uma situação alarmante e o descrédito do transporte por ônibus na
         cidade, a Prefeitura decidiu reformular este sistema. Entretanto, para
         que isso fosse implementado, foi preciso muito diálogo.
@@ -337,7 +355,6 @@ export function Caixa(
   return (
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <styles.ContainerCard>
-        <styles.IntroTitle>O fim da caixa preta</styles.IntroTitle>
         <styles.TextCard>
           Agora, com o novo acordo judicial, os consórcios renunciam a
           administração do BRT e da bilhetagem, além de serem obrigadas a enviar
@@ -363,7 +380,6 @@ export function Foco(
   return (
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <styles.ContainerCard>
-        <styles.IntroTitle>Foco onde mais precisa</styles.IntroTitle>
         <styles.TextCard>
           O restabelecimento das linhas canceladas também está previsto no
           acordo. A prioridade é que elas voltem a circular justamente nas áreas
@@ -422,12 +438,16 @@ export function Graficos(
   return (
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <styles.ContainerCard>
+<<<<<<< HEAD
         <styles.IntroTitle>Texto</styles.IntroTitle>
         <styles.TextCard>
           Com a volta destas linhas, o acesso do cidadão à escolas, hospitais e
           postos de saúde voltou a ser mais ágil. A ida ao trabalho também foi
           encurtada, como mostra os gráficos a seguir.{" "}
         </styles.TextCard>
+=======
+        <styles.TextCard>Aqui vai o texto antes dos graficos</styles.TextCard>
+>>>>>>> 8c04c3def9674fdcf7970cf3bea4cec125ccba34
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -514,24 +534,17 @@ export function Passagem(
         volte com as linhas ou não cumpra com a quilometragem requisitada pela
         Prefeitura, nenhum valor adicional da tarifa de R$ 4,05 será repassado e
         sua concessão será cancelada.
+        <br />
+        <br />
+        O contrato de concessão atual teve seu prazo reduzido em 2 anos e apenas
+        a Prefeitura tem a prerrogativa de rever o acordo em caso de
+        descumprimento por parte dos operadores, garantindo o comprometimento
+        desta nova gestão do transporte na cidade.
+        <br />
+        <br />O plano devidamente implementado, permitirá um transporte com
+        qualidade e transparência para a população carioca.
       </styles.IntroText>
     </styles.IntroDiv>
-  );
-}
-
-export function Fluxo(
-  props = {
-    id: "",
-    ref: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
-      <styles.ContainerCard2>
-        <img src={fluxo} className="mt-12 mb-12"></img>
-      </styles.ContainerCard2>
-    </styles.ChapterGenericDiv>
   );
 }
 
@@ -557,7 +570,6 @@ export function Fim(
         e transparência para a população carioca.
         <br />
         <br />
-        Link para acessar o site com o antes e o depois do acordo
       </styles.IntroText>
     </styles.IntroDiv>
   );
