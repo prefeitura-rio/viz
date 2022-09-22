@@ -119,10 +119,6 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
-      case "fim":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
       case "creditos":
         setPosition(chapterMap.Creditos().location);
         setLayers(chapterMap.Creditos().layers);
@@ -346,23 +342,6 @@ export default function SubsidioSPPO() {
       },
     });
 
-    const tl30 = gsap.timeline();
-    tl30
-      .set("#fim", { opacity: 0 })
-      .to("#fim", { opacity: 0, duration: 30 })
-      .to("#fim", { opacity: 1, duration: 6 })
-      .to("#fim", { opacity: 1, duration: 20 })
-      .to("#fim", { opacity: 0, duration: 6 })
-      .to("#fim", { opacity: 0, duration: 28 });
-
-    ScrollTrigger.create({
-      animation: tl30,
-      trigger: "#fim",
-      onToggle: () => {
-        setChapterNumberMap("fim");
-      },
-    });
-
     const tl9 = gsap.timeline();
     tl9
       .set("#creditos", { opacity: 0 })
@@ -422,7 +401,6 @@ export default function SubsidioSPPO() {
       <chapterDiv.Educacao id={"educacao"} />
       <chapterDiv.Trabalho id={"trabalho"} />
       <chapterDiv.Passagem id={"passagem"} />
-      {/* <chapterDiv.Fim id={"fim"} /> */}
       <chapterDiv.Creditos id={"creditos"} />
     </>
   );
