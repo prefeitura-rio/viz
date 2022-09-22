@@ -90,7 +90,8 @@ export function Intro(
         <styles.IntroTitle>Introdução</styles.IntroTitle>
         Desde o dia 1º de junho deste ano, quando o acordo entre Prefeitura,
         Ministério Público e empresas de ônibus entrou em vigor, os cariocas
-        viram a volta de XX linhas de ônibus nas ruas da capital fluminense.
+        viram a volta de XX linhas de ônibus nas ruas da capital fluminense,
+        como mostramos no mapa abaixo.
         <br />
         <br />
         Isso só foi possível graças a um acordo judicial, estabelecido entre a
@@ -109,8 +110,9 @@ export function Intro(
         maravilhosa.
         <br />
         <br />
-        Nesta reportagem especial, feita pelo Escritório de Dados, explicaremos
-        como já estamos fazendo isso.
+        Nesta reportagem especial, feita pelo Escritório de Dados, vamos falar
+        sobre como a Prefeitura está trabalhando para melhorar ainda mais a
+        locomoção do carioca.
       </styles.IntroText>
     </styles.IntroDiv>
   );
@@ -224,11 +226,7 @@ export function Pandemia(
   return (
     <styles.IntroDiv id={props.id}>
       <styles.IntroText>
-<<<<<<< HEAD
         <styles.IntroTitle>A pandemia</styles.IntroTitle>
-=======
-        <styles.IntroTitle>Pandemia</styles.IntroTitle>
->>>>>>> 8c04c3def9674fdcf7970cf3bea4cec125ccba34
         Com a chegada da Covid-19, a situação se agravou. Com as restrições
         sanitárias e a redução do PIB, o transporte público ficou menos
         movimentado e o número de passageiros, que já apresentava queda nos
@@ -438,16 +436,12 @@ export function Graficos(
   return (
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <styles.ContainerCard>
-<<<<<<< HEAD
         <styles.IntroTitle>Texto</styles.IntroTitle>
         <styles.TextCard>
           Com a volta destas linhas, o acesso do cidadão à escolas, hospitais e
           postos de saúde voltou a ser mais ágil. A ida ao trabalho também foi
           encurtada, como mostra os gráficos a seguir.{" "}
         </styles.TextCard>
-=======
-        <styles.TextCard>Aqui vai o texto antes dos graficos</styles.TextCard>
->>>>>>> 8c04c3def9674fdcf7970cf3bea4cec125ccba34
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
