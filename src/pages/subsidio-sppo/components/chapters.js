@@ -84,8 +84,7 @@ export function Intro(
         {/* <styles.IntroTitle>Introdução</styles.IntroTitle> */}
         Desde o dia 1º de junho deste ano, quando o acordo entre Prefeitura,
         Ministério Público e empresas de ônibus entrou em vigor, os cariocas
-        puderam ver, assim como no mapa abaixo, a volta de 40 linhas de ônibus
-        nas ruas da capital fluminense.
+        viram a volta de XX linhas de ônibus nas ruas da capital fluminense.
         <br />
         <br />
         Isso só foi possível graças a um acordo judicial, estabelecido entre a
@@ -101,7 +100,7 @@ export function Intro(
         Os cariocas sabem bem quais são os problemas cotidianos enfrentados no
         transporte público da cidade do Rio de Janeiro. E é por isso que a
         Prefeitura está trabalhando para melhorar a mobilidade na nossa cidade
-        maravilhosa!
+        maravilhosa.
         <br />
         <br />
         Nesta reportagem especial, feita pelo Escritório de Dados, explicaremos
@@ -219,10 +218,12 @@ export function Pandemia(
   return (
     <styles.IntroDiv id={props.id}>
       <styles.IntroText>
+        <styles.IntroTitle>A pandemia</styles.IntroTitle>
         Com a chegada da Covid-19, a situação se agravou. Com as restrições
         sanitárias e a redução do PIB, o transporte público ficou menos
         movimentado e o número de passageiros, que já apresentava queda nos
-        últimos anos, diminuiu ainda mais.
+        últimos anos, diminuiu ainda mais. Além disso, veículos que já estavam
+        depredados ou sem a devida conservação ficaram largados.
       </styles.IntroText>
     </styles.IntroDiv>
   );
@@ -240,12 +241,10 @@ export function GraficoPassageiros(
     <styles.ChapterGenericDiv id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard>
-          Além disso, veículos que já estavam depredados ou sem a devida
-          conservação ficaram largados. A alta do dólar durante a crise
-          sanitária que assolou o mundo explica essa equação: como as peças e
-          ferramentas são feitas fora do país, o seu valor subiu
-          substancialmente nos últimos anos e consertar ou comprar novos
-          veículos ficou ainda mais caro.
+          A alta do dólar durante a crise sanitária que assolou o mundo explica
+          essa equação: como as peças e ferramentas são feitas fora do país, o
+          seu valor subiu substancialmente nos últimos anos e consertar ou
+          comprar novos veículos ficou ainda mais caro.
         </styles.TextCard>
         <img src={queda} className="mt-12"></img>
       </styles.ContainerCard>
@@ -424,7 +423,11 @@ export function Graficos(
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <styles.ContainerCard>
         <styles.IntroTitle>Texto</styles.IntroTitle>
-        <styles.TextCard>Aqui vai o texto antes dos graficos</styles.TextCard>
+        <styles.TextCard>
+          Com a volta destas linhas, o acesso do cidadão à escolas, hospitais e
+          postos de saúde voltou a ser mais ágil. A ida ao trabalho também foi
+          encurtada, como mostra os gráficos a seguir.{" "}
+        </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );

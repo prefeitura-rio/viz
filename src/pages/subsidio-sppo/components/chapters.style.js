@@ -122,7 +122,7 @@ export const TextOrange = tw.div`
 
 export const ChapterGenericDiv = tw.div`
   flex
-  w-full h-screen 
+  w-full h-[150vh] 
   items-center
   -z-10
 `;
