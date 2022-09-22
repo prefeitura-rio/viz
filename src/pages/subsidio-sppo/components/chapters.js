@@ -254,6 +254,15 @@ export function GraficoPassageiros(
           seu valor subiu substancialmente nos últimos anos e consertar ou
           comprar novos veículos ficou ainda mais caro.
         </styles.TextCard>
+        <iframe
+          class="w-full aspect-video"
+          title="Preço médio do dólar"
+          scrolling="no"
+          frameborder="0"
+          id="datawrapper-chart-bv5y3"
+          aria-label="Gráfico de coluna"
+          src="https://datawrapper.dwcdn.net/bv5y3/2/"
+        ></iframe>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -277,12 +286,12 @@ export function GraficoDolar(
         </styles.TextCard>
         <iframe
           class="w-full aspect-video"
-          title="Preço médio do dólar"
+          title="Preço médio do diesel"
           scrolling="no"
           frameborder="0"
-          id="datawrapper-chart-bv5y3"
+          id="datawrapper-chart-8l6Uo"
           aria-label="Gráfico de coluna"
-          src="https://datawrapper.dwcdn.net/bv5y3/2/"
+          src="https://datawrapper.dwcdn.net/8l6Uo/2/"
         ></iframe>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -306,15 +315,6 @@ export function GraficoDiesel(
           diminuiu. Como resultado, vemos mais veículos lotados e a cobertura do
           transporte público diminuindo na cidade.
         </styles.TextCard>
-        <iframe
-          class="w-full aspect-video"
-          title="Preço médio do diesel"
-          scrolling="no"
-          frameborder="0"
-          id="datawrapper-chart-8l6Uo"
-          aria-label="Gráfico de coluna"
-          src="https://datawrapper.dwcdn.net/8l6Uo/2/"
-        ></iframe>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -445,7 +445,6 @@ export function Graficos(
   return (
     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
       <styles.ContainerCard>
-        <styles.IntroTitle>Texto</styles.IntroTitle>
         <styles.TextCard>
           Com a volta destas linhas, o acesso do cidadão à escolas, hospitais e
           postos de saúde voltou a ser mais ágil. A ida ao trabalho também foi
@@ -537,12 +536,6 @@ export function Passagem(
         volte com as linhas ou não cumpra com a quilometragem requisitada pela
         Prefeitura, nenhum valor adicional da tarifa de R$ 4,05 será repassado e
         sua concessão será cancelada.
-        <br />
-        <br />
-        O contrato de concessão atual teve seu prazo reduzido em 2 anos e apenas
-        a Prefeitura tem a prerrogativa de rever o acordo em caso de
-        descumprimento por parte dos operadores, garantindo o comprometimento
-        desta nova gestão do transporte na cidade.
         <br />
         <br />O plano devidamente implementado, permitirá um transporte com
         qualidade e transparência para a população carioca.
