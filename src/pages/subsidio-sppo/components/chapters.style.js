@@ -127,6 +127,13 @@ export const ChapterGenericDiv = tw.div`
   -z-10
 `;
 
+export const ChapterGraficoDiv = tw.div`
+  flex
+  w-full h-screen 
+  items-center
+  -z-10
+`;
+
 export const ChapterMap = tw.div`
   flex
   relative
@@ -170,3 +177,17 @@ export const ContainerCard3 = tw.div`
   w-[616px]
   min-w-[250px]
 `;
+
+export const Grafico = tw.div`
+  m-auto
+  w-[865px]
+  min-w-[250px]
+`;
+
+export const Fundo = tw.div`
+  bg-[#ffffff]  
+  w-full h-screen
+  flex
+  items-center
+  justify-items-center
+  `;

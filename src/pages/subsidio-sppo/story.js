@@ -71,11 +71,23 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
+      case "card-passageiros":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
       case "grafico-dolar":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
+      case "card-dolar":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
       case "grafico-diesel":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+      case "card-diesel":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
@@ -137,7 +149,7 @@ export default function SubsidioSPPO() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: false,
+      markers: true,
       scrub: true,
       // toggleActions: "play reverse play reverse",
     });
@@ -220,8 +232,8 @@ export default function SubsidioSPPO() {
       .to("#pandemia", { opacity: 0, duration: 30 })
       .to("#pandemia", { opacity: 1, duration: 6 })
       .to("#pandemia", { opacity: 1, duration: 20 })
-      .to("#pandemia", { opacity: 0, duration: 6 })
-      .to("#pandemia", { opacity: 0, duration: 28 });
+      .to("#pandemia", { opacity: 1, duration: 6 })
+      .to("#pandemia", { opacity: 1, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl15,
@@ -233,8 +245,18 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       trigger: "#grafico-passageiros",
+      start: "top",
+      end: "bottom",
+      pin: true,
       onToggle: () => {
         setChapterNumberMap("grafico-passageiros");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#card-passageiros",
+      onToggle: () => {
+        setChapterNumberMap("card-passageiros");
       },
     });
 
@@ -246,9 +268,23 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
+      trigger: "#card-dolar",
+      onToggle: () => {
+        setChapterNumberMap("card-dolar");
+      },
+    });
+
+    ScrollTrigger.create({
       trigger: "#grafico-diesel",
       onToggle: () => {
         setChapterNumberMap("grafico-diesel");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#card-diesel",
+      onToggle: () => {
+        setChapterNumberMap("card-diesel");
       },
     });
 
@@ -389,8 +425,11 @@ export default function SubsidioSPPO() {
       <chapterDiv.Historia2 id={"historia-2"} />
       <chapterDiv.Pandemia id={"pandemia"} />
       <chapterDiv.GraficoPassageiros id={"grafico-passageiros"} />
+      <chapterDiv.CardPassageiros id={"card-passageiros"} />
       <chapterDiv.GraficoDolar id={"grafico-dolar"} />
+      <chapterDiv.CardDolar id={"card-dolar"} />
       <chapterDiv.GraficoDiesel id={"grafico-diesel"} />
+      <chapterDiv.CardDiesel id={"card-diesel"} />
       <chapterDiv.Virada id={"virada"} />
       <chapterDiv.Caixa id={"caixa"} />
       <chapterDiv.Foco id={"foco"} />

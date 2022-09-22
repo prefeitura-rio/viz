@@ -246,6 +246,33 @@ export function GraficoPassageiros(
   props = setDefaultProps(props);
 
   return (
+    <styles.ChapterGraficoDiv id={props.id}>
+      <styles.Fundo>
+        <styles.Grafico>
+          <iframe
+            class="w-full aspect-video"
+            title="Passageiros transportados"
+            scrolling="no"
+            frameborder="0"
+            id="datawrapper-chart-hoRNU"
+            aria-label="Gráfico de coluna"
+            src="https://datawrapper.dwcdn.net/hoRNU/5/"
+          ></iframe>
+        </styles.Grafico>
+      </styles.Fundo>
+    </styles.ChapterGraficoDiv>
+  );
+}
+
+export function CardPassageiros(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
     <styles.ChapterGenericDiv id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard>
@@ -268,6 +295,33 @@ export function GraficoDolar(
   props = setDefaultProps(props);
 
   return (
+    <styles.ChapterGraficoDiv id={props.id}>
+      <styles.Fundo>
+        <styles.Grafico>
+          <iframe
+            class="w-full aspect-video"
+            title="Preço médio do dólar"
+            scrolling="no"
+            frameborder="0"
+            id="datawrapper-chart-bv5y3"
+            aria-label="Gráfico de coluna"
+            src="https://datawrapper.dwcdn.net/bv5y3/2/"
+          ></iframe>
+        </styles.Grafico>
+      </styles.Fundo>
+    </styles.ChapterGraficoDiv>
+  );
+}
+
+export function CardDolar(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
     <styles.ChapterGenericDiv id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard>
@@ -275,21 +329,39 @@ export function GraficoDolar(
           combustíveis no país. Para efeitos de comparação, o valor do diesel
           subiu de R$3,75/L em 2019 para R$6,91/L em 2022.
         </styles.TextCard>
-        <iframe
-          class="w-full aspect-video"
-          title="Preço médio do dólar"
-          scrolling="no"
-          frameborder="0"
-          id="datawrapper-chart-bv5y3"
-          aria-label="Gráfico de coluna"
-          src="https://datawrapper.dwcdn.net/bv5y3/2/"
-        ></iframe>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
 }
 
 export function GraficoDiesel(
+  props = {
+    id: "",
+    progress: 0,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGraficoDiv id={props.id}>
+      <styles.Fundo>
+        <styles.Grafico>
+          <iframe
+            class="w-full aspect-video"
+            title="Preço médio do diesel"
+            scrolling="no"
+            frameborder="0"
+            id="datawrapper-chart-8l6Uo"
+            aria-label="Gráfico de coluna"
+            src="https://datawrapper.dwcdn.net/8l6Uo/2/"
+          ></iframe>
+        </styles.Grafico>
+      </styles.Fundo>
+    </styles.ChapterGraficoDiv>
+  );
+}
+
+export function CardDiesel(
   props = {
     id: "",
     progress: 0,
@@ -306,15 +378,6 @@ export function GraficoDiesel(
           diminuiu. Como resultado, vemos mais veículos lotados e a cobertura do
           transporte público diminuindo na cidade.
         </styles.TextCard>
-        <iframe
-          class="w-full aspect-video"
-          title="Preço médio do diesel"
-          scrolling="no"
-          frameborder="0"
-          id="datawrapper-chart-8l6Uo"
-          aria-label="Gráfico de coluna"
-          src="https://datawrapper.dwcdn.net/8l6Uo/2/"
-        ></iframe>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
