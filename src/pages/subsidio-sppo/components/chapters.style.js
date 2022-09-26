@@ -137,9 +137,7 @@ export const ChapterGraficoDiv = tw.div`
 export const ChapterMap = tw.div`
   flex
   relative
-  w-full h-screen
-  mt-60
-  mb-60
+  w-full h-[150vh] 
   items-center
   `;
 
