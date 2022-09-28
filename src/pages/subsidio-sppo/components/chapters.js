@@ -237,55 +237,6 @@ export function Pandemia(
   );
 }
 
-export function GraficoPassageiros(
-  props = {
-    id: "",
-    progress: 0,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGraficoDiv id={props.id}>
-      <styles.Fundo>
-        <styles.Grafico>
-          <iframe
-            class="w-full aspect-video"
-            title="Passageiros transportados"
-            scrolling="no"
-            frameborder="0"
-            id="datawrapper-chart-hoRNU"
-            aria-label="Gráfico de coluna"
-            src="https://datawrapper.dwcdn.net/hoRNU/5/"
-          ></iframe>
-        </styles.Grafico>
-      </styles.Fundo>
-    </styles.ChapterGraficoDiv>
-  );
-}
-
-export function CardPassageiros(
-  props = {
-    id: "",
-    progress: 0,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv id={props.id}>
-      <styles.ContainerCard>
-        <styles.TextCard>
-          A alta do dólar durante a crise sanitária que assolou o mundo explica
-          essa equação: como as peças e ferramentas são feitas fora do país, o
-          seu valor subiu substancialmente nos últimos anos e consertar ou
-          comprar novos veículos ficou ainda mais caro.
-        </styles.TextCard>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
 export function GraficoDolar(
   props = {
     id: "",
@@ -296,7 +247,7 @@ export function GraficoDolar(
 
   return (
     <styles.ChapterGraficoDiv id={props.id}>
-      <styles.Fundo>
+      <styles.Fundo id={"pin-dolar"}>
         <styles.Grafico>
           <iframe
             class="w-full aspect-video"
@@ -309,28 +260,15 @@ export function GraficoDolar(
           ></iframe>
         </styles.Grafico>
       </styles.Fundo>
-    </styles.ChapterGraficoDiv>
-  );
-}
-
-export function CardDolar(
-  props = {
-    id: "",
-    progress: 0,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv id={props.id}>
-      <styles.ContainerCard>
+      <styles.ContainerCard className="z-50">
         <styles.TextCard>
-          Soma-se a isso outro problema, conhecido pelos brasileiros: a alta dos
-          combustíveis no país. Para efeitos de comparação, o valor do diesel
-          subiu de R$3,75/L em 2019 para R$6,91/L em 2022.
+          A alta do dólar durante a crise sanitária que assolou o mundo explica
+          essa equação: como as peças e ferramentas são feitas fora do país, o
+          seu valor subiu substancialmente nos últimos anos e consertar ou
+          comprar novos veículos ficou ainda mais caro.
         </styles.TextCard>
       </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
+    </styles.ChapterGraficoDiv>
   );
 }
 
@@ -344,7 +282,7 @@ export function GraficoDiesel(
 
   return (
     <styles.ChapterGraficoDiv id={props.id}>
-      <styles.Fundo>
+      <styles.Fundo id={"pin-diesel"}>
         <styles.Grafico>
           <iframe
             class="w-full aspect-video"
@@ -357,11 +295,18 @@ export function GraficoDiesel(
           ></iframe>
         </styles.Grafico>
       </styles.Fundo>
+      <styles.ContainerCard className="z-50">
+        <styles.TextCard>
+          Soma-se a isso outro problema, conhecido pelos brasileiros: a alta dos
+          combustíveis no país. Para efeitos de comparação, o valor do diesel
+          subiu de R$3,75/L em 2019 para R$6,91/L em 2022.
+        </styles.TextCard>
+      </styles.ContainerCard>
     </styles.ChapterGraficoDiv>
   );
 }
 
-export function CardDiesel(
+export function GraficoPassageiros(
   props = {
     id: "",
     progress: 0,
@@ -370,8 +315,21 @@ export function CardDiesel(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv id={props.id}>
-      <styles.ContainerCard>
+    <styles.ChapterGraficoDiv id={props.id}>
+      <styles.Fundo id={"pin-passageiros"}>
+        <styles.Grafico>
+          <iframe
+            class="w-full aspect-video"
+            title="Passageiros transportados"
+            scrolling="no"
+            frameborder="0"
+            id="datawrapper-chart-hoRNU"
+            aria-label="Gráfico de coluna"
+            src="https://datawrapper.dwcdn.net/hoRNU/5/"
+          ></iframe>
+        </styles.Grafico>
+      </styles.Fundo>
+      <styles.ContainerCard className="z-50">
         <styles.TextCard>
           Ou seja, com um número menor de passageiros e o aumento de peças e
           diesel, o custo para operar o sistema aumentou enquanto a receita
@@ -379,7 +337,7 @@ export function CardDiesel(
           transporte público diminuindo na cidade.
         </styles.TextCard>
       </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
+    </styles.ChapterGraficoDiv>
   );
 }
 

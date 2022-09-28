@@ -67,19 +67,7 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
-      case "grafico-passageiros":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
-      case "card-passageiros":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
       case "grafico-dolar":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
-      case "card-dolar":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
@@ -87,7 +75,7 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
-      case "card-diesel":
+      case "grafico-passageiros":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
@@ -244,47 +232,32 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#grafico-passageiros",
+      trigger: "#grafico-dolar",
       start: "top",
       end: "bottom",
-      pin: true,
-      onToggle: () => {
-        setChapterNumberMap("grafico-passageiros");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#card-passageiros",
-      onToggle: () => {
-        setChapterNumberMap("card-passageiros");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#grafico-dolar",
+      pin: "#pin-dolar",
       onToggle: () => {
         setChapterNumberMap("grafico-dolar");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#card-dolar",
-      onToggle: () => {
-        setChapterNumberMap("card-dolar");
-      },
-    });
-
-    ScrollTrigger.create({
       trigger: "#grafico-diesel",
+      start: "top",
+      end: "bottom",
+      pin: "#pin-diesel",
       onToggle: () => {
         setChapterNumberMap("grafico-diesel");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#card-diesel",
+      trigger: "#grafico-passageiros",
+      start: "top",
+      end: "bottom",
+      pin: "#pin-passageiros",
       onToggle: () => {
-        setChapterNumberMap("card-diesel");
+        setChapterNumberMap("grafico-passageiros");
       },
     });
 
@@ -424,12 +397,9 @@ export default function SubsidioSPPO() {
       <chapterDiv.HistoriaFoto id={"historia-foto"} />
       <chapterDiv.Historia2 id={"historia-2"} />
       <chapterDiv.Pandemia id={"pandemia"} />
-      <chapterDiv.GraficoPassageiros id={"grafico-passageiros"} />
-      <chapterDiv.CardPassageiros id={"card-passageiros"} />
       <chapterDiv.GraficoDolar id={"grafico-dolar"} />
-      <chapterDiv.CardDolar id={"card-dolar"} />
       <chapterDiv.GraficoDiesel id={"grafico-diesel"} />
-      <chapterDiv.CardDiesel id={"card-diesel"} />
+      <chapterDiv.GraficoPassageiros id={"grafico-passageiros"} />
       <chapterDiv.Virada id={"virada"} />
       <chapterDiv.Caixa id={"caixa"} />
       <chapterDiv.Foco id={"foco"} />

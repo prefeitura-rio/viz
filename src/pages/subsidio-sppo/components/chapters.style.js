@@ -129,7 +129,8 @@ export const ChapterGenericDiv = tw.div`
 
 export const ChapterGraficoDiv = tw.div`
   flex
-  w-full h-screen 
+  flex-col
+  w-full h-[150vh] 
   items-center
   -z-10
 `;
