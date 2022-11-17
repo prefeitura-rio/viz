@@ -13,10 +13,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - viz.dados.rio
+        - viz-staging.dados.rio
       secretName: viz-dados-rio-tls
   rules:
-    - host: viz.dados.rio
+    - host: viz-staging.dados.rio
       http:
         paths:
           - path: /
