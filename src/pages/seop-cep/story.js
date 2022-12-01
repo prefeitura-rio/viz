@@ -320,7 +320,7 @@ export default function SubsidioSPPO() {
         scrollZoom={false}
         showLayers={false}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
-        mapStyle="mapbox://styles/escritoriodedados/cl6e3p6as001814qxcun8bjo1"
+        mapStyle="mapbox://styles/escritoriodedados/clb5mnbms001z14o76898gh5c"
         layers={layers}
         location={location}
         mapCSS={{
@@ -336,12 +336,12 @@ export default function SubsidioSPPO() {
         animationSpeed={1}
       />
       <chapterDiv.Capa id={"capa"} />
-      <chapterDiv.Intro id={"intro"} />
+      {/* <chapterDiv.Intro id={"intro"} /> */}
       <chapterDiv.Zoom id={"zoom"} />
       <chapterDiv.Exemplo1 id={"exemplo1"} />
       <chapterDiv.Exemplo2 id={"exemplo2"} />
       {/* <chapterDiv.Exemplo3 id={"exemplo3"} /> */}
-      <chapterDiv.Oeste id={"oeste"} />
+      {/* <chapterDiv.Oeste id={"oeste"} />
       <chapterDiv.Mapa id={"mapa"} />
       <chapterDiv.Solucao id={"solucao"} />
       <chapterDiv.Prejuizo id={"prejuizo"} />
@@ -350,7 +350,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Seop1 id={"seop1"} />
       <chapterDiv.Seop2 id={"seop2"} />
       <chapterDiv.Seop3 id={"seop3"} />
-      <chapterDiv.Seop4 id={"seop4"} />
+      <chapterDiv.Seop4 id={"seop4"} /> */}
       <chapterDiv.Fim id={"fim"} />
     </>
   );

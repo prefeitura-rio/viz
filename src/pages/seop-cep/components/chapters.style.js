@@ -2,7 +2,7 @@
 import { Container } from "postcss";
 import styled from "styled-components";
 import tw from "tailwind-styled-components";
-import capa from "../images/capa.gif";
+import capa from "../images/capa.png";
 
 export const CapaDivSC = styled.div`
   background-image: url(${capa});
@@ -13,7 +13,8 @@ export const CapaDivSC = styled.div`
 export const CapaDiv = tw(CapaDivSC)`
   h-screen w-full
   flex flex-col 
-  justify-between items-center 
+  justify-between items-left
+  lg:pl-[10%]
   pl-5 pr-5  
 `;
 // lg:mr-20 lg:ml-20
@@ -21,29 +22,31 @@ export const CapaDiv = tw(CapaDivSC)`
 // sm:w
 export const Title = tw.div`
   mt-[10%]
-  lg:mt-[21%]
+  lg:mt-[16%]
   lg:mb-3    
-  font-serif font-bold  
-  text-4xl text-center text-white
-  lg:text-4xl
+  font-sans font-bold  
+  text-[100px] text-left text-red-500
+  lg:text-[100px]
+  lg:leading-[90px]
   max-w-3xl
   `;
 
 // export const Subtitle = tw.div`
-//   font-serif
-//   text-base text-center text-white
-//   lg:text-xl
+//   font-sans
+//   text-base text-left text-gray-600
+//   lg:text-2xl
 //   max-w-4xl
 // `;
 
 export const AuthorText = tw.div`
   mb-[15%]
   lg:mb-[45%]
-  font-serif
-  text-sm text-center text-white
-  lg:text-base
+  font-sans
+  text-sm text-left text-red-500
   max-w-4xl
-`;
+  lg:leading-[150%]
+  lg:mt-[10px]
+ `;
 
 export const Credito = tw.div`
   mb-7
@@ -86,6 +89,18 @@ export const ChapterGenericDiv1 = tw.div`
   justify-center
   lg:justify-start
   lg:p-[10%]
+  bg-white
+  -z-10 
+  `;
+
+export const ChapterGenericDiv2 = tw.div`
+  flex
+  w-full h-[100vh] 
+  items-center
+  justify-center
+  lg:justify-start
+  lg:p-[10%]
+  bg-red-500
   text-white
   -z-10 
   `;
@@ -142,15 +157,21 @@ bg-black/75
 `;
 
 export const ContainerCard1 = tw.div`
-  p-5
-  bg-opacity-[20%] backdrop-blur-sm
-  bg-black/75
+  backdrop-blur-sm
+  bg-white
+  max-w-xs
+  lg:max-w-lg
+`;
+
+export const ContainerCard2 = tw.div`
+  backdrop-blur-sm
+  bg-red-500
   max-w-xs
   lg:max-w-lg
 `;
 
 const TextCardSC = styled.div`
-  color: #ffffff;
+  color: #000000;
 `;
 
 export const TextCard = tw(TextCardSC)`
@@ -160,8 +181,8 @@ export const TextCard = tw(TextCardSC)`
 `;
 
 export const TextCard1 = tw(TextCardSC)`
-  font-serif  
-  text-lg
+  font-sans  
+  text-base
   text-left
   mt-0
   mb-0
@@ -183,7 +204,7 @@ export const Grid = tw.div`
 `;
 
 const BigNumberSC = styled.div`
-  color: #a96e04;
+  color: #ef4444;
   font-weight: 700;
 `;
 
@@ -205,7 +226,7 @@ export const BigNumber1 = tw(BigNumber)`
 `;
 
 const TextyellowSC = styled.div`
-  background: #a96e04;
+  background: #ef4444;
 `;
 
 export const Textyellow = tw(TextyellowSC)`

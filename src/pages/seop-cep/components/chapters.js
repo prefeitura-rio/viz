@@ -6,6 +6,7 @@ import tw from "tailwind-styled-components";
 
 // IMAGENS
 import logo from "../images/logo.png";
+import logo1 from "../images/logo1.png";
 import exemplo1 from "../images/exemplo1.png";
 import exemplo2 from "../images/exemplo2.png";
 import seop1 from "../images/seop1.png";
@@ -34,13 +35,14 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
-      <img src={logo} className="w-24 mt-[2vh]  lg:w-32"></img>
+      <img src={logo1} className="w-24 mt-[2vh] lg:w-32"></img>
       <styles.Title>
-        Mais de 1.300 construções irregulares a menos no Rio de Janeiro
+        SEU RIO
+        <br />
+        SUA RUA
       </styles.Title>
       {/* <styles.Subtitle>
-        Segurança para os moradores, Prejuízo para o crime organizado,
-        Preservação das áreas verdes
+        O papel da Prefeitura na Segurança Pública
       </styles.Subtitle> */}
       <div>
         <styles.AuthorText>
@@ -52,24 +54,15 @@ export function Capa(
             rel="noreferrer"
           >
             Escritório de Dados
-          </a>
-          ,{" "}
+          </a>{" "}
+          <br />e{" "}
           <a
             className="font-bold underline"
             href="http://www.rio.rj.gov.br/web/seop"
             target="_blank"
             rel="noreferrer"
           >
-            Secretaria Municipal de Ordem Pública{" "}
-          </a>
-          e{" "}
-          <a
-            className="font-bold underline"
-            href="http://www.rio.rj.gov.br/web/smac"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Secretaria Municipal de Meio Ambiente da Cidade
+            Secretaria Municipal de Ordem Pública
           </a>
         </styles.AuthorText>
       </div>
@@ -209,14 +202,23 @@ export function Exemplo1(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={exemplo1}></styles.NewsImage>
+        <iframe
+          class="w-full aspect-video"
+          title="Concentração de Crimes de Rua na cidade do Rio de Janeiro em 2019"
+          scrolling="no"
+          frameborder="0"
+          id="datawrapper-chart-sR4uQ"
+          aria-label="Gráfico de coluna"
+          src="https://datawrapper.dwcdn.net/sR4uQ/1/"
+        ></iframe>
         <styles.Credito>
           Imagem: Prefeitura da Cidade do Rio Janeiro
         </styles.Credito>
         <styles.TextCard1>
-          Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, de 40
-          anos, morreram após o desabamento de dois prédios, construídos
-          irregularmente na região de{" "}
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.{" "}
           <styles.Textyellow>
             {" "}
             <a
@@ -225,11 +227,12 @@ export function Exemplo1(
               target="_blank"
               rel="noreferrer"
             >
-              Muzema,
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
             </a>
           </styles.Textyellow>{" "}
-          no Itanhangá, Zona Oeste. Ao todo, 24 pessoas morreram no desastre,
-          que ocorreu em abril de 2019.
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
@@ -245,32 +248,17 @@ export function Exemplo2(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <styles.NewsImage src={exemplo2}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard2>
         <styles.TextCard1>
-          Maitê Gomes Abreu, de 2 anos, e seu pai, Natan Gomes, de 30 anos,
-          foram encontrados mortos após nove horas de buscas entre os escombros.
-          Pai e filha foram vítimas do desabamento de um prédio de quatro
-          andares em{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://assistenciasocial.prefeitura.rio/noticias/prefeitura-atua-para-minimizar-os-impactos-do-desabamento-de-um-imovel-em-rio-das-pedras/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Rio das Pedras,
-            </a>
-          </styles.Textyellow>{" "}
-          na Zona Oeste em junho do ano passado. O imóvel era irregular.
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. Lorem Ipsum is simply dummy
+          text of the printing and typesetting industry.
         </styles.TextCard1>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
+      </styles.ContainerCard2>
+    </styles.ChapterGenericDiv2>
   );
 }
 
@@ -470,13 +458,20 @@ export function Zoom(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          Infelizmente, nos últimos anos, casos recorrentes de desabamentos
-          foram registrados na cidade.{" "}
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged.{" "}
           <styles.Textyellow>
-            Prédios construídos pelo crime organizado, sem a infraestrutura e os
-            cuidados técnicos necessários, vieram abaixo.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
           </styles.Textyellow>{" "}
-          Famílias inteiras perderam seus lares e suas vidas:
+          It was popularised in the 1960s with the release of Letraset sheets
+          containing Lorem Ipsum passages, and more recently with desktop
+          publishing software like Aldus PageMaker including versions of Lorem
+          Ipsum.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
