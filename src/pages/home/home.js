@@ -9,6 +9,9 @@ export default function Home() {
           <Link to="/especial-seop/demolicoes">Especial SEOP | Demolicoes</Link>
         </li>
         <li>
+          <Link to="/especial-seop/cep">Especial SEOP | CEP</Link>
+        </li>
+        <li>
           <Link to="/especial-sppo/subsidio">Especial SPPO | Subsidio</Link>
         </li>
         <li>

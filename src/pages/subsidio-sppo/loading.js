@@ -1,6 +1,5 @@
 import tw from "tailwind-styled-components";
 import styled from "styled-components";
-// import logo from "../../pages/demolicoes-seop/images/logo.png";
 import logo from "../../pages/subsidio-sppo/images/logo1.png";
 
 const LoadingDiv = tw.div`

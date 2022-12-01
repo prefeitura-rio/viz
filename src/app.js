@@ -18,6 +18,7 @@ const Interactive = lazy(() => import("./pages/subsidio-sppo/interactive"));
 const TestLineChart = lazy(() => import("./pages/sandbox/test_linechart"));
 const TestMap = lazy(() => import("./pages/sandbox/test_map"));
 const DemolicoesSEOP = lazy(() => import("./pages/demolicoes-seop/story"));
+const CepSEOP = lazy(() => import("./pages/seop-cep/story"));
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -31,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 DemolicoesSEOP;
+CepSEOP;
 function App() {
   return (
     <div id={"main"}>
@@ -42,6 +44,11 @@ function App() {
               path="/especial-seop/demolicoes"
               element={<DemolicoesSEOP />}
             ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route path="/especial-seop/cep" element={<CepSEOP />}></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<LoadingSubsidioSPPO />}>
