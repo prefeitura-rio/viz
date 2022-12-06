@@ -23,8 +23,8 @@ export const Title = tw.div`
   lg:mt-[18%]
   font-sans font-bold  
   text-[100px] text-left text-red-500
-  lg:text-[100px]
-  lg:leading-[90px]
+  lg:text-[80px]
+  lg:leading-[70px]
     max-w-3xl
   `;
 
@@ -32,7 +32,7 @@ export const Subtitle = tw.div`
   font-sans
   font-normal
   text-lg text-left text-red-500
-  lg:text-xl
+  lg:text-[18px]
   lg:max-w-md
   lg:mt-[20px]
 `;
