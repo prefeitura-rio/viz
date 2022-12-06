@@ -17,35 +17,43 @@ export const CapaDiv = tw(CapaDivSC)`
   lg:pl-[10%]
   pl-5 pr-5  
 `;
-// lg:mr-20 lg:ml-20
-// sm:ml-30 sm:mr-30
-// sm:w
+
 export const Title = tw.div`
   mt-[10%]
-  lg:mt-[16%]
-  lg:mb-3    
+  lg:mt-[18%]
   font-sans font-bold  
   text-[100px] text-left text-red-500
   lg:text-[100px]
   lg:leading-[90px]
-  max-w-3xl
+    max-w-3xl
   `;
 
-// export const Subtitle = tw.div`
-//   font-sans
-//   text-base text-left text-gray-600
-//   lg:text-2xl
-//   max-w-4xl
-// `;
+export const Subtitle = tw.div`
+  font-sans
+  font-normal
+  text-lg text-left text-red-500
+  lg:text-xl
+  lg:max-w-md
+  lg:mt-[20px]
+`;
 
-export const AuthorText = tw.div`
-  mb-[15%]
-  lg:mb-[45%]
+export const CapaAutor = tw.div`
+  h-screen w-full
+  flex flex-row 
+  justify-left items-end
+  lg:mb-[4%] 
   font-sans
   text-sm text-left text-red-500
   max-w-4xl
   lg:leading-[150%]
-  lg:mt-[10px]
+  `;
+
+export const AuthorText = tw.div`
+  font-sans
+  text-sm text-left text-red-500
+  max-w-4xl
+  lg:leading-[150%]
+  lg:ml-[40px]
  `;
 
 export const Credito = tw.div`
@@ -75,26 +83,6 @@ export const IntroText = tw.div`
 
 export const ChapterGenericDiv = tw.div`
   flex
-  w-full h-[150vh]
-  items-center
-  justify-center
-  text-white
-  -z-10
-  `;
-
-export const ChapterGenericDiv1 = tw.div`
-  flex
-  w-full h-[150vh] 
-  items-center
-  justify-center
-  lg:justify-start
-  lg:p-[10%]
-  bg-white
-  -z-10 
-  `;
-
-export const ChapterGenericDiv2 = tw.div`
-  flex
   w-full h-[100vh] 
   items-center
   justify-center
@@ -105,50 +93,51 @@ export const ChapterGenericDiv2 = tw.div`
   -z-10 
   `;
 
+export const ChapterGenericDiv1 = tw.div`
+  flex
+  w-full h-[100vh] 
+  items-center
+  justify-center
+  lg:justify-start
+  lg:p-[10%]
+  -z-10 
+  `;
+
+export const ChapterGenericDiv2 = tw.div`
+flex
+w-full h-[100vh] 
+items-center
+justify-center
+lg:justify-start
+lg:p-[10%]
+-z-10 
+bg-white
+`;
+
 export const IntroDiv = tw.div`
-  w-full h-200
+  w-full h-screen
   bg-opacity-40 backdrop-blur
   flex flex-col 
   justify-center items-center 
   bg-black/50
-  pr-[10%] pl-[10%]
-  lg:pr-[25%]
-  lg:pl-[25%]
-`;
-
-export const Footer = tw.div`
-  w-full h-[20%]
-  bg-opacity-40 backdrop-blur
-  flex flex-col 
-  justify-center items-center 
-  bg-black/50
-  pr-[10%] pl-[10%]
-  lg:pr-[25%]
-  lg:pl-[25%]
-`;
-
-export const NewsImage = tw.img`
-w-full
-mb-3
-mt-[2%]
-`;
-
-export const NewsImage1 = tw.img`
-w-[100%]
-lg:w-[60%]
-mb-3
-mt-[8%]
-lg:mt-[3%]
-`;
-
-export const NewsTitle = tw.div`
-  text-white
-  font-serif
-  text-4xl
-  mb-[15px]
 `;
 
 export const ContainerCard = tw.div`
+  flex flex-row 
+  justify-between items-center 
+  bg-red-500
+`;
+
+export const ContainerCard1 = tw.div`
+  flex flex-col
+  items-left 
+  backdrop-blur-sm
+  bg-red-500
+  max-w-xs
+  lg:max-w-[40%]
+`;
+
+export const ContainerCard2 = tw.div`
   p-5
   bg-opacity-[20%] backdrop-blur-sm
 bg-black/75
@@ -156,73 +145,49 @@ bg-black/75
   lg:max-w-3xl
 `;
 
-export const ContainerCard1 = tw.div`
+export const ContainerCard3 = tw.div`
   backdrop-blur-sm
   bg-white
   max-w-xs
+  lg:p-[48px]
   lg:max-w-lg
 `;
 
-export const ContainerCard2 = tw.div`
+export const ContainerCardCreditos = tw.div`
+  flex flex-col
+  items-left 
   backdrop-blur-sm
   bg-red-500
   max-w-xs
-  lg:max-w-lg
+  lg:max-w-[100%]
 `;
 
 const TextCardSC = styled.div`
   color: #000000;
 `;
 
-export const TextCard = tw(TextCardSC)`
-  font-serif  
-  text-lg
-  text-left
+export const NewsTitle = tw.div`
+  text-white
+  font-sans
+  font-bold
+  text-[24px]
+  mb-[10px]
 `;
 
-export const TextCard1 = tw(TextCardSC)`
+export const TextCard = tw.div`
   font-sans  
   text-base
   text-left
-  mt-0
-  mb-0
+  text-black
 `;
 
-export const Grid1 = tw.div`
-  flex
-  gap-x-0
-  gap-y-5
-  items-end
-  justify-start
-  mb-5
-`;
-
-export const Grid = tw.div`
-  block
-  gap-x-0
-  gap-y-8
-`;
-
-const BigNumberSC = styled.div`
-  color: #ef4444;
-  font-weight: 700;
-`;
-
-export const BigNumber = tw(BigNumberSC)`
-  font-serif  
-  font-bold
-  text-5xl
+export const TextCard1 = tw.div`
+  font-sans  
+  text-[18px]
+  font-light
   text-left
-  self-end
-  lg:text-7xl
-  lg:mb-3
-`;
-
-export const BigNumber1 = tw(BigNumber)`
-  text-2xl
-  ml-2
-  lg:ml-3
-  lg:text-5xl
+  lg:leading-7
+  text-white
 `;
 
 const TextyellowSC = styled.div`

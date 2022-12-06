@@ -5,17 +5,11 @@ import tw from "tailwind-styled-components";
 // import DWChart from "react-datawrapper-chart";
 
 // IMAGENS
-import logo from "../images/logo.png";
 import logo1 from "../images/logo1.png";
-import exemplo1 from "../images/exemplo1.png";
-import exemplo2 from "../images/exemplo2.png";
-import seop1 from "../images/seop1.png";
-import seop2 from "../images/seop2.png";
-import seop3 from "../images/seop3.png";
-import seop4 from "../images/seop4.png";
-import grafico from "../images/grafico.png";
-import legenda from "../images/legenda.png";
 import logoed from "../images/logoed.png";
+import arma from "../images/arma.png";
+import cep from "../images/cep.png";
+import logopref from "../images/logopref.png";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -35,16 +29,17 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
-      <img src={logo1} className="w-24 mt-[2vh] lg:w-32"></img>
       <styles.Title>
         SEU RIO
         <br />
         SUA RUA
       </styles.Title>
-      {/* <styles.Subtitle>
-        O papel da Prefeitura na Segurança Pública
-      </styles.Subtitle> */}
-      <div>
+      <styles.Subtitle>
+        O papel da Prefeitura na Segurança Pública. Entendendo o programa CEP na
+        Prefeitura da Cidade do Rio de Janeiro.
+      </styles.Subtitle>
+      <styles.CapaAutor>
+        <img src={logo1} className=" lg:w-auto lg:h-[50px]"></img>
         <styles.AuthorText>
           Desenvolvido por{" "}
           <a
@@ -65,103 +60,12 @@ export function Capa(
             Secretaria Municipal de Ordem Pública
           </a>
         </styles.AuthorText>
-      </div>
+      </styles.CapaAutor>
     </styles.CapaDiv>
   );
 }
 
-export function Intro(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
-      <styles.IntroText>
-        A proliferação de construções irregulares é um problema que tomou conta
-        da cidade do Rio há algumas décadas. Em áreas sob influência do crime
-        organizado a preocupação é ainda maior. <br /> <br />
-        Estudos apontam que{" "}
-        <styles.Textyellow>
-          a atividade imobiliária se tornou uma das principais fontes
-          financeiras de alguns grupos criminosos.
-        </styles.Textyellow>{" "}
-        Essas construções são realizadas sem autorização da Prefeitura, em áreas
-        públicas e protegidas, e erguidas sem nenhum acompanhamento técnico.
-        <br /> <br /> Por trás de cada prédio construído ilegalmente e sem
-        fiscalização, há inúmeras famílias que vivem sob o risco de terem suas
-        casas desabadas, e perderem, a qualquer momento, sua história e também
-        suas vidas.
-      </styles.IntroText>
-    </styles.IntroDiv>
-  );
-}
-
-export function Solucao(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"solucaoTitle"}>A solução</styles.IntroTitle>
-      <styles.IntroText>
-        Para combater o crescimento desordenado da cidade, o avanço de
-        construções irregulares em áreas ambientalmente protegidas, preservar
-        vidas e asfixiar financeiramente o crime organizado, a{" "}
-        <styles.Textyellow>
-          Secretaria Municipal de Ordem Pública (SEOP) e a Secretaria Municipal
-          de Meio Ambiente da Cidade (SMAC) têm realizado operações constantes
-          de demolição destas construções,
-        </styles.Textyellow>{" "}
-        desde o começo de 2021. <br /> <br />
-        De lá para cá,{" "}
-        <styles.Textyellow>
-          mais de 1.300 imóveis não habitados, não finalizados, erguidos
-          ilegalmente e que traziam riscos à população, foram colocados abaixo.
-        </styles.Textyellow>{" "}
-        Essas ações pouparam a vida de milhares de cariocas que viviam em áreas
-        de risco.
-      </styles.IntroText>
-    </styles.IntroDiv>
-  );
-}
-
-export function Prejuizo(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.Grid>
-          <styles.Grid1>
-            <styles.BigNumber>R$</styles.BigNumber>
-            <styles.BigNumber id="number">0</styles.BigNumber>
-            <styles.BigNumber1>milhões</styles.BigNumber1>
-          </styles.Grid1>
-          <styles.TextCard>
-            Graças as operações realizadas pela Prefeitura, essas organizações
-            ilegais também sentiram no bolso.{" "}
-            <styles.Textyellow>
-              Desde 2021, as operações da secretaria acarretaram um prejuízo
-              estimado em R$646 milhões para os cofres do crime organizado.
-            </styles.Textyellow>{" "}
-          </styles.TextCard>
-        </styles.Grid>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function Grafico(
+export function MapaCapitulo(
   props = {
     id: "",
     chapRef: null,
@@ -172,26 +76,23 @@ export function Grafico(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
-        <styles.NewsImage src={grafico}></styles.NewsImage>
-        <styles.TextCard>
-          Analisando as prioridades da Prefeitura, é possível perceber que o
-          assunto é tratado com a relevância necessária. Isto, entretanto, nem
-          sempre foi assim. Analisando os dados históricos de demolições
-          realizadas na cidade, é possível perceber que, ao longo da{" "}
-          <styles.Textyellow>
-            gestão anterior, apenas 359 demolições foram realizadas,
-          </styles.Textyellow>{" "}
-          número inferior as{" "}
-          <styles.Textyellow>
-            1.313 demolições feitas em apenas um ano e meio pela atual gestão.
-          </styles.Textyellow>{" "}
-        </styles.TextCard>
+        <styles.ContainerCard1>
+          <styles.NewsTitle>Introdução</styles.NewsTitle>
+          <styles.TextCard1>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry.
+          </styles.TextCard1>
+        </styles.ContainerCard1>
+        <img src={arma} className=" lg:w-auto lg:h-[250px]"></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
 }
 
-export function Exemplo1(
+export function MapaUm(
   props = {
     id: "",
     chapRef: null,
@@ -201,45 +102,80 @@ export function Exemplo1(
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <iframe
-          class="w-full aspect-video"
-          title="Concentração de Crimes de Rua na cidade do Rio de Janeiro em 2019"
-          scrolling="no"
-          frameborder="0"
-          id="datawrapper-chart-sR4uQ"
-          aria-label="Gráfico de coluna"
-          src="https://datawrapper.dwcdn.net/sR4uQ/1/"
-        ></iframe>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
-        <styles.TextCard1>
+      <styles.ContainerCard3>
+        <styles.TextCard>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/cidade/prefeitura-inicia-demolicoes-na-muzema/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </a>
-          </styles.Textyellow>{" "}
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </styles.TextCard1>
-      </styles.ContainerCard1>
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </styles.TextCard>
+      </styles.ContainerCard3>
     </styles.ChapterGenericDiv1>
   );
 }
 
-export function Exemplo2(
+export function MapaDois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <styles.TextCard>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </styles.TextCard>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv1>
+  );
+}
+
+export function CepCapitulo(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.ContainerCard1>
+          <styles.NewsTitle>
+            Conjunto de Estratégias de Prevenção
+          </styles.NewsTitle>
+          <styles.TextCard1>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry.
+          </styles.TextCard1>
+        </styles.ContainerCard1>
+        <img src={cep} className=" lg:w-auto lg:mr-[80px] lg:h-[320px]"></img>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function CepUm(
   props = {
     id: "",
     chapRef: null,
@@ -249,236 +185,51 @@ export function Exemplo2(
 
   return (
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard2>
-        <styles.TextCard1>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. Lorem Ipsum is simply dummy
-          text of the printing and typesetting industry.
-        </styles.TextCard1>
-      </styles.ContainerCard2>
-    </styles.ChapterGenericDiv2>
-  );
-}
-
-// export function Exemplo3(
-//   props = {
-//     id: "",
-//     chapRef: null,
-//   }
-// ) {
-//   props = setDefaultProps(props);
-
-//   return (
-//     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-//       <styles.ContainerCard1>
-//         <styles.TextCard1>
-//           Em novembro de 2021, uma tragédia: um prédio de quatro andares desabou
-//           no{" "}
-//           <styles.Textyellow>
-//             {" "}
-//             <a
-//               className="p-1"
-//               href="https://www1.folha.uol.com.br/cotidiano/2021/11/predio-de-4-andares-desaba-no-rio-e-deixa-um-morto-e-tres-feridos.shtml"
-//               target="_blank"
-//               rel="noreferrer"
-//             >
-//               Morro do Salgueiro,
-//             </a>
-//           </styles.Textyellow>{" "}
-//           na Zona Norte. Um homem de 22 anos faleceu e outras três pessoas
-//           ficaram feridas. Entre elas, uma criança de apenas quatro anos. A
-//           construção também não tinha alvará.
-//         </styles.TextCard1>
-//       </styles.ContainerCard1>
-//     </styles.ChapterGenericDiv>
-//   );
-// }
-
-export function Seop4(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <styles.NewsImage src={seop4}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
-        <styles.TextCard1>
-          Também em Muzema,{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/ordem-publica/prefeitura-faz-demolicao-de-predio-de-tres-andares-no-valor-de-r-3-milhoes-na-muzema/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              uma construção irregular foi colocada abaixo.
-            </a>
-          </styles.Textyellow>{" "}
-          O prédio, com três andares, foi demolido pela equipe da Força-Tarefa
-          no mês passado.
-        </styles.TextCard1>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
-  );
-}
-
-export function Seop3(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <styles.NewsImage src={seop3}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
-        <styles.TextCard1>
-          Há quatro meses, um imóvel de sete andares, construído na região do
-          Terreirão, também no Recreio, foi demolido.{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/ordem-publica/seop-faz-a-demolicao-de-predio-de-sete-andares-construido-irregularmente-no-recreio/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              O prédio não atendia nenhum requisito técnico para construção no
-              local.
-            </a>
-          </styles.Textyellow>{" "}
-        </styles.TextCard1>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
-  );
-}
-
-export function Seop2(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <styles.NewsImage src={seop2}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
-        <styles.TextCard1>
-          Outro imóvel também localizado no Recreio dos Bandeirantes foi abaixo
-          no começo deste ano. Com três andares já construídos, e um quarto em
-          desenvolvimento, o prédio irregular possuía cinco apartamentos por
-          andar. A estimativa é que cada unidade,{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/ordem-publica/seop-e-gaeco-realizam-megaoperacao-para-demolicao-de-construcoes-irregulares-no-recreio-dos-bandeirantes/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              construída sem nenhum parecer técnico
-            </a>
-          </styles.Textyellow>{" "}
-          que aprovasse a sua segurança, seria vendida por R$ 300 mil para os
-          moradores.
-        </styles.TextCard1>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
-  );
-}
-
-export function Seop1(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <styles.NewsImage src={seop1}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
-        <styles.TextCard1>
-          No fim do ano passado, um imóvel onde funcionaria um supermercado, com
-          garagem subterrânea e espaços alugados, estava sendo{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/ordem-publica/seop-e-mprj-realizam-operacao-para-demolir-construcao-irregular-erguida-pela-milicia-de-rio-das-pedras/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              construído irregularmente
-            </a>
-          </styles.Textyellow>{" "}
-          na Estrada do Itanhangá, em Muzema, foi demolido pela Prefeitura. Uma
-          estimativa feita em parceria com o Ministério Público avaliou que
-          criminosos investiram aproximadamente R$ 5 milhões no empreendimento
-          irregular.
-        </styles.TextCard1>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
-  );
-}
-
-export function Zoom(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <styles.TextCard1>
+      <styles.ContainerCard3>
+        <styles.TextCard>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
           five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.{" "}
-          <styles.Textyellow>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </styles.Textyellow>{" "}
-          It was popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem
-          Ipsum.
-        </styles.TextCard1>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </styles.TextCard>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv2>
   );
 }
 
-export function Mapa(
+export function CepDois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <styles.TextCard>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </styles.TextCard>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function VigilanciaCapitulo(
   props = {
     id: "",
     chapRef: null,
@@ -489,17 +240,382 @@ export function Mapa(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
-        <styles.TextCard1>
-          Manguinhos (219 demolições), Recreio dos Bandeirantes (214
-          demolições), Gardênia Azul (178 demolições), Jacarepaguá (90
-          demolições) e Campo Grande (67 demolições) foram os cinco bairros com
-          mais ações realizadas. Outros bairros localizados na Zona Sul, como
-          Botafogo (33 demolições) e São Conrado (27 demolições), e da Zona
-          Norte, como Del Castilho (38 demolições) e Mangueira (14 demolições)
-          também tiveram construções irregulares identificadas e demolidas pelo
-          poder público.
-        </styles.TextCard1>
-        <styles.NewsImage1 src={legenda}></styles.NewsImage1>
+        <styles.ContainerCard1>
+          <styles.NewsTitle>Vigilância</styles.NewsTitle>
+          <styles.TextCard1>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry.
+          </styles.TextCard1>
+        </styles.ContainerCard1>
+        <img src={cep} className=" lg:w-auto lg:h-[120px]"></img>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function VigilanciaUm(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <styles.TextCard>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </styles.TextCard>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function VigilanciaDois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <styles.TextCard>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </styles.TextCard>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function AtivacaoCapitulo(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.ContainerCard1>
+          <styles.NewsTitle>Ativação</styles.NewsTitle>
+          <styles.TextCard1>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry.
+          </styles.TextCard1>
+        </styles.ContainerCard1>
+        <img src={cep} className=" lg:w-auto lg:h-[120px]"></img>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function AtivacaoUm(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <styles.TextCard>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </styles.TextCard>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function AtivacaoDois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <styles.TextCard>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </styles.TextCard>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function ConservacaoCapitulo(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.ContainerCard1>
+          <styles.NewsTitle>Conservação</styles.NewsTitle>
+          <styles.TextCard1>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry.
+          </styles.TextCard1>
+        </styles.ContainerCard1>
+        <img src={cep} className=" lg:w-auto lg:h-[120px]"></img>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function ConservacaoUm(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <styles.TextCard>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </styles.TextCard>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function ConservacaoDois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <styles.TextCard>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </styles.TextCard>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function AcolhimentoCapitulo(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.ContainerCard1>
+          <styles.NewsTitle>Acolhimento</styles.NewsTitle>
+          <styles.TextCard1>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry.
+          </styles.TextCard1>
+        </styles.ContainerCard1>
+        <img src={cep} className=" lg:w-auto lg:h-[120px]"></img>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function AcolhimentoUm(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <styles.TextCard>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </styles.TextCard>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function AcolhimentoDois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <styles.TextCard>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </styles.TextCard>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function Resultados(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.ContainerCard1>
+          <styles.NewsTitle>Resultados</styles.NewsTitle>
+          <styles.TextCard1>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry.
+          </styles.TextCard1>
+        </styles.ContainerCard1>
+        <img
+          src={logopref}
+          className=" lg:w-auto lg:h-[220px] lg:mr-[40px]"
+        ></img>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Creditos(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.ContainerCardCreditos>
+          <styles.NewsTitle>Autores</styles.NewsTitle>
+          <styles.TextCard1>
+            Caio Jacintho <br />
+            Diego Oliveira <br />
+            Judite Cypreste <br />
+            Maria Eduarda Couto
+          </styles.TextCard1>
+          <styles.NewsTitle className=" lg:mt-[40px] ">
+            Agradecimentos
+          </styles.NewsTitle>
+          <styles.TextCard1>
+            Brenno Carnevale
+            <br />
+            João Carabetta <br />
+            Rodrigo Abreu
+          </styles.TextCard1>
+          <styles.NewsTitle className=" lg:mt-[40px] ">
+            Prefeito
+          </styles.NewsTitle>
+          <styles.TextCard1>Eduardo Paes</styles.TextCard1>
+        </styles.ContainerCardCreditos>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -515,90 +631,9 @@ export function Fim(
 
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"fimTitle"}>Próximos passos</styles.IntroTitle>
-      <styles.IntroText>
-        A marca de <styles.Textyellow>1.313 demolições,</styles.Textyellow> em
-        apenas <styles.Textyellow>um ano e meio de gestão,</styles.Textyellow> é
-        extremamente importante para a cidade.
-        <br /> <br />
-        Para continuar seu trabalho, a Prefeitura do Rio de Janeiro vem
-        investindo na melhoria da capacidade de identificação de novas
-        construções, por meio de denúncias recebidas, e também através do{" "}
-        <styles.Textyellow>
-          uso de novas tecnologias, como o uso de drones, fotografias aéreas
-          (ortofotos) e imagens de satélites.
-          <br /> <br />
-        </styles.Textyellow>{" "}
-        A Prefeitura, juntamente com as secretarias de Ordem Pública e Meio
-        Ambiente da Cidade, seguem atentas, colocando abaixo aquelas estruturas
-        erguidas irregularmente em nosso município. Continuaremos atuantes e
-        firmes no combate à ocupação desordenada na cidade e no asfixiamento
-        financeiro do crime organizado.
-        <br /> <br />{" "}
-        <styles.Textyellow>
-          A preservação de vidas é, e sempre será, o nosso objetivo.
-        </styles.Textyellow>{" "}
-      </styles.IntroText>
       <a href={"https://www.dados.rio/"}>
-        <img
-          src={logoed}
-          className="w-44 mt-[200px] lg:mt-[500px] lg:w-56"
-        ></img>
+        <img src={logoed} className="w-44 lg:w-56"></img>
       </a>
-    </styles.IntroDiv>
-  );
-}
-
-export function Acompanhe(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"acompanheTitle"}>
-        As ações da Prefeitura
-      </styles.IntroTitle>
-      <styles.IntroText>
-        As operações realizadas pela Ordem Pública reúnem diversos órgãos da
-        Prefeitura, como a Guarda Municipal, Comlurb, Secretaria de Conservação
-        e Subprefeituras, além das concessionárias de luz e água. Na maioria das
-        ações, o apoio das forças policiais também é necessário, devido à
-        influência do crime organizado nas regiões visitadas. Uma força-tarefa
-        entre a SEOP e o Ministério Público atua na realização das demolições e
-        na investigação das construções irregulares e seus responsáveis.
-      </styles.IntroText>
-    </styles.IntroDiv>
-  );
-}
-
-export function Oeste(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"zonaOesteTitle"}>
-        Onde estão localizadas as construções irregulares
-      </styles.IntroTitle>
-      <styles.IntroText>
-        Apesar de estarem presentes em todas as regiões da cidade, as{" "}
-        <styles.Textyellow>
-          construções irregulares têm maior incidência na Zona Oeste do
-          município.
-        </styles.Textyellow>{" "}
-        De todas as demolições realizadas pela atual gestão da Prefeitura, mais
-        de 70% estavam localizadas nesta região. Rio das Pedras, Muzema e
-        Recreio dos Bandeirantes, por exemplo, são locais em que são registradas
-        constantemente estas irregularidades.
-      </styles.IntroText>
     </styles.IntroDiv>
   );
 }
