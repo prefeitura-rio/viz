@@ -79,11 +79,22 @@ export function MapaCapitulo(
         <styles.ContainerCard1>
           <styles.NewsTitle>Introdução</styles.NewsTitle>
           <styles.TextCard1>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry.
+            A situação de segurança pública do Brasil é volátil, incerta,
+            complexa e ambígua. O medo e a insegurança fazem parte da rotina de
+            muitos brasileiros No que se refere ao papel do Poder Municipal no
+            combate a esses crimes, o debate costuma ficar circunscrito a como a
+            Guarda Municipal pode ser utilizada para aprimorar a segurança
+            pública. No entanto, a literatura científica sobre o tema sugere que
+            estratégias de prevenção do crime através do design ambiental (crime
+            prevention through environmental design), que buscam mudar a
+            natureza de espaços públicos para influenciar a tomada de decisão do
+            autor de crimes (Jacobs 1961; Cozens e Love 2015), tem se mostrado
+            especialmente eficientes na redução de ocorrências (Braga e
+            Weisburd, 2020; Braga e Bond, 2008). No Brasil, as prefeituras que
+            têm prerrogativa de regular o espaço urbano. Cabe ao poder Municipal
+            a manutenção da ordem pública, limpeza de vias, iluminação pública e
+            regulação da ocupação territorial, o que o torna o agente central
+            para criar espaços seguros.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img src={arma} className=" lg:w-auto lg:h-[250px]"></img>
