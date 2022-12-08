@@ -138,14 +138,14 @@ export function MapaUm(
         <styles.TextCard>
           Segundo especialistas na área da segurança pública, há evidências de
           que a violência é concentrada em um número pequeno de indivíduos que
-          atuam nas mesmas localidades. O estudo prevê que pelo menos 25% dos
-          crimes possam estar concentrados entre 0,8% e 1,6% dos segmentos de
-          rua e 50% do crime, entre 4,0% e 6,0%. <br />
+          atuam sempre nas mesmas localidades.
+          <br />
+          <br />
           <styles.Textred>
             {" "}
-            Na capital, entre 2016 e 2019, 1,3% do território concentrou 25% dos
-            roubos e furtos, enquanto em 5,3% do território ocorreram 50% dos
-            mesmos crimes.
+            Na cidade do Rio, entre 2016 e 2019, 1,3% do território concentrou
+            25% dos roubos e furtos, enquanto em 5,3% do território ocorreram
+            50% dos mesmos crimes.
           </styles.Textred>
         </styles.TextCard>
       </styles.ContainerCard3>
@@ -165,17 +165,21 @@ export function MapaDois(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard{" "}
-          <styles.Textred> Região de atuação</styles.Textred> dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was{" "}
-          <styles.Textsalmao>Méier</styles.Textsalmao> popularised in the 1960s
-          with the release of Letraset sheets containing Lorem Ipsum passages,
-          and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.
+          Entre os bairros com maiores incidências destes crimes, o Méier, Zona
+          Norte da cidade, aparece com os entre os dez bairros com maior
+          incidência destes crimes. Na localidade conhecida como Jardim do
+          Méier, a análise demonstrou uma das maiores concentrações de roubos e
+          furtos de rua registrados.
+          <br />
+          <br />
+          <styles.Textred>
+            {" "}
+            Ao lado do Hospital Municipal Salgado Filho, entre pontos de ônibus
+            e estação de trem, ao menos 110 roubos e 98 furtos foram registrados
+            apenas em 2019, tornando a localidade conhecida como Jardim do
+            Méier, uma das maiores concentrações de roubos e furtos de rua
+            registrados na cidade.
+          </styles.Textred>
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv1>
