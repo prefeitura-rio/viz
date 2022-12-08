@@ -20,12 +20,12 @@ export const CapaDiv = tw(CapaDivSC)`
 
 export const Title = tw.div`
   mt-[10%]
-  lg:mt-[18%]
+  lg:mt-[28%]
   font-sans font-bold  
   text-[100px] text-left text-red-500
-  lg:text-[80px]
-  lg:leading-[70px]
-    max-w-3xl
+  lg:text-[60px]
+  lg:leading-[60px]
+  max-w-3xl
   `;
 
 export const Subtitle = tw.div`
@@ -33,7 +33,7 @@ export const Subtitle = tw.div`
   font-normal
   text-lg text-left text-red-500
   lg:text-[18px]
-  lg:max-w-md
+  lg:max-w-sm
   lg:mt-[20px]
 `;
 
@@ -83,7 +83,7 @@ export const IntroText = tw.div`
 
 export const ChapterGenericDiv = tw.div`
   flex
-  w-full h-[100vh] 
+  w-full h-[120vh] 
   items-center
   justify-center
   lg:justify-start

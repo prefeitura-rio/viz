@@ -124,10 +124,10 @@ export const IntroMapaUm = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.31009,
-          lat: -22.89655,
+          lon: -43.29912,
+          lat: -22.90287,
         },
-        zoom: 13.84,
+        zoom: 13.85,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -146,22 +146,13 @@ export const IntroMapaUm = () => {
     layers: [
       {
         layerType: "mapbox",
-        targetOpacity: 1,
+        targetOpacity: 0.4,
         layer: {
           ...{
-            id: "desabamento-icone",
-            type: "symbol",
+            id: "bairros",
+            type: "fill",
             source: "composite",
-            "source-layer": "desabamento1-9gi1wf",
-            layout: {
-              "icon-image": "hospital",
-              "icon-rotate": 45,
-              "icon-allow-overlap": true,
-              "icon-size": 2,
-            },
-            paint: {
-              "icon-opacity": 0,
-            },
+            "source-layer": "bairros-4ldjs3",
           },
         },
       },

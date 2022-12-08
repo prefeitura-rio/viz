@@ -7,9 +7,13 @@ import tw from "tailwind-styled-components";
 // IMAGENS
 import logo1 from "../images/logo1.png";
 import logoed from "../images/logoed.png";
-import arma from "../images/arma.png";
 import cep from "../images/cep.png";
 import logopref from "../images/logopref.png";
+import capa1 from "../images/capa1.png";
+import capa2 from "../images/capa2.png";
+import capa3 from "../images/capa3.png";
+import capa4 from "../images/capa4.png";
+import capa5 from "../images/capa5.png";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -77,27 +81,30 @@ export function MapaCapitulo(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
         <styles.ContainerCard1>
-          <styles.NewsTitle>Introdução</styles.NewsTitle>
+          {/* <styles.NewsTitle>Introdução</styles.NewsTitle> */}
           <styles.TextCard1>
             A situação de segurança pública do Brasil é volátil, incerta,
             complexa e ambígua. O medo e a insegurança fazem parte da rotina de
             muitos brasileiros No que se refere ao papel do Poder Municipal no
             combate a esses crimes, o debate costuma ficar circunscrito a como a
             Guarda Municipal pode ser utilizada para aprimorar a segurança
-            pública. No entanto, a literatura científica sobre o tema sugere que
+            pública. <br /> <br />
+            No entanto, a literatura científica sobre o tema sugere que
             estratégias de prevenção do crime através do design ambiental (crime
             prevention through environmental design), que buscam mudar a
             natureza de espaços públicos para influenciar a tomada de decisão do
             autor de crimes (Jacobs 1961; Cozens e Love 2015), tem se mostrado
             especialmente eficientes na redução de ocorrências (Braga e
-            Weisburd, 2020; Braga e Bond, 2008). No Brasil, as prefeituras que
-            têm prerrogativa de regular o espaço urbano. Cabe ao poder Municipal
-            a manutenção da ordem pública, limpeza de vias, iluminação pública e
-            regulação da ocupação territorial, o que o torna o agente central
-            para criar espaços seguros.
+            Weisburd, 2020; Braga e Bond, 2008).
+            <br /> <br />
+            No Brasil, as prefeituras que têm prerrogativa de regular o espaço
+            urbano. Cabe ao poder Municipal a manutenção da ordem pública,
+            limpeza de vias, iluminação pública e regulação da ocupação
+            territorial, o que o torna o agente central para criar espaços
+            seguros.
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={arma} className=" lg:w-auto lg:h-[250px]"></img>
+        <img src={capa5} className=" lg:w-auto lg:h-[370px]"></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -180,7 +187,7 @@ export function CepCapitulo(
             dummy text of the printing and typesetting industry.
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={cep} className=" lg:w-auto lg:mr-[80px] lg:h-[320px]"></img>
+        <img src={cep} className=" lg:w-auto lg:mr-[180px] lg:h-[250px]"></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -261,7 +268,7 @@ export function VigilanciaCapitulo(
             dummy text of the printing and typesetting industry.
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={cep} className=" lg:w-auto lg:h-[120px]"></img>
+        <img src={capa2} className=" lg:w-auto lg:h-[360px]"></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -342,7 +349,7 @@ export function AtivacaoCapitulo(
             dummy text of the printing and typesetting industry.
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={cep} className=" lg:w-auto lg:h-[120px]"></img>
+        <img src={capa3} className=" lg:w-auto lg:h-[460px]"></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -423,7 +430,7 @@ export function ConservacaoCapitulo(
             dummy text of the printing and typesetting industry.
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={cep} className=" lg:w-auto lg:h-[120px]"></img>
+        <img src={capa4} className=" lg:w-auto lg:mr-[0px] lg:h-[500px]"></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -504,7 +511,7 @@ export function AcolhimentoCapitulo(
             dummy text of the printing and typesetting industry.
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={cep} className=" lg:w-auto lg:h-[120px]"></img>
+        <img src={capa1} className=" lg:w-auto lg:h-[460px]"></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -587,7 +594,7 @@ export function Resultados(
         </styles.ContainerCard1>
         <img
           src={logopref}
-          className=" lg:w-auto lg:h-[220px] lg:mr-[40px]"
+          className=" lg:w-auto lg:h-[220px] lg:mr-[200px]"
         ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -620,7 +627,10 @@ export function Creditos(
             Brenno Carnevale
             <br />
             João Carabetta <br />
-            Rodrigo Abreu
+            Rodrigo Abreu <br />
+            ____ <br />
+            Escritório de Dados <br />
+            Secretaria de Ordem Pública
           </styles.TextCard1>
           <styles.NewsTitle className=" lg:mt-[40px] ">
             Prefeito
