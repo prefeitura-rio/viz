@@ -12,17 +12,18 @@ export const CapaDivSC = styled.div`
 
 export const CapaDiv = tw(CapaDivSC)`
   h-screen w-full
-  flex flex-col 
+  flex flex-col
   justify-between items-left
   lg:pl-[10%]
   pl-5 pr-5  
 `;
 
 export const Title = tw.div`
-  mt-[10%]
   lg:mt-[22%]
+  mt-[40vh]
   font-sans font-bold  
-  text-[100px] text-left text-red-500
+  text-[40px] text-left text-red-500
+  leading-[44px]
   lg:text-[60px]
   lg:leading-[60px]
   max-w-3xl
@@ -31,17 +32,19 @@ export const Title = tw.div`
 export const Subtitle = tw.div`
   font-sans
   font-normal
-  text-lg text-left text-red-500
+  text-[16px] text-left text-red-500
   lg:text-[18px]
   lg:max-w-sm
   lg:mt-[20px]
+  mt-[14px]
 `;
 
 export const CapaAutor = tw.div`
   h-screen w-full
-  flex flex-row 
-  justify-left items-end
-  lg:mb-[4%] 
+  flex flex-col lg:flex-row 
+  justify-end items-start lg:items-end
+  lg:mb-[4%]
+  mb-[12%] 
   font-sans
   text-sm text-left text-red-500
   max-w-4xl
@@ -52,6 +55,7 @@ export const AuthorText = tw.div`
   font-sans
   text-sm text-left text-red-500
   max-w-4xl
+  mt-[10px]
   lg:leading-[150%]
   lg:ml-[40px]
  `;
@@ -83,7 +87,7 @@ export const IntroText = tw.div`
 
 export const ChapterGenericDiv = tw.div`
   flex
-  w-full h-[120vh] 
+  w-full h-[110vh] lg:h-[120vh] 
   items-center
   justify-center
   lg:justify-start
@@ -123,6 +127,19 @@ lg:justify-start
 bg-white
 `;
 
+export const ChapterGenericDiv4 = tw.div`
+  flex
+  w-full h-[120vh] lg:h-[120vh] 
+  items-center
+  justify-left
+  lg:justify-start
+  lg:p-[10%]
+  bg-red-500
+  text-white
+  p-[10%]
+  -z-10 
+  `;
+
 export const IntroDiv = tw.div`
   w-full h-screen
   bg-opacity-40 backdrop-blur
@@ -132,7 +149,7 @@ export const IntroDiv = tw.div`
 `;
 
 export const ContainerCard = tw.div`
-  flex flex-row 
+  flex flex-col lg:flex-row 
   justify-between items-center 
   bg-red-500
 `;
@@ -158,6 +175,7 @@ export const ContainerCard3 = tw.div`
   backdrop-blur-sm
   bg-white
   max-w-xs
+  p-[34px]
   lg:p-[48px]
   lg:max-w-lg
 `;
@@ -172,7 +190,6 @@ export const ContainerCard4 = tw.div`
 export const ContainerCardCreditos = tw.div`
   flex flex-col
   items-left 
-  backdrop-blur-sm
   bg-red-500
   max-w-xs
   lg:max-w-[100%]
@@ -188,6 +205,7 @@ export const NewsTitle = tw.div`
   font-bold
   text-[24px]
   mb-[10px]
+  mt-[30px]
 `;
 
 export const TextCard = tw.div`
