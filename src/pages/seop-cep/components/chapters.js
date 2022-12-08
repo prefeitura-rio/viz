@@ -79,22 +79,16 @@ export function MapaCapitulo(
         <styles.ContainerCard1>
           <styles.NewsTitle>Introdução</styles.NewsTitle>
           <styles.TextCard1>
-            A situação de segurança pública do Brasil é volátil, incerta,
-            complexa e ambígua. O medo e a insegurança fazem parte da rotina de
-            muitos brasileiros No que se refere ao papel do Poder Municipal no
-            combate a esses crimes, o debate costuma ficar circunscrito a como a
-            Guarda Municipal pode ser utilizada para aprimorar a segurança
-            pública. No entanto, a literatura científica sobre o tema sugere que
-            estratégias de prevenção do crime através do design ambiental (crime
-            prevention through environmental design), que buscam mudar a
-            natureza de espaços públicos para influenciar a tomada de decisão do
-            autor de crimes (Jacobs 1961; Cozens e Love 2015), tem se mostrado
-            especialmente eficientes na redução de ocorrências (Braga e
-            Weisburd, 2020; Braga e Bond, 2008). No Brasil, as prefeituras que
-            têm prerrogativa de regular o espaço urbano. Cabe ao poder Municipal
-            a manutenção da ordem pública, limpeza de vias, iluminação pública e
-            regulação da ocupação territorial, o que o torna o agente central
-            para criar espaços seguros.
+            A situação da segurança pública na cidade do Rio de Janeiro é um
+            tema recorrente na vida dos cariocas. E embora os municípios não
+            tenham uma atribuição específica na atuação da segurança pública, as
+            prefeituras possuem um papel fundamental para que um ambiente seguro
+            seja possível. Com a obrigação de regular o espaço urbano, cabe a
+            elas a manutenção da ordem pública, limpeza de vias, iluminação
+            pública e regulação da ocupação territorial, o que o torna o agente
+            central para criar espaços seguros. É desta forma que a Prefeitura
+            do Rio de Janeiro vêm trabalhando para fazer um Rio mais seguro para
+            os cariocas.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img src={arma} className=" lg:w-auto lg:h-[250px]"></img>
@@ -115,15 +109,13 @@ export function MapaUm(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Segundo especialistas na área da segurança pública, há evidências de
+          que a violência é concentrada em um número pequeno de indivíduos que
+          atuam nas mesmas localidades. A estimativa é de que ao menos 25% dos
+          crimes possam estar concentrados entre 0,8% e 1,6% dos segmentos de
+          rua e 50% do crime, entre 4,0% e 6,0%. Na capital, 1,3% do território
+          concentra 25% dos roubos e furtos, enquanto 5,3% do território
+          concentra até metade dos registros dos mesmos crimes.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv1>
