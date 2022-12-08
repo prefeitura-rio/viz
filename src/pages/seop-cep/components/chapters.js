@@ -14,6 +14,7 @@ import capa2 from "../images/capa2.png";
 import capa3 from "../images/capa3.png";
 import capa4 from "../images/capa4.png";
 import capa5 from "../images/capa5.png";
+import teste from "../images/teste.png";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -85,23 +86,41 @@ export function MapaCapitulo(
           <styles.TextCard1>
             A situação da segurança pública na cidade do Rio de Janeiro é um
             tema recorrente na vida dos cariocas.
-            <br /> <br />
-            E embora os municípios não tenham uma atribuição específica na
-            atuação da segurança pública, as prefeituras possuem um papel
-            fundamental para que um ambiente seguro seja possível. Com a
-            obrigação de regular o espaço urbano, cabe a elas a manutenção da
-            ordem pública, limpeza de vias, iluminação pública e regulação da
-            ocupação territorial, o que o torna o agente central para criar
-            espaços seguros.
+            <br /> <br />E embora os municípios não tenham uma atribuição
+            específica na atuação da segurança pública, as prefeituras possuem
+            um papel fundamental para que um ambiente seguro seja possível.
+            <styles.Textwhite>
+              {" "}
+              Com a obrigação de regular o espaço urbano, cabe a elas a
+              manutenção da ordem pública, limpeza de vias, iluminação pública e
+              regulação da ocupação territorial, o que o torna o agente central
+              para criar espaços seguros.{" "}
+            </styles.Textwhite>
             <br /> <br />
             É desta forma que a Prefeitura do Rio de Janeiro vêm trabalhando
             para fazer um Rio mais seguro para os cariocas.
             <br /> <br />
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={capa5} className=" lg:w-auto lg:h-[370px]"></img>
+        <img src={cep} className=" lg:w-auto lg:mr-[180px] lg:h-[240px]"></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
+  );
+}
+
+export function MapaZero(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterGenericDiv1>
   );
 }
 
@@ -121,9 +140,13 @@ export function MapaUm(
           que a violência é concentrada em um número pequeno de indivíduos que
           atuam nas mesmas localidades. O estudo prevê que pelo menos 25% dos
           crimes possam estar concentrados entre 0,8% e 1,6% dos segmentos de
-          rua e 50% do crime, entre 4,0% e 6,0%. Na capital, entre 2016 e 2019,
-          1,3% do território concentrou 25% dos roubos e furtos, enquanto em
-          5,3% do território ocorreram 50% dos mesmos crimes.
+          rua e 50% do crime, entre 4,0% e 6,0%. <br />
+          <styles.Textred>
+            {" "}
+            Na capital, entre 2016 e 2019, 1,3% do território concentrou 25% dos
+            roubos e furtos, enquanto em 5,3% do território ocorreram 50% dos
+            mesmos crimes.
+          </styles.Textred>
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv1>
@@ -143,14 +166,16 @@ export function MapaDois(
       <styles.ContainerCard3>
         <styles.TextCard>
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          industry. Lorem Ipsum has been the industry's standard{" "}
+          <styles.Textred> Região de atuação</styles.Textred> dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
           five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          remaining essentially unchanged. It was{" "}
+          <styles.Textsalmao>Méier</styles.Textsalmao> popularised in the 1960s
+          with the release of Letraset sheets containing Lorem Ipsum passages,
+          and more recently with desktop publishing software like Aldus
+          PageMaker including versions of Lorem Ipsum.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv1>
@@ -180,7 +205,7 @@ export function CepCapitulo(
             dummy text of the printing and typesetting industry.
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={cep} className=" lg:w-auto lg:mr-[180px] lg:h-[250px]"></img>
+        <img src={capa5} className=" lg:w-auto lg:h-[370px]"></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -195,8 +220,8 @@ export function CepUm(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3>
+    <styles.ChapterGenericDiv3 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard4>
         <styles.TextCard>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -208,8 +233,9 @@ export function CepUm(
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </styles.TextCard>
-      </styles.ContainerCard3>
-    </styles.ChapterGenericDiv2>
+      </styles.ContainerCard4>
+      <img src={teste} className=" lg:w-auto lg:mr-[180px] lg:h-[220px]"></img>
+    </styles.ChapterGenericDiv3>
   );
 }
 

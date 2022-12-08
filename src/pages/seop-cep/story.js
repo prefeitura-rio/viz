@@ -44,10 +44,14 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Capa().layers);
         break;
       case "mapacapitulo":
-        setPosition(chapterMap.Intro().location);
-        setLayers(chapterMap.Intro().layers);
+        setPosition(chapterMap.IntroMapa().location);
+        setLayers(chapterMap.IntroMapa().layers);
         break;
       case "mapaum":
+        setPosition(chapterMap.IntroMapa().location);
+        setLayers(chapterMap.IntroMapa().layers);
+        break;
+      case "mapazero":
         setPosition(chapterMap.IntroMapa().location);
         setLayers(chapterMap.IntroMapa().layers);
         break;
@@ -159,6 +163,13 @@ export default function SubsidioSPPO() {
       trigger: "#mapaum",
       onToggle: () => {
         setChapterNumberMap("mapaum");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#mapazero",
+      onToggle: () => {
+        setChapterNumberMap("mapazero");
       },
     });
 
@@ -330,6 +341,7 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.MapaCapitulo id={"mapacapitulo"} />
+      <chapterDiv.MapaZero id={"mapazero"} />
       <chapterDiv.MapaUm id={"mapaum"} />
       <chapterDiv.MapaDois id={"mapadois"} />
       <chapterDiv.CepCapitulo id={"cepcapitulo"} />

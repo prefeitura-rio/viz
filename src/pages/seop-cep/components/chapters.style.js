@@ -114,6 +114,15 @@ lg:p-[10%]
 bg-white
 `;
 
+export const ChapterGenericDiv3 = tw.div`
+flex
+w-full h-[100vh] 
+items-center
+justify-center
+lg:justify-start
+bg-white
+`;
+
 export const IntroDiv = tw.div`
   w-full h-screen
   bg-opacity-40 backdrop-blur
@@ -153,6 +162,13 @@ export const ContainerCard3 = tw.div`
   lg:max-w-lg
 `;
 
+export const ContainerCard4 = tw.div`
+  backdrop-blur-sm
+  bg-white
+  max-w-xs
+  lg:max-w-lg
+`;
+
 export const ContainerCardCreditos = tw.div`
   flex flex-col
   items-left 
@@ -184,17 +200,35 @@ export const TextCard = tw.div`
 export const TextCard1 = tw.div`
   font-sans  
   text-[16px]
-  font-light
+  font-normal
   text-left
   lg:leading-7
   text-white
 `;
 
-const TextyellowSC = styled.div`
+const TextredSC = styled.div`
   background: #ef4444;
 `;
 
-export const Textyellow = tw(TextyellowSC)`
+export const Textred = tw(TextredSC)`
   text-white
+  inline
+`;
+
+const TextsalmaoSC = styled.div`
+  background: #ea9f9f;
+`;
+
+export const Textsalmao = tw(TextsalmaoSC)`
+  text-white
+  inline
+`;
+
+const TextwhiteSC = styled.div`
+  background: #ffffff;
+`;
+
+export const Textwhite = tw(TextwhiteSC)`
+  text-red-500
   inline
 `;
