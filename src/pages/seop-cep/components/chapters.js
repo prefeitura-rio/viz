@@ -122,15 +122,13 @@ export function MapaUm(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Segundo especialistas na área da segurança pública, há evidências de
+          que a violência é concentrada em um número pequeno de indivíduos que
+          atuam nas mesmas localidades. A estimativa é de que ao menos 25% dos
+          crimes possam estar concentrados entre 0,8% e 1,6% dos segmentos de
+          rua e 50% do crime, entre 4,0% e 6,0%. Na capital, 1,3% do território
+          concentra 25% dos roubos e furtos, enquanto 5,3% do território
+          concentra até metade dos registros dos mesmos crimes.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv1>
