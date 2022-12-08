@@ -20,7 +20,7 @@ mt-[2vh]
 lg:mr-5
 `;
 
-export function Loading() {
+export function LoadingSEOPDemolicioes() {
   return (
     <LoadingDiv>
       <LoadingImage src={logo}></LoadingImage>

@@ -3,8 +3,9 @@
 
 import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import { Loading } from "./components/loading/loading";
+import { LoadingSEOPDemolicioes } from "./pages/seop-demolicoes/loading";
 import { LoadingSubsidioSPPO } from "./pages/subsidio-sppo/loading";
+import { LoadingSeopCep } from "./pages/seop-cep/loading";
 
 import style, { createGlobalStyle } from "styled-components";
 import mapboxCss from "mapbox-gl/dist/mapbox-gl.css";
@@ -17,7 +18,7 @@ const Interactive = lazy(() => import("./pages/subsidio-sppo/interactive"));
 
 const TestLineChart = lazy(() => import("./pages/sandbox/test_linechart"));
 const TestMap = lazy(() => import("./pages/sandbox/test_map"));
-const DemolicoesSEOP = lazy(() => import("./pages/demolicoes-seop/story"));
+const SEOPDemolicoes = lazy(() => import("./pages/seop-demolicoes/story"));
 const CepSEOP = lazy(() => import("./pages/seop-cep/story"));
 
 const GlobalStyle = createGlobalStyle`
@@ -31,22 +32,22 @@ const GlobalStyle = createGlobalStyle`
   } 
 `;
 
-DemolicoesSEOP;
+SEOPDemolicoes;
 CepSEOP;
 function App() {
   return (
     <div id={"main"}>
       <GlobalStyle />
       <Router>
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<LoadingSEOPDemolicioes />}>
           <Routes>
             <Route
               path="/especial-seop/demolicoes"
-              element={<DemolicoesSEOP />}
+              element={<SEOPDemolicoes />}
             ></Route>
           </Routes>
         </Suspense>
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<LoadingSeopCep />}>
           <Routes>
             <Route path="/especial-seop/cep" element={<CepSEOP />}></Route>
           </Routes>
