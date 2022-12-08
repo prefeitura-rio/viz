@@ -50,10 +50,10 @@ export const IntroMapa = () => {
       },
       mobile: {
         center: {
-          lon: -43.32838,
-          lat: -22.98401,
+          lon: -43.46431,
+          lat: -22.93342,
         },
-        zoom: 12.6,
+        zoom: 8.57,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -100,10 +100,10 @@ export const IntroMapaUm = () => {
       },
       mobile: {
         center: {
-          lon: -43.32838,
-          lat: -22.98401,
+          lon: -43.29912,
+          lat: -22.90287,
         },
-        zoom: 12.6,
+        zoom: 11.85,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,

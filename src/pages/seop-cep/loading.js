@@ -11,11 +11,11 @@ items-center justify-center
 text-sans
 text-[#EEDFD3]
 text-[20px]
-bg-red-500
+bg-[#F04140]
 `;
 
 const LoadingImage = tw.img`
-w-24
+w-[500px]
 lg:w-[800px]
 `;
 

@@ -44,7 +44,10 @@ export function Capa(
         Prefeitura da Cidade do Rio de Janeiro.
       </styles.Subtitle>
       <styles.CapaAutor>
-        <img src={logo1} className=" lg:w-auto lg:h-[50px]"></img>
+        <img
+          src={logo1}
+          className="w-auto h-[50px] lg:w-auto lg:h-[50px]"
+        ></img>
         <styles.AuthorText>
           Desenvolvido por{" "}
           <a
@@ -82,7 +85,7 @@ export function MapaCapitulo(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
         <styles.ContainerCard1>
-          {/* <styles.NewsTitle>Introdução</styles.NewsTitle> */}
+          <styles.NewsTitle>Introdução</styles.NewsTitle>
           <styles.TextCard1>
             A situação da segurança pública na cidade do Rio de Janeiro é um
             tema recorrente na vida dos cariocas.
@@ -102,7 +105,10 @@ export function MapaCapitulo(
             <br /> <br />
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={cep} className=" lg:w-auto lg:mr-[180px] lg:h-[240px]"></img>
+        <img
+          src={cep}
+          className="w-auto h-[180px] mt-[60px] lg:w-auto lg:mr-[180px] lg:h-[240px]"
+        ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -205,7 +211,10 @@ export function CepCapitulo(
             dummy text of the printing and typesetting industry.
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={capa5} className=" lg:w-auto lg:h-[370px]"></img>
+        <img
+          src={capa5}
+          className="w-auto h-[200px] mt-[40px] mr-[40px] lg:w-auto lg:h-[370px]"
+        ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -287,7 +296,10 @@ export function VigilanciaCapitulo(
             dummy text of the printing and typesetting industry.
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={capa2} className=" lg:w-auto lg:h-[360px]"></img>
+        <img
+          src={capa2}
+          className="w-auto h-[200px] mt-[40px] lg:w-auto lg:h-[360px]"
+        ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -368,7 +380,10 @@ export function AtivacaoCapitulo(
             dummy text of the printing and typesetting industry.
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={capa3} className=" lg:w-auto lg:h-[460px]"></img>
+        <img
+          src={capa3}
+          className="w-auto h-[200px] mt-[60px] lg:w-auto lg:h-[460px]"
+        ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -449,7 +464,10 @@ export function ConservacaoCapitulo(
             dummy text of the printing and typesetting industry.
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={capa4} className=" lg:w-auto lg:mr-[0px] lg:h-[500px]"></img>
+        <img
+          src={capa4}
+          className="w-auto h-[200px] mt-[60px] lg:w-auto lg:mr-[0px] lg:h-[500px]"
+        ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -530,7 +548,10 @@ export function AcolhimentoCapitulo(
             dummy text of the printing and typesetting industry.
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img src={capa1} className=" lg:w-auto lg:h-[460px]"></img>
+        <img
+          src={capa1}
+          className="w-auto h-[200px] mt-[60px] lg:w-auto lg:h-[460px]"
+        ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
@@ -613,7 +634,7 @@ export function Resultados(
         </styles.ContainerCard1>
         <img
           src={logopref}
-          className=" lg:w-auto lg:h-[220px] lg:mr-[200px]"
+          className="w-auto h-[120px] mt-[100px] lg:w-auto lg:h-[220px] lg:mr-[200px]"
         ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -629,7 +650,7 @@ export function Creditos(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+    <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
         <styles.ContainerCardCreditos>
           <styles.NewsTitle>Autores</styles.NewsTitle>
@@ -657,7 +678,7 @@ export function Creditos(
           <styles.TextCard1>Eduardo Paes</styles.TextCard1>
         </styles.ContainerCardCreditos>
       </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
+    </styles.ChapterGenericDiv4>
   );
 }
 
