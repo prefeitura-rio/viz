@@ -20,7 +20,7 @@ export const CapaDiv = tw(CapaDivSC)`
 
 export const Title = tw.div`
   mt-[10%]
-  lg:mt-[28%]
+  lg:mt-[22%]
   font-sans font-bold  
   text-[100px] text-left text-red-500
   lg:text-[60px]
@@ -176,14 +176,14 @@ export const NewsTitle = tw.div`
 
 export const TextCard = tw.div`
   font-sans  
-  text-base
+  text-[16px]
   text-left
   text-black
 `;
 
 export const TextCard1 = tw.div`
   font-sans  
-  text-[18px]
+  text-[16px]
   font-light
   text-left
   lg:leading-7
