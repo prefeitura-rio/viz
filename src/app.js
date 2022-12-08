@@ -19,7 +19,13 @@ const Interactive = lazy(() => import("./pages/subsidio-sppo/interactive"));
 const TestLineChart = lazy(() => import("./pages/sandbox/test_linechart"));
 const TestMap = lazy(() => import("./pages/sandbox/test_map"));
 const SEOPDemolicoes = lazy(() => import("./pages/seop-demolicoes/story"));
-const CepSEOP = lazy(() => import("./pages/seop-cep/story"));
+
+const CepSEOP = lazy(() => {
+  return Promise.all([
+    import("./pages/seop-cep/story"),
+    new Promise((resolve) => setTimeout(resolve, 500)),
+  ]).then(([moduleExports]) => moduleExports);
+});
 
 const GlobalStyle = createGlobalStyle`
   body {
