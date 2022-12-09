@@ -100,10 +100,10 @@ export const IntroMapaUm = () => {
       },
       mobile: {
         center: {
-          lon: -43.29912,
+          lon: -43.28312,
           lat: -22.90287,
         },
-        zoom: 11.85,
+        zoom: 12.6,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,

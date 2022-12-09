@@ -159,6 +159,22 @@ export function MapaUm(
   );
 }
 
+export function MapaMaisum(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterGenericDiv1>
+  );
+}
+
 export function MapaDois(
   props = {
     id: "",

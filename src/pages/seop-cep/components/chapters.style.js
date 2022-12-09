@@ -13,14 +13,14 @@ export const CapaDivSC = styled.div`
 export const CapaDiv = tw(CapaDivSC)`
   h-screen w-full
   flex flex-col
-  justify-between items-left
+  justify-end items-left
   lg:pl-[10%]
-  pl-5 pr-5  
+  pl-[10%]
+  pr-[10%]
 `;
 
 export const Title = tw.div`
   lg:mt-[22%]
-  mt-[40vh]
   font-sans font-bold  
   text-[40px] text-left text-red-500
   leading-[44px]
@@ -42,7 +42,7 @@ export const Subtitle = tw.div`
 export const CapaAutor = tw.div`
   h-screen w-full
   flex flex-col lg:flex-row 
-  justify-end items-start lg:items-end
+  lg:justify-start items-start lg:items-end
   lg:mb-[4%]
   mb-[12%] 
   font-sans
@@ -87,7 +87,7 @@ export const IntroText = tw.div`
 
 export const ChapterGenericDiv = tw.div`
   flex
-  w-full h-[110vh] lg:h-[120vh] 
+  w-full h-auto lg:h-[120vh] 
   items-center
   justify-center
   lg:justify-start
@@ -152,6 +152,8 @@ export const ContainerCard = tw.div`
   flex flex-col lg:flex-row 
   justify-between items-center 
   bg-red-500
+  mt-[120px]
+  mb-[120px]
 `;
 
 export const ContainerCard1 = tw.div`

@@ -47,13 +47,17 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.IntroMapa().location);
         setLayers(chapterMap.IntroMapa().layers);
         break;
+      case "mapazero":
+        setPosition(chapterMap.IntroMapa().location);
+        setLayers(chapterMap.IntroMapa().layers);
+        break;
       case "mapaum":
         setPosition(chapterMap.IntroMapa().location);
         setLayers(chapterMap.IntroMapa().layers);
         break;
-      case "mapazero":
-        setPosition(chapterMap.IntroMapa().location);
-        setLayers(chapterMap.IntroMapa().layers);
+      case "mapamaisum":
+        setPosition(chapterMap.IntroMapaUm().location);
+        setLayers(chapterMap.IntroMapaUm().layers);
         break;
       case "mapadois":
         setPosition(chapterMap.IntroMapaUm().location);
@@ -160,6 +164,13 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
+      trigger: "#mapazero",
+      onToggle: () => {
+        setChapterNumberMap("mapazero");
+      },
+    });
+
+    ScrollTrigger.create({
       trigger: "#mapaum",
       onToggle: () => {
         setChapterNumberMap("mapaum");
@@ -167,9 +178,9 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#mapazero",
+      trigger: "#mapamaisum",
       onToggle: () => {
-        setChapterNumberMap("mapazero");
+        setChapterNumberMap("mapamaisum");
       },
     });
 
@@ -343,6 +354,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.MapaCapitulo id={"mapacapitulo"} />
       <chapterDiv.MapaZero id={"mapazero"} />
       <chapterDiv.MapaUm id={"mapaum"} />
+      <chapterDiv.MapaMaisum id={"mapamaisum"} />
       <chapterDiv.MapaDois id={"mapadois"} />
       <chapterDiv.CepCapitulo id={"cepcapitulo"} />
       {/* <chapterDiv.CepUm id={"cepum"} /> */}
