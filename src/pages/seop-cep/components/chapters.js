@@ -44,10 +44,6 @@ export function Capa(
         Prefeitura da Cidade do Rio de Janeiro.
       </styles.Subtitle>
       <styles.CapaAutor>
-        <img
-          src={logo1}
-          className="w-auto h-[50px] lg:w-auto lg:h-[50px]"
-        ></img>
         <styles.AuthorText>
           Desenvolvido por{" "}
           <a
@@ -68,6 +64,10 @@ export function Capa(
             Secretaria Municipal de Ordem Pública
           </a>
         </styles.AuthorText>
+        {/* <img
+          src={logo1}
+          className="lg:mt-[20px] w-auto h-[50px] lg:w-auto lg:h-[50px]"
+        ></img> */}
       </styles.CapaAutor>
     </styles.CapaDiv>
   );
