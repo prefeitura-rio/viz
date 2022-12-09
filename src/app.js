@@ -23,7 +23,7 @@ const SEOPDemolicoes = lazy(() => import("./pages/seop-demolicoes/story"));
 const CepSEOP = lazy(() => {
   return Promise.all([
     import("./pages/seop-cep/story"),
-    new Promise((resolve) => setTimeout(resolve, 100)),
+    new Promise((resolve) => setTimeout(resolve, 3000)),
   ]).then(([moduleExports]) => moduleExports);
 });
 

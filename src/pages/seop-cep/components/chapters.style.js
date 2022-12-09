@@ -13,7 +13,7 @@ export const CapaDivSC = styled.div`
 export const CapaDiv = tw(CapaDivSC)`
   h-screen w-full
   flex flex-col
-  justify-end items-left
+  justify-between items-left
   lg:pl-[10%]
   pl-[10%]
   pr-[10%]
