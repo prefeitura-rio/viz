@@ -654,7 +654,7 @@ export function Resultados(
         </styles.ContainerCard1>
         <img
           src={logopref}
-          className="w-auto h-[120px] mt-[100px] lg:w-auto lg:h-[220px] lg:mr-[200px]"
+          className="w-auto h-[120px] mt-[300px] lg:w-auto lg:h-[220px] lg:mr-[200px]"
         ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
