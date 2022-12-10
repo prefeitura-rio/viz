@@ -13,8 +13,7 @@ export const CapaDivSC = styled.div`
 export const CapaDiv = tw(CapaDivSC)`
   h-screen w-full
   flex flex-col
-  justify-center items-left
-  lg:justify-start lg:items-left
+  justify-center  items-left
   lg:pl-[10%]
   lg:pr-[10%]
   pl-[10%]
@@ -28,7 +27,6 @@ export const Title = tw.div`
   leading-[44px]
   lg:text-[60px]
   lg:leading-[60px]
-  max-w-3xl
   `;
 
 export const Subtitle = tw.div`
@@ -42,7 +40,6 @@ export const Subtitle = tw.div`
 `;
 
 export const CapaAutor = tw.div`
-  h-screen w-full
   flex flex-col 
   lg:justify-start items-start
   lg:mb-[4%]
@@ -252,4 +249,11 @@ const TextwhiteSC = styled.div`
 export const Textwhite = tw(TextwhiteSC)`
   text-red-500
   inline
+`;
+
+export const Textunderline = tw.div`
+  text-white
+  inline
+  underline underline-offset-4
+  decoration-4
 `;

@@ -92,13 +92,13 @@ export function MapaCapitulo(
             <br /> <br />E embora os municípios não tenham uma atribuição
             específica na atuação da segurança pública, as prefeituras possuem
             um papel fundamental para que um ambiente seguro seja possível.
-            <styles.Textwhite>
+            <styles.Textunderline>
               {" "}
               Com a obrigação de regular o espaço urbano, cabe a elas a
               manutenção da ordem pública, limpeza de vias, iluminação pública e
               regulação da ocupação territorial, o que o torna o agente central
               para criar espaços seguros.{" "}
-            </styles.Textwhite>
+            </styles.Textunderline>
             <br /> <br />
             É desta forma que a Prefeitura do Rio de Janeiro vêm trabalhando
             para fazer um Rio mais seguro para os cariocas.
