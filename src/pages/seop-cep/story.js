@@ -357,7 +357,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.MapaMaisum id={"mapamaisum"} />
       <chapterDiv.MapaDois id={"mapadois"} />
       <chapterDiv.CepCapitulo id={"cepcapitulo"} />
-      {/* <chapterDiv.CepUm id={"cepum"} /> */}
+      <chapterDiv.CepUm id={"cepum"} />
       <chapterDiv.CepDois id={"cepdois"} />
       <chapterDiv.VigilanciaCapitulo id={"vigilanciacapitulo"} />
       <chapterDiv.VigilanciaUm id={"vigilanciaum"} />

@@ -92,13 +92,13 @@ export function MapaCapitulo(
             <br /> <br />E embora os municípios não tenham uma atribuição
             específica na atuação da segurança pública, as prefeituras possuem
             um papel fundamental para que um ambiente seguro seja possível.
-            <styles.Textunderline>
+            <styles.Textwhite>
               {" "}
               Com a obrigação de regular o espaço urbano, cabe a elas a
               manutenção da ordem pública, limpeza de vias, iluminação pública e
               regulação da ocupação territorial, o que o torna o agente central
               para criar espaços seguros.{" "}
-            </styles.Textunderline>
+            </styles.Textwhite>
             <br /> <br />
             É desta forma que a Prefeitura do Rio de Janeiro vêm trabalhando
             para fazer um Rio mais seguro para os cariocas.
@@ -263,7 +263,7 @@ export function CepUm(
           including versions of Lorem Ipsum.
         </styles.TextCard>
       </styles.ContainerCard4>
-      <img src={teste} className=" lg:w-auto lg:mr-[180px] lg:h-[220px]"></img>
+      <img src={teste} className="lg:w-auto lg:h-auto"></img>
     </styles.ChapterGenericDiv3>
   );
 }
@@ -654,7 +654,7 @@ export function Resultados(
         </styles.ContainerCard1>
         <img
           src={logopref}
-          className="w-auto h-[120px] mt-[300px] lg:w-auto lg:h-[220px] lg:mr-[200px]"
+          className="w-auto h-[120px] mt-[300px] lg:mt-[10px] lg:w-auto lg:h-[220px] lg:mr-[200px]"
         ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -678,7 +678,7 @@ export function Creditos(
             Caio Jacintho <br />
             Diego Oliveira <br />
             Judite Cypreste <br />
-            Maria Eduarda Couto
+            Maria Eduarda Couto Carabetta
           </styles.TextCard1>
           <styles.NewsTitle className=" lg:mt-[40px] ">
             Agradecimentos
@@ -688,7 +688,8 @@ export function Creditos(
             <br />
             João Carabetta <br />
             Rodrigo Abreu <br />
-            ____ <br />
+            Clara Santos <br />
+            <br />
             Escritório de Dados <br />
             Secretaria de Ordem Pública
           </styles.TextCard1>
