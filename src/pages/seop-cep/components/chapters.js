@@ -195,8 +195,7 @@ export function MapaDois(
           Ao lado do Hospital Municipal Salgado Filho, entre pontos de ônibus,
           estação de trem, e um dos coretos mais famosos da cidade, ao menos 110
           roubos e 98 furtos foram registrados apenas em 2019, sendo o local uma
-          das maiores concentrações de roubos e furtos de rua registrados na
-          cidade.
+          das maiores focos de roubos e furtos de rua registrados na cidade.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv1>
@@ -216,14 +215,19 @@ export function CepCapitulo(
       <styles.ContainerCard>
         <styles.ContainerCard1>
           <styles.NewsTitle>
-            Conjunto de Estratégias de Prevenção
+            Conjunto de Estratégias de Prevenção, o CEP
           </styles.NewsTitle>
           <styles.TextCard1>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry.
+            Entendendo como está distribuido o crime na cidade, a Prefeitura
+            criou o Programa Conjunto de Estratégias de Prevenção (CEP) - Seu
+            Rio, Sua Rua.
+            <br />
+            <br />A partir da análise de dados sobre características de
+            incidência criminal, a infraestrutura, o uso e ocupação do espaço
+            urbano, o CEP buscar construir uma matriz de intervenções na
+            localidade que reflitam na melhora da segurança dos cariocas. Este
+            foi o caso o Jardim do Méier, que durante um ano de projeto foi
+            analisado, acompanhado e se tornou exemplo da eficácia do CEP.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
