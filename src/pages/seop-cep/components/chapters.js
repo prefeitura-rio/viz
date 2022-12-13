@@ -189,9 +189,10 @@ export function MapaDois(
         <styles.TextCard>
           Entre os bairros com maiores incidências destes crimes, o Méier, Zona
           Norte da cidade, aparece com os entre os dez bairros com maior
-          incidência destes crimes. Na localidade conhecida como Jardim do
-          Méier, a análise demonstrou uma das maiores concentrações de roubos e
-          furtos de rua registrados.
+          incidência destes crimes. Na localidade conhecida como{" "}
+          <styles.Textsalmao>Jardim do Méier,</styles.Textsalmao> a análise
+          demonstrou uma das maiores concentrações de roubos e furtos de rua
+          registrados.
           <br />
           <br />
           <styles.Textred>
