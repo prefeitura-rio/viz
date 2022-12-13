@@ -88,20 +88,18 @@ export function MapaCapitulo(
           <styles.NewsTitle>Introdução</styles.NewsTitle>
           <styles.TextCard1>
             A situação da segurança pública na cidade do Rio de Janeiro é um
-            tema recorrente na vida dos cariocas.
-            <br /> <br />E embora os municípios não tenham uma atribuição
-            específica na atuação da segurança pública, as prefeituras possuem
-            um papel fundamental para que um ambiente seguro seja possível.
-            <styles.Textwhite>
-              {" "}
-              Com a obrigação de regular o espaço urbano, cabe a elas a
-              manutenção da ordem pública, limpeza de vias, iluminação pública e
-              regulação da ocupação territorial, o que o torna o agente central
-              para criar espaços seguros.{" "}
-            </styles.Textwhite>
-            <br /> <br />
-            É desta forma que a Prefeitura do Rio de Janeiro vêm trabalhando
-            para fazer um Rio mais seguro para os cariocas.
+            tema que preocupa os cariocas.
+            <br /> <br />E embora as prefeituras não tenham uma atribuição
+            específica na atuaçãocontra a violência urbana, elas possuem um
+            papel fundamental para que um ambiente seguro seja possível nas
+            cidades. Com a obrigação de regular o espaço urbano, cabe a elas a
+            manutenção da ordem pública, limpeza de vias, iluminação e regulação
+            da ocupação territorial, o que o torna o agente central para criar,
+            desta forma, espaços mais seguros aos cidadãos. <br /> <br />
+            E é, aliando o o estudo e análise do espaço público, que a
+            Prefeitura do Rio de Janeiro vêm mudando a realidade e combatendo a
+            violência, transformando o Rio em um lugar mais seguro para os
+            cariocas.
             <br /> <br />
           </styles.TextCard1>
         </styles.ContainerCard1>
@@ -144,14 +142,14 @@ export function MapaUm(
         <styles.TextCard>
           Segundo especialistas na área da segurança pública, há evidências de
           que a violência é concentrada em um número pequeno de indivíduos que
-          atuam sempre nas mesmas localidades.
-          <br />
-          <br />
+          atuam sempre nas mesmas localidades. Seguindo esta mesma lógica, uma
+          análise dos crimes registrados no Rio, entre 2016 e 2019, mostra que
+          25% dos roubos e furtos foram contabilizados em apenas 1,3% do
+          território.
           <styles.Textred>
             {" "}
-            Na cidade do Rio, entre 2016 e 2019, 1,3% do território concentrou
-            25% dos roubos e furtos, enquanto em 5,3% do território ocorreram
-            50% dos mesmos crimes.
+            No mapa, podemos ver os locais com alta incidência criminal na
+            cidade.
           </styles.Textred>
         </styles.TextCard>
       </styles.ContainerCard3>
@@ -187,22 +185,18 @@ export function MapaDois(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          Entre os bairros com maiores incidências destes crimes, o Méier, Zona
-          Norte da cidade, aparece com os entre os dez bairros com maior
-          incidência destes crimes. Na localidade conhecida como{" "}
-          <styles.Textsalmao>Jardim do Méier,</styles.Textsalmao> a análise
-          demonstrou uma das maiores concentrações de roubos e furtos de rua
-          registrados.
+          O <styles.Textsalmao>Méier,</styles.Textsalmao> localizado na Zona
+          Norte da cidade, está entre os dez bairros com a maior incidência
+          destes crimes. E é mais especificamente na localidade conhecida como{" "}
+          <styles.Textred>Jardim do Méier</styles.Textred> que nossa análise
+          começa.
           <br />
           <br />
-          <styles.Textred>
-            {" "}
-            Ao lado do Hospital Municipal Salgado Filho, entre pontos de ônibus
-            e estação de trem, ao menos 110 roubos e 98 furtos foram registrados
-            apenas em 2019, tornando a localidade conhecida como Jardim do
-            Méier, uma das maiores concentrações de roubos e furtos de rua
-            registrados na cidade.
-          </styles.Textred>
+          Ao lado do Hospital Municipal Salgado Filho, entre pontos de ônibus,
+          estação de trem, e um dos coretos mais famosos da cidade, ao menos 110
+          roubos e 98 furtos foram registrados apenas em 2019, sendo o local uma
+          das maiores concentrações de roubos e furtos de rua registrados na
+          cidade.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv1>
