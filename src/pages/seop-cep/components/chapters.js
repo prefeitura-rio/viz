@@ -90,16 +90,16 @@ export function MapaCapitulo(
             A situação da segurança pública na cidade do Rio de Janeiro é um
             tema que preocupa os cariocas.
             <br /> <br />E embora as prefeituras não tenham uma atribuição
-            específica na atuaçãocontra a violência urbana, elas possuem um
+            específica na atuação contra a violência urbana, elas possuem um
             papel fundamental para que um ambiente seguro seja possível nas
             cidades. Com a obrigação de regular o espaço urbano, cabe a elas a
             manutenção da ordem pública, limpeza de vias, iluminação e regulação
-            da ocupação territorial, o que o torna o agente central para criar,
-            desta forma, espaços mais seguros aos cidadãos. <br /> <br />
+            da ocupação territorial, o que o torna o agente central para criar
+            espaços mais seguros aos cidadãos. <br /> <br />
             E é, aliando o o estudo e análise do espaço público, que a
-            Prefeitura do Rio de Janeiro vêm mudando a realidade e combatendo a
-            violência, transformando o Rio em um lugar mais seguro para os
-            cariocas.
+            Prefeitura, por meio da Secretaria Municipal de Ordem Pública
+            (SEOP), vem combatendo a violência, transformando o Rio em um lugar
+            mais seguro para os cariocas.
             <br /> <br />
           </styles.TextCard1>
         </styles.ContainerCard1>
@@ -140,12 +140,19 @@ export function MapaUm(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
+          Antes de começarmos a explicar como estamos fazendo isso, é importante
+          entender como a violência está distribuída em nossa cidade.
+          <br /> <br />
           Segundo especialistas na área da segurança pública, há evidências de
-          que a violência é concentrada em um número pequeno de indivíduos que
-          atuam sempre nas mesmas localidades. Seguindo esta mesma lógica, uma
-          análise dos crimes registrados no Rio, entre 2016 e 2019, mostra que
-          25% dos roubos e furtos foram contabilizados em apenas 1,3% do
-          território.
+          que o crime é concentrado no espaço urbano. Estudos mostram que a
+          violência é quase sempre feita por um número pequeno de indivíduos que
+          atuam sempre nas mesmas localidades.
+          <br /> <br />
+          Uma análise nos crimes na cidade segue esta mesma lógica. Entre 2016 e
+          2019, 25% dos roubos e furtos foram contabilizados em apenas 1,3% do
+          território. Rio de Janeiro em 2019: 1,3% do território do município
+          concentra 25% dos roubos e furtos de rua e 5,3% do território
+          concentra 50% dos roubos e furtos de rua.
           <styles.Textred>
             {" "}
             No mapa, podemos ver os locais com alta incidência criminal na
@@ -218,9 +225,10 @@ export function CepCapitulo(
             Conjunto de Estratégias de Prevenção, o CEP
           </styles.NewsTitle>
           <styles.TextCard1>
-            Entendendo como está distribuido o crime na cidade, a Prefeitura
-            criou o Programa Conjunto de Estratégias de Prevenção (CEP) - Seu
-            Rio, Sua Rua.
+            Entendendo como está distribuido o crime na cidade e trabalhando
+            para melhorar a segurança dos cariocas, a Prefeitura criou o
+            Programa Conjunto de Estratégias de Prevenção (CEP) - Seu Rio, Sua
+            Rua.
             <br />
             <br />A partir da análise de dados sobre características de
             incidência criminal, a infraestrutura, o uso e ocupação do espaço
