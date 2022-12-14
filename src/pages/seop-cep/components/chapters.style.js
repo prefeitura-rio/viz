@@ -22,7 +22,7 @@ export const CapaDiv = tw(CapaDivSC)`
 
 export const Title = tw.div`
   lg:mt-[22%]
-  font-sans font-bold  
+  font-body font-bold  
   text-[40px] text-left text-red-500
   leading-[44px]
   lg:text-[60px]
@@ -232,6 +232,8 @@ const TextredSC = styled.div`
 export const Textred = tw(TextredSC)`
   text-white
   inline
+  lg:py-[3px]
+  lg:px-2
 `;
 
 const TextsalmaoSC = styled.div`
@@ -241,6 +243,8 @@ const TextsalmaoSC = styled.div`
 export const Textsalmao = tw(TextsalmaoSC)`
   text-white
   inline
+  lg:py-[3px]
+  lg:px-2
 `;
 
 const TextwhiteSC = styled.div`

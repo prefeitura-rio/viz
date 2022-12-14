@@ -65,19 +65,11 @@ export const IntroMapa = () => {
         targetOpacity: 1,
         layer: {
           ...{
-            id: "desabamento-icone",
-            type: "symbol",
+            id: "roubos",
+            type: "heatmap",
             source: "composite",
-            "source-layer": "desabamento1-9gi1wf",
-            layout: {
-              "icon-image": "hospital",
-              "icon-rotate": 45,
-              "icon-allow-overlap": true,
-              "icon-size": 2,
-            },
-            paint: {
-              "icon-opacity": 0,
-            },
+            "source-layer": "roubos_rj_grade_id26_25_perce-4afqa0",
+            paint: {},
           },
         },
       },
