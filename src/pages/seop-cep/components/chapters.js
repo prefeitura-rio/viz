@@ -96,10 +96,10 @@ export function MapaCapitulo(
             manutenção da ordem pública, limpeza de vias, iluminação e regulação
             da ocupação territorial, o que o torna o agente central para criar
             espaços mais seguros aos cidadãos. <br /> <br />
-            E é, aliando o o estudo e análise do espaço público, que a
-            Prefeitura, por meio da Secretaria Municipal de Ordem Pública
-            (SEOP), vem combatendo a violência, transformando o Rio em um lugar
-            mais seguro para os cariocas.
+            E é, aliando o estudo e análise do espaço público, que a Prefeitura,
+            por meio da Secretaria Municipal de Ordem Pública (SEOP), vem
+            combatendo a violência, transformando o Rio em um lugar mais seguro
+            para os cariocas.
             <br /> <br />
           </styles.TextCard1>
         </styles.ContainerCard1>
@@ -197,8 +197,7 @@ export function MapaDois(
           destes crimes. E é mais especificamente na localidade conhecida como{" "}
           <styles.Textred>Jardim do Méier</styles.Textred> que nossa análise
           começa.
-          <br />
-          <br />
+          <br /> <br />
           Ao lado do Hospital Municipal Salgado Filho, entre pontos de ônibus,
           estação de trem, e um dos coretos mais famosos da cidade, ao menos 110
           roubos e 98 furtos foram registrados apenas em 2019, sendo o local uma
@@ -229,13 +228,12 @@ export function CepCapitulo(
             para melhorar a segurança dos cariocas, a Prefeitura criou o
             Programa Conjunto de Estratégias de Prevenção (CEP) - Seu Rio, Sua
             Rua.
-            <br />
-            <br />A partir da análise de dados sobre características de
-            incidência criminal, a infraestrutura, o uso e ocupação do espaço
-            urbano, o CEP buscar construir uma matriz de intervenções na
-            localidade que reflitam na melhora da segurança dos cariocas. Este
-            foi o caso o Jardim do Méier, que durante um ano de projeto foi
-            analisado, acompanhado e se tornou exemplo da eficácia do CEP.
+            <br /> <br />A partir da análise de dados sobre características de
+            incidência criminal, infraestrutura, e o uso e ocupação do espaço
+            urbano, o CEP buscar construir uma matriz de intervenções que
+            reflitam na melhora da segurança dos cariocas. Este foi o caso do
+            Jardim do Méier, que durante um ano de projeto foi analisado,
+            acompanhado e se tornou exemplo da eficácia do projeto.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
