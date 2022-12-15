@@ -2,7 +2,7 @@
 import { Container } from "postcss";
 import styled from "styled-components";
 import tw from "tailwind-styled-components";
-import capa from "../images/capa.png";
+import capa from "../images/capa.gif";
 
 export const CapaDivSC = styled.div`
   background-image: url(${capa});
@@ -14,7 +14,7 @@ export const CapaDivSC = styled.div`
 export const CapaDiv = tw(CapaDivSC)`
   h-screen w-full
   flex flex-col
-  justify-center  items-left
+  justify-end  items-left
   lg:pl-[10%]
   lg:pr-[10%]
   pl-[10%]
@@ -22,9 +22,8 @@ export const CapaDiv = tw(CapaDivSC)`
 `;
 
 export const Title = tw.div`
-  lg:mt-[22%]
   font-body font-bold  
-  text-[40px] text-left text-red-500
+  text-[40px] text-left text-[#DB3E11]
   leading-[44px]
   lg:text-[60px]
   lg:leading-[60px]
@@ -33,29 +32,31 @@ export const Title = tw.div`
 export const Subtitle = tw.div`
   font-sans
   font-normal
-  text-[16px] text-left text-red-500
+  text-[16px] text-left text-[#DB3E11]
   lg:text-[18px]
-  lg:max-w-md
-  lg:mt-[20px]
-  mt-[14px]
+  lg:max-w-sm
+  mt-[8px]
 `;
 
 export const CapaAutor = tw.div`
   flex flex-col 
   lg:justify-start items-left
   lg:mb-[4%]
-  mt-[50px] 
+  mb-[16%]
+  mt-[24px] 
   font-sans
-  text-sm text-center text-red-500
+  text-sm text-center text-[#DB3E11]
   max-w-4xl
   lg:leading-[150%]
   `;
 
 export const AuthorText = tw.div`
   font-sans
-  text-sm text-left text-red-500
+  text-sm text-left text-[#DB3E11]
   max-w-4xl
   mt-[10px]
+  mb-[48%]
+  lg:mt-[20px]
   lg:leading-[150%]
  `;
 

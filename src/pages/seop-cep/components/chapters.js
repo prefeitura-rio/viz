@@ -66,7 +66,7 @@ export function Capa(
         </styles.AuthorText>
         <img
           src={logo1}
-          className="lg:mt-[40px] w-auto h-[50px] lg:w-[120px] lg:h-auto"
+          className="lg:mt-[100px] w-[100px] h-auto lg:w-[100px] lg:h-auto"
         ></img>
       </styles.CapaAutor>
     </styles.CapaDiv>
@@ -694,9 +694,14 @@ export function Creditos(
             João Carabetta <br />
             Rodrigo Abreu <br />
             Clara Santos <br />
+          </styles.TextCard1>
+          <styles.NewsTitle className=" lg:mt-[40px] ">
+            Parcerias
+          </styles.NewsTitle>
+          <styles.TextCard1>
+            Escritório de Dados
             <br />
-            Escritório de Dados <br />
-            Secretaria de Ordem Pública
+            Secretaria de Ordem Pública{" "}
           </styles.TextCard1>
           <styles.NewsTitle className=" lg:mt-[40px] ">
             Prefeito
@@ -706,6 +711,11 @@ export function Creditos(
       </styles.ContainerCard>
     </styles.ChapterGenericDiv4>
   );
+}
+
+{
+  /* Escritório de Dados <br />
+Secretaria de Ordem Pública */
 }
 
 export function Fim(
