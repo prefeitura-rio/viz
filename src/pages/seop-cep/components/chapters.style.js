@@ -35,6 +35,7 @@ export const Subtitle = tw.div`
   text-[16px] text-left text-[#ef4444]
   lg:text-[18px]
   lg:max-w-sm
+  lg:leading-[26px]
   mt-[16px]
 `;
 
@@ -58,6 +59,7 @@ export const AuthorText = tw.div`
   mt-[32px]
   mb-[32%]
   lg:mb-[14%]
+  lg:leading-[26px]
   lg:mt-[60px]
   lg:leading-[150%]
  `;
