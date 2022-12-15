@@ -7,7 +7,7 @@ import capa from "../images/capa.gif";
 export const CapaDivSC = styled.div`
   background-image: url(${capa});
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   /* filter: blur(8px); */
 `;
 
@@ -23,7 +23,7 @@ export const CapaDiv = tw(CapaDivSC)`
 
 export const Title = tw.div`
   font-body font-bold  
-  text-[40px] text-left text-[#DB3E11]
+  text-[40px] text-left text-[#ef4444]
   leading-[44px]
   lg:text-[60px]
   lg:leading-[60px]
@@ -32,7 +32,7 @@ export const Title = tw.div`
 export const Subtitle = tw.div`
   font-sans
   font-normal
-  text-[16px] text-left text-[#DB3E11]
+  text-[16px] text-left text-[#ef4444]
   lg:text-[18px]
   lg:max-w-sm
   mt-[8px]
@@ -45,17 +45,18 @@ export const CapaAutor = tw.div`
   mb-[16%]
   mt-[24px] 
   font-sans
-  text-sm text-center text-[#DB3E11]
+  text-sm text-center text-[#ef4444]
   max-w-4xl
   lg:leading-[150%]
   `;
 
 export const AuthorText = tw.div`
   font-sans
-  text-sm text-left text-[#DB3E11]
+  text-sm text-left text-[#ef4444]
   max-w-4xl
   mt-[10px]
-  mb-[48%]
+  mb-[32%]
+  lg:mb-[2%]
   lg:mt-[20px]
   lg:leading-[150%]
  `;
