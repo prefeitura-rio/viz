@@ -163,7 +163,7 @@ export const ContainerCard1 = tw.div`
   backdrop-blur-sm
   bg-red-500
   max-w-xs
-  lg:max-w-[40%]
+  lg:max-w-[50%]
 `;
 
 export const ContainerCard2 = tw.div`
