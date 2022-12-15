@@ -192,7 +192,7 @@ export function MapaDois(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          O <styles.Textsalmao>Méier,</styles.Textsalmao> localizado na Zona
+          O <styles.Textsalmao>Méier</styles.Textsalmao>, localizado na Zona
           Norte da cidade, está entre os dez bairros com a maior incidência
           destes crimes. E é mais especificamente na localidade conhecida como{" "}
           <styles.Textred>Jardim do Méier</styles.Textred> que nossa análise
@@ -224,16 +224,19 @@ export function CepCapitulo(
             Conjunto de Estratégias de Prevenção, o CEP
           </styles.NewsTitle>
           <styles.TextCard1>
-            Entendendo como está distribuido o crime na cidade e trabalhando
+            Entendendo como está distribuído o crime na cidade e trabalhando
             para melhorar a segurança dos cariocas, a Prefeitura criou o
             Programa Conjunto de Estratégias de Prevenção (CEP) - Seu Rio, Sua
             Rua.
-            <br /> <br />A partir da análise de dados sobre características de
-            incidência criminal, infraestrutura, e o uso e ocupação do espaço
-            urbano, o CEP buscar construir uma matriz de intervenções que
-            reflitam na melhora da segurança dos cariocas. Este foi o caso do
-            Jardim do Méier, que durante um ano de projeto foi analisado,
-            acompanhado e se tornou exemplo da eficácia do projeto.
+            <br /> <br />O projeto seleciona as áreas com maiores índices de
+            crime de oportunidade e, a partir disso, é feito um mapeamento dos
+            fatores ambientais relevantes a serem considerados quando se pensa
+            em estratégias de ações para reduzir o risco das ocorrências na
+            região.
+            <br /> <br />O local selecionado como plano-piloto do projeto foi a
+            região no entorno do Jardim do Méier, por concentrar uma série de
+            fatores criminogênicos e situacionais passíveis de intervenção do
+            Poder Público.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -257,15 +260,20 @@ export function CepUm(
     <styles.ChapterGenericDiv3 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard4>
         <styles.TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Com base em evidências científicas, uma série de ações pontuais, de
+          baixo custo e focalizadas, foram estrategicamente pensadas para
+          contribuir para a redução dos fatores de risco mapeados e,
+          consequentemente, para a redução do crime e da sensação de insegurança
+          no local.
+          <br /> <br />
+          Estratégias baseadas em intervenções como aumentar a disponibilidade
+          de árvores e espaços verdes, reduzir a presença de lixo e pichação,
+          mudar o planejamento de habitação e aprimorar a iluminação pública
+          podem, segundo especialistas, levar a reduções importantes no crime e
+          na desordem.
+          <br /> <br />
+          Juntos, a SEOP em parceria com XXX realizaram, até o momento, 394
+          demandas para melhoria do espaço.
         </styles.TextCard>
       </styles.ContainerCard4>
       <img src={teste} className="lg:w-auto lg:h-auto"></img>
