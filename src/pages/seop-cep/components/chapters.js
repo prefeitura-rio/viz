@@ -259,22 +259,7 @@ export function CepUm(
   return (
     <styles.ChapterGenericDiv3 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard4>
-        <styles.TextCard>
-          Com base em evidências científicas, uma série de ações pontuais, de
-          baixo custo e focalizadas, foram estrategicamente pensadas para
-          contribuir para a redução dos fatores de risco mapeados e,
-          consequentemente, para a redução do crime e da sensação de insegurança
-          no local.
-          <br /> <br />
-          Estratégias baseadas em intervenções como aumentar a disponibilidade
-          de árvores e espaços verdes, reduzir a presença de lixo e pichação,
-          mudar o planejamento de habitação e aprimorar a iluminação pública
-          podem, segundo especialistas, levar a reduções importantes no crime e
-          na desordem.
-          <br /> <br />
-          Juntos, a SEOP em parceria com XXX realizaram, até o momento, 394
-          demandas para melhoria do espaço.
-        </styles.TextCard>
+        <styles.TextCard>VAZIO</styles.TextCard>
       </styles.ContainerCard4>
       <img src={teste} className="lg:w-auto lg:h-auto"></img>
     </styles.ChapterGenericDiv3>
@@ -293,15 +278,21 @@ export function CepDois(
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Com base em evidências científicas, uma série de ações pontuais, de
+          baixo custo e focalizadas, foram estrategicamente pensadas para
+          contribuir para a redução dos fatores de risco mapeados e,
+          consequentemente, para a redução do crime e da sensação de insegurança
+          no local.
+          <br /> <br />
+          Estratégias baseadas em intervenções como aumentar a disponibilidade
+          de árvores e espaços verdes, reduzir a presença de lixo e pichação,
+          mudar o planejamento de habitação e aprimorar a iluminação pública
+          podem, segundo especialistas, levar a reduções importantes no crime e
+          na desordem.
+          <br /> <br />
+          Juntos, a SEOP em parceria com XXX realizaram, até o momento, 394
+          demandas para melhoria do espaço. A seguir, explicaremos como elas
+          mudaram a vida dos moradores da região.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
