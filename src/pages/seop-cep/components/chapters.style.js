@@ -8,6 +8,7 @@ export const CapaDivSC = styled.div`
   background-image: url(${capa});
   background-size: cover;
   background-position: center;
+  /* filter: blur(8px); */
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
@@ -34,18 +35,18 @@ export const Subtitle = tw.div`
   font-normal
   text-[16px] text-left text-red-500
   lg:text-[18px]
-  lg:max-w-sm
+  lg:max-w-md
   lg:mt-[20px]
   mt-[14px]
 `;
 
 export const CapaAutor = tw.div`
   flex flex-col 
-  lg:justify-start items-start
+  lg:justify-start items-left
   lg:mb-[4%]
   mt-[50px] 
   font-sans
-  text-sm text-left text-red-500
+  text-sm text-center text-red-500
   max-w-4xl
   lg:leading-[150%]
   `;
@@ -200,6 +201,16 @@ const TextCardSC = styled.div`
   color: #000000;
 `;
 
+export const Number = tw.div`
+  text-white
+  font-sans
+  font-medium
+  text-[18px]
+  mb-[10px]
+  mt-[30px]
+  selection:bg-white selection:text-[#ef4444]
+`;
+
 export const NewsTitle = tw.div`
   text-white
   font-sans
@@ -207,6 +218,7 @@ export const NewsTitle = tw.div`
   text-[24px]
   mb-[10px]
   mt-[30px]
+  selection:bg-white selection:text-[#ef4444]
 `;
 
 export const TextCard = tw.div`
@@ -214,6 +226,7 @@ export const TextCard = tw.div`
   text-[16px]
   text-left
   text-black
+  selection:bg-[#ef4444] selection:text-white
 `;
 
 export const TextCard1 = tw.div`
@@ -223,6 +236,7 @@ export const TextCard1 = tw.div`
   text-left
   lg:leading-7
   text-white
+  selection:bg-white selection:text-[#ef4444]
 `;
 
 const TextredSC = styled.div`

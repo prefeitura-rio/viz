@@ -16,7 +16,7 @@ bg-[#F04140]
 
 const LoadingImage = tw.img`
 w-[500px]
-lg:w-[800px]
+lg:w-[700px]
 `;
 
 export function LoadingSeopCep() {

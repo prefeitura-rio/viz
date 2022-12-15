@@ -34,7 +34,7 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
-      {/* <styles.Title>
+      <styles.Title>
         SEU RIO
         <br />
         SUA RUA
@@ -42,8 +42,8 @@ export function Capa(
       <styles.Subtitle>
         O papel da Prefeitura na Segurança Pública. Entendendo o programa CEP na
         Prefeitura da Cidade do Rio de Janeiro.
-      </styles.Subtitle> */}
-      {/* <styles.CapaAutor>
+      </styles.Subtitle>
+      <styles.CapaAutor>
         <styles.AuthorText>
           Desenvolvido por{" "}
           <a
@@ -66,9 +66,9 @@ export function Capa(
         </styles.AuthorText>
         <img
           src={logo1}
-          className="lg:mt-[20px] w-auto h-[50px] lg:w-auto lg:h-[50px]"
+          className="lg:mt-[40px] w-auto h-[50px] lg:w-[120px] lg:h-auto"
         ></img>
-      </styles.CapaAutor> */}
+      </styles.CapaAutor>
     </styles.CapaDiv>
   );
 }
@@ -85,6 +85,7 @@ export function MapaCapitulo(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
         <styles.ContainerCard1>
+          {/* <styles.Number>01/06 </styles.Number> */}
           <styles.NewsTitle>Introdução</styles.NewsTitle>
           <styles.TextCard1>
             A situação da segurança pública na cidade do Rio de Janeiro é um
@@ -105,7 +106,7 @@ export function MapaCapitulo(
         </styles.ContainerCard1>
         <img
           src={cep}
-          className="w-auto h-[180px] mt-[60px] lg:w-auto lg:mr-[180px] lg:h-[240px]"
+          className="w-auto h-[180px] mt-[60px] lg:w-auto lg:mr-[180px] lg:h-[200px]"
         ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -238,7 +239,7 @@ export function CepCapitulo(
         </styles.ContainerCard1>
         <img
           src={capa5}
-          className="w-auto h-[200px] mt-[40px] mr-[40px] lg:w-auto lg:h-[370px]"
+          className="w-auto h-[200px] mt-[40px] mr-[40px] lg:w-auto lg:h-[330px]"
         ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -323,7 +324,7 @@ export function VigilanciaCapitulo(
         </styles.ContainerCard1>
         <img
           src={capa2}
-          className="w-auto h-[200px] mt-[40px] lg:w-auto lg:h-[360px]"
+          className="w-auto h-[200px] mt-[40px] lg:w-auto lg:h-[320px]"
         ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -407,7 +408,7 @@ export function AtivacaoCapitulo(
         </styles.ContainerCard1>
         <img
           src={capa3}
-          className="w-auto h-[200px] mt-[60px] lg:w-auto lg:h-[460px]"
+          className="w-auto h-[200px] mt-[60px] lg:w-auto lg:h-[400px]"
         ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -491,7 +492,7 @@ export function ConservacaoCapitulo(
         </styles.ContainerCard1>
         <img
           src={capa4}
-          className="w-auto h-[200px] mt-[60px] lg:w-auto lg:mr-[0px] lg:h-[500px]"
+          className="w-auto h-[200px] mt-[60px] lg:w-auto lg:mr-[0px] lg:h-[440px]"
         ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -575,7 +576,7 @@ export function AcolhimentoCapitulo(
         </styles.ContainerCard1>
         <img
           src={capa1}
-          className="w-auto h-[200px] mt-[60px] lg:w-auto lg:h-[460px]"
+          className="w-auto h-[200px] mt-[60px] lg:w-auto lg:h-[420px]"
         ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -659,7 +660,7 @@ export function Resultados(
         </styles.ContainerCard1>
         <img
           src={logopref}
-          className="w-auto h-[120px] mt-[300px] lg:mt-[10px] lg:w-auto lg:h-[220px] lg:mr-[200px]"
+          className="w-auto h-[120px] mt-[300px] lg:mt-[10px] lg:w-auto lg:h-[180px] lg:mr-[200px]"
         ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
