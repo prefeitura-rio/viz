@@ -34,7 +34,7 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
-      <styles.Title>
+      {/* <styles.Title>
         SEU RIO
         <br />
         SUA RUA
@@ -42,8 +42,8 @@ export function Capa(
       <styles.Subtitle>
         O papel da Prefeitura na Segurança Pública. Entendendo o programa CEP na
         Prefeitura da Cidade do Rio de Janeiro.
-      </styles.Subtitle>
-      <styles.CapaAutor>
+      </styles.Subtitle> */}
+      {/* <styles.CapaAutor>
         <styles.AuthorText>
           Desenvolvido por{" "}
           <a
@@ -64,11 +64,11 @@ export function Capa(
             Secretaria Municipal de Ordem Pública
           </a>
         </styles.AuthorText>
-        {/* <img
+        <img
           src={logo1}
           className="lg:mt-[20px] w-auto h-[50px] lg:w-auto lg:h-[50px]"
-        ></img> */}
-      </styles.CapaAutor>
+        ></img>
+      </styles.CapaAutor> */}
     </styles.CapaDiv>
   );
 }
