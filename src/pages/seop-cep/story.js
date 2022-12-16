@@ -141,9 +141,6 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       trigger: "#vigilancia_um",
-      onToggle: () => {
-        setChapterNumberMap("vigilancia_um");
-      },
     });
 
     ScrollTrigger.create({
