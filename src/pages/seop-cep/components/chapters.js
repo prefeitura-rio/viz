@@ -17,6 +17,10 @@ import capa5 from "../images/capa5.png";
 import teste from "../images/teste.png";
 import scroll from "../images/scroll.gif";
 
+import acolimento1 from "../images/acolhimento1.png";
+import acolimento2 from "../images/acolhimento2.png";
+import acolimento3 from "../images/acolhimento3.png";
+
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
 import { Tween, Timeline } from "react-gsap";
