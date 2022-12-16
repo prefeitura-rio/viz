@@ -73,7 +73,7 @@ export function Capa(
           </styles.AuthorText>{" "}
           <img
             src={scroll}
-            className="lg:mt-[24px] lg:mb-10 lg w-[12px] h-auto lg:mr-[20px] lg:w-[13px] lg:h-auto"
+            className="lg:mt-[24px] mb-[80px] lg:mb-10 lg w-[12px] h-auto lg:mr-[20px] lg:w-[13px] lg:h-auto"
           ></img>{" "}
         </styles.Scroll>
       </styles.CapaAutor>
