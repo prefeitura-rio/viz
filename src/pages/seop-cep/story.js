@@ -78,8 +78,8 @@ export default function SubsidioSPPO() {
       start: "top center",
       end: "bottom center",
       markers: true,
-      scrub: 1,
-      toggleActions: "play reverse play reverse",
+      scrub: true,
+      // toggleActions: "play reverse play reverse",
     });
     ScrollTrigger.create({
       trigger: "#capa",
@@ -123,7 +123,14 @@ export default function SubsidioSPPO() {
       },
     });
 
+    const tl_cep_capitulo = gsap.timeline();
+    tl_cep_capitulo
+      .set("#cep_image_1", { opacity: 0 })
+      .to("#cep_image_1", { opacity: 0, duration: 30 })
+      .to("#cep_image_1", { opacity: 1, duration: 70 });
+
     ScrollTrigger.create({
+      animation: tl_cep_capitulo,
       trigger: "#cep_capitulo",
     });
 
@@ -133,30 +140,33 @@ export default function SubsidioSPPO() {
 
     const tl_cep_dois = gsap.timeline();
     tl_cep_dois
-      .set("#acolimento_image_1", { opacity: 1 })
-      .to("#acolimento_image_1", { opacity: 0.3, duration: 40 })
-      .to("#acolimento_image_1", { opacity: 0, duration: 10 })
-      .to("#acolimento_image_1", { opacity: 0, duration: 50 });
+      .set("#cep_image_2", { opacity: 0 })
+      .to("#cep_image_2", { opacity: 0, duration: 9 })
+      .to("#cep_image_2", { opacity: 1, duration: 40 })
+      .to("#cep_image_2", { opacity: 1, duration: 50 });
 
     ScrollTrigger.create({
       animation: tl_cep_dois,
       trigger: "#cep_dois",
-      pin: "#text_cep_dois",
     });
 
     const tl_cep_tres = gsap.timeline();
     tl_cep_tres
-      .set("#acolimento_image_2", { opacity: 1 })
-      .to("#acolimento_image_2", { opacity: 0.3, duration: 40 })
-      .to("#acolimento_image_2", { opacity: 0, duration: 10 })
-      .to("#acolimento_image_2", { opacity: 0, duration: 50 });
+      .set("#cep_image_3", { opacity: 0 })
+      .to("#cep_image_3", { opacity: 0, duration: 10 })
+      .to("#cep_image_3", { opacity: 1, duration: 40 })
+      .to("#cep_image_3", { opacity: 1, duration: 50 });
 
     ScrollTrigger.create({
       animation: tl_cep_tres,
       trigger: "#cep_tres",
     });
 
+    const tl_vigilancia_capitulo = gsap.timeline();
+    tl_vigilancia_capitulo.set("#cep_image_3", { opacity: 0 });
+
     ScrollTrigger.create({
+      animation: tl_vigilancia_capitulo,
       trigger: "#vigilancia_capitulo",
     });
 
@@ -242,6 +252,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.MapaMaisum id={"mapa_mais_um"} />
       <chapterDiv.MapaDois id={"mapa_dois"} />
       <chapterDiv.CepCapitulo id={"cep_capitulo"} />
+      <chapterDiv.CepImages id={"cep_images"} />
       <chapterDiv.CepUm id={"cep_um"} />
       <chapterDiv.CepDois id={"cep_dois"} />
       <chapterDiv.CepTres id={"cep_tres"} />

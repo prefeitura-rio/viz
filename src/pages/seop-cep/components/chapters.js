@@ -30,6 +30,35 @@ import CustomEase from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+export function CepImages(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <div ref={props.chapRef} id={props.id}>
+      <img
+        id={"cep_image_1"}
+        src={acolimento1}
+        className="fixed top-0 left-0 w-[100%] h-[100%] opacity-0 -z-50"
+      ></img>
+      <img
+        id={"cep_image_2"}
+        src={acolimento2}
+        className="fixed top-0 left-0 w-[100%] h-[100%] opacity-0 -z-50"
+      ></img>
+      <img
+        id={"cep_image_3"}
+        src={acolimento3}
+        className="fixed top-0 left-0 w-[100%] h-[100%] opacity-0 -z-50"
+      ></img>
+    </div>
+  );
+}
+
 export function CepUm(
   props = {
     id: "",
@@ -39,12 +68,13 @@ export function CepUm(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv3 ref={props.chapRef} id={props.id}>
-      <img src={acolimento1} className="absolute w-full"></img>
-      <styles.ContainerCard4>
-        <styles.TextCard>VAZIO</styles.TextCard>
-      </styles.ContainerCard4>
-    </styles.ChapterGenericDiv3>
+    <>
+      <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+        <styles.ContainerCard3>
+          <styles.TextCard>VAZIO</styles.TextCard>
+        </styles.ContainerCard3>
+      </styles.ChapterGenericDiv10>
+    </>
   );
 }
 
@@ -57,16 +87,9 @@ export function CepDois(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv3 ref={props.chapRef} id={props.id}>
-      <img src={acolimento2} className="absolute w-full"></img>
-      <img
-        id={"acolimento_image_1"}
-        src={acolimento1}
-        className="absolute w-full"
-      ></img>
-
-      {/* <styles.ContainerCard3 id={"text_cep_dois"}>
-        <styles.TextCard >
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3 id={"text_cep_dois"}>
+        <styles.TextCard>
           Com base em evidências científicas, uma série de ações pontuais, de
           baixo custo e focalizadas, foram estrategicamente pensadas para
           contribuir para a redução dos fatores de risco mapeados e,
@@ -83,8 +106,8 @@ export function CepDois(
           demandas para melhoria do espaço. A seguir, explicaremos como elas
           mudaram a vida dos moradores da região.
         </styles.TextCard>
-      </styles.ContainerCard3> */}
-    </styles.ChapterGenericDiv3>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv10>
   );
 }
 
@@ -97,14 +120,10 @@ export function CepTres(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv3 ref={props.chapRef} id={props.id}>
-      <img src={acolimento3} className="absolute w-full"></img>
-      <img
-        id={"acolimento_image_2"}
-        src={acolimento2}
-        className="absolute w-full"
-      ></img>
-    </styles.ChapterGenericDiv3>
+    <styles.ChapterGenericDiv10
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterGenericDiv10>
   );
 }
 

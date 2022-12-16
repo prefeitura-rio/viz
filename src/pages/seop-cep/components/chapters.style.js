@@ -132,6 +132,13 @@ items-center
 justify-center
 bg-white
 `;
+
+export const ChapterGenericDiv10 = tw.div`
+flex
+w-full h-[100vh] 
+items-center
+justify-center
+`;
 // lg:justify-between
 // lg:pl-[10%]
 
@@ -184,6 +191,15 @@ bg-black/75
 export const ContainerCard3 = tw.div`
   backdrop-blur-sm
   bg-white
+  max-w-xs
+  p-[34px]
+  lg:p-[48px]
+  lg:max-w-lg
+`;
+
+export const ContainerCardTest = tw.div`
+  backdrop-blur-sm
+  bg-blue-300
   max-w-xs
   p-[34px]
   lg:p-[48px]
