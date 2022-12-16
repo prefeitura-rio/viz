@@ -242,10 +242,11 @@ export function CepCapitulo(
             fatores ambientais relevantes a serem considerados quando se pensa
             em estratégias de ações para reduzir o risco das ocorrências na
             região.
-            <br /> <br />O local selecionado como plano-piloto do projeto foi a
-            região no entorno do Jardim do Méier, por concentrar uma série de
-            fatores criminogênicos e situacionais passíveis de intervenção do
-            Poder Público.
+            <br /> <br />
+            Um dos locais selecionados como plano-piloto do projeto foi a região
+            no entorno do Jardim do Méier, por concentrar uma série de fatores
+            criminogênicos e situacionais passíveis de intervenção do Poder
+            Público.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -293,13 +294,13 @@ export function CepDois(
           consequentemente, para a redução do crime e da sensação de insegurança
           no local.
           <br /> <br />
-          Estratégias baseadas em intervenções como aumentar a disponibilidade
-          de árvores e espaços verdes, reduzir a presença de lixo e pichação,
-          mudar o planejamento de habitação e aprimorar a iluminação pública
-          podem, segundo especialistas, levar a reduções importantes no crime e
-          na desordem.
+          Estratégias como aumentar a disponibilidade de árvores e espaços
+          verdes, reduzir a presença de lixo e pichação, mudar o planejamento de
+          habitação e aprimorar a iluminação pública podem, segundo
+          especialistas, levar a reduções importantes no crime e na desordem.
           <br /> <br />
-          Juntos, a SEOP em parceria com XXX realizaram, até o momento, 394
+          Juntos, a SEOP em atuação integrada com diversos órgãos da prefeitura
+          e empresas com serviços públicos, realizaram até o momento 394
           demandas para melhoria do espaço. A seguir, explicaremos como elas
           mudaram a vida dos moradores da região.
         </styles.TextCard>
@@ -322,11 +323,9 @@ export function VigilanciaCapitulo(
         <styles.ContainerCard1>
           <styles.NewsTitle>Vigilância</styles.NewsTitle>
           <styles.TextCard1>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry.
+            Uma das ações previstas para aumentar a segurança dos cariocas na
+            região, foi pensar efetivamente no aumento do monitoramento e da
+            vigilância do Jardim do Méier.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
