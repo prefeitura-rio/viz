@@ -21,12 +21,30 @@ export const CapaDiv = tw(CapaDivSC)`
   pr-[10%]
 `;
 
+export const CapaAutor = tw.div`
+  flex flex-col 
+  lg:justify-start items-left
+  lg:mb-[4%]
+  mb-[16%]
+  mt-[24px] 
+  font-sans
+  text-sm text-center text-[#ef4444]
+  lg:leading-[150%]
+  selection:bg-[#ef4444] selection:text-white
+  `;
+
+export const Scroll = tw.div`
+  flex lg:flex-row flex-col 
+  lg:justify-between lg:items-center
+  `;
+
 export const Title = tw.div`
-  font-body font-bold  
+  font-sans font-bold  
   text-[40px] text-left text-[#ef4444]
   leading-[44px]
   lg:text-[60px]
   lg:leading-[60px]
+  selection:bg-[#ef4444] selection:text-white
   `;
 
 export const Subtitle = tw.div`
@@ -37,31 +55,16 @@ export const Subtitle = tw.div`
   lg:max-w-sm
   lg:leading-[26px]
   mt-[16px]
+  selection:bg-[#ef4444] selection:text-white
 `;
-
-export const CapaAutor = tw.div`
-  flex flex-col 
-  lg:justify-start items-left
-  lg:mb-[4%]
-  mb-[16%]
-  mt-[24px] 
-  font-sans
-  text-sm text-center text-[#ef4444]
-  max-w-4xl
-  lg:max-h-4x1
-  lg:leading-[150%]
-  `;
 
 export const AuthorText = tw.div`
   font-sans
   text-sm text-left text-[#ef4444]
-  max-w-4xl
-  mt-[32px]
-  mb-[32%]
-  lg:mb-[14%]
-  lg:leading-[26px]
-  lg:mt-[60px]
+  mt-[40px]
+  mb-[80px]
   lg:leading-[150%]
+  selection:bg-[#ef4444] selection:text-white
  `;
 
 export const Credito = tw.div`
@@ -251,8 +254,11 @@ const TextredSC = styled.div`
 export const Textred = tw(TextredSC)`
   text-white
   inline
-  lg:py-[3px]
-  lg:px-2
+  lg:py-[1px]
+  lg:px-1
+  py-[2px]
+  px-1
+  box-decoration-clone
 `;
 
 const TextsalmaoSC = styled.div`
@@ -262,8 +268,11 @@ const TextsalmaoSC = styled.div`
 export const Textsalmao = tw(TextsalmaoSC)`
   text-white
   inline
-  lg:py-[3px]
-  lg:px-2
+  lg:py-[1px]
+  lg:px-1
+  py-[2px]
+  px-1
+  box-decoration-clone
 `;
 
 const TextwhiteSC = styled.div`

@@ -43,7 +43,7 @@ export const IntroMapa = () => {
           lon: -43.46431,
           lat: -22.93342,
         },
-        zoom: 10.57,
+        zoom: 10.0,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,

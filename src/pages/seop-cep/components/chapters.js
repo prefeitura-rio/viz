@@ -15,6 +15,7 @@ import capa3 from "../images/capa3.png";
 import capa4 from "../images/capa4.png";
 import capa5 from "../images/capa5.png";
 import teste from "../images/teste.png";
+import scroll from "../images/scroll.gif";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -37,7 +38,7 @@ export function Capa(
       {" "}
       <img
         src={logo1}
-        className="lg:mt-[100px] mt-[60px] w-[100px] h-auto lg:w-[100px] lg:h-auto"
+        className=" selection:bg-[#ef4444] selection:text-white lg:mt-[100px] mt-[60px] w-[100px] h-auto lg:w-[100px] lg:h-auto"
       ></img>{" "}
       <styles.CapaAutor>
         <styles.Title>
@@ -49,26 +50,32 @@ export function Capa(
           O papel da Prefeitura na Segurança Pública. Entendendo o programa CEP
           na Prefeitura da Cidade do Rio de Janeiro.
         </styles.Subtitle>
-        <styles.AuthorText>
-          Desenvolvido por{" "}
-          <a
-            className="font-bold underline"
-            href="https://www.dados.rio/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Escritório de Dados
-          </a>{" "}
-          <br />e{" "}
-          <a
-            className="font-bold underline"
-            href="http://www.rio.rj.gov.br/web/seop"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Secretaria Municipal de Ordem Pública
-          </a>
-        </styles.AuthorText>
+        <styles.Scroll>
+          <styles.AuthorText>
+            Desenvolvido por{" "}
+            <a
+              className="font-bold underline"
+              href="https://www.dados.rio/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Escritório de Dados
+            </a>{" "}
+            <br />e{" "}
+            <a
+              className="font-bold underline"
+              href="http://www.rio.rj.gov.br/web/seop"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Secretaria Municipal de Ordem Pública
+            </a>{" "}
+          </styles.AuthorText>{" "}
+          <img
+            src={scroll}
+            className="lg:mt-[24px] lg:mb-10 lg w-[12px] h-auto lg:mr-[20px] lg:w-[13px] lg:h-auto"
+          ></img>{" "}
+        </styles.Scroll>
       </styles.CapaAutor>
     </styles.CapaDiv>
   );
