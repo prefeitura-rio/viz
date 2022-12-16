@@ -43,91 +43,23 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Capa().location);
         setLayers(chapterMap.Capa().layers);
         break;
-      case "mapacapitulo":
+      case "mapaca_pitulo":
         setPosition(chapterMap.IntroMapa().location);
         setLayers(chapterMap.IntroMapa().layers);
         break;
-      case "mapazero":
+      case "mapa_zero":
         setPosition(chapterMap.IntroMapa().location);
         setLayers(chapterMap.IntroMapa().layers);
         break;
-      case "mapaum":
+      case "mapa_um":
         setPosition(chapterMap.IntroMapa().location);
         setLayers(chapterMap.IntroMapa().layers);
         break;
-      case "mapamaisum":
+      case "mapa_mais_um":
         setPosition(chapterMap.IntroMapaUm().location);
         setLayers(chapterMap.IntroMapaUm().layers);
         break;
-      case "mapadois":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "cepcapitulo":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "cepum":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "cepdois":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "vigilanciacapitulo":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "vigilanciaum":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "vigilanciadois":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "ativacaocapitulo":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "ativacaoum":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "ativacaodois":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "conservacaocapitulo":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "conservacaoum":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "conservacaodois":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "acolhimentocapitulo":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "acolhimentoum":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "acolhimentodois":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "resultados":
-        setPosition(chapterMap.IntroMapaUm().location);
-        setLayers(chapterMap.IntroMapaUm().layers);
-        break;
-      case "fim":
+      case "mapa_dois":
         setPosition(chapterMap.IntroMapaUm().location);
         setLayers(chapterMap.IntroMapaUm().layers);
         break;
@@ -145,7 +77,7 @@ export default function SubsidioSPPO() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: false,
+      markers: true,
       scrub: true,
       // toggleActions: "play reverse play reverse",
     });
@@ -157,174 +89,109 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#mapacapitulo",
+      trigger: "#mapaca_pitulo",
       onToggle: () => {
-        setChapterNumberMap("mapacapitulo");
+        setChapterNumberMap("mapaca_pitulo");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#mapazero",
+      trigger: "#mapa_zero",
       onToggle: () => {
-        setChapterNumberMap("mapazero");
+        setChapterNumberMap("mapa_zero");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#mapaum",
+      trigger: "#mapa_um",
       onToggle: () => {
-        setChapterNumberMap("mapaum");
+        setChapterNumberMap("mapa_um");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#mapamaisum",
+      trigger: "#mapa_mais_um",
       onToggle: () => {
-        setChapterNumberMap("mapamaisum");
+        setChapterNumberMap("mapa_mais_um");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#mapadois",
+      trigger: "#mapa_dois",
       onToggle: () => {
-        setChapterNumberMap("mapadois");
+        setChapterNumberMap("mapa_dois");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#cepcapitulo",
+      trigger: "#cep_capitulo",
+    });
+
+    ScrollTrigger.create({
+      trigger: "#cep_um",
+    });
+
+    ScrollTrigger.create({
+      trigger: "#cep_dois",
+    });
+
+    ScrollTrigger.create({
+      trigger: "#vigilancia_capitulo",
+    });
+
+    ScrollTrigger.create({
+      trigger: "#vigilancia_um",
       onToggle: () => {
-        setChapterNumberMap("cepcapitulo");
+        setChapterNumberMap("vigilancia_um");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#cepum",
-      onToggle: () => {
-        setChapterNumberMap("cepum");
-      },
+      trigger: "#vigilancia_dois",
     });
 
     ScrollTrigger.create({
-      trigger: "#cepdois",
-      onToggle: () => {
-        setChapterNumberMap("cepdois");
-      },
+      trigger: "#ativacao_capitulo",
     });
 
     ScrollTrigger.create({
-      trigger: "#vigilanciacapitulo",
-      onToggle: () => {
-        setChapterNumberMap("vigilanciacapitulo");
-      },
+      trigger: "#ativacao_um",
     });
 
     ScrollTrigger.create({
-      trigger: "#vigilanciaum",
-      onToggle: () => {
-        setChapterNumberMap("vigilanciaum");
-      },
+      trigger: "#ativacao_dois",
     });
 
     ScrollTrigger.create({
-      trigger: "#vigilanciadois",
-      onToggle: () => {
-        setChapterNumberMap("vigilanciadois");
-      },
+      trigger: "#conservacao_capitulo",
     });
 
     ScrollTrigger.create({
-      trigger: "#ativacaocapitulo",
-      onToggle: () => {
-        setChapterNumberMap("ativacaocapitulo");
-      },
+      trigger: "#conservacao_um",
     });
 
     ScrollTrigger.create({
-      trigger: "#ativacaoum",
-      onToggle: () => {
-        setChapterNumberMap("ativacaoum");
-      },
+      trigger: "#conservacao_dois",
     });
 
     ScrollTrigger.create({
-      trigger: "#ativacaodois",
-      onToggle: () => {
-        setChapterNumberMap("ativacaodois");
-      },
+      trigger: "#acolhimento_capitulo",
     });
 
     ScrollTrigger.create({
-      trigger: "#conservacaocapitulo",
-      onToggle: () => {
-        setChapterNumberMap("conservacaocapitulo");
-      },
+      trigger: "#acolhimento_um",
     });
 
     ScrollTrigger.create({
-      trigger: "#conservacaoum",
-      onToggle: () => {
-        setChapterNumberMap("conservacaoum");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#conservacaodois",
-      onToggle: () => {
-        setChapterNumberMap("conservacaodois");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#acolhimentocapitulo",
-      onToggle: () => {
-        setChapterNumberMap("acolhimentocapitulo");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#acolhimentoum",
-      onToggle: () => {
-        setChapterNumberMap("acolhimentoum");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#acolhimentodois",
-      onToggle: () => {
-        setChapterNumberMap("acolhimentodois");
-      },
+      trigger: "#acolhimento_dois",
     });
 
     ScrollTrigger.create({
       trigger: "#resultados",
-      onToggle: () => {
-        setChapterNumberMap("resultados");
-      },
     });
 
     ScrollTrigger.create({
       trigger: "#creditos",
-      onToggle: () => {
-        setChapterNumberMap("creditos");
-      },
-    });
-
-    const tl11 = gsap.timeline();
-    tl11
-      .set("#fim", { opacity: 0 })
-      .to("#fim", { opacity: 0, duration: 30 })
-      .to("#fim", { opacity: 1, duration: 6 })
-      .to("#fim", { opacity: 1, duration: 20 })
-      .to("#fim", { opacity: 1, duration: 6 })
-      .to("#fim", { opacity: 1, duration: 28 });
-
-    ScrollTrigger.create({
-      animation: tl11,
-      trigger: "#fim",
-      onToggle: () => {
-        setChapterNumberMap("fim");
-      },
     });
   }, []);
 
@@ -351,29 +218,28 @@ export default function SubsidioSPPO() {
         animationSpeed={1}
       />
       <chapterDiv.Capa id={"capa"} />
-      <chapterDiv.MapaCapitulo id={"mapacapitulo"} />
-      <chapterDiv.MapaZero id={"mapazero"} />
-      <chapterDiv.MapaUm id={"mapaum"} />
-      <chapterDiv.MapaMaisum id={"mapamaisum"} />
-      <chapterDiv.MapaDois id={"mapadois"} />
-      <chapterDiv.CepCapitulo id={"cepcapitulo"} />
-      {/* <chapterDiv.CepUm id={"cepum"} /> */}
-      <chapterDiv.CepDois id={"cepdois"} />
-      <chapterDiv.VigilanciaCapitulo id={"vigilanciacapitulo"} />
-      <chapterDiv.VigilanciaUm id={"vigilanciaum"} />
-      <chapterDiv.VigilanciaDois id={"vigilanciadois"} />
-      <chapterDiv.AtivacaoCapitulo id={"ativacaocapitulo"} />
-      <chapterDiv.AtivacaoUm id={"ativacaoum"} />
-      <chapterDiv.AtivacaoDois id={"ativacaodois"} />
+      <chapterDiv.MapaCapitulo id={"mapaca_pitulo"} />
+      <chapterDiv.MapaZero id={"mapa_zero"} />
+      <chapterDiv.MapaUm id={"mapa_um"} />
+      <chapterDiv.MapaMaisum id={"mapa_mais_um"} />
+      <chapterDiv.MapaDois id={"mapa_dois"} />
+      <chapterDiv.CepCapitulo id={"cep_capitulo"} />
+      <chapterDiv.CepUm id={"cep_um"} />
+      <chapterDiv.CepDois id={"cep_dois"} />
+      <chapterDiv.VigilanciaCapitulo id={"vigilancia_capitulo"} />
+      <chapterDiv.VigilanciaUm id={"vigilancia_um"} />
+      <chapterDiv.VigilanciaDois id={"vigilancia_dois"} />
+      <chapterDiv.AtivacaoCapitulo id={"ativacao_capitulo"} />
+      <chapterDiv.AtivacaoUm id={"ativacao_um"} />
+      <chapterDiv.AtivacaoDois id={"ativacao_dois"} />
       <chapterDiv.ConservacaoCapitulo id={"consevacaocapitulo"} />
       <chapterDiv.ConservacaoUm id={"consevacaoum"} />
       <chapterDiv.ConservacaoDois id={"consevacaodois"} />
-      <chapterDiv.AcolhimentoCapitulo id={"acolhimentocapitulo"} />
-      <chapterDiv.AcolhimentoUm id={"acolhimentoum"} />
-      <chapterDiv.AcolhimentoDois id={"acolhimentodois"} />
+      <chapterDiv.AcolhimentoCapitulo id={"acolhimento_capitulo"} />
+      <chapterDiv.AcolhimentoUm id={"acolhimento_um"} />
+      <chapterDiv.AcolhimentoDois id={"acolhimento_dois"} />
       <chapterDiv.Resultados id={"resultados"} />
       <chapterDiv.Creditos id={"creditos"} />
-      {/* <chapterDiv.Fim id={"fim"} /> */}
     </>
   );
 }
