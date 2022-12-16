@@ -30,6 +30,84 @@ import CustomEase from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+export function CepUm(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv3 ref={props.chapRef} id={props.id}>
+      <img src={acolimento1} className="absolute w-full"></img>
+      <styles.ContainerCard4>
+        <styles.TextCard>VAZIO</styles.TextCard>
+      </styles.ContainerCard4>
+    </styles.ChapterGenericDiv3>
+  );
+}
+
+export function CepDois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv3 ref={props.chapRef} id={props.id}>
+      <img src={acolimento2} className="absolute w-full"></img>
+      <img
+        id={"acolimento_image_1"}
+        src={acolimento1}
+        className="absolute w-full"
+      ></img>
+
+      {/* <styles.ContainerCard3 id={"text_cep_dois"}>
+        <styles.TextCard >
+          Com base em evidências científicas, uma série de ações pontuais, de
+          baixo custo e focalizadas, foram estrategicamente pensadas para
+          contribuir para a redução dos fatores de risco mapeados e,
+          consequentemente, para a redução do crime e da sensação de insegurança
+          no local.
+          <br /> <br />
+          Estratégias como aumentar a disponibilidade de árvores e espaços
+          verdes, reduzir a presença de lixo e pichação, mudar o planejamento de
+          habitação e aprimorar a iluminação pública podem, segundo
+          especialistas, levar a reduções importantes no crime e na desordem.
+          <br /> <br />
+          Juntos, a SEOP em atuação integrada com diversos órgãos da prefeitura
+          e empresas com serviços públicos, realizaram até o momento 394
+          demandas para melhoria do espaço. A seguir, explicaremos como elas
+          mudaram a vida dos moradores da região.
+        </styles.TextCard>
+      </styles.ContainerCard3> */}
+    </styles.ChapterGenericDiv3>
+  );
+}
+
+export function CepTres(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv3 ref={props.chapRef} id={props.id}>
+      <img src={acolimento3} className="absolute w-full"></img>
+      <img
+        id={"acolimento_image_2"}
+        src={acolimento2}
+        className="absolute w-full"
+      ></img>
+    </styles.ChapterGenericDiv3>
+  );
+}
+
 export function Capa(
   props = {
     id: "",
@@ -257,57 +335,6 @@ export function CepCapitulo(
         ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
-  );
-}
-
-export function CepUm(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv3 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard4>
-        <styles.TextCard>VAZIO</styles.TextCard>
-      </styles.ContainerCard4>
-      <img src={teste} className="lg:w-auto lg:h-auto"></img>
-    </styles.ChapterGenericDiv3>
-  );
-}
-
-export function CepDois(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3>
-        <styles.TextCard>
-          Com base em evidências científicas, uma série de ações pontuais, de
-          baixo custo e focalizadas, foram estrategicamente pensadas para
-          contribuir para a redução dos fatores de risco mapeados e,
-          consequentemente, para a redução do crime e da sensação de insegurança
-          no local.
-          <br /> <br />
-          Estratégias como aumentar a disponibilidade de árvores e espaços
-          verdes, reduzir a presença de lixo e pichação, mudar o planejamento de
-          habitação e aprimorar a iluminação pública podem, segundo
-          especialistas, levar a reduções importantes no crime e na desordem.
-          <br /> <br />
-          Juntos, a SEOP em atuação integrada com diversos órgãos da prefeitura
-          e empresas com serviços públicos, realizaram até o momento 394
-          demandas para melhoria do espaço. A seguir, explicaremos como elas
-          mudaram a vida dos moradores da região.
-        </styles.TextCard>
-      </styles.ContainerCard3>
-    </styles.ChapterGenericDiv2>
   );
 }
 

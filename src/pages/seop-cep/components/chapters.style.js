@@ -129,11 +129,11 @@ export const ChapterGenericDiv3 = tw.div`
 flex
 w-full h-[100vh] 
 items-center
-lg:pl-[10%]
 justify-center
-lg:justify-between
 bg-white
 `;
+// lg:justify-between
+// lg:pl-[10%]
 
 export const ChapterGenericDiv4 = tw.div`
   flex

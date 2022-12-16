@@ -72,14 +72,14 @@ export default function SubsidioSPPO() {
   const vw = (coef) => window.innerWidth * (coef / 100);
 
   useEffect(() => {
-    gsap.defaults({ ease: "none" });
+    // gsap.defaults({ ease: "none" });
 
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
       markers: true,
-      scrub: true,
-      // toggleActions: "play reverse play reverse",
+      scrub: 1,
+      toggleActions: "play reverse play reverse",
     });
     ScrollTrigger.create({
       trigger: "#capa",
@@ -131,8 +131,29 @@ export default function SubsidioSPPO() {
       trigger: "#cep_um",
     });
 
+    const tl_cep_dois = gsap.timeline();
+    tl_cep_dois
+      .set("#acolimento_image_1", { opacity: 1 })
+      .to("#acolimento_image_1", { opacity: 0.3, duration: 40 })
+      .to("#acolimento_image_1", { opacity: 0, duration: 10 })
+      .to("#acolimento_image_1", { opacity: 0, duration: 50 });
+
     ScrollTrigger.create({
+      animation: tl_cep_dois,
       trigger: "#cep_dois",
+      pin: "#text_cep_dois",
+    });
+
+    const tl_cep_tres = gsap.timeline();
+    tl_cep_tres
+      .set("#acolimento_image_2", { opacity: 1 })
+      .to("#acolimento_image_2", { opacity: 0.3, duration: 40 })
+      .to("#acolimento_image_2", { opacity: 0, duration: 10 })
+      .to("#acolimento_image_2", { opacity: 0, duration: 50 });
+
+    ScrollTrigger.create({
+      animation: tl_cep_tres,
+      trigger: "#cep_tres",
     });
 
     ScrollTrigger.create({
@@ -214,24 +235,25 @@ export default function SubsidioSPPO() {
         animationLoopLength={21600}
         animationSpeed={1}
       />
-      {/* <chapterDiv.Capa id={"capa"} />
+      <chapterDiv.Capa id={"capa"} />
       <chapterDiv.MapaCapitulo id={"mapa_capitulo"} />
       <chapterDiv.MapaZero id={"mapa_zero"} />
       <chapterDiv.MapaUm id={"mapa_um"} />
       <chapterDiv.MapaMaisum id={"mapa_mais_um"} />
-      <chapterDiv.MapaDois id={"mapa_dois"} /> */}
+      <chapterDiv.MapaDois id={"mapa_dois"} />
       <chapterDiv.CepCapitulo id={"cep_capitulo"} />
       <chapterDiv.CepUm id={"cep_um"} />
       <chapterDiv.CepDois id={"cep_dois"} />
+      <chapterDiv.CepTres id={"cep_tres"} />
       <chapterDiv.VigilanciaCapitulo id={"vigilancia_capitulo"} />
       <chapterDiv.VigilanciaUm id={"vigilancia_um"} />
       <chapterDiv.VigilanciaDois id={"vigilancia_dois"} />
       <chapterDiv.AtivacaoCapitulo id={"ativacao_capitulo"} />
       <chapterDiv.AtivacaoUm id={"ativacao_um"} />
       <chapterDiv.AtivacaoDois id={"ativacao_dois"} />
-      <chapterDiv.ConservacaoCapitulo id={"consevacaocapitulo"} />
-      <chapterDiv.ConservacaoUm id={"consevacaoum"} />
-      <chapterDiv.ConservacaoDois id={"consevacaodois"} />
+      <chapterDiv.ConservacaoCapitulo id={"conservacao_capitulo"} />
+      <chapterDiv.ConservacaoUm id={"conservacao_um"} />
+      <chapterDiv.ConservacaoDois id={"conservacao_dois"} />
       <chapterDiv.AcolhimentoCapitulo id={"acolhimento_capitulo"} />
       <chapterDiv.AcolhimentoUm id={"acolhimento_um"} />
       <chapterDiv.AcolhimentoDois id={"acolhimento_dois"} />
