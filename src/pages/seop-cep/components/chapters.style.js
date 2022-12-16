@@ -209,23 +209,12 @@ const TextCardSC = styled.div`
   color: #000000;
 `;
 
-export const Number = tw.div`
-  text-white
-  font-sans
-  font-medium
-  text-[18px]
-  mb-[10px]
-  mt-[30px]
-  selection:bg-white selection:text-[#ef4444]
-`;
-
 export const NewsTitle = tw.div`
   text-white
   font-sans
   font-bold
   text-[24px]
-  mb-[10px]
-  mt-[30px]
+  mb-[24px]
   selection:bg-white selection:text-[#ef4444]
 `;
 

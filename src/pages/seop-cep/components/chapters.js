@@ -73,7 +73,7 @@ export function Capa(
           </styles.AuthorText>{" "}
           <img
             src={scroll}
-            className="lg:mt-[24px] lg:mb-10 lg w-[12px] h-auto lg:mr-[20px] lg:w-[13px] lg:h-auto"
+            className="lg:mt-[24px] mb-[80px] lg:mb-10 lg w-[12px] h-auto lg:mr-[20px] lg:w-[13px] lg:h-auto"
           ></img>{" "}
         </styles.Scroll>
       </styles.CapaAutor>
@@ -93,8 +93,7 @@ export function MapaCapitulo(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
         <styles.ContainerCard1>
-          {/* <styles.Number>01/06 </styles.Number> */}
-          <styles.NewsTitle>Introdução</styles.NewsTitle>
+          <styles.NewsTitle> Introdução</styles.NewsTitle>
           <styles.TextCard1>
             A situação da segurança pública na cidade do Rio de Janeiro é um
             tema que preocupa os cariocas.
@@ -104,12 +103,11 @@ export function MapaCapitulo(
             cidades. Com a obrigação de regular o espaço urbano, cabe a elas a
             manutenção da ordem pública, limpeza de vias, iluminação e regulação
             da ocupação territorial, o que o torna o agente central para criar
-            espaços mais seguros aos cidadãos. <br /> <br />
-            E é, aliando o estudo e análise do espaço público, que a Prefeitura,
-            por meio da Secretaria Municipal de Ordem Pública (SEOP), vem
-            combatendo a violência, transformando o Rio em um lugar mais seguro
-            para os cariocas.
-            <br /> <br />
+            espaços mais seguros aos cidadãos. <br /> <br />E é, aliando o
+            estudo e análise do espaço público, que a Prefeitura, por meio da
+            Secretaria Municipal de Ordem Pública (SEOP), vem combatendo a
+            violência, transformando o Rio em um lugar mais seguro para os
+            cariocas.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
