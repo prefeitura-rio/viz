@@ -69,11 +69,10 @@ export function CepUm(
 
   return (
     <>
-      <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
-        <styles.ContainerCard3>
-          <styles.TextCard>VAZIO</styles.TextCard>
-        </styles.ContainerCard3>
-      </styles.ChapterGenericDiv10>
+      <styles.ChapterGenericDiv10
+        ref={props.chapRef}
+        id={props.id}
+      ></styles.ChapterGenericDiv10>
     </>
   );
 }

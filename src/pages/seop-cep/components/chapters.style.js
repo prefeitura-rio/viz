@@ -137,7 +137,9 @@ export const ChapterGenericDiv10 = tw.div`
 flex
 w-full h-[100vh] 
 items-center
-justify-center
+justify-left
+p-[34px]
+lg:p-[10%]
 `;
 // lg:justify-between
 // lg:pl-[10%]
