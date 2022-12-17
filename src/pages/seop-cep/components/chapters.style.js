@@ -54,6 +54,7 @@ export const Subtitle = tw.div`
   lg:text-[18px]
   lg:max-w-sm
   lg:leading-[26px]
+  lg:mb-[80px]
   mt-[16px]
   selection:bg-[#ef4444] selection:text-white
 `;

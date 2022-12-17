@@ -138,7 +138,7 @@ export function Capa(
       {" "}
       <img
         src={logo1}
-        className=" selection:bg-[#ef4444] selection:text-white lg:mt-[100px] mt-[60px] w-[100px] h-auto lg:w-[100px] lg:h-auto"
+        className=" selection:bg-[#ef4444] selection:text-white lg:mt-[100px] mt-[60px] w-[100px] h-auto lg:w-[300px] lg:h-auto"
       ></img>{" "}
       <styles.CapaAutor>
         <styles.Title>
@@ -151,7 +151,7 @@ export function Capa(
           na Prefeitura da Cidade do Rio de Janeiro.
         </styles.Subtitle>
         <styles.Scroll>
-          <styles.AuthorText>
+          {/* <styles.AuthorText>
             Desenvolvido por{" "}
             <a
               className="font-bold underline"
@@ -170,7 +170,7 @@ export function Capa(
             >
               Secretaria Municipal de Ordem Pública
             </a>{" "}
-          </styles.AuthorText>{" "}
+          </styles.AuthorText>{" "} */}
           <img
             src={scroll}
             className="lg:mt-[24px] mb-[80px] lg:mb-10 lg w-[12px] h-auto lg:mr-[20px] lg:w-[13px] lg:h-auto"
