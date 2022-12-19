@@ -37,7 +37,7 @@ export const Scroll = tw.div`
   `;
 
 export const Title = tw.div`
-  font-worksans font-bold  
+  font-nunito font-bold  
   text-[40px] text-left text-[#ef4444]
   leading-[44px]
   lg:text-[48px]
@@ -46,20 +46,20 @@ export const Title = tw.div`
   `;
 
 export const Subtitle = tw.div`
-  font-worksans
+  font-nunito
   font-normal
   text-[16px] text-left text-[#ef4444]
   lg:text-[16px]
   lg:max-w-sm
   lg:leading-[26px]
   lg:mb-[88px]
-  mb-[56px]
+  mb-[98px]
   mt-[8px]
   selection:bg-[#ef4444] selection:text-white
 `;
 
 export const AuthorText = tw.div`
-  font-worksans
+  font-nunito
   text-sm text-left text-[#ef4444]
   mt-[40px]
   mb-[80px]
@@ -221,25 +221,28 @@ const TextCardSC = styled.div`
 export const NewsTitle = tw.div`
   text-white
   underline
-  font-worksans
+  font-nunito
   font-semibold
+  max-w-[400px]
   text-[24px]
   mb-[24px]
   selection:bg-white selection:text-[#ef4444]
 `;
 
 export const TextCard = tw.div`
-  font-worksans  
+  font-nunito  
   text-[16px]
   text-left
+  lg:leading-[150%]
   text-black
   selection:bg-[#ef4444] selection:text-white
 `;
 
 export const TextCard1 = tw.div`
-  font-worksans  
+  font-nunito  
   text-[16px]
   font-light
+  lg:leading-[150%]
   text-left
   lg:leading-7
   text-white
@@ -253,9 +256,7 @@ const TextredSC = styled.div`
 export const Textred = tw(TextredSC)`
   text-white
   inline
-  lg:py-[1px]
   lg:px-1
-  py-[2px]
   px-1
   box-decoration-clone
 `;
@@ -267,9 +268,7 @@ const TextsalmaoSC = styled.div`
 export const Textsalmao = tw(TextsalmaoSC)`
   text-white
   inline
-  lg:py-[1px]
   lg:px-1
-  py-[2px]
   px-1
   box-decoration-clone
 `;

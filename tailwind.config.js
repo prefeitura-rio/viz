@@ -16,6 +16,7 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins"],
         worksans: ["Work Sans"],
+        nunito: ["Nunito Sans"],
       },
     },
   },
