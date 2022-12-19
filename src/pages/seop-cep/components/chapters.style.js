@@ -14,7 +14,7 @@ export const CapaDivSC = styled.div`
 export const CapaDiv = tw(CapaDivSC)`
   h-screen w-full
   flex flex-col
-  justify-between  items-left
+  justify-between  items-center
   lg:pl-[10%]
   lg:pr-[10%]
   pl-[10%]
@@ -23,7 +23,7 @@ export const CapaDiv = tw(CapaDivSC)`
 
 export const CapaAutor = tw.div`
   flex flex-col 
-  lg:justify-start items-left
+  lg:justify-start items-center
   lg:mb-[4%]
   mb-[16%]
   mt-[24px] 
@@ -40,7 +40,7 @@ export const Scroll = tw.div`
 
 export const Title = tw.div`
   font-sans font-bold  
-  text-[40px] text-left text-[#ef4444]
+  text-[40px] text-center text-[#ef4444]
   leading-[44px]
   lg:text-[60px]
   lg:leading-[60px]
@@ -50,7 +50,7 @@ export const Title = tw.div`
 export const Subtitle = tw.div`
   font-sans
   font-normal
-  text-[16px] text-left text-[#ef4444]
+  text-[16px] text-center text-[#ef4444]
   lg:text-[18px]
   lg:max-w-sm
   lg:leading-[26px]
@@ -61,7 +61,7 @@ export const Subtitle = tw.div`
 
 export const AuthorText = tw.div`
   font-sans
-  text-sm text-left text-[#ef4444]
+  text-sm text-center text-[#ef4444]
   mt-[40px]
   mb-[80px]
   lg:leading-[150%]
