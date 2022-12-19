@@ -77,8 +77,8 @@ export default function SubsidioSPPO() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: true,
-      scrub: true,
+      markers: false,
+      scrub: false,
       // toggleActions: "play reverse play reverse",
     });
     ScrollTrigger.create({
