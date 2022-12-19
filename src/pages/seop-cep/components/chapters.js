@@ -396,15 +396,15 @@ export function VigilanciaUm(
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Para que isso fosse possível, em parceria com o COR foram instaladas
+          34 câmeras de vigilância no local que auxiliam no monitoramento em
+          tempo real e ajudam em tomadas de decisões mais rápidas na localidade.
+          <br /> <br />
+          Além das intervenções no espaço, o Programa CEP tem como eixo a
+          capacitação de guardas e líderes da GM-RIO em curso de formação
+          voltado ao policiamento preventivo, comunitário e orientado à
+          resolução de problemas. Paralelamente, foram capacitados 64 Guardas
+          Municipais em duas turmas de 1 semana para atuar no Programa CEP.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
@@ -423,15 +423,9 @@ export function VigilanciaDois(
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Hoje, o patrulhamento preventivo da Guarda Municipal acontece em
+          período integral, um incentivo da ocupação do espaço público na Praça
+          Jardim do Méier.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
