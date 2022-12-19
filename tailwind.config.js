@@ -14,7 +14,8 @@ module.exports = {
         12: "repeat(12, minmax(0, 1fr))",
       },
       fontFamily: {
-        poppins: ["poppins"],
+        poppins: ["Poppins"],
+        worksans: ["Work Sans"],
       },
     },
   },

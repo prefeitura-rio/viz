@@ -43,17 +43,17 @@ export function CepImages(
       <img
         id={"cep_image_1"}
         src={acolimento1}
-        className="fixed top-0 left-0 w-[100%] h-[100%] opacity-0 -z-50"
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"cep_image_2"}
         src={acolimento2}
-        className="fixed top-0 left-0 w-[100%] h-[100%] opacity-0 -z-50"
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"cep_image_3"}
         src={acolimento3}
-        className="fixed top-0 left-0 w-[100%] h-[100%] opacity-0 -z-50"
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
     </div>
   );
@@ -138,7 +138,7 @@ export function Capa(
       {" "}
       <img
         src={logo1}
-        className=" selection:bg-[#ef4444] selection:text-white lg:mt-[100px] mt-[60px] w-[260px] h-auto lg:w-[300px] lg:h-auto"
+        className=" selection:bg-[#ef4444] selection:text-white lg:mt-[7%] mt-[32px] w-[280px] h-auto lg:w-[300px] lg:h-auto"
       ></img>{" "}
       <styles.CapaAutor>
         <styles.Title>
@@ -173,7 +173,7 @@ export function Capa(
           </styles.AuthorText>{" "} */}
           <img
             src={scroll}
-            className="lg:mt-[24px] mt-[80px] mb-[80px] lg:mb-10 lg w-[12px] h-auto lg:mr-[20px] lg:w-[13px] lg:h-auto"
+            className="lg:mb-[16px] w-[12px] h-auto lg:w-[12px] lg:h-auto"
           ></img>{" "}
         </styles.Scroll>
       </styles.CapaAutor>
@@ -193,7 +193,7 @@ export function MapaCapitulo(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
         <styles.ContainerCard1>
-          <styles.NewsTitle> Introdução</styles.NewsTitle>
+          <styles.NewsTitle>Introdução</styles.NewsTitle>
           <styles.TextCard1>
             A situação da segurança pública na cidade do Rio de Janeiro é um
             tema que preocupa os cariocas.

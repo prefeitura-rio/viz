@@ -12,9 +12,9 @@ export const CapaDivSC = styled.div`
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
-  h-screen w-full
+  h-[96vh] w-full
   flex flex-col
-  justify-between  items-center
+  justify-between  items-left
   lg:pl-[10%]
   lg:pr-[10%]
   pl-[10%]
@@ -23,9 +23,7 @@ export const CapaDiv = tw(CapaDivSC)`
 
 export const CapaAutor = tw.div`
   flex flex-col 
-  lg:justify-start items-center
-  lg:mb-[4%]
-  mb-[16%]
+  lg:justify-start items-left
   mt-[24px] 
   font-sans
   text-sm text-center text-[#ef4444]
@@ -39,29 +37,30 @@ export const Scroll = tw.div`
   `;
 
 export const Title = tw.div`
-  font-sans font-bold  
-  text-[40px] text-center text-[#ef4444]
+  font-worksans font-bold  
+  text-[40px] text-left text-[#ef4444]
   leading-[44px]
-  lg:text-[60px]
-  lg:leading-[60px]
+  lg:text-[48px]
+  lg:leading-[48px]
   selection:bg-[#ef4444] selection:text-white
   `;
 
 export const Subtitle = tw.div`
-  font-sans
+  font-worksans
   font-normal
-  text-[16px] text-center text-[#ef4444]
-  lg:text-[18px]
+  text-[16px] text-left text-[#ef4444]
+  lg:text-[16px]
   lg:max-w-sm
   lg:leading-[26px]
-  lg:mb-[80px]
-  mt-[16px]
+  lg:mb-[88px]
+  mb-[56px]
+  mt-[8px]
   selection:bg-[#ef4444] selection:text-white
 `;
 
 export const AuthorText = tw.div`
-  font-sans
-  text-sm text-center text-[#ef4444]
+  font-worksans
+  text-sm text-left text-[#ef4444]
   mt-[40px]
   mb-[80px]
   lg:leading-[150%]
@@ -192,17 +191,8 @@ bg-black/75
 `;
 
 export const ContainerCard3 = tw.div`
-  backdrop-blur-sm
-  bg-white
-  max-w-xs
-  p-[34px]
-  lg:p-[48px]
-  lg:max-w-lg
-`;
-
-export const ContainerCardTest = tw.div`
-  backdrop-blur-sm
-  bg-blue-300
+  backdrop-blur-[20px]
+  bg-[#ffffff75]
   max-w-xs
   p-[34px]
   lg:p-[48px]
@@ -230,15 +220,16 @@ const TextCardSC = styled.div`
 
 export const NewsTitle = tw.div`
   text-white
-  font-sans
-  font-bold
+  underline
+  font-worksans
+  font-semibold
   text-[24px]
   mb-[24px]
   selection:bg-white selection:text-[#ef4444]
 `;
 
 export const TextCard = tw.div`
-  font-sans  
+  font-worksans  
   text-[16px]
   text-left
   text-black
@@ -246,9 +237,9 @@ export const TextCard = tw.div`
 `;
 
 export const TextCard1 = tw.div`
-  font-sans  
+  font-worksans  
   text-[16px]
-  font-normal
+  font-light
   text-left
   lg:leading-7
   text-white
