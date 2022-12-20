@@ -404,6 +404,9 @@ export function VigilanciaUm(
           capacitação de guardas em curso de formação voltado ao policiamento
           preventivo, comunitário e orientado à resolução de problemas. No
           total, 64 guardas municipais foram capacitados para atuar no programa.
+          <br /> <br /> A fiscalização do transporte complementar também foi
+          reforçada pela Coordenadoria Especial de Transporte Complementar
+          (CETC).
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
@@ -446,11 +449,11 @@ export function AtivacaoCapitulo(
         <styles.ContainerCard1>
           <styles.NewsTitle>Ativação</styles.NewsTitle>
           <styles.TextCard1>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry.
+            Devolver o espaço público para a população é essencial também na
+            contenção da violência. Uma análise no local identificou a ocupação
+            irregular de ambulantes nas calçadas atrapalhava o trânsito de
+            pedestres. Isto facilitava para o ambiente ser desorganizado e
+            incapacitar a população de aproveitar melhor o espaço público.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -474,15 +477,10 @@ export function AtivacaoUm(
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Para corrigir isso, a SEOP fez uma série de ações como a identificação
+          e formalização de 57 ambulantes no Ambulante Harmonia, programa da
+          Coordenação de Controle Urbano. Também foram entregues 89 barracas
+          para que os ambulantes pudessem trabalhar com mais segurança.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
@@ -501,15 +499,11 @@ export function AtivacaoDois(
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Em parceria com a Secretaria de Conservação, a Fundação Parques e
+          Jardins e também de artistas locais, um novo Parcão foi construído no
+          local, possibilitando também que os amigos de quatro patas pudessem
+          aproveitar ainda mais a praça. Até o momento, mais de 48 feiras de
+          artesanato e 144 eventos culturais já foram realizadas.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
@@ -530,11 +524,12 @@ export function ConservacaoCapitulo(
         <styles.ContainerCard1>
           <styles.NewsTitle>Conservação</styles.NewsTitle>
           <styles.TextCard1>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry.
+            Lugares escuros, lixo acumulado nas calçadas, depredação e má
+            conservação de espaço, como o de um dos coretos mais antigos da
+            cidade. Um lugar abandonado, que contribuía para que pessoas mal
+            intencionadas atuassem na região e levassem o medo da violência à
+            população. Este foi o cenário também encontrado pela Prefeitura no
+            Jardim do Méier.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -558,15 +553,11 @@ export function ConservacaoUm(
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          A reforma e recuperação de espaços ficou por conta da Secretaria de
+          Meio Ambiente, da Fundação Parques e Jardins, da COMLURB e também da
+          Secretaria de Conservação. Ao todo, 62 demandas de manutenção e reparo
+          de estruturas públicas foram feitas no local, além do conserto e
+          instalação de 149 pontos de iluminação pública.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
@@ -614,11 +605,9 @@ export function AcolhimentoCapitulo(
         <styles.ContainerCard1>
           <styles.NewsTitle>Acolhimento</styles.NewsTitle>
           <styles.TextCard1>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry.
+            ​Por fim, mas não menos importante, foi realizado o mapeamento de
+            pessoas em vulnerabilidade e em situação de rua, facilitando a
+            focalização de ações da Assistência Social.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -642,15 +631,8 @@ export function AcolhimentoUm(
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Ao todo, 91 demandas relativas a pessoas em vulnerabilidade social na
+          região foram resolvidas.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
@@ -669,15 +651,10 @@ export function AcolhimentoDois(
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Para continuar dando apoio à população, agentes da Assistência Social
+          e Guardas Municipais realizam rondas na região para identificar,
+          auxiliar e encaminhar estas pessoas para os programas de assistência
+          da Prefeitura do Rio de Janeiro.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
@@ -698,11 +675,21 @@ export function Resultados(
         <styles.ContainerCard1>
           <styles.NewsTitle>Resultados</styles.NewsTitle>
           <styles.TextCard1>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry.
+            O CEP completa um ano de execução e o impacto na vida e segurança
+            graças as ações do programa são nítidos.
+            <br /> <br />
+            Na região contemplada pelo projeto no Méier registrou uma redução de
+            34,3% no número de ocorrências criminais segundo dados da Secretaria
+            da Segurança Pública. Na unidade do projeto localizado em
+            Copacabana, a redução foi de 5,2%. As duas áreas vem apresentando
+            diminuição das ocorrências em relação ao mesmo período de 2019, e o
+            projeto, como um todo, possibilitou a redução de 24,3% das
+            ocorrências.
+            <br /> <br />
+            Além disso, a qualidade do espaço público foi melhorada, permitindo
+            um maior uso das áreas pela população e incentivando, através da
+            priorização e articulação de ações da Prefeitura simples, uma cidade
+            melhor para os cariocas.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
