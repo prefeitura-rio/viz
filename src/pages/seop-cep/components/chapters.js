@@ -17,9 +17,9 @@ import capa5 from "../images/capa5.png";
 import teste from "../images/teste.png";
 import scroll from "../images/scroll.gif";
 
-import acolimento1 from "../images/acolhimento1.png";
-import acolimento2 from "../images/acolhimento2.png";
-import acolimento3 from "../images/acolhimento3.png";
+import acolhimento1 from "../images/acolhimento1.png";
+import acolhimento2 from "../images/acolhimento2.png";
+import acolhimento3 from "../images/acolhimento3.png";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -42,17 +42,17 @@ export function CepImages(
     <div ref={props.chapRef} id={props.id}>
       <img
         id={"cep_image_1"}
-        src={acolimento1}
+        src={acolhimento1}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"cep_image_2"}
-        src={acolimento2}
+        src={acolhimento2}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"cep_image_3"}
-        src={acolimento3}
+        src={acolhimento3}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
     </div>
@@ -726,16 +726,16 @@ export function Creditos(
     <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
         <styles.ContainerCardCreditos>
-          <styles.NewsTitle>Autores</styles.NewsTitle>
+          <styles.NewsTitle1>Autores</styles.NewsTitle1>
           <styles.TextCard1>
             Caio Jacintho <br />
             Diego Oliveira <br />
             Judite Cypreste <br />
-            Maria Eduarda Couto Carabetta
+            Maria Eduarda Couto
           </styles.TextCard1>
-          <styles.NewsTitle className=" lg:mt-[40px] ">
+          <styles.NewsTitle1 className=" lg:mt-[40px] mt-[60px] ">
             Agradecimentos
-          </styles.NewsTitle>
+          </styles.NewsTitle1>
           <styles.TextCard1>
             Brenno Carnevale
             <br />
@@ -743,17 +743,17 @@ export function Creditos(
             Rodrigo Abreu <br />
             Clara Santos <br />
           </styles.TextCard1>
-          <styles.NewsTitle className=" lg:mt-[40px] ">
+          <styles.NewsTitle1 className=" lg:mt-[40px] mt-[60px]">
             Parcerias
-          </styles.NewsTitle>
+          </styles.NewsTitle1>
           <styles.TextCard1>
             Escritório de Dados
             <br />
             Secretaria de Ordem Pública{" "}
           </styles.TextCard1>
-          <styles.NewsTitle className=" lg:mt-[40px] ">
+          <styles.NewsTitle1 className=" lg:mt-[40px] mt-[60px]">
             Prefeito
-          </styles.NewsTitle>
+          </styles.NewsTitle1>
           <styles.TextCard1>Eduardo Paes</styles.TextCard1>
         </styles.ContainerCardCreditos>
       </styles.ContainerCard>
