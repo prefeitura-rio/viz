@@ -370,9 +370,9 @@ export function VigilanciaCapitulo(
         <styles.ContainerCard1>
           <styles.NewsTitle>Vigilância</styles.NewsTitle>
           <styles.TextCard1>
-            Uma das ações previstas para aumentar a segurança dos cariocas na
-            região, foi pensar efetivamente no aumento do monitoramento e da
-            vigilância do Jardim do Méier.
+            Uma das ações para aumentar a segurança dos cariocas na região, foi
+            pensar efetivamente no aumento do monitoramento e da vigilância do
+            Jardim do Méier.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -401,10 +401,9 @@ export function VigilanciaUm(
           tempo real e ajudam em tomadas de decisões mais rápidas na localidade.
           <br /> <br />
           Além das intervenções no espaço, o Programa CEP tem como eixo a
-          capacitação de guardas e líderes da GM-RIO em curso de formação
-          voltado ao policiamento preventivo, comunitário e orientado à
-          resolução de problemas. Paralelamente, foram capacitados 64 Guardas
-          Municipais em duas turmas de 1 semana para atuar no Programa CEP.
+          capacitação de guardas em curso de formação voltado ao policiamento
+          preventivo, comunitário e orientado à resolução de problemas. No
+          total, 64 guardas municipais foram capacitados para atuar no programa.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
@@ -424,8 +423,9 @@ export function VigilanciaDois(
       <styles.ContainerCard3>
         <styles.TextCard>
           Hoje, o patrulhamento preventivo da Guarda Municipal acontece em
-          período integral, um incentivo da ocupação do espaço público na Praça
-          Jardim do Méier.
+          período integra, enquanto as câmeras possibilitam respostas rápidas
+          dos agentes e inibem criminosos de cometer atos na Praça Jardim do
+          Méier.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
