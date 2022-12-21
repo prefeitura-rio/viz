@@ -9,17 +9,31 @@ import logo1 from "../images/logo1.png";
 import logoed from "../images/logoed.png";
 import cep from "../images/cep.png";
 import logopref from "../images/logopref.png";
+import scroll from "../images/scroll.gif";
+
+// CAPA DOS CAPITULOS
 import capa1 from "../images/capa1.png";
 import capa2 from "../images/capa2.png";
 import capa3 from "../images/capa3.png";
 import capa4 from "../images/capa4.png";
 import capa5 from "../images/capa5.png";
-import teste from "../images/teste.png";
-import scroll from "../images/scroll.gif";
 
+// IMAGENS DO SCROLL
 import acolhimento1 from "../images/acolhimento1.png";
 import acolhimento2 from "../images/acolhimento2.png";
-import acolhimento3 from "../images/acolhimento3.png";
+import acolhimento3 from "../images/acolhimento3.gif";
+
+import ativacao1 from "../images/ativacao1.png";
+import ativacao2 from "../images/ativacao2.png";
+import ativacao3 from "../images/ativacao3.gif";
+
+import conservacao1 from "../images/conservacao1.png";
+import conservacao2 from "../images/conservacao2.png";
+import conservacao3 from "../images/conservacao3.gif";
+
+import vigilancia1 from "../images/vigilancia1.png";
+import vigilancia2 from "../images/vigilancia2.png";
+import vigilancia3 from "../images/vigilancia3.gif";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -29,102 +43,6 @@ import CustomEase from "gsap/CustomEase";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-
-export function CepImages(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <div ref={props.chapRef} id={props.id}>
-      <img
-        id={"cep_image_1"}
-        src={acolhimento1}
-        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
-      ></img>
-      <img
-        id={"cep_image_2"}
-        src={acolhimento2}
-        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
-      ></img>
-      <img
-        id={"cep_image_3"}
-        src={acolhimento3}
-        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
-      ></img>
-    </div>
-  );
-}
-
-export function CepUm(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <>
-      <styles.ChapterGenericDiv10
-        ref={props.chapRef}
-        id={props.id}
-      ></styles.ChapterGenericDiv10>
-    </>
-  );
-}
-
-export function CepDois(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3 id={"text_cep_dois"}>
-        <styles.TextCard>
-          Com base em evidências científicas, uma série de ações pontuais, de
-          baixo custo e focalizadas, foram estrategicamente pensadas para
-          contribuir para a redução dos fatores de risco mapeados e,
-          consequentemente, para a redução do crime e da sensação de insegurança
-          no local.
-          <br /> <br />
-          Estratégias como aumentar a disponibilidade de árvores e espaços
-          verdes, reduzir a presença de lixo e pichação, mudar o planejamento de
-          habitação e aprimorar a iluminação pública podem, segundo
-          especialistas, levar a reduções importantes no crime e na desordem.
-          <br /> <br />
-          Juntos, a SEOP em atuação integrada com diversos órgãos da prefeitura
-          e empresas com serviços públicos, realizaram até o momento 394
-          demandas para melhoria do espaço. A seguir, explicaremos como elas
-          mudaram a vida dos moradores da região.
-        </styles.TextCard>
-      </styles.ContainerCard3>
-    </styles.ChapterGenericDiv10>
-  );
-}
-
-export function CepTres(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv10
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterGenericDiv10>
-  );
-}
 
 export function Capa(
   props = {
@@ -356,6 +274,102 @@ export function CepCapitulo(
   );
 }
 
+export function CepImages(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <div ref={props.chapRef} id={props.id}>
+      <img
+        id={"cep_image_1"}
+        src={acolhimento1}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+      <img
+        id={"cep_image_2"}
+        src={acolhimento2}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+      <img
+        id={"cep_image_3"}
+        src={acolhimento3}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+    </div>
+  );
+}
+
+export function CepUm(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <>
+      <styles.ChapterGenericDiv10
+        ref={props.chapRef}
+        id={props.id}
+      ></styles.ChapterGenericDiv10>
+    </>
+  );
+}
+
+export function CepDois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3 id={"text_cep_dois"}>
+        <styles.TextCard>
+          Com base em evidências científicas, uma série de ações pontuais, de
+          baixo custo e focalizadas, foram estrategicamente pensadas para
+          contribuir para a redução dos fatores de risco mapeados e,
+          consequentemente, para a redução do crime e da sensação de insegurança
+          no local.
+          <br /> <br />
+          Estratégias como aumentar a disponibilidade de árvores e espaços
+          verdes, reduzir a presença de lixo e pichação, mudar o planejamento de
+          habitação e aprimorar a iluminação pública podem, segundo
+          especialistas, levar a reduções importantes no crime e na desordem.
+          <br /> <br />
+          Juntos, a SEOP em atuação integrada com diversos órgãos da prefeitura
+          e empresas com serviços públicos, realizaram até o momento 394
+          demandas para melhoria do espaço. A seguir, explicaremos como elas
+          mudaram a vida dos moradores da região.
+        </styles.TextCard>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv10>
+  );
+}
+
+export function CepTres(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv10
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterGenericDiv10>
+  );
+}
+
 export function VigilanciaCapitulo(
   props = {
     id: "",
@@ -384,6 +398,35 @@ export function VigilanciaCapitulo(
   );
 }
 
+export function VigilanciaImages(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <div ref={props.chapRef} id={props.id}>
+      <img
+        id={"vigilancia_image_1"}
+        src={vigilancia1}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+      <img
+        id={"vigilancia_image_2"}
+        src={vigilancia2}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+      <img
+        id={"vigilancia_image_3"}
+        src={vigilancia3}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+    </div>
+  );
+}
+
 export function VigilanciaUm(
   props = {
     id: "",
@@ -393,8 +436,8 @@ export function VigilanciaUm(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3 id={"text_vigilancia_dois"}>
         <styles.TextCard>
           Para que isso fosse possível, em parceria com o COR foram instaladas
           34 câmeras de vigilância no local que auxiliam no monitoramento em
@@ -409,7 +452,7 @@ export function VigilanciaUm(
           (CETC).
         </styles.TextCard>
       </styles.ContainerCard3>
-    </styles.ChapterGenericDiv2>
+    </styles.ChapterGenericDiv10>
   );
 }
 
@@ -422,8 +465,8 @@ export function VigilanciaDois(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3 id={"text_vigilancia_dois"}>
         <styles.TextCard>
           Hoje, o patrulhamento preventivo da Guarda Municipal acontece em
           período integra, enquanto as câmeras possibilitam respostas rápidas
@@ -431,7 +474,23 @@ export function VigilanciaDois(
           Méier.
         </styles.TextCard>
       </styles.ContainerCard3>
-    </styles.ChapterGenericDiv2>
+    </styles.ChapterGenericDiv10>
+  );
+}
+
+export function VigilanciaTres(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv10
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterGenericDiv10>
   );
 }
 
@@ -465,6 +524,35 @@ export function AtivacaoCapitulo(
   );
 }
 
+export function AtivacaoImages(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <div ref={props.chapRef} id={props.id}>
+      <img
+        id={"ativacao_image_1"}
+        src={ativacao1}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+      <img
+        id={"ativacao_image_2"}
+        src={ativacao2}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+      <img
+        id={"ativacao_image_3"}
+        src={ativacao3}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+    </div>
+  );
+}
+
 export function AtivacaoUm(
   props = {
     id: "",
@@ -474,8 +562,8 @@ export function AtivacaoUm(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3 id={"text_ativacao_dois"}>
         <styles.TextCard>
           Para corrigir isso, a SEOP fez uma série de ações como a identificação
           e formalização de 57 ambulantes no Ambulante Harmonia, programa da
@@ -483,7 +571,7 @@ export function AtivacaoUm(
           para que os ambulantes pudessem trabalhar com mais segurança.
         </styles.TextCard>
       </styles.ContainerCard3>
-    </styles.ChapterGenericDiv2>
+    </styles.ChapterGenericDiv10>
   );
 }
 
@@ -496,8 +584,8 @@ export function AtivacaoDois(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3 id={"text_ativacao_dois"}>
         <styles.TextCard>
           Em parceria com a Secretaria de Conservação, a Fundação Parques e
           Jardins e também de artistas locais, um novo Parcão foi construído no
@@ -506,7 +594,23 @@ export function AtivacaoDois(
           artesanato e 144 eventos culturais já foram realizadas.
         </styles.TextCard>
       </styles.ContainerCard3>
-    </styles.ChapterGenericDiv2>
+    </styles.ChapterGenericDiv10>
+  );
+}
+
+export function AtivacaoTres(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv10
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterGenericDiv10>
   );
 }
 
@@ -541,6 +645,35 @@ export function ConservacaoCapitulo(
   );
 }
 
+export function ConservacaoImages(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <div ref={props.chapRef} id={props.id}>
+      <img
+        id={"conservacao_image_1"}
+        src={conservacao1}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+      <img
+        id={"conservacao_image_2"}
+        src={conservacao2}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+      <img
+        id={"conservacao_image_3"}
+        src={conservacao3}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+    </div>
+  );
+}
+
 export function ConservacaoUm(
   props = {
     id: "",
@@ -550,8 +683,8 @@ export function ConservacaoUm(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3 id={"text_conservacao_dois"}>
         <styles.TextCard>
           A reforma e recuperação de espaços ficou por conta da Secretaria de
           Meio Ambiente, da Fundação Parques e Jardins, da COMLURB e também da
@@ -560,7 +693,7 @@ export function ConservacaoUm(
           instalação de 149 pontos de iluminação pública.
         </styles.TextCard>
       </styles.ContainerCard3>
-    </styles.ChapterGenericDiv2>
+    </styles.ChapterGenericDiv10>
   );
 }
 
@@ -573,8 +706,8 @@ export function ConservacaoDois(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3 id={"text_conservacao_dois"}>
         <styles.TextCard>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -587,7 +720,23 @@ export function ConservacaoDois(
           including versions of Lorem Ipsum.
         </styles.TextCard>
       </styles.ContainerCard3>
-    </styles.ChapterGenericDiv2>
+    </styles.ChapterGenericDiv10>
+  );
+}
+
+export function ConservacaoTres(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv10
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterGenericDiv10>
   );
 }
 
@@ -619,6 +768,35 @@ export function AcolhimentoCapitulo(
   );
 }
 
+export function AcolhimentoImages(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <div ref={props.chapRef} id={props.id}>
+      <img
+        id={"acolhimento_image_1"}
+        src={acolhimento1}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+      <img
+        id={"acolhimento_image_2"}
+        src={acolhimento2}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+      <img
+        id={"acolhimento_image_3"}
+        src={acolhimento3}
+        className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
+    </div>
+  );
+}
+
 export function AcolhimentoUm(
   props = {
     id: "",
@@ -628,14 +806,14 @@ export function AcolhimentoUm(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3 id={"text_acolhimento_dois"}>
         <styles.TextCard>
           Ao todo, 91 demandas relativas a pessoas em vulnerabilidade social na
           região foram resolvidas.
         </styles.TextCard>
       </styles.ContainerCard3>
-    </styles.ChapterGenericDiv2>
+    </styles.ChapterGenericDiv10>
   );
 }
 
@@ -648,8 +826,8 @@ export function AcolhimentoDois(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3 id={"text_acolhimento_dois"}>
         <styles.TextCard>
           Para continuar dando apoio à população, agentes da Assistência Social
           e Guardas Municipais realizam rondas na região para identificar,
@@ -657,7 +835,23 @@ export function AcolhimentoDois(
           da Prefeitura do Rio de Janeiro.
         </styles.TextCard>
       </styles.ContainerCard3>
-    </styles.ChapterGenericDiv2>
+    </styles.ChapterGenericDiv10>
+  );
+}
+
+export function AcolhimentoTres(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv10
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterGenericDiv10>
   );
 }
 

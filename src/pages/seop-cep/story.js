@@ -163,7 +163,10 @@ export default function SubsidioSPPO() {
     });
 
     const tl_vigilancia_capitulo = gsap.timeline();
-    tl_vigilancia_capitulo.set("#cep_image_3", { opacity: 0 });
+    tl_vigilancia_capitulo
+      .set("#vigilancia_image_1", { opacity: 0 })
+      .to("#vigilancia_image_1", { opacity: 0, duration: 30 })
+      .to("#vigilancia_image_1", { opacity: 1, duration: 70 });
 
     ScrollTrigger.create({
       animation: tl_vigilancia_capitulo,
@@ -174,11 +177,38 @@ export default function SubsidioSPPO() {
       trigger: "#vigilancia_um",
     });
 
+    const tl_vigilancia_dois = gsap.timeline();
+    tl_vigilancia_dois
+      .set("#vigilancia_image_2", { opacity: 0 })
+      .to("#vigilancia_image_2", { opacity: 0, duration: 9 })
+      .to("#vigilancia_image_2", { opacity: 1, duration: 40 })
+      .to("#vigilancia_image_2", { opacity: 1, duration: 50 });
+
     ScrollTrigger.create({
+      animation: tl_vigilancia_dois,
       trigger: "#vigilancia_dois",
     });
 
+    const tl_vigilancia_tres = gsap.timeline();
+    tl_vigilancia_tres
+      .set("#vigilancia_image_3", { opacity: 0 })
+      .to("#vigilancia_image_3", { opacity: 0, duration: 10 })
+      .to("#vigilancia_image_3", { opacity: 1, duration: 40 })
+      .to("#vigilancia_image_3", { opacity: 1, duration: 50 });
+
     ScrollTrigger.create({
+      animation: tl_vigilancia_tres,
+      trigger: "#vigilancia_tres",
+    });
+
+    const tl_ativacao_capitulo = gsap.timeline();
+    tl_ativacao_capitulo
+      .set("#ativacao_image_1", { opacity: 0 })
+      .to("#ativacao_image_1", { opacity: 0, duration: 30 })
+      .to("#ativacao_image_1", { opacity: 1, duration: 70 });
+
+    ScrollTrigger.create({
+      animation: tl_ativacao_capitulo,
       trigger: "#ativacao_capitulo",
     });
 
@@ -186,11 +216,38 @@ export default function SubsidioSPPO() {
       trigger: "#ativacao_um",
     });
 
+    const tl_ativacao_dois = gsap.timeline();
+    tl_ativacao_dois
+      .set("#ativacao_image_2", { opacity: 0 })
+      .to("#ativacao_image_2", { opacity: 0, duration: 9 })
+      .to("#ativacao_image_2", { opacity: 1, duration: 40 })
+      .to("#ativacao_image_2", { opacity: 1, duration: 50 });
+
     ScrollTrigger.create({
+      animation: tl_ativacao_dois,
       trigger: "#ativacao_dois",
     });
 
+    const tl_ativacao_tres = gsap.timeline();
+    tl_ativacao_tres
+      .set("#ativacao_image_3", { opacity: 0 })
+      .to("#ativacao_image_3", { opacity: 0, duration: 10 })
+      .to("#ativacao_image_3", { opacity: 1, duration: 40 })
+      .to("#ativacao_image_3", { opacity: 1, duration: 50 });
+
     ScrollTrigger.create({
+      animation: tl_ativacao_tres,
+      trigger: "#ativacao_tres",
+    });
+
+    const tl_conservacao_capitulo = gsap.timeline();
+    tl_conservacao_capitulo
+      .set("#conservacao_image_1", { opacity: 0 })
+      .to("#conservacao_image_1", { opacity: 0, duration: 30 })
+      .to("#conservacao_image_1", { opacity: 1, duration: 70 });
+
+    ScrollTrigger.create({
+      animation: tl_conservacao_capitulo,
       trigger: "#conservacao_capitulo",
     });
 
@@ -198,11 +255,38 @@ export default function SubsidioSPPO() {
       trigger: "#conservacao_um",
     });
 
+    const tl_conservacao_dois = gsap.timeline();
+    tl_conservacao_dois
+      .set("#conservacao_image_2", { opacity: 0 })
+      .to("#conservacao_image_2", { opacity: 0, duration: 9 })
+      .to("#conservacao_image_2", { opacity: 1, duration: 40 })
+      .to("#conservacao_image_2", { opacity: 1, duration: 50 });
+
     ScrollTrigger.create({
+      animation: tl_conservacao_dois,
       trigger: "#conservacao_dois",
     });
 
+    const tl_conservacao_tres = gsap.timeline();
+    tl_conservacao_tres
+      .set("#conservacao_image_3", { opacity: 0 })
+      .to("#conservacao_image_3", { opacity: 0, duration: 10 })
+      .to("#conservacao_image_3", { opacity: 1, duration: 40 })
+      .to("#conservacao_image_3", { opacity: 1, duration: 50 });
+
     ScrollTrigger.create({
+      animation: tl_conservacao_tres,
+      trigger: "#conservacao_tres",
+    });
+
+    const tl_acolhimento_capitulo = gsap.timeline();
+    tl_acolhimento_capitulo
+      .set("#acolhimento_image_1", { opacity: 0 })
+      .to("#acolhimento_image_1", { opacity: 0, duration: 30 })
+      .to("#acolhimento_image_1", { opacity: 1, duration: 70 });
+
+    ScrollTrigger.create({
+      animation: tl_acolhimento_capitulo,
       trigger: "#acolhimento_capitulo",
     });
 
@@ -210,9 +294,32 @@ export default function SubsidioSPPO() {
       trigger: "#acolhimento_um",
     });
 
+    const tl_acolhimento_dois = gsap.timeline();
+    tl_acolhimento_dois
+      .set("#acolhimento_image_2", { opacity: 0 })
+      .to("#acolhimento_image_2", { opacity: 0, duration: 9 })
+      .to("#acolhimento_image_2", { opacity: 1, duration: 40 })
+      .to("#acolhimento_image_2", { opacity: 1, duration: 50 });
+
     ScrollTrigger.create({
+      animation: tl_acolhimento_dois,
       trigger: "#acolhimento_dois",
     });
+
+    const tl_acolhimento_tres = gsap.timeline();
+    tl_acolhimento_tres
+      .set("#acolhimento_image_3", { opacity: 0 })
+      .to("#acolhimento_image_3", { opacity: 0, duration: 10 })
+      .to("#acolhimento_image_3", { opacity: 1, duration: 40 })
+      .to("#acolhimento_image_3", { opacity: 1, duration: 50 });
+
+    ScrollTrigger.create({
+      animation: tl_acolhimento_tres,
+      trigger: "#acolhimento_tres",
+    });
+
+    const tl_resultados_capitulo = gsap.timeline();
+    tl_resultados_capitulo.set("#acolhimento_image_3", { opacity: 0 });
 
     ScrollTrigger.create({
       trigger: "#resultados",
@@ -257,17 +364,25 @@ export default function SubsidioSPPO() {
       <chapterDiv.CepDois id={"cep_dois"} />
       <chapterDiv.CepTres id={"cep_tres"} />
       <chapterDiv.VigilanciaCapitulo id={"vigilancia_capitulo"} />
+      <chapterDiv.VigilanciaImages id={"vigilancia_images"} />
       <chapterDiv.VigilanciaUm id={"vigilancia_um"} />
       <chapterDiv.VigilanciaDois id={"vigilancia_dois"} />
+      <chapterDiv.VigilanciaTres id={"vigilancia_tres"} />
       <chapterDiv.AtivacaoCapitulo id={"ativacao_capitulo"} />
+      <chapterDiv.AtivacaoImages id={"ativacao_images"} />
       <chapterDiv.AtivacaoUm id={"ativacao_um"} />
       <chapterDiv.AtivacaoDois id={"ativacao_dois"} />
+      <chapterDiv.AtivacaoTres id={"ativacao_tres"} />
       <chapterDiv.ConservacaoCapitulo id={"conservacao_capitulo"} />
+      <chapterDiv.ConservacaoImages id={"conservacao_images"} />
       <chapterDiv.ConservacaoUm id={"conservacao_um"} />
       <chapterDiv.ConservacaoDois id={"conservacao_dois"} />
+      <chapterDiv.ConservacaoTres id={"conservacao_tres"} />
       <chapterDiv.AcolhimentoCapitulo id={"acolhimento_capitulo"} />
+      <chapterDiv.AcolhimentoImages id={"acolhimento_images"} />
       <chapterDiv.AcolhimentoUm id={"acolhimento_um"} />
       <chapterDiv.AcolhimentoDois id={"acolhimento_dois"} />
+      <chapterDiv.AcolhimentoTres id={"acolhimento_tres"} />
       <chapterDiv.Resultados id={"resultados"} />
       <chapterDiv.Creditos id={"creditos"} />
     </>
