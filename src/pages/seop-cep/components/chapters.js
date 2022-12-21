@@ -286,7 +286,6 @@ export function CepImages(
   }
 ) {
   props = setDefaultProps(props);
-  console.log("isMobile", isMobile);
   return (
     <div ref={props.chapRef} id={props.id}>
       <img
