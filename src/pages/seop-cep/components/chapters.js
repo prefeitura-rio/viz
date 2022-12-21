@@ -3,6 +3,7 @@ import * as styles from "./chapters.style";
 import tw from "tailwind-styled-components";
 // import ReactDOM from "react-dom";
 // import DWChart from "react-datawrapper-chart";
+import { isMobile } from "react-device-detect";
 
 // IMAGENS
 import logo1 from "../images/logo1.png";
@@ -285,22 +286,22 @@ export function CepImages(
   }
 ) {
   props = setDefaultProps(props);
-
+  console.log("isMobile", isMobile);
   return (
     <div ref={props.chapRef} id={props.id}>
       <img
         id={"cep_image_1"}
-        src={cenacep1}
+        src={isMobile ? vigilancia2 : cenacep1}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"cep_image_2"}
-        src={cenacep2}
+        src={isMobile ? vigilancia2 : cenacep2}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"cep_image_3"}
-        src={cenacep3}
+        src={isMobile ? vigilancia2 : cenacep3}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
     </div>
