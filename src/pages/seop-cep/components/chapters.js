@@ -19,6 +19,10 @@ import capa4 from "../images/capa4.png";
 import capa5 from "../images/capa5.png";
 
 // IMAGENS DO SCROLL
+import cenacep1 from "../images/cenacep1.png";
+import cenacep2 from "../images/cenacep2.png";
+import cenacep3 from "../images/cenacep3.png";
+
 import acolhimento1 from "../images/acolhimento1.png";
 import acolhimento2 from "../images/acolhimento2.png";
 import acolhimento3 from "../images/acolhimento3.gif";
@@ -286,17 +290,17 @@ export function CepImages(
     <div ref={props.chapRef} id={props.id}>
       <img
         id={"cep_image_1"}
-        src={acolhimento1}
+        src={cenacep1}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"cep_image_2"}
-        src={acolhimento2}
+        src={cenacep2}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"cep_image_3"}
-        src={acolhimento3}
+        src={cenacep3}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
     </div>
