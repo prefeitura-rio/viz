@@ -925,8 +925,9 @@ export function Creditos(
             Brenno Carnevale
             <br />
             João Carabetta <br />
-            Rodrigo Abreu <br />
             Clara Santos <br />
+            Rodrigo Abreu <br />
+            Paulo Mac Culloch
           </styles.TextCard1>
           <styles.NewsTitle1 className=" lg:mt-[40px] mt-[60px]">
             Parcerias
@@ -944,11 +945,6 @@ export function Creditos(
       </styles.ContainerCard>
     </styles.ChapterGenericDiv4>
   );
-}
-
-{
-  /* Escritório de Dados <br />
-Secretaria de Ordem Pública */
 }
 
 export function Fim(

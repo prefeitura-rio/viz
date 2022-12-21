@@ -22,8 +22,8 @@ export const CapaDiv = tw(CapaDivSC)`
 `;
 
 export const CapaAutor = tw.div`
-  flex flex-col 
-  lg:justify-start items-left
+  flex flex-col
+  justify-start items-left
   mt-[24px] 
   font-sans
   text-sm text-center text-[#ef4444]
@@ -94,7 +94,7 @@ export const IntroText = tw.div`
 
 export const ChapterGenericDiv = tw.div`
   flex
-  w-full h-auto lg:h-[120vh] 
+  w-full h-auto lg:h-[120vh] min-h-[100vh]
   items-center
   justify-center
   lg:justify-start
@@ -179,7 +179,7 @@ export const ContainerCard1 = tw.div`
   backdrop-blur-sm
   bg-red-500
   max-w-xs
-  lg:max-w-[50%]
+  lg:max-w-[40%]
 `;
 
 export const ContainerCard2 = tw.div`
