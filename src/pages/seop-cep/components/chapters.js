@@ -713,15 +713,13 @@ export function ConservacaoDois(
     <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3 id={"text_conservacao_dois"}>
         <styles.TextCard>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Todo trabalho de conservação foi pensado na promoção de espaços
+          públicos acolhedores para as pessoas. Isso porque o programa tem como
+          premissa a ideia de que uma cidade segura, não segrega, mas une e
+          acolhe a sua população. O CEP busca romper com a ideia de que é
+          preciso isolar para proteger, construir muros para se sentir seguro.
+          Conservar, no CEP, é garantir as relações humanas nos espaços
+          públicos. Afinal, se o rio é seu, a rua também é sua.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv10>
