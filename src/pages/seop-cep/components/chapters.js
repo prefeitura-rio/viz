@@ -19,7 +19,7 @@ import capa3 from "../images/capa3.png";
 import capa4 from "../images/capa4.png";
 import capa5 from "../images/capa5.png";
 
-// IMAGENS DO SCROLL
+// DESKTOP IMAGENS
 import cenacep1 from "../images/cenacep1.png";
 import cenacep2 from "../images/cenacep2.png";
 import cenacep3 from "../images/cenacep3.png";
@@ -39,6 +39,27 @@ import conservacao3 from "../images/conservacao3.gif";
 import vigilancia1 from "../images/vigilancia1.png";
 import vigilancia2 from "../images/vigilancia2.png";
 import vigilancia3 from "../images/vigilancia3.gif";
+
+// MOBILE IMAGENS
+import m_cep1 from "../images/m_cep1.png";
+import m_cep2 from "../images/m_cep2.png";
+import m_cep3 from "../images/m_cep3.gif";
+
+import m_acolhimento1 from "../images/m_acolhimento1.png";
+import m_acolhimento2 from "../images/m_acolhimento2.png";
+import m_acolhimento3 from "../images/m_acolhimento3.gif";
+
+import m_ativacao1 from "../images/m_ativacao1.png";
+import m_ativacao2 from "../images/m_ativacao2.png";
+import m_ativacao3 from "../images/m_ativacao3.gif";
+
+import m_conservacao1 from "../images/m_conservacao1.png";
+import m_conservacao2 from "../images/m_conservacao2.png";
+import m_conservacao3 from "../images/m_conservacao3.gif";
+
+import m_vigilancia1 from "../images/m_vigilancia1.png";
+import m_vigilancia2 from "../images/m_vigilancia2.png";
+import m_vigilancia3 from "../images/m_vigilancia3.gif";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -290,17 +311,17 @@ export function CepImages(
     <div ref={props.chapRef} id={props.id}>
       <img
         id={"cep_image_1"}
-        src={isMobile ? vigilancia2 : cenacep1}
+        src={isMobile ? m_cep1 : vigilancia1}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"cep_image_2"}
-        src={isMobile ? vigilancia2 : cenacep2}
+        src={isMobile ? m_cep2 : vigilancia2}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"cep_image_3"}
-        src={isMobile ? vigilancia2 : cenacep3}
+        src={isMobile ? m_cep3 : vigilancia3}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
     </div>
@@ -414,17 +435,17 @@ export function VigilanciaImages(
     <div ref={props.chapRef} id={props.id}>
       <img
         id={"vigilancia_image_1"}
-        src={vigilancia1}
+        src={isMobile ? m_vigilancia1 : vigilancia1}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"vigilancia_image_2"}
-        src={vigilancia2}
+        src={isMobile ? m_vigilancia2 : vigilancia2}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"vigilancia_image_3"}
-        src={vigilancia3}
+        src={isMobile ? m_vigilancia3 : vigilancia3}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
     </div>
@@ -540,17 +561,17 @@ export function AtivacaoImages(
     <div ref={props.chapRef} id={props.id}>
       <img
         id={"ativacao_image_1"}
-        src={ativacao1}
+        src={isMobile ? m_ativacao1 : ativacao1}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"ativacao_image_2"}
-        src={ativacao2}
+        src={isMobile ? m_ativacao2 : ativacao2}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"ativacao_image_3"}
-        src={ativacao3}
+        src={isMobile ? m_ativacao3 : ativacao3}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
     </div>
@@ -661,17 +682,17 @@ export function ConservacaoImages(
     <div ref={props.chapRef} id={props.id}>
       <img
         id={"conservacao_image_1"}
-        src={conservacao1}
+        src={isMobile ? m_conservacao1 : conservacao1}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"conservacao_image_2"}
-        src={conservacao2}
+        src={isMobile ? m_conservacao2 : conservacao2}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"conservacao_image_3"}
-        src={conservacao3}
+        src={isMobile ? m_conservacao3 : conservacao3}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
     </div>
@@ -713,13 +734,15 @@ export function ConservacaoDois(
     <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3 id={"text_conservacao_dois"}>
         <styles.TextCard>
-          Todo trabalho de conservação foi pensado na promoção de espaços
-          públicos acolhedores para as pessoas. Isso porque o programa tem como
-          premissa a ideia de que uma cidade segura, não segrega, mas une e
-          acolhe a sua população. O CEP busca romper com a ideia de que é
-          preciso isolar para proteger, construir muros para se sentir seguro.
-          Conservar, no CEP, é garantir as relações humanas nos espaços
-          públicos. Afinal, se o rio é seu, a rua também é sua.
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv10>
@@ -782,17 +805,17 @@ export function AcolhimentoImages(
     <div ref={props.chapRef} id={props.id}>
       <img
         id={"acolhimento_image_1"}
-        src={acolhimento1}
+        src={isMobile ? m_acolhimento1 : acolhimento1}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"acolhimento_image_2"}
-        src={acolhimento2}
+        src={isMobile ? m_acolhimento2 : acolhimento2}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"acolhimento_image_3"}
-        src={acolhimento3}
+        src={isMobile ? m_acolhimento3 : acolhimento3}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
     </div>
