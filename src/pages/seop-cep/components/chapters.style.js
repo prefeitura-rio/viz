@@ -135,7 +135,7 @@ bg-white
 
 export const ChapterGenericDiv10 = tw.div`
 flex
-w-full h-[100vh] 
+w-full h-[150vh] 
 items-center
 justify-left
 p-[34px]
