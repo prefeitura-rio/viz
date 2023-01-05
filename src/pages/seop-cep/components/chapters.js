@@ -20,9 +20,9 @@ import capa4 from "../images/capa4.png";
 import capa5 from "../images/capa5.png";
 
 // DESKTOP IMAGENS
-import cenacep1 from "../images/cenacep1.png";
-import cenacep2 from "../images/cenacep2.png";
-import cenacep3 from "../images/cenacep3.png";
+import cep1 from "../images/cep1.png";
+import cep2 from "../images/cep2.png";
+import cep3 from "../images/cep3.gif";
 
 import acolhimento1 from "../images/acolhimento1.png";
 import acolhimento2 from "../images/acolhimento2.png";
@@ -311,17 +311,17 @@ export function CepImages(
     <div ref={props.chapRef} id={props.id}>
       <img
         id={"cep_image_1"}
-        src={isMobile ? m_cep1 : vigilancia1}
+        src={isMobile ? m_cep1 : cep1}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"cep_image_2"}
-        src={isMobile ? m_cep2 : vigilancia2}
+        src={isMobile ? m_cep2 : cep2}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
       <img
         id={"cep_image_3"}
-        src={isMobile ? m_cep3 : vigilancia3}
+        src={isMobile ? m_cep3 : cep3}
         className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
     </div>
