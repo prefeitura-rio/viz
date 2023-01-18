@@ -23,6 +23,9 @@ export default function Home() {
           <Link to="/sandbox/sample"> Sandbox | Sample </Link>
         </li>
         <li>
+          <Link to="/sandbox/video"> Sandbox | Video </Link>
+        </li>
+        <li>
           <Link to="/sandbox/test-linechart"> Sandbox | Test Line Chart </Link>
         </li>
         <li>
