@@ -953,10 +953,11 @@ export function Creditos(
           <styles.TextCard1>
             Brenno Carnevale
             <br />
+            Clara de Lernia <br />
+            Izabel Rizzo <br />
             João Carabetta <br />
-            Clara Santos <br />
-            Rodrigo Abreu <br />
-            Paulo Mac Culloch
+            Paulo Mac Culloch <br />
+            Rodrigo Abreu
           </styles.TextCard1>
           <styles.NewsTitle1 className=" lg:mt-[40px] mt-[60px]">
             Parceria
