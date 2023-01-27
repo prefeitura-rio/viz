@@ -28,15 +28,18 @@ export default function SubsidioSPPO() {
     setLocation({
       ...location,
       desktop: {
-        ...desktopPosition,
+        ...desktopPosition
       },
       mobile: {
-        ...mobilePosition,
-      },
+        ...mobilePosition
+      }
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState("capa");
   // console.log(chapterNumberMap);
+  useEffect(() => {
+    document.title = "CEP - Seu Rio Sua Rua";
+  }, []);
   useEffect(() => {
     switch (chapterNumberMap) {
       case "capa":
@@ -78,49 +81,49 @@ export default function SubsidioSPPO() {
       start: "top center",
       end: "bottom center",
       markers: false,
-      scrub: true,
+      scrub: true
       // toggleActions: "play reverse play reverse",
     });
     ScrollTrigger.create({
       trigger: "#capa",
       onToggle: () => {
         setChapterNumberMap("capa");
-      },
+      }
     });
 
     ScrollTrigger.create({
       trigger: "#mapa_capitulo",
       onToggle: () => {
         setChapterNumberMap("mapa_capitulo");
-      },
+      }
     });
 
     ScrollTrigger.create({
       trigger: "#mapa_zero",
       onToggle: () => {
         setChapterNumberMap("mapa_zero");
-      },
+      }
     });
 
     ScrollTrigger.create({
       trigger: "#mapa_um",
       onToggle: () => {
         setChapterNumberMap("mapa_um");
-      },
+      }
     });
 
     ScrollTrigger.create({
       trigger: "#mapa_mais_um",
       onToggle: () => {
         setChapterNumberMap("mapa_mais_um");
-      },
+      }
     });
 
     ScrollTrigger.create({
       trigger: "#mapa_dois",
       onToggle: () => {
         setChapterNumberMap("mapa_dois");
-      },
+      }
     });
 
     const tl_cep_capitulo = gsap.timeline();
@@ -131,11 +134,11 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_cep_capitulo,
-      trigger: "#cep_capitulo",
+      trigger: "#cep_capitulo"
     });
 
     ScrollTrigger.create({
-      trigger: "#cep_um",
+      trigger: "#cep_um"
     });
 
     const tl_cep_dois = gsap.timeline();
@@ -147,7 +150,7 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_cep_dois,
-      trigger: "#cep_dois",
+      trigger: "#cep_dois"
     });
 
     const tl_cep_tres = gsap.timeline();
@@ -159,7 +162,7 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_cep_tres,
-      trigger: "#cep_tres",
+      trigger: "#cep_tres"
     });
 
     const tl_vigilancia_capitulo = gsap.timeline();
@@ -170,11 +173,11 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_vigilancia_capitulo,
-      trigger: "#vigilancia_capitulo",
+      trigger: "#vigilancia_capitulo"
     });
 
     ScrollTrigger.create({
-      trigger: "#vigilancia_um",
+      trigger: "#vigilancia_um"
     });
 
     const tl_vigilancia_dois = gsap.timeline();
@@ -186,7 +189,7 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_vigilancia_dois,
-      trigger: "#vigilancia_dois",
+      trigger: "#vigilancia_dois"
     });
 
     const tl_vigilancia_tres = gsap.timeline();
@@ -198,7 +201,7 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_vigilancia_tres,
-      trigger: "#vigilancia_tres",
+      trigger: "#vigilancia_tres"
     });
 
     const tl_ativacao_capitulo = gsap.timeline();
@@ -209,11 +212,11 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_ativacao_capitulo,
-      trigger: "#ativacao_capitulo",
+      trigger: "#ativacao_capitulo"
     });
 
     ScrollTrigger.create({
-      trigger: "#ativacao_um",
+      trigger: "#ativacao_um"
     });
 
     const tl_ativacao_dois = gsap.timeline();
@@ -225,7 +228,7 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_ativacao_dois,
-      trigger: "#ativacao_dois",
+      trigger: "#ativacao_dois"
     });
 
     const tl_ativacao_tres = gsap.timeline();
@@ -237,7 +240,7 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_ativacao_tres,
-      trigger: "#ativacao_tres",
+      trigger: "#ativacao_tres"
     });
 
     const tl_conservacao_capitulo = gsap.timeline();
@@ -248,11 +251,11 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_conservacao_capitulo,
-      trigger: "#conservacao_capitulo",
+      trigger: "#conservacao_capitulo"
     });
 
     ScrollTrigger.create({
-      trigger: "#conservacao_um",
+      trigger: "#conservacao_um"
     });
 
     const tl_conservacao_dois = gsap.timeline();
@@ -264,7 +267,7 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_conservacao_dois,
-      trigger: "#conservacao_dois",
+      trigger: "#conservacao_dois"
     });
 
     const tl_conservacao_tres = gsap.timeline();
@@ -276,7 +279,7 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_conservacao_tres,
-      trigger: "#conservacao_tres",
+      trigger: "#conservacao_tres"
     });
 
     const tl_acolhimento_capitulo = gsap.timeline();
@@ -287,11 +290,11 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_acolhimento_capitulo,
-      trigger: "#acolhimento_capitulo",
+      trigger: "#acolhimento_capitulo"
     });
 
     ScrollTrigger.create({
-      trigger: "#acolhimento_um",
+      trigger: "#acolhimento_um"
     });
 
     const tl_acolhimento_dois = gsap.timeline();
@@ -303,7 +306,7 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_acolhimento_dois,
-      trigger: "#acolhimento_dois",
+      trigger: "#acolhimento_dois"
     });
 
     const tl_acolhimento_tres = gsap.timeline();
@@ -315,18 +318,18 @@ export default function SubsidioSPPO() {
 
     ScrollTrigger.create({
       animation: tl_acolhimento_tres,
-      trigger: "#acolhimento_tres",
+      trigger: "#acolhimento_tres"
     });
 
     const tl_resultados_capitulo = gsap.timeline();
     tl_resultados_capitulo.set("#acolhimento_image_3", { opacity: 0 });
 
     ScrollTrigger.create({
-      trigger: "#resultados",
+      trigger: "#resultados"
     });
 
     ScrollTrigger.create({
-      trigger: "#creditos",
+      trigger: "#creditos"
     });
   }, []);
 
@@ -347,7 +350,7 @@ export default function SubsidioSPPO() {
           width: "100%",
           height: "100%",
           // maxWidth: "100%",
-          zIndex: "-9999",
+          zIndex: "-9999"
         }}
         animationLoopLength={21600}
         animationSpeed={1}

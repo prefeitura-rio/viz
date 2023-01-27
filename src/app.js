@@ -13,6 +13,7 @@ import "./tailwind.css";
 
 const Home = lazy(() => import("./pages/home/home"));
 const StorySample = lazy(() => import("./pages/sandbox/sample"));
+const VideoSandbox = lazy(() => import("./pages/sandbox/video"));
 const SubsidioSPPO = lazy(() => import("./pages/subsidio-sppo/story"));
 const Interactive = lazy(() => import("./pages/subsidio-sppo/interactive"));
 
@@ -23,7 +24,7 @@ const SEOPDemolicoes = lazy(() => import("./pages/seop-demolicoes/story"));
 const CepSEOP = lazy(() => {
   return Promise.all([
     import("./pages/seop-cep/story"),
-    new Promise((resolve) => setTimeout(resolve, 1)),
+    new Promise((resolve) => setTimeout(resolve, 1))
   ]).then(([moduleExports]) => moduleExports);
 });
 
@@ -67,6 +68,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sandbox/sample" element={<StorySample />} />
+            <Route path="/sandbox/video" element={<VideoSandbox />} />
             <Route
               path="/especial-sppo/interactive"
               element={<Interactive />}
