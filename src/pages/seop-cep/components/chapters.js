@@ -140,18 +140,18 @@ export function MapaCapitulo(
           <styles.NewsTitle>Introdução</styles.NewsTitle>
           <styles.TextCard1>
             A situação da segurança pública na cidade do Rio de Janeiro é um
-            tema que preocupa os cariocas. E embora as prefeituras não tenham
-            uma atribuição específica na atuação contra a violência urbana, elas
-            possuem um papel fundamental para que um ambiente seguro seja
-            possível nas cidades.
-            <br /> <br /> Com a obrigação de regular o espaço urbano, cabe a
-            elas a manutenção da ordem pública, limpeza e conservação de vias,
-            iluminação e regulação da ocupação territorial, a que o torna o
-            agente central para criar espaços mais seguros aos cidadãos.
-            <br /> <br /> E é, aliando o estudo e análise do espaço público, que
-            a Prefeitura, por meio da Secretaria Municipal de Ordem Pública
-            (SEOP), vem combatendo a violência, transformando o Rio em um lugar
-            mais seguro para os cariocas.
+            tema que preocupa os cariocas.
+            <br /> <br />E embora as prefeituras não tenham uma atribuição
+            específica na atuação contra a violência urbana, elas possuem um
+            papel fundamental para que um ambiente seguro seja possível nas
+            cidades. Com a obrigação de regular o espaço urbano, cabe a elas a
+            manutenção da ordem pública, limpeza de vias, iluminação e regulação
+            da ocupação territorial, o que o torna o agente central para criar
+            espaços mais seguros aos cidadãos. <br /> <br />E é, aliando o
+            estudo e análise do espaço público, que a Prefeitura, por meio da
+            Secretaria Municipal de Ordem Pública (SEOP), vem combatendo a
+            violência, transformando o Rio em um lugar mais seguro para os
+            cariocas.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -192,17 +192,18 @@ export function MapaUm(
       <styles.ContainerCard3>
         <styles.TextCard>
           Antes de começarmos a explicar como estamos fazendo isso, é importante
-          entender como a violência está distribuída em grandes cidades.
-          <br /> <br /> Segundo especialistas na área da segurança pública, há
-          evidências de que o crime é concentrado no espaço urbano. Estudos
-          mostram que mesmo em cidades de grande porte, a violência é quase
-          sempre feita por um número pequeno de indivíduos que atuam sempre nas
-          mesmas localidades.
-          <br /> <br /> Uma análise nos crimes da cidade do Rio de Janeiro segue
-          esta mesma lógica. Entre 2016 e 2019, 25% dos roubos e furtos foram
-          contabilizados em apenas 1,3% do território e 5,3% do território
-          concentra 50% dos roubos e furtos de rua.
+          entender como a violência está distribuída em nossa cidade.
           <br /> <br />
+          Segundo especialistas na área da segurança pública, há evidências de
+          que o crime é concentrado no espaço urbano. Estudos mostram que a
+          violência é quase sempre feita por um número pequeno de indivíduos que
+          atuam sempre nas mesmas localidades.
+          <br /> <br />
+          Uma análise nos crimes na cidade segue esta mesma lógica. Entre 2016 e
+          2019, 25% dos roubos e furtos foram contabilizados em apenas 1,3% do
+          território. Rio de Janeiro em 2019: 1,3% do território do município
+          concentra 25% dos roubos e furtos de rua e 5,3% do território
+          concentra 50% dos roubos e furtos de rua.
           <styles.Textred>
             {" "}
             No mapa, podemos ver os locais com alta incidência criminal na
@@ -242,18 +243,16 @@ export function MapaDois(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
         <styles.TextCard>
-          O <styles.Textsalmao>Méier</styles.Textsalmao> é um desses locais que
-          se destaca pela alta concentração de roubos e furtos. Localizado na
-          Zona Norte da cidade, o bairro está entre as dez áreas com a maior
-          incidência destes crimes. A maioria das ocorrências acontece,
-          especificamente, na localidade conhecida como
-          <styles.Textred>Jardim do Méier</styles.Textred>. Aí é que nossa
-          análise começa.
-          <br /> <br /> Ao lado do Hospital Municipal Salgado Filho, entre
-          pontos de ônibus, estação de trem e um dos coretos mais famosos da
-          cidade, ao menos 110 roubos e 98 furtos foram registrados apenas em
-          2019, sendo o local um dos maiores focos de roubos e furtos de rua
-          registrados na cidade por vários anos consecutivos.
+          O <styles.Textsalmao>Méier</styles.Textsalmao>, localizado na Zona
+          Norte da cidade, está entre os dez bairros com a maior incidência
+          destes crimes. E é mais especificamente na localidade conhecida como{" "}
+          <styles.Textred>Jardim do Méier</styles.Textred> que nossa análise
+          começa.
+          <br /> <br />
+          Ao lado do Hospital Municipal Salgado Filho, entre pontos de ônibus,
+          estação de trem, e um dos coretos mais famosos da cidade, ao menos 110
+          roubos e 98 furtos foram registrados apenas em 2019, sendo o local uma
+          das maiores focos de roubos e furtos de rua registrados na cidade.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv1>
@@ -276,21 +275,20 @@ export function CepCapitulo(
             Conjunto de Estratégias de Prevenção, o CEP
           </styles.NewsTitle>
           <styles.TextCard1>
-            Entender a distribuição dos crimes na cidade e identificar locais
-            historicamente vulneráveis permite traçar estratégias mais eficazes
-            para melhorar a segurança da população carioca. Foi assim que a
-            Prefeitura criou o Programa Conjunto de Estratégias de Prevenção
-            (CEP) - Seu Rio, Sua Rua.
-            <br /> <br /> O projeto mapeia os fatores ambientais relevantes a
-            serem considerados quando se pensa em estratégias de ações para
-            reduzir o risco das ocorrências criminais. O foco sempre está
-            apontado para regiões de alta concentração de delitos. A partir do
-            mapeamento, a prefeitura passa a agir de forma integrada no
-            ambiente.
-            <br /> <br /> Um dos locais selecionados como plano-piloto do
-            projeto foi a região no entorno do Jardim do Méier, por concentrar
-            uma série de fatores criminogênicos e situacionais passíveis de
-            intervenção do Poder Público.
+            Entendendo como está distribuído o crime na cidade e trabalhando
+            para melhorar a segurança dos cariocas, a Prefeitura criou o
+            Programa Conjunto de Estratégias de Prevenção (CEP) - Seu Rio, Sua
+            Rua.
+            <br /> <br />O projeto seleciona as áreas com maiores índices de
+            crime de oportunidade e, a partir disso, é feito um mapeamento dos
+            fatores ambientais relevantes a serem considerados quando se pensa
+            em estratégias de ações para reduzir o risco das ocorrências na
+            região.
+            <br /> <br />
+            Um dos locais selecionados como plano-piloto do projeto foi a região
+            no entorno do Jardim do Méier, por concentrar uma série de fatores
+            criminogênicos e situacionais passíveis de intervenção do Poder
+            Público.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -360,18 +358,21 @@ export function CepDois(
     <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3 id={"text_cep_dois"}>
         <styles.TextCard>
-          Com base em evidências científicas, uma série de ações específicas, de
+          Com base em evidências científicas, uma série de ações pontuais, de
           baixo custo e focalizadas, foram estrategicamente pensadas para
           contribuir para a redução dos fatores de risco mapeados e,
           consequentemente, para a redução do crime e da sensação de insegurança
           no local.
-          <br /> <br /> Estratégias como aumentar a disponibilidade de árvores e
-          espaços verdes, reduzir a presença de lixo e pichação, mudar o
-          planejamento de habitação e aprimorar a iluminação pública podem,
-          segundo especialistas, levar a reduções importantes no crime e na
-          desordem.
-          <br /> <br /> A seguir, explicaremos como elas mudaram a vida dos
-          moradores da região.
+          <br /> <br />
+          Estratégias como aumentar a disponibilidade de árvores e espaços
+          verdes, reduzir a presença de lixo e pichação, mudar o planejamento de
+          habitação e aprimorar a iluminação pública podem, segundo
+          especialistas, levar a reduções importantes no crime e na desordem.
+          <br /> <br />
+          Juntos, a SEOP em atuação integrada com diversos órgãos da prefeitura
+          e empresas com serviços públicos, realizaram até o momento 394
+          demandas para melhoria do espaço. A seguir, explicaremos como elas
+          mudaram a vida dos moradores da região.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv10>
@@ -408,9 +409,9 @@ export function VigilanciaCapitulo(
         <styles.ContainerCard1>
           <styles.NewsTitle>Vigilância</styles.NewsTitle>
           <styles.TextCard1>
-            Uma das ações para aumentar a segurança dos cariocas nas regiões
-            mapeadas, é pensar efetivamente no aumento do monitoramento nas
-            áreas mais vulneráveis.
+            Uma das ações para aumentar a segurança dos cariocas na região, foi
+            pensar efetivamente no aumento do monitoramento e da vigilância do
+            Jardim do Méier.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -463,17 +464,14 @@ export function VigilanciaUm(
     <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3 id={"text_vigilancia_dois"}>
         <styles.TextCard>
-          Para que isso fosse possível no Méier, em parceria com o COR foram
-          instaladas 34 câmeras de vigilância no local que auxiliam no
-          monitoramento em tempo real e ajudam em tomadas de decisões mais
-          rápidas na localidade. A presença das câmeras também inibe a ação dos
-          criminosos, sendo um fator de grande importância para a redução dos
-          delitos.
+          Para que isso fosse possível, em parceria com o COR foram instaladas
+          34 câmeras de vigilância no local que auxiliam no monitoramento em
+          tempo real e ajudam em tomadas de decisões mais rápidas na localidade.
           <br /> <br />
           Além das intervenções no espaço, o Programa CEP tem como eixo a
           capacitação de guardas em curso de formação voltado ao policiamento
           preventivo, comunitário e orientado à resolução de problemas. No
-          Méier, 72 guardas municipais foram capacitados para atuar no programa.
+          total, 64 guardas municipais foram capacitados para atuar no programa.
           <br /> <br /> A fiscalização do transporte complementar também foi
           reforçada pela Coordenadoria Especial de Transporte Complementar
           (CETC).
@@ -496,7 +494,7 @@ export function VigilanciaDois(
       <styles.ContainerCard3 id={"text_vigilancia_dois"}>
         <styles.TextCard>
           Hoje, o patrulhamento preventivo da Guarda Municipal acontece em
-          período integral, enquanto as câmeras possibilitam respostas rápidas
+          período integra, enquanto as câmeras possibilitam respostas rápidas
           dos agentes e inibem criminosos de cometer atos na Praça Jardim do
           Méier.
         </styles.TextCard>
@@ -536,10 +534,10 @@ export function AtivacaoCapitulo(
           <styles.NewsTitle>Ativação</styles.NewsTitle>
           <styles.TextCard1>
             Devolver o espaço público para a população é essencial também na
-            contenção da violência. A ocupação irregular de ambulantes nas
-            calçadas atrapalha o trânsito de pedestres, deixa o ambiente
-            desorganizado e impede a população de aproveitar melhor o espaço
-            público.
+            contenção da violência. Uma análise no local identificou a ocupação
+            irregular de ambulantes nas calçadas atrapalhava o trânsito de
+            pedestres. Isto facilitava para o ambiente ser desorganizado e
+            incapacitar a população de aproveitar melhor o espaço público.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -595,8 +593,7 @@ export function AtivacaoUm(
           Para corrigir isso, a SEOP fez uma série de ações como a identificação
           e formalização de 57 ambulantes no Ambulante Harmonia, programa da
           Coordenação de Controle Urbano. Também foram entregues 89 barracas
-          para que os ambulantes pudessem trabalhar com mais segurança na região
-          do Méier.
+          para que os ambulantes pudessem trabalhar com mais segurança.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv10>
@@ -618,9 +615,8 @@ export function AtivacaoDois(
           Em parceria com a Secretaria de Conservação, a Fundação Parques e
           Jardins e também de artistas locais, um novo Parcão foi construído no
           local, possibilitando também que os amigos de quatro patas pudessem
-          aproveitar ainda mais a praça.
-          <br /> <br /> Até o momento, mais de 48 feiras de artesanato e 144
-          eventos culturais já foram realizadas.
+          aproveitar ainda mais a praça. Até o momento, mais de 48 feiras de
+          artesanato e 144 eventos culturais já foram realizadas.
         </styles.TextCard>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv10>
@@ -658,10 +654,11 @@ export function ConservacaoCapitulo(
           <styles.NewsTitle>Conservação</styles.NewsTitle>
           <styles.TextCard1>
             Lugares escuros, lixo acumulado nas calçadas, depredação e má
-            conservação do espaço trazem insegurança para a população. Um lugar
-            abandonado contribui para que pessoas mal intencionadas atuem com
-            atos violentos na região, gerando medo e o esvaziamento do espaço
-            público.
+            conservação de espaço, como o de um dos coretos mais antigos da
+            cidade. Um lugar abandonado, que contribuía para que pessoas mal
+            intencionadas atuassem na região e levassem o medo da violência à
+            população. Este foi o cenário também encontrado pela Prefeitura no
+            Jardim do Méier.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -714,13 +711,10 @@ export function ConservacaoUm(
     <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3 id={"text_conservacao_dois"}>
         <styles.TextCard>
-          Este foi o cenário também encontrado pela Prefeitura no Jardim do
-          Méier. A reestruturação e recuperação de espaços foi coordenada pela
-          SEOP e pela Subprefeitura da Zona Norte, que contaram com a execução e
-          apoio da Secretaria de Meio Ambiente, da Fundação Parques e Jardins,
-          da COMLURB e também da Secretaria de Conservação.
-          <br /> <br /> Ao todo, 62 demandas de manutenção e reparo de
-          estruturas públicas foram realizadas no local, além do conserto e
+          A reforma e recuperação de espaços ficou por conta da Secretaria de
+          Meio Ambiente, da Fundação Parques e Jardins, da COMLURB e também da
+          Secretaria de Conservação. Ao todo, 62 demandas de manutenção e reparo
+          de estruturas públicas foram feitas no local, além do conserto e
           instalação de 149 pontos de iluminação pública.
         </styles.TextCard>
       </styles.ContainerCard3>
@@ -783,9 +777,9 @@ export function AcolhimentoCapitulo(
         <styles.ContainerCard1>
           <styles.NewsTitle>Acolhimento</styles.NewsTitle>
           <styles.TextCard1>
-            ​Por fim, mas não menos importante, fazer o mapeamento de pessoas em
-            vulnerabilidade e em situação de rua facilita a focalização de ações
-            da Assistência Social.
+            ​Por fim, mas não menos importante, foi realizado o mapeamento de
+            pessoas em vulnerabilidade e em situação de rua, facilitando a
+            focalização de ações da Assistência Social.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -899,20 +893,20 @@ export function Resultados(
           <styles.NewsTitle>Resultados</styles.NewsTitle>
           <styles.TextCard1>
             O CEP completa um ano de execução e o impacto na vida e segurança
-            graças às ações do programa são nítidos.
+            graças as ações do programa são nítidos.
             <br /> <br />
             Na região contemplada pelo projeto no Méier registrou uma redução de
-            33,4% no número de ocorrências criminais, segundo dados da
-            Secretaria da Segurança Pública. O projeto também tem uma unidade
-            localizada em Copacabana. Na área da zona sul, a redução foi de
-            5,2%. Os dois locais vêm apresentando diminuição das ocorrências em
-            relação ao mesmo período de 2019, e o projeto, como um todo,
-            possibilitou a redução de 12,4% das ocorrências.​
+            34,3% no número de ocorrências criminais segundo dados da Secretaria
+            da Segurança Pública. Na unidade do projeto localizado em
+            Copacabana, a redução foi de 5,2%. As duas áreas vem apresentando
+            diminuição das ocorrências em relação ao mesmo período de 2019, e o
+            projeto, como um todo, possibilitou a redução de 24,3% das
+            ocorrências.
             <br /> <br />
             Além disso, a qualidade do espaço público foi melhorada, permitindo
             um maior uso das áreas pela população e incentivando, através da
-            priorização e articulação de ações da Prefeitura, uma cidade melhor
-            para os cariocas.​
+            priorização e articulação de ações da Prefeitura simples, uma cidade
+            melhor para os cariocas.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
