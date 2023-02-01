@@ -11,7 +11,7 @@ export default function Home() {
         <li>
           <Link to="/especial-seop/cep">Especial SEOP | CEP</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/especial-sppo/subsidio">Especial SPPO | Subsidio</Link>
         </li>
         <li>
@@ -30,7 +30,7 @@ export default function Home() {
         </li>
         <li>
           <Link to="/sandbox/test-map"> Sandbox | Test Map </Link>
-        </li>
+        </li> */}
       </lu>
     </div>
   );
