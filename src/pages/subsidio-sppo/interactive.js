@@ -14,9 +14,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Interactive() {
-  const [location, setLocation] = useState(chapterMap.One().location);
+  const [location, setLocation] = useState(chapterMap.Capa().location);
 
-  const [layers, setLayers] = useState(chapterMap.One().layers);
+  const [layers, setLayers] = useState(chapterMap.Capa().layers);
   // console.log("ChapterLayers", layers);
 
   return (

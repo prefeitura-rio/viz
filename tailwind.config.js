@@ -14,7 +14,9 @@ module.exports = {
         12: "repeat(12, minmax(0, 1fr))",
       },
       fontFamily: {
-        georgia: ["georgia", "sans-serif"],
+        poppins: ["Poppins"],
+        worksans: ["Work Sans"],
+        nunito: ["Nunito Sans"],
       },
     },
   },

@@ -1,6 +1,6 @@
 import tw from "tailwind-styled-components";
 import styled from "styled-components";
-import logo from "../../pages/demolicoes-seop/images/logo.png";
+import logo from "../../pages/seop-demolicoes/images/logo.png";
 
 const LoadingDiv = tw.div`
 w-full h-screen

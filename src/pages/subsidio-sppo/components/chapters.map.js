@@ -4,7 +4,7 @@ import { GeoJsonLayer } from "@deck.gl/layers";
 const TRIPS = require("../data/trips.json");
 // import LINHAS_ANTIGAS from "./data/linhas_antigas.json";
 
-export const One = () => {
+export const Capa = () => {
   return {
     location: {
       desktop: {
@@ -12,7 +12,7 @@ export const One = () => {
           lon: -43.18213,
           lat: -22.90645,
         },
-        zoom: 15.11,
+        zoom: 15.51,
         pitch: 60.0,
         bearing: -146.41,
         duration: 4000,
@@ -37,8 +37,8 @@ export const One = () => {
           data: TRIPS,
           getPath: (d) => d.path,
           getTimestamps: (d) => d.timestamps,
-          getColor: [244, 144, 44],
-          widthMinPixels: 5,
+          getColor: [214, 142, 0],
+          widthMinPixels: 8,
           fadeTrail: true,
           currentTime: 0,
           opacity: 1,
@@ -59,283 +59,245 @@ export const One = () => {
   };
 };
 
-export const Three = () => {
+export const Historia1 = () => {
   return {
     location: {
       mobile: {
         center: {
-          lon: -43.45938,
-          lat: -22.94232,
+          lon: -43.45317,
+          lat: -22.9158,
         },
-        zoom: 8.67,
-        pitch: 7.0,
-        bearing: 0.0,
+        zoom: 8.51,
+        pitch: 1.5,
+        bearing: -0.0,
         duration: 4000,
       },
       desktop: {
         center: {
-          lon: -43.69475,
-          lat: -22.96915,
-        },
-        zoom: 13.26,
-        pitch: 36.5,
-        bearing: 45.45,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox-style",
-        layer: { id: "sepetiba" },
-      },
-    ],
-  };
-};
-
-export const Four = () => {
-  return {
-    location: {
-      mobile: {
-        center: {
-          lon: -43.45938,
-          lat: -22.94232,
-        },
-        zoom: 8.67,
-        pitch: 7.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-      desktop: {
-        center: {
-          lon: -43.67922,
-          lat: -22.96874,
-        },
-        zoom: 12.33,
-        pitch: 55.0,
-        bearing: 70.51,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox-style",
-        layer: { id: "sepetiba" },
-      },
-      {
-        layerType: "mapbox",
-        layer: {
-          ...{
-            id: "linha870-cor",
-            type: "line",
-            source: "composite",
-            "source-layer": "linha870-byrh8i",
-            paint: {
-              "line-color": "#c36a2d",
-              "line-width": 2,
-              "line-opacity": 1,
-            },
-          },
-        },
-      },
-      {
-        layerType: "mapbox",
-        layer: {
-          ...{
-            id: "linha871-cor",
-            type: "line",
-            source: "composite",
-            "source-layer": "linha871-9h5hot",
-            paint: {
-              "line-color": "#dd9f75",
-              "line-width": 2,
-              "line-opacity": 1,
-            },
-          },
-        },
-      },
-    ],
-  };
-};
-
-export const Five = () => {
-  return {
-    location: {
-      mobile: {
-        center: {
-          lon: -43.54516,
-          lat: -22.98354,
-        },
-        zoom: 9.86,
-        pitch: 60.0,
-        bearing: 38.08,
-        duration: 4000,
-      },
-      desktop: {
-        center: {
-          lon: -43.44949,
-          lat: -22.94796,
-        },
-        zoom: 10.3,
-        pitch: 6.0,
-        bearing: 0.03,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox-style",
-        layer: { id: "bairros" },
-      },
-      {
-        layerType: "mapbox-style",
-        layer: { id: "bairros-linha" },
-      },
-      {
-        layerType: "mapbox",
-        layer: {
-          ...{
-            id: "linhas-novas-oranje",
-            type: "line",
-            source: "composite",
-            "source-layer": "linhas-novas-9sfk6t",
-            paint: {
-              "line-color": "#c36a2d",
-              "line-opacity": 0,
-              "line-width": 1.7,
-            },
-          },
-        },
-      },
-    ],
-  };
-};
-
-export const Six = () => {
-  return {
-    location: {
-      mobile: {
-        center: {
-          lon: -43.17224,
-          lat: -22.90651,
+          lon: -43.45317,
+          lat: -22.9158,
         },
         zoom: 10.51,
-        pitch: 60.0,
-        bearing: -70.4,
-        duration: 2000,
-      },
-      desktop: {
-        center: {
-          lon: -43.44949,
-          lat: -22.94796,
-        },
-        zoom: 10.3,
-        pitch: 6.0,
-        bearing: 0.03,
+        pitch: 1.5,
+        bearing: -0.0,
         duration: 4000,
       },
     },
     layers: [
       {
-        layerType: "mapbox",
-        layer: {
-          ...{
-            id: "final-linhas-cor",
-            type: "line",
-            source: "composite",
-            "source-layer": "final-linhas-24q8pr",
-            paint: {
-              "line-color": "#18b4c9",
-              "line-opacity": 0.5,
-              "line-width": 0.8,
-            },
-          },
-        },
-      },
-      {
-        layerType: "mapbox",
-        layer: {
-          ...{
-            id: "linhas-novas-azul-2",
-            type: "line",
-            source: "composite",
-            "source-layer": "linhas-novas-9sfk6t",
-            paint: {
-              "line-color": "#c36a2d",
-              "line-opacity": 0,
-              "line-width": 1.7,
-            },
-          },
-        },
+        layerType: "deckgl-trips",
+        layer: new MapboxLayer({
+          id: "my-trips-layer",
+          type: TripsLayer,
+          data: TRIPS,
+          getPath: (d) => d.path,
+          getTimestamps: (d) => d.timestamps,
+          getColor: [214, 142, 0],
+          widthMinPixels: 10,
+          fadeTrail: true,
+          currentTime: 0,
+          opacity: 1,
+          rounded: true,
+          trailLength: 500,
+          shadowEnabled: true,
+        }),
       },
     ],
   };
 };
 
-export const Seven = () => {
+export const Vazio = () => {
   return {
     location: {
       mobile: {
         center: {
-          lon: -43.24732,
-          lat: -22.9526,
+          lon: -43.45317,
+          lat: -22.9158,
         },
-        zoom: 10.33,
-        pitch: 60.0,
-        bearing: -51.24,
-        duration: 2000,
+        zoom: 8.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
       },
       desktop: {
         center: {
-          lon: -43.24732,
-          lat: -22.9526,
+          lon: -43.45317,
+          lat: -22.9158,
         },
-        zoom: 12.33,
-        pitch: 60.0,
-        bearing: -51.24,
-        duration: 2000,
+        zoom: 10.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
+      },
+    },
+    layers: [],
+  };
+};
+
+export const Cheio = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.45317,
+          lat: -22.9158,
+        },
+        zoom: 8.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
+      },
+      desktop: {
+        center: {
+          lon: -43.45317,
+          lat: -22.9158,
+        },
+        zoom: 10.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
       },
     },
     layers: [
       {
-        layerType: "mapbox-style",
-        layer: {
-          id: "pontosantigos",
-        },
+        layerType: "deckgl-trips",
+        layer: new MapboxLayer({
+          id: "my-trips-layer",
+          type: TripsLayer,
+          data: TRIPS,
+          getPath: (d) => d.path,
+          getTimestamps: (d) => d.timestamps,
+          getColor: [214, 142, 0],
+          widthMinPixels: 8,
+          fadeTrail: true,
+          currentTime: 0,
+          opacity: 1,
+          rounded: true,
+          trailLength: 500,
+          shadowEnabled: true,
+        }),
       },
     ],
   };
 };
 
-export const Eight = () => {
+export const Aereo = () => {
   return {
     location: {
       mobile: {
         center: {
-          lon: -43.45938,
-          lat: -22.94232,
+          lon: -43.45317,
+          lat: -22.9158,
         },
-        zoom: 8.67,
-        pitch: 7.0,
-        bearing: 0.0,
-        duration: 2000,
+        zoom: 8.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
       },
       desktop: {
         center: {
-          lon: -43.45938,
-          lat: -22.94232,
+          lon: -43.45317,
+          lat: -22.9158,
         },
-        zoom: 10.67,
-        pitch: 7.0,
-        bearing: 0.0,
-        duration: 2000,
+        zoom: 10.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
+      },
+    },
+    layers: [],
+  };
+};
+
+export const Antes = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.67832,
+          lat: -22.92352,
+        },
+        zoom: 12.76,
+        pitch: 0.0,
+        bearing: -7.72,
+        duration: 4000,
+      },
+      desktop: {
+        center: {
+          lon: -43.67832,
+          lat: -22.92352,
+        },
+        zoom: 12.76,
+        pitch: 0.0,
+        bearing: -7.72,
+        duration: 4000,
       },
     },
     layers: [
       {
-        layerType: "mapbox-style",
-        layer: {
-          id: "municipios",
+        layerType: "deckgl-trips",
+        layer: new MapboxLayer({
+          id: "my-trips-layer",
+          type: TripsLayer,
+          data: TRIPS,
+          getPath: (d) => d.path,
+          getTimestamps: (d) => d.timestamps,
+          getColor: [214, 142, 0],
+          widthMinPixels: 10,
+          fadeTrail: true,
+          currentTime: 0,
+          opacity: 1,
+          rounded: true,
+          trailLength: 500,
+          shadowEnabled: true,
+        }),
+      },
+    ],
+  };
+};
+
+export const Depois = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.64105,
+          lat: -22.92778,
         },
+        zoom: 12.02,
+        pitch: 0.0,
+        bearing: -7.72,
+        duration: 4000,
+      },
+      desktop: {
+        center: {
+          lon: -43.64105,
+          lat: -22.92778,
+        },
+        zoom: 12.02,
+        pitch: 0.0,
+        bearing: -7.72,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "deckgl-trips",
+        layer: new MapboxLayer({
+          id: "my-trips-layer",
+          type: TripsLayer,
+          data: TRIPS,
+          getPath: (d) => d.path,
+          getTimestamps: (d) => d.timestamps,
+          getColor: [214, 142, 0],
+          widthMinPixels: 10,
+          fadeTrail: true,
+          currentTime: 0,
+          opacity: 1,
+          rounded: true,
+          trailLength: 500,
+          shadowEnabled: true,
+        }),
       },
     ],
   };
@@ -375,73 +337,3 @@ export const Creditos = () => {
     ],
   };
 };
-
-export const Ten = () => {
-  return {
-    location: {
-      mobile: {
-        center: {
-          lon: -43.54516,
-          lat: -22.98354,
-        },
-        zoom: 9.86,
-        pitch: 60.0,
-        bearing: 38.08,
-        duration: 2000,
-      },
-      desktop: {
-        center: {
-          lon: -43.54516,
-          lat: -22.98354,
-        },
-        zoom: 11.86,
-        pitch: 60.0,
-        bearing: 38.08,
-        duration: 2000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox-style",
-        layer: {
-          id: "linhasantigas",
-        },
-      },
-    ],
-  };
-};
-
-// export const Ten = () => {
-//   return {
-//     location: {
-//       mobile: {
-//         center: {
-//           lon: -43.54516,
-//           lat: -22.98354,
-//         },
-//         zoom: 9.86,
-//         pitch: 60.0,
-//         bearing: 38.08,
-//         duration: 2000,
-//       },
-//       desktop: {
-//         center: {
-//           lon: -43.54516,
-//           lat: -22.98354,
-//         },
-//         zoom: 11.86,
-//         pitch: 60.0,
-//         bearing: 38.08,
-//         duration: 2000,
-//       },
-//     },
-//     layers: [
-//       {
-//         layerType: "mapbox-style",
-//         layer: {
-//           id: "linhasantigas",
-//         },
-//       },
-//     ],
-//   };
-// };

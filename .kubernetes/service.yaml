@@ -5,7 +5,7 @@ metadata:
   labels:
     app: viz-dados-rio
   name: viz-dados-rio
-  namespace: viz-dados-rio
+  namespace: viz-dados-rio-staging
 spec:
   ports:
     - name: "80"

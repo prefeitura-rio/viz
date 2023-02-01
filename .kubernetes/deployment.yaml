@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: viz-dados-rio
-  namespace: viz-dados-rio
+  namespace: viz-dados-rio-staging
 spec:
   replicas: 1
   selector:

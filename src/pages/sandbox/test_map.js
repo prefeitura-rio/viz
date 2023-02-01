@@ -34,7 +34,7 @@ export default function SubsidioSPPO() {
     },
   });
 
-  const [layers, setLayers] = useState(chapterMap.One().layers);
+  const [layers, setLayers] = useState(chapterMap.Capa().layers);
 
   const setPosition = (position) => {
     const desktopPosition = position.desktop ? position.desktop : position;
@@ -55,16 +55,16 @@ export default function SubsidioSPPO() {
   useEffect(() => {
     switch (chapterNumberMap) {
       case 1:
-        setPosition(chapterMap.One().location);
-        setLayers(chapterMap.One().layers);
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
       case 2:
-        setPosition(chapterMap.One().location);
-        setLayers(chapterMap.One().layers);
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
       case 3:
-        setPosition(chapterMap.Three().location);
-        setLayers(chapterMap.Three().layers);
+        setPosition(chapterMap.Historia1().location);
+        setLayers(chapterMap.Historia1().layers);
         break;
       default:
         break;
@@ -189,7 +189,7 @@ export default function SubsidioSPPO() {
           {(progress, event) => (
             <>
               {event.type === "enter" && setChapterNumberMap(1)}
-              <chapterDiv.One id={"chapter-1"} />
+              <chapterDiv.Capa id={"chapter-1"} />
             </>
           )}
         </Scene>
@@ -215,12 +215,12 @@ export default function SubsidioSPPO() {
                 {/* set the map to the interpolated location */}
                 {event.state === "DURING" &&
                   fadeMapLocation(
-                    chapterMap.One().location,
-                    chapterMap.Three().location,
+                    chapterMap.Capa().location,
+                    chapterMap.Historia1().location,
                     progress
                   )}
               </>
-              <chapterDiv.Two id={"chapter-2"} />
+              <chapterDiv.Intro id={"chapter-2"} />
             </>
           )}
         </Scene>
@@ -236,7 +236,7 @@ export default function SubsidioSPPO() {
           {(progress, event) => (
             <>
               <>{event.type === "enter" && setChapterNumberMap(3)}</>
-              <chapterDiv.Three id={"chapter-3"} />
+              <chapterDiv.Historia1 id={"chapter-3"} />
             </>
           )}
         </Scene>
