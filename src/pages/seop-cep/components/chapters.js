@@ -61,6 +61,14 @@ import m_vigilancia1 from "../images/m_vigilancia1.png";
 import m_vigilancia2 from "../images/m_vigilancia2.png";
 import m_vigilancia3 from "../images/m_vigilancia3.gif";
 
+// FOTOS
+
+import vigilanciafim from "../images/vigilanciafim.png";
+import conservacaofim from "../images/conservacaofim.png";
+import ativacaofim from "../images/ativacaofim.png";
+import acolhimentofim from "../images/acolhimentofim.png";
+import video from "../images/video.mp4";
+
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
 import { Tween, Timeline } from "react-gsap";
@@ -517,10 +525,11 @@ export function VigilanciaTres(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv10
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterGenericDiv10>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <img src={vigilanciafim}></img>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv10>
   );
 }
 
@@ -640,10 +649,11 @@ export function AtivacaoTres(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv10
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterGenericDiv10>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <img src={ativacaofim}></img>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv10>
   );
 }
 
@@ -766,10 +776,11 @@ export function ConservacaoTres(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv10
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterGenericDiv10>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <img src={conservacaofim}></img>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv10>
   );
 }
 
@@ -881,10 +892,11 @@ export function AcolhimentoTres(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv10
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterGenericDiv10>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <img src={acolhimentofim}></img>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv10>
   );
 }
 
@@ -924,6 +936,21 @@ export function Resultados(
           className="w-auto h-[120px] mt-[300px] lg:mt-[10px] lg:w-auto lg:h-[180px] lg:mr-[200px]"
         ></img>
       </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Video(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>video</styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
 }
