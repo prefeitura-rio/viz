@@ -101,8 +101,7 @@ export function Capa(
           SUA RUA
         </styles.Title>
         <styles.Subtitle>
-          O papel da Prefeitura na Segurança Pública. Entendendo o programa CEP
-          na Prefeitura da Cidade do Rio de Janeiro.
+          Conheça o CEP, o programa da Prefeitura que vem combatendo a violência na cidade.
         </styles.Subtitle>
         <styles.Scroll>
           {/* <styles.AuthorText>
@@ -159,10 +158,12 @@ export function MapaCapitulo(
             ordem pública, limpeza e conservação de vias, iluminação e regulação
             da ocupação territorial, a que o torna o agente central para criar
             espaços mais seguros aos cidadãos.
-            <br /> <br />E é, aliando o estudo e análise do espaço público, que
-            a Prefeitura, por meio da Secretaria Municipal de Ordem Pública
-            (SEOP), vem combatendo a violência, transformando o Rio em um lugar
-            mais seguro para os cariocas.
+            <br /> <br />E é, aliando o estudo e análise do espaço público, que a 
+            Prefeitura, por meio da Secretaria Municipal de Ordem Pública (SEOP), 
+            vem combatendo a violência. Graças ao Programa Conjunto de Estratégias de 
+            Prevenção (CEP) - Seu Rio, Sua Rua, regiões beneficiadas pelo projeto já 
+            apresentaram uma queda de 12,4% nas ocorrência criminais, transformando o 
+            Rio em um lugar mais seguro para os cariocas.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
