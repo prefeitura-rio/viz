@@ -67,7 +67,9 @@ import vigilanciafim from "../images/vigilanciafim.png";
 import conservacaofim from "../images/conservacaofim.png";
 import ativacaofim from "../images/ativacaofim.png";
 import acolhimentofim from "../images/acolhimentofim.png";
-import video from "../images/video.mp4";
+
+// Videos
+import srcVideo from "../images/video.mp4";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -950,7 +952,11 @@ export function Video(
 
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>video</styles.ContainerCard>
+      {/* <styles.ContainerCard> */}
+      <video controls autoPlay muted loop className="w-full">
+        <source src={srcVideo} type="video/mp4" />
+      </video>
+      {/* </styles.ContainerCard> */}
     </styles.ChapterGenericDiv>
   );
 }
