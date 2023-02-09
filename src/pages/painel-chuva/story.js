@@ -50,7 +50,8 @@ export default function PainelChuva() {
         }}
         layers={[H3layer]}
         getTooltip={({ object }) =>
-          object && `Status: ${object.status} \n mm: ${object.chuva_15min}`
+          object &&
+          `  Status: ${object.status} \n Bairro: ${object.bairro} \n mm: ${object.chuva_15min}`
         }
       >
         <Map
