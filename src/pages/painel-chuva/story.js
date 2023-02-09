@@ -37,6 +37,22 @@ export default function PainelChuva() {
       });
   }, []);
 
+  const getTooltip = ({ object }) => {
+    let qtyText = "";
+    if (object && object.status !== "SEM CHUVA") {
+      qtyText = `<p><b>Chuva:</b> ${object.chuva_15min} mm</p>`;
+    }
+    return (
+      object && {
+        html: `<div>
+        <h4><b>Bairro:</b> ${object.bairro}</h4>
+        <p><b>Status:</b> ${object.status}</p>
+        ${qtyText}
+      </div>`
+      }
+    );
+  };
+
   const H3layer = new H3HexagonLayer({
     id: "h3-layer",
     data: data,
@@ -73,10 +89,7 @@ export default function PainelChuva() {
             setViewport;
           }}
           layers={[H3layer]}
-          getTooltip={({ object }) =>
-            object &&
-            `  Status: ${object.status} \n Bairro: ${object.bairro} \n mm: ${object.chuva_15min}`
-          }
+          getTooltip={getTooltip}
         >
           <Map
             style={{ width: "100vw", height: "100vh" }}
