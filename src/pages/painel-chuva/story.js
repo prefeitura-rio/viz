@@ -75,7 +75,7 @@ export default function PainelChuva() {
       <div className="absolute top-0 left-0">
         <div className="p-6 bg-white rounded shadow">
           <div className="flex flex-col justify-between">
-            <div className="flex items-center w-full my-6">
+            <div className="flex items-center w-full my-3">
               <div className="w-8 h-8 bg-[#ffffff]"></div>
               <div className="ml-2">Sem Chuva</div>
             </div>
@@ -107,7 +107,7 @@ export default function PainelChuva() {
     pickable: true,
     wireframe: false,
     filled: true,
-    extruded: true,
+    extruded: false,
     elevationScale: 0,
     getHexagon: (d) => d.id_h3,
     getFillColor: (d) => [
@@ -116,6 +116,8 @@ export default function PainelChuva() {
       hexToRgb(d.color).b,
     ],
     getElevation: (d) => d.chuva_15min,
+    getLineColor: [0, 0, 0, 0],
+    getLineWidth: 0,
   });
   return (
     <div>
