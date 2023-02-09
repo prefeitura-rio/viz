@@ -6,6 +6,9 @@ export default function Home() {
     <div>
       <lu>
         <li>
+          <Link to="/chuva">Painel Chuvas</Link>
+        </li>
+        <li>
           <Link to="/especial-seop/demolicoes">Especial SEOP | Demolicoes</Link>
         </li>
         <li>
