@@ -53,7 +53,7 @@ export default function PainelChuva() {
     );
   };
 
-  function hexToRgb(hex) {
+  const hexToRgb = ({ hex }) => {
     // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
     hex = hex.replace(shorthandRegex, function (m, r, g, b) {
@@ -68,7 +68,30 @@ export default function PainelChuva() {
           b: parseInt(result[3], 16),
         }
       : null;
-  }
+  };
+
+  const ControlPanel = ({ hex }) => {
+    return (
+      <div className="absolute top-0 left-0">
+        <div className="p-3 bg-white rounded shadow">
+          <div className="flex justify-between">
+            <div className="flex items-center w-1/3">
+              <div className="w-6 h-6 bg-red-500"></div>
+              <div className="ml-2">Rain Intensity: 0mm</div>
+            </div>
+            <div className="flex items-center w-1/3">
+              <div className="w-6 h-6 bg-yellow-500"></div>
+              <div className="ml-2">Rain Intensity: 25mm</div>
+            </div>
+            <div className="flex items-center w-1/3">
+              <div className="w-6 h-6 bg-green-500"></div>
+              <div className="ml-2">Rain Intensity: 50mm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   const H3layer = new H3HexagonLayer({
     id: "h3-layer",
@@ -85,7 +108,9 @@ export default function PainelChuva() {
       hexToRgb(d.color).b,
     ],
     getElevation: (d) => d.chuva_15min,
+    // onSetColorDomain: (d) => d.chuva_15min,
   });
+
   return (
     <div>
       {data && data.length === 0 && (
@@ -115,7 +140,8 @@ export default function PainelChuva() {
             style={{ width: "100vw", height: "100vh" }}
             mapStyle="mapbox://styles/escritoriodedados/clb5mnbms001z14o76898gh5c"
             mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
-          ></Map>
+          ></Map>{" "}
+          <ControlPanel />
         </DeckGL>
       )}
       ;
