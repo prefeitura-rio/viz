@@ -5,6 +5,7 @@ import mapboxgl from "mapbox-gl"; // do not remove this line
 import { H3HexagonLayer } from "@deck.gl/geo-layers";
 import DeckGL from "@deck.gl/react";
 import { Oval } from "react-loader-spinner";
+import DATA from "./data/chuva_15min.json";
 
 // The following is required to stop "npm build" from transpiling mapbox code.
 // notice the exclamation point in the import.
@@ -21,7 +22,7 @@ export default function PainelChuva() {
   const [viewport, setViewport] = useState({
     longitude: -43.41103,
     latitude: -22.9342,
-    zoom: 10
+    zoom: 10,
   });
 
   const [data, setData] = useState([]);
@@ -47,24 +48,44 @@ export default function PainelChuva() {
         <h4><b>Bairro:</b> ${object.bairro}</h4>
         <p><b>Status:</b> ${object.status}</p>
         ${qtyText}
-      </div>`
+      </div>`,
       }
     );
   };
 
+  function hexToRgb(hex) {
+    // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+    hex = hex.replace(shorthandRegex, function (m, r, g, b) {
+      return r + r + g + g + b + b;
+    });
+
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result
+      ? {
+          r: parseInt(result[1], 16),
+          g: parseInt(result[2], 16),
+          b: parseInt(result[3], 16),
+        }
+      : null;
+  }
+
   const H3layer = new H3HexagonLayer({
     id: "h3-layer",
-    data: data,
+    data: DATA,
     pickable: true,
     wireframe: false,
     filled: true,
     extruded: true,
     elevationScale: 0,
     getHexagon: (d) => d.id_h3,
-    getFillColor: (d) => [255, (1 - d.chuva_15min / 50) * 255, 150],
-    getElevation: (d) => d.chuva_15min
+    getFillColor: (d) => [
+      hexToRgb(d.color).r,
+      hexToRgb(d.color).g,
+      hexToRgb(d.color).b,
+    ],
+    getElevation: (d) => d.chuva_15min,
   });
-
   return (
     <div>
       {data && data.length === 0 && (
@@ -73,7 +94,7 @@ export default function PainelChuva() {
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)"
+            transform: "translate(-50%, -50%)",
           }}
         >
           <Oval height={100} width={100} color="#00BFFF" visible={true} />
