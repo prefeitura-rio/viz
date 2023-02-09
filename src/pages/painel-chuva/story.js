@@ -1,7 +1,6 @@
 // Mandatory
-import { useEffect, useState, useRef, useCallback } from "react";
-import { MapboxLayer } from "@deck.gl/mapbox";
-import { Map, Popup } from "react-map-gl";
+import { useEffect, useState, useRef } from "react";
+import { Map } from "react-map-gl";
 import mapboxgl from "mapbox-gl"; // do not remove this line
 import { H3HexagonLayer } from "@deck.gl/geo-layers";
 import DeckGL from "@deck.gl/react";
