@@ -72,7 +72,7 @@ export default function PainelChuva() {
 
   const ControlPanel = ({}) => {
     return (
-      <div className="absolute top-0 left-0">
+      <div className="absolute top-10 left-10 ">
         <div className="p-6 bg-white rounded shadow">
           <div className="flex flex-col justify-between">
             <div className="flex items-center w-full my-3">
