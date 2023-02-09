@@ -70,22 +70,30 @@ export default function PainelChuva() {
       : null;
   };
 
-  const ControlPanel = ({ hex }) => {
+  const ControlPanel = ({}) => {
     return (
       <div className="absolute top-0 left-0">
-        <div className="p-3 bg-white rounded shadow">
-          <div className="flex justify-between">
-            <div className="flex items-center w-1/3">
-              <div className="w-6 h-6 bg-red-500"></div>
-              <div className="ml-2">Rain Intensity: 0mm</div>
+        <div className="p-6 bg-white rounded shadow">
+          <div className="flex flex-col justify-between">
+            <div className="flex items-center w-full my-6">
+              <div className="w-8 h-8 bg-[#ffffff]"></div>
+              <div className="ml-2">Sem Chuva</div>
             </div>
-            <div className="flex items-center w-1/3">
-              <div className="w-6 h-6 bg-yellow-500"></div>
-              <div className="ml-2">Rain Intensity: 25mm</div>
+            <div className="flex items-center w-full my-3">
+              <div className="w-8 h-8 bg-[#DAECFB]"></div>
+              <div className="ml-2">Chuva Fraca</div>
             </div>
-            <div className="flex items-center w-1/3">
-              <div className="w-6 h-6 bg-green-500"></div>
-              <div className="ml-2">Rain Intensity: 50mm</div>
+            <div className="flex items-center w-full my-3">
+              <div className="w-8 h-8 bg-[#A9CBE8]"></div>
+              <div className="ml-2">Chuva Moderada</div>
+            </div>
+            <div className="flex items-center w-full my-3">
+              <div className="w-8 h-8 bg-[#77A9D5]"></div>
+              <div className="ml-2">Chuva Forte</div>
+            </div>
+            <div className="flex items-center w-full my-3">
+              <div className="w-8 h-8 bg-[#125999]"></div>
+              <div className="ml-2">Chuva Muito Forte</div>
             </div>
           </div>
         </div>
