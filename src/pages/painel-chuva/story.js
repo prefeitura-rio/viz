@@ -53,7 +53,7 @@ export default function PainelChuva() {
     );
   };
 
-  const hexToRgb = ({ hex }) => {
+  const hexToRgb = (hex) => {
     // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
     hex = hex.replace(shorthandRegex, function (m, r, g, b) {
@@ -108,9 +108,7 @@ export default function PainelChuva() {
       hexToRgb(d.color).b,
     ],
     getElevation: (d) => d.chuva_15min,
-    // onSetColorDomain: (d) => d.chuva_15min,
   });
-
   return (
     <div>
       {data && data.length === 0 && (
