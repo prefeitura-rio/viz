@@ -4,6 +4,8 @@ import { MapboxLayer } from "@deck.gl/mapbox";
 import { Map, Popup } from "react-map-gl";
 import mapboxgl from "mapbox-gl"; // do not remove this line
 import { H3HexagonLayer } from "@deck.gl/geo-layers";
+import DeckGL from "@deck.gl/react";
+
 import DATA from "./data/chuva_15min.json";
 
 // The following is required to stop "npm build" from transpiling mapbox code.
@@ -24,9 +26,8 @@ export default function PainelChuva() {
     zoom: 10,
   });
 
-  const H3layer = new MapboxLayer({
+  const H3layer = new H3HexagonLayer({
     id: "h3-layer",
-    type: H3HexagonLayer,
     data: DATA,
     pickable: true,
     wireframe: false,
@@ -38,44 +39,26 @@ export default function PainelChuva() {
     getElevation: (d) => d.chuva_15min,
   });
 
-  const [hoverInfo, setHoverInfo] = useState(null);
-
-  const onHover = useCallback((event) => {
-    const {
-      features,
-      point: { x, y },
-    } = event;
-    const hoveredFeature = features && features[0];
-    console.log(event);
-    // prettier-ignore
-    setHoverInfo(hoveredFeature && {feature: hoveredFeature, x, y});
-  }, []);
-
   return (
     <div>
-      <Map
+      <DeckGL
         ref={mapRef}
         initialViewState={viewport}
+        controller={true}
         onViewportChange={({ target }) => {
           setViewport;
         }}
-        onLoad={({ target }) => {
-          target.addLayer(H3layer);
-        }}
-        style={{ width: "100vw", height: "100vh" }}
-        mapStyle="mapbox://styles/escritoriodedados/clb5mnbms001z14o76898gh5c"
-        mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
-        onMouseMove={onHover}
+        layers={[H3layer]}
+        getTooltip={({ object }) =>
+          object && `Status: ${object.status} \n mm: ${object.chuva_15min}`
+        }
       >
-        {hoverInfo && (
-          <div
-            className="tooltip"
-            style={{ left: hoverInfo.x, top: hoverInfo.y }}
-          >
-            <div>Status: {hoverInfo.feature.properties.status}</div>
-          </div>
-        )}
-      </Map>
+        <Map
+          style={{ width: "100vw", height: "100vh" }}
+          mapStyle="mapbox://styles/escritoriodedados/clb5mnbms001z14o76898gh5c"
+          mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
+        ></Map>
+      </DeckGL>
       ;
     </div>
   );
