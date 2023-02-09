@@ -1,7 +1,7 @@
 // Mandatory
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { MapboxLayer } from "@deck.gl/mapbox";
-import { Map } from "react-map-gl";
+import { Map, Popup } from "react-map-gl";
 import mapboxgl from "mapbox-gl"; // do not remove this line
 import { H3HexagonLayer } from "@deck.gl/geo-layers";
 import DATA from "./data/chuva_15min.json";
@@ -38,10 +38,18 @@ export default function PainelChuva() {
     getElevation: (d) => d.chuva_15min,
   });
 
-  // simple function to debug h3 layer
-  const debugH3 = (layer) => {
-    console.log("info", layer.getMap());
-  };
+  const [hoverInfo, setHoverInfo] = useState(null);
+
+  const onHover = useCallback((event) => {
+    const {
+      features,
+      point: { x, y },
+    } = event;
+    const hoveredFeature = features && features[0];
+    console.log(event);
+    // prettier-ignore
+    setHoverInfo(hoveredFeature && {feature: hoveredFeature, x, y});
+  }, []);
 
   return (
     <div>
@@ -57,7 +65,17 @@ export default function PainelChuva() {
         style={{ width: "100vw", height: "100vh" }}
         mapStyle="mapbox://styles/escritoriodedados/clb5mnbms001z14o76898gh5c"
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
-      ></Map>
+        onMouseMove={onHover}
+      >
+        {hoverInfo && (
+          <div
+            className="tooltip"
+            style={{ left: hoverInfo.x, top: hoverInfo.y }}
+          >
+            <div>Status: {hoverInfo.feature.properties.status}</div>
+          </div>
+        )}
+      </Map>
       ;
     </div>
   );
