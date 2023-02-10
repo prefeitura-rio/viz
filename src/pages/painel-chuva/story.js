@@ -6,7 +6,7 @@ import { H3HexagonLayer } from "@deck.gl/geo-layers";
 import DeckGL from "@deck.gl/react";
 import { Oval } from "react-loader-spinner";
 import { isMobile } from "react-device-detect";
-
+import { ControlPanel } from "./control";
 
 import DATA from "./data/chuva_15min.json";
 
@@ -17,13 +17,11 @@ import DATA from "./data/chuva_15min.json";
 mapboxgl.workerClass =
   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
-// Chapters
-
 export default function PainelChuva() {
   const mapRef = useRef();
 
   const [viewport, setViewport] = useState({
-    longitude:  isMobile ? -43.41103 : -43.41103,
+    longitude: isMobile ? -43.41103 : -43.41103,
     latitude: isMobile ? -22.9342 : -22.9342,
     zoom: isMobile ? 8.4 : 10,
   });
@@ -71,35 +69,6 @@ export default function PainelChuva() {
           b: parseInt(result[3], 16),
         }
       : null;
-  };
-
-  const ControlPanel = ({}) => {
-    return (
-       <div className="w-64 bg-white rounded shadow p-6 absolute left-10 top-20">
-          <div className="flex flex-col justify-between">
-            <div className="flex items-center w-full my-3">
-              <div className="w-8 h-8 bg-[#ffffff] rounded-full border border-gray-300"></div>
-              <div className="ml-2">Sem Chuva</div>
-            </div>
-            <div className="flex items-center w-full my-3">
-              <div className="w-8 h-8 bg-[#DAECFB] rounded-full border border-gray-300"></div>
-              <div className="ml-2">Chuva Fraca</div> 
-            </div>
-            <div className="flex items-center w-full my-3">
-              <div className="w-8 h-8 bg-[#A9CBE8] rounded-full border border-gray-300"></div>
-              <div className="ml-2">Chuva Moderada</div>
-            </div>
-            <div className="flex items-center w-full my-3">
-              <div className="w-8 h-8 bg-[#77A9D5] rounded-full border border-gray-300"></div>
-              <div className="ml-2">Chuva Forte</div>
-            </div>
-            <div className="flex items-center w-full my-3">
-              <div className="w-8 h-8 bg-[#125999] rounded-full border border-gray-300"></div>
-              <div className="ml-2">Chuva Muito Forte</div>
-            </div>
-          </div>
-      </div>
-    );
   };
 
   const H3layer = new H3HexagonLayer({
