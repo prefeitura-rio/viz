@@ -5,6 +5,9 @@ import mapboxgl from "mapbox-gl"; // do not remove this line
 import { H3HexagonLayer } from "@deck.gl/geo-layers";
 import DeckGL from "@deck.gl/react";
 import { Oval } from "react-loader-spinner";
+import { isMobile } from "react-device-detect";
+
+
 import DATA from "./data/chuva_15min.json";
 
 // The following is required to stop "npm build" from transpiling mapbox code.
@@ -20,9 +23,9 @@ export default function PainelChuva() {
   const mapRef = useRef();
 
   const [viewport, setViewport] = useState({
-    longitude: -43.41103,
-    latitude: -22.9342,
-    zoom: 10,
+    longitude:  isMobile ? -43.41103 : -43.41103,
+    latitude: isMobile ? -22.9342 : -22.9342,
+    zoom: isMobile ? 8.4 : 10,
   });
 
   const [data, setData] = useState([]);
@@ -72,31 +75,29 @@ export default function PainelChuva() {
 
   const ControlPanel = ({}) => {
     return (
-      <div className="absolute top-10 left-10 ">
-        <div className="p-6 bg-white rounded shadow">
+       <div className="w-64 bg-white rounded shadow p-6 absolute left-10 top-20">
           <div className="flex flex-col justify-between">
             <div className="flex items-center w-full my-3">
-              <div className="w-8 h-8 bg-[#ffffff]"></div>
+              <div className="w-8 h-8 bg-[#ffffff] rounded-full border border-gray-300"></div>
               <div className="ml-2">Sem Chuva</div>
             </div>
             <div className="flex items-center w-full my-3">
-              <div className="w-8 h-8 bg-[#DAECFB]"></div>
-              <div className="ml-2">Chuva Fraca</div>
+              <div className="w-8 h-8 bg-[#DAECFB] rounded-full border border-gray-300"></div>
+              <div className="ml-2">Chuva Fraca</div> 
             </div>
             <div className="flex items-center w-full my-3">
-              <div className="w-8 h-8 bg-[#A9CBE8]"></div>
+              <div className="w-8 h-8 bg-[#A9CBE8] rounded-full border border-gray-300"></div>
               <div className="ml-2">Chuva Moderada</div>
             </div>
             <div className="flex items-center w-full my-3">
-              <div className="w-8 h-8 bg-[#77A9D5]"></div>
+              <div className="w-8 h-8 bg-[#77A9D5] rounded-full border border-gray-300"></div>
               <div className="ml-2">Chuva Forte</div>
             </div>
             <div className="flex items-center w-full my-3">
-              <div className="w-8 h-8 bg-[#125999]"></div>
+              <div className="w-8 h-8 bg-[#125999] rounded-full border border-gray-300"></div>
               <div className="ml-2">Chuva Muito Forte</div>
             </div>
           </div>
-        </div>
       </div>
     );
   };
