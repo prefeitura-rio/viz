@@ -24,6 +24,7 @@ export default function PainelChuva() {
     longitude: isMobile ? -43.63677 : -43.63677,
     latitude: isMobile ? -22.91533 : -22.91533,
     zoom: isMobile ? 8.4 : 10.3,
+    minZoom: isMobile ? 8.4 : 10.3,
   });
 
   const [data, setData] = useState([]);
