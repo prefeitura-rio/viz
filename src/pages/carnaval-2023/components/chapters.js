@@ -6,7 +6,7 @@ import tw from "tailwind-styled-components";
 import { isMobile } from "react-device-detect";
 
 // IMAGENS
-import logo1 from "../images/logo1.png";
+import logoed from "../images/logoed.png";
 import scroll from "../images/scroll.gif";
 
 // CAPA DOS CAPITULOS
@@ -42,14 +42,14 @@ export function Capa(
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       {" "}
       <img
-        src={logo1}
-        className=" selection:bg-[#ef4444] selection:text-white lg:mt-[7%] mt-[32px] w-[280px] h-auto lg:w-[300px] lg:h-auto"
+        src={logoed}
+        className=" selection:bg-[#ef4444] selection:text-white lg:mt-[7%] mt-[32px] w-[280px] h-auto lg:w-[260px] lg:h-auto"
       ></img>{" "}
       <styles.CapaAutor>
         <styles.Title>
-          SEU RIO
+          CARNAVAL DE
           <br />
-          SUA RUA
+          TODOS OS SANTOS
         </styles.Title>
         <styles.Subtitle>
           O papel da Prefeitura na Segurança Pública. Entendendo o programa CEP
@@ -98,32 +98,20 @@ export function CepCapitulo(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
         <styles.ContainerCard1>
-          <styles.NewsTitle>
-            Conjunto de Estratégias de Prevenção, o CEP
-          </styles.NewsTitle>
           <styles.TextCard1>
             Entender a distribuição dos crimes na cidade e identificar locais
             historicamente vulneráveis permite traçar estratégias mais eficazes
             para melhorar a segurança da população carioca. Foi assim que a
             Prefeitura criou o Programa Conjunto de Estratégias de Prevenção
             (CEP) - Seu Rio, Sua Rua.
-            <br /> <br />
-            O projeto mapeia os fatores ambientais relevantes a serem
-            considerados quando se pensa em estratégias de ações para reduzir o
-            risco das ocorrências criminais. O foco sempre está apontado para
-            regiões de alta concentração de delitos. A partir do mapeamento, a
-            prefeitura passa a agir de forma integrada no ambiente.
-            <br /> <br />
-            Um dos locais selecionados como plano-piloto do projeto foi a região
-            no entorno do Jardim do Méier, por concentrar uma série de fatores
-            criminogênicos e situacionais passíveis de intervenção do Poder
-            Público.
           </styles.TextCard1>
         </styles.ContainerCard1>
-        <img
-          src={capa5}
-          className="w-auto h-[200px] mt-[40px] mr-[40px] lg:w-auto lg:h-[330px]"
-        ></img>
+        <styles.ContainerCard2>
+          <img
+            src={capa5}
+            className="w-auto h-[200px] lg:w-auto lg:h-[200px]"
+          ></img>
+        </styles.ContainerCard2>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );

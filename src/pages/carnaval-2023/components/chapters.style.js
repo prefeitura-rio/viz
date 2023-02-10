@@ -12,9 +12,9 @@ export const CapaDivSC = styled.div`
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
-  h-[80vh] w-full lg:h-[96vh]
+  h-full w-full lg:h-[100vh]
   flex flex-col
-  justify-between  items-left
+  justify-between  items-center
   lg:pl-[10%]
   lg:pr-[10%]
   pl-[10%]
@@ -23,7 +23,7 @@ export const CapaDiv = tw(CapaDivSC)`
 
 export const CapaAutor = tw.div`
   flex flex-col
-  justify-start items-left
+  justify-start items-center
   mt-[24px] 
   font-sans
   text-sm text-center text-[#ef4444]
@@ -38,7 +38,7 @@ export const Scroll = tw.div`
 
 export const Title = tw.div`
   font-nunito font-bold  
-  text-[40px] text-left text-[#ef4444]
+  text-[40px] text-center text-[#ef4444]
   leading-[44px]
   lg:text-[48px]
   lg:leading-[48px]
@@ -48,7 +48,7 @@ export const Title = tw.div`
 export const Subtitle = tw.div`
   font-nunito
   font-normal
-  text-[16px] text-left text-[#ef4444]
+  text-[16px] text-center text-[#ef4444]
   lg:text-[16px]
   lg:max-w-sm
   lg:leading-[26px]
@@ -92,17 +92,54 @@ export const IntroText = tw.div`
   opacity-100
 `;
 
+// PAGINA DIVIDIDA
+
 export const ChapterGenericDiv = tw.div`
   flex
-  w-full h-auto lg:h-[120vh] min-h-[100vh]
+  w-full h-auto min-h-[100vh]
   items-center
   justify-center
   lg:justify-start
   lg:p-[10%]
-  bg-red-500
-  text-white
-  -z-10 
+  bg-white
   `;
+
+export const ContainerCard = tw.div`
+  flex flex-col lg:flex-row 
+  justify-between items-center 
+  bg-white
+  mt-[120px]
+  mb-[120px]
+`;
+
+export const ContainerCard1 = tw.div`
+  flex flex-col
+  items-left 
+  backdrop-blur-sm
+  bg-white
+  max-w-xs
+  lg:max-w-[40%]
+`;
+
+export const ContainerCard2 = tw.div`
+  flex flex-col
+  items-left 
+  max-w-xs
+  lg:max-w-[40%]
+`;
+
+export const TextCard1 = tw.div`
+  font-nunito  
+  text-[16px]
+  font-light
+  lg:leading-[150%]
+  text-left
+  lg:leading-7
+  text-black
+  selection:bg-white selection:text-[#ef4444]
+`;
+
+// CAPITULO
 
 export const ChapterGenericDiv1 = tw.div`
   flex
@@ -165,31 +202,6 @@ export const IntroDiv = tw.div`
   bg-black/50
 `;
 
-export const ContainerCard = tw.div`
-  flex flex-col lg:flex-row 
-  justify-between items-center 
-  bg-red-500
-  mt-[120px]
-  mb-[120px]
-`;
-
-export const ContainerCard1 = tw.div`
-  flex flex-col
-  items-left 
-  backdrop-blur-sm
-  bg-red-500
-  max-w-xs
-  lg:max-w-[40%]
-`;
-
-export const ContainerCard2 = tw.div`
-  p-5
-  bg-opacity-[20%] backdrop-blur-sm
-bg-black/75
-  max-w-xs
-  lg:max-w-3xl
-`;
-
 export const ContainerCard3 = tw.div`
   backdrop-blur-[20px]
   bg-[#ffffff75]
@@ -218,17 +230,6 @@ const TextCardSC = styled.div`
   color: #000000;
 `;
 
-export const NewsTitle = tw.div`
-  text-white
-  underline
-  font-nunito
-  font-semibold
-  max-w-[400px]
-  text-[24px]
-  mb-[24px]
-  selection:bg-white selection:text-[#ef4444]
-`;
-
 export const NewsTitle1 = tw.div`
   text-white
   underline
@@ -247,17 +248,6 @@ export const TextCard = tw.div`
   lg:leading-[150%]
   text-black
   selection:bg-[#ef4444] selection:text-white
-`;
-
-export const TextCard1 = tw.div`
-  font-nunito  
-  text-[16px]
-  font-light
-  lg:leading-[150%]
-  text-left
-  lg:leading-7
-  text-white
-  selection:bg-white selection:text-[#ef4444]
 `;
 
 const TextredSC = styled.div`
