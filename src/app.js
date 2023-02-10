@@ -21,6 +21,7 @@ const Interactive = lazy(() => import("./pages/subsidio-sppo/interactive"));
 const TestLineChart = lazy(() => import("./pages/sandbox/test_linechart"));
 const TestMap = lazy(() => import("./pages/sandbox/test_map"));
 const SEOPDemolicoes = lazy(() => import("./pages/seop-demolicoes/story"));
+const PainelChuva = lazy(() => import("./pages/painel-chuva/story"));
 
 const CepSEOP = lazy(() => {
   return Promise.all([
@@ -54,6 +55,11 @@ function App() {
     <div id={"main"}>
       <GlobalStyle />
       <Router>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route path="/chuva" element={<PainelChuva />}></Route>
+          </Routes>
+        </Suspense>
         <Suspense fallback={<LoadingSEOPDemolicioes />}>
           <Routes>
             <Route
