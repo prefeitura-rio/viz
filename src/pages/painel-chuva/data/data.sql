@@ -116,9 +116,6 @@ WITH
     GROUP BY id_h3
     ),
 
-
-
-
     final_table AS (
     SELECT
         h3_media.id_h3,
@@ -135,14 +132,24 @@ last_update AS (
     SELECT
       max(a.data_update) as data_update,
     FROM last_measurements a
+    ),
+
+estacao_por_h3  as (
+    SELECT 
+      h3_grid.id as id_h3, 
+      STRING_AGG(estacao ORDER BY estacao) estacoes
+    FROM `rj-cor.dados_mestres.h3_grid_res8` h3_grid
+    INNER JOIN `rj-cor.clima_pluviometro.estacoes_alertario` alertario
+          ON ST_CONTAINS(h3_grid.geometry, ST_GEOGPOINT(CAST(alertario.longitude AS FLOAT64), CAST(alertario.latitude AS FLOAT64)))
+    GROUP BY h3_grid.id
     )
 
-
 SELECT
-  id_h3,
+  final_table.id_h3,
   bairro,
   b.data_update,
   chuva_15min,
+  estacao_por_h3.estacoes,
 CASE
     WHEN chuva_15min> 0     AND chuva_15min<= 1.25 THEN 'Chuva Fraca'
     WHEN chuva_15min> 1.25  AND chuva_15min<= 6.25 THEN 'Chuva Moderada'
@@ -160,4 +167,4 @@ END AS color
 FROM final_table
 LEFT JOIN  last_update b
   ON TRUE
-
+LEFT JOIN estacao_por_h3 ON final_table.id_h3 = estacao_por_h3.id_h3
