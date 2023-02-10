@@ -39,13 +39,13 @@ export default function PainelChuva() {
   const getTooltip = ({ object }) => {
     let qtyText = "";
     if (object && object.status !== "SEM CHUVA") {
-      qtyText = `<p><b>Chuva:</b> ${object.chuva_15min} mm</p>`;
+      qtyText = `<p><b>Chuva </b> ${object.chuva_15min} mm</p>`;
     }
     return (
       object && {
         html: `<div>
-        <h4><b>Bairro:</b> ${object.bairro}</h4>
-        <p><b>Status:</b> ${object.status}</p>
+        <h4><b>Bairro </b> ${object.bairro}</h4>
+        <p><b>Status </b> ${object.status}</p>
         ${qtyText}
       </div>`,
       }
