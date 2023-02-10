@@ -2,28 +2,25 @@ import tw from "tailwind-styled-components";
 
 const CardBox = tw.div`
     w-[560px] 
-    p-6
-    pl-[80px]
+    h-full
     bg-[#ffffff] 
     rounded 
     font-nunito
-    absolute top-1/2 transform -translate-y-1/2
-`;
-
-const Card = tw.div`
-    flex
+    flex 
     flex-col
-    justify-between
+    items-center
+    pt-[100px]
+    space-y-[200px]
 `;
 
 export function ControlPanel() {
   return (
     <CardBox>
-      <Card>
-        <div className="ml-[30px] text-[50px] bold mb-10">
-          {" "}
-          Monitor de chuvas{" "}
-        </div>
+      <div className="ml-[30px] text-[50px] bold mb-10">
+        {" "}
+        Monitor de chuvas{" "}
+      </div>
+      <div>
         <div className="flex items-center w-full my-3">
           <div className="w-[60px] h-[60px] bg-[#ffffff] rounded-full border border-gray-300"></div>
           <div className="ml-[30px] text-[40px]">sem chuva</div>
@@ -44,7 +41,7 @@ export function ControlPanel() {
           <div className="w-[60px] h-[60px] bg-[#125999] rounded-full border border-gray-300"></div>
           <div className="ml-[30px] text-[40px]">chuva muito forte</div>
         </div>
-      </Card>
+      </div>
     </CardBox>
   );
 }
