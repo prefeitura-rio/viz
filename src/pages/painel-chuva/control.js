@@ -11,12 +11,27 @@ const CardBox = tw.div`
     top-20
 `;
 
+const Card = tw.div`
+    flex
+    flex-col
+    justify-between
+`;
+
+const Size = tw.div`
+    w-8
+    h-8
+    bg-[#ffffff]
+    rounded-full
+    border
+    border-gray-300
+`;
+
 export function ControlPanel() {
   return (
     <CardBox>
-      <div className="flex flex-col justify-between">
+      <Card>
         <div className="flex items-center w-full my-3">
-          <div className="w-8 h-8 bg-[#ffffff] rounded-full border border-gray-300"></div>
+          <Size></Size>
           <div className="ml-2">Sem Chuva</div>
         </div>
         <div className="flex items-center w-full my-3">
@@ -35,7 +50,7 @@ export function ControlPanel() {
           <div className="w-8 h-8 bg-[#125999] rounded-full border border-gray-300"></div>
           <div className="ml-2">Chuva Muito Forte</div>
         </div>
-      </div>
+      </Card>
     </CardBox>
   );
 }

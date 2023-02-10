@@ -86,8 +86,8 @@ export default function PainelChuva() {
       hexToRgb(d.color).b,
     ],
     getElevation: (d) => d.chuva_15min,
-    getLineColor: [0, 0, 0, 0],
-    getLineWidth: 0,
+    getLineColor: [255, 255, 255, 100],
+    getLineWidth: 120,
   });
   return (
     <div>
@@ -116,7 +116,7 @@ export default function PainelChuva() {
         >
           <Map
             style={{ width: "100vw", height: "100vh" }}
-            mapStyle="mapbox://styles/escritoriodedados/clb5mnbms001z14o76898gh5c"
+            mapStyle="mapbox://styles/escritoriodedados/cldyqygrt001d01pf2s06r10y"
             mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
           ></Map>{" "}
           <ControlPanel />
