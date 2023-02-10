@@ -6,7 +6,6 @@ import { H3HexagonLayer } from "@deck.gl/geo-layers";
 import DeckGL from "@deck.gl/react";
 import { Oval } from "react-loader-spinner";
 import { isMobile } from "react-device-detect";
-import { ControlPanel } from "./control";
 
 import DATA from "./data/chuva_15min.json";
 
@@ -21,10 +20,10 @@ export default function PainelChuva() {
   const mapRef = useRef();
 
   const [viewport, setViewport] = useState({
-    longitude: isMobile ? -43.63677 : -43.63677,
-    latitude: isMobile ? -22.91533 : -22.91533,
-    zoom: isMobile ? 8.4 : 10.3,
-    minZoom: isMobile ? 8.4 : 10.3,
+    longitude: isMobile ? -43.47398 : -43.46398,
+    latitude: isMobile ? -22.95157 : -22.95157,
+    zoom: isMobile ? 8.5 : 10.49,
+    minZoom: isMobile ? 8.5 : 10.49,
   });
 
   const [data, setData] = useState([]);
@@ -120,7 +119,6 @@ export default function PainelChuva() {
             mapStyle="mapbox://styles/escritoriodedados/cldyqygrt001d01pf2s06r10y"
             mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
           ></Map>{" "}
-          <ControlPanel />
         </DeckGL>
       )}
       ;

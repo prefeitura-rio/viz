@@ -1,5 +1,7 @@
 import tw from "tailwind-styled-components";
 
+import logo from "./images/logo.png";
+
 const CardBox = tw.div`
     w-[560px] 
     h-full
@@ -16,6 +18,7 @@ const CardBox = tw.div`
 export function ControlPanel() {
   return (
     <CardBox>
+      {/* <img src={logo} className=""></img> */}
       <div className="ml-[30px] text-[50px] bold mb-10">
         {" "}
         Monitor de chuvas{" "}
