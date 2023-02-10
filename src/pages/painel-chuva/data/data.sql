@@ -4,6 +4,7 @@ WITH
         MAX(data_particao) AS max_data_particao
     FROM `rj-cor.clima_pluviometro.taxa_precipitacao_alertario`
     ),
+
     alertario AS (
     SELECT
         id_estacao,
@@ -20,6 +21,7 @@ WITH
             PARTITION BY id_estacao ORDER BY DATETIME(CONCAT(data_particao," ", horario)) DESC
         ) AS row_num
         FROM `rj-cor.clima_pluviometro.taxa_precipitacao_alertario`
+        WHERE data_particao> DATE_SUB(CURRENT_DATE('America/Sao_Paulo'), INTERVAL 1 DAY)
     )AS a
     JOIN max_timestamps b
         ON  a.data_particao = b.max_data_particao
@@ -37,66 +39,75 @@ WITH
     last_measurements AS (
     SELECT
         a.id_estacao,
+        a.data_update,
         "alertario" AS sistema,
         a.acumulado_chuva_15_min,
     FROM alertario a
     ),
+
+
     h3_chuvas AS (
     SELECT
         h3.*,
+        lm.id_estacao,
         lm.acumulado_chuva_15_min,
         lm.acumulado_chuva_15_min/power(h3.dist,5) AS p1_15min,
         1/power(h3.dist,5) AS inv_dist
     FROM (
         WITH centroid_h3 AS (
-        SELECT
-            *,
-            ST_CENTROID(geometry) AS geom
-        FROM `rj-cor.dados_mestres.h3_grid_res8`
+            SELECT
+                *,
+                ST_CENTROID(geometry) AS geom
+            FROM `rj-cor.dados_mestres.h3_grid_res8`
         ),
+
         estacoes_pluviometricas AS (
-        SELECT
-            id_estacao AS id,
-            "alertario" AS sistema,
-            ST_GEOGPOINT(CAST(longitude AS FLOAT64),
-            CAST(latitude AS FLOAT64)) AS geom
+            SELECT
+                id_estacao AS id,
+                "alertario" AS sistema,
+                ST_GEOGPOINT(CAST(longitude AS FLOAT64),
+                CAST(latitude AS FLOAT64)) AS geom
             FROM `rj-cor.clima_pluviometro.estacoes_alertario`
         ),
+
         estacoes_mais_proximas AS (
-        SELECT AS VALUE s
-        FROM (
-            SELECT
-                ARRAY_AGG(
-                    STRUCT<id_h3 STRING,
-                    id_estacao STRING,
-                    dist FLOAT64,
-                    sistema STRING>(
-                    a.id, b.id,
-                    ST_DISTANCE(a.geom, b.geom),
-                    b.sistema
-                    )
-                    ORDER BY ST_DISTANCE(a.geom, b.geom)
-                ) AS ar
-            FROM (SELECT id, geom FROM centroid_h3) a
-            CROSS JOIN(
-                SELECT id, sistema, geom
-                FROM estacoes_pluviometricas
-                WHERE geom is not null
+            SELECT AS VALUE s
+            FROM (
+                SELECT
+                    ARRAY_AGG(
+                        STRUCT<id_h3 STRING,
+                        id_estacao STRING,
+                        dist FLOAT64,
+                        sistema STRING>(
+                        a.id, b.id,
+                        ST_DISTANCE(a.geom, b.geom),
+                        b.sistema
+                        )
+                        ORDER BY ST_DISTANCE(a.geom, b.geom)
+                    ) AS ar
+                FROM (SELECT id, geom FROM centroid_h3) a
+                CROSS JOIN(
+                    SELECT id, sistema, geom
+                    FROM estacoes_pluviometricas
+                    WHERE geom is not null
                 ) b
             WHERE a.id <> b.id
             GROUP BY a.id
-            ) ab CROSS JOIN
-            UNNEST(ab.ar) s
+            ) ab 
+            CROSS JOIN UNNEST(ab.ar) s
         )
+
         SELECT
-        *,
-        row_number() OVER (PARTITION BY id_h3 ORDER BY dist) AS ranking
+            *,
+            row_number() OVER (PARTITION BY id_h3 ORDER BY dist) AS ranking
         FROM estacoes_mais_proximas
-        ORDER BY id_h3, ranking
-        ) h3
-        LEFT JOIN last_measurements
-        lm ON lm.id_estacao=h3.id_estacao AND lm.sistema=h3.sistema
-        ),
+        ORDER BY id_h3, ranking) h3
+        LEFT JOIN last_measurements lm 
+            ON lm.id_estacao=h3.id_estacao AND lm.sistema=h3.sistema
+    ),
+
+
+    
     h3_media AS (
     SELECT
         id_h3,
@@ -104,6 +115,10 @@ WITH
     FROM h3_chuvas
     GROUP BY id_h3
     ),
+
+
+
+
     final_table AS (
     SELECT
         h3_media.id_h3,
@@ -114,12 +129,20 @@ WITH
         ON h3_grid.id=h3_media.id_h3
     INNER JOIN `rj-cor.dados_mestres.bairro`
         ON ST_CONTAINS(`rj-cor.dados_mestres.bairro`.geometry, ST_CENTROID(h3_grid.geometry))
+    ),
+
+last_update AS (
+    SELECT
+      max(a.data_update) as data_update,
+    FROM last_measurements a
     )
 
+
 SELECT
-id_h3,
-bairro,
-chuva_15min,
+  id_h3,
+  bairro,
+  b.data_update,
+  chuva_15min,
 CASE
     WHEN chuva_15min> 0     AND chuva_15min<= 1.25 THEN 'Chuva Fraca'
     WHEN chuva_15min> 1.25  AND chuva_15min<= 6.25 THEN 'Chuva Moderada'
@@ -135,3 +158,6 @@ CASE
     ELSE '#ffffff'
 END AS color
 FROM final_table
+LEFT JOIN  last_update b
+  ON TRUE
+
