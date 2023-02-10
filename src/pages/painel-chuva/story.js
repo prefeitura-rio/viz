@@ -7,8 +7,6 @@ import DeckGL from "@deck.gl/react";
 import { Oval } from "react-loader-spinner";
 import { isMobile } from "react-device-detect";
 
-import DATA from "./data/chuva_15min.json";
-
 // The following is required to stop "npm build" from transpiling mapbox code.
 // notice the exclamation point in the import.
 // @ts-ignore
@@ -73,7 +71,7 @@ export default function PainelChuva() {
 
   const H3layer = new H3HexagonLayer({
     id: "h3-layer",
-    data: DATA,
+    data: data,
     pickable: true,
     wireframe: false,
     filled: true,
