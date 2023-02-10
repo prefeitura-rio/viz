@@ -4,7 +4,7 @@ const CardBox = tw.div`
     w-[560px] 
     p-6
     pl-[80px]
-    bg-[#ffffff90] 
+    bg-[#ffffff] 
     rounded 
     font-nunito
     absolute top-1/2 transform -translate-y-1/2
@@ -20,6 +20,10 @@ export function ControlPanel() {
   return (
     <CardBox>
       <Card>
+        <div className="ml-[30px] text-[50px] bold mb-10">
+          {" "}
+          Monitor de chuvas{" "}
+        </div>
         <div className="flex items-center w-full my-3">
           <div className="w-[60px] h-[60px] bg-[#ffffff] rounded-full border border-gray-300"></div>
           <div className="ml-[30px] text-[40px]">sem chuva</div>
