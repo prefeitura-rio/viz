@@ -47,7 +47,7 @@ export default function PainelChuva() {
 
   const getTooltip = ({ object }) => {
     let qtyText = "";
-    if (object && object.status !== "sem chuva") {
+    if (object && object.chuva_15min <= 0) {
       qtyText = `<p><b>Chuva </b> ${object.chuva_15min} mm</p>`;
     }
     return (

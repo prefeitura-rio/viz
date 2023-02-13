@@ -128,12 +128,6 @@ WITH
         ON ST_CONTAINS(`rj-cor.dados_mestres.bairro`.geometry, ST_CENTROID(h3_grid.geometry))
     ),
 
-last_update AS (
-    SELECT
-      max(a.data_update) as data_update,
-    FROM last_measurements a
-    ),
-
 estacao_por_h3  as (
     SELECT 
       h3_grid.id as id_h3, 
@@ -147,7 +141,6 @@ estacao_por_h3  as (
 SELECT
   final_table.id_h3,
   bairro,
-  b.data_update,
   chuva_15min,
   estacao_por_h3.estacoes,
 CASE
@@ -165,6 +158,4 @@ CASE
     ELSE '#ffffff'
 END AS color
 FROM final_table
-LEFT JOIN  last_update b
-  ON TRUE
 LEFT JOIN estacao_por_h3 ON final_table.id_h3 = estacao_por_h3.id_h3
