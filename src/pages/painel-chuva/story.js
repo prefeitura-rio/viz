@@ -21,7 +21,7 @@ export default function PainelChuva() {
     longitude: isMobile ? -43.47398 : -43.46398,
     latitude: isMobile ? -22.95157 : -22.95157,
     zoom: isMobile ? 8.5 : 10.2,
-    minZoom: isMobile ? 8.5 : 10.2,
+    minZoom: isMobile ? 8.5 : 10.2
   });
 
   const [data, setData] = useState([]);
@@ -47,7 +47,7 @@ export default function PainelChuva() {
 
   const getTooltip = ({ object }) => {
     let qtyText = "";
-    if (object && object.chuva_15min <= 0) {
+    if (object && object.chuva_15min != 0) {
       qtyText = `<p><b>Chuva </b> ${object.chuva_15min} mm</p>`;
     }
     return (
@@ -56,7 +56,7 @@ export default function PainelChuva() {
         <h4><b>Bairro </b> ${object.bairro}</h4>
         <p><b>Status </b> ${object.status}</p>
         ${qtyText}
-      </div>`,
+      </div>`
       }
     );
   };
@@ -73,7 +73,7 @@ export default function PainelChuva() {
       ? {
           r: parseInt(result[1], 16),
           g: parseInt(result[2], 16),
-          b: parseInt(result[3], 16),
+          b: parseInt(result[3], 16)
         }
       : null;
   };
@@ -90,11 +90,11 @@ export default function PainelChuva() {
     getFillColor: (d) => [
       hexToRgb(d.color).r,
       hexToRgb(d.color).g,
-      hexToRgb(d.color).b,
+      hexToRgb(d.color).b
     ],
     getElevation: (d) => d.chuva_15min,
     getLineColor: [255, 255, 255, 100],
-    getLineWidth: 120,
+    getLineWidth: 120
   });
   return (
     <div>
@@ -104,7 +104,7 @@ export default function PainelChuva() {
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-50%, -50%)"
           }}
         >
           <Oval height={100} width={100} color="#00BFFF" visible={true} />
