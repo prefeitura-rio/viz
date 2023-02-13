@@ -144,11 +144,11 @@ SELECT
   b.data_update,
   chuva_15min,
 CASE
-    WHEN chuva_15min> 0     AND chuva_15min<= 1.25 THEN 'Chuva Fraca'
-    WHEN chuva_15min> 1.25  AND chuva_15min<= 6.25 THEN 'Chuva Moderada'
-    WHEN chuva_15min> 6.25  AND chuva_15min<= 12.5 THEN 'Chuva Forte'
-    WHEN chuva_15min> 12.5                         THEN 'Chuva Muito Forte'
-    ELSE 'Sem Chuva'
+    WHEN chuva_15min> 0     AND chuva_15min<= 1.25 THEN 'chuva fraca'
+    WHEN chuva_15min> 1.25  AND chuva_15min<= 6.25 THEN 'chuva moderada'
+    WHEN chuva_15min> 6.25  AND chuva_15min<= 12.5 THEN 'chuva forte'
+    WHEN chuva_15min> 12.5                         THEN 'chuva muito forte'
+    ELSE 'sem chuva'
 END AS status,
 CASE
     WHEN chuva_15min> 0     AND chuva_15min<= 1.25 THEN '#DAECFB'--'#00CCFF'
