@@ -6,6 +6,7 @@ import { H3HexagonLayer } from "@deck.gl/geo-layers";
 import DeckGL from "@deck.gl/react";
 import { Oval } from "react-loader-spinner";
 import { isMobile } from "react-device-detect";
+// import DATA from "./data/chuva_15min.json";
 
 // The following is required to stop "npm build" from transpiling mapbox code.
 // notice the exclamation point in the import.
@@ -20,8 +21,8 @@ export default function PainelChuva() {
   const [viewport, setViewport] = useState({
     longitude: isMobile ? -43.47398 : -43.46398,
     latitude: isMobile ? -22.95157 : -22.95157,
-    zoom: isMobile ? 8.5 : 10.2,
-    minZoom: isMobile ? 8.5 : 10.2,
+    zoom: isMobile ? 8.5 : 10.4,
+    minZoom: isMobile ? 8.5 : 10.4,
   });
 
   const [data, setData] = useState([]);
@@ -81,6 +82,22 @@ export default function PainelChuva() {
         }
       : null;
   };
+  const getColor = (status) => {
+    switch (status) {
+      case "sem chuva":
+        return "#8fdac7";
+      case "chuva fraca":
+        return "#35a98c";
+      case "chuva moderada":
+        return "#e9c46a";
+      case "chuva forte":
+        return "#f4a261";
+      case "chuva muito forte":
+        return "#e76f51";
+      default:
+        return "#000000"; // Black (default color if status is unknown)
+    }
+  };
 
   const H3layer = new H3HexagonLayer({
     id: "h3-layer",
@@ -92,10 +109,10 @@ export default function PainelChuva() {
     elevationScale: 0,
     getHexagon: (d) => d.id_h3,
     getFillColor: (d) => [
-      hexToRgb(d.color).r,
-      hexToRgb(d.color).g,
-      hexToRgb(d.color).b,
-      255 * 0.5,
+      hexToRgb(getColor(d.status)).r,
+      hexToRgb(getColor(d.status)).g,
+      hexToRgb(getColor(d.status)).b,
+      255,
     ],
     getElevation: (d) => d.chuva_15min,
     getLineColor: [255, 255, 255, 100],
