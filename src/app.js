@@ -6,6 +6,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { LoadingSEOPDemolicioes } from "./pages/seop-demolicoes/loading";
 import { LoadingSubsidioSPPO } from "./pages/subsidio-sppo/loading";
 import { LoadingSeopCep } from "./pages/seop-cep/loading";
+import { LoadingCarnaval2023 } from "./pages/carnaval-2023/loading";
 
 import style, { createGlobalStyle } from "styled-components";
 import mapboxCss from "mapbox-gl/dist/mapbox-gl.css";
@@ -20,11 +21,19 @@ const Interactive = lazy(() => import("./pages/subsidio-sppo/interactive"));
 const TestLineChart = lazy(() => import("./pages/sandbox/test_linechart"));
 const TestMap = lazy(() => import("./pages/sandbox/test_map"));
 const SEOPDemolicoes = lazy(() => import("./pages/seop-demolicoes/story"));
+const PainelChuva = lazy(() => import("./pages/painel-chuva/story"));
 
 const CepSEOP = lazy(() => {
   return Promise.all([
     import("./pages/seop-cep/story"),
-    new Promise((resolve) => setTimeout(resolve, 1))
+    new Promise((resolve) => setTimeout(resolve, 1)),
+  ]).then(([moduleExports]) => moduleExports);
+});
+
+const Carnaval2023 = lazy(() => {
+  return Promise.all([
+    import("./pages/carnaval-2023/story"),
+    new Promise((resolve) => setTimeout(resolve, 1)),
   ]).then(([moduleExports]) => moduleExports);
 });
 
@@ -46,11 +55,24 @@ function App() {
     <div id={"main"}>
       <GlobalStyle />
       <Router>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route path="/chuva" element={<PainelChuva />}></Route>
+          </Routes>
+        </Suspense>
         <Suspense fallback={<LoadingSEOPDemolicioes />}>
           <Routes>
             <Route
               path="/especial-seop/demolicoes"
               element={<SEOPDemolicoes />}
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<LoadingCarnaval2023 />}>
+          <Routes>
+            <Route
+              path="/especial-carnaval/2023"
+              element={<Carnaval2023 />}
             ></Route>
           </Routes>
         </Suspense>
@@ -66,7 +88,7 @@ function App() {
         </Suspense>
         <Suspense fallback={<></>}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            {/* <Route path="/" element={<Home />} /> */}
             <Route path="/sandbox/sample" element={<StorySample />} />
             <Route path="/sandbox/video" element={<VideoSandbox />} />
             <Route

@@ -61,6 +61,16 @@ import m_vigilancia1 from "../images/m_vigilancia1.png";
 import m_vigilancia2 from "../images/m_vigilancia2.png";
 import m_vigilancia3 from "../images/m_vigilancia3.gif";
 
+// FOTOS
+
+import vigilanciafim from "../images/vigilanciafim.png";
+import conservacaofim from "../images/conservacaofim.png";
+import ativacaofim from "../images/ativacaofim.png";
+import acolhimentofim from "../images/acolhimentofim.png";
+
+// Videos
+import srcVideo from "../images/video.mp4";
+
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
 import { Tween, Timeline } from "react-gsap";
@@ -91,8 +101,7 @@ export function Capa(
           SUA RUA
         </styles.Title>
         <styles.Subtitle>
-          O papel da Prefeitura na Segurança Pública. Entendendo o programa CEP
-          na Prefeitura da Cidade do Rio de Janeiro.
+          Conheça o CEP, o programa da Prefeitura que vem combatendo a violência na cidade.
         </styles.Subtitle>
         <styles.Scroll>
           {/* <styles.AuthorText>
@@ -149,10 +158,12 @@ export function MapaCapitulo(
             ordem pública, limpeza e conservação de vias, iluminação e regulação
             da ocupação territorial, a que o torna o agente central para criar
             espaços mais seguros aos cidadãos.
-            <br /> <br />E é, aliando o estudo e análise do espaço público, que
-            a Prefeitura, por meio da Secretaria Municipal de Ordem Pública
-            (SEOP), vem combatendo a violência, transformando o Rio em um lugar
-            mais seguro para os cariocas.
+            <br /> <br />E é, aliando o estudo e análise do espaço público, que a 
+            Prefeitura, por meio da Secretaria Municipal de Ordem Pública (SEOP), 
+            vem combatendo a violência. Graças ao Programa Conjunto de Estratégias de 
+            Prevenção (CEP) - Seu Rio, Sua Rua, regiões beneficiadas pelo projeto já 
+            apresentaram uma queda de 12,4% nas ocorrência criminais, transformando o 
+            Rio em um lugar mais seguro para os cariocas.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -517,10 +528,11 @@ export function VigilanciaTres(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv10
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterGenericDiv10>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <img src={vigilanciafim}></img>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv10>
   );
 }
 
@@ -640,10 +652,11 @@ export function AtivacaoTres(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv10
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterGenericDiv10>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <img src={ativacaofim}></img>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv10>
   );
 }
 
@@ -766,10 +779,11 @@ export function ConservacaoTres(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv10
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterGenericDiv10>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <img src={conservacaofim}></img>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv10>
   );
 }
 
@@ -881,10 +895,11 @@ export function AcolhimentoTres(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv10
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterGenericDiv10>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3>
+        <img src={acolhimentofim}></img>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv10>
   );
 }
 
@@ -924,6 +939,25 @@ export function Resultados(
           className="w-auto h-[120px] mt-[300px] lg:mt-[10px] lg:w-auto lg:h-[180px] lg:mr-[200px]"
         ></img>
       </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function Video(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      {/* <styles.ContainerCard> */}
+      <video controls autoPlay muted loop className="w-full">
+        <source src={srcVideo} type="video/mp4" />
+      </video>
+      {/* </styles.ContainerCard> */}
     </styles.ChapterGenericDiv>
   );
 }
