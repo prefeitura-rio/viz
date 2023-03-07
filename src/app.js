@@ -1,4 +1,4 @@
-// gh-pages route for deployment
+// gh-pages route for deployment.
 // https://stackoverflow.com/questions/41325890/indexroute-not-showing-when-pushing-to-gh-pages
 
 import React, { Suspense, lazy } from "react";
@@ -88,7 +88,7 @@ function App() {
         </Suspense>
         <Suspense fallback={<></>}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            {/* <Route path="/" element={<Home />} /> */}
             <Route path="/sandbox/sample" element={<StorySample />} />
             <Route path="/sandbox/video" element={<VideoSandbox />} />
             <Route
