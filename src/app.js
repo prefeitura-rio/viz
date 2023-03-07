@@ -88,7 +88,7 @@ function App() {
         </Suspense>
         <Suspense fallback={<></>}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            {/* <Route path="/" element={<Home />} /> */}
             <Route path="/sandbox/sample" element={<StorySample />} />
             <Route path="/sandbox/video" element={<VideoSandbox />} />
             <Route
