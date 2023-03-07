@@ -240,6 +240,17 @@ export const NewsTitle1 = tw.div`
   selection:bg-white selection:text-[#ef4444]
 `;
 
+export const NewsTitle2 = tw.div`
+  text-white
+  font-nunito
+  underline
+  font-semibold
+  max-w-[400px]
+  text-[18px]
+  mb-[4px]
+  selection:bg-white selection:text-[#ef4444]
+`;
+
 export const TextCard = tw.div`
   font-nunito  
   text-[16px]

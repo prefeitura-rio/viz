@@ -101,7 +101,8 @@ export function Capa(
           SUA RUA
         </styles.Title>
         <styles.Subtitle>
-          Conheça o CEP, o programa da Prefeitura que vem combatendo a violência na cidade.
+          Conheça o CEP, o programa da Prefeitura que vem combatendo a violência
+          na cidade.
         </styles.Subtitle>
         <styles.Scroll>
           {/* <styles.AuthorText>
@@ -158,12 +159,13 @@ export function MapaCapitulo(
             ordem pública, limpeza e conservação de vias, iluminação e regulação
             da ocupação territorial, a que o torna o agente central para criar
             espaços mais seguros aos cidadãos.
-            <br /> <br />E é, aliando o estudo e análise do espaço público, que a 
-            Prefeitura, por meio da Secretaria Municipal de Ordem Pública (SEOP), 
-            vem combatendo a violência. Graças ao Programa Conjunto de Estratégias de 
-            Prevenção (CEP) - Seu Rio, Sua Rua, regiões beneficiadas pelo projeto já 
-            apresentaram uma queda de 12,4% nas ocorrência criminais, transformando o 
-            Rio em um lugar mais seguro para os cariocas.
+            <br /> <br />E é, aliando o estudo e análise do espaço público, que
+            a Prefeitura, por meio da Secretaria Municipal de Ordem Pública
+            (SEOP), vem combatendo a violência. Graças ao Programa Conjunto de
+            Estratégias de Prevenção (CEP) - Seu Rio, Sua Rua, regiões
+            beneficiadas pelo projeto já apresentaram uma queda de 12,4% nas
+            ocorrência criminais, transformando o Rio em um lugar mais seguro
+            para os cariocas.
           </styles.TextCard1>
         </styles.ContainerCard1>
         <img
@@ -994,12 +996,23 @@ export function Creditos(
             Rodrigo Abreu
           </styles.TextCard1>
           <styles.NewsTitle1 className=" lg:mt-[40px] mt-[60px]">
-            Parceria
+            Parcerias
           </styles.NewsTitle1>
           <styles.TextCard1>
             Escritório de Dados
             <br />
-            Secretaria de Ordem Pública{" "}
+            Secretaria de Ordem Pública <br />
+            <br />
+            <styles.NewsTitle2>
+              Centro de Ciência Aplicada à Segurança Pública
+            </styles.NewsTitle2>
+            Joana Monteiro
+            <br />
+            Eduardo Fagundes
+            <br />
+            Júlia Guerra
+            <br />
+            Vinicius Peçanha
           </styles.TextCard1>
           <styles.NewsTitle1 className=" lg:mt-[40px] mt-[60px]">
             Prefeito
