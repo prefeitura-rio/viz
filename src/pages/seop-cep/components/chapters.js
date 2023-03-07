@@ -990,10 +990,14 @@ export function Creditos(
             Brenno Carnevale
             <br />
             Clara de Lernia <br />
+            Eduardo Fagundes <br />
             Izabel Rizzo <br />
+            Joana Monteiro <br />
             João Carabetta <br />
+            Júlia Guerra <br />
             Paulo Mac Culloch <br />
-            Rodrigo Abreu
+            Rodrigo Abreu <br />
+            Vinicius Peçanha
           </styles.TextCard1>
           <styles.NewsTitle1 className=" lg:mt-[40px] mt-[60px]">
             Parcerias
@@ -1002,17 +1006,7 @@ export function Creditos(
             Escritório de Dados
             <br />
             Secretaria de Ordem Pública <br />
-            <br />
-            <styles.NewsTitle2>
-              Centro de Ciência Aplicada à Segurança Pública
-            </styles.NewsTitle2>
-            Joana Monteiro
-            <br />
-            Eduardo Fagundes
-            <br />
-            Júlia Guerra
-            <br />
-            Vinicius Peçanha
+            Centro de Ciência Aplicada à Segurança Pública
           </styles.TextCard1>
           <styles.NewsTitle1 className=" lg:mt-[40px] mt-[60px]">
             Prefeito

@@ -1,4 +1,4 @@
-// gh-pages route for deployment
+// gh-pages route for deployment.
 // https://stackoverflow.com/questions/41325890/indexroute-not-showing-when-pushing-to-gh-pages
 
 import React, { Suspense, lazy } from "react";
