@@ -6,6 +6,9 @@ export default function Home() {
     <div>
       <lu>
         <li>
+          <Link to="/enchentes">Especial | Enchentes</Link>
+        </li>
+        <li>
           <Link to="/chuva">Painel Chuvas</Link>
         </li>
         <li>
