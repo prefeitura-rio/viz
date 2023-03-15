@@ -7,6 +7,7 @@ import { LoadingSEOPDemolicioes } from "./pages/seop-demolicoes/loading";
 import { LoadingSubsidioSPPO } from "./pages/subsidio-sppo/loading";
 import { LoadingSeopCep } from "./pages/seop-cep/loading";
 import { LoadingCarnaval2023 } from "./pages/carnaval-2023/loading";
+import { LoadingEnchentes } from "./pages/enchentes/loading";
 
 import style, { createGlobalStyle } from "styled-components";
 import mapboxCss from "mapbox-gl/dist/mapbox-gl.css";
@@ -33,6 +34,13 @@ const CepSEOP = lazy(() => {
 const Carnaval2023 = lazy(() => {
   return Promise.all([
     import("./pages/carnaval-2023/story"),
+    new Promise((resolve) => setTimeout(resolve, 1)),
+  ]).then(([moduleExports]) => moduleExports);
+});
+
+const Enchentes = lazy(() => {
+  return Promise.all([
+    import("./pages/enchentes/story"),
     new Promise((resolve) => setTimeout(resolve, 1)),
   ]).then(([moduleExports]) => moduleExports);
 });
@@ -68,6 +76,11 @@ function App() {
             ></Route>
           </Routes>
         </Suspense>
+        <Suspense fallback={<LoadingEnchentes />}>
+          <Routes>
+            <Route path="/enchentes" element={<Enchentes />}></Route>
+          </Routes>
+        </Suspense>
         <Suspense fallback={<LoadingCarnaval2023 />}>
           <Routes>
             <Route
@@ -88,7 +101,7 @@ function App() {
         </Suspense>
         <Suspense fallback={<></>}>
           <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<Home />} />
             <Route path="/sandbox/sample" element={<StorySample />} />
             <Route path="/sandbox/video" element={<VideoSandbox />} />
             <Route
