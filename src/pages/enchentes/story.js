@@ -6,7 +6,7 @@ import MultilayerMap from "../../components/maps/multilayer_map";
 import * as chapterMap from "./components/chapters.map";
 import * as chapterDiv from "./components/chapters";
 
-// Scroll and animation stuff
+// Scroll and animation  stuff
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
