@@ -1007,6 +1007,22 @@ export function Creditos(
             <br />
             Secretaria de Ordem Pública <br />
             Centro de Ciência Aplicada à Segurança Pública
+            <br />
+            <br />
+            <div className="italic">
+              * Os estudos utilizados como base neste trabalho foram elaborados{" "}
+              <br />
+              pelo Centro de Ciência Aplicada à Segurança da FGV. <br />
+              Você pode conferir esta análise{" "}
+              <a
+                className="underline font-bold"
+                href="https://ccas.fgv.br/projeto/programa-conjunto-de-estrategias-de-prevencao-cep-seu-rio-sua-rua "
+                target="_blank"
+                rel="noreferrer"
+              >
+                clicando aqui.
+              </a>
+            </div>
           </styles.TextCard1>
           <styles.NewsTitle1 className=" lg:mt-[40px] mt-[60px]">
             Prefeito
