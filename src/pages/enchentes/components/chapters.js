@@ -41,16 +41,16 @@ export function Capa(
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       {" "}
-      <img
+      {/* <img
         src={logoed}
         className=" selection:bg-[#ef4444] selection:text-white lg:mt-[4%] mt-[32px] w-[280px] h-auto lg:w-[220px] lg:h-auto"
-      ></img>{" "}
+      ></img>{" "} */}
       <styles.CapaAutor>
         <styles.Title>E as chuvas castigam os cariocas</styles.Title>
-        <styles.Subtitle>
+        {/* <styles.Subtitle>
           O papel da Prefeitura na Segurança Pública. Entendendo o programa CEP
           na Prefeitura da Cidade do Rio de Janeiro.
-        </styles.Subtitle>
+        </styles.Subtitle> */}
         <styles.Scroll>
           {/* <styles.AuthorText>
             Desenvolvido por{" "}
@@ -72,10 +72,10 @@ export function Capa(
               Secretaria Municipal de Ordem Pública
             </a>{" "}
           </styles.AuthorText>{" "} */}
-          <img
+          {/* <img
             src={scroll}
             className="lg:mb-[300px] w-[10px] h-auto lg:w-[80px] lg:h-auto"
-          ></img>{" "}
+          ></img>{" "} */}
         </styles.Scroll>
       </styles.CapaAutor>
     </styles.CapaDiv>

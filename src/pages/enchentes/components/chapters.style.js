@@ -5,9 +5,10 @@ import tw from "tailwind-styled-components";
 import capa from "../images/capa.png";
 
 export const CapaDivSC = styled.div`
-  background-image: url(${capa});
-  background-size: cover;
-  background-position: center;
+  background-color: #ffffff;
+  /* background-image: url(${capa}); */
+  /* background-size: cover; */
+  /* background-position: center; */
   /* backdrop-filter: blur(10px); */
   /* filter: blur(8px); */
 `;
@@ -15,21 +16,22 @@ export const CapaDivSC = styled.div`
 export const CapaDiv = tw(CapaDivSC)`
   h-full w-full lg:h-[100vh]
   flex flex-col
-  justify-between  items-center
+  justify-center  items-center
   lg:pl-[10%]
   lg:pr-[10%]
   pl-[10%]
   pr-[10%]
-`;
+  bg-white
+  `;
 
 export const CapaAutor = tw.div`
+  h-[80vh] w-[40vw]
   flex flex-col
-  justify-start items-center
-  mt-[24px] 
+  justify-center items-center
   font-sans
-  text-sm text-center text-white
-  lg:leading-[150%]
-  selection:bg-[#ef4444] selection:text-white
+bg-white
+  border-4
+  border-black
   `;
 
 export const Scroll = tw.div`
@@ -40,18 +42,17 @@ export const Scroll = tw.div`
 export const Title = tw.div`
   font-nunito font-bold  
   drop-shadow-lg
-  text-[40px] text-center text-white
+  text-[40px] text-center text-black
   leading-[44px]
   lg:text-[48px]
   lg:max-w-lg
   lg:leading-[48px]
-  selection:bg-[#ef4444] selection:text-white
   `;
 
 export const Subtitle = tw.div`
   font-nunito
   font-normal
-  text-[16px] text-center text-white
+  text-[16px] text-center text-black
   drop-shadow-xl
   lg:text-[20px]
   lg:max-w-xl
@@ -59,7 +60,6 @@ export const Subtitle = tw.div`
   lg:mb-[60px]
   mb-[98px]
   mt-[8px]
-  selection:bg-[#ef4444] selection:text-white
 `;
 
 export const AuthorText = tw.div`
@@ -68,7 +68,6 @@ export const AuthorText = tw.div`
   mt-[40px]
   mb-[80px]
   lg:leading-[150%]
-  selection:bg-[#ef4444] selection:text-white
  `;
 
 export const Credito = tw.div`
