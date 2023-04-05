@@ -43,14 +43,10 @@ export function Capa(
       {" "}
       <img
         src={logoed}
-        className=" selection:bg-[#ef4444] selection:text-white lg:mt-[7%] mt-[32px] w-[280px] h-auto lg:w-[260px] lg:h-auto"
+        className=" selection:bg-[#ef4444] selection:text-white lg:mt-[4%] mt-[32px] w-[280px] h-auto lg:w-[220px] lg:h-auto"
       ></img>{" "}
       <styles.CapaAutor>
-        <styles.Title>
-          CARNAVAL DE
-          <br />
-          TODOS OS SANTOS
-        </styles.Title>
+        <styles.Title>E as chuvas castigam os cariocas</styles.Title>
         <styles.Subtitle>
           O papel da Prefeitura na Segurança Pública. Entendendo o programa CEP
           na Prefeitura da Cidade do Rio de Janeiro.
@@ -78,7 +74,7 @@ export function Capa(
           </styles.AuthorText>{" "} */}
           <img
             src={scroll}
-            className="lg:mb-[16px] w-[10px] h-auto lg:w-[12px] lg:h-auto"
+            className="lg:mb-[300px] w-[10px] h-auto lg:w-[80px] lg:h-auto"
           ></img>{" "}
         </styles.Scroll>
       </styles.CapaAutor>
@@ -202,10 +198,24 @@ export function CepTres(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv10
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterGenericDiv10>
+    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3 id={"text_cep_dois"}>
+        <styles.TextCard>
+          Com base em evidências científicas, uma série de ações específicas, de
+          baixo custo e focalizadas, foram estrategicamente pensadas para
+          contribuir para a redução dos fatores de risco mapeados e,
+          consequentemente, para a redução do crime e da sensação de insegurança
+          no local.
+          <br /> <br />
+          Estratégias como aumentar a disponibilidade de árvores e espaços
+          verdes, reduzir a presença de lixo e pichação, mudar o planejamento de
+          habitação e aprimorar a iluminação pública podem, segundo
+          especialistas, levar a reduções importantes no crime e na desordem.
+          <br /> <br />A seguir, explicaremos como elas mudaram a vida dos
+          moradores da região.
+        </styles.TextCard>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv10>
   );
 }
 

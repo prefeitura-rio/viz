@@ -2,12 +2,13 @@
 import { Container } from "postcss";
 import styled from "styled-components";
 import tw from "tailwind-styled-components";
-import capa from "../images/capa.gif";
+import capa from "../images/capa.png";
 
 export const CapaDivSC = styled.div`
   background-image: url(${capa});
   background-size: cover;
   background-position: center;
+  /* backdrop-filter: blur(10px); */
   /* filter: blur(8px); */
 `;
 
@@ -26,7 +27,7 @@ export const CapaAutor = tw.div`
   justify-start items-center
   mt-[24px] 
   font-sans
-  text-sm text-center text-[#ef4444]
+  text-sm text-center text-white
   lg:leading-[150%]
   selection:bg-[#ef4444] selection:text-white
   `;
@@ -38,9 +39,11 @@ export const Scroll = tw.div`
 
 export const Title = tw.div`
   font-nunito font-bold  
-  text-[40px] text-center text-[#ef4444]
+  drop-shadow-lg
+  text-[40px] text-center text-white
   leading-[44px]
   lg:text-[48px]
+  lg:max-w-lg
   lg:leading-[48px]
   selection:bg-[#ef4444] selection:text-white
   `;
@@ -48,11 +51,12 @@ export const Title = tw.div`
 export const Subtitle = tw.div`
   font-nunito
   font-normal
-  text-[16px] text-center text-[#ef4444]
-  lg:text-[16px]
-  lg:max-w-sm
+  text-[16px] text-center text-white
+  drop-shadow-xl
+  lg:text-[20px]
+  lg:max-w-xl
   lg:leading-[26px]
-  lg:mb-[88px]
+  lg:mb-[60px]
   mb-[98px]
   mt-[8px]
   selection:bg-[#ef4444] selection:text-white
@@ -174,7 +178,7 @@ export const ChapterGenericDiv10 = tw.div`
 flex
 w-full h-[150vh] 
 items-center
-justify-left
+justify-center
 p-[34px]
 lg:p-[10%]
 `;
@@ -203,12 +207,12 @@ export const IntroDiv = tw.div`
 `;
 
 export const ContainerCard3 = tw.div`
-  backdrop-blur-[20px]
-  bg-[#ffffff75]
+  backdrop-blur-[50px]
+  bg-[#00000099]
   max-w-xs
   p-[34px]
   lg:p-[48px]
-  lg:max-w-lg
+  lg:max-w-2xl
 `;
 
 export const ContainerCard4 = tw.div`
@@ -242,11 +246,11 @@ export const NewsTitle1 = tw.div`
 `;
 
 export const TextCard = tw.div`
-  font-nunito  
+  font-serif  
   text-[16px]
   text-left
   lg:leading-[150%]
-  text-black
+  text-white
   selection:bg-[#ef4444] selection:text-white
 `;
 
