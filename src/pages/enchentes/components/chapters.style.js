@@ -14,13 +14,9 @@ export const CapaDivSC = styled.div`
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
-  h-[100vh] w-[100vw] lg:h-[100vh]
+  h-[100vh] w-full
   flex flex-col
   justify-center  items-center
-  lg:pl-[10%]
-  lg:pr-[10%]
-  pl-[10%]
-  pr-[10%]
   bg-white
   `;
 
@@ -79,7 +75,7 @@ flex
 w-full h-auto
 items-center
 justify-center
-p-[30px]
+px-[30px]
 lg:p-[34px]
 bg-white
   `;
@@ -95,16 +91,15 @@ export const ChapterGenericDiv1 = tw.div`
     `;
 
 export const ChapterGenericDiv2 = tw.div`
-  flex
-  w-full h-auto
-  items-center
-  justify-center
-  p-[34px]
-  lg:p-[34px]
-  bg-white
+flex
+w-full h-[100vh]
+lg:w-full lg:h-auto
+items-center
+justify-center
+px-[30px]
+lg:p-[34px]
+bg-white
   `;
-// lg:justify-between
-// lg:pl-[10%]
 
 export const ChapterGenericDiv3 = tw.div`
 h-full w-full
@@ -120,7 +115,8 @@ mt-[40px]
 `;
 
 export const ContainerCard1 = tw.div`
-h-[800px] w-[800px]
+h-[50vh] w-[90vw]
+lg:h-[800px] lg:w-[800px]
 lg:m-3
 flex flex-col
 justify-center items-center
@@ -202,7 +198,9 @@ text-[18px]
 text-left
 lg:leading-[150%]
 text-black
-mt-[20px]
+mt-[60px]
+mb-[60px]
+lg:mb-0
 `;
 
 export const TextCard2 = tw.div`

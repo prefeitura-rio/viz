@@ -137,7 +137,7 @@ export function CepDois(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1 id={"text_cep_dois"}>
         <styles.ContainerCard3>
           <styles.TextCard3>
@@ -149,7 +149,7 @@ export function CepDois(
           </styles.TextCard3>
         </styles.ContainerCard3>
       </styles.ContainerCard1>
-    </styles.ChapterGenericDiv>
+    </styles.ChapterGenericDiv2>
   );
 }
 
