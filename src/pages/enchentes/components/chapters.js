@@ -7,7 +7,7 @@ import { isMobile } from "react-device-detect";
 
 // IMAGENS
 import logoed from "../images/logoed.png";
-import scroll from "../images/scroll.gif";
+import capa from "../images/capa.gif";
 
 // CAPA DOS CAPITULOS
 
@@ -41,75 +41,17 @@ export function Capa(
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       {" "}
-      {/* <img
-        src={logoed}
-        className=" selection:bg-[#ef4444] selection:text-white lg:mt-[4%] mt-[32px] w-[280px] h-auto lg:w-[220px] lg:h-auto"
-      ></img>{" "} */}
       <styles.CapaAutor>
-        <styles.Title>E as chuvas castigam os cariocas</styles.Title>
-        {/* <styles.Subtitle>
-          O papel da Prefeitura na Segurança Pública. Entendendo o programa CEP
-          na Prefeitura da Cidade do Rio de Janeiro.
-        </styles.Subtitle> */}
-        <styles.Scroll>
-          {/* <styles.AuthorText>
-            Desenvolvido por{" "}
-            <a
-              className="font-bold underline"
-              href="https://www.dados.rio/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Escritório de Dados
-            </a>{" "}
-            <br />e{" "}
-            <a
-              className="font-bold underline"
-              href="http://www.rio.rj.gov.br/web/seop"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Secretaria Municipal de Ordem Pública
-            </a>{" "}
-          </styles.AuthorText>{" "} */}
-          {/* <img
-            src={scroll}
-            className="lg:mb-[300px] w-[10px] h-auto lg:w-[80px] lg:h-auto"
-          ></img>{" "} */}
-        </styles.Scroll>
+        <img
+          src={logoed}
+          className="absolute mt-[20px] lg:mt-[60px] top-0 w-[100px] lg:w-[120px] h-auto lg:h-auto"
+        ></img>{" "}
+        <styles.Title>Por que o Rio de Janeiro alaga?</styles.Title>
+        <styles.Subtitle>
+          E como a prefeitura trabalha para que a chuva não castigue os cariocas
+        </styles.Subtitle>
       </styles.CapaAutor>
     </styles.CapaDiv>
-  );
-}
-
-export function CepCapitulo(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.ContainerCard1>
-          <styles.TextCard1>
-            Entender a distribuição dos crimes na cidade e identificar locais
-            historicamente vulneráveis permite traçar estratégias mais eficazes
-            para melhorar a segurança da população carioca. Foi assim que a
-            Prefeitura criou o Programa Conjunto de Estratégias de Prevenção
-            (CEP) - Seu Rio, Sua Rua.
-          </styles.TextCard1>
-        </styles.ContainerCard1>
-        <styles.ContainerCard2>
-          <img
-            src={capa5}
-            className="w-auto h-[200px] lg:w-auto lg:h-[200px]"
-          ></img>
-        </styles.ContainerCard2>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
   );
 }
 
@@ -151,10 +93,37 @@ export function CepUm(
 
   return (
     <>
-      <styles.ChapterGenericDiv10
-        ref={props.chapRef}
-        id={props.id}
-      ></styles.ChapterGenericDiv10>
+      <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+        <styles.ContainerCard id={"text_cep_dois"}>
+          <styles.AuthorText className="lg:w-[460px]">
+            ▌ Desenvolvido pela Equipe de Visualização de Dados do{" "}
+            <a
+              className="font-bold underline"
+              href="https://www.dados.rio/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Escritório de Dados
+            </a>{" "}
+            da Prefeitura da Cidade do Rio de Janeiro
+          </styles.AuthorText>{" "}
+          <styles.TextCard>Contexto histórico dos alagamentos</styles.TextCard>
+          <styles.TextCard1>
+            Uma análise feita com base nos dados de ocorrências registradas pelo
+            COR desde 2018, mostra que a cidade já registrou pelo menos 3.937
+            incidentes causados pelas chuvas. Destes, 428 foram alagamentos e
+            enchentes.
+            <br /> <br />
+            Existem diversos motivos pelos quais uma cidade como a nossa sofre
+            com estes problemas. Seja por eventos naturais ou pela ação humana,
+            a função de uma boa gestão pública é de mitigar estes problemas e
+            evitar que eles interrompam o funcionamento das atividades.
+            <br /> <br />A seguir, explicaremos para você alguns dos principais
+            motivos pelos quais a nossa cidade é um território propenso para que
+            este tipo de incidente ocorra de forma tão frequente.
+          </styles.TextCard1>
+        </styles.ContainerCard>
+      </styles.ChapterGenericDiv>
     </>
   );
 }
@@ -168,24 +137,19 @@ export function CepDois(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3 id={"text_cep_dois"}>
-        <styles.TextCard>
-          Com base em evidências científicas, uma série de ações específicas, de
-          baixo custo e focalizadas, foram estrategicamente pensadas para
-          contribuir para a redução dos fatores de risco mapeados e,
-          consequentemente, para a redução do crime e da sensação de insegurança
-          no local.
-          <br /> <br />
-          Estratégias como aumentar a disponibilidade de árvores e espaços
-          verdes, reduzir a presença de lixo e pichação, mudar o planejamento de
-          habitação e aprimorar a iluminação pública podem, segundo
-          especialistas, levar a reduções importantes no crime e na desordem.
-          <br /> <br />A seguir, explicaremos como elas mudaram a vida dos
-          moradores da região.
-        </styles.TextCard>
-      </styles.ContainerCard3>
-    </styles.ChapterGenericDiv10>
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1 id={"text_cep_dois"}>
+        <styles.ContainerCard3>
+          <styles.TextCard3>
+            Com base em evidências científicas, uma série de ações específicas,
+            de baixo custo e focalizadas, foram estrategicamente pensadas para
+            contribuir para a redução dos fatores de risco mapeados e,
+            consequentemente, para a redução do crime e da sensação de
+            insegurança no local.
+          </styles.TextCard3>
+        </styles.ContainerCard3>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv>
   );
 }
 
@@ -198,24 +162,29 @@ export function CepTres(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv10 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3 id={"text_cep_dois"}>
+    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard id={"text_cep_dois"}>
         <styles.TextCard>
-          Com base em evidências científicas, uma série de ações específicas, de
-          baixo custo e focalizadas, foram estrategicamente pensadas para
-          contribuir para a redução dos fatores de risco mapeados e,
-          consequentemente, para a redução do crime e da sensação de insegurança
-          no local.
-          <br /> <br />
-          Estratégias como aumentar a disponibilidade de árvores e espaços
-          verdes, reduzir a presença de lixo e pichação, mudar o planejamento de
-          habitação e aprimorar a iluminação pública podem, segundo
-          especialistas, levar a reduções importantes no crime e na desordem.
-          <br /> <br />A seguir, explicaremos como elas mudaram a vida dos
-          moradores da região.
+          Vandalismo e roubo de lixeiras e bueiros
         </styles.TextCard>
-      </styles.ContainerCard3>
-    </styles.ChapterGenericDiv10>
+        <styles.TextCard1>
+          No Rio de Janeiro, mesmo com lixeiras espalhadas pelas ruas, ainda há
+          pessoas que insistem em jogar lixo no chão. E se isso já é
+          preocupante, imagine como seria se não houvesse onde descartar o lixo.
+          <br /> <br />
+          E é isso que ocorre quando há o furto e o vandalismo de lixeiras. De
+          acordo com dados da Comlurb, em média, 500 a 600 unidades de
+          papeleiras são furtadas ou danificadas mensalmente, totalizando cerca
+          de 6.000 ao ano.
+          <br /> <br />O prejuízo para os cofres públicos é significativo.
+          Segundo a companhia, o valor chega a aproximadamente R$ 900 mil por
+          ano, considerando o valor da última compra de lixeiras (R$149,77 a
+          unidade). Só durante o Réveillon deste ano, a Comlurb constatou que
+          cerca de 20% dos 1.000 contêineres de 240 litros disponibilizados na
+          Praia de Copacabana foram furtados
+        </styles.TextCard1>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv1>
   );
 }
 
@@ -228,42 +197,46 @@ export function Creditos(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
-        <styles.ContainerCardCreditos>
-          <styles.NewsTitle1>Autores</styles.NewsTitle1>
-          <styles.TextCard1>
-            Caio Jacintho <br />
-            Diego Oliveira <br />
-            Judite Cypreste <br />
-            Maria Eduarda Couto
-          </styles.TextCard1>
-          <styles.NewsTitle1 className=" lg:mt-[40px] mt-[60px] ">
-            Agradecimentos
-          </styles.NewsTitle1>
-          <styles.TextCard1>
-            Brenno Carnevale
-            <br />
-            Clara de Lernia <br />
-            Izabel Rizzo <br />
-            João Carabetta <br />
-            Paulo Mac Culloch <br />
-            Rodrigo Abreu
-          </styles.TextCard1>
-          <styles.NewsTitle1 className=" lg:mt-[40px] mt-[60px]">
-            Parceria
-          </styles.NewsTitle1>
-          <styles.TextCard1>
-            Escritório de Dados
-            <br />
-            Secretaria de Ordem Pública{" "}
-          </styles.TextCard1>
-          <styles.NewsTitle1 className=" lg:mt-[40px] mt-[60px]">
-            Prefeito
-          </styles.NewsTitle1>
-          <styles.TextCard1>Eduardo Paes</styles.TextCard1>
-        </styles.ContainerCardCreditos>
+        <styles.TextCreditos2>Créditos</styles.TextCreditos2>
+        <styles.TextCreditos>Autores</styles.TextCreditos>
+        <styles.TextCreditos1>
+          Caio Jacintho <br />
+          Diego Oliveira <br />
+          Judite Cypreste <br />
+        </styles.TextCreditos1>
+        <styles.TextCreditos className=" lg:mt-[40px] mt-[60px] ">
+          Agradecimentos
+        </styles.TextCreditos>
+        <styles.TextCreditos1>
+          Alexandre Reis <br />
+          Ana Carla Badaro <br />
+          Ana Rebouças <br />
+          Flavio Lopes <br />
+          Gabriel Gazola Milan
+          <br />
+          João Carabetta <br />
+          Wanderson José dos Santos <br />
+        </styles.TextCreditos1>
+        <styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
+          Parceria
+        </styles.TextCreditos>
+        <styles.TextCreditos1>
+          Centro de Operações Rio <br />
+          Companhia Municipal de Limpeza Urbana <br />
+          Fundação Instituto das Águas do Município do Rio de Janeiro <br />
+          Secretaria Municipal de Conservação <br />
+        </styles.TextCreditos1>
+        <styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
+          Prefeito
+        </styles.TextCreditos>
+        <styles.TextCreditos1>Eduardo Paes</styles.TextCreditos1>
+        <img
+          src={logoed}
+          className="mt-[100px] w-[120px] h-auto lg:w-[120px] lg:h-auto"
+        ></img>
       </styles.ContainerCard>
-    </styles.ChapterGenericDiv4>
+    </styles.ChapterGenericDiv>
   );
 }

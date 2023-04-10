@@ -17,7 +17,7 @@ export default function Enchentes() {
   const [layers, setLayers] = useState(chapterMap.Capa().layers);
 
   useEffect(() => {
-    document.title = "Carnaval 2023";
+    document.title = "E as chuvas castigam os cariocas";
   }, []);
 
   const vh = (coef) => window.innerHeight * (coef / 100);
@@ -104,10 +104,11 @@ export default function Enchentes() {
         animationSpeed={1}
       />
       <chapterDiv.Capa id={"capa"} />
-      <chapterDiv.CepImages id={"cep_images"} />
+      {/* <chapterDiv.CepImages id={"cep_images"} /> */}
       <chapterDiv.CepUm id={"cep_um"} />
       <chapterDiv.CepDois id={"cep_dois"} />
       <chapterDiv.CepTres id={"cep_tres"} />
+      <chapterDiv.CepDois id={"cep_dois"} />
       {/* <chapterDiv.CepCapitulo id={"cep_capitulo"} /> */}
       <chapterDiv.Creditos id={"creditos"} />
     </>
