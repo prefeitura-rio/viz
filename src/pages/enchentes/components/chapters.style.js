@@ -41,7 +41,7 @@ export const Scroll = tw.div`
 export const Title = tw.div`
 font-poppins font-bold 
 text-[32px]
-lg:text-[52px]
+lg:text-[60px]
 text-center
 lg:px-[100px]
 leading-[110%]
@@ -53,7 +53,7 @@ mt-[40px]
 export const Subtitle = tw.div`
 font-poppins font-regular 
 text-[18px]
-lg:text-[24px]
+lg:text-[28px]
 text-center
 px-[32px]
 lg:px-[140px]
@@ -147,17 +147,6 @@ export const IntroDiv = tw.div`
   bg-black/50
 `;
 
-export const ContainerCardCreditos = tw.div`
-  flex flex-col
-  items-left 
-  max-w-xs
-  lg:max-w-[100%]
-`;
-
-const TextCardSC = styled.div`
-  color: #000000;
-`;
-
 export const TextCreditos = tw.div`
   text-black
   font-poppins
@@ -198,7 +187,7 @@ text-[18px]
 text-left
 lg:leading-[150%]
 text-black
-mt-[60px]
+mt-[10px]
 mb-[60px]
 lg:mb-0
 `;
@@ -218,44 +207,4 @@ text-[16px]
 text-left
 lg:leading-[150%]
 text-white
-`;
-
-const TextredSC = styled.div`
-  background: #ef4444;
-`;
-
-export const Textred = tw(TextredSC)`
-  text-white
-  inline
-  lg:px-1
-  px-1
-  box-decoration-clone
-`;
-
-const TextsalmaoSC = styled.div`
-  background: #ea9f9f;
-`;
-
-export const Textsalmao = tw(TextsalmaoSC)`
-  text-white
-  inline
-  lg:px-1
-  px-1
-  box-decoration-clone
-`;
-
-const TextwhiteSC = styled.div`
-  background: #ffffff;
-`;
-
-export const Textwhite = tw(TextwhiteSC)`
-  text-red-500
-  inline
-`;
-
-export const Textunderline = tw.div`
-  text-white
-  inline
-  underline underline-offset-4
-  decoration-4
 `;

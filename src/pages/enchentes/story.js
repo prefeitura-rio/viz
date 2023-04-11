@@ -37,48 +37,16 @@ export default function Enchentes() {
       trigger: "#capa",
     });
 
-    const tl_cep_capitulo = gsap.timeline();
-    tl_cep_capitulo
-      .set("#cep_image_1", { opacity: 0 })
-      .to("#cep_image_1", { opacity: 0, duration: 30 })
-      .to("#cep_image_1", { opacity: 1, duration: 70 });
+    // const tl_cep_capitulo = gsap.timeline();
+    // tl_cep_capitulo
+    //   .set("#cep_image_1", { opacity: 0 })
+    //   .to("#cep_image_1", { opacity: 0, duration: 30 })
+    //   .to("#cep_image_1", { opacity: 1, duration: 70 });
 
-    ScrollTrigger.create({
-      animation: tl_cep_capitulo,
-      trigger: "#cep_capitulo",
-    });
-
-    ScrollTrigger.create({
-      trigger: "#cep_um",
-    });
-
-    const tl_cep_dois = gsap.timeline();
-    tl_cep_dois
-      .set("#cep_image_2", { opacity: 0 })
-      .to("#cep_image_2", { opacity: 0, duration: 9 })
-      .to("#cep_image_2", { opacity: 1, duration: 40 })
-      .to("#cep_image_2", { opacity: 1, duration: 50 });
-
-    ScrollTrigger.create({
-      animation: tl_cep_dois,
-      trigger: "#cep_dois",
-    });
-
-    const tl_cep_tres = gsap.timeline();
-    tl_cep_tres
-      .set("#cep_image_3", { opacity: 0 })
-      .to("#cep_image_3", { opacity: 0, duration: 10 })
-      .to("#cep_image_3", { opacity: 1, duration: 40 })
-      .to("#cep_image_3", { opacity: 1, duration: 50 });
-
-    ScrollTrigger.create({
-      animation: tl_cep_tres,
-      trigger: "#cep_tres",
-    });
-
-    ScrollTrigger.create({
-      trigger: "#creditos",
-    });
+    // ScrollTrigger.create({
+    //   animation: tl_cep_capitulo,
+    //   trigger: "#cep_capitulo",
+    // });
   }, []);
 
   return (
@@ -103,13 +71,21 @@ export default function Enchentes() {
         animationLoopLength={21600}
         animationSpeed={1}
       />
-      <chapterDiv.Capa id={"capa"} />
       {/* <chapterDiv.CepImages id={"cep_images"} /> */}
-      <chapterDiv.CepUm id={"cep_um"} />
-      <chapterDiv.CepDois id={"cep_dois"} />
-      <chapterDiv.CepTres id={"cep_tres"} />
-      <chapterDiv.CepDois id={"cep_dois"} />
       {/* <chapterDiv.CepCapitulo id={"cep_capitulo"} /> */}
+      <chapterDiv.Capa id={"capa"} />
+      <chapterDiv.ContextoHistorico id={"contexto_historico"} />
+      <chapterDiv.QuadroUm id={"quadro_um"} />
+      <chapterDiv.Impermeabilidade id={"impermeabilidade"} />
+      <chapterDiv.Lixo id={"lixo"} />
+      <chapterDiv.Vandalismo id={"vandalismo"} />
+      <chapterDiv.Clandestino id={"clandestino"} />
+      <chapterDiv.ContextoMundial id={"contexto_mundial"} />
+      <chapterDiv.Prefeitura id={"prefeitura"} />
+      <chapterDiv.Rotina id={"rotina"} />
+      <chapterDiv.ObrasProjetos id={"obras_projetos"} />
+      <chapterDiv.Cor id={"cor"} />
+      <chapterDiv.Futuro id={"futuro"} />
       <chapterDiv.Creditos id={"creditos"} />
     </>
   );
