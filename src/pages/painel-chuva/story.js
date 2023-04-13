@@ -22,7 +22,7 @@ export default function PainelChuva() {
     longitude: isMobile ? -43.47398 : -43.46398,
     latitude: isMobile ? -22.95157 : -22.95157,
     zoom: isMobile ? 8.5 : 10.4,
-    minZoom: isMobile ? 8.5 : 10.4
+    minZoom: isMobile ? 8.5 : 10.4,
   });
 
   const [data, setData] = useState([]);
@@ -57,7 +57,7 @@ export default function PainelChuva() {
         <h4><b>Bairro </b> ${object.bairro}</h4>
         <p><b>Status </b> ${object.status}</p>
         ${qtyText}
-      </div>`
+      </div>`,
       }
     );
   };
@@ -78,7 +78,7 @@ export default function PainelChuva() {
       ? {
           r: parseInt(result[1], 16),
           g: parseInt(result[2], 16),
-          b: parseInt(result[3], 16)
+          b: parseInt(result[3], 16),
         }
       : null;
   };
@@ -112,11 +112,11 @@ export default function PainelChuva() {
       hexToRgb(getColor(d.status)).r,
       hexToRgb(getColor(d.status)).g,
       hexToRgb(getColor(d.status)).b,
-      255
+      255,
     ],
     getElevation: (d) => d.chuva_15min,
     getLineColor: [255, 255, 255, 100],
-    getLineWidth: 120
+    getLineWidth: 120,
   });
   return (
     <div>
@@ -126,7 +126,7 @@ export default function PainelChuva() {
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)"
+            transform: "translate(-50%, -50%)",
           }}
         >
           <Oval height={100} width={100} color="#00BFFF" visible={true} />
@@ -145,7 +145,7 @@ export default function PainelChuva() {
         >
           <Map
             style={{ width: "100vw", height: "100vh" }}
-            mapStyle="mapbox://styles/escritoriodedados/cldyqygrt001d01pf2s06r10y"
+            mapStyle="mapbox://styles/escritoriodedados/clgfevcvc009101p9ax017bah"
             mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
           ></Map>{" "}
         </DeckGL>
