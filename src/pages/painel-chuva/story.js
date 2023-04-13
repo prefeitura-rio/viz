@@ -19,9 +19,9 @@ export default function PainelChuva() {
   const mapRef = useRef();
 
   const [viewport, setViewport] = useState({
-    longitude: isMobile ? -43.47398 : -43.46398,
-    latitude: isMobile ? -22.95157 : -22.95157,
-    zoom: isMobile ? 8.5 : 10.4,
+    longitude: isMobile ? -43.47398 : -43.50398,
+    latitude: isMobile ? -22.95157 : -22.92957,
+    zoom: isMobile ? 8.5 : 10.6,
     minZoom: isMobile ? 8.5 : 10.4,
   });
 
@@ -115,7 +115,7 @@ export default function PainelChuva() {
       255,
     ],
     getElevation: (d) => d.chuva_15min,
-    getLineColor: [255, 255, 255, 100],
+    getLineColor: [255, 255, 255, 0],
     getLineWidth: 120,
   });
   return (
