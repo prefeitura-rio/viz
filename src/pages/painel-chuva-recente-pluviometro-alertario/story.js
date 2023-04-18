@@ -150,7 +150,6 @@ export default function PainelChuva() {
           ></Map>{" "}
         </DeckGL>
       )}
-      ;
     </div>
   );
 }
