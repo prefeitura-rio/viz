@@ -15,7 +15,7 @@ import { isMobile } from "react-device-detect";
 mapboxgl.workerClass =
   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
-export default function PainelChuva() {
+export default function PainelAlagamentoRecenteComando() {
   const mapRef = useRef();
 
   const [viewport, setViewport] = useState({
@@ -30,7 +30,7 @@ export default function PainelChuva() {
 
   const updateData = () => {
     let apiUrl =
-      "https://api.dados.rio/v2/clima_pluviometro/precipitacao_15min/";
+      "https://api.dados.rio/v2/clima_alagamento/alagamento_15min/";
     fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => {
@@ -48,8 +48,8 @@ export default function PainelChuva() {
 
   const getTooltip = ({ object }) => {
     let qtyText = "";
-    if (object && object.chuva_15min != 0) {
-      qtyText = `<p><b>Chuva </b> ${object.chuva_15min} mm</p>`;
+    if (object && object.qnt_alagamentos != 0) {
+      qtyText = `<p><b>Alagamentos </b> ${object.qnt_alagamentos} </p>`;
     }
     return (
       object && {
@@ -84,15 +84,15 @@ export default function PainelChuva() {
   };
   const getColor = (status) => {
     switch (status) {
-      case "sem chuva":
+      case "sem alagamento":
         return "#8fdac7";
-      case "chuva fraca":
+      case "pouco crítico":
         return "#35a98c";
-      case "chuva moderada":
+      case "crítico":
         return "#e9c46a";
-      case "chuva forte":
+      case "muito crítico":
         return "#f4a261";
-      case "chuva muito forte":
+      case "extremamente crítico":
         return "#e76f51";
       default:
         return "#000000"; // Black (default color if status is unknown)
@@ -114,7 +114,7 @@ export default function PainelChuva() {
       hexToRgb(getColor(d.status)).b,
       255,
     ],
-    getElevation: (d) => d.chuva_15min,
+    getElevation: (d) => d.qnt_alagamentos,
     getLineColor: [255, 255, 255, 0],
     getLineWidth: 120,
   });

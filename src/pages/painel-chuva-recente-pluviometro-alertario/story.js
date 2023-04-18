@@ -15,7 +15,7 @@ import { isMobile } from "react-device-detect";
 mapboxgl.workerClass =
   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
-export default function PainelChuva() {
+export default function PainelChuvaRecentePluviometroAlertario() {
   const mapRef = useRef();
 
   const [viewport, setViewport] = useState({

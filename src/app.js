@@ -22,7 +22,10 @@ const Interactive = lazy(() => import("./pages/subsidio-sppo/interactive"));
 const TestLineChart = lazy(() => import("./pages/sandbox/test_linechart"));
 const TestMap = lazy(() => import("./pages/sandbox/test_map"));
 const SEOPDemolicoes = lazy(() => import("./pages/seop-demolicoes/story"));
+const PainelAlagamentoRecenteComando = lazy(() => import("./pages/painel-alagamento-recente-comando/story"));
 const PainelChuva = lazy(() => import("./pages/painel-chuva/story"));
+const PainelChuvaRecentePluviometroAlertario = lazy(() => import("./pages/painel-chuva-recente-radar-inea/story"));
+const PainelChuvaRecenteRadarINEA = lazy(() => import("./pages/painel-chuva-recente-radar-inea/story"));
 
 const CepSEOP = lazy(() => {
   return Promise.all([
@@ -63,9 +66,24 @@ function App() {
     <div id={"main"}>
       <GlobalStyle />
       <Router>
+      <Suspense fallback={<></>}>
+          <Routes>
+            <Route path="/alagamento-recente-comando" element={<PainelAlagamentoRecenteComando />}></Route>
+          </Routes>
+        </Suspense>
         <Suspense fallback={<></>}>
           <Routes>
             <Route path="/chuva" element={<PainelChuva />}></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route path="/chuva-recente-pluviometro-alertario" element={<PainelChuvaRecentePluviometroAlertario />}></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route path="/chuva-recente-radar-inea" element={<PainelChuvaRecenteRadarINEA />}></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<LoadingSEOPDemolicioes />}>

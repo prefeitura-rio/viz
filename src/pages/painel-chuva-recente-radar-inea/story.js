@@ -15,7 +15,7 @@ import { isMobile } from "react-device-detect";
 mapboxgl.workerClass =
   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
-export default function PainelChuva() {
+export default function PainelChuvaRecenteRadarINEA() {
   const mapRef = useRef();
 
   const [viewport, setViewport] = useState({
@@ -30,7 +30,7 @@ export default function PainelChuva() {
 
   const updateData = () => {
     let apiUrl =
-      "https://api.dados.rio/v2/clima_pluviometro/precipitacao_15min/";
+      "https://api.dados.rio/v2/clima_radar/precipitacao_15min/";
     fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => {
