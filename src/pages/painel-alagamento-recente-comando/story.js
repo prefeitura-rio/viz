@@ -48,8 +48,8 @@ export default function PainelChuva() {
 
   const getTooltip = ({ object }) => {
     let qtyText = "";
-    if (object && object.chuva_15min != 0) {
-      qtyText = `<p><b>Chuva </b> ${object.chuva_15min} mm</p>`;
+    if (object && object.qnt_alagamentos != 0) {
+      qtyText = `<p><b>Alagamentos </b> ${object.qnt_alagamentos} </p>`;
     }
     return (
       object && {

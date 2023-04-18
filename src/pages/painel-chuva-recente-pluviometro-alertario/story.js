@@ -30,7 +30,7 @@ export default function PainelChuva() {
 
   const updateData = () => {
     let apiUrl =
-      "https://api.dados.rio/v2/clima_pluviometro/precipitacao_15min/";
+      "https://api.dados.rio/v2/clima_alagamento/alagamento_15min/";
     fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => {
