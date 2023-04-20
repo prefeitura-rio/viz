@@ -24,7 +24,7 @@ const TestMap = lazy(() => import("./pages/sandbox/test_map"));
 const SEOPDemolicoes = lazy(() => import("./pages/seop-demolicoes/story"));
 const PainelAlagamentoRecenteComando = lazy(() => import("./pages/painel-alagamento-recente-comando/story"));
 const PainelChuva = lazy(() => import("./pages/painel-chuva/story"));
-const PainelChuvaRecentePluviometroAlertario = lazy(() => import("./pages/painel-chuva-recente-radar-inea/story"));
+const PainelChuvaRecentePluviometroAlertario = lazy(() => import("./pages/painel-chuva-recente-pluviometro-alertario/story"));
 const PainelChuvaRecenteRadarINEA = lazy(() => import("./pages/painel-chuva-recente-radar-inea/story"));
 
 const CepSEOP = lazy(() => {
