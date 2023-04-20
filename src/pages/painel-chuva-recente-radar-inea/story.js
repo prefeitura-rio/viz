@@ -112,7 +112,7 @@ export default function PainelChuvaRecenteRadarINEA() {
       hexToRgb(getColor(d.status)).r,
       hexToRgb(getColor(d.status)).g,
       hexToRgb(getColor(d.status)).b,
-      255,
+      80,
     ],
     getElevation: (d) => d.chuva_15min,
     getLineColor: [255, 255, 255, 0],
