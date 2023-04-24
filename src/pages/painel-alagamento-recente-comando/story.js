@@ -112,7 +112,7 @@ export default function PainelAlagamentoRecenteComando() {
       hexToRgb(getColor(d.status)).r,
       hexToRgb(getColor(d.status)).g,
       hexToRgb(getColor(d.status)).b,
-      255,
+      80,
     ],
     getElevation: (d) => d.qnt_alagamentos,
     getLineColor: [255, 255, 255, 0],
