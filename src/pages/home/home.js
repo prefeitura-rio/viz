@@ -9,13 +9,22 @@ export default function Home() {
           <Link to="/enchentes">Especial | Enchentes</Link>
         </li>
         <li>
+          <Link to="/alagamento-passado-comando">Painel Alagamento Passado Comando</Link>
+        </li>
+        <li>
           <Link to="/alagamento-recente-comando">Painel Alagamento Recente Comando</Link>
         </li>
         <li>
           <Link to="/chuva">Painel Chuvas</Link>
         </li>
         <li>
+          <Link to="/chuva-passado-pluviometro-alertario">Painel Chuvas Passado Alertario</Link>
+        </li>
+        <li>
           <Link to="/chuva-recente-pluviometro-alertario">Painel Chuvas Recente Alertario</Link>
+        </li>
+        <li>
+          <Link to="/chuva-passado-radar-inea">Painel Chuvas Passado Radar</Link>
         </li>
         <li>
           <Link to="/chuva-recente-radar-inea">Painel Chuvas Recente Radar</Link>
