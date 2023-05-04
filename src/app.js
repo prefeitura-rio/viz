@@ -22,9 +22,12 @@ const Interactive = lazy(() => import("./pages/subsidio-sppo/interactive"));
 const TestLineChart = lazy(() => import("./pages/sandbox/test_linechart"));
 const TestMap = lazy(() => import("./pages/sandbox/test_map"));
 const SEOPDemolicoes = lazy(() => import("./pages/seop-demolicoes/story"));
+const PainelAlagamentoPassadoComando = lazy(() => import("./pages/painel-alagamento-passado-comando/story"));
 const PainelAlagamentoRecenteComando = lazy(() => import("./pages/painel-alagamento-recente-comando/story"));
 const PainelChuva = lazy(() => import("./pages/painel-chuva/story"));
+const PainelChuvaPassadoPluviometroAlertario = lazy(() => import("./pages/painel-chuva-passado-pluviometro-alertario/story"));
 const PainelChuvaRecentePluviometroAlertario = lazy(() => import("./pages/painel-chuva-recente-pluviometro-alertario/story"));
+const PainelChuvaPassadoRadarINEA = lazy(() => import("./pages/painel-chuva-passado-radar-inea/story"));
 const PainelChuvaRecenteRadarINEA = lazy(() => import("./pages/painel-chuva-recente-radar-inea/story"));
 
 const CepSEOP = lazy(() => {
@@ -66,7 +69,12 @@ function App() {
     <div id={"main"}>
       <GlobalStyle />
       <Router>
-      <Suspense fallback={<></>}>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route path="/alagamento-passado-comando" element={<PainelAlagamentoPassadoComando />}></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
           <Routes>
             <Route path="/alagamento-recente-comando" element={<PainelAlagamentoRecenteComando />}></Route>
           </Routes>
@@ -78,7 +86,17 @@ function App() {
         </Suspense>
         <Suspense fallback={<></>}>
           <Routes>
+            <Route path="/chuva-passado-pluviometro-alertario" element={<PainelChuvaPassadoPluviometroAlertario />}></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
             <Route path="/chuva-recente-pluviometro-alertario" element={<PainelChuvaRecentePluviometroAlertario />}></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route path="/chuva-passado-radar-inea" element={<PainelChuvaPassadoRadarINEA />}></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<></>}>
