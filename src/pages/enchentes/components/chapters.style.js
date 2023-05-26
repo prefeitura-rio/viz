@@ -91,14 +91,32 @@ export const ChapterGenericDiv1 = tw.div`
     `;
 
 export const ChapterGenericDiv2 = tw.div`
-flex
-w-full h-[100vh]
-lg:w-full lg:h-auto
-items-center
-justify-center
-px-[30px]
-lg:p-[34px]
-bg-white
+    relative
+    flex
+    w-full h-[100vh]
+    lg:w-full lg:h-[100vh]
+    items-center
+    justify-center
+    overflow-hidden
+    px-[30px]
+    lg:p-[34px]
+    bg-white
+  `;
+
+export const ContainerCard1 = tw.div`
+    h-[50vh]   w-full 
+    flex 
+    absolute
+    justify-center items-center
+    z-0
+  `;
+
+export const ContainerCard3 = tw.div`
+    relative
+    z-10
+    h-auto w-[70vw] lg:w-[90%]
+    bg-[#00000099]
+    p-[28px]
   `;
 
 export const ChapterGenericDiv3 = tw.div`
@@ -114,30 +132,12 @@ mb-[60px]
 mt-[40px]
 `;
 
-export const ContainerCard1 = tw.div`
-h-[50vh] w-[90vw]
-lg:h-[800px] lg:w-[800px]
-lg:m-3
-flex flex-col
-justify-center items-center
-font-sans
-bg-white
-border-4
-border-black
-`;
-
 export const ContainerCard2 = tw.div`
   h-auto w-[40vw]
   backdrop-blur-[50px]
   bg-[#00000099]
   p-[34px]
 `;
-
-export const ContainerCard3 = tw.div`
-  h-auto w-[70vw] lg:w-[90%]
-  bg-[#00000099]
-  p-[28px]
-  `;
 
 export const IntroDiv = tw.div`
   w-full h-screen
