@@ -91,28 +91,19 @@ export const ChapterGenericDiv1 = tw.div`
     `;
 
 export const ChapterGenericDiv2 = tw.div`
-    relative
     flex
-    w-full h-[100vh]
-    lg:w-full lg:h-[100vh]
-    items-center
+    relative
     justify-center
+    w-full h-[600vh]
+    lg:w-full lg:h-[600vh]
     overflow-hidden
     px-[30px]
     lg:p-[34px]
-    bg-white
-  `;
-
-export const ContainerCard1 = tw.div`
-    h-[50vh]   w-full 
-    relative
-    flex
-    justify-center items-center
-    z-0
+    bg-transparent	
   `;
 
 export const ContainerCard3 = tw.div`
-    relative
+    absolute
     z-10
     h-auto w-[600px] lg:w-[500px]
     bg-[#00000099]
