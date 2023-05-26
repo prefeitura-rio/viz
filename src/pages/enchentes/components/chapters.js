@@ -140,19 +140,19 @@ export function QuadroUm(
 
   return (
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3>
-        <styles.TextCard3>
-          Com base em evidências científicas, uma série de ações específicas, de
-          baixo custo e focalizadas, foram estrategicamente pensadas para
-          contribuir para a redução dos fatores de risco mapeados e,
-          consequentemente, para a redução do crime e da sensação de insegurança
-          no local.
-        </styles.TextCard3>
-      </styles.ContainerCard3>
       <styles.ContainerCard1>
-        <video autoPlay loop muted className="w-full h-full ">
+        <video autoPlay loop muted className="absolute w-full h-full ">
           <source src={videoMapas} type="video/mp4" />
         </video>
+        <styles.ContainerCard3>
+          <styles.TextCard3>
+            Com base em evidências científicas, uma série de ações específicas,
+            de baixo custo e focalizadas, foram estrategicamente pensadas para
+            contribuir para a redução dos fatores de risco mapeados e,
+            consequentemente, para a redução do crime e da sensação de
+            insegurança no local.
+          </styles.TextCard3>
+        </styles.ContainerCard3>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv2>
   );

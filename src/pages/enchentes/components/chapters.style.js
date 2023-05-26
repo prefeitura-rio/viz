@@ -105,8 +105,8 @@ export const ChapterGenericDiv2 = tw.div`
 
 export const ContainerCard1 = tw.div`
     h-[50vh]   w-full 
-    flex 
-    absolute
+    relative
+    flex
     justify-center items-center
     z-0
   `;
@@ -114,7 +114,7 @@ export const ContainerCard1 = tw.div`
 export const ContainerCard3 = tw.div`
     relative
     z-10
-    h-auto w-[70vw] lg:w-[90%]
+    h-auto w-[600px] lg:w-[500px]
     bg-[#00000099]
     p-[28px]
   `;
