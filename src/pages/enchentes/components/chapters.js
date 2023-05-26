@@ -93,7 +93,7 @@ export function ContextoHistorico(
   return (
     <>
       <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-        <styles.ContainerCard id={"text_cep_dois"}>
+        <styles.ContainerCard>
           <styles.AuthorText className="lg:w-[460px]">
             ▌ Desenvolvido pela Equipe de Visualização de Dados do{" "}
             <a
@@ -138,7 +138,7 @@ export function QuadroUm(
 
   return (
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1 id={"text_cep_dois"}>
+      <styles.ContainerCard1>
         <styles.ContainerCard3>
           <styles.TextCard3>
             Com base em evidências científicas, uma série de ações específicas,
@@ -163,7 +163,7 @@ export function Impermeabilidade(
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard id={"text_cep_dois"}>
+      <styles.ContainerCard>
         <styles.TextCard>
           Impermeabilidade do solo e a maré alta
         </styles.TextCard>
@@ -196,7 +196,7 @@ export function Lixo(
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard id={"text_cep_dois"}>
+      <styles.ContainerCard>
         <styles.TextCard>Lixo</styles.TextCard>
         <styles.TextCard1>
           A falta de permeabilização do solo é um problema típico das grandes
@@ -233,7 +233,7 @@ export function Vandalismo(
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard id={"text_cep_dois"}>
+      <styles.ContainerCard>
         <styles.TextCard>
           Vandalismo e roubo de lixeiras e bueiros
         </styles.TextCard>
@@ -283,7 +283,7 @@ export function Clandestino(
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard id={"text_cep_dois"}>
+      <styles.ContainerCard>
         <styles.TextCard>
           Ligações clandestinas à rede de esgoto
         </styles.TextCard>
@@ -308,7 +308,7 @@ export function ContextoMundial(
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard id={"text_cep_dois"}>
+      <styles.ContainerCard>
         <styles.TextCard>Contexto Mundial x Aquecimento Global</styles.TextCard>
         <styles.TextCard1>
           A elevação da temperatura da Terra, causada pelo Aquecimento Global,
@@ -351,7 +351,7 @@ export function Prefeitura(
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard id={"text_cep_dois"}>
+      <styles.ContainerCard>
         <styles.TextCard>Ações da Prefeitura</styles.TextCard>
         <styles.TextCard1>
           Sabendo destes problemas, cabe a Prefeitura do Rio um papel
@@ -378,7 +378,7 @@ export function Rotina(
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard id={"text_cep_dois"}>
+      <styles.ContainerCard>
         <styles.TextCard>Rotina</styles.TextCard>
         <styles.TextCard1>
           Como já falamos anteriormente, o lixo descartado irregularmente pela
@@ -418,7 +418,7 @@ export function ObrasProjetos(
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard id={"text_cep_dois"}>
+      <styles.ContainerCard>
         <styles.TextCard>Obras e Projetos</styles.TextCard>
         <styles.TextCard1>
           Como já falamos anteriormente, o lixo descartado irregularmente pela
@@ -444,7 +444,7 @@ export function Cor(
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard id={"text_cep_dois"}>
+      <styles.ContainerCard>
         <styles.TextCard>E quando chove?</styles.TextCard>
         <styles.TextCard1>
           Como já falamos anteriormente, o lixo descartado irregularmente pela
@@ -468,7 +468,7 @@ export function Futuro(
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard id={"text_cep_dois"}>
+      <styles.ContainerCard>
         <styles.TextCard>
           Futuro: programas, obras e planejamento
         </styles.TextCard>
