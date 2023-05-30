@@ -17,7 +17,7 @@ import cep1 from "../images/cep1.png";
 import cep2 from "../images/cep2.png";
 import cep3 from "../images/cep3.gif";
 
-import videoMapas from "../videos/mapas.mp4";
+import video_capa from "../videos/capa.mp4";
 
 import { gsap } from "gsap";
 
@@ -41,16 +41,18 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
-      {" "}
       <styles.CapaAutor>
-        <img
-          src={logoed}
-          className="absolute mt-[20px] lg:mt-[40px] top-0 w-[100px] lg:w-[120px] h-auto lg:h-auto"
-        ></img>{" "}
-        <styles.Title>Por que o Rio de Janeiro alaga?</styles.Title>
-        <styles.Subtitle>
-          E como a prefeitura trabalha para que a chuva não castigue os cariocas
-        </styles.Subtitle>
+        <styles.Title>
+          Por que o Rio de Janeiro alaga?{" "}
+          <styles.Subtitle>
+            E como a prefeitura trabalha para que a chuva não castigue os
+            cariocas
+          </styles.Subtitle>
+        </styles.Title>
+
+        <video autoPlay muted className="w-full h-full" id="video_capa">
+          <source src={video_capa} type="video/mp4" />
+        </video>
       </styles.CapaAutor>
     </styles.CapaDiv>
   );

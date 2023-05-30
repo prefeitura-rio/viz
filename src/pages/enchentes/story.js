@@ -44,7 +44,7 @@ export default function Enchentes() {
       <img
         id={"quadro_video"}
         src={first_frame}
-        className="fixed -z-10 h-[50vh]  w-full lg:p-[34px] top-[25vh]"
+        className="fixed -z-10 h-[50vh]  w-full lg:p-[34px] top-[15vh]"
       ></img>
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.ContextoHistorico id={"contexto_historico"} />

@@ -25,12 +25,12 @@ export const CapaAutor = tw.div`
   lg:h-[800px] lg:w-[800px]
   m-3
   flex flex-col
+  relative
   justify-center items-center
   font-sans
 bg-white
   border-4
   border-black
-  relative
   `;
 
 export const Scroll = tw.div`
@@ -39,6 +39,9 @@ export const Scroll = tw.div`
   `;
 
 export const Title = tw.div`
+top-10
+h-[50vh] w-[90vw]
+absolute
 font-poppins font-bold 
 text-[32px]
 lg:text-[60px]
