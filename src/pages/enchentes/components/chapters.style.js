@@ -103,7 +103,7 @@ export const ChapterGenericDiv2 = tw.div`
     px-[30px]
     lg:p-[34px]
     bg-transparent	
-    top-[25vh]
+    top-[35vh]
   `;
 
 export const ContainerCard3 = tw.div`
