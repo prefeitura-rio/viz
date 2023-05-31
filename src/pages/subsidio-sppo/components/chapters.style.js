@@ -5,9 +5,9 @@ import tw from "tailwind-styled-components";
 export const CapaDiv = tw.div`
   h-screen w-full
   flex flex-col 
-  justify-between items-center 
+  justify-center items-center 
   selection:bg-yellow-600 selection:text-black
-  backdrop-blur-xl
+    backdrop-blur-[1000px]
   `;
 
 export const Title = tw.div`
@@ -15,23 +15,16 @@ export const Title = tw.div`
   text-2xl text-center text-[#ffffff]
   p-2
   leading-10
-  mt-[30%]
-  lg:text-4xl
-  lg:leading-10  
-  lg:mt-[15%]
-  lg:max-w-[800px]
+  lg:text-[40px]
+  lg:leading-[120%]
+  lg:max-w-[900px]
   `;
-
-// inline
-// px-3
-// decoration-clone
-// leading-snug
 
 export const AuthorText = tw.div`
   font-serif
   text-sm text-center text-[#ffffff]
-  lg:text-base
-  lg:mb-[2%]
+  lg:text-[18px]
+  lg:mb-[3%]
   lg:max-w-3xl
   `;
 
@@ -46,21 +39,21 @@ export const Interactive = tw.div`
 `;
 
 export const IntroDiv = tw.div`
-  w-full lg:h-[240vh] h-[320vh]
+  w-full lg:h-[100vh]
   bg-opacity-90 backdrop-blur-2xl
   bg-slate-50/60
   flex
   items-center
-  lg:items-start
+  lg:items-center
   justify-center
   selection:bg-yellow-600 selection:text-black
 `;
 
 export const IntroTitle = tw.div`
   font-black  font-serif
-  text-2xl text-left text-yellow-600
+  text-2xl text-left text-[#23211e]
   mb-6
-  lg:mr-[20vw]
+  lg:mr-[10vw]
   lg:text-3xl
   lg:max-w-3xl
   lg:mb-8
@@ -69,10 +62,13 @@ export const IntroTitle = tw.div`
 
 export const FimTitle = tw.div`
   font-black  font-serif
-  text-3xl text-left text-yellow-600 mr-[20vw]
+  text-2xl text-left text-[#23211e]
+  mt-6
+  lg:mr-[20vw]
+  lg:text-3xl
   lg:max-w-3xl
-  mb-5
-  mt-16
+  lg:mt-8
+  lg:mb-2
   selection:bg-yellow-600 selection:text-black
   `;
 
@@ -81,24 +77,28 @@ export const IntroText = tw.div`
   align-middle
   text-base text-justify text-[#57250a]
   leading-snug
-  opacity-100
-  p-10
-  lg:p-0
   lg:text-lg
-  lg:max-w-3xl
-  mt-[50%]
   selection:bg-yellow-600 selection:text-black
 `;
 
 export const TextCard = tw.div`
   font-serif  font-medium
   align-middle
-  text-base text-justify text-[#57250a]
+  text-sm text-justify text-[#23211e]
   leading-snug
   opacity-100
-  lg:text-lg
-  lg:max-w-3xl
+  lg:text-base
   mb-3
+  selection:bg-yellow-600 selection:text-black
+`;
+
+export const TextCard1 = tw.div`
+  font-serif  font-medium
+  align-middle
+  text-sm text-justify text-[#23211e]
+  leading-snug
+  opacity-100
+  lg:text-base
   selection:bg-yellow-600 selection:text-black
 `;
 
@@ -113,24 +113,103 @@ export const FimText = tw.div`
   selection:bg-yellow-600 selection:text-black
 `;
 
-export const TextOrange = tw.div`
+export const TextHighlight = tw.div`
   font-serif
-  bg-orange-700 
+  bg-[#23211e]  
   text-white
+  py-1
+  px-2
   inline 
 `;
 
+export const TextHighlightGreen = tw.div`
+  font-serif
+  bg-[#38761D]  
+  text-white
+  py-1
+  px-2
+  inline 
+`;
+
+export const TextHighlightYellow = tw.div`
+  font-serif
+  bg-[#BF9000]  
+  text-white
+  py-1
+  px-2
+  inline 
+`;
+
+export const TextHighlightRed = tw.div`
+  font-serif
+  bg-[#980000]  
+  text-white
+  py-1
+  px-2
+  inline 
+`;
+
+export const TextHighlightBlue = tw.div`
+  font-serif
+  bg-[#004A80]  
+  text-white
+  py-1
+  px-2
+  inline 
+`;
+
+export const TextBigNumber = tw.div`
+  font-serif
+  bg-[#23211e]
+  text-white
+  text-[60px]
+  py-1
+  px-2
+  inline 
+`;
+
+export const TextCardBig = tw.div`
+  font-black  font-serif
+  text-2xl text-left text-[#23211e]
+  lg:text-3xl
+  lg:max-w-4xl
+  lg:leading-[160%]
+  selection:bg-yellow-600 selection:text-black
+  `;
+
 export const ChapterGenericDiv = tw.div`
   flex
-  w-full h-[150vh] 
+  lg:min-h-[100vh]
+  w-full h-auto 
   items-center
+  -z-10
+  
+`;
+
+export const ChapterGenericDiv1 = tw.div`
+  flex
+  w-[100vw] h-auto 
+  bg-[#ffffff]
+  items-center
+  -z-10
+`;
+
+export const ChapterMapDiv = tw.div`
+  flex
+  flex-col
+  w-full h-[100vh] 
+  items-center
+  justify-center
+  text-base 
+  font-bold
+  m-auto
   -z-10
 `;
 
 export const ChapterGraficoDiv = tw.div`
   flex
   flex-col
-  w-full h-[150vh] 
+  w-full h-auto 
   items-center
   -z-10
 `;
@@ -149,24 +228,33 @@ export const ContainerCard = tw.div`
   lg:p-20  
   bg-opacity-90
   m-auto
-  w-[865px]
+  w-[760px]
   min-w-[250px]
   lg:leading-5
 `;
 
 export const ContainerCard1 = tw.div`
+  bg-[#ffffff]
+  rounded
+  p-10
+  lg:p-20  
   m-auto
-  w-[865px]
+  w-[750px]
   min-w-[250px]
+  lg:leading-5
 `;
 
 export const ContainerCard2 = tw.div`
   bg-[#ffffff]
   rounded
-  p-20  
+  lg:my-[100px]
+  p-10
+  lg:p-20  
+  bg-opacity-90
   m-auto
-  w-[865px]
+  w-[750px]
   min-w-[250px]
+  lg:leading-5
 `;
 
 export const ContainerCard3 = tw.div`
@@ -179,7 +267,7 @@ export const ContainerCard3 = tw.div`
 
 export const Grafico = tw.div`
   m-auto
-  w-[865px]
+  lg:my-[40px]
   min-w-[250px]
 `;
 
