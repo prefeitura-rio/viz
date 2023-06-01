@@ -13,8 +13,8 @@ export const CapaDiv = tw.div`
 export const Title = tw.div`
   font-serif font-bold  
   text-2xl text-center text-[#ffffff]
-  p-2
-  leading-10
+  p-6
+  leading-8
   lg:text-[40px]
   lg:leading-[120%]
   lg:max-w-[900px]
@@ -53,6 +53,7 @@ export const IntroTitle = tw.div`
   font-black  font-serif
   text-2xl text-left text-[#23211e]
   mb-6
+  leading-[120%]
   lg:mr-[10vw]
   lg:text-3xl
   lg:max-w-3xl
@@ -129,7 +130,7 @@ export const TextHighlightGreen = tw.div`
   text-white
   py-1
   px-2
-  inline 
+  inline-block 
   selection:bg-yellow-600 selection:text-black
 `;
 
@@ -139,7 +140,7 @@ export const TextHighlightYellow = tw.div`
   text-white
   py-1
   px-2
-  inline 
+  inline-block
   selection:bg-yellow-600 selection:text-black
 `;
 
@@ -149,7 +150,7 @@ export const TextHighlightRed = tw.div`
   text-white
   py-1
   px-2
-  inline 
+  inline-block
   selection:bg-yellow-600 selection:text-black
 `;
 
@@ -159,7 +160,7 @@ export const TextHighlightBlue = tw.div`
   text-white
   py-1
   px-2
-  inline 
+  inline-block
   selection:bg-yellow-600 selection:text-black
 `;
 
@@ -185,6 +186,7 @@ export const TextCardBig = tw.div`
 
 export const ChapterGenericDiv = tw.div`
   flex
+  min-h-[120vh]
   lg:min-h-[100vh]
   w-full h-auto 
   items-center
@@ -230,11 +232,13 @@ export const ChapterMap = tw.div`
 export const ContainerCard = tw.div`
   bg-[#ffffff]
   rounded
-  p-10
+  py-11
+  px-10
   lg:p-20  
   bg-opacity-90
   m-auto
-  w-[760px]
+  w-[90%]
+  lg:w-[760px]
   min-w-[250px]
   lg:leading-5
 `;
@@ -252,7 +256,8 @@ export const ContainerCard1 = tw.div`
 
 export const ContainerCard2 = tw.div`
   lg:my-[100px]
-  p-10
+  py-16
+  px-12
   lg:p-20  
   m-auto
   w-[750px]
@@ -272,6 +277,7 @@ export const Grafico = tw.div`
   m-auto
   lg:my-[40px]
   min-w-[250px]
+  my-[60px]
 `;
 
 export const Fundo = tw.div`

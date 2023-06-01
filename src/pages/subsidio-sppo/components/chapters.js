@@ -26,12 +26,12 @@ export function Capa(
     <styles.CapaDiv id={props.id} ref={props.ref}>
       <img
         src={logo2}
-        className="lg:absolute lg:top-[20px] h-14 mt-[7vh]  lg:h-14"
+        className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14"
       ></img>
       <styles.Title>
         Um ponto de virada na história do transporte municipal do Rio de Janeiro
       </styles.Title>
-      <styles.AuthorText className="p-2">
+      <styles.AuthorText className="px-6 py-0">
         Desenvolvido por{" "}
         <a
           className="font-bold decoration-1 underline-offset-1"
@@ -53,7 +53,7 @@ export function Capa(
       </styles.AuthorText>
       <img
         src={scroll}
-        className="lg:absolute lg:bottom-[25%] h-14 lg:h-14"
+        className="absolute bottom-[15%] lg:absolute lg:bottom-[25%] h-14 lg:h-14"
       ></img>
       {/* <styles.Interactive>
           Mapas interativos:{" "}
@@ -216,7 +216,7 @@ export function Historia1(
           Prefeitura para ter acesso às quantias ganhas pelos concessionários
           nas operações.
         </styles.TextCard>
-        <styles.IntroTitle className="lg:mt-[140px]">
+        <styles.IntroTitle className="mt-[120px] lg:mt-[140px]">
           Pandemia
         </styles.IntroTitle>
         <styles.TextCard>
@@ -276,7 +276,7 @@ export function Textomapaum(
         <styles.TextCardBig>
           <styles.TextHighlightGreen>24%</styles.TextHighlightGreen> dos
           serviços operando conforme o determinado.{" "}
-          <styles.TextCard1 className="lg:mt-[10px]">
+          <styles.TextCard1 className="mt-[10px] lg:mt-[10px]">
             Entre 80% e 100% da frota determinada.
           </styles.TextCard1>
         </styles.TextCardBig>
@@ -312,7 +312,7 @@ export function Textomapadois(
         <styles.TextCardBig>
           <styles.TextHighlightYellow>18%</styles.TextHighlightYellow> dos
           serviços com operação irregular.{" "}
-          <styles.TextCard1 className="lg:mt-[10px]">
+          <styles.TextCard1 className="mt-[10px] lg:mt-[10px]">
             Entre 20% e 80% da frota determinada.
           </styles.TextCard1>
         </styles.TextCardBig>
@@ -348,7 +348,7 @@ export function Textomapatres(
         <styles.TextCardBig>
           <styles.TextHighlightRed>58%</styles.TextHighlightRed> dos serviços
           inoperantes.{" "}
-          <styles.TextCard1 className="lg:mt-[10px]">
+          <styles.TextCard1 className="mt-[10px] lg:mt-[10px]">
             Abaixo de 20% da frota determinada.
           </styles.TextCard1>
         </styles.TextCardBig>
@@ -385,7 +385,7 @@ export function Virada(
           Assim, uma nova proposta de administração foi então pensada e
           aprovada.
         </styles.TextCard>
-        <styles.IntroTitle className="lg:mt-[140px]">
+        <styles.IntroTitle className="mt-[120px] lg:mt-[140px]">
           O fim da caixa preta
         </styles.IntroTitle>{" "}
         <styles.TextCard>
@@ -435,7 +435,10 @@ export function Virada(
           Este novo sistema permite o total controle da arrecadação com as
           passagens e mais transparência para o carioca.
         </styles.TextCard>
-        <img src={compensacao} className="h-auto w-auto lg:mt-[60px]"></img>
+        <img
+          src={compensacao}
+          className="h-auto w-auto mt-[60px] lg:mt-[60px]"
+        ></img>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv1>
   );
@@ -605,7 +608,9 @@ export function Fim(
         </styles.IntroTitle>
         <styles.TextCard>PENSAR TEXTO AQUI</styles.TextCard>
         <styles.TextCard>
-          <styles.FimTitle className="lg:mt-[200px]">Autores</styles.FimTitle>
+          <styles.FimTitle className="mt-[200px] lg:mt-[200px]">
+            Autores
+          </styles.FimTitle>
           Caio Jacintho <br />
           Diego Oliveira <br />
           Gabriel Gazola <br />
@@ -623,7 +628,7 @@ export function Fim(
           <br />
           <styles.FimTitle>Prefeito</styles.FimTitle>
           Eduardo Paes <br />
-          <img src={logo} className="h-16 mt-[12vh]  lg:h-16"></img>
+          <img src={logo} className="h-12 mt-[12vh]  lg:h-16"></img>
         </styles.TextCard>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv1>
