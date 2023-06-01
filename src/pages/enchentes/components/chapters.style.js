@@ -21,16 +21,44 @@ export const CapaDiv = tw(CapaDivSC)`
   `;
 
 export const CapaAutor = tw.div`
-  h-[50vh] w-[90vw]
-  lg:h-[800px] lg:w-[800px]
-  m-3
-  flex flex-col
-  relative
+  flex flex-col  
+  lg:h-auto lg:w-[800px]
   justify-center items-center
-  font-sans
+  `;
+
+export const Title = tw.div`  
+  font-geologica font-[700]
+  text-[32px]
+  text-center
+  leading-[120%]
+  mx-8
+  p-2
+  lg:text-[48px]
+  text-black
+  bg-white
+    `;
+
+export const Subtitle = tw.div`
+font-geologica font-[300]
+text-center
+text-[18px]
+mx-8
+lg:text-[22px]
+leading-[120%]
+p-2
+mt-[12px]
+text-black
 bg-white
+`;
+
+export const Video = tw.div`
+  flex flex-col  
+  h-auto w-[56w]
+  lg:h-[700px] lg:w-[700px]
+  justify-center items-center
   border-4
   border-black
+  
   `;
 
 export const Scroll = tw.div`
@@ -38,39 +66,11 @@ export const Scroll = tw.div`
   lg:justify-between lg:items-center
   `;
 
-export const Title = tw.div`
-top-10
-h-[50vh] w-[90vw]
-absolute
-font-poppins font-bold 
-text-[32px]
-lg:text-[60px]
-text-center
-lg:px-[100px]
-leading-[110%]
-lg:leading-[110%]
-text-black
-mt-[40px]
-  `;
-
-export const Subtitle = tw.div`
-font-poppins font-regular 
-text-[18px]
-lg:text-[28px]
-text-center
-px-[32px]
-lg:px-[140px]
-lg:leading-[120%]
-text-black
-mt-[20px]
-`;
-
 export const AuthorText = tw.div`
-  font-poppins font-regular
-  text-[16px] text-left text-black
+  font-geologica
+  text-[14px] text-left text-black
   leading-[150%]
   mb-[120px]
-
  `;
 
 export const ChapterGenericDiv = tw.div`
@@ -78,10 +78,10 @@ flex
 w-full h-auto
 items-center
 justify-center
-px-[30px]
+px-[48px]
 lg:p-[34px]
 bg-white
-  `;
+`;
 
 export const ChapterGenericDiv1 = tw.div`
   flex
@@ -91,27 +91,19 @@ export const ChapterGenericDiv1 = tw.div`
   p-[34px]
   lg:p-[34px]
   bg-white
-    `;
+  `;
 
 export const ChapterGenericDiv2 = tw.div`
     flex
     relative
     justify-center
-    w-full h-[600vh]
-    lg:w-full lg:h-[600vh]
+    w-auto h-[600vh]
+    lg:w-auto lg:h-[600vh]
     overflow-hidden
     px-[30px]
     lg:p-[34px]
     bg-transparent	
     top-[35vh]
-  `;
-
-export const ContainerCard3 = tw.div`
-    absolute
-    z-10
-    h-auto w-[600px] lg:w-[500px]
-    bg-[#00000099]
-    p-[28px]
   `;
 
 export const ChapterGenericDiv3 = tw.div`
@@ -124,7 +116,7 @@ bg-white
 export const ContainerCard = tw.div`
 h-auto w-[700px]
 mb-[60px]
-mt-[40px]
+mt-[100px]
 `;
 
 export const ContainerCard2 = tw.div`
@@ -133,6 +125,18 @@ export const ContainerCard2 = tw.div`
   bg-[#00000099]
   p-[34px]
 `;
+
+export const ContainerCard3 = tw.div`
+    absolute
+    z-10
+    h-auto w-[90%] lg:w-[600px]
+    bg-[#ffffff]
+    px-[48px]
+    py-[40px]
+    lg:px-[56px]
+    lg:py-[42px]
+    rounded-lg
+  `;
 
 export const IntroDiv = tw.div`
   w-full h-screen
@@ -144,7 +148,7 @@ export const IntroDiv = tw.div`
 
 export const TextCreditos = tw.div`
   text-black
-  font-poppins
+  font-geologica
   font-semibold
   text-[20px]
   mb-[2px]
@@ -152,33 +156,36 @@ export const TextCreditos = tw.div`
 
 export const TextCreditos1 = tw.div`
   text-black
-  font-poppins
+  font-geologica
   font-regular
   text-[18px]
 `;
 
 export const TextCreditos2 = tw.div`
   text-black
-  font-poppins
+  font-geologica
   font-black
-  text-[40px]
+  text-[32px]
+  lg:text-[40px]
   mb-[40px]
 `;
 
 export const TextCard = tw.div`
-  font-poppins font-bold 
-  text-[32px]
+  font-geologica font-bold 
+  w-[70%]
+  text-[24px]
+  lg:text-[40px]
   text-left
   leading-[120%]
   lg:leading-[120%]
   text-black
-  mb-[32px]
+  mb-[16px]
 `;
 // selection:bg-[#ef4444] selection:text-white
 
 export const TextCard1 = tw.div`
-font-poppins font-regular 
-text-[18px]
+font-libre font-[400] 
+text-[14px]
 text-left
 lg:leading-[150%]
 text-black
@@ -188,7 +195,7 @@ lg:mb-0
 `;
 
 export const TextCard2 = tw.div`
-font-poppins font-regular 
+font-geologica font-[400] 
 text-[18px]
 text-left
 lg:leading-[120%]
@@ -197,9 +204,9 @@ mt-[20px]
 `;
 
 export const TextCard3 = tw.div`
-font-poppins font-regular 
-text-[16px]
+font-libre font-[400] 
+text-[14px]
 text-left
 lg:leading-[150%]
-text-white
+text-black
 `;

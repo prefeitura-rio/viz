@@ -23,7 +23,7 @@ export default function Enchentes() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: true,
+      markers: false,
       scrub: true,
       toggleActions: "play reverse play reverse",
     });
@@ -41,24 +41,17 @@ export default function Enchentes() {
 
   return (
     <>
-      <img
-        id={"quadro_video"}
-        src={first_frame}
-        className="fixed -z-10 h-[50vh]  w-full lg:p-[34px] top-[15vh]"
-      ></img>
+      <div className="flex flex-col items-center justify-center">
+        <img
+          id={"quadro_video"}
+          src={first_frame}
+          className="fixed -z-10 lg:h-auto lg:w-[700px] border-4 border-black top-[14vh]"
+        ></img>
+      </div>
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.ContextoHistorico id={"contexto_historico"} />
       <chapterDiv.QuadroUm id={"quadro_um"} />
-      <chapterDiv.Impermeabilidade id={"impermeabilidade"} />
-      <chapterDiv.Lixo id={"lixo"} />
-      <chapterDiv.Vandalismo id={"vandalismo"} />
-      <chapterDiv.Clandestino id={"clandestino"} />
-      <chapterDiv.ContextoMundial id={"contexto_mundial"} />
-      <chapterDiv.Prefeitura id={"prefeitura"} />
-      <chapterDiv.Rotina id={"rotina"} />
-      <chapterDiv.ObrasProjetos id={"obras_projetos"} />
-      <chapterDiv.Cor id={"cor"} />
-      <chapterDiv.Futuro id={"futuro"} />
+      <chapterDiv.ParteDois id={"partedois"} />
       <chapterDiv.Creditos id={"creditos"} />
     </>
   );
