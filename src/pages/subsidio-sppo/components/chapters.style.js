@@ -120,6 +120,7 @@ export const TextHighlight = tw.div`
   py-1
   px-2
   inline 
+  selection:bg-yellow-600 selection:text-black
 `;
 
 export const TextHighlightGreen = tw.div`
@@ -129,6 +130,7 @@ export const TextHighlightGreen = tw.div`
   py-1
   px-2
   inline 
+  selection:bg-yellow-600 selection:text-black
 `;
 
 export const TextHighlightYellow = tw.div`
@@ -138,6 +140,7 @@ export const TextHighlightYellow = tw.div`
   py-1
   px-2
   inline 
+  selection:bg-yellow-600 selection:text-black
 `;
 
 export const TextHighlightRed = tw.div`
@@ -147,6 +150,7 @@ export const TextHighlightRed = tw.div`
   py-1
   px-2
   inline 
+  selection:bg-yellow-600 selection:text-black
 `;
 
 export const TextHighlightBlue = tw.div`
@@ -156,6 +160,7 @@ export const TextHighlightBlue = tw.div`
   py-1
   px-2
   inline 
+  selection:bg-yellow-600 selection:text-black
 `;
 
 export const TextBigNumber = tw.div`
@@ -166,6 +171,7 @@ export const TextBigNumber = tw.div`
   py-1
   px-2
   inline 
+  selection:bg-yellow-600 selection:text-black
 `;
 
 export const TextCardBig = tw.div`
@@ -188,7 +194,7 @@ export const ChapterGenericDiv = tw.div`
 
 export const ChapterGenericDiv1 = tw.div`
   flex
-  w-[100vw] h-auto 
+  w-full h-auto 
   bg-[#ffffff]
   items-center
   -z-10
@@ -245,12 +251,9 @@ export const ContainerCard1 = tw.div`
 `;
 
 export const ContainerCard2 = tw.div`
-  bg-[#ffffff]
-  rounded
   lg:my-[100px]
   p-10
   lg:p-20  
-  bg-opacity-90
   m-auto
   w-[750px]
   min-w-[250px]

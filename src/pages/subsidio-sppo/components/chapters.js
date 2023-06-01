@@ -91,31 +91,27 @@ export function Intro(
       <styles.ContainerCard>
         <styles.IntroTitle>Introdução</styles.IntroTitle>
         <styles.TextCard>
-          Desde o dia 1º de junho deste ano, quando o acordo entre Prefeitura,
+          Desde o dia 1º de junho de 2022, quando o acordo entre Prefeitura,
           Ministério Público e empresas de ônibus entrou em vigor, os cariocas
-          viram a volta de XX linhas de ônibus nas ruas da capital fluminense,
-          como mostramos no mapa abaixo.
+          puderam ver, assim como no mapa acima,{" "}
+          <styles.TextHighlight>
+            a volta de 71 linhas de ônibus às ruas da capital fluminense.
+          </styles.TextHighlight>
           <br />
           <br />
-          Isso só foi possível graças a um acordo judicial, estabelecido entre a
-          Prefeitura, consórcios de ônibus e o Ministério Público. Graças a ele,
-          a cidade terá a regularização das linhas operantes, a retomada das
-          inoperantes e a implementação dos serviços noturnos.
+          Além disso, esse acordo concedeu à Prefeitura o pleno domínio de toda
+          a atividade de transporte municipal de ônibus na cidade, permitindo o
+          monitoramento completo dos dados, desde a catraca até a garagem.
           <br />
           <br />
-          Isto, sem o aumento da passagem de R$ 4,05, que será subsidiada pelo
-          município com base no serviço e quilômetro rodado.
-          <br />
-          <br />
-          Os cariocas sabem bem quais são os problemas cotidianos enfrentados no
-          transporte público da cidade do Rio de Janeiro. E é por isso que a
-          Prefeitura está trabalhando para melhorar a mobilidade na nossa cidade
+          A gente sabe bem dos problemas cotidianos enfrentados no transporte
+          público da cidade do Rio de Janeiro. E é por isso que a Prefeitura
+          está trabalhando para melhorar a mobilidade na nossa cidade
           maravilhosa.
           <br />
           <br />
-          Nesta reportagem especial, feita pelo Escritório de Dados, vamos falar
-          sobre como a Prefeitura está trabalhando para melhorar ainda mais a
-          locomoção do carioca.
+          Nesta reportagem especial, feita pelo Escritório de Dados,
+          explicaremos como estamos fazendo isso.
         </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -169,40 +165,6 @@ export function Textomapalinhas(
   );
 }
 
-export function Mapapontos(
-  props = {
-    id: "",
-    ref: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterMapDiv id={props.id} ref={props.ref}>
-      Mapa com os pontos de ônibus que foram reativados na cidade
-    </styles.ChapterMapDiv>
-  );
-}
-
-export function Textomapapontos(
-  props = {
-    id: "",
-    ref: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
-      <styles.ContainerCard>
-        <styles.TextCardBig>
-          <styles.TextHighlight>
-            636 Pontos de ônibus que voltaram a ter atendimento
-          </styles.TextHighlight>{" "}
-        </styles.TextCardBig>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
 export function Historia1(
   props = {
     id: "",
@@ -236,11 +198,11 @@ export function Historia1(
           <br />
           <br />
           Após anos em vigor, a concessão, entretanto, apresentou problemas: a
-          má gestão dos concessionários com o serviço oferecido e uma{" "}
-          <styles.TextHighlight>
+          má gestão dos concessionários com o serviço oferecido e uma grande
+          <styles.TextHighlight className="inline-block">
             crise reputacional do sistema,
-          </styles.TextHighlight>{" "}
-          grande envolvida em diversos escândalos.
+          </styles.TextHighlight>
+          envolvida em diversos escândalos.
           <br />
           <br />
           Além disso, havia a falta de transparência da arrecadação do sistema
@@ -276,9 +238,11 @@ export function Historia1(
         </styles.Grafico>
         <styles.TextCard>
           Como resultado, víamos veículos lotados e a cobertura do transporte
-          público diminuindo na cidade, com 58% dos serviços inoperantes,
-          funcionando apenas com apenas 20% da frota determinada. Outros 18% das
-          linhas funcionavam irregularmente, com 20% a 80% da frota.
+          público diminuindo na cidade, com{" "}
+          <styles.TextHighlight>
+            58% dos serviços inoperantes, funcionando com apenas 20% da frota
+            determinada.
+          </styles.TextHighlight>
         </styles.TextCard>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv1>
@@ -403,18 +367,17 @@ export function Virada(
   return (
     <styles.ChapterGenericDiv1 id={props.id} ref={props.ref}>
       <styles.ContainerCard2>
-        <styles.IntroTitle>
-          O ponto de virada e o fim da caixa preta
-        </styles.IntroTitle>
+        <styles.IntroTitle>O ponto de virada</styles.IntroTitle>
         <styles.TextCard>
-          Com uma situação alarmante e o descrédito do transporte por ônibus na
-          cidade, a Prefeitura decidiu reformular este sistema. Entretanto, para
-          que isso fosse implementado, foi preciso muito diálogo.
+          Com uma situação alarmante, o descrédito do transporte por ônibus na
+          cidade e a queda no número de passageiros, a Prefeitura decidiu
+          reformular este sistema. Entretanto, para que isso fosse implementado,
+          foi preciso muito diálogo.
           <br />
           <br />
           Foi exigido um grande esforço de negociação entre as diversas partes,
           com muita transparência. Afinal de contas, não bastava um entendimento
-          entre prefeitura e empresas de ônibus, Era preciso também o
+          entre prefeitura e empresas de ônibus. Era preciso também o
           envolvimento do Ministério Público e do judiciário, chancelando e
           acompanhando qualquer decisão tomada.
           <br />
@@ -423,84 +386,54 @@ export function Virada(
           aprovada.
         </styles.TextCard>
         <styles.IntroTitle className="lg:mt-[140px]">
-          Passagem
-        </styles.IntroTitle>
+          O fim da caixa preta
+        </styles.IntroTitle>{" "}
         <styles.TextCard>
-          Além disso, veículos que já estavam depredados ou sem a devida
-          conservação ficaram largados. A alta do dólar durante a crise
-          sanitária que assolou o mundo explica essa equação: como as peças e
-          ferramentas são feitas fora do país, o seu valor subiu
-          substancialmente nos últimos anos e consertar ou comprar novos
-          veículos ficou ainda mais caro.
-        </styles.TextCard>
-        <styles.Grafico>
-          <iframe
-            class="w-full aspect-video"
-            title="Preço médio do dólar"
-            scrolling="no"
-            frameborder="0"
-            id="datawrapper-chart-bv5y3"
-            aria-label="Gráfico de coluna"
-            src="https://datawrapper.dwcdn.net/bv5y3/2/"
-          ></iframe>
-        </styles.Grafico>
-        <styles.TextCard>
-          Soma-se a isso outro problema, conhecido pelos brasileiros: a alta dos
-          combustíveis no país. Para efeitos de comparação, o valor do diesel
-          subiu de R$3,75/L em 2019 para R$6,91/L em 2022.
-        </styles.TextCard>
-        <styles.Grafico>
-          <iframe
-            class="w-full aspect-video"
-            title="Preço médio do diesel"
-            scrolling="no"
-            frameborder="0"
-            id="datawrapper-chart-8l6Uo"
-            aria-label="Gráfico de coluna"
-            src="https://datawrapper.dwcdn.net/8l6Uo/2/"
-          ></iframe>
-        </styles.Grafico>
-        <styles.TextCard>
-          Ou seja, com um número menor de passageiros e o aumento de peças e
-          diesel, o custo para operar o sistema aumentou enquanto a receita
-          diminuiu.
+          Com o novo acordo judicial, os consórcios de ônibus abriram mão da
+          administração do BRT e do sistema de bilhetagem, além de serem
+          obrigados a fornecer todas as informações sobre a arrecadação.
           <br />
           <br />
-          A passagem continua a R$4,05 e a Prefeitura passa a pagar a diferença
-          do valor real da tarifa, impedindo que a população pague mais. Isso se
-          dará com a implantação de um sistema em que a prefeitura pagará às
-          concessionárias por km rodado em cada linha.
+          Assim, a Prefeitura do Rio homologou a concessão da bilhetagem digital
+          do transporte público municipal com o objetivo de implementar um novo
+          modelo de bilhetagem eletrônica no transporte público até junho de
+          2024.
           <br />
           <br />
-          Na prática, a tarifa que o cidadão paga na hora de embarcar no ônibus
-          se mantém. O que muda é a remuneração adicional por quilômetro rodado
-          que será paga pela Prefeitura desde que haja a correta prestação do
-          serviço.
+          O antigo sistema Riocard será substituído pelo Jaé, em um contrato de
+          duração de 12 anos, que pode ser prorrogado por mais 12 anos.
           <br />
           <br />
-          Tudo será controlado por meio do monitoramento em tempo real dos GPS
+          A Jaé será responsável por receber o valor das passagens, ficando com
+          4% do montante arrecadado e repassando o restante para a gestão
+          municipal.
+          <br />
+          <br />
+          Já os repasses para as empresas de ônibus serão feitas pela Prefeitura
+          considerando a quantidade de linhas, o número de passageiros e os
+          quilômetros percorridos.
+          <br />
+          <br />
+          Desta forma, a passagem no atual valor de R$ 4,30 para o cidadão
+          continuará a ser subsidiada pela Prefeitura, que paga a diferença do
+          valor real da tarifa para as empresas, de acordo com os km rodado em
+          cada linha de ônibus.
+          <br />
+          <br />
+          Tudo é controlado por meio do monitoramento em tempo real dos GPS
           instalados na frota de ônibus cariocas. Os recursos serão somente
           repassados para as empresas que estiverem com GPS funcionando
           corretamente associados às linhas que estiverem operando.
           <br />
           <br />
           Em caso de não cumprimento do acordo, ou seja, caso o empresário não
-          volte com as linhas ou não cumpra com a quilometragem requisitada pela
-          Prefeitura, nenhum valor adicional da tarifa de R$ 4,05 será repassado
-          e sua concessão será cancelada.
-        </styles.TextCard>
-        <styles.IntroTitle className="lg:mt-[140px]">
-          O fim da caixa preta
-        </styles.IntroTitle>
-        <styles.TextCard>
-          Agora, com o novo acordo judicial, os consórcios renunciam a
-          administração do BRT e da bilhetagem, além de serem obrigadas a enviar
-          todas as informações de arrecadação.
+          cumpra com a quilometragem requisitada pela Prefeitura, nenhum valor
+          adicional da tarifa de R$ 4,30 será repassado e sua concessão poderá
+          ser cancelada.
           <br />
-          <br />O sistema de bilhetagem será feito por meio de concessão
-          pública. Agora, todo o dinheiro arrecadado irá para o Fundo
-          Fiduciário, onde a Prefeitura e a sociedade conseguirão ter um maior
-          controle das finanças da operação.
+          <br />
+          Este novo sistema permite o total controle da arrecadação com as
+          passagens e mais transparência para o carioca.
         </styles.TextCard>
         <img src={compensacao} className="h-auto w-auto lg:mt-[60px]"></img>
       </styles.ContainerCard2>
@@ -520,16 +453,17 @@ export function Foco(
       <styles.ContainerCard>
         <styles.IntroTitle>Foco onde mais precisa</styles.IntroTitle>
         <styles.TextCard>
-          O restabelecimento das linhas canceladas também está previsto no
-          acordo. A prioridade é que elas voltem a circular justamente nas áreas
-          mais necessitadas.
+          Após este período de um ano, a Prefeitura conseguiu restabelecer 71
+          linhas de ônibus que estavam inoperantes desde o período da gestão
+          anterior.
           <br />
           <br />
-          Até o momento, XX linhas já retornaram, a maioria delas na região XX.
+          Ao todo, 21 linhas retornaram as atividades na Zona Oeste, 16 na Zona
+          Norte e 15 na Barra, Jacarepaguá e Zona Sul.
           <br />
-          <br />O bairro de Santa Cruz, por exemplo, é um dos maiores
-          beneficiados. Nas imagens a seguir podemos observar como estava a
-          situação do bairro
+          <br />
+          Além disso, 636 pontos de ônibus também voltaram a ser utilizados em
+          toda a cidade.
         </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -567,6 +501,40 @@ export function Depois(
   );
 }
 
+export function Mapapontos(
+  props = {
+    id: "",
+    ref: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterMapDiv id={props.id} ref={props.ref}>
+      Mapa com os pontos de ônibus que foram reativados na cidade
+    </styles.ChapterMapDiv>
+  );
+}
+
+export function Textomapapontos(
+  props = {
+    id: "",
+    ref: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+      <styles.ContainerCard>
+        <styles.TextCardBig>
+          <styles.TextHighlight>
+            636 Pontos de ônibus que voltaram a ter atendimento
+          </styles.TextHighlight>{" "}
+        </styles.TextCardBig>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
 export function Fim(
   props = {
     id: "",
@@ -581,7 +549,14 @@ export function Fim(
           Melhoria na saúde, na educação e no trabalho
         </styles.IntroTitle>
         <styles.TextCard>
-          Texto que fale sobre os gráficos que irão aparecer …
+          Com a volta das linhas de ônibus, o carioca sentiu também a volta da
+          facilidade de acesso a equipamentos de saúde, educação e a
+          oportunidades de emprego.
+          <br />
+          <br />
+          Em 90 minutos, o acesso aos equipamentos de saúde aumentou em 55% da
+          população da cidade até final de julho. As regiões de Santa Cruz,
+          Guaratiba e Campo Grande foram as mais beneficiadas nesse contexto.
         </styles.TextCard>
         <styles.Grafico>
           <iframe
@@ -594,6 +569,10 @@ export function Fim(
             src="https://datawrapper.dwcdn.net/bv5y3/2/"
           ></iframe>
         </styles.Grafico>
+        <styles.TextCard>
+          Já o acesso à educação melhorou para 64% da população da cidade, com
+          destaque para as mesmas regiões.
+        </styles.TextCard>
         <styles.Grafico>
           <iframe
             class="w-full aspect-video"
@@ -605,6 +584,11 @@ export function Fim(
             src="https://datawrapper.dwcdn.net/bv5y3/2/"
           ></iframe>
         </styles.Grafico>
+        <styles.TextCard>
+          As oportunidades de emprego ficaram mais fáceis de serem acessadas
+          para 57% da população. Para os moradores de Santa Cruz, Ilha do
+          Governador e Campo Grande o acesso ficou ainda melhor.
+        </styles.TextCard>
         <styles.Grafico>
           <iframe
             class="w-full aspect-video"
@@ -619,16 +603,7 @@ export function Fim(
         <styles.IntroTitle className="lg:mt-[140px]">
           Comprometimento da Prefeitura para melhoria da vida do carioca
         </styles.IntroTitle>
-        <styles.TextCard>
-          O contrato de concessão atual teve seu prazo reduzido em 2 anos e
-          apenas a Prefeitura tem a prerrogativa de rever o acordo em caso de
-          descumprimento por parte dos operadores, garantindo o comprometimento
-          desta nova gestão do transporte na cidade.
-          <br />
-          <br />O plano devidamente implementado, permitirá um transporte com
-          qualidade e transparência para a população carioca. Link: Link para
-          acessar o site com o antes e o depois do acordo
-        </styles.TextCard>
+        <styles.TextCard>PENSAR TEXTO AQUI</styles.TextCard>
         <styles.TextCard>
           <styles.FimTitle className="lg:mt-[200px]">Autores</styles.FimTitle>
           Caio Jacintho <br />
@@ -757,6 +732,30 @@ export function Fim(
 //     </styles.ChapterGraficoDiv>
 //   );
 // }
+
+// <styles.Grafico>
+// <iframe
+//   class="w-full aspect-video"
+//   title="Preço médio do dólar"
+//   scrolling="no"
+//   frameborder="0"
+//   id="datawrapper-chart-bv5y3"
+//   aria-label="Gráfico de coluna"
+//   src="https://datawrapper.dwcdn.net/bv5y3/2/"
+// ></iframe>
+// </styles.Grafico>
+
+// <styles.Grafico>
+// <iframe
+//   class="w-full aspect-video"
+//   title="Preço médio do diesel"
+//   scrolling="no"
+//   frameborder="0"
+//   id="datawrapper-chart-8l6Uo"
+//   aria-label="Gráfico de coluna"
+//   src="https://datawrapper.dwcdn.net/8l6Uo/2/"
+// ></iframe>
+// </styles.Grafico>
 
 const setDefaultProps = (providedProps) => {
   const defaultProps = {

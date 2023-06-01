@@ -55,14 +55,7 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
-      case "mapapontos":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
-      case "textomapapontos":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
+
       case "historia-1":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
@@ -98,6 +91,14 @@ export default function SubsidioSPPO() {
       case "depois":
         setPosition(chapterMap.Depois().location);
         setLayers(chapterMap.Depois().layers);
+        break;
+      case "mapapontos":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
+        break;
+      case "textomapapontos":
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
         break;
       case "fim":
         setPosition(chapterMap.Depois().location);
@@ -157,20 +158,6 @@ export default function SubsidioSPPO() {
       trigger: "#textomapalinhas",
       onToggle: () => {
         setChapterNumberMap("textomapalinhas");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#mapapontos",
-      onToggle: () => {
-        setChapterNumberMap("mapapontos");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#textomapapontos",
-      onToggle: () => {
-        setChapterNumberMap("textomapapontos");
       },
     });
 
@@ -252,6 +239,20 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
+      trigger: "#mapapontos",
+      onToggle: () => {
+        setChapterNumberMap("mapapontos");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#textomapapontos",
+      onToggle: () => {
+        setChapterNumberMap("textomapapontos");
+      },
+    });
+
+    ScrollTrigger.create({
       trigger: "#fim",
       onToggle: () => {
         setChapterNumberMap("fim");
@@ -284,8 +285,6 @@ export default function SubsidioSPPO() {
       <chapterDiv.Intro id={"intro"} />
       <chapterDiv.Mapalinhas id={"mapalinhas"} />
       <chapterDiv.Textomapalinhas id={"textomapalinhas"} />
-      <chapterDiv.Mapapontos id={"mapapontos"} />
-      <chapterDiv.Textomapapontos id={"textomapapontos"} />
       <chapterDiv.Historia1 id={"historia-1"} />
       <chapterDiv.Mapaum id={"mapaum"} />
       <chapterDiv.Textomapaum id={"textomapaum"} />
@@ -297,6 +296,8 @@ export default function SubsidioSPPO() {
       <chapterDiv.Foco id={"foco"} />
       <chapterDiv.Antes id={"antes"} />
       <chapterDiv.Depois id={"depois"} />
+      <chapterDiv.Mapapontos id={"mapapontos"} />
+      <chapterDiv.Textomapapontos id={"textomapapontos"} />
       <chapterDiv.Fim id={"fim"} />
     </>
   );
