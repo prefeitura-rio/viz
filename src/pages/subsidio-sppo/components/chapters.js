@@ -227,10 +227,10 @@ export function Historia1(
         </styles.TextCard>
         <styles.Grafico>
           <iframe
-            class="w-full aspect-video"
+            className="w-full aspect-video"
             title="Passageiros transportados"
             scrolling="no"
-            frameborder="0"
+            frameBorder="0"
             id="datawrapper-chart-hoRNU"
             aria-label="Gráfico de coluna"
             src="https://datawrapper.dwcdn.net/hoRNU/5/"
@@ -563,10 +563,10 @@ export function Fim(
         </styles.TextCard>
         <styles.Grafico>
           <iframe
-            class="w-full aspect-video"
+            className="w-full aspect-video"
             title="Preço médio do dólar"
             scrolling="no"
-            frameborder="0"
+            frameBorder="0"
             id="datawrapper-chart-bv5y3"
             aria-label="Gráfico de coluna"
             src="https://datawrapper.dwcdn.net/bv5y3/2/"
@@ -578,10 +578,10 @@ export function Fim(
         </styles.TextCard>
         <styles.Grafico>
           <iframe
-            class="w-full aspect-video"
+            className="w-full aspect-video"
             title="Preço médio do dólar"
             scrolling="no"
-            frameborder="0"
+            frameBorder="0"
             id="datawrapper-chart-bv5y3"
             aria-label="Gráfico de coluna"
             src="https://datawrapper.dwcdn.net/bv5y3/2/"
@@ -594,10 +594,10 @@ export function Fim(
         </styles.TextCard>
         <styles.Grafico>
           <iframe
-            class="w-full aspect-video"
+            className="w-full aspect-video"
             title="Preço médio do dólar"
             scrolling="no"
-            frameborder="0"
+            frameBorder="0"
             id="datawrapper-chart-bv5y3"
             aria-label="Gráfico de coluna"
             src="https://datawrapper.dwcdn.net/bv5y3/2/"
@@ -648,10 +648,10 @@ export function Fim(
 //       <styles.Fundo id={"pin-dolar"}>
 //         <styles.Grafico>
 //           <iframe
-//             class="w-full aspect-video"
+//             className="w-full aspect-video"
 //             title="Preço médio do dólar"
 //             scrolling="no"
-//             frameborder="0"
+//             frameBorder="0"
 //             id="datawrapper-chart-bv5y3"
 //             aria-label="Gráfico de coluna"
 //             src="https://datawrapper.dwcdn.net/bv5y3/2/"
@@ -683,10 +683,10 @@ export function Fim(
 //       <styles.Fundo id={"pin-diesel"}>
 //         <styles.Grafico>
 //           <iframe
-//             class="w-full aspect-video"
+//             className="w-full aspect-video"
 //             title="Preço médio do diesel"
 //             scrolling="no"
-//             frameborder="0"
+//             frameBorder="0"
 //             id="datawrapper-chart-8l6Uo"
 //             aria-label="Gráfico de coluna"
 //             src="https://datawrapper.dwcdn.net/8l6Uo/2/"
@@ -717,10 +717,10 @@ export function Fim(
 //       <styles.Fundo id={"pin-passageiros"}>
 //         <styles.Grafico>
 //           <iframe
-//             class="w-full aspect-video"
+//             className="w-full aspect-video"
 //             title="Passageiros transportados"
 //             scrolling="no"
-//             frameborder="0"
+//             frameBorder="0"
 //             id="datawrapper-chart-hoRNU"
 //             aria-label="Gráfico de coluna"
 //             src="https://datawrapper.dwcdn.net/hoRNU/5/"
@@ -740,10 +740,10 @@ export function Fim(
 
 // <styles.Grafico>
 // <iframe
-//   class="w-full aspect-video"
+//   className="w-full aspect-video"
 //   title="Preço médio do dólar"
 //   scrolling="no"
-//   frameborder="0"
+//   frameBorder="0"
 //   id="datawrapper-chart-bv5y3"
 //   aria-label="Gráfico de coluna"
 //   src="https://datawrapper.dwcdn.net/bv5y3/2/"
@@ -752,10 +752,10 @@ export function Fim(
 
 // <styles.Grafico>
 // <iframe
-//   class="w-full aspect-video"
+//   className="w-full aspect-video"
 //   title="Preço médio do diesel"
 //   scrolling="no"
-//   frameborder="0"
+//   frameBorder="0"
 //   id="datawrapper-chart-8l6Uo"
 //   aria-label="Gráfico de coluna"
 //   src="https://datawrapper.dwcdn.net/8l6Uo/2/"
