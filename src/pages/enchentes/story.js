@@ -45,7 +45,7 @@ export default function Enchentes() {
         <img
           id={"quadro_video"}
           src={first_frame}
-          className="fixed -z-10 lg:h-auto lg:w-[700px] border-4 border-black top-[14vh]"
+          className="fixed -z-10 lg:h-auto lg:w-[700px]  top-[14vh]"
         ></img>
       </div>
       <chapterDiv.Capa id={"capa"} />

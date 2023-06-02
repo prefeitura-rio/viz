@@ -43,10 +43,10 @@ export function Capa(
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       <styles.CapaAutor>
-        <img
+        {/* <img
           src={logo}
           className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14"
-        ></img>
+        ></img> */}
         <styles.Title>Por que o Rio de Janeiro alaga? </styles.Title>
         <styles.Subtitle>
           E como a prefeitura trabalha para que a chuva não castigue os cariocas
@@ -101,19 +101,24 @@ export function ContextoHistorico(
               <source src={video_capa} type="video/mp4" />
             </video>
           </styles.Video>
-          <div className="mt-[30px] h-[3px] w-[20px] bg-black"></div>
-          <styles.AuthorText className="mt-[8px] lg:w-[420px]">
-            Desenvolvido pela Equipe de Visualização de Dados do{" "}
-            <a
-              className="font-bold underline"
-              href="https://www.dados.rio/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Escritório de Dados
-            </a>{" "}
-            da Prefeitura da Cidade do Rio de Janeiro
-          </styles.AuthorText>{" "}
+          <div className="flex justify-between">
+            <div>
+              <div className="mt-[30px] h-[3px] w-[20px] bg-black"></div>
+              <styles.AuthorText className="mt-[8px] lg:w-[420px]">
+                Desenvolvido pela Equipe de Visualização de Dados do{" "}
+                <a
+                  className="font-bold underline"
+                  href="https://www.dados.rio/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Escritório de Dados
+                </a>{" "}
+                da Prefeitura da Cidade do Rio de Janeiro
+              </styles.AuthorText>{" "}
+            </div>
+            <img src={logoed} className="mt-[30px] h-11 lg:h-12"></img>
+          </div>
           <div className="h-[10px] w-[50px] bg-black mb-[10px]"></div>
           <styles.TextCard>Introdução</styles.TextCard>
           <styles.TextCard1>

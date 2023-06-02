@@ -31,7 +31,6 @@ export const Title = tw.div`
   text-[32px]
   text-center
   leading-[120%]
-  mx-8
   p-2
   lg:text-[48px]
   text-black
@@ -42,7 +41,6 @@ export const Subtitle = tw.div`
 font-geologica font-[300]
 text-center
 text-[18px]
-mx-8
 lg:text-[22px]
 leading-[120%]
 p-2

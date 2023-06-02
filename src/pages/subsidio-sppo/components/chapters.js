@@ -93,10 +93,17 @@ export function Intro(
         <styles.TextCard>
           Desde o dia 1º de junho de 2022, quando o acordo entre Prefeitura,
           Ministério Público e empresas de ônibus entrou em vigor, os cariocas
-          puderam ver, assim como no mapa acima,{" "}
-          <styles.TextHighlight>
-            a volta de 71 linhas de ônibus às ruas da capital fluminense.
-          </styles.TextHighlight>
+          puderam ver, assim como no mapa acima (
+          <a
+            className="font-bold decoration-1 underline-offset-1"
+            href="/#/especial-sppo/interactive"
+            target="_blank"
+            rel="noreferrer"
+          >
+            clique aqui
+          </a>{" "}
+          para ver melhor este mapa interativo), a volta de 71 linhas de ônibus
+          às ruas da capital fluminense.
           <br />
           <br />
           Além disso, esse acordo concedeu à Prefeitura o pleno domínio de toda
@@ -112,6 +119,21 @@ export function Intro(
           <br />
           Nesta reportagem especial, feita pelo Escritório de Dados,
           explicaremos como estamos fazendo isso.
+          <br />
+          <br />
+          Para saber mais sobre a importância do transporte público da cidade,
+          <a
+            className="font-bold decoration-1 underline-offset-1"
+            href="https://mapa-subsidio.dados.rio/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            navegue neste mapa interativo
+          </a>
+          , que mostrará até qual distância é possível chegar em até duas horas,
+          partindo de cada bairro do Rio de Janeiro, e utilizando o transporte
+          público da cidade (ônibus, BRT, metrô, trem e van).
         </styles.TextCard>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -126,9 +148,7 @@ export function Mapalinhas(
 ) {
   props = setDefaultProps(props);
   return (
-    <styles.ChapterMapDiv id={props.id} ref={props.ref}>
-      Mapa com as linhas que voltaram por zona da cidade
-    </styles.ChapterMapDiv>
+    <styles.ChapterMapDiv id={props.id} ref={props.ref}></styles.ChapterMapDiv>
   );
 }
 
@@ -512,9 +532,7 @@ export function Mapapontos(
 ) {
   props = setDefaultProps(props);
   return (
-    <styles.ChapterMapDiv id={props.id} ref={props.ref}>
-      Mapa com os pontos de ônibus que foram reativados na cidade
-    </styles.ChapterMapDiv>
+    <styles.ChapterMapDiv id={props.id} ref={props.ref}></styles.ChapterMapDiv>
   );
 }
 
@@ -648,7 +666,7 @@ export function Fim(
 //       <styles.Fundo id={"pin-dolar"}>
 //         <styles.Grafico>
 //           <iframe
-//             className="w-full aspect-video"
+//             class="w-full aspect-video"
 //             title="Preço médio do dólar"
 //             scrolling="no"
 //             frameBorder="0"
@@ -683,7 +701,7 @@ export function Fim(
 //       <styles.Fundo id={"pin-diesel"}>
 //         <styles.Grafico>
 //           <iframe
-//             className="w-full aspect-video"
+//             class="w-full aspect-video"
 //             title="Preço médio do diesel"
 //             scrolling="no"
 //             frameBorder="0"
@@ -717,7 +735,7 @@ export function Fim(
 //       <styles.Fundo id={"pin-passageiros"}>
 //         <styles.Grafico>
 //           <iframe
-//             className="w-full aspect-video"
+//             class="w-full aspect-video"
 //             title="Passageiros transportados"
 //             scrolling="no"
 //             frameBorder="0"
@@ -740,7 +758,7 @@ export function Fim(
 
 // <styles.Grafico>
 // <iframe
-//   className="w-full aspect-video"
+//   class="w-full aspect-video"
 //   title="Preço médio do dólar"
 //   scrolling="no"
 //   frameBorder="0"
@@ -752,7 +770,7 @@ export function Fim(
 
 // <styles.Grafico>
 // <iframe
-//   className="w-full aspect-video"
+//   class="w-full aspect-video"
 //   title="Preço médio do diesel"
 //   scrolling="no"
 //   frameBorder="0"

@@ -17,7 +17,7 @@ export default function SubsidioSPPO() {
   const [location, setLocation] = useState(chapterMap.Capa().location);
 
   const [layers, setLayers] = useState(chapterMap.Capa().layers);
-  console.log("ChapterLayers", layers);
+  // console.log("ChapterLayers", layers);
 
   const [chartProgress, setChartProgress] = useState(0);
 
@@ -36,7 +36,7 @@ export default function SubsidioSPPO() {
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState(0);
-  // console.log(chapterNumberMap);
+  // console.log(chapterNumberMap);-
   useEffect(() => {
     switch (chapterNumberMap) {
       case "capa":
@@ -48,12 +48,12 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Vazio().layers);
         break;
       case "mapalinhas":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
+        setPosition(chapterMap.Linhas().location);
+        setLayers(chapterMap.Linhas().layers);
         break;
       case "textomapalinhas":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
+        setPosition(chapterMap.Linhas().location);
+        setLayers(chapterMap.Linhas().layers);
         break;
       case "historia-1":
         setPosition(chapterMap.Vazio().location);
@@ -262,7 +262,8 @@ export default function SubsidioSPPO() {
   return (
     <>
       <MultilayerMap
-        interactive={true}
+        interactive={false}
+        showLayers={true}
         scrollZoom={true}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
         mapStyle="mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b"

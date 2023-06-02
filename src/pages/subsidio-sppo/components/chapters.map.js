@@ -303,6 +303,47 @@ export const Depois = () => {
   };
 };
 
+export const Linhas = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.45317,
+          lat: -22.9158,
+        },
+        zoom: 8.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
+      },
+      desktop: {
+        center: {
+          lon: -43.45317,
+          lat: -22.9158,
+        },
+        zoom: 10.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            id: "linhas-voltaram",
+            type: "line",
+            source: "composite",
+            "source-layer": "linhas-voltaram-0h7jyx",
+          },
+        },
+      },
+    ],
+  };
+};
+
 export const Pontos = () => {
   return {
     location: {
@@ -327,7 +368,20 @@ export const Pontos = () => {
         duration: 4000,
       },
     },
-    layers: [],
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            id: "pontosonibus",
+            type: "circle",
+            source: "composite",
+            "source-layer": "pontosonibus-6lm304",
+          },
+        },
+      },
+    ],
   };
 };
 
