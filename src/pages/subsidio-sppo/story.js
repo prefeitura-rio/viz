@@ -17,7 +17,7 @@ export default function SubsidioSPPO() {
   const [location, setLocation] = useState(chapterMap.Capa().location);
 
   const [layers, setLayers] = useState(chapterMap.Capa().layers);
-  // console.log("ChapterLayers", layers);
+  console.log("ChapterLayers", layers);
 
   const [chartProgress, setChartProgress] = useState(0);
 
@@ -55,7 +55,6 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
-
       case "historia-1":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
@@ -93,12 +92,12 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Depois().layers);
         break;
       case "mapapontos":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
+        setPosition(chapterMap.Pontos().location);
+        setLayers(chapterMap.Pontos().layers);
         break;
       case "textomapapontos":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
+        setPosition(chapterMap.Pontos().location);
+        setLayers(chapterMap.Pontos().layers);
         break;
       case "fim":
         setPosition(chapterMap.Depois().location);
@@ -263,7 +262,7 @@ export default function SubsidioSPPO() {
   return (
     <>
       <MultilayerMap
-        interactive={false}
+        interactive={true}
         scrollZoom={true}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
         mapStyle="mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b"

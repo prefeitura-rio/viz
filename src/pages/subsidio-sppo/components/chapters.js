@@ -437,7 +437,7 @@ export function Virada(
         </styles.TextCard>
         <img
           src={compensacao}
-          className="h-auto w-auto mt-[60px] lg:mt-[60px]"
+          className="h-auto w-auto mt-[60px] lg:mt-[90px]"
         ></img>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv1>

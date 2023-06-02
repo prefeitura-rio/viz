@@ -303,6 +303,56 @@ export const Depois = () => {
   };
 };
 
+export const Pontos = () => {
+  return {
+    location: {
+      mobile: {
+        center: {
+          lon: -43.45317,
+          lat: -22.9158,
+        },
+        zoom: 8.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
+      },
+      desktop: {
+        center: {
+          lon: -43.45317,
+          lat: -22.9158,
+        },
+        zoom: 10.51,
+        pitch: 1.5,
+        bearing: -0.0,
+        duration: 4000,
+      },
+    },
+    layers: [],
+  };
+};
+
+// {
+//   layerType: "mapbox",
+//   targetOpacity: 1,
+//   layer: {
+//     ...{
+//       id: "demolicao-icone",
+//       type: "symbol",
+//       source: "composite",
+//       "source-layer": "demolicao-ar7k7f",
+//       layout: {
+//         "icon-image": "hospital",
+//         "icon-rotate": 45,
+//         "icon-allow-overlap": true,
+//         "icon-size": 2,
+//       },
+//       paint: {
+//         "icon-opacity": 0,
+//       },
+//     },
+//   },
+// },
+
 export const Creditos = () => {
   return {
     location: {
