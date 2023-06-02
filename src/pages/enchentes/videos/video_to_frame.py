@@ -5,14 +5,13 @@ import shutil
 if __name__ == "__main__":
     path = Path("./")
 
-    images_path = path / "mapas"
+    images_path = path / "quadro_um"
+    vidcap = cv2.VideoCapture(str(path / "mapas1.mp4"))
 
     if images_path.exists():
         shutil.rmtree(images_path)
 
     images_path.mkdir(exist_ok=True)
-
-    vidcap = cv2.VideoCapture(str(path / "mapas1.mp4"))
     success, image = vidcap.read()
     count = 1
 
