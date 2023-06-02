@@ -111,6 +111,16 @@ justify-center
 bg-white
 `;
 
+export const ChapterGenericDiv4 = tw.div`
+  flex
+  w-full h-[100vh]
+  items-center
+  justify-center
+  p-[34px]
+  lg:p-[34px]
+  bg-white
+  `;
+
 export const ContainerCard = tw.div`
 h-auto w-[700px]
 mb-[60px]
@@ -178,6 +188,42 @@ export const TextCard = tw.div`
   lg:leading-[120%]
   text-black
   mb-[16px]
+`;
+
+export const TextHighlightBlue = tw.div`
+  font-libre font-[400] 
+  inline-block
+  text-[14px]
+  text-left
+  lg:leading-[150%]
+  text-white
+  bg-[#29557D]
+  px-2
+  py-1
+`;
+
+export const TextHighlightBlueUm = tw.div`
+  font-libre font-[400] 
+  inline-block
+  text-[14px]
+  text-left
+  lg:leading-[150%]
+  text-white
+  bg-[#000000]
+  px-2
+  py-1
+`;
+
+export const TextHighlightBlueDois = tw.div`
+  font-libre font-[400] 
+  inline-block
+  text-[14px]
+  text-left
+  lg:leading-[150%]
+  text-white
+  bg-[#6F9CB7]
+  px-2
+  py-1
 `;
 // selection:bg-[#ef4444] selection:text-white
 

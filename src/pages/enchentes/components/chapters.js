@@ -188,32 +188,96 @@ export function QuadroUm(
 
   return (
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[150vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[1vh]">
         <styles.TextCard3>
-          Com base em evidências científicas, uma série de ações específicas, de
-          baixo custo e focalizadas, foram estrategicamente pensadas para
-          contribuir para a redução dos fatores de risco mapeados e,
-          consequentemente, para a redução do crime e da sensação de insegurança
-          no local.
+          Esse é o Rio como você conhece hoje. Foram diversas mudanças até
+          chegarmos aqui e em 458 anos de história, muita coisa mudou.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[300vh]">
+      <styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[100vh]">
         <styles.TextCard3>
-          Com base em evidências científicas, uma série de ações específicas, de
-          baixo custo e focalizadas, foram estrategicamente pensadas para
-          contribuir para a redução dos fatores de risco mapeados e,
-          consequentemente, para a redução do crime e da sensação de insegurança
-          no local.
+          A ligação da nossa cidade com a água está no nosso nome.
+          Originalmente, a cidade possuía diversos{" "}
+          <styles.TextHighlightBlue>cursos de água</styles.TextHighlightBlue>,
+          que a cortavam por todas as regiões. Utilizados como cursos náuticos
+          para transporte de passageiros e cargas.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[450vh]">
+      <styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[160vh]">
         <styles.TextCard3>
-          Com base em evidências científicas, uma série de ações específicas, de
-          baixo custo e focalizadas, foram estrategicamente pensadas para
-          contribuir para a redução dos fatores de risco mapeados e,
-          consequentemente, para a redução do crime e da sensação de insegurança
-          no local.
+          Graças ao processo de urbanização, diversos rios e mangues foram
+          <styles.TextHighlightBlueUm>
+            aterrados ou canalizados.
+          </styles.TextHighlightBlueUm>{" "}
+          Sem muito planejamento urbano, estes processos não consideraram as
+          dinâmicas de cheias destes rios.
         </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card4"} className=" top-[270vh]">
+        <styles.TextCard3>
+          Uma destas regiões é a do Saco do São Diogo, localizada entre a Praça
+          XI e a Baía de Guanabara.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card5"} className=" top-[400vh]">
+        <styles.TextCard3>
+          Com o seu aterramento, surgiu a atual Avenida Francisco Bicalho e a
+          canalização do rio deu lugar ao atual canal do Mangue, no bairro da
+          Cidade Nova.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card6"} className=" top-[515vh]">
+        <styles.TextCard3>
+          Por isso, a região naturalmente ainda registrará{" "}
+          <styles.TextHighlightBlueDois>
+            alagamentos
+          </styles.TextHighlightBlueDois>{" "}
+          sempre que as chuvas forem mais fortes que a capacidade de drenagem.
+          Desde 2018, o bairro da Cidade Nova já registrou 51 casos ocorrências
+          provocadas pelas chuvas.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function ParteUm(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.TextCard1>
+          Seja por eventos naturais ou pela ação humana, a função de uma boa
+          gestão pública é mitigar estes problemas e evitar que eles interrompam
+          o funcionamento das atividades na cidade.
+          <br />
+          <br />A seguir, explicaremos para você alguns dos principais motivos
+          pelos quais a nossa cidade é um território propício para que este tipo
+          de incidente ocorra de forma tão frequente.
+        </styles.TextCard1>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv4>
+  );
+}
+
+export function QuadroDois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[1vh]">
+        <styles.TextCard3>Aqui vai o vídeo 2</styles.TextCard3>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
   );
@@ -230,15 +294,6 @@ export function ParteDois(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
-        <styles.TextCard1>
-          Seja por eventos naturais ou pela ação humana, a função de uma boa
-          gestão pública é mitigar estes problemas e evitar que eles interrompam
-          o funcionamento das atividades na cidade.
-          <br />
-          <br />A seguir, explicaremos para você alguns dos principais motivos
-          pelos quais a nossa cidade é um território propício para que este tipo
-          de incidente ocorra de forma tão frequente.
-        </styles.TextCard1>
         <div className="mt-[80px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
         <styles.TextCard>Ações da Prefeitura</styles.TextCard>
         <styles.TextCard1>

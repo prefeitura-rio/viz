@@ -51,6 +51,8 @@ export default function Enchentes() {
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.ContextoHistorico id={"contexto_historico"} />
       <chapterDiv.QuadroUm id={"quadro_um"} />
+      <chapterDiv.ParteUm id={"parteum"} />
+      <chapterDiv.QuadroDois id={"quadro_dois"} />
       <chapterDiv.ParteDois id={"partedois"} />
       <chapterDiv.Creditos id={"creditos"} />
     </>
