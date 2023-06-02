@@ -286,12 +286,12 @@ export default function SubsidioSPPO() {
       <chapterDiv.Mapalinhas id={"mapalinhas"} />
       <chapterDiv.Textomapalinhas id={"textomapalinhas"} />
       <chapterDiv.Historia1 id={"historia-1"} />
-      <chapterDiv.Mapaum id={"mapaum"} />
+      {/* <chapterDiv.Mapaum id={"mapaum"} />
       <chapterDiv.Textomapaum id={"textomapaum"} />
       <chapterDiv.Mapadois id={"mapadois"} />
       <chapterDiv.Textomapadois id={"textomapadois"} />
       <chapterDiv.Mapatres id={"mapatres"} />
-      <chapterDiv.Textomapatres id={"textomapatres"} />
+      <chapterDiv.Textomapatres id={"textomapatres"} /> */}
       <chapterDiv.Virada id={"virada"} />
       <chapterDiv.Foco id={"foco"} />
       <chapterDiv.Antes id={"antes"} />

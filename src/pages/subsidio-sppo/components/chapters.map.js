@@ -333,10 +333,46 @@ export const Linhas = () => {
         targetOpacity: 1,
         layer: {
           ...{
-            id: "linhas-voltaram",
+            id: "internorte",
             type: "line",
             source: "composite",
-            "source-layer": "linhas-voltaram-0h7jyx",
+            "source-layer": "geral-069cuk",
+          },
+        },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            id: "transcarioca",
+            type: "line",
+            source: "composite",
+            "source-layer": "geral-069cuk",
+          },
+        },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            id: "intersul",
+            type: "line",
+            source: "composite",
+            "source-layer": "geral-069cuk",
+          },
+        },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            id: "santacruz",
+            type: "line",
+            source: "composite",
+            "source-layer": "geral-069cuk",
           },
         },
       },
