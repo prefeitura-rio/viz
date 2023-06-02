@@ -6,7 +6,7 @@ import { Controller, Scene } from "react-scrollmagic";
 // Chapters
 import * as chapterMap from "./components/chapters.map";
 import * as chapterDiv from "./components/chapters";
-import first_frame from "./videos/mapas/1.jpg";
+import first_frame from "./videos/quadro_um/1.jpg";
 
 // Scroll and animation  stuff
 import { gsap } from "gsap";
@@ -23,7 +23,7 @@ export default function Enchentes() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: false,
+      markers: true,
       scrub: true,
       toggleActions: "play reverse play reverse",
     });
@@ -34,7 +34,25 @@ export default function Enchentes() {
         const video = document.getElementById("quadro_video");
         const frameNumber = Math.floor(self.progress * 497) + 1;
         video.src =
-          require(`./videos/mapas/${frameNumber.toString()}.jpg`).default;
+          require(`./videos/quadro_um/${frameNumber.toString()}.jpg`).default;
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#parteum",
+      onUpdate: (self) => {
+        const video = document.getElementById("quadro_video");
+        video.src = require(`./videos/quadro_dois/1.jpg`).default;
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#quadro_dois",
+      onUpdate: (self) => {
+        const video = document.getElementById("quadro_video");
+        const frameNumber = Math.floor(self.progress * 497) + 1;
+        video.src =
+          require(`./videos/quadro_dois/${frameNumber.toString()}.jpg`).default;
       },
     });
   }, []);
@@ -45,7 +63,7 @@ export default function Enchentes() {
         <img
           id={"quadro_video"}
           src={first_frame}
-          className="fixed -z-10 lg:h-auto lg:w-[700px]  top-[14vh]"
+          className="fixed -z-10 lg:h-auto lg:w-[700px]  top-[25vh]"
         ></img>
       </div>
       <chapterDiv.Capa id={"capa"} />

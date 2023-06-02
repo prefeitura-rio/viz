@@ -101,7 +101,6 @@ export const ChapterGenericDiv2 = tw.div`
     px-[30px]
     lg:p-[34px]
     bg-transparent	
-    top-[35vh]
   `;
 
 export const ChapterGenericDiv3 = tw.div`
