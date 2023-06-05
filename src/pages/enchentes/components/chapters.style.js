@@ -33,9 +33,8 @@ export const Title = tw.div`
   leading-[120%]
   p-2
   lg:text-[48px]
-  text-black
-  bg-white
-    `;
+  text-white
+  `;
 
 export const Subtitle = tw.div`
 font-geologica font-[300]
@@ -44,10 +43,14 @@ text-[18px]
 lg:text-[22px]
 leading-[120%]
 p-2
-mt-[12px]
-text-black
-bg-white
+text-white
 `;
+
+export const AuthorText = tw.div`
+  font-geologica
+  text-[14px] text-left text-black
+  leading-[150%]
+ `;
 
 export const Video = tw.div`
   flex flex-col  
@@ -63,13 +66,6 @@ export const Scroll = tw.div`
   flex lg:flex-row flex-col 
   lg:justify-between lg:items-center
   `;
-
-export const AuthorText = tw.div`
-  font-geologica
-  text-[14px] text-left text-black
-  leading-[150%]
-  mb-[120px]
- `;
 
 export const ChapterGenericDiv = tw.div`
 flex
@@ -137,12 +133,13 @@ export const ContainerCard3 = tw.div`
     absolute
     z-10
     h-auto w-[90%] lg:w-[600px]
-    bg-[#ffffff]
+    bg-[#ffffff99]
     px-[48px]
     py-[40px]
     lg:px-[56px]
     lg:py-[42px]
     rounded-lg
+    backdrop-blur-md
   `;
 
 export const IntroDiv = tw.div`

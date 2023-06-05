@@ -43,11 +43,13 @@ export function Capa(
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       <styles.CapaAutor>
-        {/* <img
+        <img
           src={logo}
-          className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14"
-        ></img> */}
-        <styles.Title>Por que o Rio de Janeiro alaga? </styles.Title>
+          className="absolute top-[5%] lg:absolute lg:top-[20px] h-[60px] w-auto"
+        ></img>
+        <styles.Title className="">
+          Por que o Rio de Janeiro alaga?
+        </styles.Title>
         <styles.Subtitle>
           E como a prefeitura trabalha para que a chuva não castigue os cariocas
         </styles.Subtitle>
@@ -119,7 +121,7 @@ export function ContextoHistorico(
             </div>
             <img src={logoed} className="mt-[30px] h-11 lg:h-12"></img>
           </div>
-          <div className="h-[10px] w-[50px] bg-black mb-[10px]"></div>
+          <div className="mt-[140px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
           <styles.TextCard>Introdução</styles.TextCard>
           <styles.TextCard1>
             Dados do Alerta Rio, sistema de alerta de chuvas intensas e de
@@ -162,9 +164,9 @@ export function ContextoHistorico(
             sofra ainda mais com alagamentos e enchentes. E como a Prefeitura
             trabalha para mitigar estes problemas.
           </styles.TextCard1>
-          <div className="mt-[80px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
+          <div className="mt-[140px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
           <styles.TextCard>Contexto histórico dos alagamentos</styles.TextCard>
-          <styles.TextCard1 className="lg:mb-[100px]">
+          <styles.TextCard1 className="lg:mb-[60px]">
             Existem diversos motivos pelos quais uma cidade como a nossa sofre
             com estes problemas. Mas antes, precisamos falar um pouco sobre como
             a nossa cidade foi criada e como as escolhas do passado
@@ -188,7 +190,7 @@ export function QuadroUm(
 
   return (
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[1vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[50vh]">
         <styles.TextCard3>
           Esse é o Rio como você conhece hoje. Foram diversas mudanças até
           chegarmos aqui e em 458 anos de história, muita coisa mudou.
@@ -294,7 +296,7 @@ export function ParteDois(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
-        <div className="mt-[80px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
+        <div className="mt-[140px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
         <styles.TextCard>Ações da Prefeitura</styles.TextCard>
         <styles.TextCard1>
           Sabendo destes problemas, cabe a Prefeitura do Rio um papel
@@ -308,7 +310,7 @@ export function ParteDois(
           <br />A seguir, você verá uma série de ações realizadas pela
           Prefeitura para combater este problema.
         </styles.TextCard1>
-        <div className="mt-[80px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
+        <div className="mt-[140px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
         <styles.TextCard>Rotina</styles.TextCard>
         <styles.TextCard1>
           Como já falamos anteriormente, o lixo descartado irregularmente pela
@@ -344,7 +346,7 @@ export function ParteDois(
           funcionários responsáveis pelos servidores de drenagem de águas e 19
           caminhões que auxiliam neste serviço.
         </styles.TextCard1>
-        <div className="mt-[80px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
+        <div className="mt-[140px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
         <styles.TextCard>Obras e Projetos</styles.TextCard>
         <styles.TextCard1>
           Além de ações de rotina, a Prefeitura conta com um planejamento
@@ -393,7 +395,7 @@ export function ParteDois(
         <br />
         <br />
         Aqui vai o gráfico do Plano Verão
-        <div className="mt-[80px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
+        <div className="mt-[140px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
         <styles.TextCard>E quando chove?</styles.TextCard>
         <styles.TextCard1>
           Mesmo com as ações de rotina, durante as épocas de chuva é comum que a
@@ -431,7 +433,7 @@ export function ParteDois(
           para enfrentar os desafios climáticos e minimizar os impactos na vida
           dos cariocas.
         </styles.TextCard1>
-        <div className="mt-[80px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
+        <div className="mt-[140px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
         <styles.TextCard>
           Futuro: Programas, Obras e Planejamento
         </styles.TextCard>

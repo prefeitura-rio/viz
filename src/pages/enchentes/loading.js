@@ -12,6 +12,8 @@ items-center justify-center
 
 const LoadingImage = tw.img`
 w-[400px] h-[400px]
+border-4
+border-black
 `;
 
 export function LoadingEnchentes() {
