@@ -34,7 +34,8 @@ export const Title = tw.div`
   p-2
   lg:text-[48px]
   text-white
-  `;
+  drop-shadow-[0_5.2px_5.2px_rgba(0,0,0,0.8)]
+    `;
 
 export const Subtitle = tw.div`
 font-geologica font-[300]
@@ -43,14 +44,10 @@ text-[18px]
 lg:text-[22px]
 leading-[120%]
 p-2
-text-white
+mt-[12px]
+text-black
+bg-white
 `;
-
-export const AuthorText = tw.div`
-  font-geologica
-  text-[14px] text-left text-black
-  leading-[150%]
- `;
 
 export const Video = tw.div`
   flex flex-col  
@@ -66,6 +63,13 @@ export const Scroll = tw.div`
   flex lg:flex-row flex-col 
   lg:justify-between lg:items-center
   `;
+
+export const AuthorText = tw.div`
+  font-geologica
+  text-[14px] text-left text-black
+  leading-[150%]
+  mb-[120px]
+ `;
 
 export const ChapterGenericDiv = tw.div`
 flex

@@ -45,11 +45,10 @@ export function Capa(
       <styles.CapaAutor>
         <img
           src={logo}
-          className="absolute top-[5%] lg:absolute lg:top-[20px] h-[60px] w-auto"
-        ></img>
-        <styles.Title className="">
-          Por que o Rio de Janeiro alaga?
-        </styles.Title>
+          className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14"
+        ></img>{" "}
+        */}
+        <styles.Title>Por que o Rio de Janeiro alaga? </styles.Title>
         <styles.Subtitle>
           E como a prefeitura trabalha para que a chuva não castigue os cariocas
         </styles.Subtitle>
