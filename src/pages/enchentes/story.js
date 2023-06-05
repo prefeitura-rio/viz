@@ -42,7 +42,12 @@ export default function Enchentes() {
       trigger: "#parteum",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video");
-        video.src = require(`./videos/quadro_dois/1.jpg`).default;
+        const progress = self.progress;
+        const imageSource =
+          progress < 0.5
+            ? require("./videos/quadro_um/450.jpg").default
+            : require("./videos/quadro_dois/1.jpg").default;
+        video.src = imageSource;
       },
     });
 
@@ -59,17 +64,19 @@ export default function Enchentes() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center">
+      <div className="fixed -z-10 flex flex-col items-center justify-center h-[100vh] w-full">
         <img
           id={"quadro_video"}
           src={first_frame}
-          className="fixed -z-10 lg:h-auto lg:w-[700px]  top-[2vh]"
+          className="lg:h-auto lg:w-[700px] "
         ></img>
       </div>
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.ContextoHistorico id={"contexto_historico"} />
+      <div className="h-[95vh] w-full bg-transparent"></div>
       <chapterDiv.QuadroUm id={"quadro_um"} />
       <chapterDiv.ParteUm id={"parteum"} />
+      <div className="h-[95vh] w-full bg-transparent"></div>
       <chapterDiv.QuadroDois id={"quadro_dois"} />
       <chapterDiv.ParteDois id={"partedois"} />
       <chapterDiv.Creditos id={"creditos"} />

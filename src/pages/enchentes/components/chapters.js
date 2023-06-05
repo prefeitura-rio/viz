@@ -47,7 +47,6 @@ export function Capa(
           src={logo}
           className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14"
         ></img>{" "}
-        */}
         <styles.Title>Por que o Rio de Janeiro alaga? </styles.Title>
         <styles.Subtitle>
           E como a prefeitura trabalha para que a chuva não castigue os cariocas
@@ -189,7 +188,7 @@ export function QuadroUm(
 
   return (
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[50vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"}>
         <styles.TextCard3>
           Esse é o Rio como você conhece hoje. Foram diversas mudanças até
           chegarmos aqui e em 458 anos de história, muita coisa mudou.

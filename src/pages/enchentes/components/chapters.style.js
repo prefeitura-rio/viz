@@ -34,19 +34,18 @@ export const Title = tw.div`
   p-2
   lg:text-[48px]
   text-white
-  drop-shadow-[0_5.2px_5.2px_rgba(0,0,0,0.8)]
+  drop-shadow-[0_2px_2px_rgba(0,0,0,0.99)]
     `;
 
 export const Subtitle = tw.div`
-font-geologica font-[300]
+font-geologica font-[100]
 text-center
 text-[18px]
 lg:text-[22px]
 leading-[120%]
 p-2
-mt-[12px]
-text-black
-bg-white
+text-white
+drop-shadow-[0_2px_2px_rgba(0,0,0,0.99)]
 `;
 
 export const Video = tw.div`
