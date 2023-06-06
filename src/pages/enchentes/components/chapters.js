@@ -582,6 +582,7 @@ export function Creditos(
           Gabriel Gazola Milan
           <br />
           João Carabetta <br />
+          Mylenna Merlo <br />
           Wanderson José dos Santos <br />
         </styles.TextCreditos1>
         <styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
