@@ -247,7 +247,7 @@ export function Historia1(
         </styles.TextCard>
         <styles.Grafico>
           <iframe
-            className="w-full aspect-video"
+            className="w-full h-[400px] aspect-video"
             title="Passageiros transportados"
             scrolling="no"
             frameBorder="0"
