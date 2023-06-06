@@ -6,8 +6,12 @@ import capa from "../images/capa.gif";
 
 export const CapaDivSC = styled.div`
   background-image: url(${capa});
-  background-size: 20%;
+  background-size: 60%;
   background-position: center;
+
+  @media only screen and (min-width: 768px) {
+    background-size: 21%;
+  }
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
@@ -31,6 +35,8 @@ export const Title = tw.div`
   lg:text-[48px]
   text-white
   drop-shadow-[0_2px_2px_rgba(0,0,0,0.99)]
+  mt-[190px]
+  lg:mt-[300px]
     `;
 
 export const Subtitle = tw.div`
@@ -39,7 +45,8 @@ text-center
 text-[18px]
 lg:text-[22px]
 leading-[120%]
-p-2
+py-0
+px-2
 text-white
 drop-shadow-[0_2px_2px_rgba(0,0,0,0.99)]
 `;
@@ -119,7 +126,7 @@ bg-white
 
 export const ChapterGenericDiv4 = tw.div`
   flex
-  w-full h-[100vh]
+  w-full h-auto
   items-center
   justify-center
   p-[34px]
@@ -157,7 +164,6 @@ export const Grafico = tw.div`
   m-auto
   lg:my-[40px]
   min-w-[250px]
-  my-[60px]
 `;
 
 export const IntroDiv = tw.div`
@@ -178,9 +184,8 @@ export const TextCreditos = tw.div`
 
 export const TextCreditos1 = tw.div`
   text-black
-  font-geologica
-  font-regular
-  text-[18px]
+  font-libre font-[400] 
+  text-[14px]
 `;
 
 export const TextCreditos2 = tw.div`
@@ -213,7 +218,7 @@ export const TextHighlightBlue = tw.div`
   text-white
   bg-[#29557D]
   px-2
-  py-1
+  py-0
 `;
 
 export const TextHighlightBlueUm = tw.div`
@@ -225,7 +230,7 @@ export const TextHighlightBlueUm = tw.div`
   text-white
   bg-[#000000]
   px-2
-  py-1
+  py-0
 `;
 
 export const TextHighlightBlueDois = tw.div`
@@ -237,7 +242,7 @@ export const TextHighlightBlueDois = tw.div`
   text-white
   bg-[#6F9CB7]
   px-2
-  py-1
+  py-0
 `;
 // selection:bg-[#ef4444] selection:text-white
 
@@ -247,9 +252,6 @@ text-[14px]
 text-left
 lg:leading-[150%]
 text-black
-mt-[10px]
-mb-[60px]
-lg:mb-0
 `;
 
 export const TextCard2 = tw.div`

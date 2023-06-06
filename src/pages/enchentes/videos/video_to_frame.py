@@ -5,8 +5,8 @@ import shutil
 if __name__ == "__main__":
     path = Path("./")
 
-    images_path = path / "quadro_um"
-    vidcap = cv2.VideoCapture(str(path / "mapas.mp4"))
+    images_path = path / "quadro_dois"
+    vidcap = cv2.VideoCapture(str(path / "geral.mp4"))
 
     if images_path.exists():
         shutil.rmtree(images_path)
@@ -23,7 +23,7 @@ if __name__ == "__main__":
         cv2.imwrite(
             filename=str(images_path / f"{count}.jpg"),
             img=image,
-            params=[cv2.IMWRITE_JPEG_QUALITY, 50],
+            params=[cv2.IMWRITE_JPEG_QUALITY, 30],
         )
 
         success, image = vidcap.read()

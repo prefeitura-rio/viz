@@ -104,7 +104,7 @@ export function ContextoHistorico(
           <div className="flex justify-between">
             <div>
               <div className="mt-[30px] h-[3px] w-[20px] bg-black"></div>
-              <styles.AuthorText className="mt-[8px] lg:w-[420px]">
+              <styles.AuthorText className="mt-[8px] mr-[20px] lg:w-[420px]">
                 Desenvolvido pela Equipe de Visualização de Dados do{" "}
                 <a
                   className="font-bold underline"
@@ -117,7 +117,7 @@ export function ContextoHistorico(
                 da Prefeitura da Cidade do Rio de Janeiro
               </styles.AuthorText>{" "}
             </div>
-            <img src={logoed} className="mt-[30px] h-11 lg:h-12"></img>
+            <img src={logoed} className="mt-[30px] h-10 lg:h-12"></img>
           </div>
           <div className="h-[10px] w-[50px] bg-black mb-[10px]"></div>
           <styles.TextCard>Introdução</styles.TextCard>
@@ -294,7 +294,7 @@ export function ParteDois(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
-        <div className="mt-[140px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
+        <div className="h-[10px] w-[50px] bg-black mb-[10px]"></div>
         <styles.TextCard>Ações da Prefeitura</styles.TextCard>
         <styles.TextCard1>
           Sabendo destes problemas, cabe a Prefeitura do Rio um papel
@@ -391,7 +391,7 @@ export function ParteDois(
         <br />
         <styles.Grafico>
           <iframe
-            className="w-full h-[500px] aspect-video"
+            className="w-full h-[350px] lg:h-[500px] aspect-video"
             title="Localização das obras do Plano Verão"
             scrolling="no"
             frameBorder="0"
@@ -404,7 +404,7 @@ export function ParteDois(
         <br />
         <styles.Grafico>
           <iframe
-            className="w-full h-[400px] aspect-video"
+            className="w-full h-[350px] lg:h-[500px] aspect-video"
             title="Maioria das obras do Plano Verão está localizada na Zona Oeste"
             scrolling="no"
             frameBorder="0"
