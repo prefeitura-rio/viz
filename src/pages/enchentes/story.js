@@ -65,7 +65,7 @@ export default function Enchentes() {
 
   return (
     <>
-      <div className="fixed -z-10 flex flex-col items-center justify-center h-[100vh] w-full">
+      <div className="fixed -z-10 flex flex-col items-center justify-center h-[100vh] w-[100vw]">
         <img
           id={"quadro_video"}
           src={first_frame}

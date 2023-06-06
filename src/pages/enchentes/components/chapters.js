@@ -276,8 +276,89 @@ export function QuadroDois(
 
   return (
     <styles.ChapterQuadroDois ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[1vh]">
-        <styles.TextCard3>Aqui vai o vídeo 2</styles.TextCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[10vh]">
+        <styles.TextCard3>
+          A impermeabilização do solo, resultado do excesso de asfalto e
+          construções, é uma das principais causas dos frequentes alagamentos e
+          enchentes que atingem o Rio de Janeiro.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[50vh]">
+        <styles.TextCard3>
+          A urbanização desenfreada comprometeu a capacidade do solo de absorver
+          a água da chuva, dificultando desta forma o escoamento e aumentando o
+          risco de inundações.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[100vh]">
+        <styles.TextCard3>
+          Além disso, a cidade costeira, rodeada pela Baía de Guanabara, sofre
+          com a influência direta da maré alta.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[150vh]">
+        <styles.TextCard3>
+          Durante chuvas intensas, a água, que já não é absorvida pelo solo, não
+          consegue também ser escoada para o mar, acumulando-se então nas ruas e
+          causando transtornos para os cariocas.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[300vh]">
+        <styles.TextCard3>
+          Infelizmente, o lixo é um grande vilão quando se trata de alagamentos
+          e enchentes em nossa cidade. Jogados de forma incorreta nas ruas, o
+          lixo entope os bueiros, causando os chamados bolsões d'água.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[400vh]">
+        <styles.TextCard3>
+          Diariamente, a Comlurb recolhe cerca de 9.000 toneladas de resíduos em
+          toda a cidade. Desse montante, 3.600 toneladas são lixo público,
+          jogados pelas ruas do Rio.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[470vh]">
+        <styles.TextCard3>
+          Nosso sistema de saneamento conta a rede de esgoto, a rede fluvial,
+          responsável pela canalização dos rios e também com a rede pluvial, que
+          capta a água da chuva.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[570vh]">
+        <styles.TextCard3>
+          Esse problema fica ainda pior quando uma tampa de bueiro é alvo de
+          ladrões.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[620vh]">
+        <styles.TextCard3>
+          Essas proteções são essenciais para impedir que o lixo arrastado pela
+          chuva prejudique o bom escoamento e chegue até os rios. Além disso, os
+          furtos colocam em risco a segurança de pedestres e motoristas.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[670vh]">
+        <styles.TextCard3>
+          Desde o início deste ano, a SECONSERVA já precisou repor 862 tampas e
+          grelhas em toda a cidade, um prejuízo de R$ 204.183,90 aos cofres
+          públicos.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[720vh]">
+        <styles.TextCard3>
+          Esse problema se torna ainda pior quando as papeleiras espalhadas pela
+          cidade são furtadas ou vandalizadas, dificultando o descarte correto
+          do lixo.
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[750vh]">
+        <styles.TextCard3>
+          Em média, 500 a 600 unidades de papeleiras são furtadas ou danificadas
+          mensalmente, totalizando cerca de 6.000 ao ano. O prejuízo para os
+          cofres públicos é significativo. Segundo a companhia, o valor chega a
+          aproximadamente R$ 900 mil por ano, considerando o valor da última
+          compra de lixeiras (R$149,77 a unidade).
+        </styles.TextCard3>
       </styles.ContainerCard3>
     </styles.ChapterQuadroDois>
   );

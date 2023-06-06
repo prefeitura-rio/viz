@@ -35,8 +35,7 @@ export const Title = tw.div`
   lg:text-[48px]
   text-white
   drop-shadow-[0_2px_2px_rgba(0,0,0,0.99)]
-  mt-[190px]
-  lg:mt-[300px]
+  lg:mt-[255px]
     `;
 
 export const Subtitle = tw.div`
@@ -127,6 +126,7 @@ bg-white
 export const ChapterGenericDiv4 = tw.div`
   flex
   w-full h-auto
+  min-h-[60vh]
   items-center
   justify-center
   p-[34px]
@@ -137,7 +137,7 @@ export const ChapterGenericDiv4 = tw.div`
 export const ContainerCard = tw.div`
 h-auto w-[700px]
 mb-[60px]
-mt-[100px]
+mt-[60px]
 `;
 
 export const ContainerCard2 = tw.div`
@@ -150,10 +150,10 @@ export const ContainerCard2 = tw.div`
 export const ContainerCard3 = tw.div`
     absolute
     z-10
-    h-auto w-[90%] lg:w-[600px]
+    h-auto w-[80%] lg:w-[600px]
     bg-[#ffffff99]
-    px-[48px]
-    py-[40px]
+    px-[40px]
+    py-[34px]
     lg:px-[56px]
     lg:py-[42px]
     rounded-lg
