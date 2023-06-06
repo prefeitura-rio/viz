@@ -119,7 +119,7 @@ export function ContextoHistorico(
             </div>
             <img src={logoed} className="mt-[30px] h-11 lg:h-12"></img>
           </div>
-          <div className="mt-[140px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
+          <div className="h-[10px] w-[50px] bg-black mb-[10px]"></div>
           <styles.TextCard>Introdução</styles.TextCard>
           <styles.TextCard1>
             Dados do Alerta Rio, sistema de alerta de chuvas intensas e de
@@ -275,11 +275,11 @@ export function QuadroDois(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+    <styles.ChapterQuadroDois ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[1vh]">
         <styles.TextCard3>Aqui vai o vídeo 2</styles.TextCard3>
       </styles.ContainerCard3>
-    </styles.ChapterGenericDiv2>
+    </styles.ChapterQuadroDois>
   );
 }
 
@@ -389,10 +389,30 @@ export function ParteDois(
         </styles.TextCard1>
         <br />
         <br />
-        Aqui vai o mapa do Plano Verão
+        <styles.Grafico>
+          <iframe
+            className="w-full h-[500px] aspect-video"
+            title="Localização das obras do Plano Verão"
+            scrolling="no"
+            frameBorder="0"
+            id="datawrapper-chart-6bdNe"
+            aria-label="Mapa"
+            src="https://datawrapper.dwcdn.net/6bdNe/1/"
+          ></iframe>
+        </styles.Grafico>
         <br />
         <br />
-        Aqui vai o gráfico do Plano Verão
+        <styles.Grafico>
+          <iframe
+            className="w-full h-[400px] aspect-video"
+            title="Maioria das obras do Plano Verão está localizada na Zona Oeste"
+            scrolling="no"
+            frameBorder="0"
+            id="datawrapper-chart-cRBSZ"
+            aria-label="Gráfico de coluna"
+            src="https://datawrapper.dwcdn.net/cRBSZ/1/"
+          ></iframe>
+        </styles.Grafico>
         <div className="mt-[140px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
         <styles.TextCard>E quando chove?</styles.TextCard>
         <styles.TextCard1>

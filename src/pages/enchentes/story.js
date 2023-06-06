@@ -23,7 +23,7 @@ export default function Enchentes() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: true,
+      markers: false,
       scrub: true,
       toggleActions: "play reverse play reverse",
     });
@@ -55,7 +55,8 @@ export default function Enchentes() {
       trigger: "#quadro_dois",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video");
-        const frameNumber = Math.floor(self.progress * 497) + 1;
+        const frameNumber = Math.floor(self.progress * 1150) + 1;
+        console.log(`./videos/quadro_dois/${frameNumber.toString()}.jpg`);
         video.src =
           require(`./videos/quadro_dois/${frameNumber.toString()}.jpg`).default;
       },
@@ -68,7 +69,7 @@ export default function Enchentes() {
         <img
           id={"quadro_video"}
           src={first_frame}
-          className="lg:h-auto lg:w-[700px] "
+          className="lg:h-auto lg:w-[700px] border-4 border-black"
         ></img>
       </div>
       <chapterDiv.Capa id={"capa"} />

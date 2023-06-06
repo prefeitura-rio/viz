@@ -5,19 +5,15 @@ import tw from "tailwind-styled-components";
 import capa from "../images/capa.gif";
 
 export const CapaDivSC = styled.div`
-  background-color: #ffffff;
   background-image: url(${capa});
   background-size: 20%;
   background-position: center;
-  /* backdrop-filter: blur(10px); */
-  /* filter: blur(8px); */
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
   h-[100vh] w-full
   flex flex-col
   justify-center  items-center
-  bg-white
   `;
 
 export const CapaAutor = tw.div`
@@ -102,6 +98,18 @@ export const ChapterGenericDiv2 = tw.div`
     bg-transparent	
   `;
 
+export const ChapterQuadroDois = tw.div`
+  flex
+  relative
+  justify-center
+  w-auto h-[800vh]
+  lg:w-auto lg:h-[800vh]
+  overflow-hidden
+  px-[30px]
+  lg:p-[34px]
+  bg-transparent	
+`;
+
 export const ChapterGenericDiv3 = tw.div`
 h-full w-full
 items-center
@@ -144,6 +152,13 @@ export const ContainerCard3 = tw.div`
     rounded-lg
     backdrop-blur-md
   `;
+
+export const Grafico = tw.div`
+  m-auto
+  lg:my-[40px]
+  min-w-[250px]
+  my-[60px]
+`;
 
 export const IntroDiv = tw.div`
   w-full h-screen
