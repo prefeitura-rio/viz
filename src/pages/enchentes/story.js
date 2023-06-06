@@ -77,7 +77,7 @@ export default function Enchentes() {
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
           }
-          className="h-auto w-[90%] border-4 border-black"
+          className="h-auto w-[90%] lg:h-auto lg:w-[37%] border-4 border-black"
         ></img>
       </div>
       <chapterDiv.Capa id={"capa"} />
