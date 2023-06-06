@@ -6,7 +6,6 @@ import { Controller, Scene } from "react-scrollmagic";
 // Chapters
 import * as chapterMap from "./components/chapters.map";
 import * as chapterDiv from "./components/chapters";
-import first_frame from "./videos/quadro_um/1.jpg";
 
 // Scroll and animation  stuff
 import { gsap } from "gsap";
@@ -32,22 +31,26 @@ export default function Enchentes() {
       trigger: "#quadro_um",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video");
-        const frameNumber = Math.floor(self.progress * 497) + 1;
-        video.src =
-          require(`./videos/quadro_um/${frameNumber.toString()}.jpg`).default;
+        let frameNumber = Math.floor(self.progress * 497) + 1;
+        if (frameNumber > 450) {
+          frameNumber = 450;
+        }
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        video.src = imageUrl;
       },
     });
+    
 
     ScrollTrigger.create({
       trigger: "#parteum",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video");
         const progress = self.progress;
-        const imageSource =
+        const imageUrl =
           progress < 0.5
-            ? require("./videos/quadro_um/450.jpg").default
-            : require("./videos/quadro_dois/1.jpg").default;
-        video.src = imageSource;
+            ? "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/450.jpg"
+            : "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_dois/1.jpg"
+        video.src = imageUrl;
       },
     });
 
@@ -55,10 +58,13 @@ export default function Enchentes() {
       trigger: "#quadro_dois",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video");
-        const frameNumber = Math.floor(self.progress * 1150) + 1;
-        console.log(`./videos/quadro_dois/${frameNumber.toString()}.jpg`);
-        video.src =
-          require(`./videos/quadro_dois/${frameNumber.toString()}.jpg`).default;
+        let frameNumber = Math.floor(self.progress * 1150) + 1;
+        if (frameNumber > 1124) {
+          frameNumber = 1124;
+        }
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_dois/${frameNumber}.jpg`;
+        console.log(imageUrl)
+        video.src = imageUrl;
       },
     });
   }, []);
@@ -68,7 +74,7 @@ export default function Enchentes() {
       <div className="fixed -z-10 flex flex-col items-center justify-center h-[100vh] w-full">
         <img
           id={"quadro_video"}
-          src={first_frame}
+          src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"}
           className="lg:h-auto lg:w-[700px] border-4 border-black"
         ></img>
       </div>
