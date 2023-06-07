@@ -156,7 +156,7 @@ export function ContextoHistorico(
             <br />
             Com estas informações, talvez vocês esteja se perguntando se este é
             mais um material elaborado para os telejornais ficarem falando que
-            “a chuva castiga os cariocas”. (Sim, nos conhecemos o meme). Mas
+            “a chuva castiga os cariocas”. (Sim, nós conhecemos o meme). Mas
             não, esta não é nossa intenção.
             <br />
             <br />
