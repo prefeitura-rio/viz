@@ -2,6 +2,13 @@ import styled from "styled-components";
 import logo from "../images/logo.png";
 import logo2 from "../images/logo2.png";
 import compensacao from "../images/compensacao.png";
+import passageiros from "../images/passageiros.png";
+import saude1 from "../images/saude1.png";
+import saude2 from "../images/saude2.png";
+import educacao1 from "../images/educacao1.png";
+import educacao2 from "../images/educacao2.png";
+import emprego1 from "../images/emprego1.png";
+import emprego2 from "../images/emprego2.png";
 import scroll from "../images/scroll1.gif";
 import fluxo from "../images/fluxo.gif";
 import * as styles from "./chapters.style";
@@ -245,17 +252,7 @@ export function Historia1(
           passageiros, que já apresentava queda nos últimos anos, diminuiu ainda
           mais.
         </styles.TextCard>
-        <styles.Grafico>
-          <iframe
-            className="w-full h-[400px] aspect-video"
-            title="Passageiros transportados"
-            scrolling="no"
-            frameBorder="0"
-            id="datawrapper-chart-hoRNU"
-            aria-label="Gráfico de coluna"
-            src="https://datawrapper.dwcdn.net/hoRNU/5/"
-          ></iframe>
-        </styles.Grafico>
+        <img src={passageiros} className="w-full h-auto my-[45px]"></img>
         <styles.TextCard>
           Como resultado, víamos veículos lotados e a cobertura do transporte
           público diminuindo na cidade, com{" "}
@@ -264,118 +261,192 @@ export function Historia1(
             determinada.
           </styles.TextHighlight>
         </styles.TextCard>
+        <styles.IntroTitle className="mt-[120px] lg:mt-[140px]">
+          O ponto de virada
+        </styles.IntroTitle>
+        <styles.TextCard>
+          Com uma situação alarmante, o descrédito do transporte por ônibus na
+          cidade e a queda no número de passageiros, a Prefeitura decidiu
+          reformular este sistema. Entretanto, para que isso fosse implementado,
+          foi preciso muito diálogo.
+          <br />
+          <br />
+          Foi exigido um grande esforço de negociação entre as diversas partes,
+          com muita transparência. Afinal de contas, não bastava um entendimento
+          entre prefeitura e empresas de ônibus. Era preciso também o
+          envolvimento do Ministério Público e do judiciário, chancelando e
+          acompanhando qualquer decisão tomada.
+          <br />
+          <br />
+          Assim, uma nova proposta de administração foi então pensada e
+          aprovada.
+        </styles.TextCard>
+        <styles.IntroTitle className="mt-[120px] lg:mt-[140px]">
+          O fim da caixa preta
+        </styles.IntroTitle>{" "}
+        <styles.TextCard>
+          Com o novo acordo judicial, os consórcios de ônibus abriram mão da
+          administração do BRT e do sistema de bilhetagem, além de serem
+          obrigados a fornecer todas as informações sobre a arrecadação.
+          <br />
+          <br />
+          Assim, a Prefeitura do Rio homologou a concessão da bilhetagem digital
+          do transporte público municipal com o objetivo de implementar um novo
+          modelo de bilhetagem eletrônica no transporte público até junho de
+          2024.
+          <br />
+          <br />
+          O antigo sistema Riocard será substituído pelo Jaé, em um contrato de
+          duração de 12 anos, que pode ser prorrogado por mais 12 anos.
+          <br />
+          <br />
+          A Jaé será responsável por receber o valor das passagens, ficando com
+          4% do montante arrecadado e repassando o restante para a gestão
+          municipal.
+          <br />
+          <br />
+          Já os repasses para as empresas de ônibus serão feitas pela Prefeitura
+          considerando a quantidade de linhas, o número de passageiros e os
+          quilômetros percorridos.
+          <br />
+          <br />
+          Desta forma, a passagem no atual valor de R$ 4,30 para o cidadão
+          continuará a ser subsidiada pela Prefeitura, que paga a diferença do
+          valor real da tarifa para as empresas, de acordo com os km rodado em
+          cada linha de ônibus.
+          <br />
+          <br />
+          Tudo é controlado por meio do monitoramento em tempo real dos GPS
+          instalados na frota de ônibus cariocas. Os recursos serão somente
+          repassados para as empresas que estiverem com GPS funcionando
+          corretamente associados às linhas que estiverem operando.
+          <br />
+          <br />
+          Em caso de não cumprimento do acordo, ou seja, caso o empresário não
+          cumpra com a quilometragem requisitada pela Prefeitura, nenhum valor
+          adicional da tarifa de R$ 4,30 será repassado e sua concessão poderá
+          ser cancelada.
+          <br />
+          <br />
+          Este novo sistema permite o total controle da arrecadação com as
+          passagens e mais transparência para o carioca.
+        </styles.TextCard>
+        <img
+          src={compensacao}
+          className="h-auto w-auto mt-[60px] lg:mt-[90px]"
+        ></img>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv1>
   );
 }
 
-export function Mapaum(
-  props = {
-    id: "",
-    ref: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterMapDiv id={props.id} ref={props.ref}>
-      Mapa - 24% dos serviços operando conforme o determinado
-    </styles.ChapterMapDiv>
-  );
-}
+// export function Mapaum(
+//   props = {
+//     id: "",
+//     ref: null,
+//   }
+// ) {
+//   props = setDefaultProps(props);
+//   return (
+//     <styles.ChapterMapDiv id={props.id} ref={props.ref}>
+//       Mapa - 24% dos serviços operando conforme o determinado
+//     </styles.ChapterMapDiv>
+//   );
+// }
 
-export function Textomapaum(
-  props = {
-    id: "",
-    ref: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
-      <styles.ContainerCard>
-        <styles.TextCardBig>
-          <styles.TextHighlightGreen>24%</styles.TextHighlightGreen> dos
-          serviços operando conforme o determinado.{" "}
-          <styles.TextCard1 className="mt-[10px] lg:mt-[10px]">
-            Entre 80% e 100% da frota determinada.
-          </styles.TextCard1>
-        </styles.TextCardBig>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
+// export function Textomapaum(
+//   props = {
+//     id: "",
+//     ref: null,
+//   }
+// ) {
+//   props = setDefaultProps(props);
+//   return (
+//     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+//       <styles.ContainerCard>
+//         <styles.TextCardBig>
+//           <styles.TextHighlightGreen>24%</styles.TextHighlightGreen> dos
+//           serviços operando conforme o determinado.{" "}
+//           <styles.TextCard1 className="mt-[10px] lg:mt-[10px]">
+//             Entre 80% e 100% da frota determinada.
+//           </styles.TextCard1>
+//         </styles.TextCardBig>
+//       </styles.ContainerCard>
+//     </styles.ChapterGenericDiv>
+//   );
+// }
 
-export function Mapadois(
-  props = {
-    id: "",
-    ref: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterMapDiv id={props.id} ref={props.ref}>
-      Mapa - 18% dos serviços com operação irregular
-    </styles.ChapterMapDiv>
-  );
-}
+// export function Mapadois(
+//   props = {
+//     id: "",
+//     ref: null,
+//   }
+// ) {
+//   props = setDefaultProps(props);
+//   return (
+//     <styles.ChapterMapDiv id={props.id} ref={props.ref}>
+//       Mapa - 18% dos serviços com operação irregular
+//     </styles.ChapterMapDiv>
+//   );
+// }
 
-export function Textomapadois(
-  props = {
-    id: "",
-    ref: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
-      <styles.ContainerCard>
-        <styles.TextCardBig>
-          <styles.TextHighlightYellow>18%</styles.TextHighlightYellow> dos
-          serviços com operação irregular.{" "}
-          <styles.TextCard1 className="mt-[10px] lg:mt-[10px]">
-            Entre 20% e 80% da frota determinada.
-          </styles.TextCard1>
-        </styles.TextCardBig>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
+// export function Textomapadois(
+//   props = {
+//     id: "",
+//     ref: null,
+//   }
+// ) {
+//   props = setDefaultProps(props);
+//   return (
+//     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+//       <styles.ContainerCard>
+//         <styles.TextCardBig>
+//           <styles.TextHighlightYellow>18%</styles.TextHighlightYellow> dos
+//           serviços com operação irregular.{" "}
+//           <styles.TextCard1 className="mt-[10px] lg:mt-[10px]">
+//             Entre 20% e 80% da frota determinada.
+//           </styles.TextCard1>
+//         </styles.TextCardBig>
+//       </styles.ContainerCard>
+//     </styles.ChapterGenericDiv>
+//   );
+// }
 
-export function Mapatres(
-  props = {
-    id: "",
-    ref: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterMapDiv id={props.id} ref={props.ref}>
-      Mapa - 58% dos serviços inoperantes
-    </styles.ChapterMapDiv>
-  );
-}
+// export function Mapatres(
+//   props = {
+//     id: "",
+//     ref: null,
+//   }
+// ) {
+//   props = setDefaultProps(props);
+//   return (
+//     <styles.ChapterMapDiv id={props.id} ref={props.ref}>
+//       Mapa - 58% dos serviços inoperantes
+//     </styles.ChapterMapDiv>
+//   );
+// }
 
-export function Textomapatres(
-  props = {
-    id: "",
-    ref: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
-      <styles.ContainerCard>
-        <styles.TextCardBig>
-          <styles.TextHighlightRed>58%</styles.TextHighlightRed> dos serviços
-          inoperantes.{" "}
-          <styles.TextCard1 className="mt-[10px] lg:mt-[10px]">
-            Abaixo de 20% da frota determinada.
-          </styles.TextCard1>
-        </styles.TextCardBig>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
+// export function Textomapatres(
+//   props = {
+//     id: "",
+//     ref: null,
+//   }
+// ) {
+//   props = setDefaultProps(props);
+//   return (
+//     <styles.ChapterGenericDiv id={props.id} ref={props.ref}>
+//       <styles.ContainerCard>
+//         <styles.TextCardBig>
+//           <styles.TextHighlightRed>58%</styles.TextHighlightRed> dos serviços
+//           inoperantes.{" "}
+//           <styles.TextCard1 className="mt-[10px] lg:mt-[10px]">
+//             Abaixo de 20% da frota determinada.
+//           </styles.TextCard1>
+//         </styles.TextCardBig>
+//       </styles.ContainerCard>
+//     </styles.ChapterGenericDiv>
+//   );
+// }
 
 export function Virada(
   props = {
@@ -580,55 +651,31 @@ export function Fim(
           Guaratiba e Campo Grande foram as mais beneficiadas nesse contexto.
         </styles.TextCard>
         <styles.Grafico>
-          <iframe
-            className="w-full aspect-video"
-            title="Preço médio do dólar"
-            scrolling="no"
-            frameBorder="0"
-            id="datawrapper-chart-bv5y3"
-            aria-label="Gráfico de coluna"
-            src="https://datawrapper.dwcdn.net/bv5y3/2/"
-          ></iframe>
+          <img src={emprego1} className="w-full h-auto my-[45px]"></img>
+          <img src={emprego2} className="w-full h-auto my-[45px]"></img>
         </styles.Grafico>
         <styles.TextCard>
           Já o acesso à educação melhorou para 64% da população da cidade, com
           destaque para as mesmas regiões.
         </styles.TextCard>
-        <styles.Grafico>
-          <iframe
-            className="w-full aspect-video"
-            title="Preço médio do dólar"
-            scrolling="no"
-            frameBorder="0"
-            id="datawrapper-chart-bv5y3"
-            aria-label="Gráfico de coluna"
-            src="https://datawrapper.dwcdn.net/bv5y3/2/"
-          ></iframe>
-        </styles.Grafico>
+        <img src={saude1} className="w-full h-auto my-[45px]"></img>
+        <img src={saude2} className="w-full h-auto my-[45px]"></img>
         <styles.TextCard>
           As oportunidades de emprego ficaram mais fáceis de serem acessadas
           para 57% da população. Para os moradores de Santa Cruz, Ilha do
           Governador e Campo Grande o acesso ficou ainda melhor.
         </styles.TextCard>
-        <styles.Grafico>
-          <iframe
-            className="w-full aspect-video"
-            title="Preço médio do dólar"
-            scrolling="no"
-            frameBorder="0"
-            id="datawrapper-chart-bv5y3"
-            aria-label="Gráfico de coluna"
-            src="https://datawrapper.dwcdn.net/bv5y3/2/"
-          ></iframe>
-        </styles.Grafico>
-        <styles.IntroTitle className="lg:mt-[140px]">
+        <img src={educacao1} className="w-full h-auto my-[45px]"></img>
+        <img src={educacao2} className="w-full h-auto my-[45px]"></img>
+        <styles.IntroTitle className="mt-[120px] lg:mt-[140px]">
           Comprometimento da Prefeitura para melhoria da vida do carioca
         </styles.IntroTitle>
         <styles.TextCard>PENSAR TEXTO AQUI</styles.TextCard>
         <styles.TextCard>
-          <styles.FimTitle className="mt-[200px] lg:mt-[200px]">
-            Autores
-          </styles.FimTitle>
+          <styles.FimTitle1 className="mt-[200px] lg:mt-[200px] lg:mb-[48px] mb-[32px]">
+            Créditos
+          </styles.FimTitle1>
+          <styles.FimTitle>Autores</styles.FimTitle>
           Caio Jacintho <br />
           Diego Oliveira <br />
           Gabriel Gazola <br />
@@ -646,7 +693,7 @@ export function Fim(
           <br />
           <styles.FimTitle>Prefeito</styles.FimTitle>
           Eduardo Paes <br />
-          <img src={logo} className="h-12 mt-[12vh]  lg:h-16"></img>
+          <img src={logo} className="h-12 mt-[12vh] lg:h-16"></img>
         </styles.TextCard>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv1>

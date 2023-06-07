@@ -73,6 +73,18 @@ export const FimTitle = tw.div`
   selection:bg-yellow-600 selection:text-black
   `;
 
+export const FimTitle1 = tw.div`
+  font-black  font-serif
+  text-3xl text-left text-[#23211e]
+  mt-6
+  lg:mr-[20vw]
+  lg:text-[40px]
+  lg:max-w-3xl
+  lg:mt-8
+  lg:mb-2
+  selection:bg-yellow-600 selection:text-black
+  `;
+
 export const IntroText = tw.div`
   font-serif  font-medium
   align-middle

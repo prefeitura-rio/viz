@@ -117,7 +117,7 @@ export default function SubsidioSPPO() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: true,
+      markers: false,
       scrub: true,
       // toggleActions: "play reverse play reverse",
     });
@@ -292,7 +292,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Textomapadois id={"textomapadois"} />
       <chapterDiv.Mapatres id={"mapatres"} />
       <chapterDiv.Textomapatres id={"textomapatres"} /> */}
-      <chapterDiv.Virada id={"virada"} />
+      {/* <chapterDiv.Virada id={"virada"} /> */}
       <chapterDiv.Foco id={"foco"} />
       <chapterDiv.Antes id={"antes"} />
       <chapterDiv.Depois id={"depois"} />
