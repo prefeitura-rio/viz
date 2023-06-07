@@ -6,13 +6,12 @@ import capa from "../images/capa.gif";
 
 export const CapaDivSC = styled.div`
   background-image: url(${capa});
-  background-size: 60%;
+  background-size: cover;
   background-position: center;
-
-  @media only screen and (min-width: 768px) {
-    background-size: 21%;
-  }
 `;
+
+// @media only screen and (min-width: 768px) {
+//   background-size: 21%;
 
 export const CapaDiv = tw(CapaDivSC)`
   h-[100vh] w-full
@@ -34,9 +33,8 @@ export const Title = tw.div`
   p-2
   lg:text-[48px]
   text-white
-  drop-shadow-[0_2px_2px_rgba(0,0,0,0.99)]
-  lg:mt-[255px]
-    `;
+  drop-shadow-[0_8px_8px_rgba(0,0,0,0.99)]
+  `;
 
 export const Subtitle = tw.div`
 font-geologica font-[100]
@@ -47,7 +45,7 @@ leading-[120%]
 py-0
 px-2
 text-white
-drop-shadow-[0_2px_2px_rgba(0,0,0,0.99)]
+drop-shadow-[0_1px_1px_rgba(0,0,0,0.99)]
 `;
 
 export const Video = tw.div`
@@ -69,7 +67,7 @@ export const AuthorText = tw.div`
   font-geologica
   text-[14px] text-left text-black
   leading-[150%]
-  mb-[120px]
+  mb-[88px]
  `;
 
 export const ChapterGenericDiv = tw.div`

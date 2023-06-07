@@ -9,7 +9,7 @@ import { isMobile } from "react-device-detect";
 import logoed from "../images/logoed.png";
 import logo from "../images/logo.png";
 import capa from "../images/capa.gif";
-import marco from "../images/marco.jpg";
+import scroll from "../images/scroll.gif";
 import ranking from "../images/ranking.jpg";
 import plano from "../images/plano.jpg";
 import mapaplano from "../images/mapaplano.jpg";
@@ -46,11 +46,12 @@ export function Capa(
         <img
           src={logo}
           className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14"
-        ></img>{" "}
+        ></img>
         <styles.Title>Por que o Rio de Janeiro alaga? </styles.Title>
         <styles.Subtitle>
           E como a prefeitura trabalha para que a chuva não castigue os cariocas
         </styles.Subtitle>
+        <img src={scroll} className="h-7 lg:h-9 mt-[20px] lg:mt-[20px]"></img>{" "}
       </styles.CapaAutor>
     </styles.CapaDiv>
   );
@@ -101,24 +102,23 @@ export function ContextoHistorico(
               <source src={video_capa} type="video/mp4" />
             </video>
           </styles.Video>
-          <div className="flex justify-between">
-            <div>
-              <div className="mt-[30px] h-[3px] w-[20px] bg-black"></div>
-              <styles.AuthorText className="mt-[8px] mr-[20px] lg:w-[420px]">
-                Desenvolvido pela Equipe de Visualização de Dados do{" "}
-                <a
-                  className="font-bold underline"
-                  href="https://www.dados.rio/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Escritório de Dados
-                </a>{" "}
-                da Prefeitura da Cidade do Rio de Janeiro
-              </styles.AuthorText>{" "}
-            </div>
-            <img src={logoed} className="mt-[30px] h-10 lg:h-12"></img>
+
+          <div>
+            <div className="mt-[30px] h-[3px] w-[20px] bg-black"></div>
+            <styles.AuthorText className="mt-[8px] mr-[20px] lg:w-[420px]">
+              Desenvolvido pela Equipe de Visualização de Dados do{" "}
+              <a
+                className="font-bold underline"
+                href="https://www.dados.rio/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Escritório de Dados
+              </a>{" "}
+              da Prefeitura da Cidade do Rio de Janeiro
+            </styles.AuthorText>{" "}
           </div>
+
           <div className="h-[10px] w-[50px] bg-black mb-[10px]"></div>
           <styles.TextCard>Introdução</styles.TextCard>
           <styles.TextCard1>
@@ -575,15 +575,17 @@ export function Creditos(
           Agradecimentos
         </styles.TextCreditos>
         <styles.TextCreditos1>
-          Alexandre Reis <br />
-          Ana Carla Badaro <br />
+          Alexandre Ferreira Reis <br />
+          Ana Carla Badaró <br />
           Ana Rebouças <br />
-          Flavio Lopes <br />
-          Gabriel Gazola Milan
-          <br />
+          Flávio Lopes <br />
+          Gabriel Gazola Milan <br />
           João Carabetta <br />
+          Luiz Guilherme Gomes <br />
+          Marcus Belchior <br />
           Mylenna Merlo <br />
-          Wanderson José dos Santos <br />
+          Vitor Sá Mario Oliveira <br />
+          Wanderson José dos Santos
         </styles.TextCreditos1>
         <styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
           Parceria
