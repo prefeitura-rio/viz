@@ -23,7 +23,7 @@ if __name__ == "__main__":
         cv2.imwrite(
             filename=str(images_path / f"{count}.jpg"),
             img=image,
-            params=[cv2.IMWRITE_JPEG_QUALITY, 30],
+            params=[cv2.IMWRITE_JPEG_QUALITY, 20],
         )
 
         success, image = vidcap.read()
