@@ -199,7 +199,7 @@ export function QuadroUm(
           chegarmos aqui e em 458 anos de história, muita coisa mudou.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[100vh]">
+      <styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
         <styles.TextCard3>
           A ligação da nossa cidade com a água está no nosso nome.
           Originalmente, a cidade possuía diversos{" "}
@@ -208,7 +208,7 @@ export function QuadroUm(
           para transporte de passageiros e cargas.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[160vh]">
+      <styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
         <styles.TextCard3>
           Graças ao processo de urbanização, diversos rios e mangues foram
           <styles.TextHighlightBlueUm>
@@ -218,7 +218,7 @@ export function QuadroUm(
           dinâmicas de cheias destes rios.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card4"} className=" top-[270vh]">
+      <styles.ContainerCard3 id={"quadro_um_card4"} className=" top-[280vh]">
         <styles.TextCard3>
           Uma destas regiões é a do Saco do São Diogo, localizada entre a Praça
           XI e a Baía de Guanabara.
@@ -288,75 +288,75 @@ export function QuadroDois(
           enchentes que atingem o Rio de Janeiro.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[80vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[70vh]">
         <styles.TextCard3>
           A urbanização desenfreada comprometeu a capacidade do solo de absorver
           a água da chuva, dificultando desta forma o escoamento e aumentando o
           risco de inundações.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[200vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[180vh]">
         <styles.TextCard3>
           Além disso, a cidade costeira, rodeada pela Baía de Guanabara, sofre
           com a influência direta da maré alta.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[360vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[310vh]">
         <styles.TextCard3>
           Durante chuvas intensas, a água, que já não é absorvida pelo solo, não
           consegue também ser escoada para o mar, acumulando-se então nas ruas e
           causando transtornos para os cariocas.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[480vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[400vh]">
         <styles.TextCard3>
           Infelizmente, o lixo é um grande vilão quando se trata de alagamentos
           e enchentes em nossa cidade. Jogados de forma incorreta nas ruas, o
           lixo entope os bueiros, causando os chamados bolsões d'água.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[550vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[500vh]">
         <styles.TextCard3>
           Diariamente, a Comlurb recolhe cerca de 9.000 toneladas de resíduos em
           toda a cidade. Desse montante, 3.600 toneladas são lixo público,
           jogados pelas ruas do Rio.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[660vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[600vh]">
         <styles.TextCard3>
           Nosso sistema de saneamento conta a rede de esgoto, a rede fluvial,
           responsável pela canalização dos rios e também com a rede pluvial, que
           capta a água da chuva.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[1570vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[690vh]">
         <styles.TextCard3>
           Esse problema fica ainda pior quando uma tampa de bueiro é alvo de
           ladrões.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[1620vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[800vh]">
         <styles.TextCard3>
           Essas proteções são essenciais para impedir que o lixo arrastado pela
           chuva prejudique o bom escoamento e chegue até os rios. Além disso, os
           furtos colocam em risco a segurança de pedestres e motoristas.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[1670vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[900vh]">
         <styles.TextCard3>
           Desde o início deste ano, a SECONSERVA já precisou repor 862 tampas e
           grelhas em toda a cidade, um prejuízo de R$ 204.183,90 aos cofres
           públicos.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[1720vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[980vh]">
         <styles.TextCard3>
           Esse problema se torna ainda pior quando as papeleiras espalhadas pela
           cidade são furtadas ou vandalizadas, dificultando o descarte correto
           do lixo.
         </styles.TextCard3>
       </styles.ContainerCard3>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[1750vh]">
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[1020vh]">
         <styles.TextCard3>
           Em média, 500 a 600 unidades de papeleiras são furtadas ou danificadas
           mensalmente, totalizando cerca de 6.000 ao ano. O prejuízo para os
@@ -432,13 +432,13 @@ export function ParteDois(
         </styles.TextCard1>
         <img
           src={rotina1}
-          className="h-auto mt-[60px] mb-[10px] rounded-md"
+          className="h-auto mt-[40px] mb-[10px] rounded-md"
         ></img>
         <styles.Imagem>Limpeza de rios e canais na cidade</styles.Imagem>
         <styles.Imagem1>Foto: Divulgação/ Fundação Rio-Águas</styles.Imagem1>
         <img
           src={rotina2}
-          className="h-auto mt-[60px] mb-[10px] rounded-md"
+          className="h-auto mt-[40px] mb-[10px] rounded-md"
         ></img>
         <styles.Imagem>Desassoreamento do Rio Acari</styles.Imagem>
         <styles.Imagem1>Foto: Divulgação/ Fundação Rio-Águas</styles.Imagem1>
@@ -469,7 +469,7 @@ export function ParteDois(
           <br />
           <img
             src={obras1}
-            className="h-auto mt-[60px] mb-[10px] rounded-md"
+            className="h-auto mt-[40px] mb-[10px] rounded-md"
           ></img>
           <styles.Imagem>
             Obras de infraestrutura em Jardim Maravilha
@@ -477,7 +477,7 @@ export function ParteDois(
           <styles.Imagem1>Foto: Divulgação/ Fundação Rio-Águas</styles.Imagem1>
           <img
             src={obras2}
-            className="h-auto mt-[60px] mb-[10px] rounded-md"
+            className="h-auto mt-[40px] mb-[10px] rounded-md"
           ></img>
           <styles.Imagem>
             Obra de drenagem no entorno do Mercadão de Madureira
@@ -485,7 +485,7 @@ export function ParteDois(
           <styles.Imagem1>Foto: Divulgação/ Fundação Rio-Águas</styles.Imagem1>
           <img
             src={obras3}
-            className="h-auto mt-[60px] mb-[10px] rounded-md"
+            className="h-auto mt-[40px] mb-[10px] rounded-md"
           ></img>
           <styles.Imagem>
             Reservatório da Praça da Bandeira em operação
@@ -576,13 +576,13 @@ export function ParteDois(
           para enfrentar os desafios climáticos e minimizar os impactos na vida
           dos cariocas.
         </styles.TextCard1>
-        <img src={cor1} className="h-auto mt-[60px] mb-[10px] rounded-md"></img>
+        <img src={cor1} className="h-auto mt-[40px] mb-[10px] rounded-md"></img>
         <styles.Imagem>Centro de Operações Rio</styles.Imagem>
         <styles.Imagem1>Foto: Divulgação/ COR</styles.Imagem1>
-        <img src={cor2} className="h-auto mt-[60px] mb-[10px] rounded-md"></img>
+        <img src={cor2} className="h-auto mt-[40px] mb-[10px] rounded-md"></img>
         <styles.Imagem>Centro de Operações Rio</styles.Imagem>
         <styles.Imagem1>Foto: Divulgação/ COR</styles.Imagem1>
-        <img src={cor3} className="h-auto mt-[60px] mb-[10px] rounded-md"></img>
+        <img src={cor3} className="h-auto mt-[40px] mb-[10px] rounded-md"></img>
         <styles.Imagem>Centro de Operações Rio</styles.Imagem>
         <styles.Imagem1>Foto: Divulgação/ COR</styles.Imagem1>
         <div className="mt-[140px] h-[10px] w-[50px] bg-black mb-[10px]"></div>

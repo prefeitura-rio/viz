@@ -35,8 +35,8 @@ export default function Enchentes() {
         if (frameNumber > 450) {
           frameNumber = 450;
         }
-        const imageUrl =
-          require(`./videos/quadro_um/${frameNumber.toString()}.jpg`).default;
+
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
         video.src = imageUrl;
         console.log(imageUrl);
       },
@@ -59,12 +59,11 @@ export default function Enchentes() {
       trigger: "#quadro_dois",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video");
-        let frameNumber = Math.floor(self.progress * 1150) + 1;
-        if (frameNumber > 1124) {
-          frameNumber = 1124;
+        let frameNumber = Math.floor(self.progress * 1742) + 1;
+        if (frameNumber > 1703) {
+          frameNumber = 1703;
         }
-        const imageUrl =
-          require(`./videos/quadro_dois/${frameNumber.toString()}.jpg`).default;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_dois/${frameNumber}.jpg`;
         console.log(imageUrl);
         video.src = imageUrl;
       },
@@ -79,7 +78,7 @@ export default function Enchentes() {
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
           }
-          className="h-auto w-[90%] lg:h-auto lg:w-[46%] border-4 border-black"
+          className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
         ></img>
       </div>
       <chapterDiv.Capa id={"capa"} />

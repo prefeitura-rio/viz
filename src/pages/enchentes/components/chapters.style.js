@@ -30,8 +30,12 @@ export const Title = tw.div`
   text-[32px]
   text-center
   leading-[120%]
-  p-2
+  py-[10px]
+  px-8
+  lg:py-0
+  lg:px-0
   lg:text-[48px]
+  lg:mt-[100px]
   text-white
   drop-shadow-[0_8px_8px_rgba(0,0,0,0.99)]
   `;
@@ -43,7 +47,9 @@ text-[18px]
 lg:text-[22px]
 leading-[120%]
 py-0
-px-2
+px-8
+lg:py-[12px]
+lg:px-0
 text-white
 drop-shadow-[0_1px_1px_rgba(0,0,0,0.99)]
 `;
@@ -106,8 +112,8 @@ export const ChapterQuadroDois = tw.div`
   flex
   relative
   justify-center
-  w-auto h-[800vh]
-  lg:w-auto lg:h-[800vh]
+  w-auto h-[1100vh]
+  lg:w-auto lg:h-[1100vh]
   overflow-hidden
   px-[30px]
   lg:p-[34px]
@@ -148,7 +154,7 @@ export const ContainerCard2 = tw.div`
 export const ContainerCard3 = tw.div`
     absolute
     z-10
-    h-auto w-[80%] lg:w-[600px]
+    h-auto w-[80%] lg:w-[460px]
     bg-[#ffffff99]
     px-[40px]
     py-[34px]
