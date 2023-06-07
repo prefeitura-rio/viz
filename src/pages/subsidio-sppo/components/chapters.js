@@ -670,7 +670,24 @@ export function Fim(
         <styles.IntroTitle className="mt-[120px] lg:mt-[140px]">
           Comprometimento da Prefeitura para melhoria da vida do carioca
         </styles.IntroTitle>
-        <styles.TextCard>PENSAR TEXTO AQUI</styles.TextCard>
+        <styles.TextCard>
+          Após um ano de implementação do subsídio, o carioca consegue
+          aproveitar os impactos positivos dessa iniciativa pioneira no
+          transporte público da cidade.
+          <br />
+          <br />
+          Desde a sua adoção, milhares de passageiros têm suas linhas de ônibus
+          de volta, permitindo um deslocamento mais eficiente pela cidade.
+          <br />
+          <br />
+          Além disso, o subsídio contribuiu para a modernização o sistema de
+          bilhetagem de ônibus, garantindo a transparência de toda a operação.
+          <br />
+          <br />
+          Com base nesses resultados, é evidente que o subsídio para ônibus tem
+          sido uma estratégia eficaz para melhorar a mobilidade urbana e
+          promover a qualidade de vida dos cariocas.
+        </styles.TextCard>
         <styles.TextCard>
           <styles.FimTitle1 className="mt-[200px] lg:mt-[200px] lg:mb-[48px] mb-[32px]">
             Créditos

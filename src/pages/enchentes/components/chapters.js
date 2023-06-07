@@ -324,9 +324,9 @@ export function QuadroDois(
       </styles.ContainerCard3>
       <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[600vh]">
         <styles.TextCard3>
-          Nosso sistema de saneamento conta a rede de esgoto, a rede fluvial,
-          responsável pela canalização dos rios e também com a rede pluvial, que
-          capta a água da chuva.
+          Nosso sistema de saneamento conta com a rede de esgoto, a rede
+          fluvial, responsável pela canalização dos rios e também com a rede
+          pluvial, que capta a água da chuva.
         </styles.TextCard3>
       </styles.ContainerCard3>
       <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[690vh]">
@@ -389,7 +389,8 @@ export function ParteDois(
           <br />
           <br />
           As medidas para mitigar os efeitos podem ser tomadas antes, durante ou
-          como planejamento de obras específicas contra enchentes e alagamentos.
+          com o planejamento de obras específicas contra enchentes e
+          alagamentos.
           <br />
           <br />A seguir, você verá uma série de ações realizadas pela
           Prefeitura para combater este problema.
@@ -404,7 +405,7 @@ export function ParteDois(
           limpeza da cidade do Rio de Janeiro.
           <br />
           <br />
-          Com uma frota de 107 caminhões basculantes, a empresa realiza a
+          Com uma frota de 107 caminhões basculantes , a empresa realiza a
           remoção de lixo público, tanto depositado corretamente em papeleiras
           quanto jogado de forma errada nas ruas e avenidas. E se o lixo estiver
           na praia, um dos 25 tratores para a limpeza da areia também pode ser
