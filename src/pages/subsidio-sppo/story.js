@@ -36,7 +36,7 @@ export default function SubsidioSPPO() {
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState(0);
-  // console.log(chapterNumberMap);
+  // console.log(chapterNumberMap);-
   useEffect(() => {
     switch (chapterNumberMap) {
       case "capa":
@@ -44,50 +44,42 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Capa().layers);
         break;
       case "intro":
-        setPosition(chapterMap.Capa().location);
-        setLayers(chapterMap.Capa().layers);
+        setPosition(chapterMap.Vazio().location);
+        setLayers(chapterMap.Vazio().layers);
         break;
-      case "vazio":
-        setPosition(chapterMap.Cheio().location);
-        setLayers(chapterMap.Cheio().layers);
+      case "mapalinhas":
+        setPosition(chapterMap.Linhas().location);
+        setLayers(chapterMap.Linhas().layers);
+        break;
+      case "textomapalinhas":
+        setPosition(chapterMap.Linhas().location);
+        setLayers(chapterMap.Linhas().layers);
         break;
       case "historia-1":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
-      case "historia-foto":
+      case "mapaum":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
-      case "historia-2":
+      case "textomapaum":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
-      case "pandemia":
+      case "mapadois":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
-      case "grafico-dolar":
+      case "textomapadois":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
-      case "grafico-diesel":
+      case "mapatres":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
-      case "grafico-passageiros":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
-      case "virada":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
-      case "caixa":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
-      case "foco":
+      case "textomapatres":
         setPosition(chapterMap.Vazio().location);
         setLayers(chapterMap.Vazio().layers);
         break;
@@ -99,29 +91,17 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Depois().location);
         setLayers(chapterMap.Depois().layers);
         break;
-      case "graficos":
+      case "mapapontos":
+        setPosition(chapterMap.Pontos().location);
+        setLayers(chapterMap.Pontos().layers);
+        break;
+      case "textomapapontos":
+        setPosition(chapterMap.Pontos().location);
+        setLayers(chapterMap.Pontos().layers);
+        break;
+      case "fim":
         setPosition(chapterMap.Depois().location);
         setLayers(chapterMap.Depois().layers);
-        break;
-      case "saude":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
-      case "educacao":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
-      case "trabalho":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
-      case "passagem":
-        setPosition(chapterMap.Vazio().location);
-        setLayers(chapterMap.Vazio().layers);
-        break;
-      case "creditos":
-        setPosition(chapterMap.Creditos().location);
-        setLayers(chapterMap.Creditos().layers);
         break;
       default:
         break;
@@ -137,7 +117,7 @@ export default function SubsidioSPPO() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: true,
+      markers: false,
       scrub: true,
       // toggleActions: "play reverse play reverse",
     });
@@ -159,37 +139,66 @@ export default function SubsidioSPPO() {
       },
     });
 
-    const tl2 = gsap.timeline();
-    tl2
-      .set("#intro", { opacity: 0 })
-      .to("#intro", { opacity: 0, duration: 30 })
-      .to("#intro", { opacity: 1, duration: 5 })
-      .to("#intro", { opacity: 1, duration: 20 })
-      .to("#intro", { opacity: 0, duration: 5 })
-      .to("#intro", { opacity: 0, duration: 30 });
-
     ScrollTrigger.create({
-      animation: tl2,
       trigger: "#intro",
       onToggle: () => {
         setChapterNumberMap("intro");
       },
     });
 
-    const tl10 = gsap.timeline();
-    tl10
-      .set("#vazio", { opacity: 0 })
-      .to("#vazio", { opacity: 0, duration: 30 })
-      .to("#vazio", { opacity: 1, duration: 6 })
-      .to("#vazio", { opacity: 1, duration: 20 })
-      .to("#vazio", { opacity: 0, duration: 6 })
-      .to("#vazio", { opacity: 0, duration: 28 });
+    ScrollTrigger.create({
+      trigger: "#mapalinhas",
+      onToggle: () => {
+        setChapterNumberMap("mapalinhas");
+      },
+    });
 
     ScrollTrigger.create({
-      animation: tl10,
-      trigger: "#vazio",
+      trigger: "#textomapalinhas",
       onToggle: () => {
-        setChapterNumberMap("vazio");
+        setChapterNumberMap("textomapalinhas");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#mapaum",
+      onToggle: () => {
+        setChapterNumberMap("mapaum");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#textomapaum",
+      onToggle: () => {
+        setChapterNumberMap("textomapaum");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#mapadois",
+      onToggle: () => {
+        setChapterNumberMap("mapadois");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#textomapadois",
+      onToggle: () => {
+        setChapterNumberMap("textomapadois");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#mapatres",
+      onToggle: () => {
+        setChapterNumberMap("mapatres");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#textomapatres",
+      onToggle: () => {
+        setChapterNumberMap("textomapatres");
       },
     });
 
@@ -201,87 +210,9 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#historia-foto",
-      onToggle: () => {
-        setChapterNumberMap("historia-foto");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#historia-2",
-      onToggle: () => {
-        setChapterNumberMap("historia-2");
-      },
-    });
-
-    const tl15 = gsap.timeline();
-    tl15
-      .set("#pandemia", { opacity: 0 })
-      .to("#pandemia", { opacity: 0, duration: 30 })
-      .to("#pandemia", { opacity: 1, duration: 6 })
-      .to("#pandemia", { opacity: 1, duration: 20 })
-      .to("#pandemia", { opacity: 1, duration: 6 })
-      .to("#pandemia", { opacity: 1, duration: 28 });
-
-    ScrollTrigger.create({
-      animation: tl15,
-      trigger: "#pandemia",
-      onToggle: () => {
-        setChapterNumberMap("pandemia");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#grafico-dolar",
-      start: "top",
-      end: "bottom",
-      pin: "#pin-dolar",
-      onToggle: () => {
-        setChapterNumberMap("grafico-dolar");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#grafico-diesel",
-      start: "top",
-      end: "bottom",
-      pin: "#pin-diesel",
-      onToggle: () => {
-        setChapterNumberMap("grafico-diesel");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#grafico-passageiros",
-      start: "top",
-      end: "bottom",
-      pin: "#pin-passageiros",
-      onToggle: () => {
-        setChapterNumberMap("grafico-passageiros");
-      },
-    });
-
-    const tl20 = gsap.timeline();
-    tl20
-      .set("#virada", { opacity: 0 })
-      .to("#virada", { opacity: 0, duration: 30 })
-      .to("#virada", { opacity: 1, duration: 6 })
-      .to("#virada", { opacity: 1, duration: 20 })
-      .to("#virada", { opacity: 0, duration: 6 })
-      .to("#virada", { opacity: 0, duration: 28 });
-
-    ScrollTrigger.create({
-      animation: tl20,
       trigger: "#virada",
       onToggle: () => {
         setChapterNumberMap("virada");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#caixa",
-      onToggle: () => {
-        setChapterNumberMap("caixa");
       },
     });
 
@@ -307,64 +238,23 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#graficos",
+      trigger: "#mapapontos",
       onToggle: () => {
-        setChapterNumberMap("graficos");
+        setChapterNumberMap("mapapontos");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#saude",
+      trigger: "#textomapapontos",
       onToggle: () => {
-        setChapterNumberMap("saude");
+        setChapterNumberMap("textomapapontos");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#educacao",
+      trigger: "#fim",
       onToggle: () => {
-        setChapterNumberMap("educacao");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#trabalho",
-      onToggle: () => {
-        setChapterNumberMap("trabalho");
-      },
-    });
-
-    const tl25 = gsap.timeline();
-    tl25
-      .set("#passagem", { opacity: 0 })
-      .to("#passagem", { opacity: 0, duration: 30 })
-      .to("#passagem", { opacity: 1, duration: 6 })
-      .to("#passagem", { opacity: 1, duration: 20 })
-      .to("#passagem", { opacity: 0, duration: 6 })
-      .to("#passagem", { opacity: 0, duration: 28 });
-
-    ScrollTrigger.create({
-      animation: tl25,
-      trigger: "#passagem",
-      onToggle: () => {
-        setChapterNumberMap("passagem");
-      },
-    });
-
-    const tl9 = gsap.timeline();
-    tl9
-      .set("#creditos", { opacity: 0 })
-      .to("#creditos", { opacity: 0, duration: 30 })
-      .to("#creditos", { opacity: 1, duration: 6 })
-      .to("#creditos", { opacity: 1, duration: 20 })
-      .to("#creditos", { opacity: 1, duration: 6 })
-      .to("#creditos", { opacity: 1, duration: 28 });
-
-    ScrollTrigger.create({
-      animation: tl9,
-      trigger: "#creditos",
-      onToggle: () => {
-        setChapterNumberMap("creditos");
+        setChapterNumberMap("fim");
       },
     });
   }, []);
@@ -373,6 +263,7 @@ export default function SubsidioSPPO() {
     <>
       <MultilayerMap
         interactive={false}
+        showLayers={true}
         scrollZoom={true}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
         mapStyle="mapbox://styles/escritoriodedados/cl5b8ea0s002915qtaaxvxz8b"
@@ -392,25 +283,22 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
-      <chapterDiv.Vazio id={"vazio"} />
+      <chapterDiv.Mapalinhas id={"mapalinhas"} />
+      <chapterDiv.Textomapalinhas id={"textomapalinhas"} />
       <chapterDiv.Historia1 id={"historia-1"} />
-      <chapterDiv.HistoriaFoto id={"historia-foto"} />
-      <chapterDiv.Historia2 id={"historia-2"} />
-      <chapterDiv.Pandemia id={"pandemia"} />
-      <chapterDiv.GraficoDolar id={"grafico-dolar"} />
-      <chapterDiv.GraficoDiesel id={"grafico-diesel"} />
-      <chapterDiv.GraficoPassageiros id={"grafico-passageiros"} />
-      <chapterDiv.Virada id={"virada"} />
-      <chapterDiv.Caixa id={"caixa"} />
+      {/* <chapterDiv.Mapaum id={"mapaum"} />
+      <chapterDiv.Textomapaum id={"textomapaum"} />
+      <chapterDiv.Mapadois id={"mapadois"} />
+      <chapterDiv.Textomapadois id={"textomapadois"} />
+      <chapterDiv.Mapatres id={"mapatres"} />
+      <chapterDiv.Textomapatres id={"textomapatres"} /> */}
+      {/* <chapterDiv.Virada id={"virada"} /> */}
       <chapterDiv.Foco id={"foco"} />
       <chapterDiv.Antes id={"antes"} />
       <chapterDiv.Depois id={"depois"} />
-      <chapterDiv.Graficos id={"graficos"} />
-      <chapterDiv.Saude id={"saude"} />
-      <chapterDiv.Educacao id={"educacao"} />
-      <chapterDiv.Trabalho id={"trabalho"} />
-      <chapterDiv.Passagem id={"passagem"} />
-      <chapterDiv.Creditos id={"creditos"} />
+      <chapterDiv.Mapapontos id={"mapapontos"} />
+      <chapterDiv.Textomapapontos id={"textomapapontos"} />
+      <chapterDiv.Fim id={"fim"} />
     </>
   );
 }

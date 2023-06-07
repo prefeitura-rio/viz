@@ -11,7 +11,10 @@ items-center justify-center
 `;
 
 const LoadingImage = tw.img`
-w-[400px] h-[400px]
+w-[90%] h-auto
+lg:w-[20%] lg:h-auto
+border-4
+border-black
 `;
 
 export function LoadingEnchentes() {

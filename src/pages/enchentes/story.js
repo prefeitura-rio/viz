@@ -1,6 +1,7 @@
 // Mandatory
 import { useEffect, useState, useRef } from "react";
 import MultilayerMap from "../../components/maps/multilayer_map";
+import { Controller, Scene } from "react-scrollmagic";
 
 // Chapters
 import * as chapterMap from "./components/chapters.map";
@@ -13,79 +14,81 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Enchentes() {
-  const [location, setLocation] = useState(chapterMap.Capa().location);
-  const [layers, setLayers] = useState(chapterMap.Capa().layers);
-
-  useEffect(() => {
-    document.title = "E as chuvas castigam os cariocas";
-  }, []);
-
   const vh = (coef) => window.innerHeight * (coef / 100);
   const vw = (coef) => window.innerWidth * (coef / 100);
 
   useEffect(() => {
-    // gsap.defaults({ ease: "none" });
-
+    gsap.defaults({ ease: "none" });
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
       markers: false,
       scrub: true,
-      // toggleActions: "play reverse play reverse",
+      toggleActions: "play reverse play reverse",
     });
+
     ScrollTrigger.create({
-      trigger: "#capa",
+      trigger: "#quadro_um",
+      onUpdate: (self) => {
+        const video = document.getElementById("quadro_video");
+        let frameNumber = Math.floor(self.progress * 497) + 1;
+        if (frameNumber > 450) {
+          frameNumber = 450;
+        }
+
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        video.src = imageUrl;
+        console.log(imageUrl);
+      },
     });
 
-    // const tl_cep_capitulo = gsap.timeline();
-    // tl_cep_capitulo
-    //   .set("#cep_image_1", { opacity: 0 })
-    //   .to("#cep_image_1", { opacity: 0, duration: 30 })
-    //   .to("#cep_image_1", { opacity: 1, duration: 70 });
+    ScrollTrigger.create({
+      trigger: "#parteum",
+      onUpdate: (self) => {
+        const video = document.getElementById("quadro_video");
+        const progress = self.progress;
+        const imageUrl =
+          progress < 0.5
+            ? "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/450.jpg"
+            : "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_dois/1.jpg";
+        video.src = imageUrl;
+      },
+    });
 
-    // ScrollTrigger.create({
-    //   animation: tl_cep_capitulo,
-    //   trigger: "#cep_capitulo",
-    // });
+    ScrollTrigger.create({
+      trigger: "#quadro_dois",
+      onUpdate: (self) => {
+        const video = document.getElementById("quadro_video");
+        let frameNumber = Math.floor(self.progress * 1742) + 1;
+        if (frameNumber > 1703) {
+          frameNumber = 1703;
+        }
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_dois/${frameNumber}.jpg`;
+        console.log(imageUrl);
+        video.src = imageUrl;
+      },
+    });
   }, []);
 
   return (
     <>
-      <MultilayerMap
-        interactive={true}
-        scrollZoom={true}
-        showLayers={true}
-        mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
-        mapStyle="mapbox://styles/escritoriodedados/clb5mnbms001z14o76898gh5c"
-        layers={layers}
-        location={location}
-        mapCSS={{
-          position: "fixed",
-          top: "0",
-          left: "0",
-          width: "100%",
-          height: "100%",
-          // maxWidth: "100%",
-          zIndex: "-9999",
-        }}
-        animationLoopLength={21600}
-        animationSpeed={1}
-      />
-      {/* <chapterDiv.CepImages id={"cep_images"} /> */}
-      {/* <chapterDiv.CepCapitulo id={"cep_capitulo"} /> */}
+      <div className="fixed -z-10 flex flex-col items-center justify-center h-[100vh] w-[100vw]">
+        <img
+          id={"quadro_video"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
+          }
+          className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
+        ></img>
+      </div>
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.ContextoHistorico id={"contexto_historico"} />
+      <div className="h-[95vh] w-full bg-transparent"></div>
       <chapterDiv.QuadroUm id={"quadro_um"} />
-      <chapterDiv.Impermeabilidade id={"impermeabilidade"} />
-      <chapterDiv.Lixo id={"lixo"} />
-      <chapterDiv.Vandalismo id={"vandalismo"} />
-      <chapterDiv.Clandestino id={"clandestino"} />
-      <chapterDiv.ContextoMundial id={"contexto_mundial"} />
-      <chapterDiv.Prefeitura id={"prefeitura"} />
-      <chapterDiv.Rotina id={"rotina"} />
-      <chapterDiv.ObrasProjetos id={"obras_projetos"} />
-      <chapterDiv.Cor id={"cor"} />
-      <chapterDiv.Futuro id={"futuro"} />
+      <chapterDiv.ParteUm id={"parteum"} />
+      <div className="h-[95vh] w-full bg-transparent"></div>
+      <chapterDiv.QuadroDois id={"quadro_dois"} />
+      <chapterDiv.ParteDois id={"partedois"} />
       <chapterDiv.Creditos id={"creditos"} />
     </>
   );

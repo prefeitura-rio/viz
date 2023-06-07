@@ -5,32 +5,63 @@ import tw from "tailwind-styled-components";
 import capa from "../images/capa.gif";
 
 export const CapaDivSC = styled.div`
-  background-color: #ffffff;
   background-image: url(${capa});
-  background-size: 20%;
+  background-size: cover;
   background-position: center;
-  /* backdrop-filter: blur(10px); */
-  /* filter: blur(8px); */
 `;
+
+// @media only screen and (min-width: 768px) {
+//   background-size: 21%;
 
 export const CapaDiv = tw(CapaDivSC)`
   h-[100vh] w-full
   flex flex-col
   justify-center  items-center
-  bg-white
   `;
 
 export const CapaAutor = tw.div`
-  h-[50vh] w-[90vw]
-  lg:h-[800px] lg:w-[800px]
-  m-3
-  flex flex-col
+  flex flex-col  
+  lg:h-auto lg:w-[800px]
   justify-center items-center
-  font-sans
-bg-white
+  `;
+
+export const Title = tw.div`  
+  font-geologica font-[700]
+  text-[32px]
+  text-center
+  leading-[120%]
+  py-[10px]
+  px-8
+  lg:py-0
+  lg:px-0
+  lg:text-[48px]
+  lg:mt-[100px]
+  text-white
+  drop-shadow-[0_8px_8px_rgba(0,0,0,0.99)]
+  `;
+
+export const Subtitle = tw.div`
+font-geologica font-[100]
+text-center
+text-[18px]
+lg:text-[22px]
+leading-[120%]
+py-0
+px-8
+lg:py-[12px]
+lg:px-0
+text-white
+drop-shadow-[0_1px_1px_rgba(0,0,0,0.99)]
+`;
+
+export const Video = tw.div`
+  flex flex-col  
+  h-auto w-[56w]
+  lg:h-[700px] lg:w-[700px]
+  justify-center items-center
   border-4
   border-black
-  relative
+  
   `;
 
 export const Scroll = tw.div`
@@ -38,36 +69,11 @@ export const Scroll = tw.div`
   lg:justify-between lg:items-center
   `;
 
-export const Title = tw.div`
-font-poppins font-bold 
-text-[32px]
-lg:text-[60px]
-text-center
-lg:px-[100px]
-leading-[110%]
-lg:leading-[110%]
-text-black
-mt-[40px]
-  `;
-
-export const Subtitle = tw.div`
-font-poppins font-regular 
-text-[18px]
-lg:text-[28px]
-text-center
-px-[32px]
-lg:px-[140px]
-lg:leading-[120%]
-text-black
-mt-[20px]
-`;
-
 export const AuthorText = tw.div`
-  font-poppins font-regular
-  text-[16px] text-left text-black
+  font-geologica
+  text-[14px] text-left text-black
   leading-[150%]
-  mb-[120px]
-
+  mb-[88px]
  `;
 
 export const ChapterGenericDiv = tw.div`
@@ -75,10 +81,10 @@ flex
 w-full h-auto
 items-center
 justify-center
-px-[30px]
+px-[48px]
 lg:p-[34px]
 bg-white
-  `;
+`;
 
 export const ChapterGenericDiv1 = tw.div`
   flex
@@ -88,18 +94,31 @@ export const ChapterGenericDiv1 = tw.div`
   p-[34px]
   lg:p-[34px]
   bg-white
-    `;
+  `;
 
 export const ChapterGenericDiv2 = tw.div`
-flex
-w-full h-[100vh]
-lg:w-full lg:h-auto
-items-center
-justify-center
-px-[30px]
-lg:p-[34px]
-bg-white
+    flex
+    relative
+    justify-center
+    w-auto h-[600vh]
+    lg:w-auto lg:h-[600vh]
+    overflow-hidden
+    px-[30px]
+    lg:p-[34px]
+    bg-transparent	
   `;
+
+export const ChapterQuadroDois = tw.div`
+  flex
+  relative
+  justify-center
+  w-auto h-[1100vh]
+  lg:w-auto lg:h-[1100vh]
+  overflow-hidden
+  px-[30px]
+  lg:p-[34px]
+  bg-transparent	
+`;
 
 export const ChapterGenericDiv3 = tw.div`
 h-full w-full
@@ -108,22 +127,21 @@ justify-center
 bg-white
 `;
 
+export const ChapterGenericDiv4 = tw.div`
+  flex
+  w-full h-auto
+  min-h-[60vh]
+  items-center
+  justify-center
+  p-[34px]
+  lg:p-[34px]
+  bg-white
+  `;
+
 export const ContainerCard = tw.div`
 h-auto w-[700px]
 mb-[60px]
-mt-[40px]
-`;
-
-export const ContainerCard1 = tw.div`
-h-[50vh] w-[90vw]
-lg:h-[800px] lg:w-[800px]
-lg:m-3
-flex flex-col
-justify-center items-center
-font-sans
-bg-white
-border-4
-border-black
+mt-[60px]
 `;
 
 export const ContainerCard2 = tw.div`
@@ -134,10 +152,39 @@ export const ContainerCard2 = tw.div`
 `;
 
 export const ContainerCard3 = tw.div`
-  h-auto w-[70vw] lg:w-[90%]
-  bg-[#00000099]
-  p-[28px]
+    absolute
+    z-10
+    h-auto w-[80%] lg:w-[460px]
+    bg-[#ffffff99]
+    px-[40px]
+    py-[34px]
+    lg:px-[56px]
+    lg:py-[42px]
+    rounded-lg
+    backdrop-blur-md
   `;
+
+export const Grafico = tw.div`
+  m-auto
+  lg:my-[40px]
+  min-w-[250px]
+`;
+
+export const Imagem = tw.div`
+  font-libre font-[700] 
+  text-[12px]
+  text-left
+  lg:leading-[150%]
+text-black
+`;
+
+export const Imagem1 = tw.div`
+  font-libre font-[400] 
+  text-[12px]
+  text-left
+  lg:leading-[150%]
+text-black
+`;
 
 export const IntroDiv = tw.div`
   w-full h-screen
@@ -149,7 +196,7 @@ export const IntroDiv = tw.div`
 
 export const TextCreditos = tw.div`
   text-black
-  font-poppins
+  font-geologica
   font-semibold
   text-[20px]
   mb-[2px]
@@ -157,43 +204,78 @@ export const TextCreditos = tw.div`
 
 export const TextCreditos1 = tw.div`
   text-black
-  font-poppins
-  font-regular
-  text-[18px]
+  font-libre font-[400] 
+  text-[14px]
 `;
 
 export const TextCreditos2 = tw.div`
   text-black
-  font-poppins
+  font-geologica
   font-black
-  text-[40px]
+  text-[32px]
+  lg:text-[40px]
   mb-[40px]
 `;
 
 export const TextCard = tw.div`
-  font-poppins font-bold 
-  text-[32px]
+  font-geologica font-bold 
+  w-[70%]
+  text-[24px]
+  lg:text-[40px]
   text-left
   leading-[120%]
   lg:leading-[120%]
   text-black
-  mb-[32px]
+  mb-[16px]
+`;
+
+export const TextHighlightBlue = tw.div`
+  font-libre font-[400] 
+  inline-block
+  text-[14px]
+  text-left
+  lg:leading-[150%]
+  text-white
+  bg-[#29557D]
+  px-2
+  py-0
+`;
+
+export const TextHighlightBlueUm = tw.div`
+  font-libre font-[400] 
+  inline-block
+  text-[14px]
+  text-left
+  lg:leading-[150%]
+  text-white
+  bg-[#000000]
+  px-2
+  py-0
+`;
+
+export const TextHighlightBlueDois = tw.div`
+  font-libre font-[400] 
+  inline-block
+  text-[14px]
+  text-left
+  lg:leading-[150%]
+  text-white
+  bg-[#6F9CB7]
+  px-2
+  py-0
 `;
 // selection:bg-[#ef4444] selection:text-white
 
 export const TextCard1 = tw.div`
-font-poppins font-regular 
-text-[18px]
+font-libre font-[400] 
+text-[14px]
 text-left
 lg:leading-[150%]
 text-black
-mt-[10px]
-mb-[60px]
-lg:mb-0
 `;
 
 export const TextCard2 = tw.div`
-font-poppins font-regular 
+font-geologica font-[400] 
 text-[18px]
 text-left
 lg:leading-[120%]
@@ -202,9 +284,9 @@ mt-[20px]
 `;
 
 export const TextCard3 = tw.div`
-font-poppins font-regular 
-text-[16px]
+font-libre font-[400] 
+text-[14px]
 text-left
 lg:leading-[150%]
-text-white
+text-black
 `;
