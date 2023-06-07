@@ -35,7 +35,8 @@ export default function Enchentes() {
         if (frameNumber > 450) {
           frameNumber = 450;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        const imageUrl =
+          require(`./videos/quadro_um/${frameNumber.toString()}.jpg`).default;
         video.src = imageUrl;
         console.log(imageUrl);
       },
@@ -62,7 +63,8 @@ export default function Enchentes() {
         if (frameNumber > 1124) {
           frameNumber = 1124;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_dois/${frameNumber}.jpg`;
+        const imageUrl =
+          require(`./videos/quadro_dois/${frameNumber.toString()}.jpg`).default;
         console.log(imageUrl);
         video.src = imageUrl;
       },
@@ -77,7 +79,7 @@ export default function Enchentes() {
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
           }
-          className="h-auto w-[90%] lg:h-auto lg:w-[37%] border-4 border-black"
+          className="h-auto w-[90%] lg:h-auto lg:w-[46%] border-4 border-black"
         ></img>
       </div>
       <chapterDiv.Capa id={"capa"} />

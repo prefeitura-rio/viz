@@ -5,8 +5,8 @@ import shutil
 if __name__ == "__main__":
     path = Path("./")
 
-    images_path = path / "quadro_dois"
-    vidcap = cv2.VideoCapture(str(path / "geral.mp4"))
+    images_path = path / "quadro_um"
+    vidcap = cv2.VideoCapture(str(path / "mapas.mp4"))
 
     if images_path.exists():
         shutil.rmtree(images_path)

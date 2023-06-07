@@ -164,6 +164,22 @@ export const Grafico = tw.div`
   min-w-[250px]
 `;
 
+export const Imagem = tw.div`
+  font-libre font-[700] 
+  text-[12px]
+  text-left
+  lg:leading-[150%]
+text-black
+`;
+
+export const Imagem1 = tw.div`
+  font-libre font-[400] 
+  text-[12px]
+  text-left
+  lg:leading-[150%]
+text-black
+`;
+
 export const IntroDiv = tw.div`
   w-full h-screen
   bg-opacity-40 backdrop-blur
