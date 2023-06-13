@@ -32,7 +32,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const setDefaultProps = (providedProps) => {
 	const defaultProps = {
-		id: ""
+		id: "",
 	};
 
 	return { ...defaultProps, ...providedProps };
@@ -41,7 +41,7 @@ const setDefaultProps = (providedProps) => {
 export function Capa(
 	props = {
 		id: "",
-		chapRef: null
+		chapRef: null,
 	}
 ) {
 	props = setDefaultProps(props);
@@ -64,7 +64,7 @@ export function Capa(
 export function CepImages(
 	props = {
 		id: "",
-		chapRef: null
+		chapRef: null,
 	}
 ) {
 	props = setDefaultProps(props);
@@ -89,7 +89,7 @@ export function CepImages(
 export function ContextoHistorico(
 	props = {
 		id: "",
-		chapRef: null
+		chapRef: null,
 	}
 ) {
 	props = setDefaultProps(props);
@@ -129,8 +129,8 @@ export function ContextoHistorico(
 						<br />
 						Uma análise feita com base nos dados de ocorrências registradas pelo
 						Centro de Operações da cidade (COR) desde 2018, mostra que a cidade
-						já registrou pelo menos 3.937 incidentes causados pelas chuvas.
-						Destes, 428 foram alagamentos e enchentes.
+						já registrou pelo menos 8.222 incidentes causados pelas chuvas.
+						Destes, 486 foram alagamentos e enchentes.
 						<br />
 						<br />E este não é um problema exclusivo nosso.
 						<br />
@@ -181,7 +181,7 @@ export function ContextoHistorico(
 export function QuadroUm(
 	props = {
 		id: "",
-		chapRef: null
+		chapRef: null,
 	}
 ) {
 	props = setDefaultProps(props);
@@ -233,7 +233,7 @@ export function QuadroUm(
 						alagamentos
 					</styles.TextHighlightBlueDois>{" "}
 					sempre que as chuvas forem mais fortes que a capacidade de drenagem.
-					Desde 2018, o bairro da Cidade Nova já registrou 51 casos ocorrências
+					Desde 2018, o bairro da Cidade Nova já registrou 57 casos ocorrências
 					provocadas pelas chuvas.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
@@ -244,7 +244,7 @@ export function QuadroUm(
 export function ParteUm(
 	props = {
 		id: "",
-		chapRef: null
+		chapRef: null,
 	}
 ) {
 	props = setDefaultProps(props);
@@ -269,7 +269,7 @@ export function ParteUm(
 export function QuadroDois(
 	props = {
 		id: "",
-		chapRef: null
+		chapRef: null,
 	}
 ) {
 	props = setDefaultProps(props);
@@ -367,7 +367,7 @@ export function QuadroDois(
 export function ParteDois(
 	props = {
 		id: "",
-		chapRef: null
+		chapRef: null,
 	}
 ) {
 	props = setDefaultProps(props);
@@ -621,7 +621,7 @@ export function ParteDois(
 export function Creditos(
 	props = {
 		id: "",
-		chapRef: null
+		chapRef: null,
 	}
 ) {
 	props = setDefaultProps(props);
