@@ -602,11 +602,12 @@ export function ParteDois(
 				</styles.TextCard>
 				<styles.TextCard1>
 					A Rio Águas é a empresa responsável pelo gerenciamento das águas
-					pluviais e de esgoto na cidade do Rio de Janeiro. Para cumprir sua
-					missão de prevenir inundações e alagamentos, a empresa utiliza
-					diversas fontes de dados para monitorar e antecipar eventos climáticos
-					extremos, incluindo registros históricos de enchentes e alagamentos em
-					diferentes áreas da cidade.
+					pluviais e pela fiscalização do contrato de concessão do esgotamento
+					sanitário na Zona Oeste (AP5). Para cumprir sua missão de prevenir
+					inundações e alagamentos, a empresa utiliza diversas fontes de dados
+					para monitorar e antecipar eventos climáticos extremos, incluindo
+					registros históricos de enchentes e alagamentos em diferentes áreas da
+					cidade.
 					<br />
 					<br />A Prefeitura sabe desses problemas e trabalha constantemente
 					para que eles não prejudiquem a vida dos cariocas. Porque sim, moramos
