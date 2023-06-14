@@ -47,66 +47,45 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Intro().location);
         setLayers(chapterMap.Intro().layers);
         break;
+      case "mapaobras":
+        setPosition(chapterMap.Mapaobras().location);
+        setLayers(chapterMap.Mapaobras().layers);
         break;
-      case "zoom":
-        setPosition(chapterMap.Zoom().location);
-        setLayers(chapterMap.Zoom().layers);
+      case "textoobras":
+        setPosition(chapterMap.Mapaobras().location);
+        setLayers(chapterMap.Mapaobras().layers);
         break;
-      case "exemplo1":
-        setPosition(chapterMap.Exemplo1().location);
-        setLayers(chapterMap.Exemplo1().layers);
+      case "mapanorte":
+        setPosition(chapterMap.Mapanorte().location);
+        setLayers(chapterMap.Mapanorte().layers);
         break;
-      case "exemplo2":
-        setPosition(chapterMap.Exemplo2().location);
-        setLayers(chapterMap.Exemplo2().layers);
+      case "textonorte":
+        setPosition(chapterMap.Mapanorte().location);
+        setLayers(chapterMap.Mapanorte().layers);
         break;
-      // case "exemplo3":
-      //   setPosition(chapterMap.Exemplo3().location);
-      //   setLayers(chapterMap.Exemplo3().layers);
-      //   break;
-      case "mapa":
-        setPosition(chapterMap.Mapa().location);
-        setLayers(chapterMap.Mapa().layers);
+      case "mapaoeste":
+        setPosition(chapterMap.Mapaoeste().location);
+        setLayers(chapterMap.Mapaoeste().layers);
         break;
-      case "solucao":
-        setPosition(chapterMap.Solucao().location);
-        setLayers(chapterMap.Solucao().layers);
+      case "textooeste":
+        setPosition(chapterMap.Mapaoeste().location);
+        setLayers(chapterMap.Mapaoeste().layers);
+        break;
+      case "oeste":
+        setPosition(chapterMap.Oeste().location);
+        setLayers(chapterMap.Oeste().layers);
         break;
       case "prejuizo":
         setPosition(chapterMap.Prejuizo().location);
         setLayers(chapterMap.Prejuizo().layers);
         break;
-      case "grafico":
-        setPosition(chapterMap.Grafico().location);
-        setLayers(chapterMap.Grafico().layers);
-        break;
       case "fim":
         setPosition(chapterMap.Fim().location);
         setLayers(chapterMap.Fim().layers);
         break;
-      case "seop1":
-        setPosition(chapterMap.Seop1().location);
-        setLayers(chapterMap.Seop1().layers);
-        break;
-      case "seop2":
-        setPosition(chapterMap.Seop2().location);
-        setLayers(chapterMap.Seop2().layers);
-        break;
-      case "seop3":
-        setPosition(chapterMap.Seop3().location);
-        setLayers(chapterMap.Seop3().layers);
-        break;
-      case "seop4":
-        setPosition(chapterMap.Seop4().location);
-        setLayers(chapterMap.Seop4().layers);
-        break;
-      case "acompanhe":
-        setPosition(chapterMap.Acompanhe().location);
-        setLayers(chapterMap.Acompanhe().layers);
-        break;
-      case "oeste":
-        setPosition(chapterMap.Oeste().location);
-        setLayers(chapterMap.Oeste().layers);
+      case "creditos":
+        setPosition(chapterMap.Fim().location);
+        setLayers(chapterMap.Fim().layers);
         break;
       default:
         break;
@@ -122,7 +101,7 @@ export default function SubsidioSPPO() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: false,
+      markers: true,
       scrub: true,
       // toggleActions: "play reverse play reverse",
     });
@@ -151,32 +130,56 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#zoom",
+      trigger: "#mapaobras",
       onToggle: () => {
-        setChapterNumberMap("zoom");
+        setChapterNumberMap("mapaobras");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#exemplo1",
+      trigger: "#textoobras",
       onToggle: () => {
-        setChapterNumberMap("exemplo1");
+        setChapterNumberMap("textoobras");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#exemplo2",
+      trigger: "#mapanorte",
       onToggle: () => {
-        setChapterNumberMap("exemplo2");
+        setChapterNumberMap("mapanorte");
       },
     });
 
-    // ScrollTrigger.create({
-    //   trigger: "#exemplo3",
-    //   onToggle: () => {
-    //     setChapterNumberMap("exemplo3");
-    //   },
-    // });
+    ScrollTrigger.create({
+      trigger: "#textonorte",
+      onToggle: () => {
+        setChapterNumberMap("textonorte");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#mapaoeste",
+      onToggle: () => {
+        setChapterNumberMap("mapaoeste");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#textooeste",
+      onToggle: () => {
+        setChapterNumberMap("textooeste");
+      },
+    });
+
+    ScrollTrigger.create({
+      animation: tl4,
+      trigger: "#prejuizo",
+      scrub: false,
+      toggleActions: "play reverse play reverse",
+      onToggle: () => {
+        setChapterNumberMap("prejuizo");
+      },
+    });
 
     const tl13 = gsap.timeline();
     tl13
@@ -195,30 +198,6 @@ export default function SubsidioSPPO() {
       },
     });
 
-    ScrollTrigger.create({
-      trigger: "#mapa",
-      onToggle: () => {
-        setChapterNumberMap("mapa");
-      },
-    });
-
-    const tl14 = gsap.timeline();
-    tl14
-      .set("#solucao", { opacity: 0 })
-      .to("#solucao", { opacity: 0, duration: 30 })
-      .to("#solucao", { opacity: 1, duration: 6 })
-      .to("#solucao", { opacity: 1, duration: 20 })
-      .to("#solucao", { opacity: 0, duration: 6 })
-      .to("#solucao", { opacity: 0, duration: 28 });
-
-    ScrollTrigger.create({
-      animation: tl14,
-      trigger: "#solucao",
-      onToggle: () => {
-        setChapterNumberMap("solucao");
-      },
-    });
-
     var startCount = 0,
       num = { var: startCount };
     function changeNumber() {
@@ -230,69 +209,6 @@ export default function SubsidioSPPO() {
       var: 646,
       duration: 1,
       onUpdate: changeNumber,
-    });
-    ScrollTrigger.create({
-      animation: tl4,
-      trigger: "#prejuizo",
-      scrub: false,
-      toggleActions: "play reverse play reverse",
-      onToggle: () => {
-        setChapterNumberMap("prejuizo");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#grafico",
-      scrub: false,
-      toggleActions: "play reverse play reverse",
-      onToggle: () => {
-        setChapterNumberMap("grafico");
-      },
-    });
-
-    const tl12 = gsap.timeline();
-    tl12
-      .set("#acompanhe", { opacity: 0 })
-      .to("#acompanhe", { opacity: 0, duration: 30 })
-      .to("#acompanhe", { opacity: 1, duration: 6 })
-      .to("#acompanhe", { opacity: 1, duration: 20 })
-      .to("#acompanhe", { opacity: 0, duration: 6 })
-      .to("#acompanhe", { opacity: 0, duration: 28 });
-
-    ScrollTrigger.create({
-      animation: tl12,
-      trigger: "#acompanhe",
-      onToggle: () => {
-        setChapterNumberMap("acompanhe");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#seop1",
-      onToggle: () => {
-        setChapterNumberMap("seop1");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#seop2",
-      onToggle: () => {
-        setChapterNumberMap("seop2");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#seop3",
-      onToggle: () => {
-        setChapterNumberMap("seop3");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#seop4",
-      onToggle: () => {
-        setChapterNumberMap("seop4");
-      },
     });
 
     const tl11 = gsap.timeline();
@@ -311,6 +227,13 @@ export default function SubsidioSPPO() {
         setChapterNumberMap("fim");
       },
     });
+
+    ScrollTrigger.create({
+      trigger: "#creditos",
+      onToggle: () => {
+        setChapterNumberMap("creditos");
+      },
+    });
   }, []);
 
   return (
@@ -318,9 +241,9 @@ export default function SubsidioSPPO() {
       <MultilayerMap
         interactive={false}
         scrollZoom={false}
-        showLayers={false}
+        showLayers={true}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
-        mapStyle="mapbox://styles/escritoriodedados/cl6e3p6as001814qxcun8bjo1"
+        mapStyle="mapbox://styles/escritoriodedados/cliw11vdn027l01qh0pbe5l8w"
         layers={layers}
         location={location}
         mapCSS={{
@@ -337,21 +260,16 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
-      <chapterDiv.Zoom id={"zoom"} />
-      <chapterDiv.Exemplo1 id={"exemplo1"} />
-      <chapterDiv.Exemplo2 id={"exemplo2"} />
-      {/* <chapterDiv.Exemplo3 id={"exemplo3"} /> */}
+      <chapterDiv.MapaObras id={"mapaobras"} />
+      <chapterDiv.TextoObras id={"textoobras"} />
+      <chapterDiv.MapaNorte id={"mapanorte"} />
+      <chapterDiv.TextoNorte id={"textonorte"} />
+      <chapterDiv.MapaOeste id={"mapaoeste"} />
+      <chapterDiv.TextoOeste id={"textooeste"} />
       <chapterDiv.Oeste id={"oeste"} />
-      <chapterDiv.Mapa id={"mapa"} />
-      <chapterDiv.Solucao id={"solucao"} />
       <chapterDiv.Prejuizo id={"prejuizo"} />
-      <chapterDiv.Grafico id={"grafico"} />
-      <chapterDiv.Acompanhe id={"acompanhe"} />
-      <chapterDiv.Seop1 id={"seop1"} />
-      <chapterDiv.Seop2 id={"seop2"} />
-      <chapterDiv.Seop3 id={"seop3"} />
-      <chapterDiv.Seop4 id={"seop4"} />
       <chapterDiv.Fim id={"fim"} />
+      <chapterDiv.Creditos id={"creditos"} />
     </>
   );
 }

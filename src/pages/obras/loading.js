@@ -1,16 +1,16 @@
 import tw from "tailwind-styled-components";
 import styled from "styled-components";
-import logo from "../../pages/seop-demolicoes/images/logo.png";
+import logo1 from "../../pages/obras/images/logo1.png";
 
 const LoadingDiv = tw.div`
 w-full h-screen
 flex 
 flex-col
 items-center justify-between 
-text-yellow-600 
+text-black
 text-2xl
 lg:text-2xl
-bg-black
+bg-white
 `;
 
 const LoadingImage = tw.img`
@@ -20,10 +20,10 @@ mt-[2vh]
 lg:mr-5
 `;
 
-export function LoadingSEOPDemolicioes() {
+export function LoadingObras() {
   return (
     <LoadingDiv>
-      <LoadingImage src={logo}></LoadingImage>
+      <LoadingImage src={logo1}></LoadingImage>
       <div className="mb-96">carregando ...</div>
     </LoadingDiv>
   );
