@@ -647,10 +647,13 @@ export function Creditos(
 					Gabriel Gazola Milan <br />
 					João Carabetta <br />
 					Luiz Guilherme Gomes <br />
+					Marcelo Sepúlvida <br />
+					Marco Aurélio Regalo <br />
 					Marcus Belchior <br />
 					Mylenna Merlo <br />
+					Roberto Amazonas <br />
 					Vitor Sá Mario Oliveira <br />
-					Wanderson José dos Santos
+					Wanderson José dos Santos <br />
 				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
 					Parceria
