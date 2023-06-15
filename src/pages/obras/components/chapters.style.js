@@ -153,6 +153,38 @@ export const TextCard = tw.div`
   text-black
 `;
 
+export const TextHighlightBold = tw.div`
+  font-montserrat font-bold
+  text-[15px]
+  text-left
+  text-black
+  inline
+`;
+
+export const TextHighlightGreen = tw.div`
+  font-montserrat font-bold
+  text-[15px]
+  text-left
+  text-white
+  inline-block
+  bg-[#a9d3a2]
+  py-0
+  px-2
+  rounded-[5px]
+`;
+
+export const TextHighlightOrange = tw.div`
+  font-montserrat font-bold
+  text-[15px]
+  text-left
+  text-white
+  inline-block
+  bg-[#dab68a]
+  py-0
+  px-2
+  rounded-[5px]
+`;
+
 export const TextCard1 = tw.div`
   font-montserrat  
   text-[15px]

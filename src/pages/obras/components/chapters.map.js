@@ -71,7 +71,7 @@ export const Mapaobras = () => {
           lon: -43.45632,
           lat: -22.92106,
         },
-        zoom: 10.6,
+        zoom: 10.5,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,

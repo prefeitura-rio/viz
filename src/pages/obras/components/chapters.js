@@ -66,17 +66,11 @@ export function Intro(
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
-          A proliferação de construções irregulares é um problema que tomou
-          conta da cidade do Rio há algumas décadas. Em áreas sob influência do
-          crime organizado a preocupação é ainda maior. <br /> <br />
-          Estudos apontam que a atividade imobiliária se tornou uma das
-          principais fontes financeiras de alguns grupos criminosos. Essas
-          construções são realizadas sem autorização da Prefeitura, em áreas
-          públicas e protegidas, e erguidas sem nenhum acompanhamento técnico.
-          <br /> <br /> Por trás de cada prédio construído ilegalmente e sem
-          fiscalização, há inúmeras famílias que vivem sob o risco de terem suas
-          casas desabadas, e perderem, a qualquer momento, sua história e também
-          suas vidas.
+        Após longos 4 anos de descaso, o Rio de Janeiro finalmente está recebendo a atenção que ele merece. Mas calma, não estamos falando daquele Rio distante que você não frequenta ou nem conhece. 
+        <br /><br />Estamos falando do <styles.TextHighlightBold>seu Rio.</styles.TextHighlightBold>
+        <br /><br />
+        Nesta visualização mostraremos como a Prefeitura está levando grandes obras de infraestrutura para as Zona Oeste e Zona Norte da cidade, garantindo a dignidade e qualidade de vida aos cariocas.
+
         </styles.IntroText>
       </div>
     </styles.IntroDiv>
@@ -111,10 +105,12 @@ export function TextoObras(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard1>
-          A Prefeitura trabalha no seu Rio, na sua rua (não naquele outro Rio
-          que você não frequenta ou nem conhece) pra levar dignidade e qualidade
-          de vida aos cariocas que mais precisam, principalmente na Zona Oeste,
-          maior região da cidade e onde fica o maior bairro do Brasil
+        São XX obras localizadas nas regiões da <styles.TextHighlightGreen>Zona Oeste</styles.TextHighlightGreen> e <styles.TextHighlightOrange>Zona Norte</styles.TextHighlightOrange> da
+        cidade, um investimento de mais de R$ XXX bilhões. O nosso principal
+        objetivo é direcionar essas melhorias para onde os cariocas mais
+        necessitam: na <styles.TextHighlightBold>educação</styles.TextHighlightBold>,
+        no <styles.TextHighlightBold>lazer</styles.TextHighlightBold>,
+        na <styles.TextHighlightBold>saúde</styles.TextHighlightBold> e na criação de <styles.TextHighlightBold>oportunidades.</styles.TextHighlightBold>
         </styles.TextCard1>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
