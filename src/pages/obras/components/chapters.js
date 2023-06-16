@@ -6,13 +6,9 @@ import tw from "tailwind-styled-components";
 
 // IMAGENS
 import logo1 from "../images/logo1.png";
-import seop1 from "../images/seop1.png";
-import seop2 from "../images/seop2.png";
-import seop3 from "../images/seop3.png";
-import seop4 from "../images/seop4.png";
-import grafico from "../images/grafico.png";
-import legenda from "../images/legenda.png";
-import logoed from "../images/logoed.png";
+
+// VIDEOS
+import srcVideo from "../images/bairromaravilha.mp4";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -70,7 +66,6 @@ export function Intro(
         <br /><br />Estamos falando do <styles.TextHighlightBold>seu Rio.</styles.TextHighlightBold>
         <br /><br />
         Nesta visualização mostraremos como a Prefeitura está levando grandes obras de infraestrutura para as Zona Oeste e Zona Norte da cidade, garantindo a dignidade e qualidade de vida aos cariocas.
-
         </styles.IntroText>
       </div>
     </styles.IntroDiv>
@@ -105,7 +100,7 @@ export function TextoObras(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard1>
-        São XX obras localizadas nas regiões da <styles.TextHighlightGreen>Zona Oeste</styles.TextHighlightGreen> e <styles.TextHighlightOrange>Zona Norte</styles.TextHighlightOrange> da
+        São XX obras localizadas nas regiões da Zona Oeste e Zona Norte da
         cidade, um investimento de mais de R$ XXX bilhões. O nosso principal
         objetivo é direcionar essas melhorias para onde os cariocas mais
         necessitam: na <styles.TextHighlightBold>educação</styles.TextHighlightBold>,
@@ -183,8 +178,101 @@ export function TextoNorteZoom(
       <styles.ContainerCard>
         <styles.TextCard1>
         Este é a missão do Conjunto Maravilha, programa da Rio-Urbe, órgão ligado à Secretaria Municipal de Infraestrutura. 
+        <br/><br/> 
         As obras do Conjunto Maravilha incluem recuperação de fachadas, pintura dos blocos de apartamentos, recuperação e pintura de muros, impermeabilização e pintura de caixas d’água, construção ou recuperação de calçadas, pintura de grades e portões, reforma dos sistemas de serviços essenciais, como luz e água, e implementação de novas áreas de lazer.
-        Com um investimento atual de R$ 125 milhões, o projeto está presente também na Zona Oeste e já reformou oito conjuntos habitacionais, entre eles o Colina dos Coqueiros, em Cosmos; o Santos Dumont, em Rocha Miranda; e o Picuí, em Bento Ribeiro. Outros 14 conjuntos habitacionais da cidade estão recebendo os serviços do programa.
+        <br/><br/>
+        Com um investimento atual de <styles.TextHighlightBold> R$ 125 milhões,</styles.TextHighlightBold> o projeto está presente também na Zona Oeste e já reformou oito conjuntos habitacionais, entre eles o Colina dos Coqueiros, em Cosmos; o Santos Dumont, em Rocha Miranda; e o Picuí, em Bento Ribeiro. Outros 14 conjuntos habitacionais da cidade estão recebendo os serviços do programa.
+        </styles.TextCard1>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function BairroMaravilha(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.IntroDiv ref={props.chapRef} id={props.id}>
+      {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
+      <div className="max-w-[80%]">
+      <video controls autoPlay muted loop className="w-auto h-[600px] ">
+        <source src={srcVideo} type="video/mp4" />
+      </video>
+      </div>
+    </styles.IntroDiv>
+  );
+}
+
+export function ObraNorte(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterMapDiv
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterMapDiv>
+  );
+}
+
+export function TextoObraNorte(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.TextCard1>
+        A DEFINIR
+        </styles.TextCard1>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+
+export function ObraNorteUm(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterMapDiv
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterMapDiv>
+  );
+}
+
+export function TextoObraNorteUm(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.TextCard1>
+        A DEFINIR
         </styles.TextCard1>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -219,17 +307,15 @@ export function TextoOeste(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard1>
-          A Prefeitura trabalha no seu Rio, na sua rua (não naquele outro Rio
-          que você não frequenta ou nem conhece) pra levar dignidade e qualidade
-          de vida aos cariocas que mais precisam, principalmente na Zona Oeste,
-          maior região da cidade e onde fica o maior bairro do Brasil
+        Já na Zona Oeste, xx obras já foram entregues aos cariocas. Com um investimento atual
+        de R$ XX, a Prefeitura ainda entregará mais XX empreendimentos na região até XX ano.
         </styles.TextCard1>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
 }
 
-export function Oeste(
+export function MapaOesteZoom(
   props = {
     id: "",
     chapRef: null,
@@ -238,26 +324,43 @@ export function Oeste(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      {/* <styles.IntroTitle id={"zonaOesteTitle"}>
-        Onde estão localizadas as construções irregulares
-      </styles.IntroTitle> */}
-      <styles.IntroText>
-        Apesar de estarem presentes em todas as regiões da cidade, as{" "}
-        <styles.Textyellow>
-          construções irregulares têm maior incidência na Zona Oeste do
-          município.
-        </styles.Textyellow>{" "}
-        De todas as demolições realizadas pela atual gestão da Prefeitura, mais
-        de 70% estavam localizadas nesta região. Rio das Pedras, Muzema e
-        Recreio dos Bandeirantes, por exemplo, são locais em que são registradas
-        constantemente estas irregularidades.
-      </styles.IntroText>
-    </styles.IntroDiv>
+    <styles.ChapterMapDiv
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterMapDiv>
   );
 }
 
-export function Prejuizo(
+export function TextoOesteZoom(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.TextCard1>
+        <styles.TextHighlightBold>O maior bairro do Brasil vai andar.</styles.TextHighlightBold> Com um investimento da Prefeitura em XX obras para melhorar o trânsito, o maior bairro do Brasil receberá ainda o Anel Viário, que irá reduzir pela metade o tempo de deslocamento entre o centro do bairro até a Avenida Brasil.
+        <br/><br/> 
+        Com um investimento de R$ XX, ainda estão previstas as entregas de:
+        <br/><br/> 
+        Novo Mergulhão, desafogando o trânsito do cruzamento da Avenida Cesário de Melo com a Estrada do Monteiro, um novo túnel;
+        <br/><br/> 
+        Um novo túnel que fará conexão direta entre a Avenida Cesário de Melo e a Estrada da Posse. A estrutura terá duas galerias com duas pistas em cada uma e mais 600 metros de ciclovia;
+        <br/><br/> 
+        Uma nova via semi-expressa, que possibilitará com que o trabalhador que sair do centro de Campo Grande possa chegar mais rápido a Avenida Brasil através da Estrada da Posse;
+        <br/><br/> 
+        E a nova Estrada do Tingui, que ganhará um novo trecho e será urbanizada e pavimentada, sendo mais uma opção de ligação do centro de Campo Grande com a Avenida Brasil.
+        </styles.TextCard1>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function NumeraoUm(
   props = {
     id: "",
     chapRef: null,
@@ -265,23 +368,15 @@ export function Prejuizo(
 ) {
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.Grid>
+      <styles.ContainerCard2>
           <styles.Grid1>
-            <styles.BigNumber>R$</styles.BigNumber>
+            {/* <styles.BigNumber2>R$</styles.BigNumber2> */}
             <styles.BigNumber id="number">0</styles.BigNumber>
             <styles.BigNumber1>milhões</styles.BigNumber1>
-          </styles.Grid1>
-          <styles.TextCard>
-            Graças as operações realizadas pela Prefeitura, essas organizações
-            ilegais também sentiram no bolso.{" "}
-            <styles.Textyellow>
-              Desde 2021, as operações da secretaria acarretaram um prejuízo
-              estimado em R$646 milhões para os cofres do crime organizado.
-            </styles.Textyellow>{" "}
-          </styles.TextCard>
-        </styles.Grid>
-      </styles.ContainerCard>
+            </styles.Grid1>
+            <styles.BigNumber3>É o valor de investimentos feitos pela Prefeitura em obras nas Zonas Oeste e Norte da cidade.
+            </styles.BigNumber3>
+      </styles.ContainerCard2>
     </styles.ChapterGenericDiv>
   );
 }
@@ -297,27 +392,25 @@ export function Fim(
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
       <styles.IntroText>
-        A marca de <styles.Textyellow>1.313 demolições,</styles.Textyellow> em
-        apenas <styles.Textyellow>um ano e meio de gestão,</styles.Textyellow> é
+        A marca de 1.313 demolições, em
+        apenas um ano e meio de gestão, é
         extremamente importante para a cidade.
         <br /> <br />
         Para continuar seu trabalho, a Prefeitura do Rio de Janeiro vem
         investindo na melhoria da capacidade de identificação de novas
-        construções, por meio de denúncias recebidas, e também através do{" "}
-        <styles.Textyellow>
+        construções, por meio de denúncias recebidas, e também através do
           uso de novas tecnologias, como o uso de drones, fotografias aéreas
           (ortofotos) e imagens de satélites.
           <br /> <br />
-        </styles.Textyellow>{" "}
+
         A Prefeitura, juntamente com as secretarias de Ordem Pública e Meio
         Ambiente da Cidade, seguem atentas, colocando abaixo aquelas estruturas
         erguidas irregularmente em nosso município. Continuaremos atuantes e
         firmes no combate à ocupação desordenada na cidade e no asfixiamento
         financeiro do crime organizado.
-        <br /> <br />{" "}
-        <styles.Textyellow>
+        <br /> <br />
           A preservação de vidas é, e sempre será, o nosso objetivo.
-        </styles.Textyellow>{" "}
+
       </styles.IntroText>
     </styles.IntroDiv>
   );

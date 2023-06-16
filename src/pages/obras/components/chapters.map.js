@@ -90,97 +90,15 @@ export const Mapaobras = () => {
     layers: [
       {
         layerType: "mapbox",
-        targetOpacity: 1,
+        targetOpacity: .7,
         layer: {
           ...{
-            id: "zona norte",
-            type: "circle",
-            source: "composite",
-            paint: {
-              "circle-color": "#db7500",
-              "circle-opacity": 0,
-            },
-            "source-layer": "obrasqgiz-6vyzdl",
-          },
-        },
-      },
-      {
-        layerType: "mapbox",
-        targetOpacity: 1,
-        layer: {
-          ...{
-            id: "zona oeste",
-            type: "circle",
-            source: "composite",
-            paint: {
-              "circle-color": "#1adb00",
-              "circle-opacity": 0,
-            },
-            "source-layer": "obrasqgiz-6vyzdl",
-          },
-        },
-      },
-      {
-        layerType: "mapbox",
-        targetOpacity: 1,
-        layer: {
-          ...{
-            id: "zona sul",
-            type: "circle",
-            source: "composite",
-            paint: {
-              "circle-color": "#1adb00",
-              "circle-opacity": 0,
-            },
-            "source-layer": "obrasqgiz-6vyzdl",
-          },
-        },
-      },
-      {
-        layerType: "mapbox",
-        targetOpacity: 1,
-        layer: {
-          ...{
-            id: "centro",
-            type: "circle",
-            source: "composite",
-            paint: {
-              "circle-color": "#db0000",
-              "circle-opacity": 0,
-            },
-            "source-layer": "obrasqgiz-6vyzdl",
-          },
-        },
-      },
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.1,
-        layer: {
-          ...{
-            id: "zona norte fill",
+            id: "ap-fill",
             type: "fill",
             source: "composite",
             paint: {
-              "fill-opacity": 0,
-              "fill-color": "#db7500",
             },
-            "source-layer": "zonas-3rtoyn",
-          },
-        },
-      },
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.1,
-        layer: {
-          ...{
-            id: "zona oeste fill",
-            type: "fill",
-            source: "composite",
-            paint: {
-              "fill-opacity": 0,
-              "fill-color": "#1adb00",
-            },
-            "source-layer": "zonas-3rtoyn",
+            "source-layer": "ap-6ynwru",
           },
         },
       },
@@ -199,6 +117,160 @@ export const Mapanorte = () => {
         zoom: 11.38,
         pitch: 0.0,
         bearing: 0.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.26868,
+          lat: -22.87955,
+        },
+        zoom: 9.8,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            id: "zona norte",
+            type: "circle",
+            source: "composite",
+            paint: {
+              "circle-color": "#db7500",
+              "circle-opacity": 0,
+            },
+            "source-layer": "obrasqgiz-6vyzdl",
+          },
+        },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.05,
+        layer: {
+          ...{
+            id: "zona norte fill",
+            type: "fill",
+            source: "composite",
+            paint: {
+              "fill-opacity": 0,
+              "fill-color": "#db7500",
+            },
+            "source-layer": "zonas-3rtoyn",
+          },
+        },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.2,
+        layer: {
+          ...{
+            id: "zona norte big",
+            type: "circle",
+            source: "composite",
+            paint: {
+              "circle-color": "#db7500",
+              "circle-opacity": 0,
+            },
+            "source-layer": "obrasqgiz-6vyzdl",
+          },
+        },
+      },
+    ],
+  };
+};
+
+export const Obranorte = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.30660,
+          lat: -22.89799,
+        },
+        zoom: 16.15,
+        pitch: 62.50,
+        bearing: 54.40,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.26868,
+          lat: -22.87955,
+        },
+        zoom: 9.8,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            id: "zona norte",
+            type: "circle",
+            source: "composite",
+            paint: {
+              "circle-color": "#db7500",
+              "circle-opacity": 0,
+            },
+            "source-layer": "obrasqgiz-6vyzdl",
+          },
+        },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.05,
+        layer: {
+          ...{
+            id: "zona norte fill",
+            type: "fill",
+            source: "composite",
+            paint: {
+              "fill-opacity": 0,
+              "fill-color": "#db7500",
+            },
+            "source-layer": "zonas-3rtoyn",
+          },
+        },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.2,
+        layer: {
+          ...{
+            id: "zona norte big",
+            type: "circle",
+            source: "composite",
+            paint: {
+              "circle-color": "#db7500",
+              "circle-opacity": 0,
+            },
+            "source-layer": "obrasqgiz-6vyzdl",
+          },
+        },
+      },
+    ],
+  };
+};
+
+export const Obranorteum = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.30379,
+          lat: -22.84584,
+        },
+        zoom: 16.61,
+        pitch: 55.84,
+        bearing: -63.44,
         duration: 4000,
       },
       mobile: {
@@ -359,7 +431,7 @@ export const Mapaoeste = () => {
 //     "circle-stroke-opacity": 0.2
 // }
 
-export const Prejuizo = () => {
+export const Numeraoum = () => {
   return {
     location: {
       desktop: {
@@ -638,68 +710,6 @@ export const Acompanhe = () => {
       },
     },
     layers: [],
-  };
-};
-
-export const Oeste = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.45632,
-          lat: -22.92106,
-        },
-        zoom: 10.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.45632,
-          lat: -22.92106,
-        },
-        zoom: 8.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.5,
-        layer: {
-          ...{
-            id: "consolidado-cor",
-            type: "circle",
-            source: "composite",
-            "source-layer": "consolidado1-2cgaz2",
-            paint: {
-              "circle-radius": [
-                "match",
-                ["get", "total_demolicoes"],
-                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 16],
-                isMobile ? 3 : 7,
-                [21, 23, 24, 27, 25, 29, 31, 38, 44, 54, 33],
-                isMobile ? 10 : 25,
-                isMobile ? 20 : 50,
-              ],
-              "circle-color": [
-                "match",
-                ["get", "total_demolicoes"],
-                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 11, 13, 14, 16, 15, 20],
-                "#f1d6a5",
-                [21, 23, 24, 25, 27, 29, 31, 33, 38, 44, 54],
-                "#d5aa5d",
-                "#a96e04",
-              ],
-              "circle-opacity": 0,
-            },
-          },
-        },
-      },
-    ],
   };
 };
 

@@ -63,14 +63,34 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Mapanorte().location);
         setLayers(chapterMap.Mapanorte().layers);
         break;
-        case "mapanortezoom":
-          setPosition(chapterMap.Mapanortezoom().location);
-          setLayers(chapterMap.Mapanortezoom().layers);
-          break;
-        case "textonortezoom":
-          setPosition(chapterMap.Mapanortezoom().location);
-          setLayers(chapterMap.Mapanortezoom().layers);
-          break;
+      case "mapanortezoom":
+        setPosition(chapterMap.Mapanorte().location);
+        setLayers(chapterMap.Mapanorte().layers);
+        break;
+      case "textonortezoom":
+        setPosition(chapterMap.Mapanorte().location);
+        setLayers(chapterMap.Mapanorte().layers);
+        break;
+      case "bairromaravilha":
+        setPosition(chapterMap.Mapanorte().location);
+        setLayers(chapterMap.Mapanorte().layers);
+        break;
+      case "obranorte":
+        setPosition(chapterMap.Obranorte().location);
+        setLayers(chapterMap.Obranorte().layers);
+        break;
+      case "textoobranorte":
+        setPosition(chapterMap.Obranorte().location);
+        setLayers(chapterMap.Obranorte().layers);
+        break; 
+      case "obranorteum":
+        setPosition(chapterMap.Obranorteum().location);
+        setLayers(chapterMap.Obranorteum().layers);
+        break;
+      case "textoobranorteum":
+        setPosition(chapterMap.Obranorteum().location);
+        setLayers(chapterMap.Obranorteum().layers);
+        break;      
       case "mapaoeste":
         setPosition(chapterMap.Mapaoeste().location);
         setLayers(chapterMap.Mapaoeste().layers);
@@ -79,13 +99,17 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Mapaoeste().location);
         setLayers(chapterMap.Mapaoeste().layers);
         break;
-      case "oeste":
-        setPosition(chapterMap.Oeste().location);
-        setLayers(chapterMap.Oeste().layers);
+      case "mapaoestezoom":
+        setPosition(chapterMap.Mapaoeste().location);
+        setLayers(chapterMap.Mapaoeste().layers);
         break;
-      case "prejuizo":
-        setPosition(chapterMap.Prejuizo().location);
-        setLayers(chapterMap.Prejuizo().layers);
+      case "textooestezoom":
+        setPosition(chapterMap.Mapaoeste().location);
+        setLayers(chapterMap.Mapaoeste().layers);
+        break;
+      case "numeraoum":
+        setPosition(chapterMap.Numeraoum().location);
+        setLayers(chapterMap.Numeraoum().layers);
         break;
       case "fim":
         setPosition(chapterMap.Fim().location);
@@ -109,7 +133,7 @@ export default function SubsidioSPPO() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: true,
+      markers: false,
       scrub: true,
       // toggleActions: "play reverse play reverse",
     });
@@ -179,7 +203,24 @@ export default function SubsidioSPPO() {
       },
     });
 
+    const tl15 = gsap.timeline();
+    tl15
+      .set("#bairromaravilha", { opacity: 0 })
+      .to("#bairromaravilha", { opacity: 0, duration: 30 })
+      .to("#bairromaravilha", { opacity: 1, duration: 6 })
+      .to("#bairromaravilha", { opacity: 1, duration: 20 })
+      .to("#bairromaravilha", { opacity: 0, duration: 6 })
+      .to("#bairromaravilha", { opacity: 0, duration: 28 });
+
     ScrollTrigger.create({
+      animation: tl15,
+      trigger: "#bairromaravilha",
+      onToggle: () => {
+        setChapterNumberMap("bairromaravilha");
+      },
+    });
+
+        ScrollTrigger.create({
       trigger: "#mapaoeste",
       onToggle: () => {
         setChapterNumberMap("mapaoeste");
@@ -194,29 +235,40 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      animation: tl4,
-      trigger: "#prejuizo",
-      scrub: false,
-      toggleActions: "play reverse play reverse",
+      trigger: "#obranorte",
       onToggle: () => {
-        setChapterNumberMap("prejuizo");
+        setChapterNumberMap("obranorte");
       },
     });
 
-    const tl13 = gsap.timeline();
-    tl13
-      .set("#oeste", { opacity: 0 })
-      .to("#oeste", { opacity: 0, duration: 30 })
-      .to("#oeste", { opacity: 1, duration: 6 })
-      .to("#oeste", { opacity: 1, duration: 20 })
-      .to("#oeste", { opacity: 0, duration: 6 })
-      .to("#oeste", { opacity: 0, duration: 28 });
+    ScrollTrigger.create({
+      trigger: "#textoobranorte",
+      onToggle: () => {
+        setChapterNumberMap("textoobranorte");
+      },
+    });
 
     ScrollTrigger.create({
-      animation: tl13,
-      trigger: "#oeste",
+      trigger: "#obranorteum",
       onToggle: () => {
-        setChapterNumberMap("oeste");
+        setChapterNumberMap("obranorteum");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#textoobranorteum",
+      onToggle: () => {
+        setChapterNumberMap("textoobranorteum");
+      },
+    });
+
+    ScrollTrigger.create({
+      animation: tl4,
+      trigger: "#numeraoum",
+      scrub: false,
+      toggleActions: "play reverse play reverse",
+      onToggle: () => {
+        setChapterNumberMap("numeraoum");
       },
     });
 
@@ -282,16 +334,22 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
+      <chapterDiv.NumeraoUm id={"numeraoum"} />
       <chapterDiv.MapaObras id={"mapaobras"} />
       <chapterDiv.TextoObras id={"textoobras"} />
       <chapterDiv.MapaNorte id={"mapanorte"} />
       <chapterDiv.TextoNorte id={"textonorte"} />
       <chapterDiv.MapaNorteZoom id={"mapanortezoom"} />
       <chapterDiv.TextoNorteZoom id={"textonortezoom"} />
+      <chapterDiv.BairroMaravilha id={"bairromaravilha"} />
+      <chapterDiv.ObraNorte id={"obranorte"} />
+      <chapterDiv.TextoObraNorte id={"textoobranorte"} />
+      <chapterDiv.ObraNorteUm id={"obranorteum"} />
+      <chapterDiv.TextoObraNorteUm id={"textoobranorteum"} />
       <chapterDiv.MapaOeste id={"mapaoeste"} />
       <chapterDiv.TextoOeste id={"textooeste"} />
-      <chapterDiv.Oeste id={"oeste"} />
-      <chapterDiv.Prejuizo id={"prejuizo"} />
+      <chapterDiv.MapaOesteZoom id={"mapaoestezoom"} />
+      <chapterDiv.TextoOesteZoom id={"textooestezoom"} />
       <chapterDiv.Fim id={"fim"} />
       <chapterDiv.Creditos id={"creditos"} />
     </>

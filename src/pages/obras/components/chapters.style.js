@@ -146,6 +146,13 @@ export const ContainerCard1 = tw.div`
   lg:max-w-lg
 `;
 
+export const ContainerCard2 = tw.div`
+  p-[3.25rem]
+  max-w-xs
+  lg:max-w-[600px]
+  rounded-[10px]
+`;
+
 export const TextCard = tw.div`
   font-montserrat  
   text-[15px]
@@ -210,7 +217,7 @@ export const Grid = tw.div`
 `;
 
 const BigNumberSC = styled.div`
-  color: #a96e04;
+  color: #000000;
   font-weight: 700;
 `;
 
@@ -220,15 +227,24 @@ export const BigNumber = tw(BigNumberSC)`
   text-5xl
   text-left
   self-end
-  lg:text-7xl
-  lg:mb-3
+  lg:text-[140px]
 `;
 
 export const BigNumber1 = tw(BigNumber)`
   text-2xl
-  ml-2
-  lg:ml-3
-  lg:text-5xl
+  lg:text-[60px]
+`;
+
+export const BigNumber2 = tw(BigNumber)`
+  text-2xl
+  lg:text-[20px]
+`;
+
+export const BigNumber3 = tw(BigNumber)`
+  text-2xl
+  leading-[120%]
+  lg:text-[50px]
+  lg:mt-[40px]
 `;
 
 const TextyellowSC = styled.div`
