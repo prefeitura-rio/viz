@@ -89,7 +89,7 @@ export const FimText = tw.div`
 
 export const ChapterGenericDiv = tw.div`
   flex
-  w-full h-[150vh]
+  w-full h-[100vh]
   items-center
   justify-center
   text-white

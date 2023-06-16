@@ -63,6 +63,14 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Mapanorte().location);
         setLayers(chapterMap.Mapanorte().layers);
         break;
+        case "mapanortezoom":
+          setPosition(chapterMap.Mapanortezoom().location);
+          setLayers(chapterMap.Mapanortezoom().layers);
+          break;
+        case "textonortezoom":
+          setPosition(chapterMap.Mapanortezoom().location);
+          setLayers(chapterMap.Mapanortezoom().layers);
+          break;
       case "mapaoeste":
         setPosition(chapterMap.Mapaoeste().location);
         setLayers(chapterMap.Mapaoeste().layers);
@@ -101,7 +109,7 @@ export default function SubsidioSPPO() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: false,
+      markers: true,
       scrub: true,
       // toggleActions: "play reverse play reverse",
     });
@@ -154,6 +162,20 @@ export default function SubsidioSPPO() {
       trigger: "#textonorte",
       onToggle: () => {
         setChapterNumberMap("textonorte");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#mapanortezoom",
+      onToggle: () => {
+        setChapterNumberMap("mapanortezoom");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#textonortezoom",
+      onToggle: () => {
+        setChapterNumberMap("textonortezoom");
       },
     });
 
@@ -264,6 +286,8 @@ export default function SubsidioSPPO() {
       <chapterDiv.TextoObras id={"textoobras"} />
       <chapterDiv.MapaNorte id={"mapanorte"} />
       <chapterDiv.TextoNorte id={"textonorte"} />
+      <chapterDiv.MapaNorteZoom id={"mapanortezoom"} />
+      <chapterDiv.TextoNorteZoom id={"textonortezoom"} />
       <chapterDiv.MapaOeste id={"mapaoeste"} />
       <chapterDiv.TextoOeste id={"textooeste"} />
       <chapterDiv.Oeste id={"oeste"} />

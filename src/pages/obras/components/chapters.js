@@ -145,10 +145,46 @@ export function TextoNorte(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
         <styles.TextCard1>
-          A Prefeitura trabalha no seu Rio, na sua rua (não naquele outro Rio
-          que você não frequenta ou nem conhece) pra levar dignidade e qualidade
-          de vida aos cariocas que mais precisam, principalmente na Zona Oeste,
-          maior região da cidade e onde fica o maior bairro do Brasil
+        Na Zona Norte, já foram concluídas XX obras, e outras XX estão sendo
+        realizadas. Um investimento de R$XX, que trazem para o carioca o 
+        <styles.TextHighlightBold> orgulho de ser suburbano.</styles.TextHighlightBold>
+        </styles.TextCard1>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function MapaNorteZoom(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterMapDiv
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterMapDiv>
+  );
+}
+
+export function TextoNorteZoom(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.TextCard1>
+        Este é a missão do Conjunto Maravilha, programa da Rio-Urbe, órgão ligado à Secretaria Municipal de Infraestrutura. 
+        As obras do Conjunto Maravilha incluem recuperação de fachadas, pintura dos blocos de apartamentos, recuperação e pintura de muros, impermeabilização e pintura de caixas d’água, construção ou recuperação de calçadas, pintura de grades e portões, reforma dos sistemas de serviços essenciais, como luz e água, e implementação de novas áreas de lazer.
+        Com um investimento atual de R$ 125 milhões, o projeto está presente também na Zona Oeste e já reformou oito conjuntos habitacionais, entre eles o Colina dos Coqueiros, em Cosmos; o Santos Dumont, em Rocha Miranda; e o Picuí, em Bento Ribeiro. Outros 14 conjuntos habitacionais da cidade estão recebendo os serviços do programa.
         </styles.TextCard1>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
