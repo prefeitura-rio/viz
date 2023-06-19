@@ -47,69 +47,53 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Intro().location);
         setLayers(chapterMap.Intro().layers);
         break;
-      case "mapaobras":
-        setPosition(chapterMap.Mapaobras().location);
-        setLayers(chapterMap.Mapaobras().layers);
-        break;
-      case "textoobras":
-        setPosition(chapterMap.Mapaobras().location);
-        setLayers(chapterMap.Mapaobras().layers);
-        break;
-      case "mapanorte":
-        setPosition(chapterMap.Mapanorte().location);
-        setLayers(chapterMap.Mapanorte().layers);
-        break;
-      case "textonorte":
-        setPosition(chapterMap.Mapanorte().location);
-        setLayers(chapterMap.Mapanorte().layers);
-        break;
-      case "mapanortezoom":
-        setPosition(chapterMap.Mapanorte().location);
-        setLayers(chapterMap.Mapanorte().layers);
-        break;
-      case "textonortezoom":
-        setPosition(chapterMap.Mapanorte().location);
-        setLayers(chapterMap.Mapanorte().layers);
-        break;
-      case "bairromaravilha":
-        setPosition(chapterMap.Mapanorte().location);
-        setLayers(chapterMap.Mapanorte().layers);
-        break;
-      case "obranorte":
-        setPosition(chapterMap.Obranorte().location);
-        setLayers(chapterMap.Obranorte().layers);
-        break;
-      case "textoobranorte":
-        setPosition(chapterMap.Obranorte().location);
-        setLayers(chapterMap.Obranorte().layers);
-        break; 
-      case "obranorteum":
-        setPosition(chapterMap.Obranorteum().location);
-        setLayers(chapterMap.Obranorteum().layers);
-        break;
-      case "textoobranorteum":
-        setPosition(chapterMap.Obranorteum().location);
-        setLayers(chapterMap.Obranorteum().layers);
-        break;      
-      case "mapaoeste":
-        setPosition(chapterMap.Mapaoeste().location);
-        setLayers(chapterMap.Mapaoeste().layers);
-        break;
-      case "textooeste":
-        setPosition(chapterMap.Mapaoeste().location);
-        setLayers(chapterMap.Mapaoeste().layers);
-        break;
-      case "mapaoestezoom":
-        setPosition(chapterMap.Mapaoeste().location);
-        setLayers(chapterMap.Mapaoeste().layers);
-        break;
-      case "textooestezoom":
-        setPosition(chapterMap.Mapaoeste().location);
-        setLayers(chapterMap.Mapaoeste().layers);
-        break;
       case "numeraoum":
-        setPosition(chapterMap.Numeraoum().location);
-        setLayers(chapterMap.Numeraoum().layers);
+        setPosition(chapterMap.Mapaconjuntomaravilha().location);
+        setLayers(chapterMap.Mapaconjuntomaravilha().layers);
+        break;
+      case "mapaconjuntomaravilha":
+        setPosition(chapterMap.Mapaconjuntomaravilha().location);
+        setLayers(chapterMap.Mapaconjuntomaravilha().layers);
+        break;
+      case "textoconjuntomaravilha":
+        setPosition(chapterMap.Mapaconjuntomaravilha().location);
+        setLayers(chapterMap.Mapaconjuntomaravilha().layers);
+        break;
+      case "mapacasacarioca":
+        setPosition(chapterMap.Mapacasacarioca().location);
+        setLayers(chapterMap.Mapacasacarioca().layers);
+        break;
+      case "textocasacarioca":
+        setPosition(chapterMap.Mapacasacarioca().location);
+        setLayers(chapterMap.Mapacasacarioca().layers);
+        break;
+      case "numeraodois":
+        setPosition(chapterMap.Mapacasacarioca().location);
+        setLayers(chapterMap.Mapacasacarioca().layers);
+        break;
+      case "mapaavancacampogrande":
+        setPosition(chapterMap.Mapaavancacampogrande().location);
+        setLayers(chapterMap.Mapaavancacampogrande().layers);
+        break;
+      case "textoavancacampogrande":
+        setPosition(chapterMap.Mapaavancacampogrande().location);
+        setLayers(chapterMap.Mapaavancacampogrande().layers);
+        break;
+      case "numeraotres":
+        setPosition(chapterMap.Mapabairromaravilha().location);
+        setLayers(chapterMap.Mapabairromaravilha().layers);
+        break;
+      case "mapabairromaravilha":
+        setPosition(chapterMap.Mapabairromaravilha().location);
+        setLayers(chapterMap.Mapabairromaravilha().layers);
+        break;
+      case "textobairromaravilha":
+        setPosition(chapterMap.Mapabairromaravilha().location);
+        setLayers(chapterMap.Mapabairromaravilha().layers);
+        break; 
+      case "videoum":
+        setPosition(chapterMap.Mapabairromaravilha().location);
+        setLayers(chapterMap.Mapabairromaravilha().layers);
         break;
       case "fim":
         setPosition(chapterMap.Fim().location);
@@ -162,113 +146,96 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#mapaobras",
+      trigger: "#numeraoum",
       onToggle: () => {
-        setChapterNumberMap("mapaobras");
+        setChapterNumberMap("numeraoum");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#textoobras",
+      trigger: "#mapaconjuntomaravilha",
       onToggle: () => {
-        setChapterNumberMap("textoobras");
+        setChapterNumberMap("mapaconjuntomaravilha");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#mapanorte",
+      trigger: "#textoconjuntomaravilha",
       onToggle: () => {
-        setChapterNumberMap("mapanorte");
+        setChapterNumberMap("textoconjuntomaravilha");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#textonorte",
+      trigger: "#mapacasacarioca",
       onToggle: () => {
-        setChapterNumberMap("textonorte");
+        setChapterNumberMap("mapacasacarioca");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#mapanortezoom",
+      trigger: "#textocasacarioca",
       onToggle: () => {
-        setChapterNumberMap("mapanortezoom");
+        setChapterNumberMap("textocasacarioca");
       },
     });
 
     ScrollTrigger.create({
-      trigger: "#textonortezoom",
+      trigger: "#numeraodois",
       onToggle: () => {
-        setChapterNumberMap("textonortezoom");
+        setChapterNumberMap("numeraodois");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#mapaavancacampogrande",
+      onToggle: () => {
+        setChapterNumberMap("mapaavancacampogrande");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#textoavancacampogrande",
+      onToggle: () => {
+        setChapterNumberMap("textoavancacampogrande");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#numeraotres",
+      onToggle: () => {
+        setChapterNumberMap("numeraotres");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#mapabairromaravilha",
+      onToggle: () => {
+        setChapterNumberMap("mapabairromaravilha");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#textobairromaravilha",
+      onToggle: () => {
+        setChapterNumberMap("textobairromaravilha");
       },
     });
 
     const tl15 = gsap.timeline();
     tl15
-      .set("#bairromaravilha", { opacity: 0 })
-      .to("#bairromaravilha", { opacity: 0, duration: 30 })
-      .to("#bairromaravilha", { opacity: 1, duration: 6 })
-      .to("#bairromaravilha", { opacity: 1, duration: 20 })
-      .to("#bairromaravilha", { opacity: 0, duration: 6 })
-      .to("#bairromaravilha", { opacity: 0, duration: 28 });
+      .set("#videoum", { opacity: 0 })
+      .to("#videoum", { opacity: 0, duration: 30 })
+      .to("#videoum", { opacity: 1, duration: 6 })
+      .to("#videoum", { opacity: 1, duration: 20 })
+      .to("#videoum", { opacity: 0, duration: 6 })
+      .to("#videoum", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl15,
-      trigger: "#bairromaravilha",
+      trigger: "#videoum",
       onToggle: () => {
-        setChapterNumberMap("bairromaravilha");
-      },
-    });
-
-        ScrollTrigger.create({
-      trigger: "#mapaoeste",
-      onToggle: () => {
-        setChapterNumberMap("mapaoeste");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#textooeste",
-      onToggle: () => {
-        setChapterNumberMap("textooeste");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#obranorte",
-      onToggle: () => {
-        setChapterNumberMap("obranorte");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#textoobranorte",
-      onToggle: () => {
-        setChapterNumberMap("textoobranorte");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#obranorteum",
-      onToggle: () => {
-        setChapterNumberMap("obranorteum");
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#textoobranorteum",
-      onToggle: () => {
-        setChapterNumberMap("textoobranorteum");
-      },
-    });
-
-    ScrollTrigger.create({
-      animation: tl4,
-      trigger: "#numeraoum",
-      scrub: false,
-      toggleActions: "play reverse play reverse",
-      onToggle: () => {
-        setChapterNumberMap("numeraoum");
+        setChapterNumberMap("videoum");
       },
     });
 
@@ -334,22 +301,23 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
+
       <chapterDiv.NumeraoUm id={"numeraoum"} />
-      <chapterDiv.MapaObras id={"mapaobras"} />
-      <chapterDiv.TextoObras id={"textoobras"} />
-      <chapterDiv.MapaNorte id={"mapanorte"} />
-      <chapterDiv.TextoNorte id={"textonorte"} />
-      <chapterDiv.MapaNorteZoom id={"mapanortezoom"} />
-      <chapterDiv.TextoNorteZoom id={"textonortezoom"} />
-      <chapterDiv.BairroMaravilha id={"bairromaravilha"} />
-      <chapterDiv.ObraNorte id={"obranorte"} />
-      <chapterDiv.TextoObraNorte id={"textoobranorte"} />
-      <chapterDiv.ObraNorteUm id={"obranorteum"} />
-      <chapterDiv.TextoObraNorteUm id={"textoobranorteum"} />
-      <chapterDiv.MapaOeste id={"mapaoeste"} />
-      <chapterDiv.TextoOeste id={"textooeste"} />
-      <chapterDiv.MapaOesteZoom id={"mapaoestezoom"} />
-      <chapterDiv.TextoOesteZoom id={"textooestezoom"} />
+      <chapterDiv.MapaConjuntoMaravilha id={"mapaconjuntomaravilha"} />
+      <chapterDiv.TextoConjuntoMaravilha id={"textoconjuntomaravilha"} />
+      <chapterDiv.MapaCasaCarioca id={"mapacasacarioca"} />
+      <chapterDiv.TextoCasaCarioca id={"textocasacarioca"} />
+
+      <chapterDiv.NumeraoDois id={"numeraodois"} />
+      <chapterDiv.MapaAvancaCampoGrande id={"mapaavancacampogrande"} />
+      <chapterDiv.TextoAvancaCampoGrande id={"textoavancacampogrande"} />
+
+      <chapterDiv.NumeraoTres id={"numeraotres"} />
+      <chapterDiv.MapaBairroMaravilha id={"mapabairromaravilha"} />
+      <chapterDiv.TextoBairroMaravilha id={"textobairromaravilha"} />
+      
+      <chapterDiv.VideoUm id={"videoum"} />
+
       <chapterDiv.Fim id={"fim"} />
       <chapterDiv.Creditos id={"creditos"} />
     </>

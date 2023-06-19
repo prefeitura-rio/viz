@@ -24,7 +24,8 @@ export const Title = tw.div`
   lg:mb-3    
   font-montserrat font-bold  
   text-4xl text-center text-black
-  lg:text-6xl
+  lg:text-[72px]
+  lg:leading-[120%]
   `;
 
 export const Subtitle = tw.div`
@@ -147,10 +148,6 @@ export const ContainerCard1 = tw.div`
 `;
 
 export const ContainerCard2 = tw.div`
-  p-[3.25rem]
-  max-w-xs
-  lg:max-w-[600px]
-  rounded-[10px]
 `;
 
 export const TextCard = tw.div`
@@ -170,26 +167,38 @@ export const TextHighlightBold = tw.div`
 
 export const TextHighlightGreen = tw.div`
   font-montserrat font-bold
-  text-[15px]
+  text-[72px]
   text-left
   text-white
   inline-block
   bg-[#a9d3a2]
-  py-0
-  px-2
-  rounded-[5px]
+  py-2
+  px-3
+  lg:mb-[10px]
 `;
 
 export const TextHighlightOrange = tw.div`
   font-montserrat font-bold
-  text-[15px]
+  text-[72px]
   text-left
   text-white
   inline-block
   bg-[#dab68a]
-  py-0
-  px-2
-  rounded-[5px]
+  py-2
+  px-3
+  lg:mb-[10px]
+`;
+
+export const TextHighlightBlue = tw.div`
+  font-montserrat font-bold
+  text-[72px]
+  text-left
+  text-white
+  inline-block
+  bg-[#639ed8]
+  py-2
+  px-3
+  lg:mb-[10px]
 `;
 
 export const TextCard1 = tw.div`
@@ -244,7 +253,6 @@ export const BigNumber3 = tw(BigNumber)`
   text-2xl
   leading-[120%]
   lg:text-[50px]
-  lg:mt-[40px]
 `;
 
 const TextyellowSC = styled.div`

@@ -29,11 +29,12 @@ export function Capa(
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       <img src={logo1} className="absolute top-3 w-24 mt-[2vh]  lg:w-32"></img>
-      <styles.Title>A Serviço de Todo Carioca</styles.Title>
-      <styles.Subtitle>Pra quem Mais Precisa</styles.Subtitle>
+      <styles.Title className="mt-[50px]"> <styles.TextHighlightBlue>Resgatando</styles.TextHighlightBlue> o <br/><styles.TextHighlightGreen>orgulho
+        </styles.TextHighlightGreen> de ser <br/> <styles.TextHighlightOrange> suburbano</styles.TextHighlightOrange></styles.Title>
+      {/* <styles.Subtitle>Pra quem Mais Precisa</styles.Subtitle> */}
       <div>
         <styles.AuthorText>
-          Desenvolvido pela equipe de visualização de dados do{" "}
+          Desenvolvido pela equipe de <br/>visualização de dados do{" "}
           <a
             className="font-bold underline"
             href="https://www.dados.rio/"
@@ -72,47 +73,28 @@ export function Intro(
   );
 }
 
-export function MapaObras(
+export function NumeraoUm(
   props = {
     id: "",
     chapRef: null,
   }
 ) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterMapDiv
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterMapDiv>
-  );
-}
-
-export function TextoObras(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.TextCard1>
-        São XX obras localizadas nas regiões da Zona Oeste e Zona Norte da
-        cidade, um investimento de mais de R$ XXX bilhões. O nosso principal
-        objetivo é direcionar essas melhorias para onde os cariocas mais
-        necessitam: na <styles.TextHighlightBold>educação</styles.TextHighlightBold>,
-        no <styles.TextHighlightBold>lazer</styles.TextHighlightBold>,
-        na <styles.TextHighlightBold>saúde</styles.TextHighlightBold> e na criação de <styles.TextHighlightBold>oportunidades.</styles.TextHighlightBold>
-        </styles.TextCard1>
-      </styles.ContainerCard>
+      <styles.ContainerCard2>
+          <styles.Grid1>
+            {/* <styles.BigNumber2>R$</styles.BigNumber2> */}
+            {/* <styles.BigNumber id="number">0</styles.BigNumber> */}
+            {/* <styles.BigNumber1>milhões</styles.BigNumber1> */}
+            </styles.Grid1>
+            <styles.BigNumber3>É a <styles.TextHighlightOrange> prefeitura</styles.TextHighlightOrange> <br/>na sua <styles.TextHighlightGreen>casa</styles.TextHighlightGreen> 
+            </styles.BigNumber3>
+      </styles.ContainerCard2>
     </styles.ChapterGenericDiv>
   );
 }
 
-export function MapaNorte(
+export function MapaConjuntoMaravilha(
   props = {
     id: "",
     chapRef: null,
@@ -128,44 +110,7 @@ export function MapaNorte(
   );
 }
 
-export function TextoNorte(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.TextCard1>
-        Na Zona Norte, já foram concluídas XX obras, e outras XX estão sendo
-        realizadas. Um investimento de R$XX, que trazem para o carioca o 
-        <styles.TextHighlightBold> orgulho de ser suburbano.</styles.TextHighlightBold>
-        </styles.TextCard1>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function MapaNorteZoom(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterMapDiv
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterMapDiv>
-  );
-}
-
-export function TextoNorteZoom(
+export function TextoConjuntoMaravilha(
   props = {
     id: "",
     chapRef: null,
@@ -178,17 +123,165 @@ export function TextoNorteZoom(
       <styles.ContainerCard>
         <styles.TextCard1>
         Este é a missão do Conjunto Maravilha, programa da Rio-Urbe, órgão ligado à Secretaria Municipal de Infraestrutura. 
-        <br/><br/> 
-        As obras do Conjunto Maravilha incluem recuperação de fachadas, pintura dos blocos de apartamentos, recuperação e pintura de muros, impermeabilização e pintura de caixas d’água, construção ou recuperação de calçadas, pintura de grades e portões, reforma dos sistemas de serviços essenciais, como luz e água, e implementação de novas áreas de lazer.
         <br/><br/>
-        Com um investimento atual de <styles.TextHighlightBold> R$ 125 milhões,</styles.TextHighlightBold> o projeto está presente também na Zona Oeste e já reformou oito conjuntos habitacionais, entre eles o Colina dos Coqueiros, em Cosmos; o Santos Dumont, em Rocha Miranda; e o Picuí, em Bento Ribeiro. Outros 14 conjuntos habitacionais da cidade estão recebendo os serviços do programa.
+        As obras do Conjunto Maravilha incluem recuperação de fachadas, pintura dos blocos de apartamentos, recuperação e pintura de muros, impermeabilização e pintura de caixas d’água, construção ou recuperação de calçadas, pintura de grades e portões, reforma dos sistemas de serviços essenciais, como luz e água, e implementação de novas áreas de lazer. 
+        <br/><br/>
+        Com um investimento atual de R$ 125 milhões, o projeto está presente também na Zona Oeste e já reformou oito conjuntos habitacionais, entre eles o Colina dos Coqueiros, em Cosmos; o Santos Dumont, em Rocha Miranda; e o Picuí, em Bento Ribeiro. Outros 14 conjuntos habitacionais da cidade estão recebendo os serviços do programa.
         </styles.TextCard1>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
   );
 }
 
-export function BairroMaravilha(
+export function MapaCasaCarioca(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterMapDiv
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterMapDiv>
+  );
+}
+
+export function TextoCasaCarioca(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.TextCard1>
+        Texto CASA CARIOCA
+        </styles.TextCard1>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function NumeraoDois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard2>
+          <styles.Grid1>
+            {/* <styles.BigNumber2>R$</styles.BigNumber2> */}
+            {/* <styles.BigNumber id="number">0</styles.BigNumber> */}
+            {/* <styles.BigNumber1>milhões</styles.BigNumber1> */}
+            </styles.Grid1>
+            <styles.BigNumber3>É a <styles.TextHighlightBlue> prefeitura</styles.TextHighlightBlue> <br/>na sua <styles.TextHighlightOrange>rua</styles.TextHighlightOrange> 
+            </styles.BigNumber3>
+      </styles.ContainerCard2>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function MapaAvancaCampoGrande(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterMapDiv
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterMapDiv>
+  );
+}
+
+export function TextoAvancaCampoGrande(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.TextCard1>
+        Texto AVANÇA CAMPO GRANDE
+        </styles.TextCard1>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function NumeraoTres(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard2>
+          <styles.Grid1>
+            {/* <styles.BigNumber2>R$</styles.BigNumber2> */}
+            {/* <styles.BigNumber id="number">0</styles.BigNumber> */}
+            {/* <styles.BigNumber1>milhões</styles.BigNumber1> */}
+            </styles.Grid1>
+            <styles.BigNumber3>É a <styles.TextHighlightGreen> prefeitura</styles.TextHighlightGreen> <br/>no seu <styles.TextHighlightBlue>bairro</styles.TextHighlightBlue> 
+            </styles.BigNumber3>
+      </styles.ContainerCard2>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+export function MapaBairroMaravilha(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterMapDiv
+      ref={props.chapRef}
+      id={props.id}
+    ></styles.ChapterMapDiv>
+  );
+}
+
+export function TextoBairroMaravilha(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <styles.TextCard1>
+        Texto BAIRRO MARAVILHA
+        </styles.TextCard1>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv>
+  );
+}
+
+
+export function VideoUm(
   props = {
     id: "",
     chapRef: null,
@@ -205,179 +298,6 @@ export function BairroMaravilha(
       </video>
       </div>
     </styles.IntroDiv>
-  );
-}
-
-export function ObraNorte(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterMapDiv
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterMapDiv>
-  );
-}
-
-export function TextoObraNorte(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.TextCard1>
-        A DEFINIR
-        </styles.TextCard1>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
-
-export function ObraNorteUm(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterMapDiv
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterMapDiv>
-  );
-}
-
-export function TextoObraNorteUm(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.TextCard1>
-        A DEFINIR
-        </styles.TextCard1>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function MapaOeste(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterMapDiv
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterMapDiv>
-  );
-}
-
-export function TextoOeste(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.TextCard1>
-        Já na Zona Oeste, xx obras já foram entregues aos cariocas. Com um investimento atual
-        de R$ XX, a Prefeitura ainda entregará mais XX empreendimentos na região até XX ano.
-        </styles.TextCard1>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function MapaOesteZoom(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterMapDiv
-      ref={props.chapRef}
-      id={props.id}
-    ></styles.ChapterMapDiv>
-  );
-}
-
-export function TextoOesteZoom(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.TextCard1>
-        <styles.TextHighlightBold>O maior bairro do Brasil vai andar.</styles.TextHighlightBold> Com um investimento da Prefeitura em XX obras para melhorar o trânsito, o maior bairro do Brasil receberá ainda o Anel Viário, que irá reduzir pela metade o tempo de deslocamento entre o centro do bairro até a Avenida Brasil.
-        <br/><br/> 
-        Com um investimento de R$ XX, ainda estão previstas as entregas de:
-        <br/><br/> 
-        Novo Mergulhão, desafogando o trânsito do cruzamento da Avenida Cesário de Melo com a Estrada do Monteiro, um novo túnel;
-        <br/><br/> 
-        Um novo túnel que fará conexão direta entre a Avenida Cesário de Melo e a Estrada da Posse. A estrutura terá duas galerias com duas pistas em cada uma e mais 600 metros de ciclovia;
-        <br/><br/> 
-        Uma nova via semi-expressa, que possibilitará com que o trabalhador que sair do centro de Campo Grande possa chegar mais rápido a Avenida Brasil através da Estrada da Posse;
-        <br/><br/> 
-        E a nova Estrada do Tingui, que ganhará um novo trecho e será urbanizada e pavimentada, sendo mais uma opção de ligação do centro de Campo Grande com a Avenida Brasil.
-        </styles.TextCard1>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
-  );
-}
-
-export function NumeraoUm(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard2>
-          <styles.Grid1>
-            {/* <styles.BigNumber2>R$</styles.BigNumber2> */}
-            <styles.BigNumber id="number">0</styles.BigNumber>
-            <styles.BigNumber1>milhões</styles.BigNumber1>
-            </styles.Grid1>
-            <styles.BigNumber3>É o valor de investimentos feitos pela Prefeitura em obras nas Zonas Oeste e Norte da cidade.
-            </styles.BigNumber3>
-      </styles.ContainerCard2>
-    </styles.ChapterGenericDiv>
   );
 }
 
