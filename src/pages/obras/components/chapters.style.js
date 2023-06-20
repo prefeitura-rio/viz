@@ -14,8 +14,8 @@ export const CapaDiv = tw(CapaDivSC)`
   flex flex-col 
   justify-center items-center 
   pl-5 pr-5
-  bg-opacity-40 backdrop-blur
-  bg-white/50
+  backdrop-blur
+  bg-[#d66262]
 `;
 // lg:mr-20 lg:ml-20
 // sm:ml-30 sm:mr-30
@@ -23,7 +23,7 @@ export const CapaDiv = tw(CapaDivSC)`
 export const Title = tw.div`
   lg:mb-3    
   font-montserrat font-bold  
-  text-4xl text-center text-black
+  text-4xl text-center text-white
   lg:text-[72px]
   lg:leading-[120%]
   `;
@@ -36,17 +36,16 @@ export const Subtitle = tw.div`
 
 export const AuthorText = tw.div`
   font-montserrat
-  text-sm text-center text-black
+  text-sm text-center text-white
   lg:text-base
   mt-[60px]
 `;
 
 export const IntroDiv = tw.div`
   w-full h-[140vh]
-  bg-opacity-40 backdrop-blur
+  backdrop-blur
   flex flex-col 
   justify-center items-center 
-  bg-white/50
 `;
 
 export const IntroTitle = tw.div`
@@ -59,7 +58,7 @@ export const IntroTitle = tw.div`
 
 export const IntroText = tw.div`
   font-montserrat  
-  text-[15px] text-justify text-black 
+  text-[15px] text-justify text-white
   leading-normal 
   opacity-100
   max-w-[600px]
@@ -108,6 +107,28 @@ export const ChapterGenericDiv1 = tw.div`
   -z-10 
   `;
 
+  export const ChapterGenericDiv2 = tw.div`
+  flex
+  w-full h-[150vh] 
+  items-start
+  justify-center
+  lg:justify-start
+  lg:p-[10%]
+  text-white
+  -z-10 
+  `;
+
+  export const ChapterGenericDiv3 = tw.div`
+  flex
+  w-full h-[150vh] 
+  items-start
+  justify-end
+  lg:justify-end
+  lg:p-[10%]
+  text-white
+  -z-10 
+  `;
+
 export const ChapterMapDiv = tw.div`
   flex
   w-full h-[80vh] 
@@ -148,6 +169,8 @@ export const ContainerCard1 = tw.div`
 `;
 
 export const ContainerCard2 = tw.div`
+max-w-xs
+lg:max-w-[36rem]
 `;
 
 export const TextCard = tw.div`
@@ -161,7 +184,7 @@ export const TextHighlightBold = tw.div`
   font-montserrat font-bold
   text-[15px]
   text-left
-  text-black
+  text-white
   inline
 `;
 
@@ -175,6 +198,17 @@ export const TextHighlightGreen = tw.div`
   py-2
   px-3
   lg:mb-[10px]
+`;
+
+export const TextHighlightGreenSmall = tw.div`
+  font-montserrat font-bold
+  text-[15px]
+  text-left
+  text-white
+  inline-block
+  bg-[#a9d3a2]
+  py-0
+  px-2
 `;
 
 export const TextHighlightOrange = tw.div`
@@ -201,6 +235,17 @@ export const TextHighlightBlue = tw.div`
   lg:mb-[10px]
 `;
 
+export const TextHighlightBlueSmall = tw.div`
+  font-montserrat font-bold
+  text-[15px]
+  text-left
+  text-white
+  inline-block
+  bg-[#639ed8]
+  py-0
+  px-2
+`;
+
 export const TextCard1 = tw.div`
   font-montserrat  
   text-[15px]
@@ -225,34 +270,53 @@ export const Grid = tw.div`
   gap-y-8
 `;
 
-const BigNumberSC = styled.div`
-  color: #000000;
-  font-weight: 700;
-`;
-
-export const BigNumber = tw(BigNumberSC)`
+export const BigNumber = tw.div`
   font-montserrat  
   font-bold
   text-5xl
   text-left
+  test-white
   self-end
   lg:text-[140px]
 `;
 
-export const BigNumber1 = tw(BigNumber)`
+export const BigNumber1 = tw.div`
   text-2xl
   lg:text-[60px]
+  font-bold
+  test-white
 `;
 
-export const BigNumber2 = tw(BigNumber)`
+export const BigNumber2 = tw.div`
   text-2xl
   lg:text-[20px]
+  font-bold
+  test-white
 `;
 
-export const BigNumber3 = tw(BigNumber)`
+export const BigNumber3 = tw.div`
   text-2xl
   leading-[120%]
-  lg:text-[50px]
+  lg:text-[60px]
+  font-bold
+  test-white
+`;
+
+export const BigNumber4 = tw.div`
+  text-2xl
+  leading-[120%]
+  lg:text-[60px]
+  font-bold
+  text-black
+`;
+
+export const BigNumber5 = tw.div`
+  text-2xl
+  leading-[120%]
+  lg:text-[60px]
+  font-bold
+  text-black
+  text-right
 `;
 
 const TextyellowSC = styled.div`

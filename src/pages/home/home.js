@@ -12,6 +12,9 @@ export default function Home() {
           <Link to="/obras">Especial | Obras</Link>
         </li>
         <li>
+          <Link to="/obras-teste">Especial | Obras Teste</Link>
+        </li>
+        <li>
           <Link to="/alagamento-passado-comando">
             Painel Alagamento Passado Comando
           </Link>

@@ -1,6 +1,6 @@
 import tw from "tailwind-styled-components";
 import styled from "styled-components";
-import logo1 from "../../pages/obras/images/logo1.png";
+import logo1 from "../../pages/obras-teste/images/logo1.png";
 
 const LoadingDiv = tw.div`
 w-full h-screen
@@ -20,7 +20,7 @@ mt-[2vh]
 lg:mr-5
 `;
 
-export function LoadingTeste() {
+export function LoadingObrasTeste() {
   return (
     <LoadingDiv>
       <LoadingImage src={logo1}></LoadingImage>

@@ -48,8 +48,8 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Intro().layers);
         break;
       case "numeraoum":
-        setPosition(chapterMap.Mapaconjuntomaravilha().location);
-        setLayers(chapterMap.Mapaconjuntomaravilha().layers);
+        setPosition(chapterMap.Intro().location);
+        setLayers(chapterMap.Intro().layers);
         break;
       case "mapaconjuntomaravilha":
         setPosition(chapterMap.Mapaconjuntomaravilha().location);
@@ -59,9 +59,25 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Mapaconjuntomaravilha().location);
         setLayers(chapterMap.Mapaconjuntomaravilha().layers);
         break;
+      case "numeraoconjuntomaravilha":
+        setPosition(chapterMap.Mapaconjuntomaravilha().location);
+        setLayers(chapterMap.Mapaconjuntomaravilha().layers);
+        break;
+      case "numeraoconjuntomaravilhaum":
+        setPosition(chapterMap.Mapaconjuntomaravilhaum().location);
+        setLayers(chapterMap.Mapaconjuntomaravilhaum().layers);
+        break;
       case "mapacasacarioca":
         setPosition(chapterMap.Mapacasacarioca().location);
         setLayers(chapterMap.Mapacasacarioca().layers);
+        break;
+      case "numeraocasacarioca":
+        setPosition(chapterMap.Mapacasacarioca().location);
+        setLayers(chapterMap.Mapacasacarioca().layers);
+        break;
+      case "numeraocasacariocaum":
+        setPosition(chapterMap.Mapacasacariocaum().location);
+        setLayers(chapterMap.Mapacasacariocaum().layers);
         break;
       case "textocasacarioca":
         setPosition(chapterMap.Mapacasacarioca().location);
@@ -128,24 +144,24 @@ export default function SubsidioSPPO() {
       },
     });
 
-    const tl2 = gsap.timeline();
-    tl2
-      .set("#intro", { opacity: 1 })
-      .to("#intro", { opacity: 1, duration: 30 })
-      .to("#intro", { opacity: 1, duration: 6 })
-      .to("#intro", { opacity: 1, duration: 20 })
-      .to("#intro", { opacity: 0, duration: 6 })
-      .to("#intro", { opacity: 0, duration: 28 });
-
     ScrollTrigger.create({
-      animation: tl2,
       trigger: "#intro",
       onToggle: () => {
         setChapterNumberMap("intro");
       },
     });
 
+    const tl16 = gsap.timeline();
+    tl16
+      .set("#numeraoum", { opacity: 1 })
+      .to("#numeraoum", { opacity: 1, duration: 30 })
+      .to("#numeraoum", { opacity: 1, duration: 6 })
+      .to("#numeraoum", { opacity: 1, duration: 20 })
+      .to("#numeraoum", { opacity: 0, duration: 6 })
+      .to("#numeraoum", { opacity: 0, duration: 28 });
+
     ScrollTrigger.create({
+      animation: tl16,
       trigger: "#numeraoum",
       onToggle: () => {
         setChapterNumberMap("numeraoum");
@@ -160,6 +176,20 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
+      trigger: "#numeraoconjuntomaravilha",
+      onToggle: () => {
+        setChapterNumberMap("numeraoconjuntomaravilha");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#numeraoconjuntomaravilhaum",
+      onToggle: () => {
+        setChapterNumberMap("numeraoconjuntomaravilhaum");
+      },
+    });
+
+    ScrollTrigger.create({
       trigger: "#textoconjuntomaravilha",
       onToggle: () => {
         setChapterNumberMap("textoconjuntomaravilha");
@@ -170,6 +200,20 @@ export default function SubsidioSPPO() {
       trigger: "#mapacasacarioca",
       onToggle: () => {
         setChapterNumberMap("mapacasacarioca");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#numeraocasacarioca",
+      onToggle: () => {
+        setChapterNumberMap("numeraocasacarioca");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#numeraocasacariocaum",
+      onToggle: () => {
+        setChapterNumberMap("numeraocasacariocaum");
       },
     });
 
@@ -304,8 +348,13 @@ export default function SubsidioSPPO() {
 
       <chapterDiv.NumeraoUm id={"numeraoum"} />
       <chapterDiv.MapaConjuntoMaravilha id={"mapaconjuntomaravilha"} />
-      <chapterDiv.TextoConjuntoMaravilha id={"textoconjuntomaravilha"} />
+      <chapterDiv.NumeraoConjuntoMaravilha id={"numeraoconjuntomaravilha"} />
+      <chapterDiv.NumeraoConjuntoMaravilhaUm id={"numeraoconjuntomaravilhaum"} />
+
       <chapterDiv.MapaCasaCarioca id={"mapacasacarioca"} />
+      <chapterDiv.NumeraoCasaCarioca id={"numeraocasacarioca"} />
+      <chapterDiv.NumeraoCasaCariocaUm id={"numeraocasacariocaum"} />
+      <chapterDiv.TextoConjuntoMaravilha id={"textoconjuntomaravilha"} />
       <chapterDiv.TextoCasaCarioca id={"textocasacarioca"} />
 
       <chapterDiv.NumeraoDois id={"numeraodois"} />
