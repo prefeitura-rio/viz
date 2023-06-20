@@ -186,12 +186,12 @@ export const Mapaavancacampogrande = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.30660,
-          lat: -22.89799,
+          lon: -43.26232,
+          lat: -22.88882,
         },
-        zoom: 16.15,
-        pitch: 62.50,
-        bearing: 54.40,
+        zoom: 16.98,
+        pitch: 80.0,
+        bearing: 10.0,
         duration: 4000,
       },
       mobile: {
@@ -206,54 +206,37 @@ export const Mapaavancacampogrande = () => {
       },
     },
     layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 1,
-        layer: {
-          ...{
-            id: "zona norte",
-            type: "circle",
-            source: "composite",
-            paint: {
-              "circle-color": "#db7500",
-              "circle-opacity": 0,
-            },
-            "source-layer": "obrasqgiz-6vyzdl",
-          },
+      
+    ],
+  };
+};
+
+export const Mapaavancacampograndeum = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.26232,
+          lat: -22.88882,
         },
+        zoom: 16.98,
+        pitch: 80.0,
+        bearing: 10.0,
+        duration: 4000,
       },
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.05,
-        layer: {
-          ...{
-            id: "zona norte fill",
-            type: "fill",
-            source: "composite",
-            paint: {
-              "fill-opacity": 0,
-              "fill-color": "#db7500",
-            },
-            "source-layer": "zonas-3rtoyn",
-          },
+      mobile: {
+        center: {
+          lon: -43.26868,
+          lat: -22.87955,
         },
+        zoom: 9.8,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
       },
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.2,
-        layer: {
-          ...{
-            id: "zona norte big",
-            type: "circle",
-            source: "composite",
-            paint: {
-              "circle-color": "#db7500",
-              "circle-opacity": 0,
-            },
-            "source-layer": "obrasqgiz-6vyzdl",
-          },
-        },
-      },
+    },
+    layers: [
+      
     ],
   };
 };
@@ -263,12 +246,12 @@ export const Mapabairromaravilha = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.30379,
-          lat: -22.84584,
+          lon: -43.26232,
+          lat: -22.88882,
         },
-        zoom: 16.61,
-        pitch: 55.84,
-        bearing: -63.44,
+        zoom: 16.98,
+        pitch: 80.0,
+        bearing: 10.0,
         duration: 4000,
       },
       mobile: {
@@ -283,54 +266,37 @@ export const Mapabairromaravilha = () => {
       },
     },
     layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 1,
-        layer: {
-          ...{
-            id: "zona norte",
-            type: "circle",
-            source: "composite",
-            paint: {
-              "circle-color": "#db7500",
-              "circle-opacity": 0,
-            },
-            "source-layer": "obrasqgiz-6vyzdl",
-          },
+      
+    ],
+  };
+};
+
+export const Mapabairromaravilhaum = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.26232,
+          lat: -22.88882,
         },
+        zoom: 16.98,
+        pitch: 80.0,
+        bearing: 10.0,
+        duration: 4000,
       },
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.05,
-        layer: {
-          ...{
-            id: "zona norte fill",
-            type: "fill",
-            source: "composite",
-            paint: {
-              "fill-opacity": 0,
-              "fill-color": "#db7500",
-            },
-            "source-layer": "zonas-3rtoyn",
-          },
+      mobile: {
+        center: {
+          lon: -43.26868,
+          lat: -22.87955,
         },
+        zoom: 9.8,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
       },
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.2,
-        layer: {
-          ...{
-            id: "zona norte big",
-            type: "circle",
-            source: "composite",
-            paint: {
-              "circle-color": "#db7500",
-              "circle-opacity": 0,
-            },
-            "source-layer": "obrasqgiz-6vyzdl",
-          },
-        },
-      },
+    },
+    layers: [
+      
     ],
   };
 };

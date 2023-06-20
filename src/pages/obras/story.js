@@ -47,15 +47,11 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Intro().location);
         setLayers(chapterMap.Intro().layers);
         break;
-      case "numeraoum":
+      case "nacasa":
         setPosition(chapterMap.Intro().location);
         setLayers(chapterMap.Intro().layers);
         break;
       case "mapaconjuntomaravilha":
-        setPosition(chapterMap.Mapaconjuntomaravilha().location);
-        setLayers(chapterMap.Mapaconjuntomaravilha().layers);
-        break;
-      case "textoconjuntomaravilha":
         setPosition(chapterMap.Mapaconjuntomaravilha().location);
         setLayers(chapterMap.Mapaconjuntomaravilha().layers);
         break;
@@ -66,6 +62,10 @@ export default function SubsidioSPPO() {
       case "numeraoconjuntomaravilhaum":
         setPosition(chapterMap.Mapaconjuntomaravilhaum().location);
         setLayers(chapterMap.Mapaconjuntomaravilhaum().layers);
+        break;
+      case "textoconjuntomaravilha":
+        setPosition(chapterMap.Mapaconjuntomaravilha().location);
+        setLayers(chapterMap.Mapaconjuntomaravilha().layers);
         break;
       case "mapacasacarioca":
         setPosition(chapterMap.Mapacasacarioca().location);
@@ -83,7 +83,7 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Mapacasacarioca().location);
         setLayers(chapterMap.Mapacasacarioca().layers);
         break;
-      case "numeraodois":
+      case "narua":
         setPosition(chapterMap.Mapacasacarioca().location);
         setLayers(chapterMap.Mapacasacarioca().layers);
         break;
@@ -91,11 +91,19 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Mapaavancacampogrande().location);
         setLayers(chapterMap.Mapaavancacampogrande().layers);
         break;
+      case "numeraoavancacampogrande":
+        setPosition(chapterMap.Mapaavancacampogrande().location);
+        setLayers(chapterMap.Mapaavancacampogrande().layers);
+        break;
+      case "numeraoavancacampograndeaum":
+        setPosition(chapterMap.Mapaavancacampograndeum().location);
+        setLayers(chapterMap.Mapaavancacampograndeum().layers);
+        break;
       case "textoavancacampogrande":
         setPosition(chapterMap.Mapaavancacampogrande().location);
         setLayers(chapterMap.Mapaavancacampogrande().layers);
         break;
-      case "numeraotres":
+      case "nobairro":
         setPosition(chapterMap.Mapabairromaravilha().location);
         setLayers(chapterMap.Mapabairromaravilha().layers);
         break;
@@ -103,11 +111,15 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Mapabairromaravilha().location);
         setLayers(chapterMap.Mapabairromaravilha().layers);
         break;
-      case "textobairromaravilha":
+      case "numeraobairromaravilha":
         setPosition(chapterMap.Mapabairromaravilha().location);
         setLayers(chapterMap.Mapabairromaravilha().layers);
-        break; 
-      case "videoum":
+        break;
+      case "numeraobairromaravilhaaum":
+        setPosition(chapterMap.Mapabairromaravilhaum().location);
+        setLayers(chapterMap.Mapabairromaravilhaum().layers);
+        break;
+      case "textobairromaravilha":
         setPosition(chapterMap.Mapabairromaravilha().location);
         setLayers(chapterMap.Mapabairromaravilha().layers);
         break;
@@ -151,20 +163,10 @@ export default function SubsidioSPPO() {
       },
     });
 
-    const tl16 = gsap.timeline();
-    tl16
-      .set("#numeraoum", { opacity: 1 })
-      .to("#numeraoum", { opacity: 1, duration: 30 })
-      .to("#numeraoum", { opacity: 1, duration: 6 })
-      .to("#numeraoum", { opacity: 1, duration: 20 })
-      .to("#numeraoum", { opacity: 0, duration: 6 })
-      .to("#numeraoum", { opacity: 0, duration: 28 });
-
     ScrollTrigger.create({
-      animation: tl16,
-      trigger: "#numeraoum",
+      trigger: "#nacasa",
       onToggle: () => {
-        setChapterNumberMap("numeraoum");
+        setChapterNumberMap("nacasa");
       },
     });
 
@@ -225,16 +227,30 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#numeraodois",
+      trigger: "#narua",
       onToggle: () => {
-        setChapterNumberMap("numeraodois");
+        setChapterNumberMap("narua");
       },
     });
-
+    
     ScrollTrigger.create({
       trigger: "#mapaavancacampogrande",
       onToggle: () => {
         setChapterNumberMap("mapaavancacampogrande");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#numeraoavancacampogrande",
+      onToggle: () => {
+        setChapterNumberMap("numeraoavancacampogrande");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#numeraoavancacampograndeum",
+      onToggle: () => {
+        setChapterNumberMap("numeraoavancacampograndeum");
       },
     });
 
@@ -246,12 +262,12 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#numeraotres",
+      trigger: "#nobairro",
       onToggle: () => {
-        setChapterNumberMap("numeraotres");
+        setChapterNumberMap("nobairro");
       },
     });
-
+    
     ScrollTrigger.create({
       trigger: "#mapabairromaravilha",
       onToggle: () => {
@@ -260,26 +276,23 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#textobairromaravilha",
+      trigger: "#numeraobairromaravilha",
       onToggle: () => {
-        setChapterNumberMap("textobairromaravilha");
+        setChapterNumberMap("numeraobairromaravilha");
       },
     });
 
-    const tl15 = gsap.timeline();
-    tl15
-      .set("#videoum", { opacity: 0 })
-      .to("#videoum", { opacity: 0, duration: 30 })
-      .to("#videoum", { opacity: 1, duration: 6 })
-      .to("#videoum", { opacity: 1, duration: 20 })
-      .to("#videoum", { opacity: 0, duration: 6 })
-      .to("#videoum", { opacity: 0, duration: 28 });
+    ScrollTrigger.create({
+      trigger: "#numeraobairromaravilhaum",
+      onToggle: () => {
+        setChapterNumberMap("numeraobairromaravilhaum");
+      },
+    });
 
     ScrollTrigger.create({
-      animation: tl15,
-      trigger: "#videoum",
+      trigger: "#textobairromaravilha",
       onToggle: () => {
-        setChapterNumberMap("videoum");
+        setChapterNumberMap("textobairromaravilha");
       },
     });
 
@@ -296,17 +309,7 @@ export default function SubsidioSPPO() {
       onUpdate: changeNumber,
     });
 
-    const tl11 = gsap.timeline();
-    tl11
-      .set("#fim", { opacity: 0 })
-      .to("#fim", { opacity: 0, duration: 30 })
-      .to("#fim", { opacity: 1, duration: 6 })
-      .to("#fim", { opacity: 1, duration: 20 })
-      .to("#fim", { opacity: 1, duration: 6 })
-      .to("#fim", { opacity: 1, duration: 28 });
-
     ScrollTrigger.create({
-      animation: tl11,
       trigger: "#fim",
       onToggle: () => {
         setChapterNumberMap("fim");
@@ -346,26 +349,28 @@ export default function SubsidioSPPO() {
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
 
-      <chapterDiv.NumeraoUm id={"numeraoum"} />
+      <chapterDiv.NaCasa id={"nacasa"} />
       <chapterDiv.MapaConjuntoMaravilha id={"mapaconjuntomaravilha"} />
       <chapterDiv.NumeraoConjuntoMaravilha id={"numeraoconjuntomaravilha"} />
       <chapterDiv.NumeraoConjuntoMaravilhaUm id={"numeraoconjuntomaravilhaum"} />
+      <chapterDiv.TextoConjuntoMaravilha id={"textoconjuntomaravilha"} />
 
       <chapterDiv.MapaCasaCarioca id={"mapacasacarioca"} />
       <chapterDiv.NumeraoCasaCarioca id={"numeraocasacarioca"} />
       <chapterDiv.NumeraoCasaCariocaUm id={"numeraocasacariocaum"} />
-      <chapterDiv.TextoConjuntoMaravilha id={"textoconjuntomaravilha"} />
       <chapterDiv.TextoCasaCarioca id={"textocasacarioca"} />
 
-      <chapterDiv.NumeraoDois id={"numeraodois"} />
+      <chapterDiv.NaRua id={"narua"} />
       <chapterDiv.MapaAvancaCampoGrande id={"mapaavancacampogrande"} />
+      <chapterDiv.NumeraoAvancaCampoGrande id={"numeraoavancacampogrande"} />
+      <chapterDiv.NumeraoAvancaCampoGrandeUm id={"numeraoavancacampograndeum"} />
       <chapterDiv.TextoAvancaCampoGrande id={"textoavancacampogrande"} />
 
-      <chapterDiv.NumeraoTres id={"numeraotres"} />
+      <chapterDiv.NoBairro id={"nobairro"} />
       <chapterDiv.MapaBairroMaravilha id={"mapabairromaravilha"} />
+      <chapterDiv.NumeraoBairroMaravilha id={"numeraobairromaravilha"} />
+      <chapterDiv.NumeraoBairroMaravilhaUm id={"numeraobairromaravilhaum"} />
       <chapterDiv.TextoBairroMaravilha id={"textobairromaravilha"} />
-      
-      <chapterDiv.VideoUm id={"videoum"} />
 
       <chapterDiv.Fim id={"fim"} />
       <chapterDiv.Creditos id={"creditos"} />

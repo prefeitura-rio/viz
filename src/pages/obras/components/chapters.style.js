@@ -66,21 +66,20 @@ export const IntroText = tw.div`
 
 export const FimDiv = tw.div`
   w-full h-auto
-  pb-[300px]
-  bg-opacity-40 backdrop-blur
+  min-h-[100vh]
   flex flex-col 
-  justify-center items-center 
-  bg-white/50
+  justify-center
+  items-center 
 `;
 
 export const FimTitle = tw.div`
   font-bold  font-montserrat
-  text-3xl text-left text-black
+  text-3xl text-left text-white
 `;
 
 export const FimText = tw.div`
   font-montserrat  
-  text-[15px] text-center text-black 
+  text-[15px] text-center text-white 
   leading-normal 
   opacity-100
   max-w-[600px]
@@ -110,7 +109,7 @@ export const ChapterGenericDiv1 = tw.div`
   export const ChapterGenericDiv2 = tw.div`
   flex
   w-full h-[150vh] 
-  items-start
+  items-center
   justify-center
   lg:justify-start
   lg:p-[10%]
@@ -190,12 +189,24 @@ export const TextHighlightBold = tw.div`
 
 export const TextHighlightGreen = tw.div`
   font-montserrat font-bold
-  text-[72px]
+  text-[42px]
   text-left
   text-white
   inline-block
   bg-[#a9d3a2]
-  py-2
+  py-1
+  px-3
+  lg:mb-[10px]
+`;
+
+export const TextHighlightGreenBig = tw.div`
+  font-montserrat font-bold
+  text-[70px]
+  text-left
+  text-white
+  inline-block
+  bg-[#a9d3a2]
+  py-1
   px-3
   lg:mb-[10px]
 `;
@@ -213,24 +224,60 @@ export const TextHighlightGreenSmall = tw.div`
 
 export const TextHighlightOrange = tw.div`
   font-montserrat font-bold
-  text-[72px]
+  text-[42px]
   text-left
   text-white
   inline-block
   bg-[#dab68a]
-  py-2
+  py-1
   px-3
   lg:mb-[10px]
 `;
 
+export const TextHighlightOrangeBig = tw.div`
+  font-montserrat font-bold
+  text-[70px]
+  text-left
+  text-white
+  inline-block
+  bg-[#dab68a]
+  py-1
+  px-3
+  lg:mb-[10px]
+`;
+
+
+export const TextHighlightOrangeSmall = tw.div`
+  font-montserrat font-bold
+  text-[15px]
+  text-left
+  text-white
+  inline-block
+  bg-[#dab68a]
+  py-0
+  px-2
+`;
+
 export const TextHighlightBlue = tw.div`
   font-montserrat font-bold
-  text-[72px]
+  text-[42px]
   text-left
   text-white
   inline-block
   bg-[#639ed8]
-  py-2
+  py-1
+  px-3
+  lg:mb-[10px]
+`;
+
+export const TextHighlightBlueBig = tw.div`
+  font-montserrat font-bold
+  text-[70px]
+  text-left
+  text-white
+  inline-block
+  bg-[#639ed8]
+  py-1
   px-3
   lg:mb-[10px]
 `;
@@ -242,6 +289,41 @@ export const TextHighlightBlueSmall = tw.div`
   text-white
   inline-block
   bg-[#639ed8]
+  py-0
+  px-2
+`;
+
+export const TextHighlightRed = tw.div`
+  font-montserrat font-bold
+  text-[42px]
+  text-left
+  text-white
+  inline-block
+  bg-[#d66262]
+  py-1
+  px-3
+  lg:mb-[10px]
+`;
+
+export const TextHighlightRedBig = tw.div`
+  font-montserrat font-bold
+  text-[70px]
+  text-left
+  text-white
+  inline-block
+  bg-[#d66262]
+  py-1
+  px-3
+  lg:mb-[10px]
+`;
+
+export const TextHighlightRedSmall = tw.div`
+  font-montserrat font-bold
+  text-[15px]
+  text-left
+  text-white
+  inline-block
+  bg-[#d66262]
   py-0
   px-2
 `;
@@ -305,7 +387,7 @@ export const BigNumber3 = tw.div`
 export const BigNumber4 = tw.div`
   text-2xl
   leading-[120%]
-  lg:text-[60px]
+  lg:text-[42px]
   font-bold
   text-black
 `;
@@ -313,7 +395,7 @@ export const BigNumber4 = tw.div`
 export const BigNumber5 = tw.div`
   text-2xl
   leading-[120%]
-  lg:text-[60px]
+  lg:text-[42px]
   font-bold
   text-black
   text-right
