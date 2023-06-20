@@ -5,6 +5,7 @@ import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { LoadingSEOPDemolicioes } from "./pages/seop-demolicoes/loading";
 import { LoadingObras } from "./pages/obras/loading";
+import { LoadingTeste } from "./pages/teste/loading";
 import { LoadingSubsidioSPPO } from "./pages/subsidio-sppo/loading";
 import { LoadingSeopCep } from "./pages/seop-cep/loading";
 import { LoadingCarnaval2023 } from "./pages/carnaval-2023/loading";
@@ -20,6 +21,7 @@ const VideoSandbox = lazy(() => import("./pages/sandbox/video"));
 const SubsidioSPPO = lazy(() => import("./pages/subsidio-sppo/story"));
 const Interactive = lazy(() => import("./pages/subsidio-sppo/interactive"));
 const Obras = lazy(() => import("./pages/obras/story"));
+const Teste = lazy(() => import("./pages/teste/story"));
 const TestLineChart = lazy(() => import("./pages/sandbox/test_linechart"));
 const TestMap = lazy(() => import("./pages/sandbox/test_map"));
 const SEOPDemolicoes = lazy(() => import("./pages/seop-demolicoes/story"));
@@ -146,6 +148,11 @@ function App() {
         <Suspense fallback={<LoadingObras />}>
           <Routes>
             <Route path="/obras" element={<Obras />}></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<LoadingTeste />}>
+          <Routes>
+            <Route path="/teste" element={<Teste />}></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<LoadingEnchentes />}>
