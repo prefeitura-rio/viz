@@ -498,7 +498,7 @@ export function Fim(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv className="bg-[#639ed8]" ref={props.chapRef} id={props.id}>
+    <styles.IntroDivUm className="bg-[#639ed8]" ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
       <div className="max-w-[80%]">
         {" "}
@@ -521,7 +521,7 @@ export function Fim(
         <br /> <br />
           A preservação de vidas é, e sempre será, o nosso objetivo.   </styles.IntroText>
       </div>
-    </styles.IntroDiv>
+    </styles.IntroDivUm>
   );
 }
 
