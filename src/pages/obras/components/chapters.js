@@ -169,7 +169,6 @@ export function TextoConjuntoMaravilha(
   return (
     <styles.IntroDiv className="bg-[#a9d3a2]" ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
-      <img src={conjuntomaravilha} className="w-auto h-[500px] mb-[60px]"></img>
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
@@ -180,6 +179,7 @@ export function TextoConjuntoMaravilha(
         Com um investimento atual de R$ 125 milhões, o projeto está presente na Zona Norte e na Zona Oeste, e já reformou oito conjuntos habitacionais, entre eles o Colina dos Coqueiros, em Cosmos; o Santos Dumont, em Rocha Miranda; e o Picuí, em Bento Ribeiro. Outros 14 conjuntos habitacionais da cidade estão recebendo os serviços do programa.
         </styles.IntroText>
       </div>
+      <img src={conjuntomaravilha} className="w-auto h-[370px]"></img>
     </styles.IntroDiv>
   );
 }
@@ -252,7 +252,6 @@ export function TextoCasaCarioca(
   return (
     <styles.IntroDiv className="bg-[#dab68a]" ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
-      <img src={casacarioca} className="w-auto h-[500px] mb-[60px]"></img>
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
@@ -269,6 +268,7 @@ export function TextoCasaCarioca(
         O total de casas a serem beneficiadas pelo programa até 2024 é de 20 mil, num investimento de R$ 300 milhões.
         </styles.IntroText>
       </div>
+      <img src={casacarioca} className="w-auto h-[370px]"></img>
     </styles.IntroDiv>
   );
 }
@@ -363,7 +363,6 @@ export function TextoAvancaCampoGrande(
   return (
     <styles.IntroDiv className="bg-[#639ed8]" ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
-      <img src={avancacampogrande} className="w-auto h-[350px] mb-[60px]"></img>
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
@@ -376,6 +375,7 @@ export function TextoAvancaCampoGrande(
         Ainda estão previstas obras de urbanização que contemplam a implementação das rótulas na Rua Artur Rios e na Estrada da Caroba no acesso ao túnel. 
         </styles.IntroText>
       </div>
+      <img src={avancacampogrande} className="w-auto h-[300px]"></img>
     </styles.IntroDiv>
   );
 }
@@ -470,7 +470,6 @@ export function TextoBairroMaravilha(
   return (
     <styles.IntroDiv className="bg-[#d66262]" ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
-      <img src={bairromaravilha} className="w-auto h-[500px] mb-[60px]"></img>
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
@@ -485,6 +484,7 @@ export function TextoBairroMaravilha(
         Na Zona Norte, o projeto ocorre em Olaria, Bonsucesso, Coelho Neto, Ilha do Governador, Del Castilho, Ramos, Rocha Miranda, Madureira e Caju, além do Morro do Chaves, em Barros Filho, e da comunidade Eternit, em Guadalupe. A Zona Norte está recebendo, ao todo, 13 obras.
         </styles.IntroText>
       </div>
+      <img src={bairromaravilha} className="w-auto h-[370px]"></img>
     </styles.IntroDiv>
   );
 }
