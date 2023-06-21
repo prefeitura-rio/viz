@@ -42,12 +42,19 @@ export const AuthorText = tw.div`
 `;
 
 export const IntroDiv = tw.div`
-  w-full h-[140vh]
+  w-full min-h-[100vh] h-auto
   backdrop-blur
   flex
   justify-between items-center 
   lg:p-[10%]
   gap-[100px]
+`;
+
+export const IntroDivUm = tw.div`
+  w-full min-h-[100vh] h-auto
+  backdrop-blur
+  flex flex-col
+  justify-center items-center 
 `;
 
 export const IntroTitle = tw.div`

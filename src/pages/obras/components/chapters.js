@@ -63,7 +63,7 @@ export function Intro(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv className="bg-[#639ed8]" ref={props.chapRef} id={props.id}>
+    <styles.IntroDivUm className="bg-[#639ed8]" ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
       <div className="max-w-[80%]">
         {" "}
@@ -75,7 +75,7 @@ export function Intro(
         <styles.TextHighlightBold>É a Prefeitura trazendo de volta, o orgulho de ser suburbano. </styles.TextHighlightBold>
         </styles.IntroText>
       </div>
-    </styles.IntroDiv>
+    </styles.IntroDivUm>
   );
 }
 
