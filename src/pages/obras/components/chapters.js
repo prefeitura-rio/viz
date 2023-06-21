@@ -546,6 +546,7 @@ export function Creditos(
         João Carabetta <br />
         Joice Nascimento <br />
         Pedro Lerner <br />
+        Pedro Simões <br />
         Tiago Peregrino
       </styles.FimText>
       <styles.FimTitle className="mt-[60px]">Prefeito</styles.FimTitle>
