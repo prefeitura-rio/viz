@@ -10,6 +10,7 @@ import logo1 from "../images/logo1.png";
 import casacarioca from "../images/casacarioca.png";
 import conjuntomaravilha from "../images/conjuntomaravilha.png";
 import bairromaravilha from "../images/bairromaravilha.png";
+import avancacampogrande from "../images/avancacampogrande.png";
 
 // VIDEOS
 import srcVideo from "../images/bairromaravilha.mp4";
@@ -168,7 +169,7 @@ export function TextoConjuntoMaravilha(
   return (
     <styles.IntroDiv className="bg-[#a9d3a2]" ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
-      <img src={conjuntomaravilha} className="w-auto h-[300px] mb-[60px]"></img>
+      <img src={conjuntomaravilha} className="w-auto h-[500px] mb-[60px]"></img>
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
@@ -253,7 +254,7 @@ export function TextoCasaCarioca(
   return (
     <styles.IntroDiv className="bg-[#dab68a]" ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
-      <img src={conjuntomaravilha} className="w-auto h-[300px] mb-[60px]"></img>
+      <img src={casacarioca} className="w-auto h-[500px] mb-[60px]"></img>
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
@@ -364,7 +365,7 @@ export function TextoAvancaCampoGrande(
   return (
     <styles.IntroDiv className="bg-[#639ed8]" ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
-      <img src={conjuntomaravilha} className="w-auto h-[300px] mb-[60px]"></img>
+      <img src={avancacampogrande} className="w-auto h-[350px] mb-[60px]"></img>
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
@@ -471,7 +472,7 @@ export function TextoBairroMaravilha(
   return (
     <styles.IntroDiv className="bg-[#d66262]" ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
-      <img src={conjuntomaravilha} className="w-auto h-[300px] mb-[60px]"></img>
+      <img src={bairromaravilha} className="w-auto h-[500px] mb-[60px]"></img>
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
