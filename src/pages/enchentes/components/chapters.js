@@ -118,7 +118,6 @@ export function ContextoHistorico(
 							da Prefeitura da Cidade do Rio de Janeiro
 						</styles.AuthorText>{" "}
 					</div>
-
 					<div className="h-[10px] w-[50px] bg-black mb-[10px]"></div>
 					<styles.TextCard>Introdução</styles.TextCard>
 					<styles.TextCard1>
@@ -273,7 +272,6 @@ export function QuadroDois(
 	}
 ) {
 	props = setDefaultProps(props);
-
 	return (
 		<styles.ChapterQuadroDois ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[10vh]">
@@ -371,7 +369,6 @@ export function ParteDois(
 	}
 ) {
 	props = setDefaultProps(props);
-
 	return (
 		<styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard>

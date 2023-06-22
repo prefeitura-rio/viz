@@ -4,6 +4,8 @@
 import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { LoadingSEOPDemolicioes } from "./pages/seop-demolicoes/loading";
+import { LoadingObras } from "./pages/obras/loading";
+import { LoadingObrasTeste } from "./pages/obras-teste/loading";
 import { LoadingSubsidioSPPO } from "./pages/subsidio-sppo/loading";
 import { LoadingSeopCep } from "./pages/seop-cep/loading";
 import { LoadingCarnaval2023 } from "./pages/carnaval-2023/loading";
@@ -18,17 +20,30 @@ const StorySample = lazy(() => import("./pages/sandbox/sample"));
 const VideoSandbox = lazy(() => import("./pages/sandbox/video"));
 const SubsidioSPPO = lazy(() => import("./pages/subsidio-sppo/story"));
 const Interactive = lazy(() => import("./pages/subsidio-sppo/interactive"));
-
+const Obras = lazy(() => import("./pages/obras/story"));
+const ObrasTeste = lazy(() => import("./pages/obras-teste/story"));
 const TestLineChart = lazy(() => import("./pages/sandbox/test_linechart"));
 const TestMap = lazy(() => import("./pages/sandbox/test_map"));
 const SEOPDemolicoes = lazy(() => import("./pages/seop-demolicoes/story"));
-const PainelAlagamentoPassadoComando = lazy(() => import("./pages/painel-alagamento-passado-comando/story"));
-const PainelAlagamentoRecenteComando = lazy(() => import("./pages/painel-alagamento-recente-comando/story"));
+const PainelAlagamentoPassadoComando = lazy(() =>
+  import("./pages/painel-alagamento-passado-comando/story")
+);
+const PainelAlagamentoRecenteComando = lazy(() =>
+  import("./pages/painel-alagamento-recente-comando/story")
+);
 const PainelChuva = lazy(() => import("./pages/painel-chuva/story"));
-const PainelChuvaPassadoPluviometroAlertario = lazy(() => import("./pages/painel-chuva-passado-pluviometro-alertario/story"));
-const PainelChuvaRecentePluviometroAlertario = lazy(() => import("./pages/painel-chuva-recente-pluviometro-alertario/story"));
-const PainelChuvaPassadoRadarINEA = lazy(() => import("./pages/painel-chuva-passado-radar-inea/story"));
-const PainelChuvaRecenteRadarINEA = lazy(() => import("./pages/painel-chuva-recente-radar-inea/story"));
+const PainelChuvaPassadoPluviometroAlertario = lazy(() =>
+  import("./pages/painel-chuva-passado-pluviometro-alertario/story")
+);
+const PainelChuvaRecentePluviometroAlertario = lazy(() =>
+  import("./pages/painel-chuva-recente-pluviometro-alertario/story")
+);
+const PainelChuvaPassadoRadarINEA = lazy(() =>
+  import("./pages/painel-chuva-passado-radar-inea/story")
+);
+const PainelChuvaRecenteRadarINEA = lazy(() =>
+  import("./pages/painel-chuva-recente-radar-inea/story")
+);
 
 const CepSEOP = lazy(() => {
   return Promise.all([
@@ -71,12 +86,18 @@ function App() {
       <Router>
         <Suspense fallback={<></>}>
           <Routes>
-            <Route path="/alagamento-passado-comando" element={<PainelAlagamentoPassadoComando />}></Route>
+            <Route
+              path="/alagamento-passado-comando"
+              element={<PainelAlagamentoPassadoComando />}
+            ></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<></>}>
           <Routes>
-            <Route path="/alagamento-recente-comando" element={<PainelAlagamentoRecenteComando />}></Route>
+            <Route
+              path="/alagamento-recente-comando"
+              element={<PainelAlagamentoRecenteComando />}
+            ></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<></>}>
@@ -86,22 +107,34 @@ function App() {
         </Suspense>
         <Suspense fallback={<></>}>
           <Routes>
-            <Route path="/chuva-passado-pluviometro-alertario" element={<PainelChuvaPassadoPluviometroAlertario />}></Route>
+            <Route
+              path="/chuva-passado-pluviometro-alertario"
+              element={<PainelChuvaPassadoPluviometroAlertario />}
+            ></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<></>}>
           <Routes>
-            <Route path="/chuva-recente-pluviometro-alertario" element={<PainelChuvaRecentePluviometroAlertario />}></Route>
+            <Route
+              path="/chuva-recente-pluviometro-alertario"
+              element={<PainelChuvaRecentePluviometroAlertario />}
+            ></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<></>}>
           <Routes>
-            <Route path="/chuva-passado-radar-inea" element={<PainelChuvaPassadoRadarINEA />}></Route>
+            <Route
+              path="/chuva-passado-radar-inea"
+              element={<PainelChuvaPassadoRadarINEA />}
+            ></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<></>}>
           <Routes>
-            <Route path="/chuva-recente-radar-inea" element={<PainelChuvaRecenteRadarINEA />}></Route>
+            <Route
+              path="/chuva-recente-radar-inea"
+              element={<PainelChuvaRecenteRadarINEA />}
+            ></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<LoadingSEOPDemolicioes />}>
@@ -110,6 +143,16 @@ function App() {
               path="/especial-seop/demolicoes"
               element={<SEOPDemolicoes />}
             ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<LoadingObras />}>
+          <Routes>
+            <Route path="/obras" element={<Obras />}></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<LoadingObrasTeste />}>
+          <Routes>
+            <Route path="/obras-teste" element={<ObrasTeste />}></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<LoadingEnchentes />}>

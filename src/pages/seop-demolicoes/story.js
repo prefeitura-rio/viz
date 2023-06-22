@@ -1,4 +1,4 @@
-// Mandatory
+// Mandatory.
 import { useEffect, useState, useRef } from "react";
 import MultilayerMap from "../../components/maps/multilayer_map";
 

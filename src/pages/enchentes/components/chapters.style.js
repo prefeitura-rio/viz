@@ -266,6 +266,14 @@ export const TextHighlightBlueDois = tw.div`
 `;
 // selection:bg-[#ef4444] selection:text-white
 
+export const TextHighlightDark = tw.div`
+  font-libre font-[700] 
+  text-[15px]
+  text-left
+  lg:leading-[150%]
+  text-black
+`;
+
 export const TextCard1 = tw.div`
 font-libre font-[400] 
 text-[14px]
