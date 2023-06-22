@@ -24,7 +24,7 @@ export const Title = tw.div`
   lg:mb-3    
   font-montserrat font-bold  
   text-4xl text-center text-white
-  lg:text-[72px]
+  lg:text-[42px]
   lg:leading-[120%]
   `;
 
@@ -45,9 +45,12 @@ export const IntroDiv = tw.div`
   w-full min-h-[100vh] h-auto
   backdrop-blur
   flex
+  flex-col
   justify-between items-center 
   lg:p-[10%]
-  gap-[100px]
+  gap-[80px]
+  pt-[100px]
+  pb-[100px]
 `;
 
 export const IntroDivUm = tw.div`
@@ -198,7 +201,8 @@ export const TextHighlightBold = tw.div`
 
 export const TextHighlightGreen = tw.div`
   font-montserrat font-bold
-  text-[42px]
+  text-[24px]
+  lg:text-[42px]
   text-left
   text-white
   inline-block
@@ -210,7 +214,8 @@ export const TextHighlightGreen = tw.div`
 
 export const TextHighlightGreenBig = tw.div`
   font-montserrat font-bold
-  text-[70px]
+  text-[32px]
+  lg:text-[70px]
   text-left
   text-white
   inline-block
@@ -233,7 +238,8 @@ export const TextHighlightGreenSmall = tw.div`
 
 export const TextHighlightOrange = tw.div`
   font-montserrat font-bold
-  text-[42px]
+  text-[24px]
+  lg:text-[42px]
   text-left
   text-white
   inline-block
@@ -245,7 +251,8 @@ export const TextHighlightOrange = tw.div`
 
 export const TextHighlightOrangeBig = tw.div`
   font-montserrat font-bold
-  text-[70px]
+  text-[32px]
+  lg:text-[70px]
   text-left
   text-white
   inline-block
@@ -269,7 +276,8 @@ export const TextHighlightOrangeSmall = tw.div`
 
 export const TextHighlightBlue = tw.div`
   font-montserrat font-bold
-  text-[42px]
+  text-[24px]
+  lg:text-[42px]
   text-left
   text-white
   inline-block
@@ -281,7 +289,8 @@ export const TextHighlightBlue = tw.div`
 
 export const TextHighlightBlueBig = tw.div`
   font-montserrat font-bold
-  text-[70px]
+  text-[32px]
+  lg:text-[70px]
   text-left
   text-white
   inline-block
@@ -366,7 +375,7 @@ export const BigNumber = tw.div`
   font-bold
   text-5xl
   text-left
-  test-white
+  text-white
   self-end
   lg:text-[140px]
 `;
@@ -375,14 +384,14 @@ export const BigNumber1 = tw.div`
   text-2xl
   lg:text-[60px]
   font-bold
-  test-white
+  text-white
 `;
 
 export const BigNumber2 = tw.div`
   text-2xl
   lg:text-[20px]
   font-bold
-  test-white
+  text-white
 `;
 
 export const BigNumber3 = tw.div`
@@ -390,7 +399,8 @@ export const BigNumber3 = tw.div`
   leading-[120%]
   lg:text-[60px]
   font-bold
-  test-white
+  text-white
+  text-center
 `;
 
 export const BigNumber4 = tw.div`

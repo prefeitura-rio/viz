@@ -72,6 +72,7 @@ export function Intro(
         <br /><br />Estamos falando do <styles.TextHighlightBold>seu Rio.</styles.TextHighlightBold>
         <br /><br />
         Nesta visualização mostraremos como a Prefeitura está levando grandes obras de infraestrutura para as Zona Oeste e Zona Norte da cidade, garantindo a dignidade e qualidade de vida aos cariocas.
+        <br /><br />
         <styles.TextHighlightBold>É a Prefeitura trazendo de volta, o orgulho de ser suburbano. </styles.TextHighlightBold>
         </styles.IntroText>
       </div>
@@ -179,7 +180,7 @@ export function TextoConjuntoMaravilha(
         Com um investimento atual de R$ 125 milhões, o projeto está presente na Zona Norte e na Zona Oeste, e já reformou oito conjuntos habitacionais, entre eles o Colina dos Coqueiros, em Cosmos; o Santos Dumont, em Rocha Miranda; e o Picuí, em Bento Ribeiro. Outros 14 conjuntos habitacionais da cidade estão recebendo os serviços do programa.
         </styles.IntroText>
       </div>
-      <img src={conjuntomaravilha} className="w-auto h-[370px]"></img>
+      <img src={conjuntomaravilha} className="w-auto h-[250px]"></img>
     </styles.IntroDiv>
   );
 }
@@ -252,6 +253,8 @@ export function TextoCasaCarioca(
   return (
     <styles.IntroDiv className="bg-[#dab68a]" ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
+      <img src={casacarioca} className="w-auto h-[250px]"></img>
+  
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
@@ -268,8 +271,7 @@ export function TextoCasaCarioca(
         O total de casas a serem beneficiadas pelo programa até 2024 é de 20 mil, num investimento de R$ 300 milhões.
         </styles.IntroText>
       </div>
-      <img src={casacarioca} className="w-auto h-[370px]"></img>
-    </styles.IntroDiv>
+        </styles.IntroDiv>
   );
 }
 
@@ -375,7 +377,7 @@ export function TextoAvancaCampoGrande(
         Ainda estão previstas obras de urbanização que contemplam a implementação das rótulas na Rua Artur Rios e na Estrada da Caroba no acesso ao túnel. 
         </styles.IntroText>
       </div>
-      <img src={avancacampogrande} className="w-auto h-[300px]"></img>
+      <img src={avancacampogrande} className="w-auto h-[180px]"></img>
     </styles.IntroDiv>
   );
 }
@@ -484,7 +486,7 @@ export function TextoBairroMaravilha(
         Na Zona Norte, o projeto ocorre em Olaria, Bonsucesso, Coelho Neto, Ilha do Governador, Del Castilho, Ramos, Rocha Miranda, Madureira e Caju, além do Morro do Chaves, em Barros Filho, e da comunidade Eternit, em Guadalupe. A Zona Norte está recebendo, ao todo, 13 obras.
         </styles.IntroText>
       </div>
-      <img src={bairromaravilha} className="w-auto h-[370px]"></img>
+      <img src={bairromaravilha} className="w-auto h-[250px]"></img>
     </styles.IntroDiv>
   );
 }
