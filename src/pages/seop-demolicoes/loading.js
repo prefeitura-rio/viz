@@ -7,7 +7,7 @@ w-full h-screen
 flex 
 flex-col
 items-center justify-between 
-text-yellow-600 
+text-white
 text-2xl
 lg:text-2xl
 bg-black
