@@ -570,7 +570,7 @@ export function Acompanhe(
         As ações da Prefeitura
       </styles.IntroTitle>
       <styles.IntroText>
-      As operações realizadas pela Ordem Pública e pela Secretaria de Meio Ambiente reúnem diversos órgãos da Prefeitura, como a Guarda Municipal, Comlurb, Secretaria de Conservação e Subprefeituras, além das concessionárias de luz e água. Na maioria das ações, o apoio das forças policiais também é necessário, devido à influência do crime organizado nas regiões visitadas. Uma força-tarefa entre a SEOP e o Ministério Público atua na realização das demolições e na investigação das construções irregulares e seus responsáveis.
+      As operações realizadas pela Ordem Pública e pela Secretaria de Meio Ambiente reúnem diversos órgãos da Prefeitura, como a Guarda Municipal, Comlurb, Secretaria de Conservação e Subprefeituras, além das concessionárias de luz e água. Na maioria das ações, o apoio das forças policiais também é necessário, devido à influência do crime organizado nas regiões visitadas. 
       <br /><br />
       As ações também ajudam a Prefeitura a combater o desmatamento de aéreas de preservação ambiental.
       <br /><br />
