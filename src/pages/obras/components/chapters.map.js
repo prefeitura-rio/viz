@@ -1,9 +1,5 @@
 import { MapboxLayer } from "@deck.gl/mapbox"; // Ref: https://deck.gl/docs/api-reference/mapbox/mapbox-layer
-import { TripsLayer } from "@deck.gl/geo-layers";
-import { GeoJsonLayer } from "@deck.gl/layers";
-import Map, { Source, Layer } from "react-map-gl";
 // For some custom layers
-import { buildings3d } from "../../../components/layers/buildings3d";
 // import LINHAS_ANTIGAS from "./data/linhas_antigas.json";
 import { isMobile } from "react-device-detect";
 
@@ -31,7 +27,12 @@ export const Capa = () => {
         duration: 4000,
       },
     },
-    layers: [],
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: { id: "predios" },
+      },
+    ],
   };
 };
 
@@ -59,7 +60,12 @@ export const Intro = () => {
         duration: 4000,
       },
     },
-    layers: [],
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: { id: "predios" },
+      },
+    ],
   };
 };
 
@@ -88,6 +94,10 @@ export const Mapaconjuntomaravilha = () => {
       },
     },
     layers: [
+      {
+        layerType: "mapbox-style",
+        layer: { id: "predios" },
+      },
     ],
   };
 };
@@ -117,6 +127,10 @@ export const Mapaconjuntomaravilhaum = () => {
       },
     },
     layers: [
+      {
+        layerType: "mapbox-style",
+        layer: { id: "predios" },
+      },
     ],
   };
 };
@@ -146,7 +160,10 @@ export const Mapacasacarioca = () => {
       },
     },
     layers: [
-      
+      {
+        layerType: "mapbox-style",
+        layer: { id: "predios" },
+      },
     ],
   };
 };
@@ -176,7 +193,10 @@ export const Mapacasacariocaum = () => {
       },
     },
     layers: [
-      
+      {
+        layerType: "mapbox-style",
+        layer: { id: "predios" },
+      },
     ],
   };
 };
@@ -206,7 +226,10 @@ export const Mapaavancacampogrande = () => {
       },
     },
     layers: [
-      
+      {
+        layerType: "mapbox-style",
+        layer: { id: "predios" },
+      },
     ],
   };
 };
@@ -236,7 +259,10 @@ export const Mapaavancacampograndeum = () => {
       },
     },
     layers: [
-      
+      {
+        layerType: "mapbox-style",
+        layer: { id: "predios" },
+      },
     ],
   };
 };
@@ -266,7 +292,10 @@ export const Mapabairromaravilha = () => {
       },
     },
     layers: [
-      
+      {
+        layerType: "mapbox-style",
+        layer: { id: "predios" },
+      },
     ],
   };
 };
@@ -296,7 +325,10 @@ export const Mapabairromaravilhaum = () => {
       },
     },
     layers: [
-      
+      {
+        layerType: "mapbox-style",
+        layer: { id: "predios" },
+      },
     ],
   };
 };
@@ -325,6 +357,11 @@ export const Fim = () => {
         duration: 4000,
       },
     },
-    layers: [],
+    layers: [
+      {
+        layerType: "mapbox-style",
+        layer: { id: "predios" },
+      },
+    ],
   };
 };

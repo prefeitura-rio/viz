@@ -14,12 +14,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function SubsidioSPPO() {
+export default function ObrasZO() {
   const [location, setLocation] = useState(chapterMap.Capa().location);
   const [layers, setLayers] = useState(chapterMap.Capa().layers);
   // console.log("ChapterLayers", layers);
-
-  const [chartProgress, setChartProgress] = useState(0);
 
   const setPosition = (position) => {
     const desktopPosition = position.desktop ? position.desktop : position;
@@ -232,7 +230,7 @@ export default function SubsidioSPPO() {
         setChapterNumberMap("narua");
       },
     });
-    
+
     ScrollTrigger.create({
       trigger: "#mapaavancacampogrande",
       onToggle: () => {
@@ -267,7 +265,7 @@ export default function SubsidioSPPO() {
         setChapterNumberMap("nobairro");
       },
     });
-    
+
     ScrollTrigger.create({
       trigger: "#mapabairromaravilha",
       onToggle: () => {
@@ -294,19 +292,6 @@ export default function SubsidioSPPO() {
       onToggle: () => {
         setChapterNumberMap("textobairromaravilha");
       },
-    });
-
-    var startCount = 0,
-      num = { var: startCount };
-    function changeNumber() {
-      // id of the element you want to change
-      number.innerHTML = num.var.toFixed();
-    }
-    const tl4 = gsap.timeline();
-    tl4.to(num, {
-      var: 646,
-      duration: 1,
-      onUpdate: changeNumber,
     });
 
     ScrollTrigger.create({
@@ -352,7 +337,9 @@ export default function SubsidioSPPO() {
       <chapterDiv.NaCasa id={"nacasa"} />
       <chapterDiv.MapaConjuntoMaravilha id={"mapaconjuntomaravilha"} />
       <chapterDiv.NumeraoConjuntoMaravilha id={"numeraoconjuntomaravilha"} />
-      <chapterDiv.NumeraoConjuntoMaravilhaUm id={"numeraoconjuntomaravilhaum"} />
+      <chapterDiv.NumeraoConjuntoMaravilhaUm
+        id={"numeraoconjuntomaravilhaum"}
+      />
       <chapterDiv.TextoConjuntoMaravilha id={"textoconjuntomaravilha"} />
 
       <chapterDiv.MapaCasaCarioca id={"mapacasacarioca"} />
@@ -363,7 +350,9 @@ export default function SubsidioSPPO() {
       <chapterDiv.NaRua id={"narua"} />
       <chapterDiv.MapaAvancaCampoGrande id={"mapaavancacampogrande"} />
       <chapterDiv.NumeraoAvancaCampoGrande id={"numeraoavancacampogrande"} />
-      <chapterDiv.NumeraoAvancaCampoGrandeUm id={"numeraoavancacampograndeum"} />
+      <chapterDiv.NumeraoAvancaCampoGrandeUm
+        id={"numeraoavancacampograndeum"}
+      />
       <chapterDiv.TextoAvancaCampoGrande id={"textoavancacampogrande"} />
 
       <chapterDiv.NoBairro id={"nobairro"} />
