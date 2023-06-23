@@ -46,6 +46,7 @@ export const IntroDiv = tw.div`
   backdrop-blur
   flex
   flex-col
+  lg:flex-row
   justify-between items-center 
   lg:p-[10%]
   gap-[80px]
@@ -120,21 +121,10 @@ export const ChapterGenericDiv1 = tw.div`
 
   export const ChapterGenericDiv2 = tw.div`
   flex
-  w-full h-[150vh] 
+  w-full h-[120vh] 
   items-center
   justify-center
   lg:justify-start
-  lg:p-[10%]
-  text-white
-  -z-10 
-  `;
-
-  export const ChapterGenericDiv3 = tw.div`
-  flex
-  w-full h-[150vh] 
-  items-start
-  justify-end
-  lg:justify-end
   lg:p-[10%]
   text-white
   -z-10 
@@ -214,14 +204,15 @@ export const TextHighlightGreen = tw.div`
 
 export const TextHighlightGreenBig = tw.div`
   font-montserrat font-bold
-  text-[32px]
+  text-[40px]
   lg:text-[70px]
   text-left
   text-white
   inline-block
   bg-[#a9d3a2]
-  py-1
+  py-2
   px-3
+  mb-[10px]
   lg:mb-[10px]
 `;
 
@@ -251,14 +242,15 @@ export const TextHighlightOrange = tw.div`
 
 export const TextHighlightOrangeBig = tw.div`
   font-montserrat font-bold
-  text-[32px]
+  text-[40px]
   lg:text-[70px]
   text-left
   text-white
   inline-block
   bg-[#dab68a]
-  py-1
+  py-2
   px-3
+  mb-[10px]
   lg:mb-[10px]
 `;
 
@@ -289,14 +281,15 @@ export const TextHighlightBlue = tw.div`
 
 export const TextHighlightBlueBig = tw.div`
   font-montserrat font-bold
-  text-[32px]
+  text-[40px]
   lg:text-[70px]
   text-left
   text-white
   inline-block
   bg-[#639ed8]
-  py-1
+  py-2
   px-3
+  mb-[10px]
   lg:mb-[10px]
 `;
 
@@ -330,8 +323,9 @@ export const TextHighlightRedBig = tw.div`
   text-white
   inline-block
   bg-[#d66262]
-  py-1
+  py-2
   px-3
+  mb-[10px]
   lg:mb-[10px]
 `;
 
@@ -400,7 +394,8 @@ export const BigNumber3 = tw.div`
   lg:text-[60px]
   font-bold
   text-white
-  text-center
+  text-left
+  lg:text-left
 `;
 
 export const BigNumber4 = tw.div`
@@ -409,15 +404,6 @@ export const BigNumber4 = tw.div`
   lg:text-[42px]
   font-bold
   text-black
-`;
-
-export const BigNumber5 = tw.div`
-  text-2xl
-  leading-[120%]
-  lg:text-[42px]
-  font-bold
-  text-black
-  text-right
 `;
 
 const TextyellowSC = styled.div`
