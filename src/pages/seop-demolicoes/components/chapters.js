@@ -576,7 +576,7 @@ export function Acompanhe(
       <br /><br />
       De 2021 a 2022, foram demolidas 257 construções irregulares em aéreas preservadas, segundo dados da Secretaria de Meio Ambiente.
       <br /><br />
-      Um prejuízo financeiro de aproximadamente R$170 milhões ao crime organizado e mais de 797.198 m² de áreas verdes recuperadas.
+      Foram mais de 797.198 m² de áreas verdes recuperadas.
       </styles.IntroText>
     </styles.IntroDiv>
   );
