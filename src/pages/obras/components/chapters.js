@@ -487,7 +487,7 @@ export function Creditos(
       <a href={"https://www.dados.rio/"}>
         <img
           src={logo}
-          className="w-44 mt-[100px] lg:mt-[100px] lg:w-[8rem]"
+          className="w-[110px] mt-[100px] lg:mt-[100px] lg:w-[8rem]"
         ></img>
       </a>
     </styles.FimDiv>
