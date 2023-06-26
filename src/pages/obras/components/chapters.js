@@ -125,16 +125,6 @@ export function NaCasa(
             na sua casa
           </styles.TextHighlightGreenBig>
         </styles.BigNumber3>
-        <ImgComparisonSlider>
-          <img
-            slot="first"
-            src="https://public.flourish.studio/uploads/908868/b792020d-fc58-4b7f-b07a-726425d85262.jpg"
-          />
-          <img
-            slot="second"
-            src="https://public.flourish.studio/uploads/908868/3b092b47-4545-4375-b7ed-e8da7b278dbd.jpg"
-          />
-        </ImgComparisonSlider>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv2>
   );
@@ -193,6 +183,32 @@ export function NumeraoConjuntoMaravilhaUm(
     </styles.ChapterGenericDiv2>
   );
 }
+
+export function SliderConjuntoMaravilha(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  return (
+    <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard2>
+      <ImgComparisonSlider>
+<img
+  slot="first"
+  src="https://public.flourish.studio/uploads/908868/b792020d-fc58-4b7f-b07a-726425d85262.jpg"
+/>
+<img
+  slot="second"
+  src="https://public.flourish.studio/uploads/908868/3b092b47-4545-4375-b7ed-e8da7b278dbd.jpg"
+/>
+</ImgComparisonSlider>
+      </styles.ContainerCard2>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+
 
 export function TextoConjuntoMaravilha(
   props = {
@@ -286,6 +302,30 @@ export function NumeraoCasaCariocaUm(
           Por aqui, o programa Casa Carioca transformou a casa — e a vida — de
           famílias em situação de vulnerabilidade social.
         </styles.BigNumber4>
+      </styles.ContainerCard2>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function SliderCasaCarioca(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  return (
+    <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard2>
+      <ImgComparisonSlider>
+<img
+  slot="first"
+  src="https://public.flourish.studio/uploads/908868/b792020d-fc58-4b7f-b07a-726425d85262.jpg"
+/>
+<img
+  slot="second"
+  src="https://public.flourish.studio/uploads/908868/3b092b47-4545-4375-b7ed-e8da7b278dbd.jpg"
+/>
+</ImgComparisonSlider>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv2>
   );
@@ -418,6 +458,30 @@ export function NumeraoAvancaCampoGrandeUm(
   );
 }
 
+export function SliderAvancaCampoGrande(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  return (
+    <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard2>
+      <ImgComparisonSlider>
+<img
+  slot="first"
+  src="https://public.flourish.studio/uploads/908868/b792020d-fc58-4b7f-b07a-726425d85262.jpg"
+/>
+<img
+  slot="second"
+  src="https://public.flourish.studio/uploads/908868/3b092b47-4545-4375-b7ed-e8da7b278dbd.jpg"
+/>
+</ImgComparisonSlider>
+      </styles.ContainerCard2>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
 export function TextoAvancaCampoGrande(
   props = {
     id: "",
@@ -535,6 +599,30 @@ export function NumeraoBairroMaravilhaUm(
           do Rio, o programa Bairro Maravilha está evando obras de recuperação e
           melhorias nas ruas das zonas Norte e Oeste
         </styles.BigNumber4>
+      </styles.ContainerCard2>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function SliderBairroMaravilha(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  return (
+    <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard2>
+      <ImgComparisonSlider>
+<img
+  slot="first"
+  src="https://public.flourish.studio/uploads/908868/b792020d-fc58-4b7f-b07a-726425d85262.jpg"
+/>
+<img
+  slot="second"
+  src="https://public.flourish.studio/uploads/908868/3b092b47-4545-4375-b7ed-e8da7b278dbd.jpg"
+/>
+</ImgComparisonSlider>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv2>
   );

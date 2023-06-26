@@ -61,6 +61,10 @@ export default function ObrasZO() {
         setPosition(chapterMap.Mapaconjuntomaravilhaum().location);
         setLayers(chapterMap.Mapaconjuntomaravilhaum().layers);
         break;
+      case "sliderconjuntomaravilha":
+        setPosition(chapterMap.Mapaconjuntomaravilhaum().location);
+        setLayers(chapterMap.Mapaconjuntomaravilhaum().layers);
+        break;
       case "textoconjuntomaravilha":
         setPosition(chapterMap.Mapaconjuntomaravilha().location);
         setLayers(chapterMap.Mapaconjuntomaravilha().layers);
@@ -74,6 +78,10 @@ export default function ObrasZO() {
         setLayers(chapterMap.Mapacasacarioca().layers);
         break;
       case "numeraocasacariocaum":
+        setPosition(chapterMap.Mapacasacariocaum().location);
+        setLayers(chapterMap.Mapacasacariocaum().layers);
+        break;
+      case "slidercasacarioca":
         setPosition(chapterMap.Mapacasacariocaum().location);
         setLayers(chapterMap.Mapacasacariocaum().layers);
         break;
@@ -97,6 +105,10 @@ export default function ObrasZO() {
         setPosition(chapterMap.Mapaavancacampograndeum().location);
         setLayers(chapterMap.Mapaavancacampograndeum().layers);
         break;
+      case "slideravancacampogrande":
+        setPosition(chapterMap.Mapaavancacampograndeum().location);
+        setLayers(chapterMap.Mapaavancacampograndeum().layers);
+        break;
       case "textoavancacampogrande":
         setPosition(chapterMap.Mapaavancacampogrande().location);
         setLayers(chapterMap.Mapaavancacampogrande().layers);
@@ -113,7 +125,11 @@ export default function ObrasZO() {
         setPosition(chapterMap.Mapabairromaravilha().location);
         setLayers(chapterMap.Mapabairromaravilha().layers);
         break;
-      case "numeraobairromaravilhaaum":
+      case "numeraobairromaravilhaum":
+        setPosition(chapterMap.Mapabairromaravilhaum().location);
+        setLayers(chapterMap.Mapabairromaravilhaum().layers);
+        break;
+      case "sliderbairromaravilha":
         setPosition(chapterMap.Mapabairromaravilhaum().location);
         setLayers(chapterMap.Mapabairromaravilhaum().layers);
         break;
@@ -190,6 +206,13 @@ export default function ObrasZO() {
     });
 
     ScrollTrigger.create({
+      trigger: "#sliderconjuntomaravilha",
+      onToggle: () => {
+        setChapterNumberMap("sliderconjuntomaravilha");
+      },
+    });
+
+    ScrollTrigger.create({
       trigger: "#textoconjuntomaravilha",
       onToggle: () => {
         setChapterNumberMap("textoconjuntomaravilha");
@@ -214,6 +237,13 @@ export default function ObrasZO() {
       trigger: "#numeraocasacariocaum",
       onToggle: () => {
         setChapterNumberMap("numeraocasacariocaum");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#slidercasacarioca",
+      onToggle: () => {
+        setChapterNumberMap("slidercasacarioca");
       },
     });
 
@@ -253,6 +283,13 @@ export default function ObrasZO() {
     });
 
     ScrollTrigger.create({
+      trigger: "#slideravancacampogrande",
+      onToggle: () => {
+        setChapterNumberMap("slideravancacampogrande");
+      },
+    });
+
+    ScrollTrigger.create({
       trigger: "#textoavancacampogrande",
       onToggle: () => {
         setChapterNumberMap("textoavancacampogrande");
@@ -284,6 +321,13 @@ export default function ObrasZO() {
       trigger: "#numeraobairromaravilhaum",
       onToggle: () => {
         setChapterNumberMap("numeraobairromaravilhaum");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#sliderbairromaravilha",
+      onToggle: () => {
+        setChapterNumberMap("sliderbairromaravilha");
       },
     });
 
@@ -340,11 +384,19 @@ export default function ObrasZO() {
       <chapterDiv.NumeraoConjuntoMaravilhaUm
         id={"numeraoconjuntomaravilhaum"}
       />
+      <chapterDiv.SliderConjuntoMaravilha
+        id={"sliderconjuntomaravilha"}
+      />
+
       <chapterDiv.TextoConjuntoMaravilha id={"textoconjuntomaravilha"} />
 
       <chapterDiv.MapaCasaCarioca id={"mapacasacarioca"} />
       <chapterDiv.NumeraoCasaCarioca id={"numeraocasacarioca"} />
       <chapterDiv.NumeraoCasaCariocaUm id={"numeraocasacariocaum"} />
+      <chapterDiv.SliderCasaCarioca
+        id={"slidercasacarioca"}
+      />
+
       <chapterDiv.TextoCasaCarioca id={"textocasacarioca"} />
 
       <chapterDiv.NaRua id={"narua"} />
@@ -353,12 +405,20 @@ export default function ObrasZO() {
       <chapterDiv.NumeraoAvancaCampoGrandeUm
         id={"numeraoavancacampograndeum"}
       />
+      <chapterDiv.SliderAvancaCampoGrande
+        id={"slideravancacampogrande"}
+      />
+
       <chapterDiv.TextoAvancaCampoGrande id={"textoavancacampogrande"} />
 
       <chapterDiv.NoBairro id={"nobairro"} />
       <chapterDiv.MapaBairroMaravilha id={"mapabairromaravilha"} />
       <chapterDiv.NumeraoBairroMaravilha id={"numeraobairromaravilha"} />
       <chapterDiv.NumeraoBairroMaravilhaUm id={"numeraobairromaravilhaum"} />
+      <chapterDiv.SliderBairroMaravilha
+        id={"sliderbairromaravilha"}
+      />
+
       <chapterDiv.TextoBairroMaravilha id={"textobairromaravilha"} />
 
       <chapterDiv.Fim id={"fim"} />
