@@ -74,12 +74,12 @@ export const Mapaconjuntomaravilha = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.32442,
+          lon: -43.32608,
           lat: -22.82234,
         },
-        zoom: 16.5,
-        pitch: 30.0,
-        bearing: 50.0,
+        zoom: 18.34,
+        pitch: 51.0,
+        bearing: 28.82,
         duration: 4000,
       },
       mobile: {
@@ -97,6 +97,21 @@ export const Mapaconjuntomaravilha = () => {
       {
         layerType: "mapbox-style",
         layer: { id: "predios" },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.2,
+        layer: {
+          ...{
+            id: "bairros",
+            type: "fill",
+            source: "composite",
+            "source-layer": "novoiraja-5cvglw",
+            paint: {
+              "fill-color": "#1adb00", 
+            },
+          },
+        },
       },
     ],
   };
@@ -107,12 +122,12 @@ export const Mapaconjuntomaravilhaum = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.32442,
-          lat: -22.82234,
+          lon: -43.32588,
+          lat: -22.82189,
         },
-        zoom: 16.9,
-        pitch: 30.0,
-        bearing: 73.0,
+        zoom: 17.60,
+        pitch: 47.0,
+        bearing: 67.26,
         duration: 4000,
       },
       mobile: {
@@ -130,6 +145,21 @@ export const Mapaconjuntomaravilhaum = () => {
       {
         layerType: "mapbox-style",
         layer: { id: "predios" },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.2,
+        layer: {
+          ...{
+            id: "bairros",
+            type: "fill",
+            source: "composite",
+            "source-layer": "novoiraja-5cvglw",
+            paint: {
+              "fill-color": "#1adb00", 
+            },
+          },
+        },
       },
     ],
   };
