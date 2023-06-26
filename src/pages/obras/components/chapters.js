@@ -125,18 +125,17 @@ export function NaCasa(
             na sua casa
           </styles.TextHighlightGreenBig>
         </styles.BigNumber3>
+        <ImgComparisonSlider>
+          <img
+            slot="first"
+            src="https://public.flourish.studio/uploads/908868/b792020d-fc58-4b7f-b07a-726425d85262.jpg"
+          />
+          <img
+            slot="second"
+            src="https://public.flourish.studio/uploads/908868/3b092b47-4545-4375-b7ed-e8da7b278dbd.jpg"
+          />
+        </ImgComparisonSlider>
       </styles.ContainerCard2>
-
-      <ImgComparisonSlider>
-        <img
-          slot="first"
-          src="https://public.flourish.studio/uploads/908868/b792020d-fc58-4b7f-b07a-726425d85262.jpg"
-        />
-        <img
-          slot="second"
-          src="https://public.flourish.studio/uploads/908868/3b092b47-4545-4375-b7ed-e8da7b278dbd.jpg"
-        />
-      </ImgComparisonSlider>
     </styles.ChapterGenericDiv2>
   );
 }
