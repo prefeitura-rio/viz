@@ -68,10 +68,13 @@ class MultilayerMap extends React.Component {
     if (!this.state.mapLoaded) return;
     const mapInstance = this.state.mapRef.current?.getMap();
     if (!mapInstance) return;
+
     if (this.props.showLayers) {
       console.log("allLyaers", mapInstance.getStyle().layers);
     }
-    layers.forEach((layerDict) => {
+    for (let i = 0; i < layers.length; i++) {
+      const layerDict = layers[i];
+
       if (
         //mapbox layers
         layerDict.layerType === "mapbox" ||
@@ -84,7 +87,14 @@ class MultilayerMap extends React.Component {
           this.state.allLayers.push(layerDict);
         }
       }
-    });
+
+      // Move layer to the desired position defined in the layers array
+      const layerId = layerDict.layer.id;
+      const beforeLayerId = i > 0 ? layers[i - 1].layer.id : undefined;
+      mapInstance.moveLayer(layerId, beforeLayerId);
+
+      // Rest of your code...
+    }
     let opacity = 0;
     for (let i = 0; i < layers.length; i++) {
       // layers from story

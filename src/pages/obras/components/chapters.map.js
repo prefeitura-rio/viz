@@ -108,7 +108,7 @@ export const Mapaconjuntomaravilha = () => {
             source: "composite",
             "source-layer": "novoiraja-5cvglw",
             paint: {
-              "fill-color": "#1adb00", 
+              "fill-color": "#1adb00",
             },
           },
         },
@@ -125,7 +125,7 @@ export const Mapaconjuntomaravilhaum = () => {
           lon: -43.32588,
           lat: -22.82189,
         },
-        zoom: 17.60,
+        zoom: 17.6,
         pitch: 47.0,
         bearing: 67.26,
         duration: 4000,
@@ -156,7 +156,7 @@ export const Mapaconjuntomaravilhaum = () => {
             source: "composite",
             "source-layer": "novoiraja-5cvglw",
             paint: {
-              "fill-color": "#1adb00", 
+              "fill-color": "#1adb00",
             },
           },
         },

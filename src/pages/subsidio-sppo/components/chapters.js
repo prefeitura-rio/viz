@@ -131,7 +131,7 @@ export function Intro(
           Para saber mais sobre a importância do transporte público da cidade,
           <a
             className="font-bold decoration-1 underline-offset-1"
-            href="https://mapa-subsidio.dados.rio/"
+            href="#/especial-sppo/interactive"
             target="_blank"
             rel="noreferrer"
           >
