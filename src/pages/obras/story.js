@@ -14,12 +14,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function SubsidioSPPO() {
+export default function ObrasZO() {
   const [location, setLocation] = useState(chapterMap.Capa().location);
   const [layers, setLayers] = useState(chapterMap.Capa().layers);
   // console.log("ChapterLayers", layers);
-
-  const [chartProgress, setChartProgress] = useState(0);
 
   const setPosition = (position) => {
     const desktopPosition = position.desktop ? position.desktop : position;
@@ -48,8 +46,8 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Intro().layers);
         break;
       case "nacasa":
-        setPosition(chapterMap.Intro().location);
-        setLayers(chapterMap.Intro().layers);
+        setPosition(chapterMap.Mapaconjuntomaravilha().location);
+        setLayers(chapterMap.Mapaconjuntomaravilha().layers);
         break;
       case "mapaconjuntomaravilha":
         setPosition(chapterMap.Mapaconjuntomaravilha().location);
@@ -63,9 +61,13 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Mapaconjuntomaravilhaum().location);
         setLayers(chapterMap.Mapaconjuntomaravilhaum().layers);
         break;
+      case "sliderconjuntomaravilha":
+        setPosition(chapterMap.Mapaconjuntomaravilhaum().location);
+        setLayers(chapterMap.Mapaconjuntomaravilhaum().layers);
+        break;
       case "textoconjuntomaravilha":
-        setPosition(chapterMap.Mapaconjuntomaravilha().location);
-        setLayers(chapterMap.Mapaconjuntomaravilha().layers);
+        setPosition(chapterMap.Mapaconjuntomaravilhaum().location);
+        setLayers(chapterMap.Mapaconjuntomaravilhaum().layers);
         break;
       case "mapacasacarioca":
         setPosition(chapterMap.Mapacasacarioca().location);
@@ -79,13 +81,17 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Mapacasacariocaum().location);
         setLayers(chapterMap.Mapacasacariocaum().layers);
         break;
+      case "slidercasacarioca":
+        setPosition(chapterMap.Mapacasacariocaum().location);
+        setLayers(chapterMap.Mapacasacariocaum().layers);
+        break;
       case "textocasacarioca":
-        setPosition(chapterMap.Mapacasacarioca().location);
-        setLayers(chapterMap.Mapacasacarioca().layers);
+        setPosition(chapterMap.Mapacasacariocaum().location);
+        setLayers(chapterMap.Mapacasacariocaum().layers);
         break;
       case "narua":
-        setPosition(chapterMap.Mapacasacarioca().location);
-        setLayers(chapterMap.Mapacasacarioca().layers);
+        setPosition(chapterMap.Mapaavancacampogrande().location);
+        setLayers(chapterMap.Mapaavancacampogrande().layers);
         break;
       case "mapaavancacampogrande":
         setPosition(chapterMap.Mapaavancacampogrande().location);
@@ -95,13 +101,17 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Mapaavancacampogrande().location);
         setLayers(chapterMap.Mapaavancacampogrande().layers);
         break;
-      case "numeraoavancacampograndeaum":
+      case "numeraoavancacampograndeum":
+        setPosition(chapterMap.Mapaavancacampograndeum().location);
+        setLayers(chapterMap.Mapaavancacampograndeum().layers);
+        break;
+      case "slideravancacampogrande":
         setPosition(chapterMap.Mapaavancacampograndeum().location);
         setLayers(chapterMap.Mapaavancacampograndeum().layers);
         break;
       case "textoavancacampogrande":
-        setPosition(chapterMap.Mapaavancacampogrande().location);
-        setLayers(chapterMap.Mapaavancacampogrande().layers);
+        setPosition(chapterMap.Mapaavancacampograndeum().location);
+        setLayers(chapterMap.Mapaavancacampograndeum().layers);
         break;
       case "nobairro":
         setPosition(chapterMap.Mapabairromaravilha().location);
@@ -115,13 +125,17 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Mapabairromaravilha().location);
         setLayers(chapterMap.Mapabairromaravilha().layers);
         break;
-      case "numeraobairromaravilhaaum":
+      case "numeraobairromaravilhaum":
+        setPosition(chapterMap.Mapabairromaravilhaum().location);
+        setLayers(chapterMap.Mapabairromaravilhaum().layers);
+        break;
+      case "sliderbairromaravilha":
         setPosition(chapterMap.Mapabairromaravilhaum().location);
         setLayers(chapterMap.Mapabairromaravilhaum().layers);
         break;
       case "textobairromaravilha":
-        setPosition(chapterMap.Mapabairromaravilha().location);
-        setLayers(chapterMap.Mapabairromaravilha().layers);
+        setPosition(chapterMap.Mapabairromaravilhaum().location);
+        setLayers(chapterMap.Mapabairromaravilhaum().layers);
         break;
       case "fim":
         setPosition(chapterMap.Fim().location);
@@ -192,6 +206,13 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
+      trigger: "#sliderconjuntomaravilha",
+      onToggle: () => {
+        setChapterNumberMap("sliderconjuntomaravilha");
+      },
+    });
+
+    ScrollTrigger.create({
       trigger: "#textoconjuntomaravilha",
       onToggle: () => {
         setChapterNumberMap("textoconjuntomaravilha");
@@ -220,6 +241,13 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
+      trigger: "#slidercasacarioca",
+      onToggle: () => {
+        setChapterNumberMap("slidercasacarioca");
+      },
+    });
+
+    ScrollTrigger.create({
       trigger: "#textocasacarioca",
       onToggle: () => {
         setChapterNumberMap("textocasacarioca");
@@ -232,7 +260,7 @@ export default function SubsidioSPPO() {
         setChapterNumberMap("narua");
       },
     });
-    
+
     ScrollTrigger.create({
       trigger: "#mapaavancacampogrande",
       onToggle: () => {
@@ -255,6 +283,13 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
+      trigger: "#slideravancacampogrande",
+      onToggle: () => {
+        setChapterNumberMap("slideravancacampogrande");
+      },
+    });
+
+    ScrollTrigger.create({
       trigger: "#textoavancacampogrande",
       onToggle: () => {
         setChapterNumberMap("textoavancacampogrande");
@@ -267,7 +302,7 @@ export default function SubsidioSPPO() {
         setChapterNumberMap("nobairro");
       },
     });
-    
+
     ScrollTrigger.create({
       trigger: "#mapabairromaravilha",
       onToggle: () => {
@@ -290,23 +325,17 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
+      trigger: "#sliderbairromaravilha",
+      onToggle: () => {
+        setChapterNumberMap("sliderbairromaravilha");
+      },
+    });
+
+    ScrollTrigger.create({
       trigger: "#textobairromaravilha",
       onToggle: () => {
         setChapterNumberMap("textobairromaravilha");
       },
-    });
-
-    var startCount = 0,
-      num = { var: startCount };
-    function changeNumber() {
-      // id of the element you want to change
-      number.innerHTML = num.var.toFixed();
-    }
-    const tl4 = gsap.timeline();
-    tl4.to(num, {
-      var: 646,
-      duration: 1,
-      onUpdate: changeNumber,
     });
 
     ScrollTrigger.create({
@@ -352,24 +381,44 @@ export default function SubsidioSPPO() {
       <chapterDiv.NaCasa id={"nacasa"} />
       <chapterDiv.MapaConjuntoMaravilha id={"mapaconjuntomaravilha"} />
       <chapterDiv.NumeraoConjuntoMaravilha id={"numeraoconjuntomaravilha"} />
-      <chapterDiv.NumeraoConjuntoMaravilhaUm id={"numeraoconjuntomaravilhaum"} />
+      <chapterDiv.NumeraoConjuntoMaravilhaUm
+        id={"numeraoconjuntomaravilhaum"}
+      />
+      <chapterDiv.SliderConjuntoMaravilha
+        id={"sliderconjuntomaravilha"}
+      />
+
       <chapterDiv.TextoConjuntoMaravilha id={"textoconjuntomaravilha"} />
 
       <chapterDiv.MapaCasaCarioca id={"mapacasacarioca"} />
       <chapterDiv.NumeraoCasaCarioca id={"numeraocasacarioca"} />
       <chapterDiv.NumeraoCasaCariocaUm id={"numeraocasacariocaum"} />
+      <chapterDiv.SliderCasaCarioca
+        id={"slidercasacarioca"}
+      />
+
       <chapterDiv.TextoCasaCarioca id={"textocasacarioca"} />
 
       <chapterDiv.NaRua id={"narua"} />
       <chapterDiv.MapaAvancaCampoGrande id={"mapaavancacampogrande"} />
       <chapterDiv.NumeraoAvancaCampoGrande id={"numeraoavancacampogrande"} />
-      <chapterDiv.NumeraoAvancaCampoGrandeUm id={"numeraoavancacampograndeum"} />
+      <chapterDiv.NumeraoAvancaCampoGrandeUm
+        id={"numeraoavancacampograndeum"}
+      />
+      <chapterDiv.SliderAvancaCampoGrande
+        id={"slideravancacampogrande"}
+      />
+
       <chapterDiv.TextoAvancaCampoGrande id={"textoavancacampogrande"} />
 
       <chapterDiv.NoBairro id={"nobairro"} />
       <chapterDiv.MapaBairroMaravilha id={"mapabairromaravilha"} />
       <chapterDiv.NumeraoBairroMaravilha id={"numeraobairromaravilha"} />
       <chapterDiv.NumeraoBairroMaravilhaUm id={"numeraobairromaravilhaum"} />
+      <chapterDiv.SliderBairroMaravilha
+        id={"sliderbairromaravilha"}
+      />
+
       <chapterDiv.TextoBairroMaravilha id={"textobairromaravilha"} />
 
       <chapterDiv.Fim id={"fim"} />

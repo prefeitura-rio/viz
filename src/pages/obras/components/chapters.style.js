@@ -15,7 +15,6 @@ export const CapaDiv = tw(CapaDivSC)`
   justify-center items-center 
   pl-5 pr-5
   backdrop-blur
-  bg-[#d66262]
 `;
 // lg:mr-20 lg:ml-20
 // sm:ml-30 sm:mr-30
@@ -23,7 +22,7 @@ export const CapaDiv = tw(CapaDivSC)`
 export const Title = tw.div`
   lg:mb-3    
   font-montserrat font-bold  
-  text-4xl text-center text-white
+  text-4xl text-center text-black
   lg:text-[42px]
   lg:leading-[120%]
   `;
@@ -36,9 +35,10 @@ export const Subtitle = tw.div`
 
 export const AuthorText = tw.div`
   font-montserrat
-  text-sm text-center text-white
+  text-sm text-center text-black
   lg:text-base
-  mt-[60px]
+  mt-[12px]
+  leading-[1.5rem]
 `;
 
 export const IntroDiv = tw.div`
@@ -46,6 +46,7 @@ export const IntroDiv = tw.div`
   backdrop-blur
   flex
   flex-col
+  lg:flex-row
   justify-between items-center 
   lg:p-[10%]
   gap-[80px]
@@ -120,21 +121,10 @@ export const ChapterGenericDiv1 = tw.div`
 
   export const ChapterGenericDiv2 = tw.div`
   flex
-  w-full h-[150vh] 
+  w-full h-[120vh] 
   items-center
   justify-center
   lg:justify-start
-  lg:p-[10%]
-  text-white
-  -z-10 
-  `;
-
-  export const ChapterGenericDiv3 = tw.div`
-  flex
-  w-full h-[150vh] 
-  items-start
-  justify-end
-  lg:justify-end
   lg:p-[10%]
   text-white
   -z-10 
@@ -181,7 +171,17 @@ export const ContainerCard1 = tw.div`
 
 export const ContainerCard2 = tw.div`
 max-w-xs
-lg:max-w-[36rem]
+lg:max-w-[40rem]
+bg-opacity-[50%] backdrop-blur-sm
+bg-white/80
+px-[44px]
+py-[44px]
+rounded-[10px]
+`;
+
+export const ContainerCard3 = tw.div`
+max-w-xs
+lg:max-w-[40rem]
 `;
 
 export const TextCard = tw.div`
@@ -201,27 +201,29 @@ export const TextHighlightBold = tw.div`
 
 export const TextHighlightGreen = tw.div`
   font-montserrat font-bold
-  text-[24px]
+  text-4x1
   lg:text-[42px]
   text-left
   text-white
   inline-block
   bg-[#a9d3a2]
-  py-1
-  px-3
+  py-0
+  px-4
   lg:mb-[10px]
+  mb-[10px]
 `;
 
 export const TextHighlightGreenBig = tw.div`
   font-montserrat font-bold
-  text-[32px]
+  text-[40px]
   lg:text-[70px]
   text-left
   text-white
   inline-block
   bg-[#a9d3a2]
-  py-1
+  py-2
   px-3
+  mb-[10px]
   lg:mb-[10px]
 `;
 
@@ -238,27 +240,29 @@ export const TextHighlightGreenSmall = tw.div`
 
 export const TextHighlightOrange = tw.div`
   font-montserrat font-bold
-  text-[24px]
+  text-4x1
   lg:text-[42px]
   text-left
   text-white
   inline-block
   bg-[#dab68a]
-  py-1
-  px-3
+  py-0
+  px-4
   lg:mb-[10px]
+  mb-[10px]
 `;
 
 export const TextHighlightOrangeBig = tw.div`
   font-montserrat font-bold
-  text-[32px]
+  text-[40px]
   lg:text-[70px]
   text-left
   text-white
   inline-block
   bg-[#dab68a]
-  py-1
+  py-2
   px-3
+  mb-[10px]
   lg:mb-[10px]
 `;
 
@@ -276,27 +280,29 @@ export const TextHighlightOrangeSmall = tw.div`
 
 export const TextHighlightBlue = tw.div`
   font-montserrat font-bold
-  text-[24px]
+  text-4x1
   lg:text-[42px]
   text-left
   text-white
   inline-block
   bg-[#639ed8]
-  py-1
-  px-3
+  py-0
+  px-4
   lg:mb-[10px]
+  mb-[10px]
 `;
 
 export const TextHighlightBlueBig = tw.div`
   font-montserrat font-bold
-  text-[32px]
+  text-[40px]
   lg:text-[70px]
   text-left
   text-white
   inline-block
   bg-[#639ed8]
-  py-1
+  py-2
   px-3
+  mb-[10px]
   lg:mb-[10px]
 `;
 
@@ -318,21 +324,24 @@ export const TextHighlightRed = tw.div`
   text-white
   inline-block
   bg-[#d66262]
-  py-1
-  px-3
+  py-0
+  px-4
   lg:mb-[10px]
+  mb-[10px]
 `;
 
 export const TextHighlightRedBig = tw.div`
-  font-montserrat font-bold
-  text-[70px]
-  text-left
-  text-white
-  inline-block
-  bg-[#d66262]
-  py-1
-  px-3
-  lg:mb-[10px]
+font-montserrat font-bold
+text-[40px]
+lg:text-[70px]
+text-left
+text-white
+inline-block
+bg-[#d66262]
+py-2
+px-3
+mb-[10px]
+lg:mb-[10px]
 `;
 
 export const TextHighlightRedSmall = tw.div`
@@ -400,24 +409,17 @@ export const BigNumber3 = tw.div`
   lg:text-[60px]
   font-bold
   text-white
-  text-center
+  text-left
+  lg:text-left
 `;
 
 export const BigNumber4 = tw.div`
-  text-2xl
-  leading-[120%]
-  lg:text-[42px]
-  font-bold
-  text-black
-`;
-
-export const BigNumber5 = tw.div`
-  text-2xl
-  leading-[120%]
-  lg:text-[42px]
-  font-bold
-  text-black
-  text-right
+  text-[18px]
+  leading-[150%]
+  lg:text-[20px]
+  font-regular
+  text-black/80
+  drop-shadow-[0_8px_8px_rgba(0,0,0,0.1)]
 `;
 
 const TextyellowSC = styled.div`

@@ -2,6 +2,7 @@ import React from "react";
 import { Map } from "react-map-gl";
 import mapboxgl from "mapbox-gl"; // do not remove this line
 import { isMobile } from "react-device-detect";
+// Theis 3 types of layers, mapbox, mapbox-style and deckgl
 
 // The following is required to stop "npm build" from transpiling mapbox code.
 // notice the exclamation point in the import.
@@ -67,12 +68,17 @@ class MultilayerMap extends React.Component {
     if (!this.state.mapLoaded) return;
     const mapInstance = this.state.mapRef.current?.getMap();
     if (!mapInstance) return;
+
     if (this.props.showLayers) {
       console.log("allLyaers", mapInstance.getStyle().layers);
     }
-    layers.forEach((layerDict) => {
+    for (let i = 0; i < layers.length; i++) {
+      const layerDict = layers[i];
+
       if (
+        //mapbox layers
         layerDict.layerType === "mapbox" ||
+        //deckgl layers
         layerDict.layerType.startsWith("deckgl")
       ) {
         const mapLayer = mapInstance.getLayer(layerDict.layer.id);
@@ -81,7 +87,14 @@ class MultilayerMap extends React.Component {
           this.state.allLayers.push(layerDict);
         }
       }
-    });
+
+      // Move layer to the desired position defined in the layers array
+      const layerId = layerDict.layer.id;
+      const beforeLayerId = i > 0 ? layers[i - 1].layer.id : undefined;
+      mapInstance.moveLayer(layerId, beforeLayerId);
+
+      // Rest of your code...
+    }
     let opacity = 0;
     for (let i = 0; i < layers.length; i++) {
       // layers from story
@@ -93,7 +106,7 @@ class MultilayerMap extends React.Component {
         opacity = show ? 1 : 0;
       }
 
-      // layers from map style
+      // layers from map style (mapbox-style)
       var mapLayer = mapInstance.getLayer(layerId);
 
       // set opacity

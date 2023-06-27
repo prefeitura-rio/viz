@@ -6,7 +6,7 @@ const LoadingDiv = tw.div`
 w-full h-screen
 flex 
 flex-col
-items-center justify-between 
+items-center justify-center 
 text-black
 text-2xl
 lg:text-2xl
@@ -23,8 +23,8 @@ lg:mr-5
 export function LoadingObras() {
   return (
     <LoadingDiv>
-      <LoadingImage src={logo1}></LoadingImage>
-      <div className="mb-96">carregando ...</div>
+      <LoadingImage className="absolute top-3 w-24 mt-[2vh] lg:w-32" src={logo1}></LoadingImage>
+      <div>carregando ...</div>
     </LoadingDiv>
   );
 }

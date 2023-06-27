@@ -631,6 +631,7 @@ export function Creditos(
 				<styles.TextCreditos1>
 					Caio Jacintho <br />
 					Diego Oliveira <br />
+					João Carabetta <br />
 					Judite Cypreste <br />
 				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px] ">
@@ -642,7 +643,6 @@ export function Creditos(
 					Ana Rebouças <br />
 					Flávio Lopes <br />
 					Gabriel Gazola Milan <br />
-					João Carabetta <br />
 					Luiz Guilherme Gomes <br />
 					Marcelo Sepúlvida <br />
 					Marco Aurélio Regalo <br />
@@ -659,6 +659,7 @@ export function Creditos(
 					Centro de Operações Rio <br />
 					Companhia Municipal de Limpeza Urbana <br />
 					Fundação Instituto das Águas do Município do Rio de Janeiro <br />
+					Imagine Rio <br />
 					Secretaria Municipal de Conservação <br />
 				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
