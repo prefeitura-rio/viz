@@ -46,8 +46,8 @@ export default function ObrasZO() {
         setLayers(chapterMap.Intro().layers);
         break;
       case "nacasa":
-        setPosition(chapterMap.Intro().location);
-        setLayers(chapterMap.Intro().layers);
+        setPosition(chapterMap.Mapaconjuntomaravilha().location);
+        setLayers(chapterMap.Mapaconjuntomaravilha().layers);
         break;
       case "mapaconjuntomaravilha":
         setPosition(chapterMap.Mapaconjuntomaravilha().location);
@@ -66,8 +66,8 @@ export default function ObrasZO() {
         setLayers(chapterMap.Mapaconjuntomaravilhaum().layers);
         break;
       case "textoconjuntomaravilha":
-        setPosition(chapterMap.Mapaconjuntomaravilha().location);
-        setLayers(chapterMap.Mapaconjuntomaravilha().layers);
+        setPosition(chapterMap.Mapaconjuntomaravilhaum().location);
+        setLayers(chapterMap.Mapaconjuntomaravilhaum().layers);
         break;
       case "mapacasacarioca":
         setPosition(chapterMap.Mapacasacarioca().location);
@@ -86,12 +86,12 @@ export default function ObrasZO() {
         setLayers(chapterMap.Mapacasacariocaum().layers);
         break;
       case "textocasacarioca":
-        setPosition(chapterMap.Mapacasacarioca().location);
-        setLayers(chapterMap.Mapacasacarioca().layers);
+        setPosition(chapterMap.Mapacasacariocaum().location);
+        setLayers(chapterMap.Mapacasacariocaum().layers);
         break;
       case "narua":
-        setPosition(chapterMap.Mapacasacarioca().location);
-        setLayers(chapterMap.Mapacasacarioca().layers);
+        setPosition(chapterMap.Mapaavancacampogrande().location);
+        setLayers(chapterMap.Mapaavancacampogrande().layers);
         break;
       case "mapaavancacampogrande":
         setPosition(chapterMap.Mapaavancacampogrande().location);
@@ -101,7 +101,7 @@ export default function ObrasZO() {
         setPosition(chapterMap.Mapaavancacampogrande().location);
         setLayers(chapterMap.Mapaavancacampogrande().layers);
         break;
-      case "numeraoavancacampograndeaum":
+      case "numeraoavancacampograndeum":
         setPosition(chapterMap.Mapaavancacampograndeum().location);
         setLayers(chapterMap.Mapaavancacampograndeum().layers);
         break;
@@ -110,8 +110,8 @@ export default function ObrasZO() {
         setLayers(chapterMap.Mapaavancacampograndeum().layers);
         break;
       case "textoavancacampogrande":
-        setPosition(chapterMap.Mapaavancacampogrande().location);
-        setLayers(chapterMap.Mapaavancacampogrande().layers);
+        setPosition(chapterMap.Mapaavancacampograndeum().location);
+        setLayers(chapterMap.Mapaavancacampograndeum().layers);
         break;
       case "nobairro":
         setPosition(chapterMap.Mapabairromaravilha().location);
@@ -134,8 +134,8 @@ export default function ObrasZO() {
         setLayers(chapterMap.Mapabairromaravilhaum().layers);
         break;
       case "textobairromaravilha":
-        setPosition(chapterMap.Mapabairromaravilha().location);
-        setLayers(chapterMap.Mapabairromaravilha().layers);
+        setPosition(chapterMap.Mapabairromaravilhaum().location);
+        setLayers(chapterMap.Mapabairromaravilhaum().layers);
         break;
       case "fim":
         setPosition(chapterMap.Fim().location);

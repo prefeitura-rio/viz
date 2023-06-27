@@ -327,16 +327,17 @@ export const TextHighlightRed = tw.div`
 `;
 
 export const TextHighlightRedBig = tw.div`
-  font-montserrat font-bold
-  text-[70px]
-  text-left
-  text-white
-  inline-block
-  bg-[#d66262]
-  py-2
-  px-3
-  mb-[10px]
-  lg:mb-[10px]
+font-montserrat font-bold
+text-[40px]
+lg:text-[70px]
+text-left
+text-white
+inline-block
+bg-[#d66262]
+py-2
+px-3
+mb-[10px]
+lg:mb-[10px]
 `;
 
 export const TextHighlightRedSmall = tw.div`

@@ -282,7 +282,7 @@ export function NumeraoCasaCarioca(
     <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
       <styles.ContainerCard2>
         <styles.BigNumber4>
-          E aqui está ocomplexo do Jacarezinho
+          E aqui está o complexo do Jacarezinho
         </styles.BigNumber4>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv2>
