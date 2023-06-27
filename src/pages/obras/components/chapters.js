@@ -38,19 +38,18 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
-      <img src={logo} className="absolute top-3 w-24 mt-[2vh]  lg:w-32"></img>
+      <img src={logo1} className="absolute top-3 w-24 mt-[2vh] lg:w-32"></img>
       <styles.Title className="mt-[50px]">
         {" "}
-        <styles.TextHighlightBlue>Resgatando</styles.TextHighlightBlue> o <br />
-        <styles.TextHighlightGreen>orgulho</styles.TextHighlightGreen> de ser{" "}
-        <br />{" "}
+        <styles.TextHighlightBlue>Resgatando</styles.TextHighlightBlue> o{" "}  
+        <styles.TextHighlightGreen> orgulho</styles.TextHighlightGreen> de ser{" "}
+        {" "}
         <styles.TextHighlightOrange> suburbano</styles.TextHighlightOrange>
       </styles.Title>
       {/* <styles.Subtitle>Pra quem Mais Precisa</styles.Subtitle> */}
       <div>
         <styles.AuthorText>
-          Desenvolvido pela equipe de <br />
-          visualização de dados do{" "}
+          Desenvolvido pela equipe de visualização de dados do{" "}
           <a
             className="font-bold underline"
             href="https://www.dados.rio/"
