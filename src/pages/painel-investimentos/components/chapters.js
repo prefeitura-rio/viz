@@ -25,7 +25,8 @@ export function Capa(
     //   </styles.CapaAutor>
     // </styles.CapaDiv>
     <styles.HeaderOne>
-    <div className="  h-[80px] w-full mt-[80px] flex flex-col bg-[#014A7F]"></div>
+    <div className="h-[80px] w-full mt-[80px] flex flex-col bg-[#014A7F]"></div>
+    <div className="absolute right-[10%] w-[500px] h-[90%] bg-[#014A7F]"></div>
     </styles.HeaderOne>
 
   );
