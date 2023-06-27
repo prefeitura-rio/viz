@@ -84,12 +84,12 @@ export const Mapaconjuntomaravilha = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.32508,
+          lat: -22.82234,
         },
-        zoom: 8.7,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 16.84,
+        pitch: 51.0,
+        bearing: 28.82,
         duration: 4000,
       },
     },
@@ -108,7 +108,7 @@ export const Mapaconjuntomaravilha = () => {
             source: "composite",
             "source-layer": "novoiraja-5cvglw",
             paint: {
-              "fill-color": "#1adb00",
+              "fill-color": "#a9d3a2",
             },
           },
         },
@@ -132,12 +132,12 @@ export const Mapaconjuntomaravilhaum = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.32588,
+          lat: -22.82259,
         },
-        zoom: 8.7,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 16.9,
+        pitch: 47.0,
+        bearing: 67.26,
         duration: 4000,
       },
     },
@@ -156,7 +156,7 @@ export const Mapaconjuntomaravilhaum = () => {
             source: "composite",
             "source-layer": "novoiraja-5cvglw",
             paint: {
-              "fill-color": "#1adb00",
+              "fill-color": "#a9d3a2",
             },
           },
         },
@@ -170,22 +170,22 @@ export const Mapacasacarioca = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.26232,
-          lat: -22.88882,
+          lon: -43.26384,
+          lat: -22.88746,
         },
-        zoom: 16.38,
-        pitch: 80.0,
-        bearing: 30.0,
+        zoom: 16.43,
+        pitch: 49.13,
+        bearing: 23.2,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.26868,
-          lat: -22.87955,
+          lon: -43.26084,
+          lat: -22.88746,
         },
-        zoom: 9.8,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 15.23,
+        pitch: 49.13,
+        bearing: 23.2,
         duration: 4000,
       },
     },
@@ -193,6 +193,21 @@ export const Mapacasacarioca = () => {
       {
         layerType: "mapbox-style",
         layer: { id: "predios" },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.2,
+        layer: {
+          ...{
+            id: "jacare",
+            type: "fill",
+            source: "composite",
+            "source-layer": "jacare-dtd2tk",
+            paint: {
+              "fill-color": "#dab68a",
+            },
+          },
+        },
       },
     ],
   };
@@ -203,22 +218,22 @@ export const Mapacasacariocaum = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.26232,
-          lat: -22.88882,
+          lon: -43.26292,
+          lat: -22.88424,
         },
-        zoom: 16.98,
-        pitch: 80.0,
-        bearing: 10.0,
+        zoom: 15.3,
+        pitch: 5.67,
+        bearing: 53.73,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.26868,
-          lat: -22.87955,
+          lon: -43.26092,
+          lat: -22.88774,
         },
-        zoom: 9.8,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 15.0,
+        pitch: 5.67,
+        bearing: 53.73,
         duration: 4000,
       },
     },
@@ -226,6 +241,21 @@ export const Mapacasacariocaum = () => {
       {
         layerType: "mapbox-style",
         layer: { id: "predios" },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.2,
+        layer: {
+          ...{
+            id: "jacare",
+            type: "fill",
+            source: "composite",
+            "source-layer": "jacare-dtd2tk",
+            paint: {
+              "fill-color": "#dab68a",
+            },
+          },
+        },
       },
     ],
   };
@@ -236,22 +266,22 @@ export const Mapaavancacampogrande = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.26232,
-          lat: -22.88882,
+          lon: -43.55065,
+          lat: -22.89748,
         },
-        zoom: 16.98,
-        pitch: 80.0,
-        bearing: 10.0,
+        zoom: 17.04,
+        pitch: 53.0,
+        bearing: 0,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.26868,
-          lat: -22.87955,
+          lon: -43.54899,
+          lat: -22.89748,
         },
-        zoom: 9.8,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 16.04,
+        pitch: 53.0,
+        bearing: 0,
         duration: 4000,
       },
     },
@@ -259,6 +289,21 @@ export const Mapaavancacampogrande = () => {
       {
         layerType: "mapbox-style",
         layer: { id: "predios" },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.2,
+        layer: {
+          ...{
+            id: "campogrande",
+            type: "fill",
+            source: "composite",
+            "source-layer": "campogrande-1krk7d",
+            paint: {
+              "fill-color": "#639ed8",
+            },
+          },
+        },
       },
     ],
   };
@@ -269,22 +314,22 @@ export const Mapaavancacampograndeum = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.26232,
-          lat: -22.88882,
+          lon: -43.55213,
+          lat: -22.8968,
         },
-        zoom: 16.98,
-        pitch: 80.0,
-        bearing: 10.0,
+        zoom: 16.22,
+        pitch: 0,
+        bearing: 0,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.26868,
-          lat: -22.87955,
+          lon: -43.54913,
+          lat: -22.8968,
         },
-        zoom: 9.8,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 16.22,
+        pitch: 0,
+        bearing: 0,
         duration: 4000,
       },
     },
@@ -292,6 +337,21 @@ export const Mapaavancacampograndeum = () => {
       {
         layerType: "mapbox-style",
         layer: { id: "predios" },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.2,
+        layer: {
+          ...{
+            id: "campogrande",
+            type: "fill",
+            source: "composite",
+            "source-layer": "campogrande-1krk7d",
+            paint: {
+              "fill-color": "#639ed8",
+            },
+          },
+        },
       },
     ],
   };
@@ -302,22 +362,22 @@ export const Mapabairromaravilha = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.26232,
-          lat: -22.88882,
+          lon: -43.3086,
+          lat: -22.89879,
         },
-        zoom: 16.98,
-        pitch: 80.0,
-        bearing: 10.0,
+        zoom: 15.54,
+        pitch: 55.5,
+        bearing: 8,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.26868,
-          lat: -22.87955,
+          lon: -43.3056,
+          lat: -22.89879,
         },
-        zoom: 9.8,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 15.3,
+        pitch: 55.5,
+        bearing: 8,
         duration: 4000,
       },
     },
@@ -325,6 +385,21 @@ export const Mapabairromaravilha = () => {
       {
         layerType: "mapbox-style",
         layer: { id: "predios" },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.2,
+        layer: {
+          ...{
+            id: "encantado",
+            type: "fill",
+            source: "composite",
+            "source-layer": "Limite_de_Bairros-216nrn",
+            paint: {
+              "fill-color": "#d66262",
+            },
+          },
+        },
       },
     ],
   };
@@ -335,22 +410,22 @@ export const Mapabairromaravilhaum = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.26232,
-          lat: -22.88882,
+          lon: -43.31588,
+          lat: -22.89812,
         },
-        zoom: 16.98,
-        pitch: 80.0,
-        bearing: 10.0,
+        zoom: 14.5,
+        pitch: 0,
+        bearing: 0,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.26868,
-          lat: -22.87955,
+          lon: -43.30488,
+          lat: -22.89812,
         },
-        zoom: 9.8,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 14.0,
+        pitch: 0,
+        bearing: 0,
         duration: 4000,
       },
     },
@@ -358,6 +433,21 @@ export const Mapabairromaravilhaum = () => {
       {
         layerType: "mapbox-style",
         layer: { id: "predios" },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.2,
+        layer: {
+          ...{
+            id: "encantado",
+            type: "fill",
+            source: "composite",
+            "source-layer": "Limite_de_Bairros-216nrn",
+            paint: {
+              "fill-color": "#d66262",
+            },
+          },
+        },
       },
     ],
   };

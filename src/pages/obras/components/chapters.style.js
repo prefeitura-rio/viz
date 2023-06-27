@@ -15,7 +15,6 @@ export const CapaDiv = tw(CapaDivSC)`
   justify-center items-center 
   pl-5 pr-5
   backdrop-blur
-  bg-[#d66262]
 `;
 // lg:mr-20 lg:ml-20
 // sm:ml-30 sm:mr-30
@@ -23,7 +22,7 @@ export const CapaDiv = tw(CapaDivSC)`
 export const Title = tw.div`
   lg:mb-3    
   font-montserrat font-bold  
-  text-4xl text-center text-white
+  text-4xl text-center text-black
   lg:text-[42px]
   lg:leading-[120%]
   `;
@@ -36,9 +35,10 @@ export const Subtitle = tw.div`
 
 export const AuthorText = tw.div`
   font-montserrat
-  text-sm text-center text-white
+  text-sm text-center text-black
   lg:text-base
-  mt-[60px]
+  mt-[12px]
+  leading-[1.5rem]
 `;
 
 export const IntroDiv = tw.div`
@@ -172,10 +172,10 @@ export const ContainerCard1 = tw.div`
 export const ContainerCard2 = tw.div`
 max-w-xs
 lg:max-w-[40rem]
-bg-opacity-[20%] backdrop-blur-sm
-bg-white/50
-px-[60px]
-py-[50px]
+bg-opacity-[50%] backdrop-blur-sm
+bg-white/80
+px-[44px]
+py-[44px]
 rounded-[10px]
 `;
 
@@ -201,15 +201,16 @@ export const TextHighlightBold = tw.div`
 
 export const TextHighlightGreen = tw.div`
   font-montserrat font-bold
-  text-[24px]
+  text-4x1
   lg:text-[42px]
   text-left
   text-white
   inline-block
   bg-[#a9d3a2]
-  py-1
-  px-3
+  py-0
+  px-4
   lg:mb-[10px]
+  mb-[10px]
 `;
 
 export const TextHighlightGreenBig = tw.div`
@@ -239,15 +240,16 @@ export const TextHighlightGreenSmall = tw.div`
 
 export const TextHighlightOrange = tw.div`
   font-montserrat font-bold
-  text-[24px]
+  text-4x1
   lg:text-[42px]
   text-left
   text-white
   inline-block
   bg-[#dab68a]
-  py-1
-  px-3
+  py-0
+  px-4
   lg:mb-[10px]
+  mb-[10px]
 `;
 
 export const TextHighlightOrangeBig = tw.div`
@@ -278,15 +280,16 @@ export const TextHighlightOrangeSmall = tw.div`
 
 export const TextHighlightBlue = tw.div`
   font-montserrat font-bold
-  text-[24px]
+  text-4x1
   lg:text-[42px]
   text-left
   text-white
   inline-block
   bg-[#639ed8]
-  py-1
-  px-3
+  py-0
+  px-4
   lg:mb-[10px]
+  mb-[10px]
 `;
 
 export const TextHighlightBlueBig = tw.div`
@@ -321,22 +324,24 @@ export const TextHighlightRed = tw.div`
   text-white
   inline-block
   bg-[#d66262]
-  py-1
-  px-3
+  py-0
+  px-4
   lg:mb-[10px]
+  mb-[10px]
 `;
 
 export const TextHighlightRedBig = tw.div`
-  font-montserrat font-bold
-  text-[70px]
-  text-left
-  text-white
-  inline-block
-  bg-[#d66262]
-  py-2
-  px-3
-  mb-[10px]
-  lg:mb-[10px]
+font-montserrat font-bold
+text-[40px]
+lg:text-[70px]
+text-left
+text-white
+inline-block
+bg-[#d66262]
+py-2
+px-3
+mb-[10px]
+lg:mb-[10px]
 `;
 
 export const TextHighlightRedSmall = tw.div`
@@ -413,7 +418,7 @@ export const BigNumber4 = tw.div`
   leading-[120%]
   lg:text-[32px]
   font-bold
-  text-black
+  text-black/80
   drop-shadow-[0_8px_8px_rgba(0,0,0,0.1)]
 `;
 
