@@ -9,6 +9,7 @@ import { LoadingObrasTeste } from "./pages/obras-teste/loading";
 import { LoadingSubsidioSPPO } from "./pages/subsidio-sppo/loading";
 import { LoadingSeopCep } from "./pages/seop-cep/loading";
 import { LoadingCarnaval2023 } from "./pages/carnaval-2023/loading";
+import { LoadingPainelInvestimento } from "./pages/painel-investimentos/loading";
 import { LoadingEnchentes } from "./pages/enchentes/loading";
 
 import style, { createGlobalStyle } from "styled-components";
@@ -59,6 +60,13 @@ const Carnaval2023 = lazy(() => {
   ]).then(([moduleExports]) => moduleExports);
 });
 
+const PainelInvestimento = lazy(() => {
+  return Promise.all([
+    import("./pages/painel-investimentos/story"),
+    new Promise((resolve) => setTimeout(resolve, 1)),
+  ]).then(([moduleExports]) => moduleExports);
+});
+
 const Enchentes = lazy(() => {
   return Promise.all([
     import("./pages/enchentes/story"),
@@ -84,6 +92,14 @@ function App() {
     <div id={"main"}>
       <GlobalStyle />
       <Router>
+        <Suspense fallback={<LoadingPainelInvestimento />}>
+          <Routes>
+            <Route
+              path="/painel-investimentos"
+              element={<PainelInvestimento />}
+            ></Route>
+          </Routes>
+        </Suspense>
         <Suspense fallback={<></>}>
           <Routes>
             <Route
