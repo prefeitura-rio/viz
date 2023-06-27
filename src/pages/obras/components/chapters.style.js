@@ -414,10 +414,10 @@ export const BigNumber3 = tw.div`
 `;
 
 export const BigNumber4 = tw.div`
-  text-2xl
-  leading-[120%]
-  lg:text-[32px]
-  font-bold
+  text-[18px]
+  leading-[150%]
+  lg:text-[20px]
+  font-regular
   text-black/80
   drop-shadow-[0_8px_8px_rgba(0,0,0,0.1)]
 `;
