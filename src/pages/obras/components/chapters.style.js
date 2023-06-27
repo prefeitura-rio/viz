@@ -171,7 +171,17 @@ export const ContainerCard1 = tw.div`
 
 export const ContainerCard2 = tw.div`
 max-w-xs
-lg:max-w-[36rem]
+lg:max-w-[40rem]
+bg-opacity-[20%] backdrop-blur-sm
+bg-white/50
+px-[60px]
+py-[50px]
+rounded-[10px]
+`;
+
+export const ContainerCard3 = tw.div`
+max-w-xs
+lg:max-w-[40rem]
 `;
 
 export const TextCard = tw.div`
@@ -401,9 +411,10 @@ export const BigNumber3 = tw.div`
 export const BigNumber4 = tw.div`
   text-2xl
   leading-[120%]
-  lg:text-[42px]
+  lg:text-[32px]
   font-bold
   text-black
+  drop-shadow-[0_8px_8px_rgba(0,0,0,0.1)]
 `;
 
 const TextyellowSC = styled.div`

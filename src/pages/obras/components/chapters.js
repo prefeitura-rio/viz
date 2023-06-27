@@ -114,7 +114,7 @@ export function NaCasa(
 ) {
   return (
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard2>
+      <styles.ContainerCard3>
         <styles.BigNumber3>
           {" "}
           <styles.TextHighlightOrangeBig>
@@ -125,7 +125,7 @@ export function NaCasa(
             na sua casa
           </styles.TextHighlightGreenBig>
         </styles.BigNumber3>
-      </styles.ContainerCard2>
+      </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
   );
 }
@@ -192,7 +192,7 @@ export function SliderConjuntoMaravilha(
 ) {
   return (
     <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard2>
+      <styles.ContainerCard3>
       <ImgComparisonSlider>
 <img
   slot="first"
@@ -203,7 +203,7 @@ export function SliderConjuntoMaravilha(
   src="https://public.flourish.studio/uploads/908868/3b092b47-4545-4375-b7ed-e8da7b278dbd.jpg"
 />
 </ImgComparisonSlider>
-      </styles.ContainerCard2>
+      </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
   );
 }
@@ -315,7 +315,7 @@ export function SliderCasaCarioca(
 ) {
   return (
     <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard2>
+      <styles.ContainerCard3>
       <ImgComparisonSlider>
 <img
   slot="first"
@@ -326,7 +326,7 @@ export function SliderCasaCarioca(
   src="https://uploads-ssl.webflow.com/620174b23793091c57373755/6499e573ebe0056d7d423bbd_CASA%20DEPOIS.jpg"
 />
 </ImgComparisonSlider>
-      </styles.ContainerCard2>
+      </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
   );
 }
@@ -390,7 +390,7 @@ export function NaRua(
 ) {
   return (
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard2>
+      <styles.ContainerCard3>
         <styles.BigNumber3>
           {" "}
           <styles.TextHighlightBlueBig>
@@ -401,7 +401,7 @@ export function NaRua(
             na sua rua
           </styles.TextHighlightOrangeBig>
         </styles.BigNumber3>
-      </styles.ContainerCard2>
+      </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
   );
 }
@@ -466,7 +466,7 @@ export function SliderAvancaCampoGrande(
 ) {
   return (
     <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard2>
+      <styles.ContainerCard3>
       <ImgComparisonSlider>
 <img
   slot="first"
@@ -477,7 +477,7 @@ export function SliderAvancaCampoGrande(
   src="https://uploads-ssl.webflow.com/620174b23793091c57373755/6499e862defcf5c0e5052c44_CG%20DEPOIS.jpg"
 />
 </ImgComparisonSlider>
-      </styles.ContainerCard2>
+      </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
   );
 }
@@ -536,7 +536,7 @@ export function NoBairro(
 ) {
   return (
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard2>
+      <styles.ContainerCard3>
         <styles.BigNumber3>
           {" "}
           <styles.TextHighlightGreenBig>
@@ -545,7 +545,7 @@ export function NoBairro(
           <br />{" "}
           <styles.TextHighlightRedBig>no seu Bairro</styles.TextHighlightRedBig>
         </styles.BigNumber3>
-      </styles.ContainerCard2>
+      </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
   );
 }
@@ -612,7 +612,7 @@ export function SliderBairroMaravilha(
 ) {
   return (
     <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard2>
+      <styles.ContainerCard3>
       <ImgComparisonSlider>
 <img
   slot="first"
@@ -623,7 +623,7 @@ export function SliderBairroMaravilha(
   src="https://public.flourish.studio/uploads/908868/3b092b47-4545-4375-b7ed-e8da7b278dbd.jpg"
 />
 </ImgComparisonSlider>
-      </styles.ContainerCard2>
+      </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
   );
 }
