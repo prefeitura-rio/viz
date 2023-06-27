@@ -196,11 +196,11 @@ export function SliderConjuntoMaravilha(
       <ImgComparisonSlider>
 <img
   slot="first"
-  src="https://public.flourish.studio/uploads/908868/b792020d-fc58-4b7f-b07a-726425d85262.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CM%20ANTES.jpg"
 />
 <img
   slot="second"
-  src="https://public.flourish.studio/uploads/908868/3b092b47-4545-4375-b7ed-e8da7b278dbd.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CM%20DEPOIS.jpg"
 />
 </ImgComparisonSlider>
       </styles.ContainerCard3>
@@ -319,11 +319,11 @@ export function SliderCasaCarioca(
       <ImgComparisonSlider>
 <img
   slot="first"
-  src="https://uploads-ssl.webflow.com/620174b23793091c57373755/6499e573ecdc81abc1694955_CASA%20ANTES.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CASA%20ANTES.jpg"
 />
 <img
   slot="second"
-  src="https://uploads-ssl.webflow.com/620174b23793091c57373755/6499e573ebe0056d7d423bbd_CASA%20DEPOIS.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CASA%20DEPOIS.jpg"
 />
 </ImgComparisonSlider>
       </styles.ContainerCard3>
@@ -470,11 +470,11 @@ export function SliderAvancaCampoGrande(
       <ImgComparisonSlider>
 <img
   slot="first"
-  src="https://uploads-ssl.webflow.com/620174b23793091c57373755/6499e863daa8cc115795983e_CG%20ANTES.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CG%20ANTES.jpg"
 />
 <img
   slot="second"
-  src="https://uploads-ssl.webflow.com/620174b23793091c57373755/6499e862defcf5c0e5052c44_CG%20DEPOIS.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CG%20DEPOIS.jpg"
 />
 </ImgComparisonSlider>
       </styles.ContainerCard3>
@@ -616,11 +616,11 @@ export function SliderBairroMaravilha(
       <ImgComparisonSlider>
 <img
   slot="first"
-  src="https://public.flourish.studio/uploads/908868/b792020d-fc58-4b7f-b07a-726425d85262.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BAIRRO%20MARAVILHA%20ANTES.jpg"
 />
 <img
   slot="second"
-  src="https://public.flourish.studio/uploads/908868/3b092b47-4545-4375-b7ed-e8da7b278dbd.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BAIRRO%20MARAVILHA%20DEPOIS.jpg"
 />
 </ImgComparisonSlider>
       </styles.ContainerCard3>
