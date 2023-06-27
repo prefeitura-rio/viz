@@ -20,7 +20,7 @@ export default function PainelInvestimento() {
   return (
     <>
       <chapterDiv.Capa id={"capa"} />
-      <chapterDiv.Creditos id={"creditos"} />
+      {/* <chapterDiv.Creditos id={"creditos"} /> */}
     </>
   );
 }

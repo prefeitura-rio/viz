@@ -12,10 +12,25 @@ export const CapaDiv = tw(CapaDivSC)`
   h-full w-full lg:h-[100vh]
   flex flex-col
   justify-between  items-center
-  lg:pl-[10%]
-  lg:pr-[10%]
   pl-[10%]
   pr-[10%]
+`;
+
+export const HeaderOne = tw.div`
+  h-[160px] w-full
+  flex flex-col
+  bg-[#018FBF]
+  justify-between
+  items-center
+`;
+
+export const HeaderTwo = tw.div`
+  h-[80px] w-full
+  mt-[80px]
+  flex flex-col
+  bg-[#014A7F]
+  justify-between
+  items-center
 `;
 
 export const CapaAutor = tw.div`
