@@ -83,6 +83,7 @@ export const FimDiv = tw.div`
   flex flex-col 
   justify-center
   items-center 
+  py-[200px]
 `;
 
 export const FimTitle = tw.div`
@@ -206,7 +207,7 @@ export const TextHighlightGreen = tw.div`
   text-left
   text-white
   inline-block
-  bg-[#a9d3a2]
+  bg-[#84B77B]
   py-0
   px-4
   lg:mb-[10px]
@@ -220,7 +221,7 @@ export const TextHighlightGreenBig = tw.div`
   text-left
   text-white
   inline-block
-  bg-[#a9d3a2]
+  bg-[#84B77B]
   py-2
   px-3
   mb-[10px]
@@ -233,7 +234,7 @@ export const TextHighlightGreenSmall = tw.div`
   text-left
   text-white
   inline-block
-  bg-[#a9d3a2]
+  bg-[#84B77B]
   py-0
   px-2
 `;
@@ -323,7 +324,7 @@ export const TextHighlightRed = tw.div`
   text-left
   text-white
   inline-block
-  bg-[#d66262]
+  bg-[#84b77b]
   py-0
   px-4
   lg:mb-[10px]
@@ -337,7 +338,7 @@ lg:text-[70px]
 text-left
 text-white
 inline-block
-bg-[#d66262]
+bg-[#D66262]
 py-2
 px-3
 mb-[10px]
@@ -350,7 +351,7 @@ export const TextHighlightRedSmall = tw.div`
   text-left
   text-white
   inline-block
-  bg-[#d66262]
+  bg-[#84b77b]
   py-0
   px-2
 `;
