@@ -323,7 +323,7 @@ export function SliderCasaCarioca(
       <ImgComparisonSlider hover="hover" tabindex="0" class="rendered">
 <img
   slot="first"
-  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CASA%20ANTES.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CG%20ANTES.jpg"
 />
 <img
   slot="second"
@@ -626,11 +626,11 @@ export function SliderBairroMaravilha(
       <ImgComparisonSlider hover="hover" tabindex="0" class="rendered">
 <img
   slot="first"
-  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BAIRRO%20MARAVILHA%20ANTES.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BM%20ANTES.jpg"
 />
 <img
   slot="second"
-  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BAIRRO%20MARAVILHA%20DEPOIS.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BM%20DEPOIS.jpg"
 />
 <svg slot="handle" class="custom-animated-handle" xmlns="http://www.w3.org/2000/svg" width="100" viewBox="-8 -3 16 6">
     <path stroke="#fff" d="M -5 -2 L -7 0 L -5 2 M -5 -2 L -5 2 M 5 -2 L 7 0 L 5 2 M 5 -2 L 5 2" stroke-width="1" fill="#fff" vector-effect="non-scaling-stroke"></path>
