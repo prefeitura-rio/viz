@@ -82,7 +82,7 @@ export function Intro(
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
-          Após longos 4 anos de descaso, o Rio de Janeiro finalmente está
+          Após 4 longos anos de descaso, o Rio de Janeiro finalmente está
           recebendo a atenção que ele merece. Mas calma, não estamos falando
           daquele Rio distante que você não frequenta ou nem conhece.
           <br />
@@ -93,11 +93,14 @@ export function Intro(
           <br />
           Nesta visualização mostraremos como a Prefeitura está levando grandes
           obras de infraestrutura para as Zona Oeste e Zona Norte da cidade,
-          garantindo a dignidade e qualidade de vida aos cariocas.
+          garantindo a dignidade e qualidade de vida aos cariocas. 
+          <br />
+          <br />
+          Para ver como está essa transformação, basta movimentar as setas localizadas no meio da imagens neste especial.
           <br />
           <br />
           <styles.TextHighlightBold>
-            É a Prefeitura trazendo de volta, o orgulho de ser suburbano.{" "}
+          É a Prefeitura trazendo de volta, o orgulho de ser suburbano.{" "}
           </styles.TextHighlightBold>
         </styles.IntroText>
       </div>
@@ -155,8 +158,7 @@ export function NumeraoConjuntoMaravilha(
     <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
       <styles.ContainerCard2>
         <styles.BigNumber4>
-          Esse é o Conjunto Habitacional Condomínio Parque Novo Irajá, no bairro
-          de Irajá
+          Esse é o Conjunto Habitacional Condomínio Parque Novo Irajá
         </styles.BigNumber4>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv2>
@@ -176,7 +178,7 @@ export function NumeraoConjuntoMaravilhaUm(
           Localizado na Avenida Brasil, o conjunto é formado por 15 prédios,
           divididos em 26 blocos. O empreendimento residencial teve sua fachada
           totalmente reformada em janeiro deste ano pelo programa Conjunto
-          Maravilha
+          Maravilha. 
         </styles.BigNumber4>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv2>
@@ -711,12 +713,7 @@ export function Fim(
         {" "}
         <styles.IntroText>
           A Prefeitura vem investimento, de grandes obras a pequenas melhorias,
-          para priorizaras pessoas e regiões que sempre ficaram para trás.
-          <br />
-          <br />
-          É a gente trabalhando para quem mais precisa. De grandes obras a
-          pequenas melhorias, a gente prioriza as pessoas e regiões que sempre
-          ficaram para trás.
+          para priorizar as pessoas e regiões que sempre ficaram para trás.
           <br />
           <br />
           <styles.TextHighlightBold>
