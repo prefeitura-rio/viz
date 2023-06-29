@@ -323,7 +323,7 @@ export function SliderCasaCarioca(
       <ImgComparisonSlider hover="hover" tabindex="0" class="rendered">
 <img
   slot="first"
-  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CG%20ANTES.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CASA%20ANTES.jpg"
 />
 <img
   slot="second"
