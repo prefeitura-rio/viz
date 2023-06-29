@@ -378,6 +378,28 @@ export default function ObrasZO() {
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
 
+      <chapterDiv.NoBairro id={"nobairro"} />
+      <chapterDiv.MapaBairroMaravilha id={"mapabairromaravilha"} />
+      <chapterDiv.NumeraoBairroMaravilha id={"numeraobairromaravilha"} />
+      <chapterDiv.NumeraoBairroMaravilhaUm id={"numeraobairromaravilhaum"} />
+      <chapterDiv.SliderBairroMaravilha
+        id={"sliderbairromaravilha"}
+      />
+
+      <chapterDiv.TextoBairroMaravilha id={"textobairromaravilha"} />
+      
+      <chapterDiv.NaRua id={"narua"} />
+      <chapterDiv.MapaAvancaCampoGrande id={"mapaavancacampogrande"} />
+      <chapterDiv.NumeraoAvancaCampoGrande id={"numeraoavancacampogrande"} />
+      <chapterDiv.NumeraoAvancaCampoGrandeUm
+        id={"numeraoavancacampograndeum"}
+      />
+      <chapterDiv.SliderAvancaCampoGrande
+        id={"slideravancacampogrande"}
+      />
+
+      <chapterDiv.TextoAvancaCampoGrande id={"textoavancacampogrande"} />
+
       <chapterDiv.NaCasa id={"nacasa"} />
       <chapterDiv.MapaConjuntoMaravilha id={"mapaconjuntomaravilha"} />
       <chapterDiv.NumeraoConjuntoMaravilha id={"numeraoconjuntomaravilha"} />
@@ -398,28 +420,6 @@ export default function ObrasZO() {
       />
 
       <chapterDiv.TextoCasaCarioca id={"textocasacarioca"} />
-
-      <chapterDiv.NaRua id={"narua"} />
-      <chapterDiv.MapaAvancaCampoGrande id={"mapaavancacampogrande"} />
-      <chapterDiv.NumeraoAvancaCampoGrande id={"numeraoavancacampogrande"} />
-      <chapterDiv.NumeraoAvancaCampoGrandeUm
-        id={"numeraoavancacampograndeum"}
-      />
-      <chapterDiv.SliderAvancaCampoGrande
-        id={"slideravancacampogrande"}
-      />
-
-      <chapterDiv.TextoAvancaCampoGrande id={"textoavancacampogrande"} />
-
-      <chapterDiv.NoBairro id={"nobairro"} />
-      <chapterDiv.MapaBairroMaravilha id={"mapabairromaravilha"} />
-      <chapterDiv.NumeraoBairroMaravilha id={"numeraobairromaravilha"} />
-      <chapterDiv.NumeraoBairroMaravilhaUm id={"numeraobairromaravilhaum"} />
-      <chapterDiv.SliderBairroMaravilha
-        id={"sliderbairromaravilha"}
-      />
-
-      <chapterDiv.TextoBairroMaravilha id={"textobairromaravilha"} />
 
       <chapterDiv.Fim id={"fim"} />
       <chapterDiv.Creditos id={"creditos"} />

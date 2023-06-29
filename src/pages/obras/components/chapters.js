@@ -349,7 +349,7 @@ export function TextoCasaCarioca(
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
-          Em sua primeira fase, o programa beneficiou também os moradores dos
+          Em sua primeira fase, o programa criado pela Secretaria de Ação Comunitária beneficiou também os moradores dos
           complexos da Penha, Alemão, Maré, Morro da Providência e Vila Kennedy,
           onde foram contratadas reformas para oito mil casas. Na fase dois do{" "}
           <styles.TextHighlightBold> Casa Carioca</styles.TextHighlightBold>,
@@ -597,7 +597,7 @@ export function NumeraoBairroMaravilhaUm(
         <styles.BigNumber4>
           A região está recebendo 13 obras do programa, com investimentos que
           chegam a R$ 240 milhões. Presente em mais de 90 localidades da cidade
-          do Rio, o programa Bairro Maravilha está evando obras de recuperação e
+          do Rio, o programa Bairro Maravilha está levando obras de recuperação e
           melhorias nas ruas das zonas Norte e Oeste
         </styles.BigNumber4>
       </styles.ContainerCard2>
@@ -646,7 +646,7 @@ export function TextoBairroMaravilha(
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
-          Além dos moradores de Encantado, as entregas mais recentes também
+          Além dos moradores do Encantado, as entregas mais recentes também
           beneficiaram moradores de Campo Grande.
           <br />
           <br />O{" "}
@@ -700,7 +700,7 @@ export function Fim(
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
-          A Prefeitura vem investimento, de grandes obras a pequenas melhorias,
+          A Prefeitura vem investindo, de grandes obras a pequenas melhorias,
           para priorizar as pessoas e regiões que sempre ficaram para trás.
           <br />
           <br />
