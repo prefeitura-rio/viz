@@ -41,15 +41,15 @@ export function Capa(
       <img src={logo1} className="absolute top-3 w-24 mt-[2vh] lg:w-32"></img>
       <styles.Title className="mt-[50px]">
         {" "}
-        <styles.TextHighlightBlue>Resgatando</styles.TextHighlightBlue> o{" "}  
-        <styles.TextHighlightGreen> orgulho</styles.TextHighlightGreen> de ser{" "}
+        <styles.TextHighlightBlue>Resgatando</styles.TextHighlightBlue> o{" "} <br/> 
+        <styles.TextHighlightGreen> orgulho</styles.TextHighlightGreen> de ser{" "}<br/>
         {" "}
         <styles.TextHighlightOrange> suburbano</styles.TextHighlightOrange>
       </styles.Title>
       {/* <styles.Subtitle>Pra quem Mais Precisa</styles.Subtitle> */}
       <div>
         <styles.AuthorText>
-          Desenvolvido pela equipe de visualização de dados do{" "}
+          Desenvolvido pela equipe de visualização <br/>de dados do{" "}
           <a
             className="font-bold underline"
             href="https://www.dados.rio/"
@@ -194,7 +194,7 @@ export function SliderConjuntoMaravilha(
   return (
     <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
-      <ImgComparisonSlider>
+      <ImgComparisonSlider hover="hover" tabindex="0" class="rendered">
 <img
   slot="first"
   src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CM%20ANTES.jpg"
@@ -203,6 +203,9 @@ export function SliderConjuntoMaravilha(
   slot="second"
   src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CM%20DEPOIS.jpg"
 />
+<svg slot="handle" class="custom-animated-handle" xmlns="http://www.w3.org/2000/svg" width="100" viewBox="-8 -3 16 6">
+    <path stroke="#fff" d="M -5 -2 L -7 0 L -5 2 M -5 -2 L -5 2 M 5 -2 L 7 0 L 5 2 M 5 -2 L 5 2" stroke-width="1" fill="#fff" vector-effect="non-scaling-stroke"></path>
+  </svg>
 </ImgComparisonSlider>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
@@ -220,7 +223,7 @@ export function TextoConjuntoMaravilha(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv className="bg-[#a9d3a2]" ref={props.chapRef} id={props.id}>
+    <styles.IntroDiv className="bg-[#84b77b]" ref={props.chapRef} id={props.id}>
       <img
         src={conjuntomaravilha}
         className="w-auto h-[250px] lg:h-[400px] lg:order-last"
@@ -317,7 +320,7 @@ export function SliderCasaCarioca(
   return (
     <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
-      <ImgComparisonSlider>
+      <ImgComparisonSlider hover="hover" tabindex="0" class="rendered">
 <img
   slot="first"
   src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CASA%20ANTES.jpg"
@@ -326,6 +329,9 @@ export function SliderCasaCarioca(
   slot="second"
   src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CASA%20DEPOIS.jpg"
 />
+<svg slot="handle" class="custom-animated-handle" xmlns="http://www.w3.org/2000/svg" width="100" viewBox="-8 -3 16 6">
+    <path stroke="#fff" d="M -5 -2 L -7 0 L -5 2 M -5 -2 L -5 2 M 5 -2 L 7 0 L 5 2 M 5 -2 L 5 2" stroke-width="1" fill="#fff" vector-effect="non-scaling-stroke"></path>
+  </svg>
 </ImgComparisonSlider>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
@@ -468,7 +474,7 @@ export function SliderAvancaCampoGrande(
   return (
     <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
-      <ImgComparisonSlider>
+      <ImgComparisonSlider hover="hover" tabindex="0" class="rendered">
 <img
   slot="first"
   src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CG%20ANTES.jpg"
@@ -477,6 +483,9 @@ export function SliderAvancaCampoGrande(
   slot="second"
   src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/CG%20DEPOIS.jpg"
 />
+<svg slot="handle" class="custom-animated-handle" xmlns="http://www.w3.org/2000/svg" width="100" viewBox="-8 -3 16 6">
+    <path stroke="#fff" d="M -5 -2 L -7 0 L -5 2 M -5 -2 L -5 2 M 5 -2 L 7 0 L 5 2 M 5 -2 L 5 2" stroke-width="1" fill="#fff" vector-effect="non-scaling-stroke"></path>
+  </svg>
 </ImgComparisonSlider>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
@@ -614,15 +623,18 @@ export function SliderBairroMaravilha(
   return (
     <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
       <styles.ContainerCard3>
-      <ImgComparisonSlider>
+      <ImgComparisonSlider hover="hover" tabindex="0" class="rendered">
 <img
   slot="first"
-  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BAIRRO%20MARAVILHA%20ANTES.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BM%20ANTES.jpg"
 />
 <img
   slot="second"
-  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BAIRRO%20MARAVILHA%20DEPOIS.jpg"
+  src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BM%20DEPOIS.jpg"
 />
+<svg slot="handle" class="custom-animated-handle" xmlns="http://www.w3.org/2000/svg" width="100" viewBox="-8 -3 16 6">
+    <path stroke="#fff" d="M -5 -2 L -7 0 L -5 2 M -5 -2 L -5 2 M 5 -2 L 7 0 L 5 2 M 5 -2 L 5 2" stroke-width="1" fill="#fff" vector-effect="non-scaling-stroke"></path>
+  </svg>
 </ImgComparisonSlider>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
@@ -722,7 +734,7 @@ export function Creditos(
   props = setDefaultProps(props);
 
   return (
-    <styles.FimDiv className="bg-[#a9d3a2]" ref={props.chapRef} id={props.id}>
+    <styles.FimDiv className="bg-[#84b77b]" ref={props.chapRef} id={props.id}>
       <styles.FimTitle>Autores</styles.FimTitle>
       <styles.FimText>
         Caio Jacintho <br />
