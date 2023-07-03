@@ -20,6 +20,7 @@ module.exports = {
         geologica: ["Geologica"],
         montserrat: ["Montserrat"],
         libre: ["Libre Baskerville"],
+        primer: ["IM Fell Great Primer"],
       },
     },
   },

@@ -5,13 +5,14 @@ import tw from "tailwind-styled-components";
 import capa from "../images/capa.gif";
 
 export const CapaDivSC = styled.div`
-  background-image: url(${capa});
-  background-size: cover;
-  background-position: center;
+background-color:  #eae7dc;
 `;
 
 // @media only screen and (min-width: 768px) {
 //   background-size: 21%;
+// background-image: url(${capa});
+// background-size: cover;
+// background-position: center;
 
 export const CapaDiv = tw(CapaDivSC)`
   h-[100vh] w-full
@@ -26,7 +27,7 @@ export const CapaAutor = tw.div`
   `;
 
 export const Title = tw.div`  
-  font-geologica font-[700]
+  font-primer font-[700]
   text-[32px]
   text-center
   leading-[120%]
@@ -36,22 +37,23 @@ export const Title = tw.div`
   lg:px-0
   lg:text-[48px]
   lg:mt-[100px]
-  text-white
-  drop-shadow-[0_8px_8px_rgba(0,0,0,0.99)]
+  text-black
   `;
 
+  // drop-shadow-[0_8px_8px_rgba(0,0,0,0.99)]
+
 export const Subtitle = tw.div`
-font-geologica font-[100]
+font-serif font-[100]
 text-center
-text-[18px]
-lg:text-[22px]
+text-[16px]
+lg:text-[18px]
 leading-[120%]
 py-0
 px-8
 lg:py-[12px]
 lg:px-0
-text-white
-drop-shadow-[0_1px_1px_rgba(0,0,0,0.99)]
+text-[#5b5b5b]
+lg:mt-[10px]
 `;
 
 export const Video = tw.div`

@@ -49,13 +49,13 @@ export function Capa(
 		<styles.CapaDiv id={props.id} ref={props.chapRef}>
 			<styles.CapaAutor>
 				<img
-					src={logo}
+					src={logoed}
 					className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14"></img>
-				<styles.Title>Por que o Rio de Janeiro alaga? </styles.Title>
+				<styles.Title>Parques, parques e mais parques </styles.Title>
 				<styles.Subtitle>
 					E como a prefeitura trabalha para que a chuva não castigue os cariocas
 				</styles.Subtitle>
-				<img src={scroll} className="h-7 lg:h-9 mt-[20px] lg:mt-[20px]"></img>{" "}
+				{/* <img src={scroll} className="h-7 lg:h-9 mt-[20px] lg:mt-[20px]"></img>{" "} */}
 			</styles.CapaAutor>
 		</styles.CapaDiv>
 	);
@@ -98,12 +98,6 @@ export function ContextoHistorico(
 		<>
 			<styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
 				<styles.ContainerCard>
-					<styles.Video>
-						<video autoPlay muted className="w-full h-full" id="video_capa">
-							<source src={video_capa} type="video/mp4" />
-						</video>
-					</styles.Video>
-
 					<div>
 						<div className="mt-[30px] h-[3px] w-[20px] bg-black"></div>
 						<styles.AuthorText className="mt-[8px] mr-[20px] lg:w-[420px]">
@@ -118,8 +112,7 @@ export function ContextoHistorico(
 							da Prefeitura da Cidade do Rio de Janeiro
 						</styles.AuthorText>{" "}
 					</div>
-					<div className="h-[10px] w-[50px] bg-black mb-[10px]"></div>
-					<styles.TextCard>Introdução</styles.TextCard>
+				<styles.TextCard>Introdução</styles.TextCard>
 					<styles.TextCard1>
 						Dados do Alerta Rio, sistema de alerta de chuvas intensas e de
 						deslizamentos em encostas do Rio de Janeiro, mostram que nunca
