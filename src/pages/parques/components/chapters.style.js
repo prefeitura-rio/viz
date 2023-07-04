@@ -2,10 +2,13 @@
 import { Container } from "postcss";
 import styled from "styled-components";
 import tw from "tailwind-styled-components";
-import capa from "../images/capa.gif";
+import capaum from "../images/capaum.png";
 
 export const CapaDivSC = styled.div`
-background-color:  #eae7dc;
+background-color:  #FFFCE4;
+background-image: url(${capaum});
+background-size: cover;
+background-position: center;
 `;
 
 // @media only screen and (min-width: 768px) {
@@ -73,19 +76,16 @@ export const Scroll = tw.div`
 
 export const AuthorText = tw.div`
   font-geologica
-  text-[14px] text-left text-black
+  text-[14px] text-center text-black
   leading-[150%]
-  mb-[88px]
- `;
+`;
 
 export const ChapterGenericDiv = tw.div`
 flex
-w-full h-auto
+w-full h-auto min-h-[100vh]
 items-center
 justify-center
-px-[48px]
-lg:p-[34px]
-bg-white
+bg-[#FFFCE4]
 `;
 
 export const ChapterGenericDiv1 = tw.div`
@@ -132,18 +132,22 @@ bg-white
 export const ChapterGenericDiv4 = tw.div`
   flex
   w-full h-auto
-  min-h-[60vh]
+  min-h-[100vh]
   items-center
   justify-center
   p-[34px]
-  lg:p-[34px]
-  bg-white
+  lg:py-[160px]
+  bg-[#FFFCE4]
   `;
 
 export const ContainerCard = tw.div`
-h-auto w-[700px]
+h-auto w-[500px]
+flex flex-col
+items-center
+justify-center
 mb-[60px]
 mt-[60px]
+p-[40px]
 `;
 
 export const ContainerCard2 = tw.div`
@@ -177,7 +181,7 @@ export const Imagem = tw.div`
   text-[12px]
   text-left
   lg:leading-[150%]
-text-black
+  text-black
 `;
 
 export const Imagem1 = tw.div`
@@ -185,7 +189,7 @@ export const Imagem1 = tw.div`
   text-[12px]
   text-left
   lg:leading-[150%]
-text-black
+  text-black
 `;
 
 export const IntroDiv = tw.div`
@@ -198,37 +202,28 @@ export const IntroDiv = tw.div`
 
 export const TextCreditos = tw.div`
   text-black
-  font-geologica
+  font-primer
   font-semibold
   text-[20px]
   mb-[2px]
+  text-center
 `;
 
 export const TextCreditos1 = tw.div`
   text-black
   font-libre font-[400] 
   text-[14px]
+  text-center
 `;
 
 export const TextCreditos2 = tw.div`
   text-black
-  font-geologica
+  font-primer
   font-black
   text-[32px]
   lg:text-[40px]
   mb-[40px]
-`;
-
-export const TextCard = tw.div`
-  font-geologica font-bold 
-  w-[70%]
-  text-[24px]
-  lg:text-[40px]
-  text-left
-  leading-[120%]
-  lg:leading-[120%]
-  text-black
-  mb-[16px]
+  text-center
 `;
 
 export const TextHighlightBlue = tw.div`
@@ -276,6 +271,18 @@ export const TextHighlightDark = tw.div`
   text-black
 `;
 
+export const TextCard = tw.div`
+  font-geologica font-bold 
+  w-[70%]
+  text-[24px]
+  lg:text-[40px]
+  text-left
+  leading-[120%]
+  lg:leading-[120%]
+  text-black
+  mb-[16px]
+`;
+
 export const TextCard1 = tw.div`
 font-libre font-[400] 
 text-[14px]
@@ -285,12 +292,11 @@ text-black
 `;
 
 export const TextCard2 = tw.div`
-font-geologica font-[400] 
-text-[18px]
+font-primer font-[400] 
+text-[20px]
 text-left
-lg:leading-[120%]
-text-bold
-mt-[20px]
+lg:leading-[150%]
+font-bold
 `;
 
 export const TextCard3 = tw.div`

@@ -31,27 +31,14 @@ export default function Enchentes() {
       trigger: "#quadro_um",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video");
-        let frameNumber = Math.floor(self.progress * 497) + 1;
-        if (frameNumber > 450) {
-          frameNumber = 450;
+        let frameNumber = Math.floor(self.progress * 121) + 1;
+        if (frameNumber > 121) {
+          frameNumber = 121;
         }
 
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/${frameNumber}.jpg`;
         video.src = imageUrl;
         console.log(imageUrl);
-      },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#parteum",
-      onUpdate: (self) => {
-        const video = document.getElementById("quadro_video");
-        const progress = self.progress;
-        const imageUrl =
-          progress < 0.5
-            ? "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/450.jpg"
-            : "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_dois/1.jpg";
-        video.src = imageUrl;
       },
     });
 
@@ -72,13 +59,13 @@ export default function Enchentes() {
 
   return (
     <>
-      <div className="fixed -z-10 flex flex-col items-center justify-center h-[100vh] w-[100vw]">
+      <div className="fixed -z-10 flex flex-col items-center justify-center h-[100vh] w-[100vw]  bg-[#efeeea]">
         <img
           id={"quadro_video"}
           src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/1.jpg"
           }
-          className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
+          className="h-auto w-full "
         ></img>
       </div>
       <chapterDiv.Capa id={"capa"} />

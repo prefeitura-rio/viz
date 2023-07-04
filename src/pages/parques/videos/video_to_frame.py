@@ -6,7 +6,7 @@ if __name__ == "__main__":
     path = Path("./")
 
     images_path = path / "quadro_um"
-    vidcap = cv2.VideoCapture(str(path / "mapas.mp4"))
+    vidcap = cv2.VideoCapture(str(path / "zoomout.mp4"))
 
     if images_path.exists():
         shutil.rmtree(images_path)
