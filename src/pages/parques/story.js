@@ -65,7 +65,7 @@ export default function Enchentes() {
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/1.jpg"
           }
-          className="h-auto w-full "
+          className="object-cover w-full h-screen "
         ></img>
       </div>
       <chapterDiv.Capa id={"capa"} />

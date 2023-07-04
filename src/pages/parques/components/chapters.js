@@ -24,6 +24,7 @@ import cep2 from "../images/cep2.png";
 import cep3 from "../images/cep3.gif";
 
 import graficoum from "../images/graficoum.png";
+import mapa from "../images/mapa.png";
 
 import video_capa from "../videos/capa.mp4";
 
@@ -197,14 +198,20 @@ export function ParteUm(
 				<br />
 				Sair do seu bairro e ter que pegar um transporte só para curtir um espaço bacana com a família — tá na hora de deixar isso de lado, né? Afinal de contas, a gente sabe que o carioca adora ir curtir um verde.
 				</styles.TextCard1>
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<styles.TextCard2 className="">Quantas vezes a população carioca pesquisou pela palavra “parque” no google nos últimos 13 anos?</styles.TextCard2>
 				<img
 					src={graficoum}
-					className="h-auto mt-[120px] mb-[120px] rounded-md"></img>
+					className="h-auto mt-[40px] mb-[120px] rounded-md"></img>
 				<styles.TextCard1>
 				Foram xx novas áreas de lazer construídas em toda a cidade. XX localizadas na Zona Oeste e Norte</styles.TextCard1>
 				<img
-					src={graficoum}
-					className="h-auto mt-[120px] mb-[120px] rounded-md"></img>
+					src={mapa}
+					className="h-auto mt-[30px] rounded-md"></img>
 			</styles.ContainerCard>
 		</styles.ChapterGenericDiv4>
 	);
@@ -256,6 +263,21 @@ export function ParteDois(
 				<styles.TextCard2>
 				A gente sabe os parques são um sucesso, olha só o parque Madureira:
 				</styles.TextCard2>
+				<img
+					src={graficoum	}
+					className="h-auto mt-[120px] mb-[120px] rounded-md"></img>
+				<img
+					src={graficoum}
+					className="h-auto mb-[120px] rounded-md"></img>
+				<styles.TextCard2>
+				Veja como ficará o novo xodó de Campo Grande:
+				</styles.TextCard2>
+				<img
+					src={graficoum}
+					className="h-auto mt-[120px] mb-[120px] rounded-md"></img>
+				<img
+					src={graficoum}
+					className="h-auto mb-[120px] rounded-md"></img>
 			</styles.ContainerCard>
 		</styles.ChapterGenericDiv4>
 	);

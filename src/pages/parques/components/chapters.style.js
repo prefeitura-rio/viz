@@ -7,15 +7,14 @@ import capaum from "../images/capaum.png";
 export const CapaDivSC = styled.div`
 background-color:  #FFFCE4;
 background-image: url(${capaum});
-background-size: cover;
+background-size: 86%;
 background-position: center;
+background-repeat: no-repeat;
 `;
 
 // @media only screen and (min-width: 768px) {
 //   background-size: 21%;
 // background-image: url(${capa});
-// background-size: cover;
-// background-position: center;
 
 export const CapaDiv = tw(CapaDivSC)`
   h-[100vh] w-full
@@ -38,9 +37,8 @@ export const Title = tw.div`
   px-8
   lg:py-0
   lg:px-0
-  lg:text-[48px]
-  lg:mt-[100px]
-  text-black
+  lg:text-[42px]
+  text-[#302724]
   `;
 
   // drop-shadow-[0_8px_8px_rgba(0,0,0,0.99)]
@@ -49,14 +47,13 @@ export const Subtitle = tw.div`
 font-serif font-[100]
 text-center
 text-[16px]
-lg:text-[18px]
+lg:text-[16px]
 leading-[120%]
 py-0
 px-8
 lg:py-[12px]
 lg:px-0
-text-[#5b5b5b]
-lg:mt-[10px]
+text-[#302724]
 `;
 
 export const Video = tw.div`
@@ -145,9 +142,7 @@ h-auto w-[500px]
 flex flex-col
 items-center
 justify-center
-mb-[60px]
-mt-[60px]
-p-[40px]
+py-[140px]
 `;
 
 export const ContainerCard2 = tw.div`
@@ -293,9 +288,9 @@ text-black
 
 export const TextCard2 = tw.div`
 font-primer font-[400] 
-text-[20px]
+text-[28px]
 text-left
-lg:leading-[150%]
+lg:leading-[120%]
 font-bold
 `;
 
