@@ -76,35 +76,39 @@ export function CepImages(
 ) {
   props = setDefaultProps(props);
   return (
-    <div ref={props.chapRef} id={props.id}>
+    <div
+      ref={props.chapRef}
+      id={props.id}
+      className="flex relative w-[100%] h-[100vh] -z-[50] items-center justify-center"
+    >
       <img
         id={"animacao_image_1"}
         src={
           "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/ilustracaoum.png"
         }
-        // className="fixed object-cover  w-[100%] h-full opacity-0 -z-50"
+        className="absolute w-[100%]  opacity-0 -z-[15]"
       ></img>
       <img
         id={"animacao_image_2"}
         src={
           "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/ilustracaodois.png"
         }
-        // className="fixed object-cover  w-[100%] h-full opacity-0 -z-50"
+        className="absolute w-[100%]  opacity-0 -z-[14]"
       ></img>
       <img
         id={"animacao_image_3"}
         src={
           "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/ilustracaotres.png"
         }
-        // className="fixed object-cover  w-[100%] h-full opacity-0 -z-50"
+        className="absolute w-[100%]  opacity-0 -z-[13]"
       ></img>
-      <img
+      {/* <img
         id={"animacao_image_4"}
         src={
           "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/ilustracaoum.png"
         }
-        // className="fixed object-cover  w-[100%] h-full opacity-0 -z-50"
-      ></img>
+        className="absolute w-[100%]  opacity-1 -z-[12]"
+      ></img> */}
     </div>
   );
 }
