@@ -273,19 +273,24 @@ export function ParteDois(
 				</styles.TextCard2>
 				<img
 					src={madureiraum}
-					className="h-auto mt-[120px] mb-[120px]"></img>
+					className="h-auto mt-[120px]"></img>
+				{/* <styles.TextLegenda className="justify-start mb-[60px]">Vista aérea. Foto: Acervo Prefeitura</styles.TextLegenda> */}
 				<img
 					src={madureiraquatro}
-					className="h-auto mb-[120px]"></img>
+					className="h-auto"></img>
+				{/* <styles.TextLegenda className="justify-start mb-[60px]">Chafariz. Foto: Acervo Prefeitura</styles.TextLegenda> */}
 				<img
 					src={madureiratres}
-					className="h-auto mb-[120px]"></img>
+					className="h-auto"></img>
+				{/* <styles.TextLegenda className="justify-start mb-[60px]">Skatepark. Foto: Acervo Prefeitura</styles.TextLegenda> */}
 				<img
 					src={madureiradois}
-					className="h-auto mb-[120px]"></img>
+					className="h-auto"></img>
+				{/* <styles.TextLegenda className="justify-start mb-[60px]">Espaço infantil. Foto: Acervo Prefeitura</styles.TextLegenda> */}
 				<img
 					src={madureiracinco}
 					className="h-auto mb-[120px]"></img>															
+				{/* <styles.TextLegenda className="justify-start mb-[60px]">Área molhada. Foto: Acervo Prefeitura</styles.TextLegenda> */}
 				<styles.TextCard2>
 				Veja como ficará o novo xodó de Campo Grande:
 				</styles.TextCard2>
@@ -294,16 +299,16 @@ export function ParteDois(
 					className="h-auto mb-[120px] mt-[120px]"></img>					
 				<img
 					src={realengoum}
-					className="h-auto mb-[120px]"></img>
+					className="h-auto"></img>
 				<img
 					src={realengodois}
-					className="h-auto mb-[120px]"></img>
+					className="h-auto"></img>
 				<img
 					src={realengotres}
-					className="h-auto mb-[120px]"></img>
+					className="h-auto"></img>
 				<img
 					src={realengoquatro}
-					className="h-auto mb-[120px]"></img>
+					className="h-auto"></img>
 				<img
 					src={realengoseis}
 					className="h-auto mb-[120px]"></img>																					
