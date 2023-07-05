@@ -42,19 +42,7 @@ export default function Enchentes() {
       },
     });
 
-    ScrollTrigger.create({
-      trigger: "#quadro_dois",
-      onUpdate: (self) => {
-        const video = document.getElementById("quadro_video");
-        let frameNumber = Math.floor(self.progress * 1742) + 1;
-        if (frameNumber > 1703) {
-          frameNumber = 1703;
-        }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_dois/${frameNumber}.jpg`;
-        console.log(imageUrl);
-        video.src = imageUrl;
-      },
-    });
+
   }, []);
 
   return (
@@ -73,8 +61,6 @@ export default function Enchentes() {
       <div className="h-[95vh] w-full bg-transparent"></div>
       <chapterDiv.QuadroUm id={"quadro_um"} />
       <chapterDiv.ParteUm id={"parteum"} />
-      <div className="h-[95vh] w-full bg-transparent"></div>
-      <chapterDiv.QuadroDois id={"quadro_dois"} />
       <chapterDiv.ParteDois id={"partedois"} />
       <chapterDiv.Creditos id={"creditos"} />
     </>
