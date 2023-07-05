@@ -12,10 +12,10 @@ export default function Home() {
           <Link to="/enchentes">Especial | Enchentes</Link>
         </li>
         <li>
-          <Link to="/obras">Especial | Obras</Link>
+          <Link to="/parques">Especial | Parques</Link>
         </li>
         <li>
-          <Link to="/obras-teste">Especial | Obras Teste</Link>
+          <Link to="/obras">Especial | Obras</Link>
         </li>
         <li>
           <Link to="/alagamento-passado-comando">

@@ -5,12 +5,12 @@ import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { LoadingSEOPDemolicioes } from "./pages/seop-demolicoes/loading";
 import { LoadingObras } from "./pages/obras/loading";
-import { LoadingObrasTeste } from "./pages/obras-teste/loading";
 import { LoadingSubsidioSPPO } from "./pages/subsidio-sppo/loading";
 import { LoadingSeopCep } from "./pages/seop-cep/loading";
 import { LoadingCarnaval2023 } from "./pages/carnaval-2023/loading";
 import { LoadingPainelInvestimento } from "./pages/painel-investimentos/loading";
 import { LoadingEnchentes } from "./pages/enchentes/loading";
+import { LoadingParques } from "./pages/parques/loading";
 
 import style, { createGlobalStyle } from "styled-components";
 import mapboxCss from "mapbox-gl/dist/mapbox-gl.css";
@@ -22,7 +22,6 @@ const VideoSandbox = lazy(() => import("./pages/sandbox/video"));
 const SubsidioSPPO = lazy(() => import("./pages/subsidio-sppo/story"));
 const Interactive = lazy(() => import("./pages/subsidio-sppo/interactive"));
 const ObrasZO = lazy(() => import("./pages/obras/story"));
-const ObrasTeste = lazy(() => import("./pages/obras-teste/story"));
 const TestLineChart = lazy(() => import("./pages/sandbox/test_linechart"));
 const TestMap = lazy(() => import("./pages/sandbox/test_map"));
 const SEOPDemolicoes = lazy(() => import("./pages/seop-demolicoes/story"));
@@ -70,6 +69,13 @@ const PainelInvestimento = lazy(() => {
 const Enchentes = lazy(() => {
   return Promise.all([
     import("./pages/enchentes/story"),
+    new Promise((resolve) => setTimeout(resolve, 1)),
+  ]).then(([moduleExports]) => moduleExports);
+});
+
+const Parques = lazy(() => {
+  return Promise.all([
+    import("./pages/parques/story"),
     new Promise((resolve) => setTimeout(resolve, 1)),
   ]).then(([moduleExports]) => moduleExports);
 });
@@ -166,14 +172,14 @@ function App() {
             <Route path="/obras" element={<ObrasZO />}></Route>
           </Routes>
         </Suspense>
-        <Suspense fallback={<LoadingObrasTeste />}>
-          <Routes>
-            <Route path="/obras-teste" element={<ObrasTeste />}></Route>
-          </Routes>
-        </Suspense>
         <Suspense fallback={<LoadingEnchentes />}>
           <Routes>
             <Route path="/enchentes" element={<Enchentes />}></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<LoadingParques />}>
+          <Routes>
+            <Route path="/parques" element={<Parques />}></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<LoadingCarnaval2023 />}>
