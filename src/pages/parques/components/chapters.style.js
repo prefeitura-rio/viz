@@ -6,7 +6,7 @@ import capaum from "../images/capaum.png";
 import capaummobile from "../images/capaummobile.png";
 
 export const CapaDivSC = styled.div`
-background-color:  #FFFCE4;
+background-color:  #fbfaef;
 background-image: url(${capaum});
 background-size: 86%;
 background-position: center;
@@ -88,7 +88,7 @@ flex
 w-full h-auto min-h-[100vh]
 items-center
 justify-center
-bg-[#FFFCE4]
+bg-[#fbfaef]
 `;
 
 export const ChapterGenericDiv1 = tw.div`
@@ -139,7 +139,7 @@ export const ChapterGenericDiv4 = tw.div`
   items-center
   justify-center
   lg:py-[160px]
-  bg-[#FFFCE4]
+  bg-[#fbfaef]
   `;
 
 export const ContainerCard = tw.div`

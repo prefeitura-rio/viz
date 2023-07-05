@@ -273,19 +273,19 @@ export function ParteDois(
 				</styles.TextCard2>
 				<img
 					src={madureiraum}
-					className="h-auto mt-[120px]"></img>
+					className="h-auto mb-[12px] mt-[120px]"></img>
 				{/* <styles.TextLegenda className="justify-start mb-[60px]">Vista aérea. Foto: Acervo Prefeitura</styles.TextLegenda> */}
 				<img
 					src={madureiraquatro}
-					className="h-auto"></img>
+					className="h-auto mb-[12px]"></img>
 				{/* <styles.TextLegenda className="justify-start mb-[60px]">Chafariz. Foto: Acervo Prefeitura</styles.TextLegenda> */}
 				<img
 					src={madureiratres}
-					className="h-auto"></img>
+					className="h-auto mb-[12px]"></img>
 				{/* <styles.TextLegenda className="justify-start mb-[60px]">Skatepark. Foto: Acervo Prefeitura</styles.TextLegenda> */}
 				<img
 					src={madureiradois}
-					className="h-auto"></img>
+					className="h-auto mb-[12px]"></img>
 				{/* <styles.TextLegenda className="justify-start mb-[60px]">Espaço infantil. Foto: Acervo Prefeitura</styles.TextLegenda> */}
 				<img
 					src={madureiracinco}
@@ -299,16 +299,16 @@ export function ParteDois(
 					className="h-auto mb-[120px] mt-[120px]"></img>					
 				<img
 					src={realengoum}
-					className="h-auto"></img>
+					className="h-auto mb-[12px]"></img>
 				<img
 					src={realengodois}
-					className="h-auto"></img>
+					className="h-auto mb-[12px]"></img>
 				<img
 					src={realengotres}
-					className="h-auto"></img>
+					className="h-auto mb-[12px]"></img>
 				<img
 					src={realengoquatro}
-					className="h-auto"></img>
+					className="h-auto mb-[12px]"></img>
 				<img
 					src={realengoseis}
 					className="h-auto mb-[120px]"></img>																					
