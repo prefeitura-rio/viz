@@ -216,8 +216,8 @@ export const TextCreditos2 = tw.div`
   font-primer
   font-black
   text-[32px]
-  lg:text-[40px]
-  mb-[40px]
+  lg:text-[32px]
+  mb-[60px]
   text-center
 `;
 
