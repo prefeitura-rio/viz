@@ -98,6 +98,13 @@ export function CepImages(
         }
         // className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
       ></img>
+      <img
+        id={"cep_image_1"}
+        src={
+          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/ilustracaoum.png"
+        }
+        // className="fixed object-cover top-0 left-0 w-[100%] h-full opacity-0 -z-50"
+      ></img>
     </div>
   );
 }
