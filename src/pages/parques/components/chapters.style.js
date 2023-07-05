@@ -150,6 +150,7 @@ justify-center
 py-[60px]
 lg:py-[140px]
 px-[60px]
+lg:px-[0px]
 `;
 
 export const ContainerCard2 = tw.div`
@@ -159,6 +160,7 @@ items-center
 justify-center
 px-[60px]
 pb-[80px]
+lg:px-[0px]
 `;
 
 export const ContainerCard3 = tw.div`
