@@ -44,8 +44,9 @@ export default function Enchentes() {
     const tl_parte_um = gsap.timeline();
     tl_parte_um
       .set("#quadro_video", { opacity: 1 })
+      .to("#quadro_video", { opacity: 1, duration: 49 })
       .to("#quadro_video", { opacity: 0, duration: 1 })
-      .to("#quadro_video", { opacity: 0, duration: 1 });
+      .to("#quadro_video", { opacity: 0, duration: 50 });
 
     ScrollTrigger.create({
       animation: tl_parte_um,
