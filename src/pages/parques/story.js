@@ -4,7 +4,6 @@ import MultilayerMap from "../../components/maps/multilayer_map";
 import { Controller, Scene } from "react-scrollmagic";
 
 // Chapters
-import * as chapterMap from "./components/chapters.map";
 import * as chapterDiv from "./components/chapters";
 
 // Scroll and animation  stuff
@@ -41,8 +40,6 @@ export default function Enchentes() {
         console.log(imageUrl);
       },
     });
-
-
   }, []);
 
   return (
@@ -60,8 +57,9 @@ export default function Enchentes() {
       <chapterDiv.ContextoHistorico id={"contexto_historico"} />
       <div className="h-[95vh] w-full bg-transparent"></div>
       <chapterDiv.QuadroUm id={"quadro_um"} />
-      <chapterDiv.ParteUm id={"parteum"} />
-      <chapterDiv.ParteDois id={"partedois"} />
+      <chapterDiv.ParteUm id={"parte_um"} />
+      <chapterDiv.CepImages id={"cep_images"} />
+      <chapterDiv.ParteDois id={"parte_dois"} />
       <chapterDiv.Creditos id={"creditos"} />
     </>
   );
