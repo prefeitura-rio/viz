@@ -1015,7 +1015,7 @@ export function Creditos(
               pelo Centro de Ciência Aplicada à Segurança da FGV. <br />
               Você pode conferir esta análise{" "}
               <a
-                className="underline font-bold"
+                className="font-bold underline"
                 href="https://ccas.fgv.br/projeto/programa-conjunto-de-estrategias-de-prevencao-cep-seu-rio-sua-rua "
                 target="_blank"
                 rel="noreferrer"
