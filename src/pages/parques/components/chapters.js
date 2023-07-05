@@ -7,26 +7,35 @@ import { isMobile } from "react-device-detect";
 
 // IMAGENS
 import logoed from "../images/logoed.png";
-import logo from "../images/logo.png";
-import scroll from "../images/scroll.gif";
-
-import obras1 from "../images/obras1.jpg";
-import obras2 from "../images/obras2.jpg";
-import obras3 from "../images/obras3.jpg";
-import rotina1 from "../images/rotina1.jpg";
-import rotina2 from "../images/rotina2.jpg";
-import cor1 from "../images/cor1.jpg";
-import cor2 from "../images/cor2.jpg";
-import cor3 from "../images/cor3.jpg";
 
 import cep1 from "../images/cep1.png";
 import cep2 from "../images/cep2.png";
 import cep3 from "../images/cep3.gif";
 
+
+
 import graficoum from "../images/graficoum.png";
 import mapa from "../images/mapa.png";
 
-import video_capa from "../videos/capa.mp4";
+import realengoum from "../images/realengoum.jpg";
+import realengodois from "../images/realengodois.jpg";
+import realengotres from "../images/realengotres.jpg";
+import realengoquatro from "../images/realengoquatro.jpg";
+import realengocinco from "../images/realengocinco.jpg";
+import realengoseis from "../images/realengoseis.jpg";
+
+import madureiraum from "../images/madureiraum.jpg";
+import madureiradois from "../images/madureiradois.jpg";
+import madureiratres from "../images/madureiratres.jpg";
+import madureiraquatro from "../images/madureiraquatro.jpg";
+import madureiracinco from "../images/madureiracinco.jpg";
+
+import montagemum from "../images/montagemum.png";
+import montagemdois from "../images/montagemdois.png";
+import montagemtres from "../images/montagemtres.png";
+import montagemquatro from "../images/montagemquatro.png";
+
+import fundoum from "../images/fundoum.png";
 
 import { gsap } from "gsap";
 
@@ -101,6 +110,9 @@ export function ContextoHistorico(
 		<>
 			<styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
 				<styles.ContainerCard>
+				<img
+					src={fundoum}
+					className="absolute top-[80%] h-auto"></img>
 						<styles.AuthorText className="mb-[88px]">
 						Realização {" "}
 							<a
@@ -111,7 +123,7 @@ export function ContextoHistorico(
 								Escritório de Dados
 							</a>{" "}
 							<br />
-							Desenvolvido por <div className="font-bold inline">Caio Jacintho</div> e <div className="font-bold inline">Judite Cypreste</div><br />{" "}
+							Desenvolvido por <div className="font-bold inline ">Caio Jacintho</div> e <div className="font-bold inline">Judite Cypreste</div><br />{" "}
 						</styles.AuthorText>{" "}
 					<styles.TextCard1>
 						Dados do Alerta Rio, sistema de alerta de chuvas intensas e de
@@ -264,20 +276,41 @@ export function ParteDois(
 				A gente sabe os parques são um sucesso, olha só o parque Madureira:
 				</styles.TextCard2>
 				<img
-					src={graficoum	}
-					className="h-auto mt-[120px] mb-[120px] rounded-md"></img>
+					src={madureiraum}
+					className="h-auto mt-[120px] mb-[120px]"></img>
 				<img
-					src={graficoum}
-					className="h-auto mb-[120px] rounded-md"></img>
+					src={madureiraquatro}
+					className="h-auto mb-[120px]"></img>
+				<img
+					src={madureiratres}
+					className="h-auto mb-[120px]"></img>
+				<img
+					src={madureiradois}
+					className="h-auto mb-[120px]"></img>
+				<img
+					src={madureiracinco}
+					className="h-auto mb-[120px]"></img>															
 				<styles.TextCard2>
 				Veja como ficará o novo xodó de Campo Grande:
 				</styles.TextCard2>
 				<img
-					src={graficoum}
-					className="h-auto mt-[120px] mb-[120px] rounded-md"></img>
+					src={realengocinco}
+					className="h-auto mb-[120px] mt-[120px]"></img>					
 				<img
-					src={graficoum}
-					className="h-auto mb-[120px] rounded-md"></img>
+					src={realengoum}
+					className="h-auto mb-[120px]"></img>
+				<img
+					src={realengodois}
+					className="h-auto mb-[120px]"></img>
+				<img
+					src={realengotres}
+					className="h-auto mb-[120px]"></img>
+				<img
+					src={realengoquatro}
+					className="h-auto mb-[120px]"></img>
+				<img
+					src={realengoseis}
+					className="h-auto mb-[120px]"></img>																					
 			</styles.ContainerCard>
 		</styles.ChapterGenericDiv4>
 	);
@@ -313,7 +346,7 @@ export function Creditos(
 				<styles.TextCreditos1>Eduardo Paes</styles.TextCreditos1>
 				<img
 					src={logoed}
-					className="lg:mb-[160px] mt-[100px] w-[100px] h-auto lg:w-[100px] lg:h-auto"></img>
+					className="lg:mb-[160px] mt-[200px] w-[100px] h-auto lg:w-[100px] lg:h-auto"></img>
 			</styles.ContainerCard>
 		</styles.ChapterGenericDiv>
 	);
