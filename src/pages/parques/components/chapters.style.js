@@ -3,6 +3,7 @@ import { Container } from "postcss";
 import styled from "styled-components";
 import tw from "tailwind-styled-components";
 import capaum from "../images/capaum.png";
+import capaummobile from "../images/capaummobile.png";
 
 export const CapaDivSC = styled.div`
 background-color:  #FFFCE4;
@@ -10,6 +11,11 @@ background-image: url(${capaum});
 background-size: 86%;
 background-position: center;
 background-repeat: no-repeat;
+
+@media (max-width: 768px) {
+    background-image: url(${capaummobile});
+    background-size: 100%;
+  }
 `;
 
 // @media only screen and (min-width: 768px) {
@@ -30,7 +36,7 @@ export const CapaAutor = tw.div`
 
 export const Title = tw.div`  
   font-primer font-[700]
-  text-[32px]
+  text-[24px]
   text-center
   leading-[120%]
   py-[10px]
@@ -132,7 +138,6 @@ export const ChapterGenericDiv4 = tw.div`
   min-h-[100vh]
   items-center
   justify-center
-  p-[34px]
   lg:py-[160px]
   bg-[#FFFCE4]
   `;
@@ -142,14 +147,18 @@ h-auto w-[500px]
 flex flex-col
 items-center
 justify-center
-py-[140px]
+py-[60px]
+lg:py-[140px]
+px-[60px]
 `;
 
 export const ContainerCard2 = tw.div`
-  h-auto w-[40vw]
-  backdrop-blur-[50px]
-  bg-[#00000099]
-  p-[34px]
+h-auto w-[500px]
+flex flex-col
+items-center
+justify-center
+px-[60px]
+pb-[80px]
 `;
 
 export const ContainerCard3 = tw.div`
@@ -288,9 +297,10 @@ text-black
 
 export const TextCard2 = tw.div`
 font-primer font-[400] 
-text-[28px]
+text-[20px]
+lg:text-[28px]
 text-left
-lg:leading-[120%]
+leading-[120%]
 font-bold
 `;
 

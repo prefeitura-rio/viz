@@ -109,10 +109,10 @@ export function ContextoHistorico(
 	return (
 		<>
 			<styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-				<styles.ContainerCard>
-				<img
+				<styles.ContainerCard2>
+				{/* <img
 					src={fundoum}
-					className="absolute top-[80%] h-auto"></img>
+					className="absolute top-[100%] h-screen w-[100%] lg:top-[80%] lg:h-auto"></img> */}
 						<styles.AuthorText className="mb-[88px]">
 						Realização {" "}
 							<a
@@ -145,7 +145,7 @@ export function ContextoHistorico(
 						deste fenômeno, que vem ameaçando a existência de regiões em todo o
 						mundo.
 					</styles.TextCard1>
-				</styles.ContainerCard>
+				</styles.ContainerCard2>
 			</styles.ChapterGenericDiv>
 		</>
 	);
@@ -196,12 +196,10 @@ export function ParteUm(
 		<styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard>
 				<styles.TextCard1>
-				<styles.TextCard2>
+				<styles.TextCard2 className="mt-[80px]">
 				Sabe o que esses lugares têm em comum?</styles.TextCard2>
 				<br />
 				Eles fazem parte do plano da Prefeitura do Rio de encher a cidade de áreas de lazer para os cariocas. 
-				<br />
-				<br />
 				<br />
 				<br />
 				<br />
@@ -213,12 +211,10 @@ export function ParteUm(
 				<br />
 				<br />
 				<br />
-				<br />
-				<br />
-				<styles.TextCard2 className="">Quantas vezes a população carioca pesquisou pela palavra “parque” no google nos últimos 13 anos?</styles.TextCard2>
+				<styles.TextCard2>Quantas vezes a população carioca pesquisou pela palavra “parque” no google nos últimos 13 anos?</styles.TextCard2>
 				<img
 					src={graficoum}
-					className="h-auto mt-[40px] mb-[120px] rounded-md"></img>
+					className="h-auto mt-[40px] mb-[80px] lg:mb-[120px] rounded-md"></img>
 				<styles.TextCard1>
 				Foram xx novas áreas de lazer construídas em toda a cidade. XX localizadas na Zona Oeste e Norte</styles.TextCard1>
 				<img
@@ -346,7 +342,7 @@ export function Creditos(
 				<styles.TextCreditos1>Eduardo Paes</styles.TextCreditos1>
 				<img
 					src={logoed}
-					className="lg:mb-[160px] mt-[200px] w-[100px] h-auto lg:w-[100px] lg:h-auto"></img>
+					className="lg:mb-[160px] mt-[100px] lg:mt-[200px] w-[100px] h-auto lg:w-[100px] lg:h-auto"></img>
 			</styles.ContainerCard>
 		</styles.ChapterGenericDiv>
 	);
