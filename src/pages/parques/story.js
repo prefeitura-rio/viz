@@ -4,7 +4,6 @@ import MultilayerMap from "../../components/maps/multilayer_map";
 import { Controller, Scene } from "react-scrollmagic";
 
 // Chapters
-import * as chapterMap from "./components/chapters.map";
 import * as chapterDiv from "./components/chapters";
 
 // Scroll and animation  stuff
@@ -22,7 +21,7 @@ export default function Enchentes() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: false,
+      markers: true,
       scrub: true,
       toggleActions: "play reverse play reverse",
     });
@@ -35,19 +34,41 @@ export default function Enchentes() {
         if (frameNumber > 121) {
           frameNumber = 121;
         }
-
         const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/${frameNumber}.jpg`;
         video.src = imageUrl;
-        console.log(imageUrl);
       },
     });
 
+    const tl_parte_um = gsap.timeline();
+    tl_parte_um
+      .set("#quadro_video", { opacity: 1 })
+      .to("#quadro_video", { opacity: 1, duration: 49 })
+      .to("#quadro_video", { opacity: 0, duration: 1 })
+      .to("#quadro_video", { opacity: 0, duration: 50 });
 
+    ScrollTrigger.create({
+      animation: tl_parte_um,
+      trigger: "#parte_um",
+    });
+
+    const tl_animation_um = gsap.timeline();
+    tl_animation_um
+      .set("#animacao_image_1", { opacity: 1 })
+      .to("#animacao_image_2", { opacity: 0, duration: 15 })
+      .to("#animacao_image_2", { opacity: 1, duration: 15 })
+      .to("#animacao_image_3", { opacity: 1, duration: 15 })
+      .to("#animacao_image_3", { opacity: 1, duration: 55 });
+    // .to("#animacao_image_4", { opacity: 0, duration: 50 });
+
+    ScrollTrigger.create({
+      animation: tl_animation_um,
+      trigger: "#animation_um",
+    });
   }, []);
 
   return (
     <>
-      <div className="fixed -z-10 flex flex-col items-center justify-center h-[100vh] w-[100vw]  bg-[#efeeea]">
+      <div className="fixed -z-[100] flex flex-col items-center justify-center h-[100vh] w-[100vw]  bg-[#efeeea]">
         <img
           id={"quadro_video"}
           src={
@@ -60,8 +81,9 @@ export default function Enchentes() {
       <chapterDiv.ContextoHistorico id={"contexto_historico"} />
       <div className="h-[95vh] w-full bg-transparent"></div>
       <chapterDiv.QuadroUm id={"quadro_um"} />
-      <chapterDiv.ParteUm id={"parteum"} />
-      <chapterDiv.ParteDois id={"partedois"} />
+      <chapterDiv.ParteUm id={"parte_um"} />
+      <chapterDiv.CepImages id={"animation_um"} />
+      <chapterDiv.ParteDois id={"parte_dois"} />
       <chapterDiv.Creditos id={"creditos"} />
     </>
   );

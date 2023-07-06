@@ -6,7 +6,7 @@ import capaum from "../images/capaum.png";
 import capaummobile from "../images/capaummobile.png";
 
 export const CapaDivSC = styled.div`
-background-color:  #FFFCE4;
+background-color:  #fbfaef;
 background-image: url(${capaum});
 background-size: 86%;
 background-position: center;
@@ -88,7 +88,7 @@ flex
 w-full h-auto min-h-[100vh]
 items-center
 justify-center
-bg-[#FFFCE4]
+bg-[#fbfaef]
 `;
 
 export const ChapterGenericDiv1 = tw.div`
@@ -139,17 +139,18 @@ export const ChapterGenericDiv4 = tw.div`
   items-center
   justify-center
   lg:py-[160px]
-  bg-[#FFFCE4]
+  bg-[#fbfaef]
   `;
 
 export const ContainerCard = tw.div`
 h-auto w-[500px]
 flex flex-col
-items-center
+items-left
 justify-center
 py-[60px]
 lg:py-[140px]
 px-[60px]
+lg:px-[0px]
 `;
 
 export const ContainerCard2 = tw.div`
@@ -159,6 +160,7 @@ items-center
 justify-center
 px-[60px]
 pb-[80px]
+lg:px-[0px]
 `;
 
 export const ContainerCard3 = tw.div`
@@ -306,6 +308,14 @@ font-bold
 
 export const TextCard3 = tw.div`
 font-libre font-[400] 
+text-[14px]
+text-left
+lg:leading-[150%]
+text-black
+`;
+
+export const TextLegenda = tw.div`
+font-libre font-[600] italic
 text-[14px]
 text-left
 lg:leading-[150%]
