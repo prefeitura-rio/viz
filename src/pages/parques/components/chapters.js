@@ -309,7 +309,7 @@ export function Creditos(
 				<styles.TextCreditos1>Eduardo Paes</styles.TextCreditos1>
 				<img
 					src={logoed}
-					className="lg:mb-[160px] mt-[200px] w-[100px] h-auto lg:w-[100px] lg:h-auto"></img>
+					className="lg:mb-[160px] mt-[100px] w-[100px] h-auto lg:w-[100px] lg:h-auto"></img>
 			</styles.ContainerCard>
 		</styles.ChapterGenericDiv>
 	);
