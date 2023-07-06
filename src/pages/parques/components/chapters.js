@@ -1,28 +1,33 @@
-import styled from "styled-components";
+// import styled from "styled-components";
 import * as styles from "./chapters.style";
-import tw from "tailwind-styled-components";
+// import tw from "tailwind-styled-components";
 // import ReactDOM from "react-dom";
 // import DWChart from "react-datawrapper-chart";
 import { isMobile } from "react-device-detect";
 
 // IMAGENS
 import logoed from "../images/logoed.png";
-import logo from "../images/logo.png";
-import scroll from "../images/scroll.gif";
-
-import obras1 from "../images/obras1.jpg";
-import obras2 from "../images/obras2.jpg";
-import obras3 from "../images/obras3.jpg";
-import rotina1 from "../images/rotina1.jpg";
-import rotina2 from "../images/rotina2.jpg";
-import cor1 from "../images/cor1.jpg";
-import cor2 from "../images/cor2.jpg";
-import cor3 from "../images/cor3.jpg";
 
 import graficoum from "../images/graficoum.png";
 import mapa from "../images/mapa.png";
 
-import video_capa from "../videos/capa.mp4";
+import realengoum from "../images/realengoum.jpg";
+import realengodois from "../images/realengodois.jpg";
+import realengotres from "../images/realengotres.jpg";
+import realengoquatro from "../images/realengoquatro.jpg";
+import realengocinco from "../images/realengocinco.jpg";
+import realengoseis from "../images/realengoseis.jpg";
+
+import madureiraum from "../images/madureiraum.jpg";
+import madureiradois from "../images/madureiradois.jpg";
+import madureiratres from "../images/madureiratres.jpg";
+import madureiraquatro from "../images/madureiraquatro.jpg";
+import madureiracinco from "../images/madureiracinco.jpg";
+
+// import montagemum from "../images/montagemum.png";
+// import montagemdois from "../images/montagemdois.png";
+// import montagemtres from "../images/montagemtres.png";
+// import montagemquatro from "../images/montagemquatro.png";
 
 import { gsap } from "gsap";
 

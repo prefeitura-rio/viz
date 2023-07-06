@@ -34,10 +34,8 @@ export default function Enchentes() {
         if (frameNumber > 121) {
           frameNumber = 121;
         }
-
         const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/${frameNumber}.jpg`;
         video.src = imageUrl;
-        console.log(imageUrl);
       },
     });
 
