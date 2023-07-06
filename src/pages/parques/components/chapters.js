@@ -58,7 +58,7 @@ export function Capa(
         ></img>
         <styles.Title>Parques, parques e mais parques </styles.Title>
         <styles.Subtitle>
-          E como a prefeitura trabalha para que a chuva não castigue os cariocas
+          Parques florescem em todos os cantos da cidade, trazendo mais qualidade de vida para os cariocas
         </styles.Subtitle>
         {/* <img src={scroll} className="h-7 lg:h-9 mt-[20px] lg:mt-[20px]"></img>{" "} */}
       </styles.CapaAutor>
@@ -143,24 +143,18 @@ export function ContextoHistorico(
             <br />{" "}
           </styles.AuthorText>{" "}
           <styles.TextCard1>
-            Dados do Alerta Rio, sistema de alerta de chuvas intensas e de
-            deslizamentos em encostas do Rio de Janeiro, mostram que nunca
-            choveu tanto na nossa cidade.
+            Sair do seu bairro e pegar transporte para encontrar um espaço agradável para curtir com a família está com os dias contados!
             <br />
             <br />
-            Uma análise feita com base nos dados de ocorrências registradas pelo
-            Centro de Operações da cidade (COR) desde 2018, mostra que a cidade
-            já registrou pelo menos 8.222 incidentes causados pelas chuvas.
-            Destes, 486 foram alagamentos e enchentes.
-            <br />
-            <br />E este não é um problema exclusivo nosso.
+            Por muito tempo, algumas partes da nossa cidade foram deixadas de lado, privadas de espaços de lazer.
             <br />
             <br />
-            Segundo a ONU, no último Painel Intergovernamental de Mudança do
-            Clima, as fortes chuvas no mundo já são 0,3% mais frequentes e 6,7%
-            mais intensas. Especialistas vêm alertando sobre as consequências
-            deste fenômeno, que vem ameaçando a existência de regiões em todo o
-            mundo.
+            Determinada a mudar a esta situação, a Prefeitura está empenhada em levar infraestrutura e lazer para todos os cantos da cidade maravilhosa.
+            <br />
+            <br />
+            Neste especial, vamos mostrar a você como estamos levando alegria e bem-estar para todos os cariocas.
+            <br />
+            <br />
           </styles.TextCard1>
         </styles.ContainerCard2>
       </styles.ChapterGenericDiv>
@@ -217,20 +211,24 @@ export function ParteUm(
             Sabe o que esses lugares têm em comum?
           </styles.TextCard2>
           <br />
-          Eles fazem parte do plano da Prefeitura do Rio de encher a cidade de
-          áreas de lazer para os cariocas.
+          <br />
+          Todos eles são parte do plano da Prefeitura do Rio de Janeiro de encher a cidade de áreas de lazer para os cariocas.
+          <br />
+          <br />
+          Estamos empenhados em transformar a nossa cidade, com a construção de espaços onde os habitantes possam desfrutar de momentos de descanso e diversão.           
+          <br />
+          <br />
+          Para alcançar esse objetivo, a Prefeitura já investiu R$ XX na construção de novas parques na cidade. 
+          <br />
+          <br />
+          Essas áreas de lazer são pensadas para atender às necessidades dos cariocas, oferecendo espaços verdes bem cuidados, equipamentos esportivos, e muito mais.
+          <br />
+          <br />
+          Com essa iniciativa, a Prefeitura busca melhorar a qualidade de vida dos moradores, incentivando a prática de atividades ao ar livre e promovendo o senso de comunidade entre os cidadãos. 
           <br />
           <br />
           <br />
-          <br />
-          <styles.TextCard2>
-            Um investimento em locais historicamente deixados de lado pelo poder
-            público.
-          </styles.TextCard2>
-          <br />
-          Sair do seu bairro e ter que pegar um transporte só para curtir um
-          espaço bacana com a família — tá na hora de deixar isso de lado, né?
-          Afinal de contas, a gente sabe que o carioca adora ir curtir um verde.
+          <br />    
         </styles.TextCard1>
         <br />
         <br />
@@ -243,9 +241,22 @@ export function ParteUm(
           src={graficoum}
           className="h-auto mt-[40px] mb-[80px] lg:mb-[120px] rounded-md"
         ></img>
+        <styles.TextCard2 className="mt-[80px]">
+            Um investimento em locais historicamente deixados de lado pelo poder público.
+        </styles.TextCard2>
         <styles.TextCard1>
-          Foram xx novas áreas de lazer construídas em toda a cidade. XX
-          localizadas na Zona Oeste e Norte
+          <br />
+          <br />
+          Sair do seu bairro e ter que pegar um transporte só para curtir um espaço bacana com a família — tá na hora de deixar isso de lado, né? 
+          <br />
+          <br />
+          Afinal de contas, a gente sabe que o carioca adora ir curtir um verde.
+          <br />
+          <br />
+          Para isso, XX parques estão sendo construídos nas Zonas Oeste e Norte da cidade.   
+          <br />
+          <br />
+          <br />             
         </styles.TextCard1>
         <img src={mapa} className="h-auto mt-[30px] rounded-md"></img>
       </styles.ContainerCard>
