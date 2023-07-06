@@ -138,7 +138,7 @@ export function ContextoHistorico(
             </a>{" "}
             <br />
             Desenvolvido por{" "}
-            <div className="inline font-bold ">Caio Jacintho</div> e{" "}
+            <div className="inline font-bold ">Caio Jacintho, Diego Oliveira</div> e{" "}
             <div className="inline font-bold">Judite Cypreste</div>
             <br />{" "}
           </styles.AuthorText>{" "}
@@ -349,12 +349,12 @@ export function Creditos(
         <styles.TextCreditos1>
           Caio Jacintho <br />
           Judite Cypreste <br />
+		  Diego Oliveira <br />
         </styles.TextCreditos1>
         <styles.TextCreditos className=" lg:mt-[40px] mt-[60px] ">
           Agradecimentos
         </styles.TextCreditos>
         <styles.TextCreditos1>
-          Diego Oliveira <br />
           João Carabetta <br />
         </styles.TextCreditos1>
         <styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
