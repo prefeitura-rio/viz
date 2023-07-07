@@ -228,7 +228,8 @@ export function ParteUm(
           <br />
           <br />
           <br />
-          <br />    
+          <br /> 
+          Falta um texto aqui relacionando o que está escrito acima com o gráfico a seguir.     
         </styles.TextCard1>
         <br />
         <br />
@@ -309,23 +310,24 @@ export function ParteDois(
         <styles.TextCard2>
           A gente sabe os parques são um sucesso, olha só o parque Madureira:
         </styles.TextCard2>
+        <styles.TextCard1 className="mt-[20px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</styles.TextCard1>
         <img src={madureiraum} className="h-auto mb-[12px] mt-[120px]"></img>
-        {/* <styles.TextLegenda className="justify-start mb-[60px]">Vista aérea. Foto: Acervo Prefeitura</styles.TextLegenda> */}
         <img src={madureiraquatro} className="h-auto mb-[12px]"></img>
-        {/* <styles.TextLegenda className="justify-start mb-[60px]">Chafariz. Foto: Acervo Prefeitura</styles.TextLegenda> */}
+        <styles.TextCard1 className="mt-[80px] mb-[80px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</styles.TextCard1>
         <img src={madureiratres} className="h-auto mb-[12px]"></img>
-        {/* <styles.TextLegenda className="justify-start mb-[60px]">Skatepark. Foto: Acervo Prefeitura</styles.TextLegenda> */}
         <img src={madureiradois} className="h-auto mb-[12px]"></img>
-        {/* <styles.TextLegenda className="justify-start mb-[60px]">Espaço infantil. Foto: Acervo Prefeitura</styles.TextLegenda> */}
+        <styles.TextCard1 className="mt-[80px] mb-[80px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</styles.TextCard1>
         <img src={madureiracinco} className="h-auto mb-[120px]"></img>
-        {/* <styles.TextLegenda className="justify-start mb-[60px]">Área molhada. Foto: Acervo Prefeitura</styles.TextLegenda> */}
         <styles.TextCard2>
           Veja como ficará o novo xodó de Campo Grande:
         </styles.TextCard2>
+        <styles.TextCard1 className="mt-[20px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</styles.TextCard1>
         <img src={realengocinco} className="h-auto mb-[120px] mt-[120px]"></img>
         <img src={realengoum} className="h-auto mb-[12px]"></img>
+        <styles.TextCard1 className="mt-[80px] mb-[80px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</styles.TextCard1>
         <img src={realengodois} className="h-auto mb-[12px]"></img>
         <img src={realengotres} className="h-auto mb-[12px]"></img>
+        <styles.TextCard1 className="mt-[80px] mb-[80px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</styles.TextCard1>
         <img src={realengoquatro} className="h-auto mb-[12px]"></img>
         <img src={realengoseis} className="h-auto mb-[120px]"></img>
       </styles.ContainerCard>

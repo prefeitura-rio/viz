@@ -145,7 +145,7 @@ export const ChapterGenericDiv4 = tw.div`
 export const ContainerCard = tw.div`
 h-auto w-[500px]
 flex flex-col
-items-left
+items-center
 justify-center
 py-[60px]
 lg:py-[140px]
