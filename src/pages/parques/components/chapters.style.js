@@ -167,7 +167,7 @@ export const ContainerCard3 = tw.div`
     absolute
     z-10
     h-auto w-[80%] lg:w-[460px]
-    bg-[#ffffff99]
+    bg-[#fbfaef99]
     px-[40px]
     py-[34px]
     lg:px-[56px]
