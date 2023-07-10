@@ -139,6 +139,7 @@ export const ChapterGenericDiv4 = tw.div`
   items-center
   justify-center
   lg:py-[160px]
+  py-[80px]
   bg-[#fbfaef]
   `;
 
@@ -148,7 +149,7 @@ flex flex-col
 items-center
 justify-center
 py-[60px]
-lg:py-[140px]
+lg:py-[20px]
 px-[60px]
 lg:px-[0px]
 `;
@@ -175,6 +176,17 @@ export const ContainerCard3 = tw.div`
     rounded-lg
     backdrop-blur-md
   `;
+
+  export const ContainerCard4 = tw.div`
+h-auto w-[500px]
+flex flex-col
+items-left
+justify-center
+py-[60px]
+lg:py-[20px]
+px-[60px]
+lg:px-[0px]
+`;
 
 export const Grafico = tw.div`
   m-auto
@@ -320,4 +332,7 @@ text-[14px]
 text-left
 lg:leading-[150%]
 text-black
+lg:mb-[28px]
+mb-[16px]
+inline
 `;

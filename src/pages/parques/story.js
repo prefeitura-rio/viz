@@ -21,7 +21,7 @@ export default function Enchentes() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: true,
+      markers: false,
       scrub: true,
       toggleActions: "play reverse play reverse",
     });
@@ -82,7 +82,7 @@ export default function Enchentes() {
       <div className="h-[95vh] w-full bg-transparent"></div>
       <chapterDiv.QuadroUm id={"quadro_um"} />
       <chapterDiv.ParteUm id={"parte_um"} />
-      <chapterDiv.CepImages id={"animation_um"} />
+      {/* <chapterDiv.CepImages id={"animation_um"} /> */}
       <chapterDiv.ParteDois id={"parte_dois"} />
       <chapterDiv.Creditos id={"creditos"} />
     </>

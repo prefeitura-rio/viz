@@ -24,6 +24,10 @@ import madureiratres from "../images/madureiratres.jpg";
 import madureiraquatro from "../images/madureiraquatro.jpg";
 import madureiracinco from "../images/madureiracinco.jpg";
 
+import intro from "../images/intro.png";
+import introdois from "../images/introdois.png";
+import introtres from "../images/introtres.png";
+
 // import montagemum from "../images/montagemum.png";
 // import montagemdois from "../images/montagemdois.png";
 // import montagemtres from "../images/montagemtres.png";
@@ -217,9 +221,13 @@ export function ParteUm(
   return (
     <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
+      <img
+          src={intro}
+          className="h-auto w-[100%] lg:w-[90%] mb-[80px] lg:mb-[80px]"
+        ></img>
         <styles.TextCard1>
-          <styles.TextCard2 className="mt-[80px]">
-            Sabe o que esses lugares têm em comum?
+          <styles.TextCard2>
+          Sabe o que esses lugares têm em comum?
           </styles.TextCard2>
           <br />
           <br />
@@ -253,7 +261,7 @@ export function ParteUm(
           src={graficoum}
           className="h-auto mt-[40px] mb-[80px] lg:mb-[120px] rounded-md"
         ></img>
-        <styles.TextCard2 className="mt-[80px]">
+        <styles.TextCard2>
             Um investimento em locais historicamente deixados de lado pelo poder público.
         </styles.TextCard2>
         <styles.TextCard1>
@@ -317,31 +325,46 @@ export function ParteDois(
   props = setDefaultProps(props);
   return (
     <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
+      <styles.ContainerCard4>
+      <img
+          src={introdois}
+          className="h-auto w-[90%] mb-[80px] lg:mt-[80px] lg:mb-[100px]"
+        ></img>
         <styles.TextCard2>
           A gente sabe os parques são um sucesso, olha só o parque Madureira:
         </styles.TextCard2>
         <styles.TextCard1 className="mt-[20px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</styles.TextCard1>
-        <img src={madureiraum} className="h-auto mb-[12px] mt-[120px]"></img>
-        <img src={madureiraquatro} className="h-auto mb-[12px]"></img>
+        <img src={madureiraum} className="rounded-md h-auto mb-[6px] lg:mb-[6px] mt-[40px]"></img>
+        <styles.TextLegenda>Foto aérea do Parque Madureira. Foto: Prefeitura</styles.TextLegenda>
+        <img src={madureiraquatro} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <styles.TextLegenda>Chafariz. Foto: Prefeitura</styles.TextLegenda>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</styles.TextCard1>
-        <img src={madureiratres} className="h-auto mb-[12px]"></img>
-        <img src={madureiradois} className="h-auto mb-[12px]"></img>
+        <img src={madureiratres} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <styles.TextLegenda>Skatepark. Foto: Prefeitura</styles.TextLegenda>
+        <img src={madureiradois} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <styles.TextLegenda>Espaço infantil. Foto: Prefeitura</styles.TextLegenda>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</styles.TextCard1>
-        <img src={madureiracinco} className="h-auto mb-[120px]"></img>
-        <styles.TextCard2>
+        <img src={madureiracinco} className="rounded-md h-auto"></img>
+        <styles.TextLegenda>Área molhada. Foto: Prefeitura</styles.TextLegenda>
+        <styles.TextCard2 className="mt-[120px]">
           Veja como ficará o novo xodó de Campo Grande:
         </styles.TextCard2>
         <styles.TextCard1 className="mt-[20px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</styles.TextCard1>
-        <img src={realengocinco} className="h-auto mb-[120px] mt-[120px]"></img>
-        <img src={realengoum} className="h-auto mb-[12px]"></img>
+        <img src={realengocinco} className="rounded-md h-auto mt-[40px]"></img>
+        <styles.TextLegenda>Vista aérea do Parque Realengo. Foto: Prefeitura</styles.TextLegenda>
+        <img src={realengoum} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <styles.TextLegenda>Entrada do parque. Foto: Prefeitura</styles.TextLegenda>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</styles.TextCard1>
-        <img src={realengodois} className="h-auto mb-[12px]"></img>
-        <img src={realengotres} className="h-auto mb-[12px]"></img>
+        <img src={realengodois} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <styles.TextLegenda>Nave do conhecimento. Foto: Prefeitura</styles.TextLegenda>
+        <img src={realengotres} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <styles.TextLegenda>Área de lazer e churrasqueira. Foto: Prefeitura</styles.TextLegenda>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</styles.TextCard1>
-        <img src={realengoquatro} className="h-auto mb-[12px]"></img>
-        <img src={realengoseis} className="h-auto mb-[120px]"></img>
-      </styles.ContainerCard>
+        <img src={realengoquatro} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <styles.TextLegenda>Vista aérea do Parque Realengo. Foto: Prefeitura</styles.TextLegenda>
+        <img src={realengoseis} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <styles.TextLegenda>Espaço de preservação. Foto: Prefeitura</styles.TextLegenda>
+      </styles.ContainerCard4>
     </styles.ChapterGenericDiv4>
   );
 }
@@ -357,6 +380,10 @@ export function Creditos(
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
+      <img
+          src={introtres}
+          className="h-auto w-[80%] mb-[80px] lg:mt-[120px] lg:mb-[120px]"
+        ></img>
         <styles.TextCreditos2>Créditos</styles.TextCreditos2>
         <styles.TextCreditos>Autores</styles.TextCreditos>
         <styles.TextCreditos1>
