@@ -246,19 +246,19 @@ export function ParteUm(
           Para isso, XX parques estão sendo construídos nas Zonas Oeste e Norte da cidade.
           <br />
           <br />
-          O Parque Rita Lee, na Barra da Tijuca, está em construção desde fevereiro. Com 36 mil metros quadrados, o novo parque ficará numa rota que conecta todas as principais áreas do Parque Olímpico, como as arenas, os terraços e o “Live Site”, esplanada destinada a eventos em frente à Lagoa de Jacarepaguá. 
+          O <styles.TextGreen>Parque Rita Lee</styles.TextGreen>, na Barra da Tijuca, está em construção desde fevereiro. Com 36 mil metros quadrados, o novo parque ficará numa rota que conecta todas as principais áreas do Parque Olímpico, como as arenas, os terraços e o “Live Site”, esplanada destinada a eventos em frente à Lagoa de Jacarepaguá. 
           <br />
           <br />
           O espaço vai ganhar um bosque com mais de 900 árvores e 16 mil arbustos, quadras esportivas, praças, reforma do skate park, praça molhada e pisos coloridos. Haverá ainda novos mobiliários urbanos, como 465 mesas e cadeiras, 27 brinquedos infantis, 14 aparelhos de ginástica e 14 bicicletários.
           <br />
           <br />
-          Já o Parque Piedade, em fase de licitação, será construído no terreno que pertencia a Universidade Gama Filho, um espaço de 18 mil metros quadrados que estava abandonado. O projeto inclui áreas de lazer, centro cultural, esportivo e educacional, além de horta urbana e espaço para eventos.
+          Já o <styles.TextGreen>Parque Piedade</styles.TextGreen>, em fase de licitação, será construído no terreno que pertencia a Universidade Gama Filho, um espaço de 18 mil metros quadrados que estava abandonado. O projeto inclui áreas de lazer, centro cultural, esportivo e educacional, além de horta urbana e espaço para eventos.
           <br />
           <br />
-          Em Irajá, o Campo do Barroso, foi inaugurado em abril e possui campos esportivos, pista de caminhada e área de lazer. Foram instalados campo de futebol, quadra polivalente, quadra de areia e pista de caminhada, além de uma Academia da Terceira Idade e brinquedos infantis, como futmesa e mesa de ping-pong. A Rioluz instalou 25 novos projetores e mais 11 luminárias LED no local, que agora tem iluminação cênica com quatro projetores na cor verde voltados para a montanha.
+          Em Irajá, o <styles.TextGreen>Campo do Barroso</styles.TextGreen>, foi inaugurado em abril e possui campos esportivos, pista de caminhada e área de lazer. Foram instalados campo de futebol, quadra polivalente, quadra de areia e pista de caminhada, além de uma Academia da Terceira Idade e brinquedos infantis, como futmesa e mesa de ping-pong. A Rioluz instalou 25 novos projetores e mais 11 luminárias LED no local, que agora tem iluminação cênica com quatro projetores na cor verde voltados para a montanha.
           <br />
           <br />
-          Com um investimento estimado de R$ 72 milhões, o Parque Realengo Susana Naspolini, em construção desde setembro do ano passado, começou a tomar forma. O parque é inspirado no Gardens By The Bay de Cingapura, apontado como o jardim mais visitado no mundo.
+          Com um investimento estimado de R$ 72 milhões, o <styles.TextGreen>Parque Realengo</styles.TextGreen> Susana Naspolini, em construção desde setembro do ano passado, começou a tomar forma. O parque é inspirado no Gardens By The Bay de Cingapura, apontado como o jardim mais visitado no mundo.
           <br />
           <br />
           No início de junho, foram entregues 11 lojas, com 9 metros quadrados cada, montadas como um mercado popular, para organizar o comércio existente anteriormente na área. Próximo ao mercado há um espaço multiuso que poderá receber feiras e eventos, entre outras atividades.
@@ -323,7 +323,7 @@ export function ParteDois(
         <styles.TextCard2>
           A gente sabe os parques são um sucesso, olha só o parque Madureira:
         </styles.TextCard2>
-        <styles.TextCard1 className="mt-[20px]">Inaugurado em 23 de junho de 2012, o Parque Madureira Mestre Monarco é um dos projetos urbanísticos mais bem sucedidos da história recente do Brasil, tornando-se um ícone de lazer, diversão, cultura e serviços na Zona Norte do Rio de Janeiro. Nos fins de semana normais, o parque recebe, em média, de 10 mil a 15 mil pessoas. Em dias de evento, o público chega a 35 mil. Com 3.900 metros de extensão, ele é o terceiro maior parque da cidade, atrás apenas do Aterro do Flamengo e da Quinta da Boa Vista. O parque atravessa os bairros de Madureira, Turiaçu, Rocha Miranda, Honório Gurgel e Guadalupe.</styles.TextCard1>
+        <styles.TextCard1 className="mt-[20px]">Inaugurado em 23 de junho de 2012, o <styles.TextGreen>Parque Madureira</styles.TextGreen> Mestre Monarco é um dos projetos urbanísticos mais bem sucedidos da história recente do Brasil, tornando-se um ícone de lazer, diversão, cultura e serviços na Zona Norte do Rio de Janeiro. Nos fins de semana normais, o parque recebe, em média, de 10 mil a 15 mil pessoas. Em dias de evento, o público chega a 35 mil. Com 3.900 metros de extensão, ele é o terceiro maior parque da cidade, atrás apenas do Aterro do Flamengo e da Quinta da Boa Vista. O parque atravessa os bairros de Madureira, Turiaçu, Rocha Miranda, Honório Gurgel e Guadalupe.</styles.TextCard1>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiraum.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px] mt-[40px]"></img>
         <styles.TextLegenda>Foto aérea do Parque Madureira. Foto: Prefeitura</styles.TextLegenda>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiraquatro.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
@@ -349,7 +349,7 @@ export function ParteDois(
         <styles.TextLegenda>Nave do conhecimento. Foto: Prefeitura</styles.TextLegenda>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengotres.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Área de lazer e churrasqueira. Foto: Prefeitura</styles.TextLegenda>
-        <styles.TextCard1 className="mt-[80px] mb-[80px]">Antes de a praça ser revitalizada e virar o Parque Esperança, o local era conhecido informalmente como Praça Favela das Almas, sendo apenas um espaço descampado atrás do cemitério de Campo Grande, que servia para descarte de lixo.</styles.TextCard1>
+        <styles.TextCard1 className="mt-[80px] mb-[80px]">Antes de a praça ser revitalizada e virar o <styles.TextGreen>Parque Esperança</styles.TextGreen>, o local era conhecido informalmente como Praça Favela das Almas, sendo apenas um espaço descampado atrás do cemitério de Campo Grande, que servia para descarte de lixo.</styles.TextCard1>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoquatro.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Vista aérea do Parque Realengo. Foto: Prefeitura</styles.TextLegenda>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoseis.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
@@ -372,7 +372,7 @@ export function Creditos(
       <styles.ContainerCard>
       <img
           src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/introtres.png"}
-          className="h-auto w-[80%] mb-[80px] lg:mt-[120px] lg:mb-[120px]"
+          className="h-auto w-[60%] mb-[80px] lg:mt-[120px] lg:mb-[120px]"
         ></img>
         <styles.TextCreditos2>Créditos</styles.TextCreditos2>
         <styles.TextCreditos>Autores</styles.TextCreditos>

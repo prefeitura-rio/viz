@@ -242,49 +242,17 @@ export const TextCreditos2 = tw.div`
   text-center
 `;
 
-export const TextHighlightBlue = tw.div`
+export const TextGreen = tw.div`
   font-libre font-[400] 
   inline-block
   text-[14px]
   text-left
   lg:leading-[150%]
   text-white
-  bg-[#29557D]
+  bg-[#629648]
   px-2
   py-0
-`;
-
-export const TextHighlightBlueUm = tw.div`
-  font-libre font-[400] 
-  inline-block
-  text-[14px]
-  text-left
-  lg:leading-[150%]
-  text-white
-  bg-[#000000]
-  px-2
-  py-0
-`;
-
-export const TextHighlightBlueDois = tw.div`
-  font-libre font-[400] 
-  inline-block
-  text-[14px]
-  text-left
-  lg:leading-[150%]
-  text-white
-  bg-[#6F9CB7]
-  px-2
-  py-0
-`;
-// selection:bg-[#ef4444] selection:text-white
-
-export const TextHighlightDark = tw.div`
-  font-libre font-[700] 
-  text-[15px]
-  text-left
-  lg:leading-[150%]
-  text-black
+  rounded-md
 `;
 
 export const TextCard = tw.div`
