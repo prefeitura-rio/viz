@@ -21,7 +21,7 @@ export default function Enchentes() {
     ScrollTrigger.defaults({
       start: "top center",
       end: "bottom center",
-      markers: false,
+      markers: true,
       scrub: true,
       toggleActions: "play reverse play reverse",
     });
@@ -54,21 +54,33 @@ export default function Enchentes() {
     const tl_animation_um = gsap.timeline();
     tl_animation_um
       .set("#animacao_image_1", { opacity: 1 })
-      .to("#animacao_image_2", { opacity: 0, duration: 15 })
-      .to("#animacao_image_2", { opacity: 1, duration: 15 })
-      .to("#animacao_image_3", { opacity: 1, duration: 15 })
-      .to("#animacao_image_3", { opacity: 1, duration: 55 });
-    // .to("#animacao_image_4", { opacity: 0, duration: 50 });
+      .to("#animacao_image_2", { opacity: 1, duration: 13 })
+      .to("#animacao_image_2", { opacity: 1, duration: 1 })
+      .to("#animacao_image_21", { opacity: 1, duration: 13 })
+      .to("#animacao_image_21", { opacity: 0, duration: 1 })
+      .to("#animacao_image_3", { opacity: 1, duration: 13 })
+      .to("#animacao_image_3", { opacity: 1, duration: 1 })
+      .to("#animacao_image_31", { opacity: 1, duration: 13 })
+      .to("#animacao_image_31", { opacity: 0, duration: 1 })
+      .to("#animacao_image_4", { opacity: 1, duration: 13 })
+      .to("#animacao_image_4", { opacity: 1, duration: 1 })
+      .to("#animacao_image_41", { opacity: 1, duration: 13 })
+      .to("#animacao_image_41", { opacity: 1, duration: 1 })
+      .to("#test_animation", { opacity: 0, duration: 13 });
+
+    // .to("#animacao_image_4", { opacity: 0, duration: 25 });
 
     ScrollTrigger.create({
       animation: tl_animation_um,
+      start: "-=300",
       trigger: "#animation_um",
+      pin: "#test_animation",
     });
   }, []);
 
   return (
     <>
-      <div className="fixed -z-[100] flex flex-col items-center justify-center h-[100vh] w-[100vw]  bg-[#efeeea]">
+      <div className="fixed -z-[100] flex flex-col items-center justify-center h-[100vh] w-[100vw]  bg-[#fbfaef]">
         <img
           id={"quadro_video"}
           src={
