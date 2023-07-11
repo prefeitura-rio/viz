@@ -325,35 +325,57 @@ export function ParteDois(
         </styles.TextCard2>
         <styles.TextCard1 className="mt-[20px]">Inaugurado em 23 de junho de 2012, o <styles.TextGreen>Parque Madureira</styles.TextGreen> Mestre Monarco é um dos projetos urbanísticos mais bem sucedidos da história recente do Brasil, tornando-se um ícone de lazer, diversão, cultura e serviços na Zona Norte do Rio de Janeiro. Nos fins de semana normais, o parque recebe, em média, de 10 mil a 15 mil pessoas. Em dias de evento, o público chega a 35 mil. Com 3.900 metros de extensão, ele é o terceiro maior parque da cidade, atrás apenas do Aterro do Flamengo e da Quinta da Boa Vista. O parque atravessa os bairros de Madureira, Turiaçu, Rocha Miranda, Honório Gurgel e Guadalupe.</styles.TextCard1>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiraum.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px] mt-[40px]"></img>
-        <styles.TextLegenda>Foto aérea do Parque Madureira. Foto: Prefeitura</styles.TextLegenda>
+        <div className="flex flex-row">
+        <styles.TextLegendaBold>Foto aérea do Parque Madureira.</styles.TextLegendaBold> <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda> 
+        </div>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiraquatro.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
-        <styles.TextLegenda>Chafariz. Foto: Prefeitura</styles.TextLegenda>
+        <div className="flex flex-row">
+        <styles.TextLegendaBold>Chafariz.</styles.TextLegendaBold> <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda> 
+        </div>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">Com 11 anos de história, o Parque Madureira é repleto de atrações para os moradores da região e para a população da cidade do Rio. A Nave do Conhecimento Silas de Oliveira oferece gratuitamente cursos na área de tecnologia, além de oficinas, palestras e visitas virtuais aos frequentadores. O acesso à internet banda larga é gratuito no local.<br></br> A Casa de Convivência Clara Nunes oferece atividades gratuitas, como yoga, dança de salão e pilates para os idosos a partir de 60 anos, com o objetivo de gerar impacto direto na promoção da saúde física, mental e emocional dos frequentadores.</styles.TextCard1>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiratres.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
-        <styles.TextLegenda>Skatepark. Foto: Prefeitura</styles.TextLegenda>
+        <div className="flex flex-row">
+        <styles.TextLegendaBold>Skatepark</styles.TextLegendaBold> <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda> 
+        </div>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiradois.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
-        <styles.TextLegenda>Espaço infantil. Foto: Prefeitura</styles.TextLegenda>
+        <div className="flex flex-row">
+        <styles.TextLegendaBold>Espaço infantil.</styles.TextLegendaBold> <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda> 
+        </div>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">Enfeitada pelos símbolos do Império Serrano e da Portela, tradicionais agremiações de Madureira, a Praça do Samba é um espaço com palco, concha acústica e arquibancadas para a realização de shows e apresentações culturais. Os lagos e cascatas artificiais atraem os frequentadores, principalmente em dias de calor na cidade. O parque ainda conta com quadras poliesportivas, pistas de street skate e brinquedos num parquinho.</styles.TextCard1>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiracinco.jpg"} className="rounded-md h-auto"></img>
-        <styles.TextLegenda>Área molhada. Foto: Prefeitura</styles.TextLegenda>
+        <div className="flex flex-row">
+        <styles.TextLegendaBold>Área molhada.</styles.TextLegendaBold> <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda> 
+        </div>
         <styles.TextCard2 className="mt-[120px]">
           Veja como ficará o novo xodó de Campo Grande:
         </styles.TextCard2>
         <styles.TextCard1 className="mt-[20px]">O bairro de Campo Grande ganhou uma nova área de lazer com cerca de 14 mil metros quadrados e esta localizado entre a Rua Almirante Saldanha e a Travessa Belisário dos Santos, no bairro da Zona Oeste.</styles.TextCard1>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengocinco.jpg"} className="rounded-md h-auto mt-[40px]"></img>
-        <styles.TextLegenda>Vista aérea do Parque Realengo. Foto: Prefeitura</styles.TextLegenda>
+        <div className="flex flex-row">
+        <styles.TextLegendaBold>Vista aérea.</styles.TextLegendaBold> <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda> 
+        </div>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoum.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
-        <styles.TextLegenda>Entrada do parque. Foto: Prefeitura</styles.TextLegenda>
+        <div className="flex flex-row">
+        <styles.TextLegendaBold>Entrada do parque.</styles.TextLegendaBold> <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda> 
+        </div>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">Na transformação, foram instalados campo de futebol com grama sintética, pista de skate, quadra poliesportiva, quadra de areia, pista de caminhada e mobiliários. O parque também tem quiosques, brinquedos infantis e uma Academia da Terceira Idade. O investimento na área foi de cerca de R$ 2 milhões e a obra durou seis meses.</styles.TextCard1>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengodois.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
-        <styles.TextLegenda>Nave do conhecimento. Foto: Prefeitura</styles.TextLegenda>
+        <div className="flex flex-row">
+        <styles.TextLegendaBold>Nave do conhecimento.</styles.TextLegendaBold> <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda> 
+        </div>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengotres.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
-        <styles.TextLegenda>Área de lazer e churrasqueira. Foto: Prefeitura</styles.TextLegenda>
+        <div className="flex flex-row">
+        <styles.TextLegendaBold>Área de lazer e churrasqueira.</styles.TextLegendaBold> <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda> 
+        </div>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">Antes de a praça ser revitalizada e virar o <styles.TextGreen>Parque Esperança</styles.TextGreen>, o local era conhecido informalmente como Praça Favela das Almas, sendo apenas um espaço descampado atrás do cemitério de Campo Grande, que servia para descarte de lixo.</styles.TextCard1>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoquatro.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
-        <styles.TextLegenda>Vista aérea do Parque Realengo. Foto: Prefeitura</styles.TextLegenda>
+        <div className="flex flex-row">
+        <styles.TextLegendaBold>Vista aérea.</styles.TextLegendaBold> <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda> 
+        </div>
         <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoseis.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
-        <styles.TextLegenda>Espaço de preservação. Foto: Prefeitura</styles.TextLegenda>
+        <div className="flex flex-row">
+        <styles.TextLegendaBold>Espaço de preservação.</styles.TextLegendaBold> <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda> 
+        </div>
       </styles.ContainerCard4>
     </styles.ChapterGenericDiv4>
   );

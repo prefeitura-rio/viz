@@ -292,9 +292,19 @@ lg:leading-[150%]
 text-black
 `;
 
+export const TextLegendaBold = tw.div`
+font-libre font-[600]
+text-[12px]
+text-left
+lg:leading-[150%]
+text-black
+inline
+mr-[4px]
+`;
+
 export const TextLegenda = tw.div`
-font-libre font-[600] italic
-text-[14px]
+font-libre font-[400]
+text-[12px]
 text-left
 lg:leading-[150%]
 text-black
