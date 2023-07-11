@@ -246,9 +246,7 @@ export function ParteUm(
           Com essa iniciativa, a Prefeitura busca melhorar a qualidade de vida dos moradores, incentivando a prática de atividades ao ar livre e promovendo o senso de comunidade entre os cidadãos. 
           <br />
           <br />
-          <br />
-          <br /> 
-          Falta um texto aqui relacionando o que está escrito acima com o gráfico a seguir.     
+          E a gente sabe que a população AMA estar nesses espaços. Os cariocas nunca pesquisaram tanto sobre parques e suas localizações, segundo dados obtidos no Google Trends.
         </styles.TextCard1>
         <br />
         <br />
@@ -273,10 +271,30 @@ export function ParteUm(
           Afinal de contas, a gente sabe que o carioca adora ir curtir um verde.
           <br />
           <br />
-          Para isso, XX parques estão sendo construídos nas Zonas Oeste e Norte da cidade.   
+          Para isso, XX parques estão sendo construídos nas Zonas Oeste e Norte da cidade.
           <br />
           <br />
-          <br />             
+          O Parque Rita Lee, na Barra da Tijuca, está em construção desde fevereiro. Com 36 mil metros quadrados, o novo parque ficará numa rota que conecta todas as principais áreas do Parque Olímpico, como as arenas, os terraços e o “Live Site”, esplanada destinada a eventos em frente à Lagoa de Jacarepaguá. 
+          <br />
+          <br />
+          O espaço vai ganhar um bosque com mais de 900 árvores e 16 mil arbustos, quadras esportivas, praças, reforma do skate park, praça molhada e pisos coloridos. Haverá ainda novos mobiliários urbanos, como 465 mesas e cadeiras, 27 brinquedos infantis, 14 aparelhos de ginástica e 14 bicicletários.
+          <br />
+          <br />
+          Já o Parque Piedade, em fase de licitação, será construído no terreno que pertencia a Universidade Gama Filho, um espaço de 18 mil metros quadrados que estava abandonado. O projeto inclui áreas de lazer, centro cultural, esportivo e educacional, além de horta urbana e espaço para eventos.
+          <br />
+          <br />
+          Em Irajá, o Campo do Barroso, foi inaugurado em abril e possui campos esportivos, pista de caminhada e área de lazer. Foram instalados campo de futebol, quadra polivalente, quadra de areia e pista de caminhada, além de uma Academia da Terceira Idade e brinquedos infantis, como futmesa e mesa de ping-pong. A Rioluz instalou 25 novos projetores e mais 11 luminárias LED no local, que agora tem iluminação cênica com quatro projetores na cor verde voltados para a montanha.
+          <br />
+          <br />
+          Com um investimento estimado de R$ 72 milhões, o Parque Realengo Susana Naspolini, em construção desde setembro do ano passado, começou a tomar forma. O parque é inspirado no Gardens By The Bay de Cingapura, apontado como o jardim mais visitado no mundo.
+          <br />
+          <br />
+          No início de junho, foram entregues 11 lojas, com 9 metros quadrados cada, montadas como um mercado popular, para organizar o comércio existente anteriormente na área. Próximo ao mercado há um espaço multiuso que poderá receber feiras e eventos, entre outras atividades.
+          <br />
+          <br />
+          Além de adaptar a Mata Atlântica ao conceito de superárvores, o parque também apresenta inéditas soluções para adaptar a cidade aos desafios das mudanças climáticas, como ilhas de calor e inundações.
+          <br />
+          <br />
         </styles.TextCard1>
         <img src={mapa} className="h-auto mt-[30px] rounded-md"></img>
       </styles.ContainerCard>
@@ -333,33 +351,33 @@ export function ParteDois(
         <styles.TextCard2>
           A gente sabe os parques são um sucesso, olha só o parque Madureira:
         </styles.TextCard2>
-        <styles.TextCard1 className="mt-[20px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</styles.TextCard1>
+        <styles.TextCard1 className="mt-[20px]">Inaugurado em 23 de junho de 2012, o Parque Madureira Mestre Monarco é um dos projetos urbanísticos mais bem sucedidos da história recente do Brasil, tornando-se um ícone de lazer, diversão, cultura e serviços na Zona Norte do Rio de Janeiro. Nos fins de semana normais, o parque recebe, em média, de 10 mil a 15 mil pessoas. Em dias de evento, o público chega a 35 mil. Com 3.900 metros de extensão, ele é o terceiro maior parque da cidade, atrás apenas do Aterro do Flamengo e da Quinta da Boa Vista. O parque atravessa os bairros de Madureira, Turiaçu, Rocha Miranda, Honório Gurgel e Guadalupe.</styles.TextCard1>
         <img src={madureiraum} className="rounded-md h-auto mb-[6px] lg:mb-[6px] mt-[40px]"></img>
         <styles.TextLegenda>Foto aérea do Parque Madureira. Foto: Prefeitura</styles.TextLegenda>
         <img src={madureiraquatro} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Chafariz. Foto: Prefeitura</styles.TextLegenda>
-        <styles.TextCard1 className="mt-[80px] mb-[80px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</styles.TextCard1>
+        <styles.TextCard1 className="mt-[80px] mb-[80px]">Com 11 anos de história, o Parque Madureira é repleto de atrações para os moradores da região e para a população da cidade do Rio. A Nave do Conhecimento Silas de Oliveira oferece gratuitamente cursos na área de tecnologia, além de oficinas, palestras e visitas virtuais aos frequentadores. O acesso à internet banda larga é gratuito no local.<br></br> A Casa de Convivência Clara Nunes oferece atividades gratuitas, como yoga, dança de salão e pilates para os idosos a partir de 60 anos, com o objetivo de gerar impacto direto na promoção da saúde física, mental e emocional dos frequentadores.</styles.TextCard1>
         <img src={madureiratres} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Skatepark. Foto: Prefeitura</styles.TextLegenda>
         <img src={madureiradois} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Espaço infantil. Foto: Prefeitura</styles.TextLegenda>
-        <styles.TextCard1 className="mt-[80px] mb-[80px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</styles.TextCard1>
+        <styles.TextCard1 className="mt-[80px] mb-[80px]">Enfeitada pelos símbolos do Império Serrano e da Portela, tradicionais agremiações de Madureira, a Praça do Samba é um espaço com palco, concha acústica e arquibancadas para a realização de shows e apresentações culturais. Os lagos e cascatas artificiais atraem os frequentadores, principalmente em dias de calor na cidade. O parque ainda conta com quadras poliesportivas, pistas de street skate e brinquedos num parquinho.</styles.TextCard1>
         <img src={madureiracinco} className="rounded-md h-auto"></img>
         <styles.TextLegenda>Área molhada. Foto: Prefeitura</styles.TextLegenda>
         <styles.TextCard2 className="mt-[120px]">
           Veja como ficará o novo xodó de Campo Grande:
         </styles.TextCard2>
-        <styles.TextCard1 className="mt-[20px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</styles.TextCard1>
+        <styles.TextCard1 className="mt-[20px]">O bairro de Campo Grande ganhou uma nova área de lazer com cerca de 14 mil metros quadrados e esta localizado entre a Rua Almirante Saldanha e a Travessa Belisário dos Santos, no bairro da Zona Oeste.</styles.TextCard1>
         <img src={realengocinco} className="rounded-md h-auto mt-[40px]"></img>
         <styles.TextLegenda>Vista aérea do Parque Realengo. Foto: Prefeitura</styles.TextLegenda>
         <img src={realengoum} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Entrada do parque. Foto: Prefeitura</styles.TextLegenda>
-        <styles.TextCard1 className="mt-[80px] mb-[80px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</styles.TextCard1>
+        <styles.TextCard1 className="mt-[80px] mb-[80px]">Na transformação, foram instalados campo de futebol com grama sintética, pista de skate, quadra poliesportiva, quadra de areia, pista de caminhada e mobiliários. O parque também tem quiosques, brinquedos infantis e uma Academia da Terceira Idade. O investimento na área foi de cerca de R$ 2 milhões e a obra durou seis meses.</styles.TextCard1>
         <img src={realengodois} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Nave do conhecimento. Foto: Prefeitura</styles.TextLegenda>
         <img src={realengotres} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Área de lazer e churrasqueira. Foto: Prefeitura</styles.TextLegenda>
-        <styles.TextCard1 className="mt-[80px] mb-[80px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</styles.TextCard1>
+        <styles.TextCard1 className="mt-[80px] mb-[80px]">Antes de a praça ser revitalizada e virar o Parque Esperança, o local era conhecido informalmente como Praça Favela das Almas, sendo apenas um espaço descampado atrás do cemitério de Campo Grande, que servia para descarte de lixo.</styles.TextCard1>
         <img src={realengoquatro} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Vista aérea do Parque Realengo. Foto: Prefeitura</styles.TextLegenda>
         <img src={realengoseis} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
