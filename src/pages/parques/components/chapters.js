@@ -53,37 +53,33 @@ export function CepImages(
     <div
       ref={props.chapRef}
       id={props.id}
-      className="flex relative w-[100%] h-[100vh] -z-[50] items-center justify-center"
+      className="flex relative w-[100%] h-[100vh] -z-[50] items-center justify-center bg-[#fbfaef]"
     >
       <img
         id={"animacao_image_1"}
         src={
-          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracaoum.png"
+          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_um.png"
         }
         className="absolute w-[100%]  opacity-0 -z-[15]"
       ></img>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className="">
-      </styles.ContainerCard3>
       <img
         id={"animacao_image_2"}
         src={
-          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracaodois.png"
+          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_dois.png"
         }
         className="absolute w-[100%]  opacity-0 -z-[14]"
       ></img>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className="">
-      </styles.ContainerCard3>
       <img
         id={"animacao_image_3"}
         src={
-          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracaotres.png"
+          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_tres.png"
         }
         className="absolute w-[100%]  opacity-0 -z-[13]"
       ></img>
       {/* <img
         id={"animacao_image_4"}
         src={
-          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracaoum.png"
+          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_quatro.png"
         }
         className="absolute w-[100%]  opacity-1 -z-[12]"
       ></img> */}
