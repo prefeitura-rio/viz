@@ -62,10 +62,7 @@ export function CepImages(
         }
         className="absolute w-[100%]  opacity-0 -z-[15]"
       ></img>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[70vh]">
-        <styles.TextCard3>
-          academia terceira idade, quadra esportiva, ecoponto
-        </styles.TextCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className="">
       </styles.ContainerCard3>
       <img
         id={"animacao_image_2"}
@@ -74,10 +71,7 @@ export function CepImages(
         }
         className="absolute w-[100%]  opacity-0 -z-[14]"
       ></img>
-      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[70vh]">
-        <styles.TextCard3>
-          comércio, skatepark, nave do conhecimento
-        </styles.TextCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className="">
       </styles.ContainerCard3>
       <img
         id={"animacao_image_3"}
