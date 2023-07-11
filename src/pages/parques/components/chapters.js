@@ -56,11 +56,11 @@ export function CepImages(
     <div
       ref={props.chapRef}
       id={props.id}
-      className="flex relative w-[100%] h-[800vh] -z-[50] items-top justify-center bg-[#fbfaef]"
+      className="flex relative w-[100%] h-[1000vh] -z-[50] items-top justify-center bg-[#fbfaef]"
     >
       <div
         id="test_animation"
-        className="flex relative w-[100%] h-[484px] -z-[50] top[-10vh] justify-center bg-[#fbfaef]"
+        className="flex relative w-[100%] h-[100%] -z-[50] top[-10vh] justify-center bg-[#fbfaef]"
       >
         <img
           id={"animacao_image_1"}

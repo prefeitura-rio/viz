@@ -57,24 +57,26 @@ export default function Enchentes() {
       .to("#animacao_image_2", { opacity: 1, duration: 13 })
       .to("#animacao_image_2", { opacity: 1, duration: 1 })
       .to("#animacao_image_21", { opacity: 1, duration: 13 })
+      .to("#animacao_image_2", { opacity: 0, duration: 1 })
       .to("#animacao_image_21", { opacity: 0, duration: 1 })
       .to("#animacao_image_3", { opacity: 1, duration: 13 })
       .to("#animacao_image_3", { opacity: 1, duration: 1 })
       .to("#animacao_image_31", { opacity: 1, duration: 13 })
+      .to("#animacao_image_3", { opacity: 0, duration: 1 })
       .to("#animacao_image_31", { opacity: 0, duration: 1 })
       .to("#animacao_image_4", { opacity: 1, duration: 13 })
       .to("#animacao_image_4", { opacity: 1, duration: 1 })
       .to("#animacao_image_41", { opacity: 1, duration: 13 })
+      .to("#animacao_image_4", { opacity: 0, duration: 1 })
       .to("#animacao_image_41", { opacity: 1, duration: 1 })
       .to("#test_animation", { opacity: 0, duration: 13 });
 
-    // .to("#animacao_image_4", { opacity: 0, duration: 25 });
-
+    const animation_vh = vh(25);
     ScrollTrigger.create({
       animation: tl_animation_um,
-      start: "-=300",
       trigger: "#animation_um",
       pin: "#test_animation",
+      start: `top center-=${animation_vh}`,
     });
   }, []);
 
