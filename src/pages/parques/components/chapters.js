@@ -5,34 +5,6 @@ import * as styles from "./chapters.style";
 // import DWChart from "react-datawrapper-chart";
 import { isMobile } from "react-device-detect";
 
-// IMAGENS
-import logoed from "../images/logoed.png";
-
-import graficoum from "../images/graficoum.png";
-import mapa from "../images/mapa.png";
-
-import realengoum from "../images/realengoum.jpg";
-import realengodois from "../images/realengodois.jpg";
-import realengotres from "../images/realengotres.jpg";
-import realengoquatro from "../images/realengoquatro.jpg";
-import realengocinco from "../images/realengocinco.jpg";
-import realengoseis from "../images/realengoseis.jpg";
-
-import madureiraum from "../images/madureiraum.jpg";
-import madureiradois from "../images/madureiradois.jpg";
-import madureiratres from "../images/madureiratres.jpg";
-import madureiraquatro from "../images/madureiraquatro.jpg";
-import madureiracinco from "../images/madureiracinco.jpg";
-
-import intro from "../images/intro.png";
-import introdois from "../images/introdois.png";
-import introtres from "../images/introtres.png";
-
-// import montagemum from "../images/montagemum.png";
-// import montagemdois from "../images/montagemdois.png";
-// import montagemtres from "../images/montagemtres.png";
-// import montagemquatro from "../images/montagemquatro.png";
-
 import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -57,7 +29,7 @@ export function Capa(
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       <styles.CapaAutor>
         <img
-          src={logoed}
+          src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/logoed.png"}
           className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14"
         ></img>
         <styles.Title>Parques, parques e mais parques </styles.Title>
@@ -86,7 +58,7 @@ export function CepImages(
       <img
         id={"animacao_image_1"}
         src={
-          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/ilustracaoum.png"
+          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracaoum.png"
         }
         className="absolute w-[100%]  opacity-0 -z-[15]"
       ></img>
@@ -98,7 +70,7 @@ export function CepImages(
       <img
         id={"animacao_image_2"}
         src={
-          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/ilustracaodois.png"
+          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracaodois.png"
         }
         className="absolute w-[100%]  opacity-0 -z-[14]"
       ></img>
@@ -110,14 +82,14 @@ export function CepImages(
       <img
         id={"animacao_image_3"}
         src={
-          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/ilustracaotres.png"
+          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracaotres.png"
         }
         className="absolute w-[100%]  opacity-0 -z-[13]"
       ></img>
       {/* <img
         id={"animacao_image_4"}
         src={
-          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/ilustracaoum.png"
+          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracaoum.png"
         }
         className="absolute w-[100%]  opacity-1 -z-[12]"
       ></img> */}
@@ -222,7 +194,7 @@ export function ParteUm(
     <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
       <img
-          src={intro}
+          src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/intro.png"}
           className="h-auto w-[100%] lg:w-[90%] mb-[80px] lg:mb-[80px]"
         ></img>
         <styles.TextCard1>
@@ -256,7 +228,7 @@ export function ParteUm(
           google nos últimos 13 anos?
         </styles.TextCard2>
         <img
-          src={graficoum}
+          src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/graficoum.png"}
           className="h-auto mt-[40px] mb-[80px] lg:mb-[120px] rounded-md"
         ></img>
         <styles.TextCard2>
@@ -296,7 +268,7 @@ export function ParteUm(
           <br />
           <br />
         </styles.TextCard1>
-        <img src={mapa} className="h-auto mt-[30px] rounded-md"></img>
+        <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/mapa.png"} className="h-auto mt-[30px] rounded-md"></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv4>
   );
@@ -345,42 +317,42 @@ export function ParteDois(
     <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard4>
       <img
-          src={introdois}
+          src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/introdois.png"}
           className="h-auto w-[90%] mb-[80px] lg:mt-[80px] lg:mb-[100px]"
         ></img>
         <styles.TextCard2>
           A gente sabe os parques são um sucesso, olha só o parque Madureira:
         </styles.TextCard2>
         <styles.TextCard1 className="mt-[20px]">Inaugurado em 23 de junho de 2012, o Parque Madureira Mestre Monarco é um dos projetos urbanísticos mais bem sucedidos da história recente do Brasil, tornando-se um ícone de lazer, diversão, cultura e serviços na Zona Norte do Rio de Janeiro. Nos fins de semana normais, o parque recebe, em média, de 10 mil a 15 mil pessoas. Em dias de evento, o público chega a 35 mil. Com 3.900 metros de extensão, ele é o terceiro maior parque da cidade, atrás apenas do Aterro do Flamengo e da Quinta da Boa Vista. O parque atravessa os bairros de Madureira, Turiaçu, Rocha Miranda, Honório Gurgel e Guadalupe.</styles.TextCard1>
-        <img src={madureiraum} className="rounded-md h-auto mb-[6px] lg:mb-[6px] mt-[40px]"></img>
+        <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiraum.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px] mt-[40px]"></img>
         <styles.TextLegenda>Foto aérea do Parque Madureira. Foto: Prefeitura</styles.TextLegenda>
-        <img src={madureiraquatro} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiraquatro.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Chafariz. Foto: Prefeitura</styles.TextLegenda>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">Com 11 anos de história, o Parque Madureira é repleto de atrações para os moradores da região e para a população da cidade do Rio. A Nave do Conhecimento Silas de Oliveira oferece gratuitamente cursos na área de tecnologia, além de oficinas, palestras e visitas virtuais aos frequentadores. O acesso à internet banda larga é gratuito no local.<br></br> A Casa de Convivência Clara Nunes oferece atividades gratuitas, como yoga, dança de salão e pilates para os idosos a partir de 60 anos, com o objetivo de gerar impacto direto na promoção da saúde física, mental e emocional dos frequentadores.</styles.TextCard1>
-        <img src={madureiratres} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiratres.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Skatepark. Foto: Prefeitura</styles.TextLegenda>
-        <img src={madureiradois} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiradois.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Espaço infantil. Foto: Prefeitura</styles.TextLegenda>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">Enfeitada pelos símbolos do Império Serrano e da Portela, tradicionais agremiações de Madureira, a Praça do Samba é um espaço com palco, concha acústica e arquibancadas para a realização de shows e apresentações culturais. Os lagos e cascatas artificiais atraem os frequentadores, principalmente em dias de calor na cidade. O parque ainda conta com quadras poliesportivas, pistas de street skate e brinquedos num parquinho.</styles.TextCard1>
-        <img src={madureiracinco} className="rounded-md h-auto"></img>
+        <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiracinco.jpg"} className="rounded-md h-auto"></img>
         <styles.TextLegenda>Área molhada. Foto: Prefeitura</styles.TextLegenda>
         <styles.TextCard2 className="mt-[120px]">
           Veja como ficará o novo xodó de Campo Grande:
         </styles.TextCard2>
         <styles.TextCard1 className="mt-[20px]">O bairro de Campo Grande ganhou uma nova área de lazer com cerca de 14 mil metros quadrados e esta localizado entre a Rua Almirante Saldanha e a Travessa Belisário dos Santos, no bairro da Zona Oeste.</styles.TextCard1>
-        <img src={realengocinco} className="rounded-md h-auto mt-[40px]"></img>
+        <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengocinco.jpg"} className="rounded-md h-auto mt-[40px]"></img>
         <styles.TextLegenda>Vista aérea do Parque Realengo. Foto: Prefeitura</styles.TextLegenda>
-        <img src={realengoum} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoum.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Entrada do parque. Foto: Prefeitura</styles.TextLegenda>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">Na transformação, foram instalados campo de futebol com grama sintética, pista de skate, quadra poliesportiva, quadra de areia, pista de caminhada e mobiliários. O parque também tem quiosques, brinquedos infantis e uma Academia da Terceira Idade. O investimento na área foi de cerca de R$ 2 milhões e a obra durou seis meses.</styles.TextCard1>
-        <img src={realengodois} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengodois.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Nave do conhecimento. Foto: Prefeitura</styles.TextLegenda>
-        <img src={realengotres} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengotres.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Área de lazer e churrasqueira. Foto: Prefeitura</styles.TextLegenda>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">Antes de a praça ser revitalizada e virar o Parque Esperança, o local era conhecido informalmente como Praça Favela das Almas, sendo apenas um espaço descampado atrás do cemitério de Campo Grande, que servia para descarte de lixo.</styles.TextCard1>
-        <img src={realengoquatro} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoquatro.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Vista aérea do Parque Realengo. Foto: Prefeitura</styles.TextLegenda>
-        <img src={realengoseis} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
+        <img src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoseis.jpg"} className="rounded-md h-auto mb-[6px] lg:mb-[6px]"></img>
         <styles.TextLegenda>Espaço de preservação. Foto: Prefeitura</styles.TextLegenda>
       </styles.ContainerCard4>
     </styles.ChapterGenericDiv4>
@@ -399,7 +371,7 @@ export function Creditos(
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
       <styles.ContainerCard>
       <img
-          src={introtres}
+          src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/introtres.png"}
           className="h-auto w-[80%] mb-[80px] lg:mt-[120px] lg:mb-[120px]"
         ></img>
         <styles.TextCreditos2>Créditos</styles.TextCreditos2>
@@ -407,7 +379,7 @@ export function Creditos(
         <styles.TextCreditos1>
           Caio Jacintho <br />
           Judite Cypreste <br />
-		  Diego Oliveira <br />
+		      Diego Oliveira <br />
         </styles.TextCreditos1>
         <styles.TextCreditos className=" lg:mt-[40px] mt-[60px] ">
           Agradecimentos
@@ -420,7 +392,7 @@ export function Creditos(
         </styles.TextCreditos>
         <styles.TextCreditos1>Eduardo Paes</styles.TextCreditos1>
         <img
-          src={logoed}
+          src={"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/logoed.png"}
           className="lg:mb-[160px] mt-[100px] lg:mt-[200px] w-[100px] h-auto lg:w-[100px] lg:h-auto"
         ></img>
       </styles.ContainerCard>

@@ -2,18 +2,16 @@
 import { Container } from "postcss";
 import styled from "styled-components";
 import tw from "tailwind-styled-components";
-import capaum from "../images/capaum.png";
-import capaummobile from "../images/capaummobile.png";
 
 export const CapaDivSC = styled.div`
 background-color:  #fbfaef;
-background-image: url(${capaum});
+background-image: url(${"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/capaum.png"});
 background-size: 86%;
 background-position: center;
 background-repeat: no-repeat;
 
 @media (max-width: 768px) {
-    background-image: url(${capaummobile});
+    background-image: url(${"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/capaummobile.png"});
     background-size: 100%;
   }
 `;
