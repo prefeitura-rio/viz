@@ -60,7 +60,7 @@ export function AnimacaoUm(
     >
       <div
         id="test_animation"
-        className="flex relative w-[100%] h-[100%] -z-[50] top[-10vh] justify-center bg-[#fbfaef]"
+        className="flex relative w-[100%]  -z-[50] top[-10vh] justify-center bg-[#fbfaef]"
       >
         <img
           id={"animacao_image_1"}
@@ -111,35 +111,6 @@ export function AnimacaoUm(
           }
           className="absolute w-[100%]  opacity-0 -z-[14]"
         ></img>
-
-        {/* <img
-          id={"animacao_image_m1"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/montagemum.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[14]"
-        ></img> */}
-        {/* <img
-        id={"animacao_image_m2"}
-        src={
-          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/montagemdois.png"
-        }
-        className="absolute w-[100%]  opacity-0 -z-[14]"
-      ></img>
-      <img
-        id={"animacao_image_m3"}
-        src={
-          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/montagemtres.png"
-        }
-        className="absolute w-[100%]  opacity-0 -z-[14]"
-      ></img>
-      <img
-        id={"animacao_image_m4"}
-        src={
-          "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/montagemquatro.png"
-        }
-        className="absolute w-[100%]  opacity-0 -z-[14]"
-      ></img> */}
       </div>
     </div>
   );
@@ -540,7 +511,7 @@ export function AnimacaoDois(
     >
       <div
         id="test_animation_dois"
-        className="flex relative w-[100%] h-[100%] -z-[50] top[-10vh] justify-center bg-transparent"
+        className="flex relative w-[100%]  -z-[50] top[-10vh] justify-center bg-transparent"
       >
         <img
           id={"animacao_image_m1"}
