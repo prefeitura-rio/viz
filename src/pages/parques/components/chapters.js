@@ -283,60 +283,60 @@ export function AnimacaoUm(
     <div
       ref={props.chapRef}
       id={props.id}
-      className="flex relative w-full h-[1000vh] -z-[50] items-top justify-center bg-[#fbfaef]"
+      className="flex relative w-[100%] h-[1000vh] -z-[50] items-top justify-center bg-[#fbfaef]"
     >
       <div
         id="test_animation"
-        className="flex relative w-full -z-[50] top[-10vh] justify-center bg-[#fbfaef]"
+        className="flex relative w-[100%] -z-[50] top[-10vh] justify-center bg-[#fbfaef]"
       >
         <img
           id={"animacao_image_1"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_um.png"
           }
-          className="absolute max-w-[1000px]	  opacity-0 -z-[20]"
+          className="absolute max-w-[100%] opacity-0 -z-[20]"
         ></img>
         <img
           id={"animacao_image_2"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_dois.png"
           }
-          className="absolute max-w-[1000px]	  opacity-0 -z-[19]"
+          className="absolute max-w-[100%] opacity-0 -z-[19]"
         ></img>
         <img
           id={"animacao_image_21"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_dois_um.png"
           }
-          className="absolute max-w-[1000px]	  opacity-0 -z-[18]"
+          className="absolute max-w-[100%] opacity-0 -z-[18]"
         ></img>
         <img
           id={"animacao_image_3"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_tres.png"
           }
-          className="absolute max-w-[1000px]	  opacity-0 -z-[17]"
+          className="absolute max-w-[100%] opacity-0 -z-[17]"
         ></img>
         <img
           id={"animacao_image_31"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_tres_um.png"
           }
-          className="absolute max-w-[1000px]	  opacity-0 -z-[16]"
+          className="absolute max-w-[100%] opacity-0 -z-[16]"
         ></img>
         <img
           id={"animacao_image_4"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_quatro.png"
           }
-          className="absolute max-w-[1000px]	  opacity-0 -z-[15]"
+          className="absolute max-w-[100%] opacity-0 -z-[15]"
         ></img>
         <img
           id={"animacao_image_41"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_quatro_um.png"
           }
-          className="absolute max-w-[1000px]	  opacity-0 -z-[14]"
+          className="absolute max-w-[100%] opacity-0 -z-[14]"
         ></img>
       </div>
     </div>

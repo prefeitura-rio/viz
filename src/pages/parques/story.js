@@ -74,19 +74,19 @@ export default function Enchentes() {
       .to("#animacao_image_41", { opacity: 1, duration: 1 })
       .to("#test_animation", { opacity: 0, duration: 13 });
 
-    // const getVhValueUm = () => {
-    //   const screenHeight = window.innerHeight;
-    //   console.log(screenHeight);
-    //   if (screenHeight <= 768) {
-    //     return vh(50);
-    //   } else if (screenHeight <= 1080) {
-    //     return vh(50);
-    //   } else {
-    //     return vh(50);
-    //   }
-    // };
+    const getVhValueUm = () => {
+      const screenHeight = window.innerHeight;
+      console.log(screenHeight);
+      if (screenHeight <= 768) {
+        return vh(50);
+      } else if (screenHeight <= 1080) {
+        return vh(50);
+      } else {
+        return vh(50);
+      }
+    };
 
-    const animation_um_vh = vh(50);
+    const animation_um_vh = getVhValueUm();
     ScrollTrigger.create({
       animation: tl_animation_um,
       trigger: "#animation_um",
@@ -106,18 +106,18 @@ export default function Enchentes() {
       .to("#test_animation_dois", { opacity: 0, duration: 10 })
       .to("#test_animation_dois", { opacity: 0, duration: 5 });
 
-    // const getVhValueDois = () => {
-    //   const screenHeight = window.innerHeight;
-    //   if (screenHeight <= 768) {
-    //     return vh(29);
-    //   } else if (screenHeight <= 1080) {
-    //     return vh(40);
-    //   } else {
-    //     return vh(25);
-    //   }
-    // };
+    const getVhValueDois = () => {
+      const screenHeight = window.innerHeight;
+      if (screenHeight <= 768) {
+        return vh(29);
+      } else if (screenHeight <= 1080) {
+        return vh(40);
+      } else {
+        return vh(25);
+      }
+    };
 
-    const animation_dois_vh = vh(40);
+    const animation_dois_vh = getVhValueDois();
     ScrollTrigger.create({
       animation: tl_animation_dois,
       trigger: "#animation_dois",
