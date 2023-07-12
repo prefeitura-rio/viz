@@ -45,7 +45,7 @@ export function Capa(
   );
 }
 
-export function CepImages(
+export function AnimacaoUm(
   props = {
     id: "",
     chapRef: null,
@@ -516,19 +516,79 @@ export function ParteDois(
         </styles.TextCard2>
         <styles.TextCard1 className="mt-[20px]">
           O bairro de Campo Grande ganhou uma nova área de lazer com cerca de 14
-          mil metros quadrados, localizado entre a Rua Almirante Saldanha
-          e a Travessa Belisário dos Santos, no bairro da Zona Oeste.
+          mil metros quadrados, localizado entre a Rua Almirante Saldanha e a
+          Travessa Belisário dos Santos, no bairro da Zona Oeste.
         </styles.TextCard1>
+      </styles.ContainerCard4>
+    </styles.ChapterGenericDiv4>
+  );
+}
+
+export function AnimacaoDois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <div
+      ref={props.chapRef}
+      id={props.id}
+      className="flex relative w-[100%] h-[300vh] -z-[50] items-top justify-center bg-transparent"
+    >
+      <div
+        id="test_animation_dois"
+        className="flex relative w-[100%] h-[100%] -z-[50] top[-10vh] justify-center bg-transparent"
+      >
         <img
+          id={"animacao_image_m1"}
           src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengocinco.jpg"
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/montagem_um.png"
           }
-          className="rounded-md h-auto mt-[40px]"
+          className="absolute w-[100%]  z-50"
         ></img>
-        <div className="flex flex-row">
+        <img
+          id={"animacao_image_m2"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/montagem_dois.png"
+          }
+          className="absolute w-[100%]  opacity-0 -z-[19]"
+        ></img>
+        <img
+          id={"animacao_image_m3"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/montagem_tres.png"
+          }
+          className="absolute w-[100%]  opacity-0 -z-[18]"
+        ></img>
+        <img
+          id={"animacao_image_m4"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/montagem_quatro.png"
+          }
+          className="absolute w-[100%]  opacity-0 -z-[17]"
+        ></img>
+      </div>
+    </div>
+  );
+}
+
+export function ParteTres(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard4>
+        {/* <div className="flex flex-row">
           <styles.TextLegendaBold>Vista aérea.</styles.TextLegendaBold>{" "}
           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div>
+        </div> */}
         <img
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoum.jpg"

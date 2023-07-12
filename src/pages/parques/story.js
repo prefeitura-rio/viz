@@ -54,19 +54,22 @@ export default function Enchentes() {
     const tl_animation_um = gsap.timeline();
     tl_animation_um
       .set("#animacao_image_1", { opacity: 1 })
-      .to("#animacao_image_2", { opacity: 1, duration: 13 })
-      .to("#animacao_image_2", { opacity: 1, duration: 1 })
-      .to("#animacao_image_21", { opacity: 1, duration: 13 })
+      .to("#animacao_image_2", { opacity: 1, duration: 7 })
+      .to("#animacao_image_2", { opacity: 1, duration: 7 })
+      .to("#animacao_image_21", { opacity: 1, duration: 6 })
+      .to("#animacao_image_21", { opacity: 1, duration: 7 })
       .to("#animacao_image_2", { opacity: 0, duration: 1 })
       .to("#animacao_image_21", { opacity: 0, duration: 1 })
-      .to("#animacao_image_3", { opacity: 1, duration: 13 })
-      .to("#animacao_image_3", { opacity: 1, duration: 1 })
-      .to("#animacao_image_31", { opacity: 1, duration: 13 })
+      .to("#animacao_image_3", { opacity: 1, duration: 7 })
+      .to("#animacao_image_3", { opacity: 1, duration: 7 })
+      .to("#animacao_image_31", { opacity: 1, duration: 6 })
+      .to("#animacao_image_31", { opacity: 1, duration: 7 })
       .to("#animacao_image_3", { opacity: 0, duration: 1 })
       .to("#animacao_image_31", { opacity: 0, duration: 1 })
-      .to("#animacao_image_4", { opacity: 1, duration: 13 })
-      .to("#animacao_image_4", { opacity: 1, duration: 1 })
-      .to("#animacao_image_41", { opacity: 1, duration: 13 })
+      .to("#animacao_image_4", { opacity: 1, duration: 7 })
+      .to("#animacao_image_4", { opacity: 1, duration: 7 })
+      .to("#animacao_image_41", { opacity: 1, duration: 6 })
+      .to("#animacao_image_41", { opacity: 1, duration: 7 })
       .to("#animacao_image_4", { opacity: 0, duration: 1 })
       .to("#animacao_image_41", { opacity: 1, duration: 1 })
       .to("#test_animation", { opacity: 0, duration: 13 });
@@ -77,6 +80,26 @@ export default function Enchentes() {
       trigger: "#animation_um",
       pin: "#test_animation",
       start: `top center-=${animation_vh}`,
+    });
+
+    const tl_animation_dois = gsap.timeline();
+    tl_animation_dois
+      .set("#animacao_image_m1", { opacity: 1 })
+      .to("#animacao_image_m2", { opacity: 1, duration: 15 })
+      .to("#animacao_image_m2", { opacity: 1, duration: 5 })
+      .to("#animacao_image_m3", { opacity: 1, duration: 15 })
+      .to("#animacao_image_m3", { opacity: 1, duration: 5 })
+      .to("#animacao_image_m4", { opacity: 1, duration: 15 })
+      .to("#animacao_image_m4", { opacity: 1, duration: 10 })
+      .to("#test_animation_dois", { opacity: 0, duration: 10 })
+      .to("#test_animation_dois", { opacity: 0, duration: 5 });
+
+    const animation_dois_vh = vh(25);
+    ScrollTrigger.create({
+      animation: tl_animation_dois,
+      trigger: "#animation_dois",
+      pin: "#test_animation_dois",
+      start: `top center-=${animation_dois_vh}`,
     });
   }, []);
 
@@ -96,8 +119,10 @@ export default function Enchentes() {
       <div className="h-[95vh] w-full bg-transparent"></div>
       <chapterDiv.QuadroUm id={"quadro_um"} />
       <chapterDiv.ParteUm id={"parte_um"} />
-      <chapterDiv.CepImages id={"animation_um"} />
+      <chapterDiv.AnimacaoUm id={"animation_um"} />
       <chapterDiv.ParteDois id={"parte_dois"} />
+      <chapterDiv.AnimacaoDois id={"animation_dois"} />
+      <chapterDiv.ParteTres id={"parte_tres"} />
       <chapterDiv.Creditos id={"creditos"} />
     </>
   );
