@@ -74,7 +74,10 @@ export default function Enchentes() {
       .to("#animacao_image_41", { opacity: 1, duration: 1 })
       .to("#test_animation", { opacity: 0, duration: 13 });
 
-    const animation_vh = vh(25);
+// tela 1920x1080 = vh(62)
+// tela 1366x768 = vh=(46)
+
+    const animation_vh = vh(62);
     ScrollTrigger.create({
       animation: tl_animation_um,
       trigger: "#animation_um",
@@ -94,7 +97,10 @@ export default function Enchentes() {
       .to("#test_animation_dois", { opacity: 0, duration: 10 })
       .to("#test_animation_dois", { opacity: 0, duration: 5 });
 
-    const animation_dois_vh = vh(25);
+// tela 1920x1080 = vh(40)
+// tela 1366x768 = vh=(29)
+
+    const animation_dois_vh = vh(40);
     ScrollTrigger.create({
       animation: tl_animation_dois,
       trigger: "#animation_dois",
