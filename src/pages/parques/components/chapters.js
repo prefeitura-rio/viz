@@ -282,7 +282,7 @@ export function ParteUm(
           <br />
           <br />E a gente sabe que a população AMA estar nesses espaços. Os
           cariocas nunca pesquisaram tanto sobre parques e suas localizações,
-          segundo dados obtidos no Google Trends.
+          segundo dados obtidos na plataforma Google Trends.
         </styles.TextCard1>
         <br />
         <br />
@@ -516,7 +516,7 @@ export function ParteDois(
         </styles.TextCard2>
         <styles.TextCard1 className="mt-[20px]">
           O bairro de Campo Grande ganhou uma nova área de lazer com cerca de 14
-          mil metros quadrados e esta localizado entre a Rua Almirante Saldanha
+          mil metros quadrados, localizado entre a Rua Almirante Saldanha
           e a Travessa Belisário dos Santos, no bairro da Zona Oeste.
         </styles.TextCard1>
         <img
@@ -540,11 +540,11 @@ export function ParteDois(
           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
         </div>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">
-          Na transformação, foram instalados campo de futebol com grama
-          sintética, pista de skate, quadra poliesportiva, quadra de areia,
-          pista de caminhada e mobiliários. O parque também tem quiosques,
-          brinquedos infantis e uma Academia da Terceira Idade. O investimento
-          na área foi de cerca de R$ 2 milhões e a obra durou seis meses.
+          Antes de a praça ser revitalizada e virar o{" "}
+          <styles.TextGreen>Parque Esperança</styles.TextGreen>, o local era
+          conhecido informalmente como Praça Favela das Almas, sendo apenas um
+          espaço descampado atrás do cemitério de Campo Grande, que servia para
+          descarte de lixo.
         </styles.TextCard1>
         <img
           src={
@@ -569,11 +569,11 @@ export function ParteDois(
           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
         </div>
         <styles.TextCard1 className="mt-[80px] mb-[80px]">
-          Antes de a praça ser revitalizada e virar o{" "}
-          <styles.TextGreen>Parque Esperança</styles.TextGreen>, o local era
-          conhecido informalmente como Praça Favela das Almas, sendo apenas um
-          espaço descampado atrás do cemitério de Campo Grande, que servia para
-          descarte de lixo.
+          Na transformação, foram instalados campo de futebol com grama
+          sintética, pista de skate, quadra poliesportiva, quadra de areia,
+          pista de caminhada e mobiliários. O parque também tem quiosques,
+          brinquedos infantis e uma Academia da Terceira Idade. O investimento
+          na área foi de cerca de R$ 2 milhões e a obra durou seis meses.
         </styles.TextCard1>
         <img
           src={
