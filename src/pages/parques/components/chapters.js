@@ -45,77 +45,6 @@ export function Capa(
   );
 }
 
-export function AnimacaoUm(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <div
-      ref={props.chapRef}
-      id={props.id}
-      className="flex relative w-[100%] h-[1000vh] -z-[50] items-top justify-center bg-[#fbfaef]"
-    >
-      <div
-        id="test_animation"
-        className="flex relative w-[100%]  -z-[50] top[-10vh] justify-center bg-[#fbfaef]"
-      >
-        <img
-          id={"animacao_image_1"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_um.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[20]"
-        ></img>
-        <img
-          id={"animacao_image_2"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_dois.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[19]"
-        ></img>
-        <img
-          id={"animacao_image_21"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_dois_um.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[18]"
-        ></img>
-        <img
-          id={"animacao_image_3"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_tres.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[17]"
-        ></img>
-        <img
-          id={"animacao_image_31"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_tres_um.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[16]"
-        ></img>
-        <img
-          id={"animacao_image_4"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_quatro.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[15]"
-        ></img>
-        <img
-          id={"animacao_image_41"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_quatro_um.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[14]"
-        ></img>
-      </div>
-    </div>
-  );
-}
-
 export function ContextoHistorico(
   props = {
     id: "",
@@ -170,39 +99,6 @@ export function ContextoHistorico(
         </styles.ContainerCard2>
       </styles.ChapterGenericDiv>
     </>
-  );
-}
-
-export function QuadroUm(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard id={"quadro_um_card1"}>
-        {/* <styles.TextCard2>
-				Sabe o que esses lugares têm em comum?
-				</styles.TextCard2>
-				<br />
-				<styles.TextCard3>
-				Eles fazem parte do plano da Prefeitura do Rio de encher a cidade de áreas de lazer para os cariocas. 
-				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
-				<styles.TextCard3>
-				Um investimento em locais historicamente deixados de lado pelo poder público.
-				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
-				<styles.TextCard3>
-				Sair do seu bairro e ter que pegar um transporte só para curtir um espaço bacana com a família — tá na hora de deixar isso de lado, né? Afinal de contas, a gente sabe que o carioca adora ir curtir um verde.
-				</styles.TextCard3> */}
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv2>
   );
 }
 
@@ -344,6 +240,77 @@ export function ParteUm(
         ></img>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv4>
+  );
+}
+
+export function AnimacaoUm(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <div
+      ref={props.chapRef}
+      id={props.id}
+      className="flex relative w-full h-[1000vh] -z-[50] items-top justify-center bg-[#fbfaef]"
+    >
+      <div
+        id="test_animation"
+        className="flex relative w-full -z-[50] top[-10vh] justify-center bg-[#fbfaef]"
+      >
+        <img
+          id={"animacao_image_1"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_um.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[20]"
+        ></img>
+        <img
+          id={"animacao_image_2"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_dois.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[19]"
+        ></img>
+        <img
+          id={"animacao_image_21"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_dois_um.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[18]"
+        ></img>
+        <img
+          id={"animacao_image_3"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_tres.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[17]"
+        ></img>
+        <img
+          id={"animacao_image_31"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_tres_um.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[16]"
+        ></img>
+        <img
+          id={"animacao_image_4"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_quatro.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[15]"
+        ></img>
+        <img
+          id={"animacao_image_41"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_quatro_um.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[14]"
+        ></img>
+      </div>
+    </div>
   );
 }
 
@@ -507,7 +474,7 @@ export function AnimacaoDois(
     <div
       ref={props.chapRef}
       id={props.id}
-      className="flex relative w-[100%] h-[300vh] -z-[50] items-top justify-center bg-transparent"
+      className="flex relative w-[100%] h-[400vh] -z-[50] items-top justify-center bg-transparent"
     >
       <div
         id="test_animation_dois"
