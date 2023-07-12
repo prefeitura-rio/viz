@@ -233,14 +233,33 @@ export function ParteUm(
           <styles.TextLegendaBold>Vista aérea do projeto do Parque Piedade.</styles.TextLegendaBold>{" "}
           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
         </div>    
-        </styles.TextCard1>
-        {/* <styles.TextCard1 className="mt-[80px] mb-[80px]">
+      <styles.TextCard2>
+          Parque Esperança, aquele da esperança
+        </styles.TextCard2>
+        <br />
           Antes de a praça ser revitalizada e virar o{" "}
           <styles.TextGreen>Parque Esperança</styles.TextGreen>, o local era
           conhecido informalmente como Praça Favela das Almas, sendo apenas um
           espaço descampado atrás do cemitério de Campo Grande, que servia para
           descarte de lixo.
-        </styles.TextCard1> */}
+          <br />
+          <br />
+          Na transformação, foram instalados campo de futebol com grama
+          sintética, pista de skate, quadra poliesportiva, quadra de areia,
+          pista de caminhada e mobiliários. O parque também tem quiosques,
+          brinquedos infantis e uma Academia da Terceira Idade. O investimento
+          na área foi de cerca de R$ 2 milhões e a obra durou seis meses.
+          <img
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/parque_esperanca.jpeg"
+          }
+          className="h-auto w-full mt-[30px] mb-[6px] rounded-md"
+        ></img>          
+        <div className="flex flex-row mb-[120px]">
+          <styles.TextLegendaBold>Vista aérea do Parque Esperança.</styles.TextLegendaBold>{" "}
+          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+        </div>    
+        </styles.TextCard1>
         <styles.TextCard2>
           Veja como ficará o novo xodó de Campo Grande, o Parque Realengo:
         </styles.TextCard2>
@@ -283,7 +302,7 @@ export function AnimacaoUm(
     <div
       ref={props.chapRef}
       id={props.id}
-      className="flex relative w-[100%] h-[1000vh] -z-[50] items-top justify-center bg-[#fbfaef]"
+      className="flex relative w-[100%] h-[210vh] -z-[50] items-top justify-center bg-[#fbfaef]"
     >
       <div
         id="test_animation"
@@ -588,13 +607,6 @@ export function ParteTres(
           </styles.TextLegendaBold>{" "}
           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
         </div>
-        <styles.TextCard1 className="mt-[80px] mb-[80px]">
-          Na transformação, foram instalados campo de futebol com grama
-          sintética, pista de skate, quadra poliesportiva, quadra de areia,
-          pista de caminhada e mobiliários. O parque também tem quiosques,
-          brinquedos infantis e uma Academia da Terceira Idade. O investimento
-          na área foi de cerca de R$ 2 milhões e a obra durou seis meses.
-        </styles.TextCard1>
         <img
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoquatro.jpg"
