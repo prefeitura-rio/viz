@@ -125,10 +125,9 @@ export default function Enchentes() {
       <div className="h-[95vh] w-full bg-transparent"></div>
       <chapterDiv.QuadroUm id={"quadro_um"} />
       <chapterDiv.ParteUm id={"parte_um"} />
-      <chapterDiv.AnimacaoUm id={"animation_um"} />
-      <chapterDiv.ParteDois id={"parte_dois"} />
       <chapterDiv.AnimacaoDois id={"animation_dois"} />
       <chapterDiv.ParteTres id={"parte_tres"} />
+      <chapterDiv.AnimacaoUm id={"animation_um"} />
       <chapterDiv.Creditos id={"creditos"} />
     </>
   );
