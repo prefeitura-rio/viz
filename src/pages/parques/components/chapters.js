@@ -547,28 +547,28 @@ export function AnimacaoDois(
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/montagem_um.png"
           }
-          className="absolute w-[100%]  z-50"
+          className="absolute w-[75%]  z-50"
         ></img>
         <img
           id={"animacao_image_m2"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/montagem_dois.png"
           }
-          className="absolute w-[100%]  opacity-0 -z-[19]"
+          className="absolute w-[75%]  opacity-0 -z-[19]"
         ></img>
         <img
           id={"animacao_image_m3"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/montagem_tres.png"
           }
-          className="absolute w-[100%]  opacity-0 -z-[18]"
+          className="absolute w-[75%]  opacity-0 -z-[18]"
         ></img>
         <img
           id={"animacao_image_m4"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/montagem_quatro.png"
           }
-          className="absolute w-[100%]  opacity-0 -z-[17]"
+          className="absolute w-[75%]  opacity-0 -z-[17]"
         ></img>
       </div>
     </div>
