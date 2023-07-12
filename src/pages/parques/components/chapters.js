@@ -276,17 +276,289 @@ export function ParteUm(
           parque é inspirado no Gardens By The Bay de Cingapura, apontado como o
           jardim mais visitado no mundo.
           <br />
+          <img
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoum.jpg"
+          }
+          className="rounded-md h-auto lg:mt-[30px] mb-[6px] lg:mb-[6px]"
+        ></img>
+        <div className="flex flex-row">
+          <styles.TextLegendaBold>Entrada do parque.</styles.TextLegendaBold>{" "}
+          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+        </div>
           <br />
           No início de junho, foram entregues 11 lojas, com 9 metros quadrados
           cada, montadas como um mercado popular, para organizar o comércio
           existente anteriormente na área. Próximo ao mercado há um espaço
           multiuso que poderá receber feiras e eventos, entre outras atividades.
           <br />
-          <br />
+          <img
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoseis.jpg"
+          }
+          className="rounded-md h-auto mb-[6px] lg:mb-[6px] lg:mt-[30px]"
+        ></img>
+        <div className="flex flex-row">
+          <styles.TextLegendaBold>
+            Espaço de preservação.
+          </styles.TextLegendaBold>{" "}
+          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+        </div>
           Além de adaptar a Mata Atlântica ao conceito de superárvores, o parque
           também apresenta inéditas soluções para adaptar a cidade aos desafios
           das mudanças climáticas, como ilhas de calor e inundações.
         </styles.TextCard1>
+      </styles.ContainerCard>
+    </styles.ChapterGenericDiv4>
+  );
+}
+
+// export function ParteDois(
+//   props = {
+//     id: "",
+//     chapRef: null,
+//   }
+// ) {
+//   props = setDefaultProps(props);
+
+//   return (
+//     <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
+//       <styles.ContainerCard>
+//         <img
+//           src={
+//             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/intro.png"
+//           }
+//           className="h-auto w-[100%] lg:w-[90%] mb-[80px] lg:mb-[80px]"
+//         ></img>
+//         <styles.TextCard1>
+//           <styles.TextCard2>
+//             Sabe o que esses lugares têm em comum?
+//           </styles.TextCard2>
+//           <br />
+//           <br />
+//           Todos eles são parte do plano da Prefeitura do Rio de Janeiro de
+//           encher a cidade de áreas de lazer para os cariocas.
+//           <br />
+//           <br />
+//           Estamos empenhados em transformar a nossa cidade, com a construção de
+//           espaços onde os habitantes possam desfrutar de momentos de descanso e
+//           diversão.
+//           <br />
+//           <br />
+//           Para alcançar esse objetivo, a Prefeitura já investiu R$ XX na
+//           construção de novas parques na cidade.
+//           <br />
+//           <br />
+//           Essas áreas de lazer são pensadas para atender às necessidades dos
+//           cariocas, oferecendo espaços verdes bem cuidados, equipamentos
+//           esportivos, e muito mais.
+//           <br />
+//           <br />
+//           Com essa iniciativa, a Prefeitura busca melhorar a qualidade de vida
+//           dos moradores, incentivando a prática de atividades ao ar livre e
+//           promovendo o senso de comunidade entre os cidadãos.
+//           <br />
+//           <br />E a gente sabe que a população AMA estar nesses espaços. Os
+//           cariocas nunca pesquisaram tanto sobre parques e suas localizações,
+//           segundo dados obtidos na plataforma Google Trends.
+//         </styles.TextCard1>
+//         <br />
+//         <br />
+//         <br />
+//         <styles.TextCard2>
+//           Quantas vezes a população carioca pesquisou pela palavra “parque” no
+//           google nos últimos 13 anos?
+//         </styles.TextCard2>
+//         <img
+//           src={
+//             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/graficoum.png"
+//           }
+//           className="h-auto mt-[40px] mb-[80px] lg:mb-[120px] rounded-md"
+//         ></img>
+//         <styles.TextCard2>
+//           Um investimento em locais historicamente deixados de lado pelo poder
+//           público
+//         </styles.TextCard2>
+//         <styles.TextCard1>
+//           <br />
+//           <br />
+//           Sair do seu bairro e ter que pegar um transporte só para curtir um
+//           espaço bacana com a família — tá na hora de deixar isso de lado, né?
+//           <br />
+//           <br />
+//           Afinal de contas, a gente sabe que o carioca adora ir curtir um verde.
+//           <br />
+//           <br />
+//           Para isso, XX parques estão sendo construídos nas Zonas Oeste e Norte
+//           da cidade.
+//           <img
+//             src={
+//               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/mapa.png"
+//             }
+//             className="h-auto mt-[30px] mb-[120px] rounded-md"
+//           ></img>
+//           <styles.TextCard2>
+//             Parque Rita Lee, aquele das olimpíadas
+//           </styles.TextCard2>
+//           <br />O <styles.TextGreen>Parque Rita Lee</styles.TextGreen>, na Barra
+//           da Tijuca, está em construção desde fevereiro. Com 36 mil metros
+//           quadrados, o novo parque ficará numa rota que conecta todas as
+//           principais áreas do Parque Olímpico, como as arenas, os terraços e o
+//           “Live Site”, esplanada destinada a eventos em frente à Lagoa de
+//           Jacarepaguá.
+//           <br />
+//           <br />
+//           O espaço vai ganhar um bosque com mais de 900 árvores e 16 mil
+//           arbustos, quadras esportivas, praças, reforma do skate park, praça
+//           molhada e pisos coloridos. Haverá ainda novos mobiliários urbanos,
+//           como 465 mesas e cadeiras, 27 brinquedos infantis, 14 aparelhos de
+//           ginástica e 14 bicicletários.
+//           <br />
+//           <img
+//             src={
+//               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/parque_rita_lee.png"
+//             }
+//             className="h-auto mt-[30px] mb-[6px] rounded-md"
+//           ></img>
+//           <div className="flex flex-row mb-[120px]">
+//             <styles.TextLegendaBold>
+//               Vista aérea do Parque Rita Lee.
+//             </styles.TextLegendaBold>{" "}
+//             <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+//           </div>
+//           <styles.TextCard2>
+//             Parque Piedade, aquele da Universidade Gama Filho
+//           </styles.TextCard2>
+//           <br />
+//           Já o <styles.TextGreen>Parque Piedade</styles.TextGreen>, em fase de
+//           licitação, será construído no terreno que pertencia a Universidade
+//           Gama Filho, um espaço de 18 mil metros quadrados que estava
+//           abandonado. O projeto inclui áreas de lazer, centro cultural,
+//           esportivo e educacional, além de horta urbana e espaço para eventos.
+//           <img
+//           src={
+//             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/parque_piedade.jpg"
+//           }
+//           className="h-auto w-full mt-[30px] mb-[6px] rounded-md"
+//         ></img>          
+//         <div className="flex flex-row mb-[120px]">
+//           <styles.TextLegendaBold>Vista aérea do projeto do Parque Piedade.</styles.TextLegendaBold>{" "}
+//           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+//         </div>    
+//       <styles.TextCard2>
+//           Parque Esperança, aquele da esperança
+//         </styles.TextCard2>
+//         <br />
+//           Antes de a praça ser revitalizada e virar o{" "}
+//           <styles.TextGreen>Parque Esperança</styles.TextGreen>, o local era
+//           conhecido informalmente como Praça Favela das Almas, sendo apenas um
+//           espaço descampado atrás do cemitério de Campo Grande, que servia para
+//           descarte de lixo.
+//           <br />
+//           <br />
+//           Na transformação, foram instalados campo de futebol com grama
+//           sintética, pista de skate, quadra poliesportiva, quadra de areia,
+//           pista de caminhada e mobiliários. O parque também tem quiosques,
+//           brinquedos infantis e uma Academia da Terceira Idade. O investimento
+//           na área foi de cerca de R$ 2 milhões e a obra durou seis meses.
+//           <img
+//           src={
+//             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/parque_esperanca.jpeg"
+//           }
+//           className="h-auto w-full mt-[30px] mb-[6px] rounded-md"
+//         ></img>          
+//         <div className="flex flex-row mb-[120px]">
+//           <styles.TextLegendaBold>Vista aérea do Parque Esperança.</styles.TextLegendaBold>{" "}
+//           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+//         </div>    
+//         </styles.TextCard1>
+//         <styles.TextCard2>
+//           Veja como ficará o novo xodó de Campo Grande, o Parque Realengo:
+//         </styles.TextCard2>
+//         <styles.TextCard1 className="mt-[20px]">
+//           O bairro de Campo Grande ganhou uma nova área de lazer com cerca de 14
+//           mil metros quadrados, localizado entre a Rua Almirante Saldanha e a
+//           Travessa Belisário dos Santos, no bairro da Zona Oeste.
+//           <br />
+//           <br />
+//           Com um investimento estimado de R$ 72 milhões, o{" "}
+//           <styles.TextGreen>Parque Realengo</styles.TextGreen> Susana Naspolini,
+//           em construção desde setembro do ano passado, começou a tomar forma. O
+//           parque é inspirado no Gardens By The Bay de Cingapura, apontado como o
+//           jardim mais visitado no mundo.
+//           <br />
+//           <img
+//           src={
+//             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoum.jpg"
+//           }
+//           className="rounded-md h-auto lg:mt-[30px] mb-[6px] lg:mb-[6px]"
+//         ></img>
+//         <div className="flex flex-row">
+//           <styles.TextLegendaBold>Entrada do parque.</styles.TextLegendaBold>{" "}
+//           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+//         </div>
+//           <br />
+//           No início de junho, foram entregues 11 lojas, com 9 metros quadrados
+//           cada, montadas como um mercado popular, para organizar o comércio
+//           existente anteriormente na área. Próximo ao mercado há um espaço
+//           multiuso que poderá receber feiras e eventos, entre outras atividades.
+//           <br />
+//           <img
+//           src={
+//             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoseis.jpg"
+//           }
+//           className="rounded-md h-auto mb-[6px] lg:mb-[6px] lg:mt-[30px]"
+//         ></img>
+//         <div className="flex flex-row">
+//           <styles.TextLegendaBold>
+//             Espaço de preservação.
+//           </styles.TextLegendaBold>{" "}
+//           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+//         </div>
+//           Além de adaptar a Mata Atlântica ao conceito de superárvores, o parque
+//           também apresenta inéditas soluções para adaptar a cidade aos desafios
+//           das mudanças climáticas, como ilhas de calor e inundações.
+//         </styles.TextCard1>
+//       </styles.ContainerCard>
+//     </styles.ChapterGenericDiv4>
+//   );
+// }
+
+export function ParteTres(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard>
+        <img
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/introdois.png"
+          }
+          className="h-auto w-[100%] lg:w-[90%] mb-[80px] lg:mb-[80px]"
+        ></img>
+        <styles.TextCard1>
+          <styles.TextCard2>
+            Veja os equipamentos que os parques da prefeitura tem
+          </styles.TextCard2>
+          <br />
+          <br />
+          Todos eles são parte do plano da Prefeitura do Rio de Janeiro de
+          encher a cidade de áreas de lazer para os cariocas.
+          <br />
+          <br />
+          Estamos empenhados em transformar a nossa cidade, com a construção de
+          espaços onde os habitantes possam desfrutar de momentos de descanso e
+          diversão.
+          <br />
+          <br />
+          Para alcançar esse objetivo, a Prefeitura já investiu R$ XX na
+          construção de novas parques na cidade.
+        </styles.TextCard1>        
       </styles.ContainerCard>
     </styles.ChapterGenericDiv4>
   );
@@ -395,122 +667,6 @@ export function QuadroDois(
   );
 }
 
-export function ParteDois(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard4>
-        <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/introdois.png"
-          }
-          className="h-auto w-[90%] mb-[80px] lg:mt-[80px] lg:mb-[100px]"
-        ></img>
-        <styles.TextCard2>
-          A gente sabe os parques são um sucesso, olha só o parque Madureira:
-        </styles.TextCard2>
-        <styles.TextCard1 className="mt-[20px]">
-          Inaugurado em 23 de junho de 2012, o{" "}
-          <styles.TextGreen>Parque Madureira</styles.TextGreen> Mestre Monarco é
-          um dos projetos urbanísticos mais bem sucedidos da história recente do
-          Brasil, tornando-se um ícone de lazer, diversão, cultura e serviços na
-          Zona Norte do Rio de Janeiro. Nos fins de semana normais, o parque
-          recebe, em média, de 10 mil a 15 mil pessoas. Em dias de evento, o
-          público chega a 35 mil. Com 3.900 metros de extensão, ele é o terceiro
-          maior parque da cidade, atrás apenas do Aterro do Flamengo e da Quinta
-          da Boa Vista. O parque atravessa os bairros de Madureira, Turiaçu,
-          Rocha Miranda, Honório Gurgel e Guadalupe.
-        </styles.TextCard1>
-        <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiraum.jpg"
-          }
-          className="rounded-md h-auto mb-[6px] lg:mb-[6px] mt-[40px]"
-        ></img>
-        <div className="flex flex-row">
-          <styles.TextLegendaBold>
-            Foto aérea do Parque Madureira.
-          </styles.TextLegendaBold>{" "}
-          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div>
-        <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiraquatro.jpg"
-          }
-          className="rounded-md h-auto mb-[6px] lg:mb-[6px]"
-        ></img>
-        <div className="flex flex-row">
-          <styles.TextLegendaBold>Chafariz.</styles.TextLegendaBold>{" "}
-          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div>
-        <styles.TextCard1 className="mt-[80px] mb-[80px]">
-          Com 11 anos de história, o Parque Madureira é repleto de atrações para
-          os moradores da região e para a população da cidade do Rio. A Nave do
-          Conhecimento Silas de Oliveira oferece gratuitamente cursos na área de
-          tecnologia, além de oficinas, palestras e visitas virtuais aos
-          frequentadores. O acesso à internet banda larga é gratuito no local.
-          <br></br> A Casa de Convivência Clara Nunes oferece atividades
-          gratuitas, como yoga, dança de salão e pilates para os idosos a partir
-          de 60 anos, com o objetivo de gerar impacto direto na promoção da
-          saúde física, mental e emocional dos frequentadores.
-        </styles.TextCard1>
-        <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiratres.jpg"
-          }
-          className="rounded-md h-auto mb-[6px] lg:mb-[6px]"
-        ></img>
-        <div className="flex flex-row">
-          <styles.TextLegendaBold>Skatepark</styles.TextLegendaBold>{" "}
-          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div>
-        <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiradois.jpg"
-          }
-          className="rounded-md h-auto mb-[6px] lg:mb-[6px]"
-        ></img>
-        <div className="flex flex-row">
-          <styles.TextLegendaBold>Espaço infantil.</styles.TextLegendaBold>{" "}
-          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div>
-        <styles.TextCard1 className="mt-[80px] mb-[80px]">
-          Enfeitada pelos símbolos do Império Serrano e da Portela, tradicionais
-          agremiações de Madureira, a Praça do Samba é um espaço com palco,
-          concha acústica e arquibancadas para a realização de shows e
-          apresentações culturais. Os lagos e cascatas artificiais atraem os
-          frequentadores, principalmente em dias de calor na cidade. O parque
-          ainda conta com quadras poliesportivas, pistas de street skate e
-          brinquedos num parquinho.
-        </styles.TextCard1>
-        <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiracinco.jpg"
-          }
-          className="h-auto rounded-md"
-        ></img>
-        <div className="flex flex-row">
-          <styles.TextLegendaBold>Área molhada.</styles.TextLegendaBold>{" "}
-          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div>
-        <styles.TextCard2 className="mt-[120px]">
-          Veja como ficará o novo xodó de Campo Grande:
-        </styles.TextCard2>
-        <styles.TextCard1 className="mt-[20px]">
-          O bairro de Campo Grande ganhou uma nova área de lazer com cerca de 14
-          mil metros quadrados, localizado entre a Rua Almirante Saldanha e a
-          Travessa Belisário dos Santos, no bairro da Zona Oeste.
-        </styles.TextCard1>
-      </styles.ContainerCard4>
-    </styles.ChapterGenericDiv4>
-  );
-}
-
 export function AnimacaoDois(
   props = {
     id: "",
@@ -523,7 +679,7 @@ export function AnimacaoDois(
     <div
       ref={props.chapRef}
       id={props.id}
-      className="flex relative w-[100%] h-[400vh] -z-[50] items-top justify-center bg-[#fbfaef]"
+      className="flex relative w-[100%] h-[200vh] -z-[50] items-top justify-center bg-[#fbfaef]"
     >
       <div
         id="test_animation_dois"
@@ -534,7 +690,7 @@ export function AnimacaoDois(
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/montagem_um.png"
           }
-          className="absolute w-[75%]  z-50"
+          className="absolute w-[75%]  -z-[20]"
         ></img>
         <img
           id={"animacao_image_m2"}
@@ -559,79 +715,6 @@ export function AnimacaoDois(
         ></img>
       </div>
     </div>
-  );
-}
-
-export function ParteTres(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard4>
-        {/* <div className="flex flex-row">
-          <styles.TextLegendaBold>Vista aérea.</styles.TextLegendaBold>{" "}
-          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div> */}
-        <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoum.jpg"
-          }
-          className="rounded-md h-auto mb-[6px] lg:mb-[6px]"
-        ></img>
-        <div className="flex flex-row">
-          <styles.TextLegendaBold>Entrada do parque.</styles.TextLegendaBold>{" "}
-          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div>
-        <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengodois.jpg"
-          }
-          className="rounded-md h-auto mb-[6px] lg:mb-[6px]"
-        ></img>
-        <div className="flex flex-row">
-          <styles.TextLegendaBold>Nave do conhecimento.</styles.TextLegendaBold>{" "}
-          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div>
-        <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengotres.jpg"
-          }
-          className="rounded-md h-auto mb-[6px] lg:mb-[6px]"
-        ></img>
-        <div className="flex flex-row">
-          <styles.TextLegendaBold>
-            Área de lazer e churrasqueira.
-          </styles.TextLegendaBold>{" "}
-          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div>
-        <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoquatro.jpg"
-          }
-          className="rounded-md h-auto mb-[6px] lg:mb-[6px]"
-        ></img>
-        <div className="flex flex-row">
-          <styles.TextLegendaBold>Vista aérea.</styles.TextLegendaBold>{" "}
-          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div>
-        <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoseis.jpg"
-          }
-          className="rounded-md h-auto mb-[6px] lg:mb-[6px]"
-        ></img>
-        <div className="flex flex-row">
-          <styles.TextLegendaBold>
-            Espaço de preservação.
-          </styles.TextLegendaBold>{" "}
-          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div>
-      </styles.ContainerCard4>
-    </styles.ChapterGenericDiv4>
   );
 }
 

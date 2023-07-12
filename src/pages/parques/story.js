@@ -72,7 +72,7 @@ export default function Enchentes() {
       .to("#animacao_image_41", { opacity: 1, duration: 7 })
       .to("#animacao_image_4", { opacity: 0, duration: 1 })
       .to("#animacao_image_41", { opacity: 1, duration: 1 })
-      .to("#test_animation", { opacity: 0, duration: 13 });
+      // .to("#test_animation", { opacity: 0, duration: 13 });
 
     const getVhValueUm = () => {
       const screenHeight = window.innerHeight;
@@ -92,6 +92,7 @@ export default function Enchentes() {
       trigger: "#animation_um",
       pin: "#test_animation",
       start: `top center-=${animation_um_vh}`,
+      end: `bottom center+=${animation_um_vh}`,
     });
 
     const tl_animation_dois = gsap.timeline();
@@ -103,8 +104,8 @@ export default function Enchentes() {
       .to("#animacao_image_m3", { opacity: 1, duration: 5 })
       .to("#animacao_image_m4", { opacity: 1, duration: 15 })
       .to("#animacao_image_m4", { opacity: 1, duration: 10 })
-      .to("#test_animation_dois", { opacity: 0, duration: 10 })
-      .to("#test_animation_dois", { opacity: 0, duration: 5 });
+      // .to("#test_animation_dois", { opacity: 0, duration: 10 })
+      // .to("#test_animation_dois", { opacity: 0, duration: 5 });
 
     const getVhValueDois = () => {
       const screenHeight = window.innerHeight;
@@ -123,6 +124,7 @@ export default function Enchentes() {
       trigger: "#animation_dois",
       pin: "#test_animation_dois",
       start: `top center-=${animation_dois_vh}`,
+      end: `bottom center+=${animation_dois_vh}`,
     });
   }, []);
 
@@ -145,6 +147,7 @@ export default function Enchentes() {
       {/* define the height of the video scroll */}
       <div id={"parte_video"} className="h-[400vh]" />
       <chapterDiv.ParteUm id={"parte_um"} />
+      {/* <chapterDiv.ParteDois id={"parte_dois"} /> */}
       <chapterDiv.AnimacaoDois id={"animation_dois"} />
       <chapterDiv.ParteTres id={"parte_tres"} />
       <chapterDiv.AnimacaoUm id={"animation_um"} />
