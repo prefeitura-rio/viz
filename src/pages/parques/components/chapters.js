@@ -45,77 +45,6 @@ export function Capa(
   );
 }
 
-export function AnimacaoUm(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-  return (
-    <div
-      ref={props.chapRef}
-      id={props.id}
-      className="flex relative w-[100%] h-[1000vh] -z-[50] items-top justify-center bg-[#fbfaef]"
-    >
-      <div
-        id="test_animation"
-        className="flex relative w-[100%]  -z-[50] top[-10vh] justify-center bg-[#fbfaef]"
-      >
-        <img
-          id={"animacao_image_1"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_um.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[20]"
-        ></img>
-        <img
-          id={"animacao_image_2"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_dois.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[19]"
-        ></img>
-        <img
-          id={"animacao_image_21"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_dois_um.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[18]"
-        ></img>
-        <img
-          id={"animacao_image_3"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_tres.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[17]"
-        ></img>
-        <img
-          id={"animacao_image_31"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_tres_um.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[16]"
-        ></img>
-        <img
-          id={"animacao_image_4"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_quatro.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[15]"
-        ></img>
-        <img
-          id={"animacao_image_41"}
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_quatro_um.png"
-          }
-          className="absolute w-[100%]  opacity-0 -z-[14]"
-        ></img>
-      </div>
-    </div>
-  );
-}
-
 export function ContextoHistorico(
   props = {
     id: "",
@@ -170,39 +99,6 @@ export function ContextoHistorico(
         </styles.ContainerCard2>
       </styles.ChapterGenericDiv>
     </>
-  );
-}
-
-export function QuadroUm(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard id={"quadro_um_card1"}>
-        {/* <styles.TextCard2>
-				Sabe o que esses lugares têm em comum?
-				</styles.TextCard2>
-				<br />
-				<styles.TextCard3>
-				Eles fazem parte do plano da Prefeitura do Rio de encher a cidade de áreas de lazer para os cariocas. 
-				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
-				<styles.TextCard3>
-				Um investimento em locais historicamente deixados de lado pelo poder público.
-				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
-				<styles.TextCard3>
-				Sair do seu bairro e ter que pegar um transporte só para curtir um espaço bacana com a família — tá na hora de deixar isso de lado, né? Afinal de contas, a gente sabe que o carioca adora ir curtir um verde.
-				</styles.TextCard3> */}
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv2>
   );
 }
 
@@ -376,6 +272,225 @@ export function ParteUm(
   );
 }
 
+export function AnimacaoUm(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <div
+      ref={props.chapRef}
+      id={props.id}
+      className="flex relative w-full h-[1000vh] -z-[50] items-top justify-center bg-[#fbfaef]"
+    >
+      <div
+        id="test_animation"
+        className="flex relative w-full -z-[50] top[-10vh] justify-center bg-[#fbfaef]"
+      >
+        <img
+          id={"animacao_image_1"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_um.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[20]"
+        ></img>
+        <img
+          id={"animacao_image_2"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_dois.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[19]"
+        ></img>
+        <img
+          id={"animacao_image_21"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_dois_um.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[18]"
+        ></img>
+        <img
+          id={"animacao_image_3"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_tres.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[17]"
+        ></img>
+        <img
+          id={"animacao_image_31"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_tres_um.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[16]"
+        ></img>
+        <img
+          id={"animacao_image_4"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_quatro.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[15]"
+        ></img>
+        <img
+          id={"animacao_image_41"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/ilustracao_quatro_um.png"
+          }
+          className="absolute max-w-[1000px]	  opacity-0 -z-[14]"
+        ></img>
+      </div>
+    </div>
+  );
+}
+
+export function QuadroDois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterQuadroDois ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[10vh]">
+        <styles.TextCard3>
+          Além das áreas livres e da natureza, os parques contemplam uma série
+          de equipamentos públicos como:
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[70vh]">
+        <styles.TextCard3>
+          academia terceira idade, quadra esportiva, ecoponto
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[180vh]">
+        <styles.TextCard3>churrasqueira, bosque, horta, pomar</styles.TextCard3>
+      </styles.ContainerCard3>
+      <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[310vh]">
+        <styles.TextCard3>
+          comércio, skatepark, nave do conhecimento
+        </styles.TextCard3>
+      </styles.ContainerCard3>
+    </styles.ChapterQuadroDois>
+  );
+}
+
+export function ParteDois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+  return (
+    <styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard4>
+        <img
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/introdois.png"
+          }
+          className="h-auto w-[90%] mb-[80px] lg:mt-[80px] lg:mb-[100px]"
+        ></img>
+        <styles.TextCard2>
+          A gente sabe os parques são um sucesso, olha só o parque Madureira:
+        </styles.TextCard2>
+        <styles.TextCard1 className="mt-[20px]">
+          Inaugurado em 23 de junho de 2012, o{" "}
+          <styles.TextGreen>Parque Madureira</styles.TextGreen> Mestre Monarco é
+          um dos projetos urbanísticos mais bem sucedidos da história recente do
+          Brasil, tornando-se um ícone de lazer, diversão, cultura e serviços na
+          Zona Norte do Rio de Janeiro. Nos fins de semana normais, o parque
+          recebe, em média, de 10 mil a 15 mil pessoas. Em dias de evento, o
+          público chega a 35 mil. Com 3.900 metros de extensão, ele é o terceiro
+          maior parque da cidade, atrás apenas do Aterro do Flamengo e da Quinta
+          da Boa Vista. O parque atravessa os bairros de Madureira, Turiaçu,
+          Rocha Miranda, Honório Gurgel e Guadalupe.
+        </styles.TextCard1>
+        <img
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiraum.jpg"
+          }
+          className="rounded-md h-auto mb-[6px] lg:mb-[6px] mt-[40px]"
+        ></img>
+        <div className="flex flex-row">
+          <styles.TextLegendaBold>
+            Foto aérea do Parque Madureira.
+          </styles.TextLegendaBold>{" "}
+          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+        </div>
+        <img
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiraquatro.jpg"
+          }
+          className="rounded-md h-auto mb-[6px] lg:mb-[6px]"
+        ></img>
+        <div className="flex flex-row">
+          <styles.TextLegendaBold>Chafariz.</styles.TextLegendaBold>{" "}
+          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+        </div>
+        <styles.TextCard1 className="mt-[80px] mb-[80px]">
+          Com 11 anos de história, o Parque Madureira é repleto de atrações para
+          os moradores da região e para a população da cidade do Rio. A Nave do
+          Conhecimento Silas de Oliveira oferece gratuitamente cursos na área de
+          tecnologia, além de oficinas, palestras e visitas virtuais aos
+          frequentadores. O acesso à internet banda larga é gratuito no local.
+          <br></br> A Casa de Convivência Clara Nunes oferece atividades
+          gratuitas, como yoga, dança de salão e pilates para os idosos a partir
+          de 60 anos, com o objetivo de gerar impacto direto na promoção da
+          saúde física, mental e emocional dos frequentadores.
+        </styles.TextCard1>
+        <img
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiratres.jpg"
+          }
+          className="rounded-md h-auto mb-[6px] lg:mb-[6px]"
+        ></img>
+        <div className="flex flex-row">
+          <styles.TextLegendaBold>Skatepark</styles.TextLegendaBold>{" "}
+          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+        </div>
+        <img
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiradois.jpg"
+          }
+          className="rounded-md h-auto mb-[6px] lg:mb-[6px]"
+        ></img>
+        <div className="flex flex-row">
+          <styles.TextLegendaBold>Espaço infantil.</styles.TextLegendaBold>{" "}
+          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+        </div>
+        <styles.TextCard1 className="mt-[80px] mb-[80px]">
+          Enfeitada pelos símbolos do Império Serrano e da Portela, tradicionais
+          agremiações de Madureira, a Praça do Samba é um espaço com palco,
+          concha acústica e arquibancadas para a realização de shows e
+          apresentações culturais. Os lagos e cascatas artificiais atraem os
+          frequentadores, principalmente em dias de calor na cidade. O parque
+          ainda conta com quadras poliesportivas, pistas de street skate e
+          brinquedos num parquinho.
+        </styles.TextCard1>
+        <img
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/madureiracinco.jpg"
+          }
+          className="h-auto rounded-md"
+        ></img>
+        <div className="flex flex-row">
+          <styles.TextLegendaBold>Área molhada.</styles.TextLegendaBold>{" "}
+          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+        </div>
+        <styles.TextCard2 className="mt-[120px]">
+          Veja como ficará o novo xodó de Campo Grande:
+        </styles.TextCard2>
+        <styles.TextCard1 className="mt-[20px]">
+          O bairro de Campo Grande ganhou uma nova área de lazer com cerca de 14
+          mil metros quadrados, localizado entre a Rua Almirante Saldanha e a
+          Travessa Belisário dos Santos, no bairro da Zona Oeste.
+        </styles.TextCard1>
+      </styles.ContainerCard4>
+    </styles.ChapterGenericDiv4>
+  );
+}
+
 export function AnimacaoDois(
   props = {
     id: "",
@@ -388,7 +503,7 @@ export function AnimacaoDois(
     <div
       ref={props.chapRef}
       id={props.id}
-      className="flex relative w-[100%] h-[300vh] -z-[50] items-top justify-center bg-transparent"
+      className="flex relative w-[100%] h-[400vh] -z-[50] items-top justify-center bg-transparent"
     >
       <div
         id="test_animation_dois"

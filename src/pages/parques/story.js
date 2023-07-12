@@ -74,15 +74,24 @@ export default function Enchentes() {
       .to("#animacao_image_41", { opacity: 1, duration: 1 })
       .to("#test_animation", { opacity: 0, duration: 13 });
 
-// tela 1920x1080 = vh(62)
-// tela 1366x768 = vh=(46)
+    // const getVhValueUm = () => {
+    //   const screenHeight = window.innerHeight;
+    //   console.log(screenHeight);
+    //   if (screenHeight <= 768) {
+    //     return vh(50);
+    //   } else if (screenHeight <= 1080) {
+    //     return vh(50);
+    //   } else {
+    //     return vh(50);
+    //   }
+    // };
 
-    const animation_vh = vh(62);
+    const animation_um_vh = vh(50);
     ScrollTrigger.create({
       animation: tl_animation_um,
       trigger: "#animation_um",
       pin: "#test_animation",
-      start: `top center-=${animation_vh}`,
+      start: `top center-=${animation_um_vh}`,
     });
 
     const tl_animation_dois = gsap.timeline();
@@ -97,8 +106,16 @@ export default function Enchentes() {
       .to("#test_animation_dois", { opacity: 0, duration: 10 })
       .to("#test_animation_dois", { opacity: 0, duration: 5 });
 
-// tela 1920x1080 = vh(40)
-// tela 1366x768 = vh=(29)
+    // const getVhValueDois = () => {
+    //   const screenHeight = window.innerHeight;
+    //   if (screenHeight <= 768) {
+    //     return vh(29);
+    //   } else if (screenHeight <= 1080) {
+    //     return vh(40);
+    //   } else {
+    //     return vh(25);
+    //   }
+    // };
 
     const animation_dois_vh = vh(40);
     ScrollTrigger.create({
@@ -123,7 +140,6 @@ export default function Enchentes() {
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.ContextoHistorico id={"contexto_historico"} />
       <div className="h-[95vh] w-full bg-transparent"></div>
-      <chapterDiv.QuadroUm id={"quadro_um"} />
       <chapterDiv.ParteUm id={"parte_um"} />
       <chapterDiv.AnimacaoDois id={"animation_dois"} />
       <chapterDiv.ParteTres id={"parte_tres"} />
