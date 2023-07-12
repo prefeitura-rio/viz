@@ -27,7 +27,7 @@ export default function Enchentes() {
     });
 
     ScrollTrigger.create({
-      trigger: "#quadro_um",
+      trigger: "#parte_video",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video");
         let frameNumber = Math.floor(self.progress * 121) + 1;
@@ -128,6 +128,7 @@ export default function Enchentes() {
 
   return (
     <>
+      {/* define the video canvas */}
       <div className="fixed -z-[100] flex flex-col items-center justify-center h-[100vh] w-[100vw]  bg-[#fbfaef]">
         <img
           id={"quadro_video"}
@@ -139,7 +140,10 @@ export default function Enchentes() {
       </div>
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.ContextoHistorico id={"contexto_historico"} />
-      <div className="h-[95vh] w-full bg-transparent"></div>
+      {/* adjust the start of the video scroll */}
+      <div className="h-[50vh] w-full bg-transparent"></div>
+      {/* define the height of the video scroll */}
+      <div id={"parte_video"} className="h-[400vh]" />
       <chapterDiv.ParteUm id={"parte_um"} />
       <chapterDiv.AnimacaoDois id={"animation_dois"} />
       <chapterDiv.ParteTres id={"parte_tres"} />

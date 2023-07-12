@@ -181,16 +181,15 @@ export function ParteUm(
           Para isso, XX parques estão sendo construídos nas Zonas Oeste e Norte
           da cidade.
           <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/mapa.png"
-          }
-          className="h-auto mt-[30px] mb-[120px] rounded-md"
-        ></img>
-        <styles.TextCard2>
-          Parque Rita Lee, aquele das olimpíadas
-        </styles.TextCard2>
-          <br />
-          O <styles.TextGreen>Parque Rita Lee</styles.TextGreen>, na Barra
+            src={
+              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/mapa.png"
+            }
+            className="h-auto mt-[30px] mb-[120px] rounded-md"
+          ></img>
+          <styles.TextCard2>
+            Parque Rita Lee, aquele das olimpíadas
+          </styles.TextCard2>
+          <br />O <styles.TextGreen>Parque Rita Lee</styles.TextGreen>, na Barra
           da Tijuca, está em construção desde fevereiro. Com 36 mil metros
           quadrados, o novo parque ficará numa rota que conecta todas as
           principais áreas do Parque Olímpico, como as arenas, os terraços e o
@@ -205,34 +204,38 @@ export function ParteUm(
           ginástica e 14 bicicletários.
           <br />
           <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/parque_rita_lee.png"
-          }
-          className="h-auto mt-[30px] mb-[6px] rounded-md"
-        ></img>  
-        <div className="flex flex-row mb-[120px]">
-          <styles.TextLegendaBold>Vista aérea do Parque Rita Lee.</styles.TextLegendaBold>{" "}
-          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div>    
-        <styles.TextCard2>
-          Parque Piedade, aquele da Universidade Gama Filho
-        </styles.TextCard2>
-        <br />
+            src={
+              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/parque_rita_lee.png"
+            }
+            className="h-auto mt-[30px] mb-[6px] rounded-md"
+          ></img>
+          <div className="flex flex-row mb-[120px]">
+            <styles.TextLegendaBold>
+              Vista aérea do Parque Rita Lee.
+            </styles.TextLegendaBold>{" "}
+            <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+          </div>
+          <styles.TextCard2>
+            Parque Piedade, aquele da Universidade Gama Filho
+          </styles.TextCard2>
+          <br />
           Já o <styles.TextGreen>Parque Piedade</styles.TextGreen>, em fase de
           licitação, será construído no terreno que pertencia a Universidade
           Gama Filho, um espaço de 18 mil metros quadrados que estava
           abandonado. O projeto inclui áreas de lazer, centro cultural,
           esportivo e educacional, além de horta urbana e espaço para eventos.
           <img
-          src={
-            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/parque_piedade.jpg"
-          }
-          className="h-auto w-full mt-[30px] mb-[6px] rounded-md"
-        ></img>          
-        <div className="flex flex-row mb-[120px]">
-          <styles.TextLegendaBold>Vista aérea do projeto do Parque Piedade.</styles.TextLegendaBold>{" "}
-          <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
-        </div>    
+            src={
+              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/parque_piedade.jpg"
+            }
+            className="h-auto w-full mt-[30px] mb-[6px] rounded-md"
+          ></img>
+          <div className="flex flex-row mb-[120px]">
+            <styles.TextLegendaBold>
+              Vista aérea do projeto do Parque Piedade.
+            </styles.TextLegendaBold>{" "}
+            <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
+          </div>
         </styles.TextCard1>
         {/* <styles.TextCard1 className="mt-[80px] mb-[80px]">
           Antes de a praça ser revitalizada e virar o{" "}
@@ -503,11 +506,11 @@ export function AnimacaoDois(
     <div
       ref={props.chapRef}
       id={props.id}
-      className="flex relative w-[100%] h-[400vh] -z-[50] items-top justify-center bg-transparent"
+      className="flex relative w-[100%] h-[400vh] -z-[50] items-top justify-center bg-[#fbfaef]"
     >
       <div
         id="test_animation_dois"
-        className="flex relative w-[100%]  -z-[50] top[-10vh] justify-center bg-transparent"
+        className="flex relative w-[100%]  -z-[50] top[-10vh] justify-center bg-[#fbfaef]"
       >
         <img
           id={"animacao_image_m1"}
