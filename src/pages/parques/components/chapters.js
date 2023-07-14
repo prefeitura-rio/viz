@@ -165,7 +165,7 @@ export function ParteUm(
           className="h-auto mt-[40px] mb-[80px] lg:mb-[120px] rounded-md"
         ></img>
         <styles.TextCard2>
-          Um investimento em locais historicamente deixados de lado pelo poder
+          Investindo em locais historicamente deixados de lado pelo poder
           público
         </styles.TextCard2>
         <styles.TextCard1>
@@ -187,7 +187,7 @@ export function ParteUm(
             className="h-auto mt-[30px] mb-[120px] rounded-md"
           ></img>
           <styles.TextCard2>
-            Parque Rita Lee, aquele das olimpíadas
+            Parque Rita Lee
           </styles.TextCard2>
           <br />O <styles.TextGreen>Parque Rita Lee</styles.TextGreen>, na Barra
           da Tijuca, está em construção desde fevereiro. Com 36 mil metros
@@ -216,7 +216,7 @@ export function ParteUm(
             <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
           </div>
           <styles.TextCard2>
-            Parque Piedade, aquele da Universidade Gama Filho
+            Parque Piedade
           </styles.TextCard2>
           <br />
           Já o <styles.TextGreen>Parque Piedade</styles.TextGreen>, em fase de
@@ -235,7 +235,7 @@ export function ParteUm(
           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
         </div>    
       <styles.TextCard2>
-          Parque Esperança, aquele da esperança
+          Parque Esperança
         </styles.TextCard2>
         <br />
           Antes de a praça ser revitalizada e virar o{" "}
@@ -260,18 +260,16 @@ export function ParteUm(
           <styles.TextLegendaBold>Vista aérea do Parque Esperança.</styles.TextLegendaBold>{" "}
           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
         </div>    
-        </styles.TextCard1>
         <styles.TextCard2>
-          Veja como ficará o novo xodó de Campo Grande, o Parque Realengo:
+          Parque Realengo Susana Naspolini:
         </styles.TextCard2>
-        <styles.TextCard1 className="mt-[20px]">
           O bairro de Campo Grande ganhou uma nova área de lazer com cerca de 14
           mil metros quadrados, localizado entre a Rua Almirante Saldanha e a
           Travessa Belisário dos Santos, no bairro da Zona Oeste.
           <br />
           <br />
           Com um investimento estimado de R$ 72 milhões, o{" "}
-          <styles.TextGreen>Parque Realengo</styles.TextGreen> Susana Naspolini,
+          <styles.TextGreen>Parque Realengo Susana Naspolini,</styles.TextGreen>
           em construção desde setembro do ano passado, começou a tomar forma. O
           parque é inspirado no Gardens By The Bay de Cingapura, apontado como o
           jardim mais visitado no mundo.
@@ -283,7 +281,7 @@ export function ParteUm(
           className="rounded-md h-auto lg:mt-[30px] mb-[6px] lg:mb-[6px]"
         ></img>
         <div className="flex flex-row">
-          <styles.TextLegendaBold>Entrada do parque.</styles.TextLegendaBold>{" "}
+          <styles.TextLegendaBold>Projeto do Parque Realengo Susana Naspolini.</styles.TextLegendaBold>{" "}
           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
         </div>
           <br />
@@ -300,13 +298,14 @@ export function ParteUm(
         ></img>
         <div className="flex flex-row">
           <styles.TextLegendaBold>
-            Espaço de preservação.
+            Projeto do  do Parque Realengo Susana Naspolini
           </styles.TextLegendaBold>{" "}
           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
         </div>
           Além de adaptar a Mata Atlântica ao conceito de superárvores, o parque
           também apresenta inéditas soluções para adaptar a cidade aos desafios
-          das mudanças climáticas, como ilhas de calor e inundações.
+          das mudanças climáticas, como ilhas de calor e inundações. Ficou curioso como vai ficar? 
+          Então confira abaixo o que a Prefeitura planejou para o mais novo xodó de Campo Grande:
         </styles.TextCard1>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv4>
@@ -543,21 +542,21 @@ export function ParteTres(
         ></img>
         <styles.TextCard1>
           <styles.TextCard2>
-            Veja os equipamentos que os parques da prefeitura tem
+            Parques turbinados com tudo que o carioca tem direito
           </styles.TextCard2>
           <br />
           <br />
-          Todos eles são parte do plano da Prefeitura do Rio de Janeiro de
-          encher a cidade de áreas de lazer para os cariocas.
+          Além de mais espaços verdes espalhados pela cidade, o carioca também precisa de lazer.
+          Por isso, em cada novo parque construído, a Prefeitura se empenhou em trazer novos equipamentos
+          para que a diversao fosse ainda maior.
           <br />
           <br />
-          Estamos empenhados em transformar a nossa cidade, com a construção de
-          espaços onde os habitantes possam desfrutar de momentos de descanso e
-          diversão.
+          Hortas e pomares, pistas de skate e quadras poliesportivas, academias ao ar livre, churrasqueiras,
+          Naves do Conhecimento, Ecopontos e fomentação do comércio local: tudo isso é pra fazer do 
+          <styles.TextGreen>Rio um lugar melhor
+          para todos os cariocas. </styles.TextGreen>
           <br />
           <br />
-          Para alcançar esse objetivo, a Prefeitura já investiu R$ XX na
-          construção de novas parques na cidade.
         </styles.TextCard1>        
       </styles.ContainerCard>
     </styles.ChapterGenericDiv4>
