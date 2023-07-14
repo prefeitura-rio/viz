@@ -216,14 +216,10 @@ export function ParteUm(
             <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
           </div>
           <styles.TextCard2>
-            Parque Piedade
+            Parque Pavuna
           </styles.TextCard2>
           <br />
-          Já o <styles.TextGreen>Parque Piedade</styles.TextGreen>, em fase de
-          licitação, será construído no terreno que pertencia a Universidade
-          Gama Filho, um espaço de 18 mil metros quadrados que estava
-          abandonado. O projeto inclui áreas de lazer, centro cultural,
-          esportivo e educacional, além de horta urbana e espaço para eventos.
+          xxxxxxxxxx
           <img
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/parque_piedade.jpg"
@@ -238,8 +234,7 @@ export function ParteUm(
           Parque Esperança
         </styles.TextCard2>
         <br />
-          Antes de a praça ser revitalizada e virar o{" "}
-          <styles.TextGreen>Parque Esperança</styles.TextGreen>, o local era
+          Antes de a praça ser revitalizada e virar o Parque Esperança, o local era
           conhecido informalmente como Praça Favela das Almas, sendo apenas um
           espaço descampado atrás do cemitério de Campo Grande, que servia para
           descarte de lixo.
@@ -261,18 +256,17 @@ export function ParteUm(
           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
         </div>    
         <styles.TextCard2>
-          Parque Realengo Susana Naspolini:
+          Parque Realengo Susana Naspolini
         </styles.TextCard2>
-          O bairro de Campo Grande ganhou uma nova área de lazer com cerca de 14
-          mil metros quadrados, localizado entre a Rua Almirante Saldanha e a
-          Travessa Belisário dos Santos, no bairro da Zona Oeste.
+          <br />
+          O bairro de Campo Grande ganhou uma nova área de lazer, localizado entre a 
+          Rua Almirante Saldanha e a Travessa Belisário dos Santos, no bairro da Zona Oeste.
           <br />
           <br />
-          Com um investimento estimado de R$ 72 milhões, o{" "}
-          <styles.TextGreen>Parque Realengo Susana Naspolini,</styles.TextGreen>
-          em construção desde setembro do ano passado, começou a tomar forma. O
-          parque é inspirado no Gardens By The Bay de Cingapura, apontado como o
-          jardim mais visitado no mundo.
+          Em construção desde setembro do ano passado, o parque começou a tomar forma. No início de junho, 
+          foram entregues 11 lojas, com 9 metros quadrados
+          cada, montadas como um mercado popular, para organizar o comércio
+          existente anteriormente na área. 
           <br />
           <img
           src={
@@ -284,12 +278,6 @@ export function ParteUm(
           <styles.TextLegendaBold>Projeto do Parque Realengo Susana Naspolini.</styles.TextLegendaBold>{" "}
           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
         </div>
-          <br />
-          No início de junho, foram entregues 11 lojas, com 9 metros quadrados
-          cada, montadas como um mercado popular, para organizar o comércio
-          existente anteriormente na área. Próximo ao mercado há um espaço
-          multiuso que poderá receber feiras e eventos, entre outras atividades.
-          <br />
           <img
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/realengoseis.jpg"
@@ -298,7 +286,7 @@ export function ParteUm(
         ></img>
         <div className="flex flex-row">
           <styles.TextLegendaBold>
-            Projeto do  do Parque Realengo Susana Naspolini
+            Projeto do Parque Realengo Susana Naspolini
           </styles.TextLegendaBold>{" "}
           <styles.TextLegenda>Foto: Prefeitura</styles.TextLegenda>
         </div>
