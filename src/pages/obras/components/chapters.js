@@ -41,10 +41,10 @@ export function Capa(
       <img src={logo1} className="absolute top-3 w-24 mt-[2vh] lg:w-32"></img>
       <styles.Title className="mt-[50px]">
         {" "}
-        <styles.TextHighlightBlue>Resgatando</styles.TextHighlightBlue> o{" "} <br/> 
-        <styles.TextHighlightGreen> orgulho</styles.TextHighlightGreen> de ser{" "}<br/>
+        <styles.TextHighlightBlue>A gente</styles.TextHighlightBlue> <br/>
+        <styles.TextHighlightGreen>prioriza</styles.TextHighlightGreen> <br/>
         {" "}
-        <styles.TextHighlightOrange> suburbano</styles.TextHighlightOrange>
+        <styles.TextHighlightOrange>quem mais precisa</styles.TextHighlightOrange>
       </styles.Title>
       {/* <styles.Subtitle>Pra quem Mais Precisa</styles.Subtitle> */}
       <div>
@@ -91,17 +91,10 @@ export function Intro(
           <styles.TextHighlightBold>seu Rio.</styles.TextHighlightBold>
           <br />
           <br />
-          Nesta visualização mostraremos como a Prefeitura está levando grandes
-          obras de infraestrutura para as Zona Oeste e Zona Norte da cidade,
-          garantindo a dignidade e qualidade de vida aos cariocas. 
+          Nesta visualização mostraremos como a Prefeitura está levando grandes obras de infraestrutura para as zonas Norte e principalmente Oeste da cidade, levando dignidade e qualidade de vida a essas regiões.
           <br />
           <br />
-          Para ver como está essa transformação, basta movimentar as setas localizadas no meio da imagens neste especial.
-          <br />
-          <br />
-          <styles.TextHighlightBold>
-          É a Prefeitura trazendo de volta, o orgulho de ser suburbano.{" "}
-          </styles.TextHighlightBold>
+          Movimente as setas e veja o antes e depois.
         </styles.IntroText>
       </div>
     </styles.IntroDivUm>
@@ -158,7 +151,7 @@ export function NumeraoConjuntoMaravilha(
     <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
       <styles.ContainerCard2>
         <styles.BigNumber4>
-          Esse é o Conjunto Habitacional Condomínio Parque Novo Irajá
+          Esse é o Conjunto Habitacional Condomínio Parque Novo Irajá.
         </styles.BigNumber4>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv2>
@@ -286,7 +279,7 @@ export function NumeraoCasaCarioca(
     <styles.ChapterGenericDiv2 className="" ref={props.chapRef} id={props.id}>
       <styles.ContainerCard2>
         <styles.BigNumber4>
-          E aqui está o complexo do Jacarezinho
+          E aqui está o complexo do Jacarezinho.
         </styles.BigNumber4>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv2>
@@ -440,7 +433,7 @@ export function NumeraoAvancaCampoGrande(
       <styles.ContainerCard2>
         <styles.BigNumber4>
           É aqui que Campo Grande receberá a maior obra da Prefeitura, o Anel
-          Viário
+          Viário.
         </styles.BigNumber4>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv2>
@@ -509,29 +502,13 @@ export function TextoAvancaCampoGrande(
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
-          Além disso, uma série de obras estão previstas para melhorar o
-          trânsito e a qualidade de vida no maior bairro do Brasil, é o{" "}
-          <styles.TextHighlightBold>
-            {" "}
-            Avança Campo Grande
-          </styles.TextHighlightBold>{" "}
-          levando desenvolvimento e prosperidade para a Zona Oeste do Rio.
+          Duas grandes obras vão melhorar o trânsito e a qualidade de vida em Campo Grande: a construção de um mergulhão sob a Avenida Cesário de Melo e de uma ligação expressa entre a Estrada da Caroba e a Estrada da Posse, com a implantação de um túnel de 600 metros, com duas galerias, sob o Morro Luiz Bom.
           <br />
           <br />
-          As obras em Campo Grande preveem a construção do mergulhão sob a
-          avenida Cesário de Melo, uma ligação expressa entre a Estrada da
-          Caroba e a Estrada da Posse, com a implantação de um túnel de 600
-          metros, com duas galerias, sob o Morro Luiz Bom.
+          Uma nova vai expressa vai ligar a Estrada da Posse à Avenida Brasil, que também poderá ser acessada pela Estrada do Tingui. As novas rotas vão diminuir pela metade o tempo de deslocamento entre o centro de Campo Grande e a Av. Brasil, melhorando muito a circulação de veículos no maior bairro do Brasil.
           <br />
           <br />
-          As novas rotas permitirão o escoamento de tráfego de veículos mais
-          eficiente na região, diminuindo o tempo de deslocamento e facilitando,
-          assim, a circulação no centro de Campo Grande.
-          <br />
-          <br />
-          Ainda estão previstas obras de urbanização que contemplam a
-          implementação das rótulas na Rua Artur Rios e na Estrada da Caroba no
-          acesso ao túnel.
+        As conexões da Cesário de Melo com a Artur Rios e a Estrada da Caroba vão ganhar rotatórias.
         </styles.IntroText>
       </div>
     </styles.IntroDiv>
@@ -553,7 +530,7 @@ export function NoBairro(
             É a Prefeitura
           </styles.TextHighlightGreenBig>{" "}
           <br />{" "}
-          <styles.TextHighlightRedBig>no seu Bairro</styles.TextHighlightRedBig>
+          <styles.TextHighlightRedBig>no seu bairro</styles.TextHighlightRedBig>
         </styles.BigNumber3>
       </styles.ContainerCard3>
     </styles.ChapterGenericDiv2>
@@ -587,7 +564,7 @@ export function NumeraoBairroMaravilha(
       <styles.ContainerCard2>
         <styles.BigNumber4>
           Os moradores do Encantado foram beneficiados com diversas obras de
-          urbanização e infraestrutura no bairro
+          urbanização e infraestrutura no bairro.
         </styles.BigNumber4>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv2>
@@ -607,7 +584,7 @@ export function NumeraoBairroMaravilhaUm(
           A região está recebendo 13 obras do programa, com investimentos que
           chegam a R$ 240 milhões. Presente em mais de 90 localidades da cidade
           do Rio, o programa Bairro Maravilha está levando obras de recuperação e
-          melhorias nas ruas das zonas Norte e Oeste
+          melhorias nas ruas das zonas Norte e Oeste.
         </styles.BigNumber4>
       </styles.ContainerCard2>
     </styles.ChapterGenericDiv2>
@@ -658,36 +635,13 @@ export function TextoBairroMaravilha(
       <div className="max-w-[80%]">
         {" "}
         <styles.IntroText>
-          Além dos moradores do Encantado, as entregas mais recentes também
-          beneficiaram moradores de Campo Grande.
-          <br />
-          <br />O{" "}
-          <styles.TextHighlightBold>
-            {" "}
-            Bairro Maravilha
-          </styles.TextHighlightBold>{" "}
-          tem como missão resgatar pontos da cidade que historicamente sofrem
-          com a falta de infraestrutura urbana. O objetivo é tirar essas áreas
-          da degradação e abandono.
+          O Bairro Maravilha também está em Campo Grande. O programa beneficia principalmente a Zona Oeste, onde a urbanização está chegando para cerca de 300 mil moradores de 77 localidades.
           <br />
           <br />
-          Retomado em 2021 pela Secretaria Municipal de Infraestrutura, o Bairro
-          Maravilha beneficia principalmente a Zona Oeste, com a reurbanização
-          de estradas, ruas e avenidas. As melhorias vão chegar a cerca de 300
-          mil moradores, em 77 diferentes localidades.
+          Além de obras de drenagem, saneamento, pavimentação e construção ou revitalização de calçadas, o Bairro Maravilha também reforma e até constrói praças e áreas de esporte e lazer.
           <br />
           <br />
-          Em 2022 foram entregues obras no Recreio dos Bandeirantes, em
-          Paciência e na Vila Kennedy, na Zona Oeste. Além de logradouros
-          completamente reestruturados, houve instalação de praça com academia
-          ao ar livre para adultos e pessoas da terceira idade, quadras de
-          esportes, além de parquinho infantil.
-          <br />
-          <br />
-          Na Zona Norte, o projeto ocorre em Olaria, Bonsucesso, Coelho Neto,
-          Ilha do Governador, Del Castilho, Ramos, Rocha Miranda, Madureira e
-          Caju, além do Morro do Chaves, em Barros Filho, e da comunidade
-          Eternit, em Guadalupe. A Zona Norte está recebendo, ao todo, 13 obras.
+          Na Zona Norte o projeto está em 13 locais de Olaria, Bonsucesso, Coelho Neto, Ilha do Governador, Del Castilho, Ramos, Rocha Miranda, Madureira, Barros Filho, Guadalupe e Caju.
         </styles.IntroText>
       </div>
     </styles.IntroDiv>
