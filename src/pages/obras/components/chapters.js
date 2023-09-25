@@ -42,9 +42,9 @@ export function Capa(
       <styles.Title className="mt-[50px]">
         {" "}
         <styles.TextHighlightBlue>A gente</styles.TextHighlightBlue> <br/>
-        <styles.TextHighlightGreen>prioriza</styles.TextHighlightGreen> <br/>
+        <styles.TextHighlightGreen>prioriza quem</styles.TextHighlightGreen> <br/>
         {" "}
-        <styles.TextHighlightOrange>quem mais precisa</styles.TextHighlightOrange>
+        <styles.TextHighlightOrange>mais precisa</styles.TextHighlightOrange>
       </styles.Title>
       {/* <styles.Subtitle>Pra quem Mais Precisa</styles.Subtitle> */}
       <div>
