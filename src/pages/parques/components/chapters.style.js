@@ -2,18 +2,16 @@
 import { Container } from "postcss";
 import styled from "styled-components";
 import tw from "tailwind-styled-components";
-import capaum from "../images/capaum.png";
-import capaummobile from "../images/capaummobile.png";
 
 export const CapaDivSC = styled.div`
 background-color:  #fbfaef;
-background-image: url(${capaum});
+background-image: url(${"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/capaum.png"});
 background-size: 86%;
 background-position: center;
 background-repeat: no-repeat;
 
 @media (max-width: 768px) {
-    background-image: url(${capaummobile});
+    background-image: url(${"https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/parques/imagens/capaummobile.png"});
     background-size: 100%;
   }
 `;
@@ -139,16 +137,17 @@ export const ChapterGenericDiv4 = tw.div`
   items-center
   justify-center
   lg:py-[160px]
+  py-[80px]
   bg-[#fbfaef]
   `;
 
 export const ContainerCard = tw.div`
 h-auto w-[500px]
 flex flex-col
-items-left
+items-center
 justify-center
 py-[60px]
-lg:py-[140px]
+lg:py-[20px]
 px-[60px]
 lg:px-[0px]
 `;
@@ -167,7 +166,7 @@ export const ContainerCard3 = tw.div`
     absolute
     z-10
     h-auto w-[80%] lg:w-[460px]
-    bg-[#ffffff99]
+    bg-[#fbfaef99]
     px-[40px]
     py-[34px]
     lg:px-[56px]
@@ -175,6 +174,17 @@ export const ContainerCard3 = tw.div`
     rounded-lg
     backdrop-blur-md
   `;
+
+  export const ContainerCard4 = tw.div`
+h-auto w-[500px]
+flex flex-col
+items-left
+justify-center
+py-[60px]
+lg:py-[20px]
+px-[60px]
+lg:px-[0px]
+`;
 
 export const Grafico = tw.div`
   m-auto
@@ -232,49 +242,17 @@ export const TextCreditos2 = tw.div`
   text-center
 `;
 
-export const TextHighlightBlue = tw.div`
+export const TextGreen = tw.div`
   font-libre font-[400] 
   inline-block
   text-[14px]
   text-left
   lg:leading-[150%]
   text-white
-  bg-[#29557D]
+  bg-[#629648]
   px-2
   py-0
-`;
-
-export const TextHighlightBlueUm = tw.div`
-  font-libre font-[400] 
-  inline-block
-  text-[14px]
-  text-left
-  lg:leading-[150%]
-  text-white
-  bg-[#000000]
-  px-2
-  py-0
-`;
-
-export const TextHighlightBlueDois = tw.div`
-  font-libre font-[400] 
-  inline-block
-  text-[14px]
-  text-left
-  lg:leading-[150%]
-  text-white
-  bg-[#6F9CB7]
-  px-2
-  py-0
-`;
-// selection:bg-[#ef4444] selection:text-white
-
-export const TextHighlightDark = tw.div`
-  font-libre font-[700] 
-  text-[15px]
-  text-left
-  lg:leading-[150%]
-  text-black
+  rounded-md
 `;
 
 export const TextCard = tw.div`
@@ -314,10 +292,23 @@ lg:leading-[150%]
 text-black
 `;
 
-export const TextLegenda = tw.div`
-font-libre font-[600] italic
-text-[14px]
+export const TextLegendaBold = tw.div`
+font-libre font-[600]
+text-[12px]
 text-left
 lg:leading-[150%]
 text-black
+inline
+mr-[4px]
+`;
+
+export const TextLegenda = tw.div`
+font-libre font-[400]
+text-[12px]
+text-left
+lg:leading-[150%]
+text-black
+lg:mb-[28px]
+mb-[16px]
+inline
 `;
