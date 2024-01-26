@@ -320,7 +320,7 @@ export default function SubsidioSPPO() {
         scrollZoom={false}
         showLayers={false}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
-        mapStyle="mapbox://styles/escritoriodedados/cl6e3p6as001814qxcun8bjo1"
+        mapStyle="mapbox://styles/escritoriodedados/clox9b6ie00iv01qd332b2xmc"
         layers={layers}
         location={location}
         mapCSS={{

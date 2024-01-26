@@ -34,9 +34,9 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
-      <img src={logo} className="w-24 mt-[2vh]  lg:w-32"></img>
+      <img src={logo} className="w-24 mt-[2vh] lg:w-52"></img>
       <styles.Title>
-        Mais de 1.300 construções irregulares a menos no Rio de Janeiro
+      Rio Acima, Rio Abaixo: As Iniciativas da Prefeitura na Prevenção de Enchentes
       </styles.Title>
       {/* <styles.Subtitle>
         Segurança para os moradores, Prejuízo para o crime organizado,
@@ -52,24 +52,6 @@ export function Capa(
             rel="noreferrer"
           >
             Escritório de Dados
-          </a>
-          ,{" "}
-          <a
-            className="font-bold underline"
-            href="http://www.rio.rj.gov.br/web/seop"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Secretaria Municipal de Ordem Pública{" "}
-          </a>
-          e{" "}
-          <a
-            className="font-bold underline"
-            href="http://www.rio.rj.gov.br/web/smac"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Secretaria Municipal de Meio Ambiente da Cidade
           </a>
         </styles.AuthorText>
       </div>

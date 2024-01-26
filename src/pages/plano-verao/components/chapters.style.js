@@ -5,15 +5,15 @@ import tw from "tailwind-styled-components";
 import capa from "../images/capa.gif";
 
 export const CapaDivSC = styled.div`
-  background-image: url(${capa});
   background-size: cover;
   background-position: center;
+  background-color: #ffffff99;
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
   h-screen w-full
   flex flex-col 
-  justify-between items-center 
+  justify-start items-center 
   pl-5 pr-5  
 `;
 // lg:mr-20 lg:ml-20
@@ -21,11 +21,11 @@ export const CapaDiv = tw(CapaDivSC)`
 // sm:w
 export const Title = tw.div`
   mt-[10%]
-  lg:mt-[21%]
+  lg:mt-[340px]
   lg:mb-3    
   font-serif font-bold  
-  text-4xl text-center text-white
-  lg:text-4xl
+  text-4xl text-center text-black
+  lg:text-3xl
   max-w-3xl
   `;
 
@@ -40,7 +40,7 @@ export const AuthorText = tw.div`
   mb-[15%]
   lg:mb-[45%]
   font-serif
-  text-sm text-center text-white
+  text-sm text-center text-black
   lg:text-base
   max-w-4xl
 `;
@@ -65,7 +65,7 @@ export const IntroTitle = tw.div`
 
 export const IntroText = tw.div`
   font-serif  
-  text-lg text-justify text-white 
+  text-lg text-justify text-black
   leading-normal 
   opacity-100
 `;
@@ -95,10 +95,10 @@ export const IntroDiv = tw.div`
   bg-opacity-40 backdrop-blur
   flex flex-col 
   justify-center items-center 
-  bg-black/50
+  bg-white/80
   pr-[10%] pl-[10%]
-  lg:pr-[25%]
-  lg:pl-[25%]
+  lg:pr-[35%]
+  lg:pl-[35%]
 `;
 
 export const Footer = tw.div`
@@ -134,23 +134,27 @@ export const NewsTitle = tw.div`
 `;
 
 export const ContainerCard = tw.div`
-  p-5
+  p-[50px]
   bg-opacity-[20%] backdrop-blur-sm
-bg-black/75
+  bg-white/75
   max-w-xs
   lg:max-w-3xl
+  border-[2px]
+  border-black
 `;
 
 export const ContainerCard1 = tw.div`
-  p-5
+  p-[50px]
   bg-opacity-[20%] backdrop-blur-sm
-  bg-black/75
+  bg-white/75
   max-w-xs
   lg:max-w-lg
+  border-[2px]
+  border-black
 `;
 
 const TextCardSC = styled.div`
-  color: #ffffff;
+  color: black;
 `;
 
 export const TextCard = tw(TextCardSC)`
@@ -183,7 +187,7 @@ export const Grid = tw.div`
 `;
 
 const BigNumberSC = styled.div`
-  color: #a96e04;
+  color: black;
   font-weight: 700;
 `;
 
@@ -205,7 +209,7 @@ export const BigNumber1 = tw(BigNumber)`
 `;
 
 const TextyellowSC = styled.div`
-  background: #a96e04;
+  background: black;
 `;
 
 export const Textyellow = tw(TextyellowSC)`
