@@ -54,6 +54,9 @@ export default function Home() {
           <Link to="/especial-seop/demolicoes">Especial SEOP | Demolicoes</Link>
         </li>
         <li>
+          <Link to="/especial-seop/demolicoes">Dataviz | Plano Verão</Link>
+        </li>
+        <li>
           <Link to="/especial-carnaval/2023">Especial Carnaval | 2023</Link>
         </li>
         <li>

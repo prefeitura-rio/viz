@@ -8,6 +8,7 @@ import { LoadingObras } from "./pages/obras/loading";
 import { LoadingSubsidioSPPO } from "./pages/subsidio-sppo/loading";
 import { LoadingSeopCep } from "./pages/seop-cep/loading";
 import { LoadingCarnaval2023 } from "./pages/carnaval-2023/loading";
+import { LoadingPlanoVerao } from "./pages/plano-verao/loading";
 import { LoadingPainelInvestimento } from "./pages/painel-investimentos/loading";
 import { LoadingEnchentes } from "./pages/enchentes/loading";
 import { LoadingParques } from "./pages/parques/loading";
@@ -55,6 +56,13 @@ const CepSEOP = lazy(() => {
 const Carnaval2023 = lazy(() => {
   return Promise.all([
     import("./pages/carnaval-2023/story"),
+    new Promise((resolve) => setTimeout(resolve, 1)),
+  ]).then(([moduleExports]) => moduleExports);
+});
+
+const VizPlanoVerao = lazy(() => {
+  return Promise.all([
+    import("./pages/plano-verao/story"),
     new Promise((resolve) => setTimeout(resolve, 1)),
   ]).then(([moduleExports]) => moduleExports);
 });
@@ -187,6 +195,14 @@ function App() {
             <Route
               path="/especial-carnaval/2023"
               element={<Carnaval2023 />}
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<LoadingPlanoVerao />}>
+          <Routes>
+            <Route
+              path="/plano-verao"
+              element={<VizPlanoVerao />}
             ></Route>
           </Routes>
         </Suspense>
