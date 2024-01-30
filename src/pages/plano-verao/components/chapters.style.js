@@ -47,9 +47,9 @@ export const AuthorText = tw.div`
 
 export const Credito = tw.div`
   mb-7
-  lg:mb-7
+  lg:mb-10
   font-serif
-  text-sm text-left text-white
+  text-sm text-left text-black
   lg:text-sm
   lg:text-left
   
@@ -57,7 +57,7 @@ export const Credito = tw.div`
 
 export const IntroTitle = tw.div`
   font-bold  font-serif
-  text-3xl text-left text-white
+  text-3xl text-left text-black
   self-start
   mb-6
   lg:self-start
@@ -66,6 +66,12 @@ export const IntroTitle = tw.div`
 export const IntroText = tw.div`
   font-serif  
   text-lg text-justify text-black
+  leading-normal 
+  opacity-100
+`;
+export const IntroText1 = tw.div`
+  font-serif  
+  text-lg text-center text-black
   leading-normal 
   opacity-100
 `;
@@ -97,8 +103,8 @@ export const IntroDiv = tw.div`
   justify-center items-center 
   bg-white/80
   pr-[10%] pl-[10%]
-  lg:pr-[35%]
-  lg:pl-[35%]
+  lg:pr-[32%]
+  lg:pl-[32%]
 `;
 
 export const Footer = tw.div`
@@ -116,6 +122,8 @@ export const NewsImage = tw.img`
 w-full
 mb-3
 mt-[2%]
+border-[2px]
+border-black
 `;
 
 export const NewsImage1 = tw.img`
@@ -145,7 +153,7 @@ export const ContainerCard = tw.div`
 
 export const ContainerCard1 = tw.div`
   p-[50px]
-  bg-opacity-[20%] backdrop-blur-sm
+  bg-opacity-[20%] backdrop-blur-md
   bg-white/75
   max-w-xs
   lg:max-w-lg
@@ -166,6 +174,15 @@ export const TextCard = tw(TextCardSC)`
 export const TextCard1 = tw(TextCardSC)`
   font-serif  
   text-lg
+  text-left
+  mt-0
+  mb-0
+`;
+
+export const TextCard2 = tw(TextCardSC)`
+  font-serif  
+  text-lg
+  font-bold
   text-left
   mt-0
   mb-0
@@ -209,10 +226,12 @@ export const BigNumber1 = tw(BigNumber)`
 `;
 
 const TextyellowSC = styled.div`
-  background: black;
+  background: #000000;
 `;
 
 export const Textyellow = tw(TextyellowSC)`
   text-white
   inline
+  p-[4px]
+  leading-[32px]
 `;

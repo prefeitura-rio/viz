@@ -170,12 +170,12 @@ export const Seop1 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.32527,
-          lat: -22.9864,
+          lon: -43.20326,
+          lat: -22.91193,
         },
-        zoom: 15.85,
-        pitch: 41.0,
-        bearing: 17.2,
+        zoom: 18.56,
+        pitch: 38.03,
+        bearing: 126.18,
         duration: 4000,
       },
       mobile: {
@@ -412,12 +412,12 @@ export const Exemplo1 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.32527,
-          lat: -22.9864,
+          lon: -43.35617,
+          lat: -22.82552,
         },
         zoom: 15.85,
         pitch: 41.0,
-        bearing: 17.2,
+        bearing: 7.2,
         duration: 4000,
       },
       mobile: {
@@ -446,12 +446,12 @@ export const Exemplo2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.34213,
-          lat: -22.98032,
+          lon: -43.33758,
+          lat: -22.87102,
         },
-        zoom: 15.85,
-        pitch: 44.5,
-        bearing: 46.0,
+        zoom: 16.89,
+        pitch: 36.95,
+        bearing: 9.60,
         duration: 4000,
       },
       mobile: {

@@ -44,8 +44,8 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Capa().layers);
         break;
       case "intro":
-        setPosition(chapterMap.Intro().location);
-        setLayers(chapterMap.Intro().layers);
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
         break;
       case "zoom":
@@ -73,8 +73,8 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Solucao().layers);
         break;
       case "prejuizo":
-        setPosition(chapterMap.Prejuizo().location);
-        setLayers(chapterMap.Prejuizo().layers);
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
       case "grafico":
         setPosition(chapterMap.Grafico().location);
@@ -227,7 +227,7 @@ export default function SubsidioSPPO() {
     }
     const tl4 = gsap.timeline();
     tl4.to(num, {
-      var: 646,
+      var: 2100,
       duration: 1,
       onUpdate: changeNumber,
     });
@@ -337,20 +337,20 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
-      <chapterDiv.Zoom id={"zoom"} />
+      <chapterDiv.Prejuizo id={"prejuizo"} />
+      {/* <chapterDiv.Zoom id={"zoom"} /> */}
       <chapterDiv.Exemplo1 id={"exemplo1"} />
       <chapterDiv.Exemplo2 id={"exemplo2"} />
       {/* <chapterDiv.Exemplo3 id={"exemplo3"} /> */}
       <chapterDiv.Oeste id={"oeste"} />
-      <chapterDiv.Mapa id={"mapa"} />
-      <chapterDiv.Solucao id={"solucao"} />
-      <chapterDiv.Prejuizo id={"prejuizo"} />
-      <chapterDiv.Grafico id={"grafico"} />
-      <chapterDiv.Acompanhe id={"acompanhe"} />
       <chapterDiv.Seop1 id={"seop1"} />
       <chapterDiv.Seop2 id={"seop2"} />
       <chapterDiv.Seop3 id={"seop3"} />
-      <chapterDiv.Seop4 id={"seop4"} />
+      {/* <chapterDiv.Mapa id={"mapa"} /> */}
+      <chapterDiv.Solucao id={"solucao"} />
+      {/* <chapterDiv.Grafico id={"grafico"} />
+      <chapterDiv.Acompanhe id={"acompanhe"} />
+      <chapterDiv.Seop4 id={"seop4"} /> */}
       <chapterDiv.Fim id={"fim"} />
     </>
   );
