@@ -15,6 +15,7 @@ export const CapaDiv = tw(CapaDivSC)`
   flex flex-col 
   justify-start items-center 
   pl-5 pr-5  
+  bg-opacity-40 backdrop-blur
 `;
 // lg:mr-20 lg:ml-20
 // sm:ml-30 sm:mr-30
@@ -52,7 +53,7 @@ export const Credito = tw.div`
   text-sm text-left text-black
   lg:text-sm
   lg:text-left
-  
+  font-serif italic 
 `;
 
 export const IntroTitle = tw.div`
