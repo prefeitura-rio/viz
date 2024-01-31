@@ -540,7 +540,7 @@ export function Oeste(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
+    <styles.IntroDivMaior ref={props.chapRef} id={props.id}>
       <styles.IntroTitle id={"zonaOesteTitle"}>
         Onde estão localizadas as construções irregulares
       </styles.IntroTitle>
@@ -553,7 +553,7 @@ export function Oeste(
       <br /><br />
       Podas de árvores e a limpeza urbana são outros pontos importantes na prevenção. Foram realizadas 150 mil podas, um serviço importante para evitar que a queda de árvores durante temporais.
       </styles.IntroText>
-    </styles.IntroDiv>
+    </styles.IntroDivMaior>
   );
 }
 
