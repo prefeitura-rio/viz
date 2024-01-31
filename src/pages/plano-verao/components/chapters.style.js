@@ -12,7 +12,8 @@ export const CapaDivSC = styled.div`
 export const CapaDiv = tw(CapaDivSC)`
   h-screen w-full
   flex flex-col 
-  justify-start items-center 
+  justify-between
+  lg:justify-start items-center 
   pl-5 pr-5  
   bg-white/80
   bg-opacity-40 backdrop-blur
@@ -25,7 +26,7 @@ export const Title = tw.div`
   lg:mt-[340px]
   lg:mb-3    
   font-serif font-bold  
-  text-4xl text-center text-black
+  text-2xl text-center text-black
   lg:text-3xl
   max-w-3xl
   `;
@@ -38,16 +39,18 @@ export const Title = tw.div`
 // `;
 
 export const AuthorText = tw.div`
+  mt-[20px]
   mb-[15%]
   lg:mb-[10%]
   font-serif
   text-sm text-center text-black
   lg:text-sm
   max-w-4xl
+  leading-[150%]
 `;
 
 export const Button = tw.div`
-  mb-[15%]
+  mb-[60%]
   lg:mb-[85%]
   font-serif
   text-sm text-center text-black
@@ -76,7 +79,7 @@ export const IntroTitle = tw.div`
 export const IntroText = tw.div`
   font-serif  
   text-lg text-justify text-black
-  leading-normal 
+  leading-normal
   opacity-100
 `;
 export const IntroText1 = tw.div`
@@ -106,7 +109,7 @@ export const ChapterGenericDivn = tw.div`
 
 export const ChapterGenericDiv1 = tw.div`
   flex
-  w-full h-[150vh] 
+  w-full h-[200vh] 
   items-center
   justify-center
   lg:justify-start
@@ -204,7 +207,7 @@ export const TextCard2 = tw(TextCardSC)`
   font-bold
   text-left
   mt-0
-  mb-0
+  mb-[10px]
   lg:mb-[10px]
   `;
 
@@ -253,7 +256,7 @@ export const Textyellow = tw(TextyellowSC)`
   text-white
   inline
   p-[4px]
-  leading-[32px]
+  leading-[190%]
 `;
 
 const TextblackSC = styled.div`
@@ -264,7 +267,7 @@ export const Textblack = tw(TextblackSC)`
   text-white
   inline
   p-[4px]
-  leading-[32px]
+  leading-normal
 `;
 
 const TextgreySC = styled.div`
@@ -275,5 +278,5 @@ export const Textgrey = tw(TextgreySC)`
   text-black
   inline
   p-[2px]
-  leading-[32px]
+  leading-normal
 `;

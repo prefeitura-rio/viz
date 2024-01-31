@@ -35,8 +35,8 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
-      <img src={logo} className="w-24 mt-[2vh] lg:w-52"></img>
-      <styles.Title>
+      <img src={logo} className="w-36 mt-[2vh] lg:w-52"></img>
+      <div><styles.Title>
       Plano Verão: As Iniciativas da Prefeitura do Rio de Janeiro na Prevenção de Enchentes
       </styles.Title>
       {/* <styles.Subtitle>
@@ -57,7 +57,9 @@ export function Capa(
           {" "}
           da Prefeitura da Cidade do Rio de Janeiro
         </styles.AuthorText>
-        <div>
+        </div>        
+      </div>
+      <div>
           <styles.Button>
           <a
             className="font-bold underline"
@@ -68,7 +70,6 @@ export function Capa(
           </a>
           </styles.Button>
           </div>
-      </div>
     </styles.CapaDiv>
   );
 }
@@ -499,7 +500,7 @@ export function Fim(
       <a href={"https://www.dados.rio/"}>
         <img
           src={logoed}
-          className="w-44 mt-[100px] lg:mt-[200px] lg:w-56"
+          className="w-44 mt-[200px] lg:mt-[200px] lg:w-56"
         ></img>
       </a>
     </styles.IntroDiv>
