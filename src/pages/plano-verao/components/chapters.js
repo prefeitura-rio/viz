@@ -189,12 +189,12 @@ export function Exemplo1(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
+      <styles.TextCard2><styles.Textyellow>Desassoreamento do Rio Acari</styles.Textyellow></styles.TextCard2>
+        <br /> 
         <styles.NewsImage src={exemplo1}></styles.NewsImage>
         <styles.Credito>
           Divulgação: Fundação Rio-Águas
-        </styles.Credito>
-        <styles.TextCard2><styles.Textyellow>Desassoreamento do Rio Acari</styles.Textyellow></styles.TextCard2>
-        <br />   
+        </styles.Credito>  
         <styles.TextCard1>
         Em 2023, o investimento em desassoreamento de rios já totalizou 555,4 mil toneladas de lixo. As ações são referentes à limpeza, ao desassoreamento e à manutenção de rios como o Rio Acari, o Rio Ita (Santa Cruz), o Rio Campinho (Campo Grande), entre outros. Além disso, também são realizadas a recuperação estrutural e a limpeza de canaletas de drenagem em encostas, além de manutenção e operação dos reservatórios.
         <br /> <br />
@@ -227,11 +227,11 @@ export function Exemplo2(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
+      <styles.TextCard2><styles.Textyellow>Obra de drenagem no entorno do Mercadão de Madureira</styles.Textyellow></styles.TextCard2>
         <styles.NewsImage src={exemplo2}></styles.NewsImage>
         <styles.Credito>
         Divulgação: Fundação Rio-Águas
-        </styles.Credito>
-        <styles.TextCard2><styles.Textyellow>Obra de drenagem no entorno do Mercadão de Madureira</styles.Textyellow></styles.TextCard2>
+        </styles.Credito>       
         <br />
         <styles.TextCard1>
         Ao todo, 35 obras contra riscos hidrológicos foram realizadas nos últimos três anos, um investimento de mais de R$ 78 milhões. Atualmente seis estão em execução, como as do Mercadão de Madureira, Bairro Maravilha Jardim Maravilha e na Comunidade do Rollas, e as obras de canalização do Rio Tindiba e na Pavuna.
@@ -324,11 +324,11 @@ export function Seop3(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
+      <styles.TextCard2><styles.Textyellow>Novo radar meteorológico do Rio</styles.Textyellow></styles.TextCard2>
         <styles.NewsImage src={seop3}></styles.NewsImage>
         <styles.Credito>
           Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
-        <styles.TextCard2><styles.Textyellow>Novo radar meteorológico do Rio</styles.Textyellow></styles.TextCard2>
+        </styles.Credito>        
         <br />
         <styles.TextCard1>
         Com um investimento de R$ 6,8 milhões, via Parceria Público-Privada firmada pela Rioluz, o radar de tecnologia ‘banda X’, é considerado o mais moderno em equipamentos deste tipo e que entrará em dezembro em operação. O novo equipamento é capaz de fazer a leitura de chuva de granizo com antecedência de até três horas e será instalado na Serra do Mendanha, na Zona Oeste.
@@ -351,11 +351,11 @@ export function Seop2(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
+      <styles.TextCard2><styles.Textyellow>Centro de Operações Rio</styles.Textyellow></styles.TextCard2>
         <styles.NewsImage src={seop2}></styles.NewsImage>
         <styles.Credito>
         Divulgação: Centro de Operações Rio
-        </styles.Credito>
-        <styles.TextCard2><styles.Textyellow>Centro de Operações Rio</styles.Textyellow></styles.TextCard2>
+        </styles.Credito>        
         <br />
         <styles.TextCard1>
         Para se manter na vanguarda do que há de mais avançado em monitoramento no mundo, o Centro de Operações Rio (COR) investiu em novas aquisições tecnológicas. Após ampliar em 40% seu vídeo wall, que passou a ter 104 metros quadrados, composto por 125 telas de 55 polegadas e em alta resolução, um novo radar meteorológico foi adquirido.
@@ -398,7 +398,8 @@ export function Seop1(props = { id: "", chapRef: null }) {
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <ImgComparisonSlider hover="hover" tabindex="0" class="rendered">
+      <styles.TextCard2><styles.Textyellow>Bairro Maravilha: Rua Francisco Fragoso</styles.Textyellow></styles.TextCard2>
+        <ImgComparisonSlider hover="hover" tabindex="0" class="rendered border-[2px] border-black">
           <img
             slot="first"
             src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BM%20ANTES.jpg"
@@ -413,15 +414,13 @@ export function Seop1(props = { id: "", chapRef: null }) {
         </ImgComparisonSlider>
         <styles.Credito>
           Divulgação: Prefeitura da Cidade do Rio Janeiro / Marcos de Paula
-        </styles.Credito>
-        <styles.TextCard2><styles.Textyellow>Bairro Maravilha</styles.Textyellow></styles.TextCard2>
+        </styles.Credito>       
         <br />
         <styles.TextCard1>
           Outro projeto que atua diretamente na prevenção das chuvas é o Bairro Maravilha, responsável por urbanizar e levar infraestrutura à população. Já são 92 localidades beneficiadas e, até o fim de 2023, serão 49 km de ruas requalificadas, com R$ 977 milhões em investimentos no total.
           <br /> <br />
           Neste ano, a Prefeitura do Rio iniciou o projeto Morar Carioca na comunidade do Aço, em Santa Cruz, na Zona Oeste. Com um investimento de R$ 243 milhões, em uma área de 195 mil metros quadrados, a comunidade do Aço ganhará 704 unidades habitacionais, que vão beneficiar diretamente quatro mil pessoas, além de melhorias em infraestrutura urbana.
-
-        </styles.TextCard1>
+          </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
   );
@@ -489,13 +488,13 @@ export function Fim(
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"fimTitle"}>Próximos passos</styles.IntroTitle> */}
-      <styles.TextCard2><styles.Textblack>Prefeito</styles.Textblack></styles.TextCard2>
+      <styles.TextCard3><styles.Textblack>Prefeito</styles.Textblack></styles.TextCard3>
       <styles.IntroText1>Eduardo Paes</styles.IntroText1>
       <br /> <br />
-      <styles.TextCard2><styles.Textblack>Autores</styles.Textblack></styles.TextCard2>
+      <styles.TextCard3><styles.Textblack>Autores</styles.Textblack></styles.TextCard3>
       <styles.IntroText1>Caio Jacintho<br />Diego Oliveira<br />Judite Cypreste<br />Lucas Tavares</styles.IntroText1>
       <br /> <br />
-      <styles.TextCard2><styles.Textblack>Agradecimentos</styles.Textblack></styles.TextCard2>
+      <styles.TextCard3><styles.Textblack>Agradecimentos</styles.Textblack></styles.TextCard3>
       <styles.IntroText1>Joice Nascimento<br />João Carabetta<br />João Marcelo<br />Gabriela Hilário</styles.IntroText1>
       <a href={"https://www.dados.rio/"}>
         <img

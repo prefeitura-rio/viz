@@ -26,7 +26,7 @@ export const Title = tw.div`
   lg:mt-[340px]
   lg:mb-3    
   font-serif font-bold  
-  text-2xl text-center text-black
+  text-3xl text-center text-black
   lg:text-3xl
   max-w-3xl
   `;
@@ -178,7 +178,7 @@ export const ContainerCard1 = tw.div`
   bg-opacity-[20%] backdrop-blur-md
   bg-white/75
   max-w-xs
-  lg:max-w-lg
+  lg:max-w-md
   border-[2px]
   border-black
 `;
@@ -196,19 +196,29 @@ export const TextCard = tw(TextCardSC)`
 export const TextCard1 = tw(TextCardSC)`
   font-serif  
   text-lg
-  text-left
+  text-justify
   mt-0
   mb-0
 `;
 
 export const TextCard2 = tw(TextCardSC)`
   font-serif  
-  text-lg
+  text-2xl
   font-bold
   text-left
   mt-0
-  mb-[10px]
-  lg:mb-[10px]
+  mb-[30px]
+  lg:mb-[48px]
+  `;
+
+  export const TextCard3 = tw(TextCardSC)`
+  font-serif  
+  text-2xl
+  font-bold
+  text-left
+  mt-0
+  mb-[8px]
+  lg:mb-[48px]
   `;
 
 export const Grid1 = tw.div`
@@ -249,33 +259,39 @@ export const BigNumber1 = tw(BigNumber)`
 `;
 
 const TextyellowSC = styled.div`
-  background: #06639d;
+  /* background: #000; */
+  /* background: #06639d; */
 `;
 
 export const Textyellow = tw(TextyellowSC)`
-  text-white
+  text-black
+  font-bold
+  underline
   inline
   p-[4px]
-  leading-[190%]
+  leading-[130%]
 `;
 
 const TextblackSC = styled.div`
-  background: #000;
+  /* background: #000; */
 `;
 
 export const Textblack = tw(TextblackSC)`
-  text-white
+  text-black
+  font-bold
+  underline
   inline
   p-[4px]
   leading-normal
 `;
 
 const TextgreySC = styled.div`
-  background: #e9f3fe;
+  /* background: #e9f3fe; */
 `;
 
 export const Textgrey = tw(TextgreySC)`
   text-black
+  font-bold
   inline
   p-[2px]
   leading-normal
