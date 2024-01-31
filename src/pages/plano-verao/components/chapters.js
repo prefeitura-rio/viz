@@ -162,8 +162,8 @@ export function Exemplo0(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-    </styles.ChapterGenericDiv1>
+    <styles.ChapterGenericDivn ref={props.chapRef} id={props.id}>
+    </styles.ChapterGenericDivn>
   );
 }
 export function Exemplo1(
