@@ -51,6 +51,10 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Zoom().location);
         setLayers(chapterMap.Zoom().layers);
         break;
+      case "exemplo0":
+        setPosition(chapterMap.Exemplo0().location);
+        setLayers(chapterMap.Exemplo0().layers);
+        break;
       case "exemplo1":
         setPosition(chapterMap.Exemplo1().location);
         setLayers(chapterMap.Exemplo1().layers);
@@ -153,6 +157,13 @@ export default function SubsidioSPPO() {
       trigger: "#zoom",
       onToggle: () => {
         setChapterNumberMap("zoom");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#exemplo0",
+      onToggle: () => {
+        setChapterNumberMap("exemplo0");
       },
     });
 
@@ -339,6 +350,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Intro id={"intro"} />
       <chapterDiv.Prejuizo id={"prejuizo"} />
       {/* <chapterDiv.Zoom id={"zoom"} /> */}
+      <chapterDiv.Exemplo0 id={"exemplo0"} />
       <chapterDiv.Exemplo1 id={"exemplo1"} />
       <chapterDiv.Exemplo2 id={"exemplo2"} />
       {/* <chapterDiv.Exemplo3 id={"exemplo3"} /> */}

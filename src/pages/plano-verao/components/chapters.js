@@ -153,6 +153,19 @@ export function Grafico(
   );
 }
 
+export function Exemplo0(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDivn ref={props.chapRef} id={props.id}>
+    </styles.ChapterGenericDivn>
+  );
+}
 export function Exemplo1(
   props = {
     id: "",

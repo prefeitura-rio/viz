@@ -86,6 +86,15 @@ export const ChapterGenericDiv = tw.div`
   -z-10
   `;
 
+export const ChapterGenericDivn = tw.div`
+  flex
+  w-full h-[50vh]
+  items-center
+  justify-center
+  text-white
+  -z-10
+  `;
+
 export const ChapterGenericDiv1 = tw.div`
   flex
   w-full h-[150vh] 
