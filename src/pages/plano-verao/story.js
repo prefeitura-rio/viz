@@ -223,11 +223,11 @@ export default function SubsidioSPPO() {
       num = { var: startCount };
     function changeNumber() {
       // id of the element you want to change
-      number.innerHTML = num.var.toFixed();
+      number.innerHTML = `${num.var.toFixed(1)}`;
     }
     const tl4 = gsap.timeline();
     tl4.to(num, {
-      var: 2100,
+      var: 2.1, 
       duration: 1,
       onUpdate: changeNumber,
     });

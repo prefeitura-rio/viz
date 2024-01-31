@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import * as styles from "./chapters.style";
 import tw from "tailwind-styled-components";
+import { ImgComparisonSlider } from "@img-comparison-slider/react";
 // import ReactDOM from "react-dom";
 // import DWChart from "react-datawrapper-chart";
 
@@ -119,7 +120,7 @@ export function Prejuizo(
           <styles.Grid1>
             <styles.BigNumber>R$</styles.BigNumber>
             <styles.BigNumber id="number">0</styles.BigNumber>
-            <styles.BigNumber1>milhões</styles.BigNumber1>
+            <styles.BigNumber1>Bilhões</styles.BigNumber1>
           </styles.Grid1>
           <styles.TextCard>
           Com um investimento total de R$ 2,1 bilhões, o Plano Verão implementou 308 ações preventivas desde 2021. 
@@ -341,32 +342,65 @@ export function Seop2(
   );
 }
 
-export function Seop1(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
+// export function Seop1(
+//   props = {
+//     id: "",
+//     chapRef: null,
+//   }
+// ) {
+//   props = setDefaultProps(props);
+
+//   return (
+//     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+//       <styles.ContainerCard1>
+//         <styles.NewsImage src={seop1}></styles.NewsImage>
+//         <styles.Credito>
+//           Divulgação: Prefeitura da Cidade do Rio Janeiro / Marcos de Paula
+//         </styles.Credito>
+//         <styles.TextCard2><styles.Textyellow>Bairro Maravilha</styles.Textyellow></styles.TextCard2>
+//         <br />
+//         <styles.TextCard1>
+//         Outro projeto que atua diretamente na prevenção das chuvas é o Bairro Maravilha, responsável por urbanizar e levar infraestrutura à população. Já são 92 localidades beneficiadas e, até o fim de 2023, serão 49 km de ruas requalificadas, com R$ 977 milhões em investimentos no total. 
+//         <br /> <br />
+//         Neste ano, a Prefeitura do Rio iniciou o projeto Morar Carioca na comunidade do Aço, em Santa Cruz, na Zona Oeste. Com um investimento de R$ 243 milhões, em uma área de 195 mil metros quadrados, a comunidade do Aço ganhará 704 unidades habitacionais, que vão beneficiar diretamente quatro mil pessoas, além de melhorias em infraestrutura urbana.        </styles.TextCard1>
+//       </styles.ContainerCard1>
+//     </styles.ChapterGenericDiv1>
+//   );
+// }
+export function Seop1(props = { id: "", chapRef: null }) {
   props = setDefaultProps(props);
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={seop1}></styles.NewsImage>
+        <ImgComparisonSlider hover="hover" tabindex="0" class="rendered">
+          <img
+            slot="first"
+            src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BM%20ANTES.jpg"
+          />
+          <img
+            slot="second"
+            src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BM%20DEPOIS.jpg"
+          />
+          <svg slot="handle" class="custom-animated-handle" xmlns="http://www.w3.org/2000/svg" width="100" viewBox="-8 -3 16 6">
+            <path stroke="#fff" d="M -5 -2 L -7 0 L -5 2 M -5 -2 L -5 2 M 5 -2 L 7 0 L 5 2 M 5 -2 L 5 2" stroke-width="1" fill="#fff" vector-effect="non-scaling-stroke"></path>
+          </svg>
+        </ImgComparisonSlider>
         <styles.Credito>
           Divulgação: Prefeitura da Cidade do Rio Janeiro / Marcos de Paula
         </styles.Credito>
         <styles.TextCard2><styles.Textyellow>Bairro Maravilha</styles.Textyellow></styles.TextCard2>
         <br />
         <styles.TextCard1>
-        Outro projeto que atua diretamente na prevenção das chuvas é o Bairro Maravilha, responsável por urbanizar e levar infraestrutura à população. Já são 92 localidades beneficiadas e, até o fim de 2023, serão 49 km de ruas requalificadas, com R$ 977 milhões em investimentos no total. 
-        <br /> <br />
-        Neste ano, a Prefeitura do Rio iniciou o projeto Morar Carioca na comunidade do Aço, em Santa Cruz, na Zona Oeste. Com um investimento de R$ 243 milhões, em uma área de 195 mil metros quadrados, a comunidade do Aço ganhará 704 unidades habitacionais, que vão beneficiar diretamente quatro mil pessoas, além de melhorias em infraestrutura urbana.        </styles.TextCard1>
+          Outro projeto que atua diretamente na prevenção das chuvas é o Bairro Maravilha, responsável por urbanizar e levar infraestrutura à população. Já são 92 localidades beneficiadas e, até o fim de 2023, serão 49 km de ruas requalificadas, com R$ 977 milhões em investimentos no total.
+          <br /> <br />
+          Neste ano, a Prefeitura do Rio iniciou o projeto Morar Carioca na comunidade do Aço, em Santa Cruz, na Zona Oeste. Com um investimento de R$ 243 milhões, em uma área de 195 mil metros quadrados, a comunidade do Aço ganhará 704 unidades habitacionais, que vão beneficiar diretamente quatro mil pessoas, além de melhorias em infraestrutura urbana.
+
+        </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
   );
 }
-
 export function Zoom(
   props = {
     id: "",
