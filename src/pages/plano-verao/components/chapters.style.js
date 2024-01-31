@@ -7,7 +7,6 @@ import capa from "../images/capa.gif";
 export const CapaDivSC = styled.div`
   background-size: cover;
   background-position: center;
-  background-color: #ffffff99;
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
@@ -15,6 +14,7 @@ export const CapaDiv = tw(CapaDivSC)`
   flex flex-col 
   justify-start items-center 
   pl-5 pr-5  
+  bg-white/80
   bg-opacity-40 backdrop-blur
 `;
 // lg:mr-20 lg:ml-20
@@ -39,10 +39,19 @@ export const Title = tw.div`
 
 export const AuthorText = tw.div`
   mb-[15%]
-  lg:mb-[45%]
+  lg:mb-[10%]
   font-serif
   text-sm text-center text-black
-  lg:text-base
+  lg:text-sm
+  max-w-4xl
+`;
+
+export const Button = tw.div`
+  mb-[15%]
+  lg:mb-[85%]
+  font-serif
+  text-sm text-center text-black
+  lg:text-sm
   max-w-4xl
 `;
 
@@ -152,17 +161,17 @@ export const NewsTitle = tw.div`
 `;
 
 export const ContainerCard = tw.div`
-  p-[50px]
+  p-[32px]
   bg-opacity-[20%] backdrop-blur-sm
   bg-white/75
   max-w-xs
-  lg:max-w-3xl
+  lg:max-w-xl
   border-[2px]
   border-black
 `;
 
 export const ContainerCard1 = tw.div`
-  p-[50px]
+  p-[32px]
   bg-opacity-[20%] backdrop-blur-md
   bg-white/75
   max-w-xs
@@ -196,7 +205,8 @@ export const TextCard2 = tw(TextCardSC)`
   text-left
   mt-0
   mb-0
-`;
+  lg:mb-[10px]
+  `;
 
 export const Grid1 = tw.div`
   flex
@@ -236,12 +246,34 @@ export const BigNumber1 = tw(BigNumber)`
 `;
 
 const TextyellowSC = styled.div`
-  background: #000000;
+  background: #06639d;
 `;
 
 export const Textyellow = tw(TextyellowSC)`
   text-white
   inline
   p-[4px]
+  leading-[32px]
+`;
+
+const TextblackSC = styled.div`
+  background: #000;
+`;
+
+export const Textblack = tw(TextblackSC)`
+  text-white
+  inline
+  p-[4px]
+  leading-[32px]
+`;
+
+const TextgreySC = styled.div`
+  background: #e9f3fe;
+`;
+
+export const Textgrey = tw(TextgreySC)`
+  text-black
+  inline
+  p-[2px]
   leading-[32px]
 `;

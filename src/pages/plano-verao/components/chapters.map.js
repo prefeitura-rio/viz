@@ -444,7 +444,7 @@ export const Exemplo0 = () => {
             source: "composite",
             "source-layer": "rioacari-0gg46o",
             paint: {
-              "line-width": 15,
+              "line-width": 50,
               "line-blur": 3,
               "line-color": "#003b66"
           }
@@ -505,10 +505,10 @@ export const Exemplo2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.33656,
-          lat: -22.87089,
+          lon: -43.33714,
+          lat: -22.87147,
         },
-        zoom: 18.25,
+        zoom: 17.25,
         pitch: 36.52,
         bearing: -24.12,
         duration: 4000,
