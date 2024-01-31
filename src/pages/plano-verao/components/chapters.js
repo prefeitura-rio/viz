@@ -119,7 +119,7 @@ export function Prejuizo(
           <styles.Grid1>
             <styles.BigNumber>R$</styles.BigNumber>
             <styles.BigNumber id="number">0</styles.BigNumber>
-            <styles.BigNumber1>milhões</styles.BigNumber1>
+            <styles.BigNumber1>bilhões</styles.BigNumber1>
           </styles.Grid1>
           <styles.TextCard>
           Com um investimento total de R$ 2,1 bilhões, o Plano Verão implementou 308 ações preventivas desde 2021. 

@@ -190,27 +190,6 @@ export const Seop1 = () => {
       },
     },
     layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 1,
-        layer: {
-          ...{
-            id: "demolicao-icone",
-            type: "symbol",
-            source: "composite",
-            "source-layer": "demolicao-ar7k7f",
-            layout: {
-              "icon-image": "hospital",
-              "icon-rotate": 45,
-              "icon-allow-overlap": true,
-              "icon-size": 2,
-            },
-            paint: {
-              "icon-opacity": 0,
-            },
-          },
-        },
-      },
     ],
   };
 };
@@ -220,12 +199,12 @@ export const Seop2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.4885,
-          lat: -23.02842,
+          lon: -43.20332,
+          lat: -22.91198,
         },
-        zoom: 14.71,
-        pitch: 51.0,
-        bearing: 11.2,
+        zoom: 18.89,
+        pitch: 42,
+        bearing: 132.80,
         duration: 4000,
       },
       mobile: {
@@ -241,9 +220,19 @@ export const Seop2 = () => {
     },
     layers: [
       {
-        layerType: "reuse",
-        targetOpacity: 1,
-        layer: { id: "demolicao-icone" },
+        layerType: "mapbox",
+        targetOpacity: .75,
+        layer: {
+          ...{
+            id: "cor",
+            type: "fill",
+            source: "composite",
+            "source-layer": "cor-3eu3fz",
+            paint: {
+              "fill-color": "#003b66"
+          }
+          },
+        },
       },
     ],
   };
@@ -274,11 +263,6 @@ export const Seop3 = () => {
       },
     },
     layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 1,
-        layer: { id: "demolicao-icone" },
-      },
     ],
   };
 };
@@ -412,12 +396,12 @@ export const Exemplo1 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.35617,
-          lat: -22.82552,
+          lon: -43.35420,
+          lat: -22.82609,
         },
-        zoom: 15.85,
-        pitch: 41.0,
-        bearing: 7.2,
+        zoom: 16.52,
+        pitch: 46.50,
+        bearing: -72,
         duration: 4000,
       },
       mobile: {
@@ -433,9 +417,21 @@ export const Exemplo1 = () => {
     },
     layers: [
       {
-        layerType: "reuse",
-        targetOpacity: 1,
-        layer: { id: "desabamento-icone" },
+        layerType: "mapbox",
+        targetOpacity: .75,
+        layer: {
+          ...{
+            id: "rioacari",
+            type: "line",
+            source: "composite",
+            "source-layer": "rioacari-0gg46o",
+            paint: {
+              "line-width": 15,
+              "line-blur": 3,
+              "line-color": "#003b66"
+          }
+          },
+        },
       },
     ],
   };
@@ -467,9 +463,19 @@ export const Exemplo2 = () => {
     },
     layers: [
       {
-        layerType: "reuse",
-        targetOpacity: 1,
-        layer: { id: "desabamento-icone" },
+        layerType: "mapbox",
+        targetOpacity: .75,
+        layer: {
+          ...{
+            id: "madureira",
+            type: "fill",
+            source: "composite",
+            "source-layer": "madureira-dh4t8l",
+            paint: {
+              "fill-color": "#003b66"
+          }
+          },
+        },
       },
     ],
   };

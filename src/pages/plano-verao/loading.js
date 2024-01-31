@@ -6,11 +6,11 @@ const LoadingDiv = tw.div`
 w-full h-screen
 flex 
 flex-col
-items-center justify-between 
-text-white
+items-center justify-center 
+text-black
 text-2xl
 lg:text-2xl
-bg-black
+bg-white
 `;
 
 const LoadingImage = tw.img`
@@ -23,8 +23,8 @@ lg:mr-5
 export function LoadingPlanoVerao() {
   return (
     <LoadingDiv>
-      <LoadingImage src={logo}></LoadingImage>
-      <div className="mb-96">carregando ...</div>
+      {/* <LoadingImage src={logo}></LoadingImage> */}
+      <div className="">carregando ...</div>
     </LoadingDiv>
   );
 }

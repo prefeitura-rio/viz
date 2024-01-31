@@ -47,7 +47,6 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Capa().location);
         setLayers(chapterMap.Capa().layers);
         break;
-        break;
       case "zoom":
         setPosition(chapterMap.Zoom().location);
         setLayers(chapterMap.Zoom().layers);
@@ -85,16 +84,16 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Fim().layers);
         break;
       case "seop1":
-        setPosition(chapterMap.Seop1().location);
-        setLayers(chapterMap.Seop1().layers);
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
       case "seop2":
         setPosition(chapterMap.Seop2().location);
         setLayers(chapterMap.Seop2().layers);
         break;
       case "seop3":
-        setPosition(chapterMap.Seop3().location);
-        setLayers(chapterMap.Seop3().layers);
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
       case "seop4":
         setPosition(chapterMap.Seop4().location);
@@ -231,6 +230,7 @@ export default function SubsidioSPPO() {
       duration: 1,
       onUpdate: changeNumber,
     });
+
     ScrollTrigger.create({
       animation: tl4,
       trigger: "#prejuizo",
@@ -316,9 +316,9 @@ export default function SubsidioSPPO() {
   return (
     <>
       <MultilayerMap
-        interactive={false}
-        scrollZoom={false}
-        showLayers={false}
+        interactive={true}
+        scrollZoom={true}
+        showLayers={true}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
         mapStyle="mapbox://styles/escritoriodedados/clox9b6ie00iv01qd332b2xmc"
         layers={layers}
