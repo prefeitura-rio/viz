@@ -84,8 +84,8 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Fim().layers);
         break;
       case "seop1":
-        setPosition(chapterMap.Capa().location);
-        setLayers(chapterMap.Capa().layers);
+        setPosition(chapterMap.Seop1().location);
+        setLayers(chapterMap.Seop1().layers);
         break;
       case "seop2":
         setPosition(chapterMap.Seop2().location);
