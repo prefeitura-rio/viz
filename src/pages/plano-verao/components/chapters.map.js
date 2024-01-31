@@ -391,6 +391,51 @@ export const Oeste = () => {
   };
 };
 
+export const Exemplo0 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.35420,
+          lat: -22.82609,
+        },
+        zoom: 16.52,
+        pitch: 46.50,
+        bearing: -72,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.32127,
+          lat: -22.9864,
+        },
+        zoom: 15.85,
+        pitch: 41.0,
+        bearing: 17.2,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: .75,
+        layer: {
+          ...{
+            id: "rioacari",
+            type: "line",
+            source: "composite",
+            "source-layer": "rioacari-0gg46o",
+            paint: {
+              "line-width": 15,
+              "line-blur": 3,
+              "line-color": "#003b66"
+          }
+          },
+        },
+      },
+    ],
+  };
+};
 export const Exemplo1 = () => {
   return {
     location: {
