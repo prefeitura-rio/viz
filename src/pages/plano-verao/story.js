@@ -88,8 +88,8 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Fim().layers);
         break;
       case "seop1":
-        setPosition(chapterMap.Capa().location);
-        setLayers(chapterMap.Capa().layers);
+        setPosition(chapterMap.Seop1().location);
+        setLayers(chapterMap.Seop1().layers);
         break;
       case "seop2":
         setPosition(chapterMap.Seop2().location);
@@ -331,7 +331,7 @@ export default function SubsidioSPPO() {
         scrollZoom={true}
         showLayers={true}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
-        mapStyle="mapbox://styles/escritoriodedados/clox9b6ie00iv01qd332b2xmc"
+        mapStyle="mapbox://styles/escritoriodedados/cls259dkn01tx01nlbomw7vn7"
         layers={layers}
         location={location}
         mapCSS={{
@@ -348,6 +348,7 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
+      <chapterDiv.Acompanhe id={"acompanhe"} />
       <chapterDiv.Prejuizo id={"prejuizo"} />
       {/* <chapterDiv.Zoom id={"zoom"} /> */}
       <chapterDiv.Exemplo0 id={"exemplo0"} />
@@ -360,9 +361,9 @@ export default function SubsidioSPPO() {
       <chapterDiv.Seop3 id={"seop3"} />
       {/* <chapterDiv.Mapa id={"mapa"} /> */}
       <chapterDiv.Solucao id={"solucao"} />
-      {/* <chapterDiv.Grafico id={"grafico"} />
-      <chapterDiv.Acompanhe id={"acompanhe"} />
-      <chapterDiv.Seop4 id={"seop4"} /> */}
+      {/* <chapterDiv.Grafico id={"grafico"} /> */}
+
+      {/* <chapterDiv.Seop4 id={"seop4"} /> */}
       <chapterDiv.Fim id={"fim"} />
     </>
   );

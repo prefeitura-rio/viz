@@ -35,9 +35,9 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
-      <img src={logo} className="w-24 mt-[2vh] lg:w-52"></img>
-      <styles.Title>
-      Rio Acima, Rio Abaixo: As Iniciativas da Prefeitura na Prevenção de Enchentes
+      <img src={logo} className="w-36 mt-[2vh] lg:w-52"></img>
+      <div><styles.Title>
+      Plano Verão: As Iniciativas da Prefeitura do Rio de Janeiro na Prevenção de Enchentes
       </styles.Title>
       {/* <styles.Subtitle>
         Segurança para os moradores, Prejuízo para o crime organizado,
@@ -57,7 +57,19 @@ export function Capa(
           {" "}
           da Prefeitura da Cidade do Rio de Janeiro
         </styles.AuthorText>
+        </div>        
       </div>
+      <div>
+          <styles.Button>
+          <a
+            className="font-bold underline"
+            href="https://www.dados.rio/"
+            target="_blank"
+            rel="noreferrer"
+          >VEJA O MAPA COMPLETO  
+          </a>
+          </styles.Button>
+          </div>
     </styles.CapaDiv>
   );
 }
@@ -75,13 +87,13 @@ export function Intro(
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
       <styles.IntroText>
         Dados do Alerta Rio, sistema de alerta de chuvas intensas e de deslizamentos em encostas do Rio de Janeiro, mostram que nunca choveu tanto na nossa cidade. <br /> <br />
-        Uma análise feita com base nos dados de ocorrências registradas pelo Centro de Operações Rio (COR) desde 2018, mostra que a cidade já registrou pelo menos 4.031 incidentes causados pelas chuvas. 
+        Uma análise feita com base nos dados de ocorrências registradas pelo Centro de Operações Rio (COR) desde 2018, mostra que <styles.Textgrey>a cidade já registrou pelo menos 4.031 incidentes causados pelas chuvas.</styles.Textgrey> 
         <br /> <br />
-        E este não é um problema exclusivo nosso. Segundo a ONU, no último Painel Intergovernamental de Mudança do Clima, as fortes chuvas no mundo já são 0,3% mais frequentes e 6,7% mais intensas. 
+        E este não é um problema exclusivo nosso. Segundo a ONU, no último Painel Intergovernamental de Mudança do Clima, <styles.Textgrey>as fortes chuvas no mundo já são 0,3% mais frequentes e 6,7% mais intensas.</styles.Textgrey>
         <br /> <br />
         É por isso que a Prefeitura do Rio conta com um planejamento específico para o período com mais chuvas na cidade, o verão carioca.
         <br /> <br />
-        Para isso, desde 2021 o Rio conta com a implementação do Plano Verão, cujo objetivo é minimizar os impactos das chuvas. Ao todo, 30 órgãos municipais, incluindo secretarias, empresas públicas e subprefeituras, trabalham na implementação das ações. 
+        Para isso, <styles.Textgrey>desde 2021 o Rio conta com a implementação do Plano Verão, cujo objetivo é minimizar os impactos das chuvas.</styles.Textgrey> Ao todo, 30 órgãos municipais, incluindo secretarias, empresas públicas e subprefeituras, trabalham na implementação das ações. 
         <br /> <br />
         Neste especial do Escritório de Dados, elaborado em parceria com a Comlurb, o COR, a Fundação Rio-Águas e a Secretaria Municipal de Conservação (SECONSERVA), explicaremos como o Plano Verão se tornou uma medida essencial no preparo do Rio para os impactos das chuvas.
       </styles.IntroText>
@@ -97,7 +109,7 @@ export function Solucao(
 ) {
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"solucaoTitle"}>Nova ferramenta</styles.IntroTitle>
+      <styles.IntroTitle id={"solucaoTitle"}>Novas ferramentas</styles.IntroTitle>
       <styles.IntroText>
       Outra inovação é a contratação do Sistema de Monitoramento e Alerta de Descargas Atmosféricas e Tempestades Severas. A ferramenta foi testada pelo Rio no último verão, quando a cidade contabilizou 31.900 raios atingindo o município entre os meses de janeiro e março. 
       <br /> <br />
@@ -177,12 +189,12 @@ export function Exemplo1(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
+      <styles.TextCard2><styles.Textyellow>Desassoreamento do Rio Acari</styles.Textyellow></styles.TextCard2>
+        <br /> 
         <styles.NewsImage src={exemplo1}></styles.NewsImage>
         <styles.Credito>
           Divulgação: Fundação Rio-Águas
-        </styles.Credito>
-        <styles.TextCard2><styles.Textyellow>Desassoreamento do Rio Acari</styles.Textyellow></styles.TextCard2>
-        <br />   
+        </styles.Credito>  
         <styles.TextCard1>
         Em 2023, o investimento em desassoreamento de rios já totalizou 555,4 mil toneladas de lixo. As ações são referentes à limpeza, ao desassoreamento e à manutenção de rios como o Rio Acari, o Rio Ita (Santa Cruz), o Rio Campinho (Campo Grande), entre outros. Além disso, também são realizadas a recuperação estrutural e a limpeza de canaletas de drenagem em encostas, além de manutenção e operação dos reservatórios.
         <br /> <br />
@@ -215,11 +227,11 @@ export function Exemplo2(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
+      <styles.TextCard2><styles.Textyellow>Obra de drenagem no entorno do Mercadão de Madureira</styles.Textyellow></styles.TextCard2>
         <styles.NewsImage src={exemplo2}></styles.NewsImage>
         <styles.Credito>
         Divulgação: Fundação Rio-Águas
-        </styles.Credito>
-        <styles.TextCard2><styles.Textyellow>Obra de drenagem no entorno do Mercadão de Madureira</styles.Textyellow></styles.TextCard2>
+        </styles.Credito>       
         <br />
         <styles.TextCard1>
         Ao todo, 35 obras contra riscos hidrológicos foram realizadas nos últimos três anos, um investimento de mais de R$ 78 milhões. Atualmente seis estão em execução, como as do Mercadão de Madureira, Bairro Maravilha Jardim Maravilha e na Comunidade do Rollas, e as obras de canalização do Rio Tindiba e na Pavuna.
@@ -312,11 +324,11 @@ export function Seop3(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
+      <styles.TextCard2><styles.Textyellow>Novo radar meteorológico do Rio</styles.Textyellow></styles.TextCard2>
         <styles.NewsImage src={seop3}></styles.NewsImage>
         <styles.Credito>
           Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
-        <styles.TextCard2><styles.Textyellow>Novo radar meteorológico do Rio</styles.Textyellow></styles.TextCard2>
+        </styles.Credito>        
         <br />
         <styles.TextCard1>
         Com um investimento de R$ 6,8 milhões, via Parceria Público-Privada firmada pela Rioluz, o radar de tecnologia ‘banda X’, é considerado o mais moderno em equipamentos deste tipo e que entrará em dezembro em operação. O novo equipamento é capaz de fazer a leitura de chuva de granizo com antecedência de até três horas e será instalado na Serra do Mendanha, na Zona Oeste.
@@ -339,11 +351,11 @@ export function Seop2(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
+      <styles.TextCard2><styles.Textyellow>Centro de Operações Rio</styles.Textyellow></styles.TextCard2>
         <styles.NewsImage src={seop2}></styles.NewsImage>
         <styles.Credito>
         Divulgação: Centro de Operações Rio
-        </styles.Credito>
-        <styles.TextCard2><styles.Textyellow>Centro de Operações Rio</styles.Textyellow></styles.TextCard2>
+        </styles.Credito>        
         <br />
         <styles.TextCard1>
         Para se manter na vanguarda do que há de mais avançado em monitoramento no mundo, o Centro de Operações Rio (COR) investiu em novas aquisições tecnológicas. Após ampliar em 40% seu vídeo wall, que passou a ter 104 metros quadrados, composto por 125 telas de 55 polegadas e em alta resolução, um novo radar meteorológico foi adquirido.
@@ -386,7 +398,8 @@ export function Seop1(props = { id: "", chapRef: null }) {
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <ImgComparisonSlider hover="hover" tabindex="0" class="rendered">
+      <styles.TextCard2><styles.Textyellow>Bairro Maravilha: Rua Francisco Fragoso</styles.Textyellow></styles.TextCard2>
+        <ImgComparisonSlider hover="hover" tabindex="0" class="rendered border-[2px] border-black">
           <img
             slot="first"
             src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BM%20ANTES.jpg"
@@ -401,15 +414,13 @@ export function Seop1(props = { id: "", chapRef: null }) {
         </ImgComparisonSlider>
         <styles.Credito>
           Divulgação: Prefeitura da Cidade do Rio Janeiro / Marcos de Paula
-        </styles.Credito>
-        <styles.TextCard2><styles.Textyellow>Bairro Maravilha</styles.Textyellow></styles.TextCard2>
+        </styles.Credito>       
         <br />
         <styles.TextCard1>
           Outro projeto que atua diretamente na prevenção das chuvas é o Bairro Maravilha, responsável por urbanizar e levar infraestrutura à população. Já são 92 localidades beneficiadas e, até o fim de 2023, serão 49 km de ruas requalificadas, com R$ 977 milhões em investimentos no total.
           <br /> <br />
           Neste ano, a Prefeitura do Rio iniciou o projeto Morar Carioca na comunidade do Aço, em Santa Cruz, na Zona Oeste. Com um investimento de R$ 243 milhões, em uma área de 195 mil metros quadrados, a comunidade do Aço ganhará 704 unidades habitacionais, que vão beneficiar diretamente quatro mil pessoas, além de melhorias em infraestrutura urbana.
-
-        </styles.TextCard1>
+          </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
   );
@@ -477,18 +488,18 @@ export function Fim(
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"fimTitle"}>Próximos passos</styles.IntroTitle> */}
-      <styles.TextCard2><styles.Textyellow>Prefeito</styles.Textyellow></styles.TextCard2>
+      <styles.TextCard3><styles.Textblack>Prefeito</styles.Textblack></styles.TextCard3>
       <styles.IntroText1>Eduardo Paes</styles.IntroText1>
       <br /> <br />
-      <styles.TextCard2><styles.Textyellow>Autores</styles.Textyellow></styles.TextCard2>
-      <styles.IntroText1>Judite Cypreste<br />Caio Jacintho<br />Diego Oliveira</styles.IntroText1>
+      <styles.TextCard3><styles.Textblack>Autores</styles.Textblack></styles.TextCard3>
+      <styles.IntroText1>Caio Jacintho<br />Diego Oliveira<br />Judite Cypreste<br />Lucas Tavares</styles.IntroText1>
       <br /> <br />
-      <styles.TextCard2><styles.Textyellow>Agradecimentos</styles.Textyellow></styles.TextCard2>
+      <styles.TextCard3><styles.Textblack>Agradecimentos</styles.Textblack></styles.TextCard3>
       <styles.IntroText1>Joice Nascimento<br />João Carabetta<br />João Marcelo<br />Gabriela Hilário</styles.IntroText1>
       <a href={"https://www.dados.rio/"}>
         <img
           src={logoed}
-          className="w-44 mt-[100px] lg:mt-[200px] lg:w-56"
+          className="w-44 mt-[200px] lg:mt-[200px] lg:w-56"
         ></img>
       </a>
     </styles.IntroDiv>
@@ -506,26 +517,16 @@ export function Acompanhe(
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
       <styles.IntroTitle id={"acompanheTitle"}>
-        As ações da Prefeitura
+        O Plano
       </styles.IntroTitle>
       <styles.IntroText>
-        As operações realizadas pela Ordem Pública e pela Secretaria de Meio
-        Ambiente reúnem diversos órgãos da Prefeitura, como a Guarda Municipal,
-        Comlurb, Secretaria de Conservação e Subprefeituras, além das
-        concessionárias de luz e água. Na maioria das ações, o apoio das forças
-        policiais também é necessário, devido à influência do crime organizado
-        nas regiões visitadas.
-        <br />
-        <br />
-        As ações também ajudam a Prefeitura a combater o desmatamento de aéreas
-        de preservação ambiental.
-        <br />
-        <br />
-        De 2021 a 2022, foram demolidas 257 construções irregulares em aéreas
-        preservadas, segundo dados da Secretaria de Meio Ambiente.
-        <br />
-        <br />
-        Foram mais de 797.198 m² de áreas verdes recuperadas.
+        O Plano Verão tem como <styles.Textgrey>principal foco a contenção de encostas, a execução de programas de infraestrutura e a aquisição de tecnologias </styles.Textgrey>destinadas a aprimorar a capacidade de resposta aos desafios provocados pelas chuvas.
+        <br /><br />
+        Estas <styles.Textgrey>diversas iniciativas foram estrategicamente distribuídas nas áreas mais críticas da cidade,</styles.Textgrey> identificadas por meio de constante monitoramento e estudos.
+        <br /><br />
+        As medidas para mitigar os efeitos podem ser tomadas antes, durante ou como planejamento de obras específicas contra enchentes e alagamentos.
+        <br /><br />
+        A seguir, você verá uma série de ações realizadas pela Prefeitura para combater este problema.
       </styles.IntroText>
     </styles.IntroDiv>
   );
@@ -545,13 +546,13 @@ export function Oeste(
         Onde estão localizadas as construções irregulares
       </styles.IntroTitle>
       <styles.IntroText>
-      Também foram investidos cerca de R$ 35 milhões somente nas obras de contenção nas grandes vias com protocolos de fechamento nos dias de fortes chuvas. Com isso, foram registrados menos problemas com deslizamentos de terra nos últimos temporais. Nos últimos três anos conseguimos fazer a contenção de 880 mil metros quadrados em áreas de alto risco em comunidades cariocas, o equivalente a 107 campos de futebol.
+      Também <styles.Textgrey>foram investidos cerca de R$ 35 milhões somente nas obras de contenção nas grandes vias </styles.Textgrey>com protocolos de fechamento nos dias de fortes chuvas. Com isso, foram registrados menos problemas com deslizamentos de terra nos últimos temporais. Nos últimos três anos <styles.Textgrey>conseguimos fazer a contenção de 880 mil metros quadrados em áreas de alto risco em comunidades cariocas, o equivalente a 107 campos de futebol.</styles.Textgrey>
       <br /><br />
       Com um investimento de R$ 9,8 milhões em obras de drenagem para eliminação de pontos críticos de alagamento. Os serviços foram executados na Avenida Borges de Medeiros, na Rua Alexandre Calaza e nas estradas da Pedra e do Catonho, onde os trabalhos entraram na reta final. No total, mais de 1,6 km de drenagem estão sendo executadas. 
       <br /><br />
       Na intersecção entre as estradas do Catonho e Cafundá, o aumento da capacidade de escoamento das galerias pluviais solucionará o problema crônico de alagamento que motoristas e pedestres enfrentam em dias de chuvas fortes. Mais de 7,6 mil metros quadrados de drenagem estão sendo recuperados. Além disso, as calçadas estão sendo reconstruídas para melhorar a mobilidade e a acessibilidade. Por fim, o trecho ganhará nova pavimentação.
       <br /><br />
-      Podas de árvores e a limpeza urbana são outros pontos importantes na prevenção. Foram realizadas 150 mil podas, um serviço importante para evitar que a queda de árvores durante temporais.
+      Podas de árvores e a limpeza urbana são outros pontos importantes na prevenção. <styles.Textgrey>Foram realizadas 150 mil podas, um serviço importante para evitar que a queda de árvores durante temporais.</styles.Textgrey>
       </styles.IntroText>
     </styles.IntroDivMaior>
   );

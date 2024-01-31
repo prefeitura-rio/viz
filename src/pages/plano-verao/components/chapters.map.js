@@ -170,26 +170,44 @@ export const Seop1 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.20326,
-          lat: -22.91193,
+          lon: -43.30566,
+          lat: -22.89716,
         },
-        zoom: 18.56,
-        pitch: 38.03,
-        bearing: 126.18,
+        zoom: 17.90,
+        pitch: 40.52,
+        bearing: 142.28,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.32127,
-          lat: -22.9864,
+          lon: -43.30619,
+          lat: -22.89748,
         },
-        zoom: 15.85,
-        pitch: 41.0,
-        bearing: 17.2,
+        zoom: 17.90,
+        pitch: 40.52,
+        bearing: 142.28,
         duration: 4000,
       },
     },
     layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: .75,
+        layer: {
+          ...{
+            id: "bairromaravilha",
+            type: "line",
+            source: "composite",
+            "source-layer": "bairromaravilha-ahcqjy",
+            paint: {
+              "line-width": 15,
+              "line-color": "#003b66",
+              "line-blur": 5,
+              "line-opacity": 0
+          }
+          },
+        },
+      }, 
     ],
   };
 };
@@ -209,12 +227,12 @@ export const Seop2 = () => {
       },
       mobile: {
         center: {
-          lon: -43.4785,
-          lat: -23.02842,
+          lon: -43.20346,
+          lat: -22.91219,
         },
-        zoom: 14.71,
-        pitch: 51.0,
-        bearing: 11.2,
+        zoom: 18.10,
+        pitch: 42,
+        bearing: 132.80,
         duration: 4000,
       },
     },
@@ -426,7 +444,7 @@ export const Exemplo0 = () => {
             source: "composite",
             "source-layer": "rioacari-0gg46o",
             paint: {
-              "line-width": 15,
+              "line-width": 50,
               "line-blur": 3,
               "line-color": "#003b66"
           }
@@ -451,12 +469,12 @@ export const Exemplo1 = () => {
       },
       mobile: {
         center: {
-          lon: -43.32127,
-          lat: -22.9864,
+          lon: -43.35420,
+          lat: -22.82609,
         },
-        zoom: 15.85,
-        pitch: 41.0,
-        bearing: 17.2,
+        zoom: 16.52,
+        pitch: 46.50,
+        bearing: -72,
         duration: 4000,
       },
     },
@@ -487,22 +505,22 @@ export const Exemplo2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.33758,
-          lat: -22.87102,
+          lon: -43.33714,
+          lat: -22.87147,
         },
-        zoom: 16.89,
-        pitch: 36.95,
-        bearing: 9.60,
+        zoom: 17.25,
+        pitch: 36.52,
+        bearing: -24.12,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.33913,
-          lat: -22.98032,
+          lon: -43.33620,
+          lat: -22.87102,
         },
-        zoom: 15.85,
-        pitch: 44.5,
-        bearing: 46.0,
+        zoom: 17.25,
+        pitch: 36.52,
+        bearing: -24.12,
         duration: 4000,
       },
     },

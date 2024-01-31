@@ -7,14 +7,15 @@ import capa from "../images/capa.gif";
 export const CapaDivSC = styled.div`
   background-size: cover;
   background-position: center;
-  background-color: #ffffff99;
 `;
 
 export const CapaDiv = tw(CapaDivSC)`
   h-screen w-full
   flex flex-col 
-  justify-start items-center 
+  justify-between
+  lg:justify-start items-center 
   pl-5 pr-5  
+  bg-white/80
   bg-opacity-40 backdrop-blur
 `;
 // lg:mr-20 lg:ml-20
@@ -25,7 +26,7 @@ export const Title = tw.div`
   lg:mt-[340px]
   lg:mb-3    
   font-serif font-bold  
-  text-4xl text-center text-black
+  text-3xl text-center text-black
   lg:text-3xl
   max-w-3xl
   `;
@@ -38,11 +39,22 @@ export const Title = tw.div`
 // `;
 
 export const AuthorText = tw.div`
+  mt-[20px]
   mb-[15%]
-  lg:mb-[45%]
+  lg:mb-[10%]
   font-serif
   text-sm text-center text-black
-  lg:text-base
+  lg:text-sm
+  max-w-4xl
+  leading-[150%]
+`;
+
+export const Button = tw.div`
+  mb-[60%]
+  lg:mb-[85%]
+  font-serif
+  text-sm text-center text-black
+  lg:text-sm
   max-w-4xl
 `;
 
@@ -67,7 +79,7 @@ export const IntroTitle = tw.div`
 export const IntroText = tw.div`
   font-serif  
   text-lg text-justify text-black
-  leading-normal 
+  leading-normal
   opacity-100
 `;
 export const IntroText1 = tw.div`
@@ -97,7 +109,7 @@ export const ChapterGenericDivn = tw.div`
 
 export const ChapterGenericDiv1 = tw.div`
   flex
-  w-full h-[150vh] 
+  w-full h-[200vh] 
   items-center
   justify-center
   lg:justify-start
@@ -164,21 +176,21 @@ export const NewsTitle = tw.div`
 `;
 
 export const ContainerCard = tw.div`
-  p-[50px]
+  p-[32px]
   bg-opacity-[20%] backdrop-blur-sm
   bg-white/75
   max-w-xs
-  lg:max-w-3xl
+  lg:max-w-xl
   border-[2px]
   border-black
 `;
 
 export const ContainerCard1 = tw.div`
-  p-[50px]
+  p-[32px]
   bg-opacity-[20%] backdrop-blur-md
   bg-white/75
   max-w-xs
-  lg:max-w-lg
+  lg:max-w-md
   border-[2px]
   border-black
 `;
@@ -196,19 +208,30 @@ export const TextCard = tw(TextCardSC)`
 export const TextCard1 = tw(TextCardSC)`
   font-serif  
   text-lg
-  text-left
+  text-justify
   mt-0
   mb-0
 `;
 
 export const TextCard2 = tw(TextCardSC)`
   font-serif  
-  text-lg
+  text-2xl
   font-bold
   text-left
   mt-0
-  mb-0
-`;
+  mb-[30px]
+  lg:mb-[48px]
+  `;
+
+  export const TextCard3 = tw(TextCardSC)`
+  font-serif  
+  text-2xl
+  font-bold
+  text-left
+  mt-0
+  mb-[8px]
+  lg:mb-[48px]
+  `;
 
 export const Grid1 = tw.div`
   flex
@@ -248,12 +271,40 @@ export const BigNumber1 = tw(BigNumber)`
 `;
 
 const TextyellowSC = styled.div`
-  background: #000000;
+  /* background: #000; */
+  /* background: #06639d; */
 `;
 
 export const Textyellow = tw(TextyellowSC)`
-  text-white
+  text-black
+  font-bold
+  underline
   inline
   p-[4px]
-  leading-[32px]
+  leading-[130%]
+`;
+
+const TextblackSC = styled.div`
+  /* background: #000; */
+`;
+
+export const Textblack = tw(TextblackSC)`
+  text-black
+  font-bold
+  underline
+  inline
+  p-[4px]
+  leading-normal
+`;
+
+const TextgreySC = styled.div`
+  /* background: #e9f3fe; */
+`;
+
+export const Textgrey = tw(TextgreySC)`
+  text-black
+  font-bold
+  inline
+  p-[2px]
+  leading-normal
 `;
