@@ -16,6 +16,7 @@ import seop4 from "../images/seop4.png";
 import grafico from "../images/grafico.png";
 import legenda from "../images/legenda.png";
 import logoed from "../images/logoed.png";
+import gif from "../images/gif.gif";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -197,6 +198,8 @@ export function Prejuizo(
           </styles.Grid1>
           <styles.TextCard>
           Com um investimento total de R$ 2,1 bilhões, o Plano Verão implementou 308 ações preventivas desde 2021. 
+          <br /> <br />
+          Veja no mapa as obras da Geo Rio em azul escuro e da Rio Águas em azul claro.
           </styles.TextCard>
         </styles.Grid>
       </styles.ContainerCard>
@@ -469,6 +472,21 @@ export function Seop2(
         <br /> <br />
         O Rio passa a ser o primeiro município do país a contar com dois radares meteorológicos próprios. As imagens dos equipamentos, assim como já acontece com o que está instalado no Morro do Sumaré, serão disponibilizadas para a população do Rio.
         </styles.TextCard1></styles.IntroText>
+        <styles.NewsImage className="lg:mt-[54px]" src={gif}></styles.NewsImage>
+        <styles.Credito>
+          Imagem: Prefeitura da Cidade do Rio Janeiro
+        </styles.Credito>  
+        <div>
+          <styles.Button>
+          <a
+            className="font-bold underline"
+            href="https://www.dados.rio/"
+            target="_blank"
+            rel="noreferrer"
+          >VEJA O MAPA COMPLETO  
+          </a>
+          </styles.Button>
+      </div>
     </styles.IntroDivGigante>
   );
 }
@@ -575,10 +593,10 @@ export function Fim(
       <styles.IntroText1>Eduardo Paes</styles.IntroText1>
       <br /> <br />
       <styles.TextCard3><styles.Textblack>Autores</styles.Textblack></styles.TextCard3>
-      <styles.IntroText1>Caio Jacintho<br />Diego Oliveira<br />Judite Cypreste<br />Lucas Tavares</styles.IntroText1>
+      <styles.IntroText1>Caio Jacintho<br />Diego Oliveira<br />João Carabetta<br />João Marcelo Ferraz<br />Judite Cypreste<br />Lucas Tavares<br />Ramon Carnaval</styles.IntroText1>
       <br /> <br />
       <styles.TextCard3><styles.Textblack>Agradecimentos</styles.Textblack></styles.TextCard3>
-      <styles.IntroText1>Joice Nascimento<br />João Carabetta<br />João Marcelo<br />Gabriela Hilário</styles.IntroText1>
+      <styles.IntroText1>Gabriela Hilário<br />Joice Nascimento</styles.IntroText1>
       <a href={"https://www.dados.rio/"}>
         <img
           src={logoed}

@@ -35,31 +35,81 @@ export const Capa = () => {
   };
 };
 
-export const Intro = () => {
+// export const Intro = () => {
+//   return {
+//     location: {
+//       desktop: {
+//         center: {
+//           lon: -43.45632,
+//           lat: -22.92106,
+//         },
+//         zoom: 10.38,
+//         pitch: 0.0,
+//         bearing: 0.0,
+//         duration: 4000,
+//       },
+//       mobile: {
+//         center: {
+//           lon: -43.45632,
+//           lat: -22.92106,
+//         },
+//         zoom: 8.38,
+//         pitch: 0.0,
+//         bearing: 0.0,
+//         duration: 4000,
+//       },
+//     },
+//     layers: [],
+//   };
+// };
+
+export const Zoom = () => {
   return {
     location: {
       desktop: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.32838,
+          lat: -22.98401,
         },
-        zoom: 10.38,
+        zoom: 13.6,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.32838,
+          lat: -22.98401,
         },
-        zoom: 8.38,
+        zoom: 12.6,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
       },
     },
-    layers: [],
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            id: "desabamento-icone",
+            type: "symbol",
+            source: "composite",
+            "source-layer": "desabamento1-9gi1wf",
+            layout: {
+              "icon-image": "hospital",
+              "icon-rotate": 45,
+              "icon-allow-overlap": true,
+              "icon-size": 2,
+            },
+            paint: {
+              "icon-opacity": 0,
+            },
+          },
+        },
+      },
+    ],
   };
 };
 
@@ -87,13 +137,42 @@ export const Prejuizo = () => {
         duration: 4000,
       },
     },
-    layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 0.5,
-        layer: { id: "consolidado-cor" },
-      },
-    ],
+    // layers: [
+    //   {
+    //     layerType: "mapbox",
+    //     targetOpacity: .75,
+    //     layer: {
+    //       ...{
+    //         id: "rioaguas-geral",
+    //         type: "circle",
+    //         source: "composite",
+    //         "source-layer": "obras-alag-rio-aguas_-_obras--8kwpcs",
+    //         paint: {
+    //           "circle-radius": 3,
+    //           "circle-color": "#00c0f3",
+    //           "circle-opacity": 0
+    //       }
+    //       },
+    //     },
+    //   }, 
+    //   {
+    //     layerType: "mapbox",
+    //     targetOpacity: .75,
+    //     layer: {
+    //       ...{
+    //         id: "georio-geral",
+    //         type: "circle",
+    //         source: "composite",
+    //         "source-layer": "obras-alag-geo-rio_-_obras-al-27j534",
+    //         paint: {
+    //           "circle-radius": 3,
+    //           "circle-color": "#06639d",
+    //           "circle-opacity": 0
+    //       }
+    //       },
+    //     },
+    //   }, 
+    // ],
   };
 };
 
@@ -439,14 +518,14 @@ export const Exemplo0 = () => {
         targetOpacity: .75,
         layer: {
           ...{
-            id: "rioacari1",
-            type: "line",
+            id: "rioaguas-desassoreamento",
+            type: "circle",
             source: "composite",
-            "source-layer": "rioacari111-9ilmw9",
+            "source-layer": "obras-alag-rio-aguas_-_obras--8kwpcs",
             paint: {
-              "line-color": "#06639d",
-              "line-width": 10,
-              "line-opacity": 0
+              "circle-radius": 3,
+              "circle-color": "#00c0f3",
+              "circle-opacity": 0
           }
           },
         },
@@ -589,56 +668,6 @@ export const Exemplo3 = () => {
         layerType: "reuse",
         targetOpacity: 1,
         layer: { id: "desabamento-icone" },
-      },
-    ],
-  };
-};
-
-export const Zoom = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.32838,
-          lat: -22.98401,
-        },
-        zoom: 13.6,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.32838,
-          lat: -22.98401,
-        },
-        zoom: 12.6,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 1,
-        layer: {
-          ...{
-            id: "desabamento-icone",
-            type: "symbol",
-            source: "composite",
-            "source-layer": "desabamento1-9gi1wf",
-            layout: {
-              "icon-image": "hospital",
-              "icon-rotate": 45,
-              "icon-allow-overlap": true,
-              "icon-size": 2,
-            },
-            paint: {
-              "icon-opacity": 0,
-            },
-          },
-        },
       },
     ],
   };

@@ -52,16 +52,16 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Zoom().layers);
         break;
       case "exemplo0":
-        setPosition(chapterMap.Capa().location);
-        setLayers(chapterMap.Capa().layers);
-        break;
-      case "exemplo0um":
-        setPosition(chapterMap.Capa().location);
-        setLayers(chapterMap.Capa().layers);
-        break;
-      case "exemplo1":
         setPosition(chapterMap.Exemplo0().location);
         setLayers(chapterMap.Exemplo0().layers);
+        break;
+      case "exemplo0um":
+        setPosition(chapterMap.Exemplo0().location);
+        setLayers(chapterMap.Exemplo0().layers);
+        break;
+      case "exemplo1":
+        setPosition(chapterMap.Exemplo1().location);
+        setLayers(chapterMap.Exemplo1().layers);
         break;
       case "exemplo2":
         setPosition(chapterMap.Exemplo3().location);
@@ -88,8 +88,8 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Solucao().layers);
         break;
       case "prejuizo":
-        setPosition(chapterMap.Capa().location);
-        setLayers(chapterMap.Capa().layers);
+        setPosition(chapterMap.Prejuizo().location);
+        setLayers(chapterMap.Prejuizo().layers);
         break;
       case "grafico":
         setPosition(chapterMap.Grafico().location);
@@ -318,7 +318,18 @@ export default function SubsidioSPPO() {
       },
     });
 
+    const tl16 = gsap.timeline();
+    tl16
+      .set("#seop2", { opacity: 0 })
+      .to("#seop2", { opacity: 0, duration: 30 })
+      .to("#seop2", { opacity: 1, duration: 6 })
+      .to("#seop2", { opacity: 1, duration: 20 })
+      .to("#seop2", { opacity: 1, duration: 6 })
+      .to("#seop2", { opacity: 1, duration: 28 });
+
+
     ScrollTrigger.create({
+      animation: tl16,
       trigger: "#seop2",
       onToggle: () => {
         setChapterNumberMap("seop2");
@@ -341,8 +352,8 @@ export default function SubsidioSPPO() {
 
     const tl11 = gsap.timeline();
     tl11
-      .set("#fim", { opacity: 0 })
-      .to("#fim", { opacity: 0, duration: 30 })
+      .set("#fim", { opacity: 1 })
+      .to("#fim", { opacity: 1, duration: 30 })
       .to("#fim", { opacity: 1, duration: 6 })
       .to("#fim", { opacity: 1, duration: 20 })
       .to("#fim", { opacity: 1, duration: 6 })

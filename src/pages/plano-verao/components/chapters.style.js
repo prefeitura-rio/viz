@@ -51,7 +51,7 @@ export const AuthorText = tw.div`
 
 export const Button = tw.div`
   mb-[60%]
-  lg:mb-[85%]
+  lg:mt-[60px]
   font-serif
   text-sm text-center text-black
   lg:text-sm
@@ -130,7 +130,8 @@ export const ChapterGenericDiv1 = tw.div`
   `;
 
 export const IntroDiv = tw.div`
-  w-full h-200
+  w-full h-auto
+
   bg-opacity-40 backdrop-blur
   flex flex-col 
   justify-center items-center 
@@ -138,6 +139,8 @@ export const IntroDiv = tw.div`
   pr-[10%] pl-[10%]
   lg:pr-[32%]
   lg:pl-[32%]
+  lg:pt-[200px]
+  lg:pb-[200px]
 `;
 
 export const IntroDivMaior = tw.div`
@@ -152,10 +155,11 @@ export const IntroDivMaior = tw.div`
 `;
 
 export const IntroDivGigante = tw.div`
-  w-full h-800
+  w-full h-auto
+  lg:pt-[160px]
   bg-opacity-40 backdrop-blur
   flex flex-col 
-  justify-center items-center 
+  justify-center items-start 
   bg-white/80
   pr-[10%] pl-[10%]
   lg:pr-[32%]
