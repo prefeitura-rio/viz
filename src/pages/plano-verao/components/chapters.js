@@ -64,7 +64,7 @@ export function Capa(
           <styles.Button>
           <a
             className="font-bold underline"
-            href="https://www.dados.rio/"
+            href="https://mapa-realizacoes-dev.dados.rio/"
             target="_blank"
             rel="noreferrer"
           >VEJA O MAPA COMPLETO  
@@ -84,7 +84,8 @@ export function Intro(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
+    <styles.IntroDiv style={{paddingBottom:"100vh"}} ref={props.chapRef} id={props.id}>
+     
       <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle>
       <styles.IntroText>
         Dados do Alerta Rio, sistema de alerta de chuvas intensas e de deslizamentos em encostas do Rio de Janeiro, mostram que nunca choveu tanto na nossa cidade. <br /> <br />
@@ -389,7 +390,7 @@ export function Seop4(
           <styles.Button>
           <a
             className="font-bold underline"
-            href="https://www.dados.rio/"
+            href="https://mapa-realizacoes-dev.dados.rio/"
             target="_blank"
             rel="noreferrer"
           >VEJA O MAPA COMPLETO  
@@ -436,7 +437,7 @@ export function Seop2(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDivGigante ref={props.chapRef} id={props.id}>
+    <styles.IntroDivGigante  style={{paddingTop:"230vh"}} ref={props.chapRef} id={props.id}>
       <styles.IntroTitle>Centro de Operações</styles.IntroTitle>
       <styles.NewsImage src={seop2}></styles.NewsImage>
         <styles.Credito>
@@ -447,7 +448,7 @@ export function Seop2(
         <br /> <br />
       O número de câmeras de monitoramento da cidade, que permitem um melhor planejamento durante os eventos também apresentou um crescimento. Em 2022 eram duas mil e, agora, já são três mil e quinhentas.</styles.IntroText>
       <br /> <br />
-      Adicionar Vídeo
+      {/* Adicionar Vídeo */}
       <br /> <br /><br /> <br /><br /> <br />
       <styles.IntroTitle>
         Novas ferramentas
@@ -480,7 +481,7 @@ export function Seop2(
           <styles.Button>
           <a
             className="font-bold underline"
-            href="https://www.dados.rio/"
+            href="https://mapa-realizacoes-dev.dados.rio/"
             target="_blank"
             rel="noreferrer"
           >VEJA O MAPA COMPLETO  

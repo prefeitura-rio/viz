@@ -35,81 +35,31 @@ export const Capa = () => {
   };
 };
 
-// export const Intro = () => {
-//   return {
-//     location: {
-//       desktop: {
-//         center: {
-//           lon: -43.45632,
-//           lat: -22.92106,
-//         },
-//         zoom: 10.38,
-//         pitch: 0.0,
-//         bearing: 0.0,
-//         duration: 4000,
-//       },
-//       mobile: {
-//         center: {
-//           lon: -43.45632,
-//           lat: -22.92106,
-//         },
-//         zoom: 8.38,
-//         pitch: 0.0,
-//         bearing: 0.0,
-//         duration: 4000,
-//       },
-//     },
-//     layers: [],
-//   };
-// };
-
-export const Zoom = () => {
+export const Intro = () => {
   return {
     location: {
       desktop: {
         center: {
-          lon: -43.32838,
-          lat: -22.98401,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 13.6,
+        zoom: 10.38,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.32838,
-          lat: -22.98401,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 12.6,
+        zoom: 8.38,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
       },
     },
-    layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 1,
-        layer: {
-          ...{
-            id: "desabamento-icone",
-            type: "symbol",
-            source: "composite",
-            "source-layer": "desabamento1-9gi1wf",
-            layout: {
-              "icon-image": "hospital",
-              "icon-rotate": 45,
-              "icon-allow-overlap": true,
-              "icon-size": 2,
-            },
-            paint: {
-              "icon-opacity": 0,
-            },
-          },
-        },
-      },
-    ],
+    layers: [],
   };
 };
 
@@ -137,42 +87,13 @@ export const Prejuizo = () => {
         duration: 4000,
       },
     },
-    // layers: [
-    //   {
-    //     layerType: "mapbox",
-    //     targetOpacity: .75,
-    //     layer: {
-    //       ...{
-    //         id: "rioaguas-geral",
-    //         type: "circle",
-    //         source: "composite",
-    //         "source-layer": "obras-alag-rio-aguas_-_obras--8kwpcs",
-    //         paint: {
-    //           "circle-radius": 3,
-    //           "circle-color": "#00c0f3",
-    //           "circle-opacity": 0
-    //       }
-    //       },
-    //     },
-    //   }, 
-    //   {
-    //     layerType: "mapbox",
-    //     targetOpacity: .75,
-    //     layer: {
-    //       ...{
-    //         id: "georio-geral",
-    //         type: "circle",
-    //         source: "composite",
-    //         "source-layer": "obras-alag-geo-rio_-_obras-al-27j534",
-    //         paint: {
-    //           "circle-radius": 3,
-    //           "circle-color": "#06639d",
-    //           "circle-opacity": 0
-    //       }
-    //       },
-    //     },
-    //   }, 
-    // ],
+    layers: [
+      {
+        layerType: "reuse",
+        targetOpacity: 0.5,
+        layer: { id: "consolidado-cor" },
+      },
+    ],
   };
 };
 
@@ -518,14 +439,14 @@ export const Exemplo0 = () => {
         targetOpacity: .75,
         layer: {
           ...{
-            id: "rioaguas-desassoreamento",
-            type: "circle",
+            id: "rioacari1",
+            type: "line",
             source: "composite",
-            "source-layer": "obras-alag-rio-aguas_-_obras--8kwpcs",
+            "source-layer": "rioacari111-9ilmw9",
             paint: {
-              "circle-radius": 3,
-              "circle-color": "#00c0f3",
-              "circle-opacity": 0
+              "line-color": "#06639d",
+              "line-width": 10,
+              "line-opacity": 0
           }
           },
         },
@@ -546,6 +467,42 @@ export const Exemplo0 = () => {
           },
         },
       },
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+            id: "static-text",
+            type: "symbol",
+            source: {
+                type: "geojson",
+                data: {
+                    type: "FeatureCollection",
+                    features: [{
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [-43.346253842506975, -22.806199873225385] // Replace with desired coordinates
+                        },
+                        properties: {
+                            title: "TEXTO 1"
+                        }
+                    }]
+                }
+            },
+            layout: {
+                "text-field": "{title}",
+                "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+                "text-size": 30
+            },
+            paint: {
+                "text-color": "#ff0000",
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 3,  // Adjust the width as needed
+                "text-halo-blur": 0
+            }
+        },
+    }
+    
     ],
   };
 };
@@ -668,6 +625,56 @@ export const Exemplo3 = () => {
         layerType: "reuse",
         targetOpacity: 1,
         layer: { id: "desabamento-icone" },
+      },
+    ],
+  };
+};
+
+export const Zoom = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.32838,
+          lat: -22.98401,
+        },
+        zoom: 13.6,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.32838,
+          lat: -22.98401,
+        },
+        zoom: 12.6,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            id: "desabamento-icone",
+            type: "symbol",
+            source: "composite",
+            "source-layer": "desabamento1-9gi1wf",
+            layout: {
+              "icon-image": "hospital",
+              "icon-rotate": 45,
+              "icon-allow-overlap": true,
+              "icon-size": 2,
+            },
+            paint: {
+              "icon-opacity": 0,
+            },
+          },
+        },
       },
     ],
   };
