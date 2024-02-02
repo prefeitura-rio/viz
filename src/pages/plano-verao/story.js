@@ -55,6 +55,10 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Capa().location);
         setLayers(chapterMap.Capa().layers);
         break;
+      case "exemplo0um":
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
+        break;
       case "exemplo1":
         setPosition(chapterMap.Exemplo0().location);
         setLayers(chapterMap.Exemplo0().layers);
@@ -63,10 +67,18 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Exemplo3().location);
         setLayers(chapterMap.Exemplo3().layers);
         break;
+      case "exemplo2um":
+        setPosition(chapterMap.Exemplo3().location);
+        setLayers(chapterMap.Exemplo3().layers);
+        break;
       case "exemplo3":
         setPosition(chapterMap.Exemplo3().location);
         setLayers(chapterMap.Exemplo3().layers);
         break;
+      case "exemplo3um":
+      setPosition(chapterMap.Exemplo3().location);
+      setLayers(chapterMap.Exemplo3().layers);
+      break;
       case "mapa":
         setPosition(chapterMap.Mapa().location);
         setLayers(chapterMap.Mapa().layers);
@@ -168,6 +180,13 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
+      trigger: "#exemplo0um",
+      onToggle: () => {
+        setChapterNumberMap("exemplo0um");
+      },
+    });
+
+    ScrollTrigger.create({
       trigger: "#exemplo1",
       onToggle: () => {
         setChapterNumberMap("exemplo1");
@@ -181,12 +200,26 @@ export default function SubsidioSPPO() {
       },
     });
 
-    // ScrollTrigger.create({
-    //   trigger: "#exemplo3",
-    //   onToggle: () => {
-    //     setChapterNumberMap("exemplo3");
-    //   },
-    // });
+    ScrollTrigger.create({
+      trigger: "#exemplo2um",
+      onToggle: () => {
+        setChapterNumberMap("exemplo2um");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#exemplo3",
+      onToggle: () => {
+        setChapterNumberMap("exemplo3");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#exemplo3um",
+      onToggle: () => {
+        setChapterNumberMap("exemplo3um");
+      },
+    });
 
     const tl13 = gsap.timeline();
     tl13
@@ -348,17 +381,20 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
-      <chapterDiv.Acompanhe id={"acompanhe"} />
+      {/* <chapterDiv.Acompanhe id={"acompanhe"} /> */}
       <chapterDiv.Prejuizo id={"prejuizo"} />
       <chapterDiv.Exemplo0 id={"exemplo0"} />
+      <chapterDiv.Exemplo0um id={"exemplo0um"} />
       <chapterDiv.Exemplo1 id={"exemplo1"} />
       <chapterDiv.Exemplo2 id={"exemplo2"} />
+      <chapterDiv.Exemplo2um id={"exemplo2um"} />
       <chapterDiv.Exemplo3 id={"exemplo3"} />
+      <chapterDiv.Exemplo3um id={"exemplo3um"} />
       {/* <chapterDiv.Oeste id={"oeste"} /> */}
       <chapterDiv.Seop1 id={"seop1"} />
       <chapterDiv.Seop2 id={"seop2"} />
-      <chapterDiv.Zoom id={"zoom"} />
-      <chapterDiv.Seop3 id={"seop3"} />
+      {/* <chapterDiv.Zoom id={"zoom"} /> */}
+      {/* <chapterDiv.Seop3 id={"seop3"} /> */}
       {/* <chapterDiv.Mapa id={"mapa"} /> */}
       {/* <chapterDiv.Solucao id={"solucao"} /> */}
       {/* <chapterDiv.Grafico id={"grafico"} /> */}

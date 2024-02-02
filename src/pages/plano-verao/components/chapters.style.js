@@ -151,6 +151,16 @@ export const IntroDivMaior = tw.div`
   lg:pl-[32%]
 `;
 
+export const IntroDivGigante = tw.div`
+  w-full h-800
+  bg-opacity-40 backdrop-blur
+  flex flex-col 
+  justify-center items-center 
+  bg-white/80
+  pr-[10%] pl-[10%]
+  lg:pr-[32%]
+  lg:pl-[32%]
+`;
 
 export const Footer = tw.div`
   w-full h-[20%]
