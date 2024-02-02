@@ -414,12 +414,12 @@ export const Exemplo0 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.35420,
-          lat: -22.82609,
+          lon: -43.36509,
+          lat: -22.82669,
         },
-        zoom: 16.52,
-        pitch: 46.50,
-        bearing: -72,
+        zoom: 13.18,
+        pitch: 36.75,
+        bearing: -8,
         duration: 4000,
       },
       mobile: {
@@ -439,14 +439,30 @@ export const Exemplo0 = () => {
         targetOpacity: .75,
         layer: {
           ...{
-            id: "rioacari",
+            id: "rioacari1",
             type: "line",
             source: "composite",
-            "source-layer": "rioacari-0gg46o",
+            "source-layer": "rioacari111-9ilmw9",
             paint: {
-              "line-width": 50,
-              "line-blur": 3,
-              "line-color": "#003b66"
+              "line-color": "#06639d",
+              "line-width": 10,
+              "line-opacity": 0
+          }
+          },
+        },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: .15,
+        layer: {
+          ...{
+            id: "bairrosrioacari",
+            type: "fill",
+            source: "composite",
+            "source-layer": "bairrosrioacari-bmo9od",
+            paint: {
+              "fill-color": "#06639d",
+              "fill-opacity": 0
           }
           },
         },
@@ -462,7 +478,7 @@ export const Exemplo1 = () => {
           lon: -43.35420,
           lat: -22.82609,
         },
-        zoom: 16.52,
+        zoom: 14.52,
         pitch: 46.50,
         bearing: -72,
         duration: 4000,
@@ -544,39 +560,39 @@ export const Exemplo2 = () => {
   };
 };
 
-// export const Exemplo3 = () => {
-//   return {
-//     location: {
-//       desktop: {
-//         center: {
-//           lon: -43.22925,
-//           lat: -22.93012,
-//         },
-//         zoom: 15.72,
-//         pitch: 45.5,
-//         bearing: 12.4,
-//         duration: 4000,
-//       },
-//       mobile: {
-//         center: {
-//           lon: -43.22925,
-//           lat: -22.93012,
-//         },
-//         zoom: 15.72,
-//         pitch: 45.5,
-//         bearing: 12.4,
-//         duration: 4000,
-//       },
-//     },
-//     layers: [
-//       {
-//         layerType: "reuse",
-//         targetOpacity: 1,
-//         layer: { id: "desabamento-icone" },
-//       },
-//     ],
-//   };
-// };
+export const Exemplo3 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.33340,
+          lat: -22.86250,
+        },
+        zoom: 14.18,
+        pitch: 41.51,
+        bearing: -28.37,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.22925,
+          lat: -22.93012,
+        },
+        zoom: 15.72,
+        pitch: 45.5,
+        bearing: 12.4,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "reuse",
+        targetOpacity: 1,
+        layer: { id: "desabamento-icone" },
+      },
+    ],
+  };
+};
 
 export const Zoom = () => {
   return {

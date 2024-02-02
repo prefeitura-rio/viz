@@ -101,21 +101,43 @@ export function Intro(
   );
 }
 
-export function Solucao(
+// export function Solucao(
+//   props = {
+//     id: "",
+//     chapRef: null,
+//   }
+// ) {
+//   return (
+//     <styles.IntroDiv ref={props.chapRef} id={props.id}>
+//       <styles.IntroTitle id={"solucaoTitle"}>Novas ferramentas</styles.IntroTitle>
+//       <styles.IntroText>
+//       Outra inovação é a contratação do Sistema de Monitoramento e Alerta de Descargas Atmosféricas e Tempestades Severas. A ferramenta foi testada pelo Rio no último verão, quando a cidade contabilizou 31.900 raios atingindo o município entre os meses de janeiro e março. 
+//       <br /> <br />
+//       Já a Defesa Civil operacionalizou mais uma ferramenta de comunicação preventiva aos moradores que vivem em áreas de alto risco geológico. Avisos sonoros serão emitidos por sirenes localizadas em 103 comunidades. O objetivo é alertar a população, antecipadamente, que não possuem acesso aos meios de comunicação de massa sobre a chegada de chuva forte no município. O aviso será feito com base nas previsões meteorológicas do Sistema Alerta Rio, órgão de meteorologia da Prefeitura do Rio.
+//       </styles.IntroText>
+//     </styles.IntroDiv>
+//   );
+// }
+
+export function Zoom(
   props = {
     id: "",
     chapRef: null,
   }
 ) {
+  props = setDefaultProps(props);
+
   return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"solucaoTitle"}>Novas ferramentas</styles.IntroTitle>
-      <styles.IntroText>
-      Outra inovação é a contratação do Sistema de Monitoramento e Alerta de Descargas Atmosféricas e Tempestades Severas. A ferramenta foi testada pelo Rio no último verão, quando a cidade contabilizou 31.900 raios atingindo o município entre os meses de janeiro e março. 
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+      <styles.TextCard5><styles.Textyellow>Novas ferramentas</styles.Textyellow></styles.TextCard5>
+        <br />
+        <styles.TextCard1>
+        Outra inovação é a contratação do Sistema de Monitoramento e Alerta de Descargas Atmosféricas e Tempestades Severas. A ferramenta foi testada pelo Rio no último verão, quando a cidade contabilizou 31.900 raios atingindo o município entre os meses de janeiro e março. 
       <br /> <br />
-      Já a Defesa Civil operacionalizou mais uma ferramenta de comunicação preventiva aos moradores que vivem em áreas de alto risco geológico. Avisos sonoros serão emitidos por sirenes localizadas em 103 comunidades. O objetivo é alertar a população, antecipadamente, que não possuem acesso aos meios de comunicação de massa sobre a chegada de chuva forte no município. O aviso será feito com base nas previsões meteorológicas do Sistema Alerta Rio, órgão de meteorologia da Prefeitura do Rio.
-      </styles.IntroText>
-    </styles.IntroDiv>
+      Já a Defesa Civil operacionalizou mais uma ferramenta de comunicação preventiva aos moradores que vivem em áreas de alto risco geológico. Avisos sonoros serão emitidos por sirenes localizadas em 103 comunidades. O objetivo é alertar a população, antecipadamente, que não possuem acesso aos meios de comunicação de massa sobre a chegada de chuva forte no município. O aviso será feito com base nas previsões meteorológicas do Sistema Alerta Rio, órgão de meteorologia da Prefeitura do Rio. </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv2>
   );
 }
 
@@ -174,27 +196,10 @@ export function Exemplo0(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDivn ref={props.chapRef} id={props.id}>
-    </styles.ChapterGenericDivn>
-  );
-}
-export function Exemplo1(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-      <styles.TextCard2><styles.Textyellow>Desassoreamento do Rio Acari</styles.Textyellow></styles.TextCard2>
+      <styles.TextCard5><styles.Textyellow>Desassoreamento</styles.Textyellow></styles.TextCard5>
         <br /> 
-        <styles.NewsImage src={exemplo1}></styles.NewsImage>
-        <styles.Credito>
-          Divulgação: Fundação Rio-Águas
-        </styles.Credito>  
         <styles.TextCard1>
         Em 2023, o investimento em desassoreamento de rios já totalizou 555,4 mil toneladas de lixo. As ações são referentes à limpeza, ao desassoreamento e à manutenção de rios como o Rio Acari, o Rio Ita (Santa Cruz), o Rio Campinho (Campo Grande), entre outros. Além disso, também são realizadas a recuperação estrutural e a limpeza de canaletas de drenagem em encostas, além de manutenção e operação dos reservatórios.
         <br /> <br />
@@ -216,7 +221,7 @@ export function Exemplo1(
   );
 }
 
-export function Exemplo2(
+export function Exemplo1(
   props = {
     id: "",
     chapRef: null,
@@ -227,6 +232,54 @@ export function Exemplo2(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
+      <styles.TextCard2><styles.Textyellow>Desassoreamento do Rio Acari</styles.Textyellow></styles.TextCard2>
+        <br /> 
+        <styles.NewsImage src={exemplo1}></styles.NewsImage>
+        <styles.Credito>
+          Divulgação: Fundação Rio-Águas
+        </styles.Credito>  
+        <styles.TextCard1>
+        Os serviços de limpeza e desassoreamento no Rio Acari, que é um dos principais rios da Zona Norte, foram concluídos. O investimento foi de R$ 8,7 milhões do município. Os trabalhos cobriram a extensão de 3,1 km de rio e retiraram mais de 191 mil toneladas de material do canal, que representam em torno de 16 mil caminhões basculantes de 12 toneladas. Foram concluídos em julho de 2023. 
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1>
+  );
+}
+
+export function Exemplo2(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+      <styles.TextCard5><styles.Textyellow>Obras de drenagem</styles.Textyellow></styles.TextCard5>
+        <br />
+        <styles.TextCard1>
+        Foram investidos R$ 9,8 milhões em obras de drenagem para eliminação de pontos críticos de alagamento. Os serviços foram executados na Avenida Borges de Medeiros, na Rua Alexandre Calaza e nas estradas da Pedra e do Catonho, onde os trabalhos entraram na reta final. No total, mais de 1,6 km de drenagem estão sendo executadas.
+        <br />
+        Na intersecção entre as estradas do Catonho e Cafundá, o aumento da capacidade de escoamento das galerias pluviais solucionará o problema crônico de alagamento que motoristas e pedestres enfrentam em dias de chuvas fortes. Mais de 7,6 mil metros quadrados de drenagem estão sendo recuperados. Além disso, as calçadas estão sendo reconstruídas para melhorar a mobilidade e a acessibilidade. Por fim, o trecho ganhará nova pavimentação.
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function Exemplo3(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
       <styles.TextCard2><styles.Textyellow>Obra de drenagem no entorno do Mercadão de Madureira</styles.Textyellow></styles.TextCard2>
         <styles.NewsImage src={exemplo2}></styles.NewsImage>
         <styles.Credito>
@@ -234,48 +287,12 @@ export function Exemplo2(
         </styles.Credito>       
         <br />
         <styles.TextCard1>
-        Ao todo, 35 obras contra riscos hidrológicos foram realizadas nos últimos três anos, um investimento de mais de R$ 78 milhões. Atualmente seis estão em execução, como as do Mercadão de Madureira, Bairro Maravilha Jardim Maravilha e na Comunidade do Rollas, e as obras de canalização do Rio Tindiba e na Pavuna.
-        <br /> <br />
-        Nas ações contra deslizamentos, 118 obras foram concluídas, 41 estão em andamento e sete aguardam o processo de licitação. As intervenções que totalizam R$ 214 milhões.
-        </styles.TextCard1>
+        As obras de drenagem foram iniciadas em novembro de 2022 para eliminar ponto de alagamento na Rua Conselheiro Galvão, em Madureira, próximo ao Mercadão de Madureira, na Zona Norte da cidade. O investimento é de R$ 10,1 milhões do município.
+        Foram implantados 400 metros de nova rede de drenagem na via, com isso, aumentará a capacidade das galerias pluviais e reduzirá bolsões d'água em um dos acessos do Mercadão, beneficiando pedestres, motoristas e comerciantes da região.</styles.TextCard1>
       </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
+    </styles.ChapterGenericDiv2>
   );
 }
-
-// export function Exemplo3(
-//   props = {
-//     id: "",
-//     chapRef: null,
-//   }
-// ) {
-//   props = setDefaultProps(props);
-
-//   return (
-//     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-//       <styles.ContainerCard1>
-//         <styles.TextCard1>
-//           Em novembro de 2021, uma tragédia: um prédio de quatro andares desabou
-//           no{" "}
-//           <styles.Textyellow>
-//             {" "}
-//             <a
-//               className="p-1"
-//               href="https://www1.folha.uol.com.br/cotidiano/2021/11/predio-de-4-andares-desaba-no-rio-e-deixa-um-morto-e-tres-feridos.shtml"
-//               target="_blank"
-//               rel="noreferrer"
-//             >
-//               Morro do Salgueiro,
-//             </a>
-//           </styles.Textyellow>{" "}
-//           na Zona Norte. Um homem de 22 anos faleceu e outras três pessoas
-//           ficaram feridas. Entre elas, uma criança de apenas quatro anos. A
-//           construção também não tinha alvará.
-//         </styles.TextCard1>
-//       </styles.ContainerCard1>
-//     </styles.ChapterGenericDiv>
-//   );
-// }
 
 export function Seop4(
   props = {
@@ -286,30 +303,19 @@ export function Seop4(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <styles.NewsImage src={seop4}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
-        <styles.TextCard1>
-          Também em Muzema,{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/ordem-publica/prefeitura-faz-demolicao-de-predio-de-tres-andares-no-valor-de-r-3-milhoes-na-muzema/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              uma construção irregular foi colocada abaixo.
-            </a>
-          </styles.Textyellow>{" "}
-          O prédio, com três andares, foi demolido pela equipe da Força-Tarefa
-          no mês passado.
-        </styles.TextCard1>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
+    <styles.IntroDiv ref={props.chapRef} id={props.id}>
+      <div>
+          <styles.Button>
+          <a
+            className="font-bold underline"
+            href="https://www.dados.rio/"
+            target="_blank"
+            rel="noreferrer"
+          >VEJA O MAPA COMPLETO  
+          </a>
+          </styles.Button>
+          </div>
+    </styles.IntroDiv>
   );
 }
 
@@ -322,7 +328,7 @@ export function Seop3(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
       <styles.TextCard2><styles.Textyellow>Novo radar meteorológico do Rio</styles.Textyellow></styles.TextCard2>
         <styles.NewsImage src={seop3}></styles.NewsImage>
@@ -336,7 +342,7 @@ export function Seop3(
         O Rio passa a ser o primeiro município do país a contar com dois radares meteorológicos próprios. As imagens dos equipamentos, assim como já acontece com o que está instalado no Morro do Sumaré, serão disponibilizadas para a população do Rio.
         </styles.TextCard1>
       </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
+    </styles.ChapterGenericDiv2>
   );
 }
 
@@ -421,30 +427,6 @@ export function Seop1(props = { id: "", chapRef: null }) {
           <br /> <br />
           Neste ano, a Prefeitura do Rio iniciou o projeto Morar Carioca na comunidade do Aço, em Santa Cruz, na Zona Oeste. Com um investimento de R$ 243 milhões, em uma área de 195 mil metros quadrados, a comunidade do Aço ganhará 704 unidades habitacionais, que vão beneficiar diretamente quatro mil pessoas, além de melhorias em infraestrutura urbana.
           </styles.TextCard1>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
-  );
-}
-export function Zoom(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <styles.TextCard1>
-          Infelizmente, nos últimos anos, casos recorrentes de desabamentos
-          foram registrados na cidade.{" "}
-          <styles.Textyellow>
-            Prédios construídos pelo crime organizado, sem a infraestrutura e os
-            cuidados técnicos necessários, vieram abaixo.
-          </styles.Textyellow>{" "}
-          Famílias inteiras perderam seus lares e suas vidas:
-        </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
   );
@@ -542,16 +524,19 @@ export function Oeste(
 
   return (
     <styles.IntroDivMaior ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"zonaOesteTitle"}>
+      {/* <styles.IntroTitle id={"zonaOesteTitle"}>
         Onde estão localizadas as construções irregulares
-      </styles.IntroTitle>
+      </styles.IntroTitle> */}
       <styles.IntroText>
+      <styles.IntroTitle>Obras de Contenção</styles.IntroTitle>
       Também <styles.Textgrey>foram investidos cerca de R$ 35 milhões somente nas obras de contenção nas grandes vias </styles.Textgrey>com protocolos de fechamento nos dias de fortes chuvas. Com isso, foram registrados menos problemas com deslizamentos de terra nos últimos temporais. Nos últimos três anos <styles.Textgrey>conseguimos fazer a contenção de 880 mil metros quadrados em áreas de alto risco em comunidades cariocas, o equivalente a 107 campos de futebol.</styles.Textgrey>
-      <br /><br />
+      <br /><br /><br />
+      <styles.IntroTitle>Obras de Drenagem</styles.IntroTitle>
       Com um investimento de R$ 9,8 milhões em obras de drenagem para eliminação de pontos críticos de alagamento. Os serviços foram executados na Avenida Borges de Medeiros, na Rua Alexandre Calaza e nas estradas da Pedra e do Catonho, onde os trabalhos entraram na reta final. No total, mais de 1,6 km de drenagem estão sendo executadas. 
       <br /><br />
       Na intersecção entre as estradas do Catonho e Cafundá, o aumento da capacidade de escoamento das galerias pluviais solucionará o problema crônico de alagamento que motoristas e pedestres enfrentam em dias de chuvas fortes. Mais de 7,6 mil metros quadrados de drenagem estão sendo recuperados. Além disso, as calçadas estão sendo reconstruídas para melhorar a mobilidade e a acessibilidade. Por fim, o trecho ganhará nova pavimentação.
-      <br /><br />
+      <br /><br /><br />
+      <styles.IntroTitle>Podas de árvores</styles.IntroTitle>
       Podas de árvores e a limpeza urbana são outros pontos importantes na prevenção. <styles.Textgrey>Foram realizadas 150 mil podas, um serviço importante para evitar que a queda de árvores durante temporais.</styles.Textgrey>
       </styles.IntroText>
     </styles.IntroDivMaior>

@@ -52,21 +52,21 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Zoom().layers);
         break;
       case "exemplo0":
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
+        break;
+      case "exemplo1":
         setPosition(chapterMap.Exemplo0().location);
         setLayers(chapterMap.Exemplo0().layers);
         break;
-      case "exemplo1":
-        setPosition(chapterMap.Exemplo1().location);
-        setLayers(chapterMap.Exemplo1().layers);
-        break;
       case "exemplo2":
-        setPosition(chapterMap.Exemplo2().location);
-        setLayers(chapterMap.Exemplo2().layers);
+        setPosition(chapterMap.Exemplo3().location);
+        setLayers(chapterMap.Exemplo3().layers);
         break;
-      // case "exemplo3":
-      //   setPosition(chapterMap.Exemplo3().location);
-      //   setLayers(chapterMap.Exemplo3().layers);
-      //   break;
+      case "exemplo3":
+        setPosition(chapterMap.Exemplo3().location);
+        setLayers(chapterMap.Exemplo3().layers);
+        break;
       case "mapa":
         setPosition(chapterMap.Mapa().location);
         setLayers(chapterMap.Mapa().layers);
@@ -350,19 +350,18 @@ export default function SubsidioSPPO() {
       <chapterDiv.Intro id={"intro"} />
       <chapterDiv.Acompanhe id={"acompanhe"} />
       <chapterDiv.Prejuizo id={"prejuizo"} />
-      {/* <chapterDiv.Zoom id={"zoom"} /> */}
       <chapterDiv.Exemplo0 id={"exemplo0"} />
       <chapterDiv.Exemplo1 id={"exemplo1"} />
       <chapterDiv.Exemplo2 id={"exemplo2"} />
-      {/* <chapterDiv.Exemplo3 id={"exemplo3"} /> */}
-      <chapterDiv.Oeste id={"oeste"} />
+      <chapterDiv.Exemplo3 id={"exemplo3"} />
+      {/* <chapterDiv.Oeste id={"oeste"} /> */}
       <chapterDiv.Seop1 id={"seop1"} />
       <chapterDiv.Seop2 id={"seop2"} />
+      <chapterDiv.Zoom id={"zoom"} />
       <chapterDiv.Seop3 id={"seop3"} />
       {/* <chapterDiv.Mapa id={"mapa"} /> */}
-      <chapterDiv.Solucao id={"solucao"} />
+      {/* <chapterDiv.Solucao id={"solucao"} /> */}
       {/* <chapterDiv.Grafico id={"grafico"} /> */}
-
       {/* <chapterDiv.Seop4 id={"seop4"} /> */}
       <chapterDiv.Fim id={"fim"} />
     </>

@@ -118,6 +118,17 @@ export const ChapterGenericDiv1 = tw.div`
   -z-10 
   `;
 
+  export const ChapterGenericDiv2 = tw.div`
+  flex
+  w-full h-[200vh] 
+  items-center
+  justify-center
+  lg:justify-end
+  lg:p-[10%]
+  text-white
+  -z-10 
+  `;
+
 export const IntroDiv = tw.div`
   w-full h-200
   bg-opacity-40 backdrop-blur
@@ -216,6 +227,7 @@ export const TextCard1 = tw(TextCardSC)`
 export const TextCard2 = tw(TextCardSC)`
   font-serif  
   text-2xl
+  lg:text-3xl
   font-bold
   text-left
   mt-0
@@ -230,7 +242,27 @@ export const TextCard2 = tw(TextCardSC)`
   text-left
   mt-0
   mb-[8px]
-  lg:mb-[48px]
+  lg:mb-[8px]
+  `;
+
+  export const TextCard4 = tw(TextCardSC)`
+  font-serif  
+  text-2xl
+  lg:text-2xl
+  font-bold
+  underline
+  text-left
+  mt-0
+  mb-[8px]
+  lg:mb-[12px]
+  `;
+
+  export const TextCard5 = tw(TextCardSC)`
+  font-serif  
+  text-2xl
+  lg:text-3xl
+  font-bold
+  text-left
   `;
 
 export const Grid1 = tw.div`
