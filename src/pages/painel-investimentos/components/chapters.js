@@ -11,6 +11,7 @@ const setDefaultProps = (providedProps) => {
   return { ...defaultProps, ...providedProps };
 };
 
+
 export function Capa(
   props = {
     id: "",
