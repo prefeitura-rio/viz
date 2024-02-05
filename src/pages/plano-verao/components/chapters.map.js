@@ -208,7 +208,7 @@ export const Seop1 = () => {
           },
         },
       }, 
-    ],
+    ],  
   };
 };
 
@@ -484,7 +484,7 @@ export const Exemplo0 = () => {
                             coordinates: [-43.346253842506975, -22.806199873225385] // Replace with desired coordinates
                         },
                         properties: {
-                            title: "TEXTO 1"
+                            title: "Rio Acarí"
                         }
                     }]
                 }
@@ -495,10 +495,10 @@ export const Exemplo0 = () => {
                 "text-size": 30
             },
             paint: {
-                "text-color": "#ff0000",
-                "text-halo-color": "#ffffff",
-                "text-halo-width": 3,  // Adjust the width as needed
-                "text-halo-blur": 0
+                "text-color": "#06639d",
+                // "text-halo-color": "#ffffff",
+                // "text-halo-width": 3,  // Adjust the width as needed
+                // "text-halo-blur": 0
             }
         },
     }
