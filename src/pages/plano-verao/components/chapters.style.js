@@ -12,8 +12,8 @@ export const CapaDivSC = styled.div`
 export const CapaDiv = tw(CapaDivSC)`
   h-screen w-full
   flex flex-col 
-  justify-between
-  lg:justify-start items-center 
+  justify-start
+  lg:justify-start items-center
   pl-5 pr-5  
   bg-white/80
   bg-opacity-40 backdrop-blur
@@ -22,7 +22,7 @@ export const CapaDiv = tw(CapaDivSC)`
 // sm:ml-30 sm:mr-30
 // sm:w
 export const Title = tw.div`
-  mt-[10%]
+  mt-[60%]
   lg:mt-[300px]
   lg:mb-3    
   font-serif font-bold  
@@ -50,7 +50,7 @@ export const AuthorText = tw.div`
 `;
 
 export const Button = tw.div`
-  mb-[60%]
+  mb-[200px]
   lg:mt-[40px]
   font-serif
   text-sm text-center text-black
@@ -365,7 +365,7 @@ export const Textgrey = tw(TextgreySC)`
 `;
 
 const TextblueSC = styled.div`
-  background: #00c0f3;
+  background: #da8216;
 `;
 
 export const Textblue = tw(TextblueSC)`

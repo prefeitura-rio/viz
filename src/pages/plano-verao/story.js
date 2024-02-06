@@ -48,16 +48,16 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Capa().layers);
         break;
       case "exemplo0":
-        setPosition(chapterMap.Exemplo0().location);
-        setLayers(chapterMap.Exemplo0().layers);
+        setPosition(chapterMap.Desassoreamento().location);
+        setLayers(chapterMap.Desassoreamento().layers);
         break;
       case "exemplo0um":
-        setPosition(chapterMap.Exemplo0().location);
-        setLayers(chapterMap.Exemplo0().layers);
+        setPosition(chapterMap.Desassoreamento().location);
+        setLayers(chapterMap.Desassoreamento().layers);
         break;
       case "exemplo1":
-        setPosition(chapterMap.Exemplo2().location);
-        setLayers(chapterMap.Exemplo2().layers);
+        setPosition(chapterMap.Exemplo0().location);
+        setLayers(chapterMap.Exemplo0().layers);
         break;
       case "exemplo2":
         setPosition(chapterMap.Exemplo2().location);
@@ -75,29 +75,17 @@ export default function SubsidioSPPO() {
       setPosition(chapterMap.Exemplo3().location);
       setLayers(chapterMap.Exemplo3().layers);
       break;
-      case "mapa":
-        setPosition(chapterMap.Mapa().location);
-        setLayers(chapterMap.Mapa().layers);
-        break;
-      case "solucao":
-        setPosition(chapterMap.Solucao().location);
-        setLayers(chapterMap.Solucao().layers);
-        break;
       case "prejuizo":
         setPosition(chapterMap.Prejuizo().location);
         setLayers(chapterMap.Prejuizo().layers);
         break;
       case "cor":
-        setPosition(chapterMap.Prejuizo().location);
-        setLayers(chapterMap.Prejuizo().layers);
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
       case "corum":
-        setPosition(chapterMap.Prejuizo().location);
-        setLayers(chapterMap.Prejuizo().layers);
-        break;
-      case "grafico":
-        setPosition(chapterMap.Grafico().location);
-        setLayers(chapterMap.Grafico().layers);
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
       case "fim":
         setPosition(chapterMap.Fim().location);

@@ -84,8 +84,7 @@ export function Intro(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv style={{paddingBottom:"100vh"}} ref={props.chapRef} id={props.id}>
-     
+    <styles.IntroDiv style={{paddingBottom:"100vh"}} ref={props.chapRef} id={props.id}>     
       <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle>
       <styles.IntroText>
         Dados do Alerta Rio, sistema de alerta de chuvas intensas e de deslizamentos em encostas do Rio de Janeiro, mostram que nunca choveu tanto na nossa cidade. <br /> <br />
@@ -95,7 +94,7 @@ export function Intro(
         <br /> <br />
         Para isso, <styles.Textgrey>desde 2021 o Rio conta com a implementação do Plano Verão, cujo objetivo é minimizar os impactos das chuvas.</styles.Textgrey> Ao todo, 30 órgãos municipais, incluindo secretarias, empresas públicas e subprefeituras, trabalham na implementação das ações. 
         <br /> <br />
-        Neste especial do Escritório de Dados, elaborado em parceria com a Comlurb, o COR, a Fundação Rio-Águas e a Secretaria Municipal de Conservação (SECONSERVA), explicaremos como o Plano Verão se tornou uma medida essencial no preparo do Rio para os impactos das chuvas.
+        Neste especial do Escritório de Dados, explicaremos como o Plano Verão se tornou uma medida essencial no preparo do Rio para os impactos das chuvas.
       </styles.IntroText>
       <br /> <br />        <br /> <br />
       <styles.IntroTitle id={"acompanheTitle"}>
@@ -221,8 +220,10 @@ export function Exemplo0(
       <styles.TextCard5><styles.Textyellow>Dragagem dos rios</styles.Textyellow></styles.TextCard5>
         <br /> 
         <styles.TextCard1>
-        Em 2023, o investimento em desassoreamento de rios já totalizou 555,4 mil toneladas de lixo. As ações são referentes à limpeza, ao desassoreamento e à manutenção de rios como o Rio Acari, o Rio Ita (Santa Cruz), o Rio Campinho (Campo Grande), entre outros. Além disso, também são realizadas a recuperação estrutural e a limpeza de canaletas de drenagem em encostas, além de manutenção e operação dos reservatórios.
+        Em 2023, o investimento em desassoreamento de rios já totalizou a retirada de 555,4 mil toneladas de lixo. As ações são referentes à limpeza, ao desassoreamento e à manutenção de rios como o Rio Acari, o Rio Ita (Santa Cruz), o Rio Campinho (Campo Grande), entre outros. Além disso, também são realizadas a recuperação estrutural e a limpeza de canaletas de drenagem em encostas, além de manutenção e operação dos reservatórios.
         </styles.TextCard1>
+        <br /> <br /> 
+        <styles.Textblue>Rio Águas</styles.Textblue>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
   );
@@ -265,7 +266,7 @@ export function Exemplo1(
           Divulgação: Fundação Rio-Águas
         </styles.Credito>  
         <styles.TextCard1>
-        Os serviços de limpeza e desassoreamento no Rio Acari, que é um dos principais rios da Zona Norte, foram concluídos. O investimento foi de R$ 8,7 milhões do município. Os trabalhos cobriram a extensão de 3,1 km de rio e retiraram mais de 191 mil toneladas de material do canal, que representam em torno de 16 mil caminhões basculantes de 12 toneladas. Foram concluídos em julho de 2023. 
+        Os serviços de limpeza e desassoreamento no Rio Acari, que é um dos principais rios da Zona Norte, foram concluídos em julho de 2023. O investimento foi de R$ 8,7 milhões do município. Os trabalhos cobriram a extensão de 3,1 km de rio e retiraram mais de 191 mil toneladas de material do canal, que representam em torno de 16 mil caminhões basculantes de 12 toneladas.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
@@ -288,6 +289,8 @@ export function Exemplo2(
         <styles.TextCard1>
         Foram investidos R$ 9,8 milhões em obras de drenagem para eliminação de pontos críticos de alagamento. Os serviços foram executados na Avenida Borges de Medeiros, na Rua Alexandre Calaza e nas estradas da Pedra e do Catonho, onde os trabalhos entraram na reta final. No total, mais de 1,6 km de drenagem estão sendo executadas.
         </styles.TextCard1>
+        <br /> <br /> 
+        <styles.TextblueOne>Geo Rio</styles.TextblueOne>  <styles.Textblue>Rio Águas</styles.Textblue>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv2>
   );
@@ -520,14 +523,14 @@ export function Fim(
       <styles.IntroText1>Eduardo Paes</styles.IntroText1>
       <br /> <br />
       <styles.TextCard3><styles.Textblack>Autores</styles.Textblack></styles.TextCard3>
-      <styles.IntroText1>Caio Jacintho<br />Diego Oliveira<br />João Carabetta<br />João Marcelo Ferraz<br />Judite Cypreste<br />Lucas Tavares<br />Ramon Carnaval</styles.IntroText1>
+      <styles.IntroText1>Caio Jacintho<br />João Carabetta<br />João Marcelo Ferraz<br />Judite Cypreste<br />Lucas Tavares</styles.IntroText1>
       <br /> <br />
       <styles.TextCard3><styles.Textblack>Agradecimentos</styles.Textblack></styles.TextCard3>
-      <styles.IntroText1>Gabriela Hilário<br />Joice Nascimento</styles.IntroText1>
+      <styles.IntroText1>Diego Oliveira<br />Gabriela Hilário<br />Joice Nascimento<br />Ramon Carnaval</styles.IntroText1>
       <a href={"https://www.dados.rio/"}>
         <img
           src={logoed}
-          className="w-44 mt-[200px] lg:mt-[200px] lg:w-56"
+          className="w-44 mt-[200px] mb-[200px] lg:mt-[200px] lg:w-56"
         ></img>
       </a>
     </styles.IntroDiv>

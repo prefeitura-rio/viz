@@ -25,7 +25,7 @@ export const Capa = () => {
           lon: -43.45632,
           lat: -22.92106,
         },
-        zoom: 8.38,
+        zoom: 8.68,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -55,7 +55,7 @@ export const Intro = () => {
           lon: -43.45632,
           lat: -22.92106,
         },
-        zoom: 8.38,
+        zoom: 8.68,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -83,7 +83,7 @@ export const Prejuizo = () => {
           lon: -43.45632,
           lat: -22.92106,
         },
-        zoom: 8.38,
+        zoom: 8.68,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -100,30 +100,13 @@ export const Prejuizo = () => {
             source: "composite",
             "source-layer": "obras-alag-geo-rio_-_obras-al-27j534",
             paint: {
-              "circle-radius": 3,
+              "circle-radius": 10,
               "circle-color": "#06639d",
               "circle-opacity": 0
           }
           },
         },
       }, 
-      {
-        layerType: "mapbox",
-        targetOpacity: .15,
-        layer: {
-          ...{
-            id: "georio-geral2",
-            type: "circle",
-            source: "composite",
-            "source-layer": "obras-alag-geo-rio_-_obras-al-27j534",
-            paint: {
-              "circle-radius": 25,
-              "circle-color": "#06639d",
-              "circle-opacity": 0
-          }
-          },
-        },
-      },
       {
         layerType: "mapbox",
         targetOpacity: .75,
@@ -134,98 +117,13 @@ export const Prejuizo = () => {
             source: "composite",
             "source-layer": "obras-alag-rio-aguas_-_obras--8kwpcs",
             paint: {
-              "circle-radius": 3,
-              "circle-color": "#00c0f3",
+              "circle-radius": 10,
+              "circle-color": "#da8216",
               "circle-opacity": 0
           }
           },
         },
       }, 
-      {
-        layerType: "mapbox",
-        targetOpacity: .15,
-        layer: {
-          ...{
-            id: "rioaguas-geral2",
-            type: "circle",
-            source: "composite",
-            "source-layer": "obras-alag-rio-aguas_-_obras--8kwpcs",
-            paint: {
-              "circle-radius": 25,
-              "circle-color": "#00c0f3",
-              "circle-opacity": 0
-          }
-          },
-        },
-      }, 
-    ],
-  };
-};
-
-export const Solucao = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.45632,
-          lat: -22.92106,
-        },
-        zoom: 10.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.45632,
-          lat: -22.92106,
-        },
-        zoom: 8.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 0.5,
-        layer: { id: "consolidado-cor" },
-      },
-    ],
-  };
-};
-
-export const Grafico = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.45632,
-          lat: -22.92106,
-        },
-        zoom: 10.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.45632,
-          lat: -22.92106,
-        },
-        zoom: 8.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 0.5,
-        layer: { id: "consolidado-cor" },
-      },
     ],
   };
 };
@@ -245,12 +143,12 @@ export const BairroMaravilha = () => {
       },
       mobile: {
         center: {
-          lon: -43.30619,
-          lat: -22.89748,
+          lon: -43.30598,
+          lat: -22.89756,
         },
-        zoom: 17.90,
-        pitch: 40.52,
-        bearing: 142.28,
+        zoom: 14.40,
+        pitch: 48.08,
+        bearing: 43.25,
         duration: 4000,
       },
     },
@@ -358,205 +256,78 @@ export const BairroMaravilha = () => {
               // "text-halo-blur": 0
           }
       },
-   },
+    },
+    {
+      layerType: "mapbox",
+      targetOpacity: 1,
+      layer: {
+          id: "static-text171",
+          type: "symbol",
+          source: {
+              type: "geojson",
+              data: {
+                  type: "FeatureCollection",
+                  features: [{
+                      type: "Feature",
+                      geometry: {
+                          type: "Point",
+                          coordinates: [-43.31067, -22.90155] // Replace with desired coordinates
+                      },
+                      properties: {
+                        title: "43.839"
+                    }
+                }]
+            }
+        },
+        layout: {
+            "text-field": "{title}",
+            "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+            "text-size": 60
+        },
+        paint: {
+            "text-color": "#06639d",
+            "text-halo-color": "#ffffff",
+            "text-halo-width": 3,  // Adjust the width as needed
+            "text-halo-blur": 0
+        }
+      },
+     },
+     {
+      layerType: "mapbox",
+      targetOpacity: 1,
+      layer: {
+          id: "static-text181",
+          type: "symbol",
+          source: {
+              type: "geojson",
+              data: {
+                  type: "FeatureCollection",
+                  features: [{
+                      type: "Feature",
+                      geometry: {
+                          type: "Point",
+                          coordinates: [-43.31316, -22.90336] // Replace with desired coordinates
+                      },
+                      properties: {
+                        title: "pessoas beneficiadas"
+                    }
+                }]
+            }
+        },
+        layout: {
+            "text-field": "{title}",
+            "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+            "text-size": 20
+        },
+        paint: {
+            "text-color": "#06639d",
+            "text-halo-color": "#ffffff",
+            "text-halo-width": 3,  // Adjust the width as needed
+            "text-halo-blur": 0
+        }
+      },
+     },
     ],  
-  };
-};
-
-export const Seop2 = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.20332,
-          lat: -22.91198,
-        },
-        zoom: 18.89,
-        pitch: 42,
-        bearing: 132.80,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.20346,
-          lat: -22.91219,
-        },
-        zoom: 18.10,
-        pitch: 42,
-        bearing: 132.80,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: .75,
-        layer: {
-          ...{
-            id: "cor",
-            type: "fill",
-            source: "composite",
-            "source-layer": "cor-3eu3fz",
-            paint: {
-              "fill-color": "#003b66"
-          }
-          },
-        },
-      },
-    ],
-  };
-};
-
-export const Seop3 = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.4885,
-          lat: -23.02842,
-        },
-        zoom: 14.71,
-        pitch: 52.5,
-        bearing: -53.6,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.4785,
-          lat: -23.02842,
-        },
-        zoom: 14.71,
-        pitch: 52.5,
-        bearing: -53.6,
-        duration: 4000,
-      },
-    },
-    layers: [
-    ],
-  };
-};
-
-export const Seop4 = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.31816,
-          lat: -22.99102,
-        },
-        zoom: 15.77,
-        pitch: 59.0,
-        bearing: 124.47,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.32128,
-          lat: -22.99349,
-        },
-        zoom: 16.14,
-        pitch: 52.5,
-        bearing: 127.03,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 1,
-        layer: { id: "demolicao-icone" },
-      },
-    ],
-  };
-};
-
-export const Acompanhe = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.45632,
-          lat: -22.92106,
-        },
-        zoom: 10.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.45632,
-          lat: -22.92106,
-        },
-        zoom: 8.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-    },
-    layers: [],
-  };
-};
-
-export const Oeste = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.45632,
-          lat: -22.92106,
-        },
-        zoom: 10.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.45632,
-          lat: -22.92106,
-        },
-        zoom: 8.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.5,
-        layer: {
-          ...{
-            id: "consolidado-cor",
-            type: "circle",
-            source: "composite",
-            "source-layer": "consolidado1-2cgaz2",
-            paint: {
-              "circle-radius": [
-                "match",
-                ["get", "total_demolicoes"],
-                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 16],
-                isMobile ? 3 : 7,
-                [21, 23, 24, 27, 25, 29, 31, 38, 44, 54, 33],
-                isMobile ? 10 : 25,
-                isMobile ? 20 : 50,
-              ],
-              "circle-color": [
-                "match",
-                ["get", "total_demolicoes"],
-                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 11, 13, 14, 16, 15, 20],
-                "#f1d6a5",
-                [21, 23, 24, 25, 27, 29, 31, 33, 38, 44, 54],
-                "#d5aa5d",
-                "#a96e04",
-              ],
-              "circle-opacity": 0,
-            },
-          },
-        },
-      },
-    ],
   };
 };
 
@@ -575,12 +346,12 @@ export const Exemplo0 = () => {
       },
       mobile: {
         center: {
-          lon: -43.32127,
-          lat: -22.9864,
+          lon: -43.33490,
+          lat: -22.82426,
         },
-        zoom: 15.85,
-        pitch: 41.0,
-        bearing: 17.2,
+        zoom: 12.95,
+        pitch: 36.75,
+        bearing: -8,
         duration: 4000,
       },
     },
@@ -863,51 +634,76 @@ export const Exemplo0 = () => {
           }
         },
        },
-    ],
-  };
-};
-export const Exemplo1 = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.35420,
-          lat: -22.82609,
-        },
-        zoom: 14.52,
-        pitch: 46.50,
-        bearing: -72,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.35420,
-          lat: -22.82609,
-        },
-        zoom: 16.52,
-        pitch: 46.50,
-        bearing: -72,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
+       {
         layerType: "mapbox",
-        targetOpacity: .75,
+        targetOpacity: 1,
         layer: {
-          ...{
-            id: "rioacari",
-            type: "line",
-            source: "composite",
-            "source-layer": "rioacari-0gg46o",
-            paint: {
-              "line-width": 15,
-              "line-blur": 3,
-              "line-color": "#003b66"
-          }
+            id: "static-text13",
+            type: "symbol",
+            source: {
+                type: "geojson",
+                data: {
+                    type: "FeatureCollection",
+                    features: [{
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [-43.33398, -22.83601] // Replace with desired coordinates
+                        },
+                        properties: {
+                          title: "29.230"
+                      }
+                  }]
+              }
           },
+          layout: {
+              "text-field": "{title}",
+              "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+              "text-size": 60
+          },
+          paint: {
+              "text-color": "#06639d",
+              "text-halo-color": "#ffffff",
+              "text-halo-width": 3,  // Adjust the width as needed
+              "text-halo-blur": 0
+          }
         },
-      },
+       },
+       {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+            id: "static-text14",
+            type: "symbol",
+            source: {
+                type: "geojson",
+                data: {
+                    type: "FeatureCollection",
+                    features: [{
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [-43.33452, -22.84348] // Replace with desired coordinates
+                        },
+                        properties: {
+                          title: "pessoas beneficiadas"
+                      }
+                  }]
+              }
+          },
+          layout: {
+              "text-field": "{title}",
+              "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+              "text-size": 20
+          },
+          paint: {
+              "text-color": "#06639d",
+              "text-halo-color": "#ffffff",
+              "text-halo-width": 3,  // Adjust the width as needed
+              "text-halo-blur": 0
+          }
+        },
+       },
     ],
   };
 };
@@ -930,7 +726,7 @@ export const Exemplo2 = () => {
           lon: -43.45632,
           lat: -22.92106,
         },
-        zoom: 8.38,
+        zoom: 8.68,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -948,7 +744,7 @@ export const Exemplo2 = () => {
             "source-layer": "obras-alag-rio-aguas_-_obras--8kwpcs",
             paint: {
               "circle-radius": 3,
-              "circle-color": "#00c0f3",
+              "circle-color": "#da8216",
               "circle-opacity": 0
           }
           },
@@ -975,6 +771,52 @@ export const Exemplo2 = () => {
   };
 };
 
+export const Desassoreamento = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.45632,
+          lat: -22.92106,
+        },
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.45632,
+          lat: -22.92106,
+        },
+        zoom: 8.68,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: .75,
+        layer: {
+          ...{
+            id: "rioaguas-desassoreamento",
+            type: "circle",
+            source: "composite",
+            "source-layer": "obras-alag-rio-aguas_-_obras--8kwpcs",
+            paint: {
+              "circle-radius": 3,
+              "circle-color": "#da8216",
+              "circle-opacity": 0
+          }
+          },
+        },
+      },      
+    ],
+  };
+};
+
 export const Exemplo3 = () => {
   return {
     location: {
@@ -990,12 +832,12 @@ export const Exemplo3 = () => {
       },
       mobile: {
         center: {
-          lon: -43.22925,
-          lat: -22.93012,
+          lon: -43.33758,
+          lat: -22.87176,
         },
-        zoom: 15.72,
-        pitch: 45.5,
-        bearing: 12.4,
+        zoom: 14.14,
+        pitch: 36.08,
+        bearing: 9.6,
         duration: 4000,
       },
     },
@@ -1081,7 +923,7 @@ export const Exemplo3 = () => {
                       type: "Feature",
                       geometry: {
                           type: "Point",
-                          coordinates: [-43.34070, -22.87663] // Replace with desired coordinates
+                          coordinates: [-43.33601, -22.87430] // Replace with desired coordinates
                       },
                       properties: {
                         title: "Madureira"
@@ -1102,90 +944,76 @@ export const Exemplo3 = () => {
         }
       },
      },
-    ],
-  };
-};
-
-export const Zoom = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.32838,
-          lat: -22.98401,
+     {
+      layerType: "mapbox",
+      targetOpacity: 1,
+      layer: {
+          id: "static-text15",
+          type: "symbol",
+          source: {
+              type: "geojson",
+              data: {
+                  type: "FeatureCollection",
+                  features: [{
+                      type: "Feature",
+                      geometry: {
+                          type: "Point",
+                          coordinates: [-43.34171, -22.87680] // Replace with desired coordinates
+                      },
+                      properties: {
+                        title: "38.366"
+                    }
+                }]
+            }
         },
-        zoom: 13.6,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.32838,
-          lat: -22.98401,
+        layout: {
+            "text-field": "{title}",
+            "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+            "text-size": 60
         },
-        zoom: 12.6,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
+        paint: {
+            "text-color": "#06639d",
+            "text-halo-color": "#ffffff",
+            "text-halo-width": 3,  // Adjust the width as needed
+            "text-halo-blur": 0
+        }
       },
-    },
-    layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 1,
-        layer: {
-          ...{
-            id: "desabamento-icone",
-            type: "symbol",
-            source: "composite",
-            "source-layer": "desabamento1-9gi1wf",
-            layout: {
-              "icon-image": "hospital",
-              "icon-rotate": 45,
-              "icon-allow-overlap": true,
-              "icon-size": 2,
-            },
-            paint: {
-              "icon-opacity": 0,
-            },
-          },
+     },
+     {
+      layerType: "mapbox",
+      targetOpacity: 1,
+      layer: {
+          id: "static-text16",
+          type: "symbol",
+          source: {
+              type: "geojson",
+              data: {
+                  type: "FeatureCollection",
+                  features: [{
+                      type: "Feature",
+                      geometry: {
+                          type: "Point",
+                          coordinates: [-43.34166, -22.87949] // Replace with desired coordinates
+                      },
+                      properties: {
+                        title: "pessoas beneficiadas"
+                    }
+                }]
+            }
         },
-      },
-    ],
-  };
-};
-
-export const Mapa = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.45632,
-          lat: -22.92106,
+        layout: {
+            "text-field": "{title}",
+            "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+            "text-size": 20
         },
-        zoom: 10.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
+        paint: {
+            "text-color": "#06639d",
+            "text-halo-color": "#ffffff",
+            "text-halo-width": 3,  // Adjust the width as needed
+            "text-halo-blur": 0
+        }
       },
-      mobile: {
-        center: {
-          lon: -43.45632,
-          lat: -22.92106,
-        },
-        zoom: 8.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 0.5,
-        layer: { id: "consolidado-cor" },
-      },
+     },
     ],
   };
 };
@@ -1208,7 +1036,7 @@ export const Fim = () => {
           lon: -43.45632,
           lat: -22.92106,
         },
-        zoom: 8.38,
+        zoom: 10.38,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
