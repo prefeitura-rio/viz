@@ -23,7 +23,7 @@ export const CapaDiv = tw(CapaDivSC)`
 // sm:w
 export const Title = tw.div`
   mt-[10%]
-  lg:mt-[340px]
+  lg:mt-[300px]
   lg:mb-3    
   font-serif font-bold  
   text-3xl text-center text-black
@@ -51,7 +51,7 @@ export const AuthorText = tw.div`
 
 export const Button = tw.div`
   mb-[60%]
-  lg:mt-[60px]
+  lg:mt-[40px]
   font-serif
   text-sm text-center text-black
   lg:text-sm
@@ -137,8 +137,8 @@ export const IntroDiv = tw.div`
   justify-center items-center 
   bg-white/80
   pr-[10%] pl-[10%]
-  lg:pr-[32%]
-  lg:pl-[32%]
+  lg:pr-[27%]
+  lg:pl-[27%]
   lg:pt-[200px]
   lg:pb-[200px]
 `;
@@ -159,7 +159,7 @@ export const IntroDivGigante = tw.div`
   lg:pt-[160px]
   bg-opacity-40 backdrop-blur
   flex flex-col 
-  justify-center items-start 
+  justify-center items-center
   bg-white/80
   pr-[10%] pl-[10%]
   lg:pr-[32%]
@@ -344,13 +344,41 @@ export const Textblack = tw(TextblackSC)`
 `;
 
 const TextgreySC = styled.div`
-  /* background: #e9f3fe; */
+  background: #;
 `;
 
 export const Textgrey = tw(TextgreySC)`
   text-black
   font-bold
   inline
-  p-[2px]
+  p-[4px]
   leading-normal
+`;
+
+const TextblueSC = styled.div`
+  background: #00c0f3;
+`;
+
+export const Textblue = tw(TextblueSC)`
+text-white
+inline
+px-[8px]
+py-[4px]
+leading-normal
+border-2
+border-black
+`;
+
+const TextblueOneSC = styled.div`
+  background: #06639d;
+`;
+
+export const TextblueOne = tw(TextblueOneSC)`
+  text-white
+  inline
+  px-[8px]
+  py-[4px]
+  leading-normal
+  border-2
+  border-black
 `;

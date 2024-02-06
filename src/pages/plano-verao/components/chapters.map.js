@@ -31,7 +31,9 @@ export const Capa = () => {
         duration: 4000,
       },
     },
-    layers: [],
+    layers: [
+
+    ],
   };
 };
 
@@ -89,10 +91,73 @@ export const Prejuizo = () => {
     },
     layers: [
       {
-        layerType: "reuse",
-        targetOpacity: 0.5,
-        layer: { id: "consolidado-cor" },
+        layerType: "mapbox",
+        targetOpacity: .75,
+        layer: {
+          ...{
+            id: "georio-geral",
+            type: "circle",
+            source: "composite",
+            "source-layer": "obras-alag-geo-rio_-_obras-al-27j534",
+            paint: {
+              "circle-radius": 3,
+              "circle-color": "#06639d",
+              "circle-opacity": 0
+          }
+          },
+        },
+      }, 
+      {
+        layerType: "mapbox",
+        targetOpacity: .15,
+        layer: {
+          ...{
+            id: "georio-geral2",
+            type: "circle",
+            source: "composite",
+            "source-layer": "obras-alag-geo-rio_-_obras-al-27j534",
+            paint: {
+              "circle-radius": 25,
+              "circle-color": "#06639d",
+              "circle-opacity": 0
+          }
+          },
+        },
       },
+      {
+        layerType: "mapbox",
+        targetOpacity: .75,
+        layer: {
+          ...{
+            id: "rioaguas-geral",
+            type: "circle",
+            source: "composite",
+            "source-layer": "obras-alag-rio-aguas_-_obras--8kwpcs",
+            paint: {
+              "circle-radius": 3,
+              "circle-color": "#00c0f3",
+              "circle-opacity": 0
+          }
+          },
+        },
+      }, 
+      {
+        layerType: "mapbox",
+        targetOpacity: .15,
+        layer: {
+          ...{
+            id: "rioaguas-geral2",
+            type: "circle",
+            source: "composite",
+            "source-layer": "obras-alag-rio-aguas_-_obras--8kwpcs",
+            paint: {
+              "circle-radius": 25,
+              "circle-color": "#00c0f3",
+              "circle-opacity": 0
+          }
+          },
+        },
+      }, 
     ],
   };
 };
@@ -170,12 +235,12 @@ export const Seop1 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.30566,
-          lat: -22.89716,
+          lon: -43.30880,
+          lat: -22.88922,
         },
-        zoom: 17.90,
-        pitch: 40.52,
-        bearing: 142.28,
+        zoom: 14.20,
+        pitch: 48.08,
+        bearing: 43.25,
         duration: 4000,
       },
       mobile: {
@@ -208,6 +273,57 @@ export const Seop1 = () => {
           },
         },
       }, 
+      {
+        layerType: "mapbox",
+        targetOpacity: .15,
+        layer: {
+          ...{
+            id: "encantando",
+            type: "fill",
+            source: "composite",
+            "source-layer": "encantando-7qeijp",
+            paint: {
+              "fill-color": "#06639d",
+              "fill-opacity": 0
+          }
+          },
+        },
+      }, 
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+            id: "static-text3",
+            type: "symbol",
+            source: {
+                type: "geojson",
+                data: {
+                    type: "FeatureCollection",
+                    features: [{
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [-43.30583, -22.89469] // Replace with desired coordinates
+                        },
+                        properties: {
+                            title: "Rua Francisco Fragoso"
+                        }
+                    }]
+                }
+            },
+            layout: {
+                "text-field": "{title}",
+                "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+                "text-size": 20
+            },
+            paint: {
+                "text-color": "#06639d",
+                // "text-halo-color": "#ffffff",
+                // "text-halo-width": 3,  // Adjust the width as needed
+                // "text-halo-blur": 0
+            }
+        },
+    },
     ],  
   };
 };
@@ -471,7 +587,7 @@ export const Exemplo0 = () => {
         layerType: "mapbox",
         targetOpacity: 1,
         layer: {
-            id: "static-text",
+            id: "static-text4",
             type: "symbol",
             source: {
                 type: "geojson",
@@ -481,7 +597,7 @@ export const Exemplo0 = () => {
                         type: "Feature",
                         geometry: {
                             type: "Point",
-                            coordinates: [-43.346253842506975, -22.806199873225385] // Replace with desired coordinates
+                            coordinates: [-43.34849, -22.81192] // Replace with desired coordinates
                         },
                         properties: {
                             title: "Rio Acarí"
@@ -492,7 +608,7 @@ export const Exemplo0 = () => {
             layout: {
                 "text-field": "{title}",
                 "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
-                "text-size": 30
+                "text-size": 24
             },
             paint: {
                 "text-color": "#06639d",
@@ -501,8 +617,42 @@ export const Exemplo0 = () => {
                 // "text-halo-blur": 0
             }
         },
-    }
-    
+      },    
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+            id: "static-text5",
+            type: "symbol",
+            source: {
+                type: "geojson",
+                data: {
+                    type: "FeatureCollection",
+                    features: [{
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [-43.33490, -22.82671] // Replace with desired coordinates
+                        },
+                        properties: {
+                            title: "Irajá"
+                        }
+                    }]
+                }
+            },
+            layout: {
+                "text-field": "{title}",
+                "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+                "text-size": 24
+            },
+            paint: {
+                "text-color": "#06639d",
+                // "text-halo-color": "#ffffff",
+                // "text-halo-width": 3,  // Adjust the width as needed
+                // "text-halo-blur": 0
+            }
+        },
+      },    
     ],
   };
 };
@@ -557,22 +707,22 @@ export const Exemplo2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.33714,
-          lat: -22.87147,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 17.25,
-        pitch: 36.52,
-        bearing: -24.12,
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.33620,
-          lat: -22.87102,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 17.25,
-        pitch: 36.52,
-        bearing: -24.12,
+        zoom: 8.38,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
     },
@@ -582,12 +732,31 @@ export const Exemplo2 = () => {
         targetOpacity: .75,
         layer: {
           ...{
-            id: "madureira",
-            type: "fill",
+            id: "rioaguas-drenagem",
+            type: "circle",
             source: "composite",
-            "source-layer": "madureira-dh4t8l",
+            "source-layer": "obras-alag-rio-aguas_-_obras--8kwpcs",
             paint: {
-              "fill-color": "#003b66"
+              "circle-radius": 3,
+              "circle-color": "#00c0f3",
+              "circle-opacity": 0
+          }
+          },
+        },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: .75,
+        layer: {
+          ...{
+            id: "georio-drenagem",
+            type: "circle",
+            source: "composite",
+            "source-layer": "obras-alag-geo-rio_-_obras-al-27j534",
+            paint: {
+              "circle-radius": 3,
+              "circle-color": "#06639d",
+              "circle-opacity": 0
           }
           },
         },
@@ -601,12 +770,12 @@ export const Exemplo3 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.33340,
-          lat: -22.86250,
+          lon: -43.32992,
+          lat: -22.87291,
         },
-        zoom: 14.18,
-        pitch: 41.51,
-        bearing: -28.37,
+        zoom: 14.14,
+        pitch: 36.08,
+        bearing: 9.6,
         duration: 4000,
       },
       mobile: {
@@ -622,10 +791,107 @@ export const Exemplo3 = () => {
     },
     layers: [
       {
-        layerType: "reuse",
-        targetOpacity: 1,
-        layer: { id: "desabamento-icone" },
+        layerType: "mapbox",
+        targetOpacity: .75,
+        layer: {
+          ...{
+            id: "madureira",
+            type: "fill",
+            source: "composite",
+            "source-layer": "madureira-dh4t8l",
+            paint: {
+              "fill-color": "#06639d",
+              "fill-opacity": 0
+          }
+          },
+        },
       },
+      {
+        layerType: "mapbox",
+        targetOpacity: .15,
+        layer: {
+          ...{
+            id: "madureira1",
+            type: "fill",
+            source: "composite",
+            "source-layer": "madureira1-4gonbw",
+            paint: {
+              "fill-color": "#06639d",
+              "fill-opacity": 0
+          }
+          },
+        },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+            id: "static-text",
+            type: "symbol",
+            source: {
+                type: "geojson",
+                data: {
+                    type: "FeatureCollection",
+                    features: [{
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [-43.33919, -22.86645] // Replace with desired coordinates
+                        },
+                        properties: {
+                            title: "Mercadão de Madureira"
+                        }
+                    }]
+                }
+            },
+            layout: {
+                "text-field": "{title}",
+                "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+                "text-size": 24
+            },
+            paint: {
+                "text-color": "#06639d",
+                // "text-halo-color": "#ffffff",
+                // "text-halo-width": 3,  // Adjust the width as needed
+                // "text-halo-blur": 0
+            }
+        },
+    },
+    {
+      layerType: "mapbox",
+      targetOpacity: 1,
+      layer: {
+          id: "static-text2",
+          type: "symbol",
+          source: {
+              type: "geojson",
+              data: {
+                  type: "FeatureCollection",
+                  features: [{
+                      type: "Feature",
+                      geometry: {
+                          type: "Point",
+                          coordinates: [-43.34202, -22.87934] // Replace with desired coordinates
+                      },
+                      properties: {
+                          title: "Madureira"
+                      }
+                  }]
+              }
+          },
+          layout: {
+              "text-field": "{title}",
+              "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+              "text-size": 24
+          },
+          paint: {
+              "text-color": "#000",
+              // "text-halo-color": "#ffffff",
+              // "text-halo-width": 3,  // Adjust the width as needed
+              // "text-halo-blur": 0
+          }
+      },
+  },
     ],
   };
 };

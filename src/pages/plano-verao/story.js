@@ -60,16 +60,16 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Exemplo0().layers);
         break;
       case "exemplo1":
-        setPosition(chapterMap.Exemplo1().location);
-        setLayers(chapterMap.Exemplo1().layers);
+        setPosition(chapterMap.Exemplo0().location);
+        setLayers(chapterMap.Exemplo0().layers);
         break;
       case "exemplo2":
-        setPosition(chapterMap.Exemplo3().location);
-        setLayers(chapterMap.Exemplo3().layers);
+        setPosition(chapterMap.Exemplo2().location);
+        setLayers(chapterMap.Exemplo2().layers);
         break;
       case "exemplo2um":
-        setPosition(chapterMap.Exemplo3().location);
-        setLayers(chapterMap.Exemplo3().layers);
+        setPosition(chapterMap.Exemplo2().location);
+        setLayers(chapterMap.Exemplo2().layers);
         break;
       case "exemplo3":
         setPosition(chapterMap.Exemplo3().location);
@@ -91,6 +91,14 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Prejuizo().location);
         setLayers(chapterMap.Prejuizo().layers);
         break;
+      case "cor":
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
+        break;
+      case "cor":
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
+        break;
       case "grafico":
         setPosition(chapterMap.Grafico().location);
         setLayers(chapterMap.Grafico().layers);
@@ -104,8 +112,8 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Seop1().layers);
         break;
       case "seop2":
-        setPosition(chapterMap.Seop2().location);
-        setLayers(chapterMap.Seop2().layers);
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
       case "seop3":
         setPosition(chapterMap.Capa().location);
@@ -176,6 +184,20 @@ export default function SubsidioSPPO() {
       trigger: "#exemplo0",
       onToggle: () => {
         setChapterNumberMap("exemplo0");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#cor",
+      onToggle: () => {
+        setChapterNumberMap("cor");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#corum",
+      onToggle: () => {
+        setChapterNumberMap("corum");
       },
     });
 
@@ -392,8 +414,9 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
-      {/* <chapterDiv.Acompanhe id={"acompanhe"} /> */}
       <chapterDiv.Prejuizo id={"prejuizo"} />
+      <chapterDiv.Cor id={"cor"} />
+      <chapterDiv.CorUm id={"corum"} />
       <chapterDiv.Exemplo0 id={"exemplo0"} />
       <chapterDiv.Exemplo0um id={"exemplo0um"} />
       <chapterDiv.Exemplo1 id={"exemplo1"} />
@@ -401,15 +424,8 @@ export default function SubsidioSPPO() {
       <chapterDiv.Exemplo2um id={"exemplo2um"} />
       <chapterDiv.Exemplo3 id={"exemplo3"} />
       <chapterDiv.Exemplo3um id={"exemplo3um"} />
-      {/* <chapterDiv.Oeste id={"oeste"} /> */}
       <chapterDiv.Seop1 id={"seop1"} />
       <chapterDiv.Seop2 id={"seop2"} />
-      {/* <chapterDiv.Zoom id={"zoom"} /> */}
-      {/* <chapterDiv.Seop3 id={"seop3"} /> */}
-      {/* <chapterDiv.Mapa id={"mapa"} /> */}
-      {/* <chapterDiv.Solucao id={"solucao"} /> */}
-      {/* <chapterDiv.Grafico id={"grafico"} /> */}
-      {/* <chapterDiv.Seop4 id={"seop4"} /> */}
       <chapterDiv.Fim id={"fim"} />
     </>
   );
