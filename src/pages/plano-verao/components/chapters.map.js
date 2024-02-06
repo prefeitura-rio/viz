@@ -314,7 +314,7 @@ export const BairroMaravilha = () => {
             layout: {
                 "text-field": "{title}",
                 "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
-                "text-size": 20
+                "text-size": 24
             },
             paint: {
                 "text-color": "#06639d",
@@ -323,7 +323,42 @@ export const BairroMaravilha = () => {
                 // "text-halo-blur": 0
             }
         },
-    },
+     },
+     {
+      layerType: "mapbox",
+      targetOpacity: .6,
+      layer: {
+          id: "static-text6",
+          type: "symbol",
+          source: {
+              type: "geojson",
+              data: {
+                  type: "FeatureCollection",
+                  features: [{
+                      type: "Feature",
+                      geometry: {
+                          type: "Point",
+                          coordinates: [-43.30567, -22.90101] // Replace with desired coordinates
+                      },
+                      properties: {
+                          title: "Encantado"
+                      }
+                  }]
+              }
+          },
+          layout: {
+              "text-field": "{title}",
+              "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+              "text-size": 16
+          },
+          paint: {
+              "text-color": "#06639d",
+              // "text-halo-color": "#ffffff",
+              // "text-halo-width": 3,  // Adjust the width as needed
+              // "text-halo-blur": 0
+          }
+      },
+   },
     ],  
   };
 };
@@ -530,10 +565,10 @@ export const Exemplo0 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.36509,
-          lat: -22.82669,
+          lon: -43.35344,
+          lat: -22.82684,
         },
-        zoom: 13.18,
+        zoom: 13.00,
         pitch: 36.75,
         bearing: -8,
         duration: 4000,
@@ -617,12 +652,12 @@ export const Exemplo0 = () => {
                 // "text-halo-blur": 0
             }
         },
-      },    
+      },
       {
         layerType: "mapbox",
-        targetOpacity: 1,
+        targetOpacity: .6,
         layer: {
-            id: "static-text5",
+            id: "static-text2",
             type: "symbol",
             source: {
                 type: "geojson",
@@ -632,27 +667,202 @@ export const Exemplo0 = () => {
                         type: "Feature",
                         geometry: {
                             type: "Point",
-                            coordinates: [-43.33490, -22.82671] // Replace with desired coordinates
+                            coordinates: [-43.34084, -22.82420] // Replace with desired coordinates
                         },
                         properties: {
-                            title: "Irajá"
-                        }
-                    }]
-                }
-            },
-            layout: {
-                "text-field": "{title}",
-                "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
-                "text-size": 24
-            },
-            paint: {
-                "text-color": "#06639d",
-                // "text-halo-color": "#ffffff",
-                // "text-halo-width": 3,  // Adjust the width as needed
-                // "text-halo-blur": 0
-            }
+                          title: "Acari"
+                      }
+                  }]
+              }
+          },
+          layout: {
+              "text-field": "{title}",
+              "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+              "text-size": 16
+          },
+          paint: {
+              "text-color": "#06639d",
+              // "text-halo-color": "#ffffff",
+              // "text-halo-width": 3,  // Adjust the width as needed
+              // "text-halo-blur": 0
+          }
         },
-      },    
+       },
+       {
+        layerType: "mapbox",
+        targetOpacity: .6,
+        layer: {
+            id: "static-text7",
+            type: "symbol",
+            source: {
+                type: "geojson",
+                data: {
+                    type: "FeatureCollection",
+                    features: [{
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [-43.34751, -22.83278] // Replace with desired coordinates
+                        },
+                        properties: {
+                          title: "Coelho Neto"
+                      }
+                  }]
+              }
+          },
+          layout: {
+              "text-field": "{title}",
+              "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+              "text-size": 16
+          },
+          paint: {
+              "text-color": "#06639d",
+              // "text-halo-color": "#ffffff",
+              // "text-halo-width": 3,  // Adjust the width as needed
+              // "text-halo-blur": 0
+          }
+        },
+       },
+       {
+        layerType: "mapbox",
+        targetOpacity: .6,
+        layer: {
+            id: "static-text8",
+            type: "symbol",
+            source: {
+                type: "geojson",
+                data: {
+                    type: "FeatureCollection",
+                    features: [{
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [-43.32063, -22.81041] // Replace with desired coordinates
+                        },
+                        properties: {
+                          title: "Jardim América"
+                      }
+                  }]
+              }
+          },
+          layout: {
+              "text-field": "{title}",
+              "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+              "text-size": 16
+          },
+          paint: {
+              "text-color": "#06639d",
+              // "text-halo-color": "#ffffff",
+              // "text-halo-width": 3,  // Adjust the width as needed
+              // "text-halo-blur": 0
+          }
+        },
+       },
+       {
+        layerType: "mapbox",
+        targetOpacity: .6,
+        layer: {
+            id: "static-text9",
+            type: "symbol",
+            source: {
+                type: "geojson",
+                data: {
+                    type: "FeatureCollection",
+                    features: [{
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [-43.32321, -22.81916] // Replace with desired coordinates
+                        },
+                        properties: {
+                          title: "Irajá"
+                      }
+                  }]
+              }
+          },
+          layout: {
+              "text-field": "{title}",
+              "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+              "text-size": 16
+          },
+          paint: {
+              "text-color": "#06639d",
+              // "text-halo-color": "#ffffff",
+              // "text-halo-width": 3,  // Adjust the width as needed
+              // "text-halo-blur": 0
+          }
+        },
+       },
+       {
+        layerType: "mapbox",
+        targetOpacity: .6,
+        layer: {
+            id: "static-text10",
+            type: "symbol",
+            source: {
+                type: "geojson",
+                data: {
+                    type: "FeatureCollection",
+                    features: [{
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [-43.33710, -22.81086] // Replace with desired coordinates
+                        },
+                        properties: {
+                          title: "Parque Colúmbia"
+                      }
+                  }]
+              }
+          },
+          layout: {
+              "text-field": "{title}",
+              "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+              "text-size": 16
+          },
+          paint: {
+              "text-color": "#06639d",
+              // "text-halo-color": "#ffffff",
+              // "text-halo-width": 3,  // Adjust the width as needed
+              // "text-halo-blur": 0
+          }
+        },
+       },
+       {
+        layerType: "mapbox",
+        targetOpacity: .6,
+        layer: {
+            id: "static-text12",
+            type: "symbol",
+            source: {
+                type: "geojson",
+                data: {
+                    type: "FeatureCollection",
+                    features: [{
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [-43.35789, -22.81773] // Replace with desired coordinates
+                        },
+                        properties: {
+                          title: "Pavuna"
+                      }
+                  }]
+              }
+          },
+          layout: {
+              "text-field": "{title}",
+              "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+              "text-size": 16
+          },
+          paint: {
+              "text-color": "#06639d",
+              // "text-halo-color": "#ffffff",
+              // "text-halo-width": 3,  // Adjust the width as needed
+              // "text-halo-blur": 0
+          }
+        },
+       },
     ],
   };
 };
@@ -859,9 +1069,9 @@ export const Exemplo3 = () => {
     },
     {
       layerType: "mapbox",
-      targetOpacity: 1,
+      targetOpacity: .6,
       layer: {
-          id: "static-text2",
+          id: "static-text22",
           type: "symbol",
           source: {
               type: "geojson",
@@ -871,27 +1081,27 @@ export const Exemplo3 = () => {
                       type: "Feature",
                       geometry: {
                           type: "Point",
-                          coordinates: [-43.34202, -22.87934] // Replace with desired coordinates
+                          coordinates: [-43.34070, -22.87663] // Replace with desired coordinates
                       },
                       properties: {
-                          title: "Madureira"
-                      }
-                  }]
-              }
-          },
-          layout: {
-              "text-field": "{title}",
-              "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
-              "text-size": 24
-          },
-          paint: {
-              "text-color": "#000",
-              // "text-halo-color": "#ffffff",
-              // "text-halo-width": 3,  // Adjust the width as needed
-              // "text-halo-blur": 0
-          }
+                        title: "Madureira"
+                    }
+                }]
+            }
+        },
+        layout: {
+            "text-field": "{title}",
+            "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+            "text-size": 16
+        },
+        paint: {
+            "text-color": "#06639d",
+            // "text-halo-color": "#ffffff",
+            // "text-halo-width": 3,  // Adjust the width as needed
+            // "text-halo-blur": 0
+        }
       },
-  },
+     },
     ],
   };
 };
