@@ -198,11 +198,11 @@ export function CorUm(
 
   return (
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
+      <styles.ContainerVideo>
         <styles.TextCard1>
-        Aqui vai o vídeo
+        <iframe src="https://res.cloudinary.com/doueg88fj/video/upload/v1707233408/video1_x47qst.mp4" height="600"></iframe>
         </styles.TextCard1>
-      </styles.ContainerCard1>
+      </styles.ContainerVideo>
     </styles.ChapterGenericDiv2>
   );
 }
@@ -469,11 +469,11 @@ export function BairroMaravilhaUm(props = { id: "", chapRef: null }) {
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-          <styles.TextCard1>
-          Aqui vai o outro vídeo
-          </styles.TextCard1>
-      </styles.ContainerCard1>
+      <styles.ContainerVideo>
+        <styles.TextCard1>
+        <iframe src="https://res.cloudinary.com/doueg88fj/video/upload/v1707233405/video2_e5mexn.mp4" height="600"></iframe>
+        </styles.TextCard1>
+      </styles.ContainerVideo>
     </styles.ChapterGenericDiv1>
   );
 }
