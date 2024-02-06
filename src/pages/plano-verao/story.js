@@ -47,10 +47,6 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Capa().location);
         setLayers(chapterMap.Capa().layers);
         break;
-      case "zoom":
-        setPosition(chapterMap.Zoom().location);
-        setLayers(chapterMap.Zoom().layers);
-        break;
       case "exemplo0":
         setPosition(chapterMap.Exemplo0().location);
         setLayers(chapterMap.Exemplo0().layers);
@@ -60,8 +56,8 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Exemplo0().layers);
         break;
       case "exemplo1":
-        setPosition(chapterMap.Exemplo0().location);
-        setLayers(chapterMap.Exemplo0().layers);
+        setPosition(chapterMap.Exemplo2().location);
+        setLayers(chapterMap.Exemplo2().layers);
         break;
       case "exemplo2":
         setPosition(chapterMap.Exemplo2().location);
@@ -92,12 +88,12 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Prejuizo().layers);
         break;
       case "cor":
-        setPosition(chapterMap.Capa().location);
-        setLayers(chapterMap.Capa().layers);
+        setPosition(chapterMap.Prejuizo().location);
+        setLayers(chapterMap.Prejuizo().layers);
         break;
-      case "cor":
-        setPosition(chapterMap.Capa().location);
-        setLayers(chapterMap.Capa().layers);
+      case "corum":
+        setPosition(chapterMap.Prejuizo().location);
+        setLayers(chapterMap.Prejuizo().layers);
         break;
       case "grafico":
         setPosition(chapterMap.Grafico().location);
@@ -118,22 +114,6 @@ export default function SubsidioSPPO() {
       case "seop2":
         setPosition(chapterMap.Capa().location);
         setLayers(chapterMap.Capa().layers);
-        break;
-      case "seop3":
-        setPosition(chapterMap.Capa().location);
-        setLayers(chapterMap.Capa().layers);
-        break;
-      case "seop4":
-        setPosition(chapterMap.Seop4().location);
-        setLayers(chapterMap.Seop4().layers);
-        break;
-      case "acompanhe":
-        setPosition(chapterMap.Acompanhe().location);
-        setLayers(chapterMap.Acompanhe().layers);
-        break;
-      case "oeste":
-        setPosition(chapterMap.Oeste().location);
-        setLayers(chapterMap.Oeste().layers);
         break;
       default:
         break;
