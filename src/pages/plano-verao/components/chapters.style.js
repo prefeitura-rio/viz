@@ -209,6 +209,13 @@ export const ContainerCard = tw.div`
   border-[2px]
   border-black
 `;
+export const ContainerVideo = tw.div`
+  
+  max-w-xs
+  lg:max-w-xl
+  border-[2px]
+  border-black
+`;
 
 export const ContainerCard1 = tw.div`
   p-[32px]
