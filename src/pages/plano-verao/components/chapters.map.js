@@ -230,7 +230,7 @@ export const Grafico = () => {
   };
 };
 
-export const Seop1 = () => {
+export const BairroMaravilha = () => {
   return {
     location: {
       desktop: {

@@ -390,18 +390,6 @@ export function Seop2(
 
   return (
     <styles.IntroDivGigante  style={{paddingTop:"230vh"}} ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle>Centro de Operações</styles.IntroTitle>
-      <styles.NewsImage src={seop2}></styles.NewsImage>
-        <styles.Credito>
-        Divulgação: Centro de Operações Rio
-        </styles.Credito>     
-      <styles.IntroText>
-      Para se manter na vanguarda do que há de mais avançado em monitoramento no mundo, o Centro de Operações Rio (COR) investiu em novas aquisições tecnológicas. Após ampliar em 40% seu vídeo wall, que passou a ter 104 metros quadrados, composto por 125 telas de 55 polegadas e em alta resolução, um novo radar meteorológico foi adquirido.
-        <br /> <br />
-      O número de câmeras de monitoramento da cidade, que permitem um melhor planejamento durante os eventos também apresentou um crescimento. Em 2022 eram duas mil e, agora, já são três mil e quinhentas.</styles.IntroText>
-      <br /> <br />
-      {/* Adicionar Vídeo */}
-      <br /> <br /><br /> <br /><br /> <br />
       <styles.IntroTitle>
         Novas ferramentas
       </styles.IntroTitle>
@@ -444,7 +432,7 @@ export function Seop2(
   );
 }
 
-export function Seop1(props = { id: "", chapRef: null }) {
+export function BairroMaravilha(props = { id: "", chapRef: null }) {
   props = setDefaultProps(props);
 
   return (
@@ -470,6 +458,20 @@ export function Seop1(props = { id: "", chapRef: null }) {
         <br />
         <styles.TextCard1>
           Outro projeto que atua diretamente na prevenção das chuvas é o Bairro Maravilha, responsável por urbanizar e levar infraestrutura à população. Já são 92 localidades beneficiadas e, até o fim de 2023, serão 49 km de ruas requalificadas, com R$ 977 milhões em investimentos no total.
+          </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1>
+  );
+}
+
+export function BairroMaravilhaUm(props = { id: "", chapRef: null }) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+          <styles.TextCard1>
+          Aqui vai o outro vídeo
           </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>

@@ -150,8 +150,8 @@ export const IntroDivMaior = tw.div`
   justify-center items-center 
   bg-white/80
   pr-[10%] pl-[10%]
-  lg:pr-[32%]
-  lg:pl-[32%]
+  lg:pr-[27%]
+  lg:pl-[27%]
 `;
 
 export const IntroDivGigante = tw.div`
@@ -162,8 +162,8 @@ export const IntroDivGigante = tw.div`
   justify-center items-center
   bg-white/80
   pr-[10%] pl-[10%]
-  lg:pr-[32%]
-  lg:pl-[32%]
+  lg:pr-[27%]
+  lg:pl-[27%]
 `;
 
 export const Footer = tw.div`

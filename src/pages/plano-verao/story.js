@@ -107,9 +107,13 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Fim().location);
         setLayers(chapterMap.Fim().layers);
         break;
-      case "seop1":
-        setPosition(chapterMap.Seop1().location);
-        setLayers(chapterMap.Seop1().layers);
+      case "bairromaravilha":
+        setPosition(chapterMap.BairroMaravilha().location);
+        setLayers(chapterMap.BairroMaravilha().layers);
+        break;
+      case "bairromaravilhaum":
+        setPosition(chapterMap.BairroMaravilha().location);
+        setLayers(chapterMap.BairroMaravilha().layers);
         break;
       case "seop2":
         setPosition(chapterMap.Capa().location);
@@ -334,9 +338,16 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#seop1",
+      trigger: "#bairromaravilha",
       onToggle: () => {
-        setChapterNumberMap("seop1");
+        setChapterNumberMap("bairromaravilha");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#bairromaravilhaum",
+      onToggle: () => {
+        setChapterNumberMap("bairromaravilhaum");
       },
     });
 
@@ -424,7 +435,8 @@ export default function SubsidioSPPO() {
       <chapterDiv.Exemplo2um id={"exemplo2um"} />
       <chapterDiv.Exemplo3 id={"exemplo3"} />
       <chapterDiv.Exemplo3um id={"exemplo3um"} />
-      <chapterDiv.Seop1 id={"seop1"} />
+      <chapterDiv.BairroMaravilha id={"bairromaravilha"} />
+      <chapterDiv.BairroMaravilhaUm id={"bairromaravilhaum"} />
       <chapterDiv.Seop2 id={"seop2"} />
       <chapterDiv.Fim id={"fim"} />
     </>
