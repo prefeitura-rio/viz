@@ -210,7 +210,9 @@ export const ContainerCard = tw.div`
   border-black
 `;
 export const ContainerVideo = tw.div`
-  
+  p-[20px]
+  bg-opacity-[20%] backdrop-blur-md
+  bg-white/75
   max-w-xs
   lg:max-w-xl
   border-[2px]
