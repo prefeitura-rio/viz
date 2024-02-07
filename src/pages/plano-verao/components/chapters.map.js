@@ -100,7 +100,7 @@ export const Prejuizo = () => {
             source: "composite",
             "source-layer": "obras-alag-geo-rio_-_obras-al-27j534",
             paint: {
-              "circle-radius": 10,
+              "circle-radius": isMobile?5:10,
               "circle-color": "#06639d",
               "circle-opacity": 0
           }
@@ -117,7 +117,7 @@ export const Prejuizo = () => {
             source: "composite",
             "source-layer": "obras-alag-rio-aguas_-_obras--8kwpcs",
             paint: {
-              "circle-radius": 10,
+              "circle-radius":  isMobile?5:10,
               "circle-color": "#da8216",
               "circle-opacity": 0
           }
