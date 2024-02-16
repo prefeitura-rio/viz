@@ -38,7 +38,7 @@ export function Capa(
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       <img src={logo} className="w-36 mt-[2vh] lg:w-52"></img>
       <div><styles.Title>
-      Plano Verão: As Iniciativas da Prefeitura do Rio de Janeiro na Prevenção de Enchentes
+      Plano Verão: As iniciativas da Prefeitura do Rio de Janeiro na prevenção de enchentes
       </styles.Title>
       {/* <styles.Subtitle>
         Segurança para os moradores, Prejuízo para o crime organizado,
@@ -85,20 +85,19 @@ export function Intro(
 
   return (
     <styles.IntroDiv style={{paddingBottom:"100vh"}} ref={props.chapRef} id={props.id}>     
-      <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle>
+      {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
       <styles.IntroText>
-        Dados do Alerta Rio, sistema de alerta de chuvas intensas e de deslizamentos em encostas do Rio de Janeiro, mostram que nunca choveu tanto na nossa cidade. <br /> <br />
-        Uma análise feita com base nos dados de ocorrências registradas pelo Centro de Operações Rio (COR) desde 2018, mostra que <styles.Textgrey>a cidade já registrou pelo menos 4.031 incidentes causados pelas chuvas.</styles.Textgrey> 
+        Dados do Alerta Rio, sistema de alerta de chuvas intensas e de deslizamentos em encostas do Rio de Janeiro, mostram que nunca choveu tanto na nossa cidade.
         <br /> <br />
-        É por isso que a Prefeitura do Rio conta com um planejamento específico para o período com mais chuvas na cidade, o verão carioca.
+        Uma análise, com base nos dados de ocorrências registradas pelo Centro de Operações Rio (COR) desde 2018, revela que a cidade já enfrentou pelo menos <styles.Textgrey>4.031 incidentes causados pelas chuvas.</styles.Textgrey> 
         <br /> <br />
-        Para isso, <styles.Textgrey>desde 2021 o Rio conta com a implementação do Plano Verão, cujo objetivo é minimizar os impactos das chuvas.</styles.Textgrey> Ao todo, 30 órgãos municipais, incluindo secretarias, empresas públicas e subprefeituras, trabalham na implementação das ações. 
+        Por isso, a Prefeitura do Rio implementou um planejamento específico para o período de maior incidência de chuvas, o verão carioca.<styles.Textgrey>Desde 2021, a cidade conta com o Plano Verão, cujo objetivo é minimizar os impactos das chuvas.</styles.Textgrey> Trinta órgãos municipais, incluindo secretarias, empresas públicas e subprefeituras, trabalham na implementação dessas ações.
         <br /> <br />
         Neste especial do Escritório de Dados, explicaremos como o Plano Verão se tornou uma medida essencial no preparo do Rio para os impactos das chuvas.
       </styles.IntroText>
-      <br /> <br />        <br /> <br />
-      <styles.IntroTitle id={"acompanheTitle"}>
-        O Plano
+      <br /> <br /><br /> <br /><br /> <br />
+      <styles.IntroTitle>
+        O Plano Verão
       </styles.IntroTitle>
       <styles.IntroText>
         O Plano Verão tem como <styles.Textgrey>principal foco a contenção de encostas, a execução de programas de infraestrutura e a aquisição de tecnologias </styles.Textgrey>destinadas a aprimorar a capacidade de resposta aos desafios provocados pelas chuvas.
@@ -109,6 +108,28 @@ export function Intro(
         <br /><br />
         A seguir, você verá uma série de ações realizadas pela Prefeitura para combater este problema.
       </styles.IntroText>
+      <br /> <br /><br /> <br /><br /> <br />
+      <styles.IntroTitle>
+        O Centro de Operações Rio
+      </styles.IntroTitle>
+      <styles.NewsImage src={seop2}></styles.NewsImage>
+        <styles.Credito>
+          Divulgação: Centro de Operações Rio
+        </styles.Credito> 
+      <styles.IntroText>
+        <styles.Textgrey>O COR é o órgão responsável por monitorar e integrar a cidade em áreas essenciais como mobilidade urbana e meteorologia.</styles.Textgrey>Referência na América Latina, foi inaugurado em 2010 como o primeiro equipamento olímpico entregue pela Prefeitura do Rio à cidade, e seu legado permanece até hoje, <styles.Textgrey>funcionando 24 horas por dia, sete dias por semana.</styles.Textgrey>
+        <br /><br />
+        Utilizando radares meteorológicos, o COR monitora as condições climáticas e avisa aos órgãos parceiros sobre chuvas, ativando uma rede de ações em tempo real durante mudanças na mobilidade. 
+        <br /><br />
+        Além de ações em tempo real, é responsável por administrar as ações do Plano Verão e definir, em conjunto com outros órgãos, as ações que serão realizadas para combater enchentes e outros desastres ocasionados pelas chuvas.
+        <br /><br />
+        <styles.Textgrey>Com investimentos em novas tecnologias, o COR ampliou sua sala de monitoramento em 40%, </styles.Textgrey>composta atualmente por 125 telas de 55 polegadas em alta resolução.<styles.Textgrey> O número de câmeras de monitoramento espalhadas pela cidade também cresceu para 3.500</styles.Textgrey>
+      </styles.IntroText>
+      {/* <styles.ContainerVideo>
+        <styles.TextCard1>
+        <iframe src="https://res.cloudinary.com/doueg88fj/video/upload/v1707233408/video1_x47qst.mp4" height="530"></iframe>
+        </styles.TextCard1>
+      </styles.ContainerVideo> */}
     </styles.IntroDiv>
   );
 }
@@ -151,9 +172,8 @@ export function Prejuizo(
             <styles.BigNumber1>Bilhões</styles.BigNumber1>
           </styles.Grid1>
           <styles.TextCard>
-          Com um investimento total de R$ 2,1 bilhões, o Plano Verão implementou 308 ações preventivas desde 2021. 
-          <br /> <br />
-          <styles.TextblueOne>Geo Rio</styles.TextblueOne>  <styles.Textblue>Rio Águas</styles.Textblue></styles.TextCard>
+          Este é o investimento total do Plano Verão desde 2021. Ao todo, o programa já implementou 308 <styles.TextblueOne>ações</styles.TextblueOne> preventivas na cidade. A localidade de algumas destas ações você consegue conferir neste mapa.
+          </styles.TextCard>
         </styles.Grid>
       </styles.ContainerCard>
     </styles.ChapterGenericDiv>
@@ -220,10 +240,8 @@ export function Exemplo0(
       <styles.TextCard5><styles.Textyellow>Dragagem dos rios</styles.Textyellow></styles.TextCard5>
         <br /> 
         <styles.TextCard1>
-        Em 2023, o investimento em desassoreamento de rios já totalizou a retirada de 555,4 mil toneladas de lixo. As ações são referentes à limpeza, ao desassoreamento e à manutenção de rios como o Rio Acari, o Rio Ita (Santa Cruz), o Rio Campinho (Campo Grande), entre outros. Além disso, também são realizadas a recuperação estrutural e a limpeza de canaletas de drenagem em encostas, além de manutenção e operação dos reservatórios.
+        Uma das ações mais importantes é a de <styles.TextblueOne>dragagem dos rios.</styles.TextblueOne> A ação é necessária para a retirada de sedimentos no fundo dos rios. A ação é necessária para garantir o escoamento das chuvas e evitar inundações. 
         </styles.TextCard1>
-        <br /> <br /> 
-        <styles.Textblue>Rio Águas</styles.Textblue>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
   );
@@ -241,7 +259,26 @@ export function Exemplo0um(
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-        O volume de lixo retirado nas ações foi o equivalente à 46.283 caminhões cheios. O número recorde é cinco vezes maior que o retirado em 2018, quando 114 mil toneladas foram retiradas.
+        Em 2023, o investimento em dragagem de rios já totalizou a retirada de <styles.Textgrey>555,4 mil toneladas de lixo.</styles.Textgrey> O volume de lixo retirado nas ações foi o equivalente à <styles.Textgrey>46.283 caminhões cheios.</styles.Textgrey> O número recorde é cinco vezes maior que o retirado em 2018, quando 114 mil toneladas foram retiradas.
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1>
+  );
+}
+
+export function Exemplo0dois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.TextCard1>
+        As ações foram feitas nos principais rios da cidade, como o Rio Acari, o Rio Ita (Santa Cruz), o Rio Campinho (Campo Grande).
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
@@ -262,11 +299,27 @@ export function Exemplo1(
       <styles.TextCard2><styles.Textyellow>Desassoreamento do Rio Acari</styles.Textyellow></styles.TextCard2>
         <br /> 
         <styles.NewsImage src={exemplo1}></styles.NewsImage>
-        <styles.Credito>
+        <styles.Creditoum>
           Divulgação: Fundação Rio-Águas
-        </styles.Credito>  
+        </styles.Creditoum>  
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1>
+  );
+}
+
+export function Exemplo1um(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
         <styles.TextCard1>
-        Os serviços de limpeza e desassoreamento no Rio Acari, que é um dos principais rios da Zona Norte, foram concluídos em julho de 2023. O investimento foi de R$ 8,7 milhões do município. Os trabalhos cobriram a extensão de 3,1 km de rio e retiraram mais de 191 mil toneladas de material do canal, que representam em torno de 16 mil caminhões basculantes de 12 toneladas.
+        Um dos principais rios da Zona Norte, o Rio Acari teve os serviços de limpeza e desassoreamento concluídos em julho de 2023. Com um investimento de R$ 8,7 milhões, os trabalhos cobriram a extensão de 3,1 km de rio e <styles.TextblueOne>retiraram mais de 191 mil toneladas de material do canal,</styles.TextblueOne> que representam em torno de 16 mil caminhões basculantes de 12 toneladas, <styles.TextblueOne>beneficiando 287.930 cariocas</styles.TextblueOne> que residem em seu entorno.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
@@ -287,10 +340,8 @@ export function Exemplo2(
       <styles.TextCard5><styles.Textyellow>Obras de drenagem</styles.Textyellow></styles.TextCard5>
         <br />
         <styles.TextCard1>
-        Foram investidos R$ 9,8 milhões em obras de drenagem para eliminação de pontos críticos de alagamento. Os serviços foram executados na Avenida Borges de Medeiros, na Rua Alexandre Calaza e nas estradas da Pedra e do Catonho, onde os trabalhos entraram na reta final. No total, mais de 1,6 km de drenagem estão sendo executadas.
+        Foram investidos R$ 9,8 milhões em <styles.TextblueOne>obras de drenagem</styles.TextblueOne> para eliminação de pontos críticos de alagamento na cidade. Os serviços foram executados na Avenida Borges de Medeiros, na Rua Alexandre Calaza e nas estradas da Pedra e do Catonho, onde os trabalhos entraram na reta final. No total, mais de 1,6 km de drenagem estão sendo executadas.
         </styles.TextCard1>
-        <br /> <br /> 
-        <styles.TextblueOne>Geo Rio</styles.TextblueOne>  <styles.Textblue>Rio Águas</styles.Textblue>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv2>
   );
@@ -328,12 +379,9 @@ export function Exemplo3(
       <styles.ContainerCard1>
       <styles.TextCard2><styles.Textyellow>Obra de drenagem no entorno do Mercadão de Madureira</styles.Textyellow></styles.TextCard2>
         <styles.NewsImage src={exemplo2}></styles.NewsImage>
-        <styles.Credito>
+        <styles.Creditoum>
         Divulgação: Fundação Rio-Águas
-        </styles.Credito>       
-        <br />
-        <styles.TextCard1>
-        As obras de drenagem foram iniciadas em novembro de 2022 para eliminar ponto de alagamento na Rua Conselheiro Galvão, em Madureira, próximo ao Mercadão de Madureira, na Zona Norte da cidade. O investimento é de R$ 10,1 milhões do município.</styles.TextCard1>
+        </styles.Creditoum>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv2>
   );
@@ -350,7 +398,24 @@ export function Exemplo3um(
   return (
     <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.TextCard1>Foram implantados 400 metros de nova rede de drenagem na via, com isso, aumentará a capacidade das galerias pluviais e reduzirá bolsões d'água em um dos acessos do Mercadão, beneficiando pedestres, motoristas e comerciantes da região.</styles.TextCard1>
+        <styles.TextCard1>As obras de drenagem foram iniciadas em novembro de 2022 para eliminar um ponto de alagamento na Rua Conselheiro Galvão, em Madureira, próximo ao Mercadão de Madureira, na Zona Norte da cidade. Foram implantados 400 metros de nova rede de drenagem na via, com isso, aumentará a capacidade das galerias pluviais e reduzirá bolsões d'água em um dos acessos do Mercadão.</styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function Exemplo3dois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.TextCard1>Com um investimento de R$ 10,1 milhões, <styles.TextblueOne>a obra beneficiará 38.366 moradores da região.</styles.TextblueOne></styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv2>
   );
@@ -397,7 +462,7 @@ export function Seop2(
         Novas ferramentas
       </styles.IntroTitle>
       <styles.IntroText>
-      Outra inovação é a contratação do Sistema de Monitoramento e Alerta de Descargas Atmosféricas e Tempestades Severas. A ferramenta foi testada pelo Rio no último verão, quando a cidade contabilizou 31.900 raios atingindo o município entre os meses de janeiro e março. 
+      Outra inovação é a contratação do Sistema de Monitoramento e Alerta de Descargas Atmosféricas e Tempestades Severas. A ferramenta foi testada pelo Rio no último verão, quando a cidade contabilizou 31.900 raios atingindo o município entre os meses de janeiro e março.
       <br /> <br />
       Já a Defesa Civil operacionalizou mais uma ferramenta de comunicação preventiva aos moradores que vivem em áreas de alto risco geológico. Avisos sonoros serão emitidos por sirenes localizadas em 103 comunidades. O objetivo é alertar a população, antecipadamente, que não possuem acesso aos meios de comunicação de massa sobre a chegada de chuva forte no município. O aviso será feito com base nas previsões meteorológicas do Sistema Alerta Rio, órgão de meteorologia da Prefeitura do Rio.
       </styles.IntroText>
@@ -416,7 +481,7 @@ export function Seop2(
         <br /> <br />
         O Rio passa a ser o primeiro município do país a contar com dois radares meteorológicos próprios. As imagens dos equipamentos, assim como já acontece com o que está instalado no Morro do Sumaré, serão disponibilizadas para a população do Rio.
         </styles.TextCard1></styles.IntroText>
-        <styles.NewsImage className="lg:mt-[54px]" src={gif}></styles.NewsImage>
+        <styles.NewsImage src={gif}></styles.NewsImage>
         <styles.Credito>
           Imagem: Prefeitura da Cidade do Rio Janeiro
         </styles.Credito>  
@@ -455,13 +520,9 @@ export function BairroMaravilha(props = { id: "", chapRef: null }) {
             <path stroke="#fff" d="M -5 -2 L -7 0 L -5 2 M -5 -2 L -5 2 M 5 -2 L 7 0 L 5 2 M 5 -2 L 5 2" stroke-width="1" fill="#fff" vector-effect="non-scaling-stroke"></path>
           </svg>
         </ImgComparisonSlider>
-        <styles.Credito>
+        <styles.Creditoum>
           Divulgação: Prefeitura da Cidade do Rio Janeiro / Marcos de Paula
-        </styles.Credito>       
-        <br />
-        <styles.TextCard1>
-          Outro projeto que atua diretamente na prevenção das chuvas é o Bairro Maravilha, responsável por urbanizar e levar infraestrutura à população. Já são 92 localidades beneficiadas e, até o fim de 2023, serão 49 km de ruas requalificadas, com R$ 977 milhões em investimentos no total.
-          </styles.TextCard1>
+        </styles.Creditoum>       
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
   );
@@ -472,14 +533,29 @@ export function BairroMaravilhaUm(props = { id: "", chapRef: null }) {
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+      <styles.TextCard1>
+      Outro projeto que atua diretamente na prevenção das chuvas é o Bairro Maravilha, responsável por urbanizar e levar infraestrutura à população. Já são 92 localidades beneficiadas e, até o fim de 2023, serão 49 km de ruas requalificadas, com R$ 977 milhões em investimentos no total.
+      </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1>
+  );
+}
+
+export function BairroMaravilhaDois(props = { id: "", chapRef: null }) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1um ref={props.chapRef} id={props.id}>
       <styles.ContainerVideo>
         <styles.TextCard1>
         <iframe src="https://res.cloudinary.com/doueg88fj/video/upload/v1707233405/video2_e5mexn.mp4" height="530"></iframe>
         </styles.TextCard1>
       </styles.ContainerVideo>
-    </styles.ChapterGenericDiv1>
+    </styles.ChapterGenericDiv1um>
   );
 }
+
 
 export function Mapa(
   props = {
@@ -517,7 +593,7 @@ export function Fim(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
+    <styles.IntroDivum ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"fimTitle"}>Próximos passos</styles.IntroTitle> */}
       <styles.TextCard3><styles.Textblack>Prefeito</styles.Textblack></styles.TextCard3>
       <styles.IntroText1>Eduardo Paes</styles.IntroText1>
@@ -533,7 +609,7 @@ export function Fim(
           className="w-44 mt-[200px] mb-[200px] lg:mt-[200px] lg:w-56"
         ></img>
       </a>
-    </styles.IntroDiv>
+    </styles.IntroDivum>
   );
 }
 

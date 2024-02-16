@@ -55,7 +55,15 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Desassoreamento().location);
         setLayers(chapterMap.Desassoreamento().layers);
         break;
+      case "exemplo0dois":
+        setPosition(chapterMap.Desassoreamento().location);
+        setLayers(chapterMap.Desassoreamento().layers);
+        break;
       case "exemplo1":
+        setPosition(chapterMap.Exemplo0().location);
+        setLayers(chapterMap.Exemplo0().layers);
+        break;
+      case "exemplo1um":
         setPosition(chapterMap.Exemplo0().location);
         setLayers(chapterMap.Exemplo0().layers);
         break;
@@ -72,6 +80,10 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Exemplo3().layers);
         break;
       case "exemplo3um":
+      setPosition(chapterMap.Exemplo3().location);
+      setLayers(chapterMap.Exemplo3().layers);
+      break;
+     case "exemplo3dois":
       setPosition(chapterMap.Exemplo3().location);
       setLayers(chapterMap.Exemplo3().layers);
       break;
@@ -96,6 +108,10 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.BairroMaravilha().layers);
         break;
       case "bairromaravilhaum":
+        setPosition(chapterMap.BairroMaravilha().location);
+        setLayers(chapterMap.BairroMaravilha().layers);
+        break;
+      case "bairromaravilhadois":
         setPosition(chapterMap.BairroMaravilha().location);
         setLayers(chapterMap.BairroMaravilha().layers);
         break;
@@ -394,17 +410,21 @@ export default function SubsidioSPPO() {
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
       <chapterDiv.Prejuizo id={"prejuizo"} />
-      <chapterDiv.Cor id={"cor"} />
-      <chapterDiv.CorUm id={"corum"} />
+      {/* <chapterDiv.Cor id={"cor"} /> */}
+      {/* <chapterDiv.CorUm id={"corum"} /> */}
       <chapterDiv.Exemplo0 id={"exemplo0"} />
       <chapterDiv.Exemplo0um id={"exemplo0um"} />
+      <chapterDiv.Exemplo0dois id={"exemplo0dois"} />
       <chapterDiv.Exemplo1 id={"exemplo1"} />
+      <chapterDiv.Exemplo1um id={"exemplo1um"} />
       <chapterDiv.Exemplo2 id={"exemplo2"} />
       <chapterDiv.Exemplo2um id={"exemplo2um"} />
       <chapterDiv.Exemplo3 id={"exemplo3"} />
       <chapterDiv.Exemplo3um id={"exemplo3um"} />
+      <chapterDiv.Exemplo3dois id={"exemplo3dois"} />
       <chapterDiv.BairroMaravilha id={"bairromaravilha"} />
       <chapterDiv.BairroMaravilhaUm id={"bairromaravilhaum"} />
+      <chapterDiv.BairroMaravilhaDois id={"bairromaravilhadois"} />
       <chapterDiv.Seop2 id={"seop2"} />
       <chapterDiv.Fim id={"fim"} />
     </>

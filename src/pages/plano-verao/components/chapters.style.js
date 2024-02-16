@@ -59,8 +59,15 @@ export const Button = tw.div`
 `;
 
 export const Credito = tw.div`
+  font-serif
+  text-sm text-left text-black
+  lg:text-sm
+  lg:text-left
+  font-serif italic 
   mb-7
-  lg:mb-10
+`;
+
+export const Creditoum = tw.div`
   font-serif
   text-sm text-left text-black
   lg:text-sm
@@ -118,6 +125,16 @@ export const ChapterGenericDiv1 = tw.div`
   -z-10 
   `;
 
+  export const ChapterGenericDiv1um = tw.div`
+  flex
+  w-full h-[200vh] 
+  items-center
+  justify-center
+  lg:justify-center
+  text-white
+  -z-10   
+  `;
+
   export const ChapterGenericDiv2 = tw.div`
   flex
   w-full h-[200vh] 
@@ -131,7 +148,19 @@ export const ChapterGenericDiv1 = tw.div`
 
 export const IntroDiv = tw.div`
   w-full h-auto
+  bg-opacity-40 backdrop-blur
+  flex flex-col 
+  justify-center items-start 
+  bg-white/80
+  pr-[10%] pl-[10%]
+  lg:pr-[27%]
+  lg:pl-[27%]
+  lg:pt-[200px]
+  lg:pb-[200px]
+`;
 
+export const IntroDivum = tw.div`
+  w-full h-auto
   bg-opacity-40 backdrop-blur
   flex flex-col 
   justify-center items-center 
@@ -144,7 +173,7 @@ export const IntroDiv = tw.div`
 `;
 
 export const IntroDivMaior = tw.div`
-  w-full h-350
+  w-full h-auto
   bg-opacity-40 backdrop-blur
   flex flex-col 
   justify-center items-center 
@@ -159,7 +188,7 @@ export const IntroDivGigante = tw.div`
   lg:pt-[160px]
   bg-opacity-40 backdrop-blur
   flex flex-col 
-  justify-center items-center
+  justify-center items-start
   bg-white/80
   pr-[10%] pl-[10%]
   lg:pr-[27%]
@@ -210,11 +239,8 @@ export const ContainerCard = tw.div`
   border-black
 `;
 export const ContainerVideo = tw.div`
-  sm:p-[20px] p-[8px]  
   bg-opacity-[20%] backdrop-blur-md
   bg-white/75
-  max-w-xs
-  lg:max-w-xl
   border-[2px]
   border-black
 `;
@@ -386,8 +412,5 @@ export const TextblueOne = tw(TextblueOneSC)`
   text-white
   inline
   px-[8px]
-  py-[4px]
-  leading-normal
-  border-2
-  border-black
+  py-[2px]
 `;

@@ -651,7 +651,7 @@ export const Exemplo0 = () => {
                             coordinates: [-43.33398, -22.83601] // Replace with desired coordinates
                         },
                         properties: {
-                          title: "29.230"
+                          title: "287.930"
                       }
                   }]
               }
