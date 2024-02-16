@@ -150,8 +150,8 @@ export default function SubsidioSPPO() {
       .to("#intro", { opacity: 1, duration: 30 })
       .to("#intro", { opacity: 1, duration: 6 })
       .to("#intro", { opacity: 1, duration: 20 })
-      .to("#intro", { opacity: 0, duration: 6 })
-      .to("#intro", { opacity: 0, duration: 28 });
+      .to("#intro", { opacity: 0, duration: 26 })
+      .to("#intro", { opacity: 0, duration: 8 });
 
     ScrollTrigger.create({
       animation: tl2,
