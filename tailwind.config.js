@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       height: {
         200: "200vh",
+        350: "350vh",
       },
       gridTemplateRows: {
         // Simple 12 row grid

@@ -44,69 +44,80 @@ export default function SubsidioSPPO() {
         setLayers(chapterMap.Capa().layers);
         break;
       case "intro":
-        setPosition(chapterMap.Intro().location);
-        setLayers(chapterMap.Intro().layers);
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
+      case "exemplo0":
+        setPosition(chapterMap.Desassoreamento().location);
+        setLayers(chapterMap.Desassoreamento().layers);
         break;
-      case "zoom":
-        setPosition(chapterMap.Zoom().location);
-        setLayers(chapterMap.Zoom().layers);
+      case "exemplo0um":
+        setPosition(chapterMap.Desassoreamento().location);
+        setLayers(chapterMap.Desassoreamento().layers);
+        break;
+      case "exemplo0dois":
+        setPosition(chapterMap.Desassoreamento().location);
+        setLayers(chapterMap.Desassoreamento().layers);
         break;
       case "exemplo1":
-        setPosition(chapterMap.Exemplo1().location);
-        setLayers(chapterMap.Exemplo1().layers);
+        setPosition(chapterMap.Exemplo0().location);
+        setLayers(chapterMap.Exemplo0().layers);
+        break;
+      case "exemplo1um":
+        setPosition(chapterMap.Exemplo0().location);
+        setLayers(chapterMap.Exemplo0().layers);
         break;
       case "exemplo2":
         setPosition(chapterMap.Exemplo2().location);
         setLayers(chapterMap.Exemplo2().layers);
         break;
-      // case "exemplo3":
-      //   setPosition(chapterMap.Exemplo3().location);
-      //   setLayers(chapterMap.Exemplo3().layers);
-      //   break;
-      case "mapa":
-        setPosition(chapterMap.Mapa().location);
-        setLayers(chapterMap.Mapa().layers);
+      case "exemplo2um":
+        setPosition(chapterMap.Exemplo2().location);
+        setLayers(chapterMap.Exemplo2().layers);
         break;
-      case "solucao":
-        setPosition(chapterMap.Solucao().location);
-        setLayers(chapterMap.Solucao().layers);
+      case "exemplo3":
+        setPosition(chapterMap.Exemplo3().location);
+        setLayers(chapterMap.Exemplo3().layers);
         break;
+      case "exemplo3um":
+      setPosition(chapterMap.Exemplo3().location);
+      setLayers(chapterMap.Exemplo3().layers);
+      break;
+     case "exemplo3dois":
+      setPosition(chapterMap.Exemplo3().location);
+      setLayers(chapterMap.Exemplo3().layers);
+      break;
       case "prejuizo":
         setPosition(chapterMap.Prejuizo().location);
         setLayers(chapterMap.Prejuizo().layers);
         break;
-      case "grafico":
-        setPosition(chapterMap.Grafico().location);
-        setLayers(chapterMap.Grafico().layers);
+      case "cor":
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
+        break;
+      case "corum":
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
       case "fim":
         setPosition(chapterMap.Fim().location);
         setLayers(chapterMap.Fim().layers);
         break;
-      case "seop1":
-        setPosition(chapterMap.Seop1().location);
-        setLayers(chapterMap.Seop1().layers);
+      case "bairromaravilha":
+        setPosition(chapterMap.BairroMaravilha().location);
+        setLayers(chapterMap.BairroMaravilha().layers);
+        break;
+      case "bairromaravilhaum":
+        setPosition(chapterMap.BairroMaravilha().location);
+        setLayers(chapterMap.BairroMaravilha().layers);
+        break;
+      case "bairromaravilhadois":
+        setPosition(chapterMap.BairroMaravilha().location);
+        setLayers(chapterMap.BairroMaravilha().layers);
         break;
       case "seop2":
-        setPosition(chapterMap.Seop2().location);
-        setLayers(chapterMap.Seop2().layers);
-        break;
-      case "seop3":
-        setPosition(chapterMap.Seop3().location);
-        setLayers(chapterMap.Seop3().layers);
-        break;
-      case "seop4":
-        setPosition(chapterMap.Seop4().location);
-        setLayers(chapterMap.Seop4().layers);
-        break;
-      case "acompanhe":
-        setPosition(chapterMap.Acompanhe().location);
-        setLayers(chapterMap.Acompanhe().layers);
-        break;
-      case "oeste":
-        setPosition(chapterMap.Oeste().location);
-        setLayers(chapterMap.Oeste().layers);
+        setPosition(chapterMap.Capa().location);
+        setLayers(chapterMap.Capa().layers);
         break;
       default:
         break;
@@ -139,8 +150,8 @@ export default function SubsidioSPPO() {
       .to("#intro", { opacity: 1, duration: 30 })
       .to("#intro", { opacity: 1, duration: 6 })
       .to("#intro", { opacity: 1, duration: 20 })
-      .to("#intro", { opacity: 0, duration: 6 })
-      .to("#intro", { opacity: 0, duration: 28 });
+      .to("#intro", { opacity: 0, duration: 26 })
+      .to("#intro", { opacity: 0, duration: 8 });
 
     ScrollTrigger.create({
       animation: tl2,
@@ -158,6 +169,34 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
+      trigger: "#exemplo0",
+      onToggle: () => {
+        setChapterNumberMap("exemplo0");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#cor",
+      onToggle: () => {
+        setChapterNumberMap("cor");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#corum",
+      onToggle: () => {
+        setChapterNumberMap("corum");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#exemplo0um",
+      onToggle: () => {
+        setChapterNumberMap("exemplo0um");
+      },
+    });
+
+    ScrollTrigger.create({
       trigger: "#exemplo1",
       onToggle: () => {
         setChapterNumberMap("exemplo1");
@@ -171,12 +210,26 @@ export default function SubsidioSPPO() {
       },
     });
 
-    // ScrollTrigger.create({
-    //   trigger: "#exemplo3",
-    //   onToggle: () => {
-    //     setChapterNumberMap("exemplo3");
-    //   },
-    // });
+    ScrollTrigger.create({
+      trigger: "#exemplo2um",
+      onToggle: () => {
+        setChapterNumberMap("exemplo2um");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#exemplo3",
+      onToggle: () => {
+        setChapterNumberMap("exemplo3");
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#exemplo3um",
+      onToggle: () => {
+        setChapterNumberMap("exemplo3um");
+      },
+    });
 
     const tl13 = gsap.timeline();
     tl13
@@ -223,14 +276,15 @@ export default function SubsidioSPPO() {
       num = { var: startCount };
     function changeNumber() {
       // id of the element you want to change
-      number.innerHTML = num.var.toFixed();
+      number.innerHTML = `${num.var.toFixed(1)}`;
     }
     const tl4 = gsap.timeline();
     tl4.to(num, {
-      var: 646,
+      var: 2.1, 
       duration: 1,
       onUpdate: changeNumber,
     });
+
     ScrollTrigger.create({
       animation: tl4,
       trigger: "#prejuizo",
@@ -268,13 +322,31 @@ export default function SubsidioSPPO() {
     });
 
     ScrollTrigger.create({
-      trigger: "#seop1",
+      trigger: "#bairromaravilha",
       onToggle: () => {
-        setChapterNumberMap("seop1");
+        setChapterNumberMap("bairromaravilha");
       },
     });
 
     ScrollTrigger.create({
+      trigger: "#bairromaravilhaum",
+      onToggle: () => {
+        setChapterNumberMap("bairromaravilhaum");
+      },
+    });
+
+    const tl16 = gsap.timeline();
+    tl16
+      .set("#seop2", { opacity: 0 })
+      .to("#seop2", { opacity: 0, duration: 30 })
+      .to("#seop2", { opacity: 1, duration: 6 })
+      .to("#seop2", { opacity: 1, duration: 20 })
+      .to("#seop2", { opacity: 1, duration: 6 })
+      .to("#seop2", { opacity: 1, duration: 28 });
+
+
+    ScrollTrigger.create({
+      animation: tl16,
       trigger: "#seop2",
       onToggle: () => {
         setChapterNumberMap("seop2");
@@ -297,8 +369,8 @@ export default function SubsidioSPPO() {
 
     const tl11 = gsap.timeline();
     tl11
-      .set("#fim", { opacity: 0 })
-      .to("#fim", { opacity: 0, duration: 30 })
+      .set("#fim", { opacity: 1 })
+      .to("#fim", { opacity: 1, duration: 30 })
       .to("#fim", { opacity: 1, duration: 6 })
       .to("#fim", { opacity: 1, duration: 20 })
       .to("#fim", { opacity: 1, duration: 6 })
@@ -316,11 +388,11 @@ export default function SubsidioSPPO() {
   return (
     <>
       <MultilayerMap
-        interactive={false}
-        scrollZoom={false}
-        showLayers={false}
+        interactive={true}
+        scrollZoom={true}
+        showLayers={true}
         mapboxAccessToken="pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w"
-        mapStyle="mapbox://styles/escritoriodedados/cl6e3p6as001814qxcun8bjo1"
+        mapStyle="mapbox://styles/escritoriodedados/cls259dkn01tx01nlbomw7vn7"
         layers={layers}
         location={location}
         mapCSS={{
@@ -337,20 +409,23 @@ export default function SubsidioSPPO() {
       />
       <chapterDiv.Capa id={"capa"} />
       <chapterDiv.Intro id={"intro"} />
-      <chapterDiv.Zoom id={"zoom"} />
-      <chapterDiv.Exemplo1 id={"exemplo1"} />
-      <chapterDiv.Exemplo2 id={"exemplo2"} />
-      {/* <chapterDiv.Exemplo3 id={"exemplo3"} /> */}
-      <chapterDiv.Oeste id={"oeste"} />
-      <chapterDiv.Mapa id={"mapa"} />
-      <chapterDiv.Solucao id={"solucao"} />
       <chapterDiv.Prejuizo id={"prejuizo"} />
-      <chapterDiv.Grafico id={"grafico"} />
-      <chapterDiv.Acompanhe id={"acompanhe"} />
-      <chapterDiv.Seop1 id={"seop1"} />
+      {/* <chapterDiv.Cor id={"cor"} /> */}
+      {/* <chapterDiv.CorUm id={"corum"} /> */}
+      <chapterDiv.Exemplo0 id={"exemplo0"} />
+      <chapterDiv.Exemplo0um id={"exemplo0um"} />
+      <chapterDiv.Exemplo0dois id={"exemplo0dois"} />
+      <chapterDiv.Exemplo1 id={"exemplo1"} />
+      <chapterDiv.Exemplo1um id={"exemplo1um"} />
+      <chapterDiv.Exemplo2 id={"exemplo2"} />
+      <chapterDiv.Exemplo2um id={"exemplo2um"} />
+      <chapterDiv.Exemplo3 id={"exemplo3"} />
+      <chapterDiv.Exemplo3um id={"exemplo3um"} />
+      <chapterDiv.Exemplo3dois id={"exemplo3dois"} />
+      <chapterDiv.BairroMaravilha id={"bairromaravilha"} />
+      <chapterDiv.BairroMaravilhaUm id={"bairromaravilhaum"} />
+      <chapterDiv.BairroMaravilhaDois id={"bairromaravilhadois"} />
       <chapterDiv.Seop2 id={"seop2"} />
-      <chapterDiv.Seop3 id={"seop3"} />
-      <chapterDiv.Seop4 id={"seop4"} />
       <chapterDiv.Fim id={"fim"} />
     </>
   );

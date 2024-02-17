@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import * as styles from "./chapters.style";
 import tw from "tailwind-styled-components";
+import { ImgComparisonSlider } from "@img-comparison-slider/react";
 // import ReactDOM from "react-dom";
 // import DWChart from "react-datawrapper-chart";
 
@@ -15,6 +16,7 @@ import seop4 from "../images/seop4.png";
 import grafico from "../images/grafico.png";
 import legenda from "../images/legenda.png";
 import logoed from "../images/logoed.png";
+import gif from "../images/gif.gif";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -34,9 +36,9 @@ export function Capa(
   props = setDefaultProps(props);
   return (
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
-      <img src={logo} className="w-24 mt-[2vh]  lg:w-32"></img>
-      <styles.Title>
-        Mais de 1.300 construções irregulares a menos no Rio de Janeiro
+      <img src={logo} className="w-36 mt-[2vh] lg:w-52"></img>
+      <div><styles.Title>
+      Plano Verão: As iniciativas da Prefeitura do Rio de Janeiro na prevenção de enchentes
       </styles.Title>
       {/* <styles.Subtitle>
         Segurança para os moradores, Prejuízo para o crime organizado,
@@ -44,34 +46,30 @@ export function Capa(
       </styles.Subtitle> */}
       <div>
         <styles.AuthorText>
-          Desenvolvido por{" "}
+          Desenvolvido pelo{" "}
           <a
             className="font-bold underline"
             href="https://www.dados.rio/"
             target="_blank"
             rel="noreferrer"
           >
-            Escritório de Dados
+          Escritório de Dados  
           </a>
-          ,{" "}
-          <a
-            className="font-bold underline"
-            href="http://www.rio.rj.gov.br/web/seop"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Secretaria Municipal de Ordem Pública{" "}
-          </a>
-          e{" "}
-          <a
-            className="font-bold underline"
-            href="http://www.rio.rj.gov.br/web/smac"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Secretaria Municipal de Meio Ambiente da Cidade
-          </a>
+          {" "}
+          da Prefeitura da Cidade do Rio de Janeiro
         </styles.AuthorText>
+        </div>        
+      </div>
+      <div>
+          <styles.Button>
+          <a
+            className="font-bold underline"
+            href="https://mapa-realizacoes-dev.dados.rio/"
+            target="_blank"
+            rel="noreferrer"
+          >Veja o mapa completo  
+          </a>
+          </styles.Button>
       </div>
     </styles.CapaDiv>
   );
@@ -86,60 +84,75 @@ export function Intro(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
+    <styles.IntroDiv style={{paddingBottom:"100vh"}} ref={props.chapRef} id={props.id}>     
       {/* <styles.IntroTitle id={"intro"}>Como tudo começou</styles.IntroTitle> */}
       <styles.IntroText>
-        A proliferação de construções irregulares é um problema que tomou conta
-        da cidade do Rio há algumas décadas. Em áreas sob influência do crime
-        organizado a preocupação é ainda maior. <br /> <br />
-        Estudos apontam que{" "}
-        <styles.Textyellow>
-          a atividade imobiliária se tornou uma das principais fontes
-          financeiras de alguns grupos criminosos.
-        </styles.Textyellow>{" "}
-        Essas construções são realizadas sem autorização da Prefeitura, em áreas
-        públicas e protegidas, e erguidas sem nenhum acompanhamento técnico.
+        Dados do Alerta Rio, sistema de alerta de chuvas intensas e de deslizamentos em encostas do Rio de Janeiro, mostram que nunca choveu tanto na nossa cidade.
         <br /> <br />
-        Um levantamento realizado pela Secretaria de Meio Ambiente, utilizando
-        dados de satélite, constatou que de janeiro de 2017 a janeiro de 2020, a
-        cidade perdeu 497 hectares de áreas verdes, o equivalente a
-        4,97 milhões de m². <br /> <br />
-        Por trás de cada prédio construído ilegalmente e sem fiscalização, há
-        inúmeras famílias que vivem sob o risco de terem suas casas desabadas, e
-        perderem, a qualquer momento, sua história e também suas vidas.
+        Uma análise, com base nos dados de ocorrências registradas pelo Centro de Operações Rio (COR) desde 2018, revela que a cidade já enfrentou pelo menos <styles.Textgrey>4.031 incidentes causados pelas chuvas.</styles.Textgrey> 
+        <br /> <br />
+        Por isso, a Prefeitura do Rio implementou um planejamento específico para o período de maior incidência de chuvas, o verão carioca.<styles.Textgrey>Desde 2021, a cidade conta com o Plano Verão, cujo objetivo é minimizar os impactos das chuvas.</styles.Textgrey> Trinta órgãos municipais, incluindo secretarias, empresas públicas e subprefeituras, trabalham na implementação dessas ações.
+        <br /> <br />
+        Neste especial do Escritório de Dados, explicaremos como o Plano Verão se tornou uma medida essencial no preparo do Rio para os impactos das chuvas.
       </styles.IntroText>
+      <br /> <br /><br /> <br /><br /> <br />
+      <styles.IntroTitle>
+        O Plano Verão
+      </styles.IntroTitle>
+      <styles.IntroText>
+        O Plano Verão tem como <styles.Textgrey>principal foco a contenção de encostas, a execução de programas de infraestrutura e a aquisição de tecnologias </styles.Textgrey>destinadas a aprimorar a capacidade de resposta aos desafios provocados pelas chuvas.
+        <br /><br />
+        Estas <styles.Textgrey>diversas iniciativas foram estrategicamente distribuídas nas áreas mais críticas da cidade,</styles.Textgrey> identificadas por meio de constante monitoramento e estudos.
+        <br /><br />
+        As medidas para mitigar os efeitos podem ser tomadas antes, durante ou como planejamento de obras específicas contra enchentes e alagamentos.
+        <br /><br />
+        A seguir, você verá uma série de ações realizadas pela Prefeitura para combater este problema.
+      </styles.IntroText>
+      <br /> <br /><br /> <br /><br /> <br />
+      <styles.IntroTitle>
+        O Centro de Operações Rio
+      </styles.IntroTitle>
+      <styles.NewsImage src={seop2}></styles.NewsImage>
+        <styles.Credito>
+          Divulgação: Centro de Operações Rio
+        </styles.Credito> 
+      <styles.IntroText>
+        <styles.Textgrey>O COR é o órgão responsável por monitorar e integrar a cidade em áreas essenciais como mobilidade urbana e meteorologia.</styles.Textgrey>Referência na América Latina, foi inaugurado em 2010 como o primeiro equipamento olímpico entregue pela Prefeitura do Rio à cidade, e seu legado permanece até hoje, <styles.Textgrey>funcionando 24 horas por dia, sete dias por semana.</styles.Textgrey>
+        <br /><br />
+        Utilizando radares meteorológicos, o COR monitora as condições climáticas e avisa aos órgãos parceiros sobre chuvas, ativando uma rede de ações em tempo real durante mudanças na mobilidade. 
+        <br /><br />
+        Além de ações em tempo real, é responsável por administrar as ações do Plano Verão e definir, em conjunto com outros órgãos, as ações que serão realizadas para combater enchentes e outros desastres ocasionados pelas chuvas.
+        <br /><br />
+        <styles.Textgrey>Com investimentos em novas tecnologias, o COR ampliou sua sala de monitoramento em 40%, </styles.Textgrey>composta atualmente por 125 telas de 55 polegadas em alta resolução.<styles.Textgrey> O número de câmeras de monitoramento espalhadas pela cidade também cresceu para 3.500</styles.Textgrey>
+      </styles.IntroText>
+      {/* <styles.ContainerVideo>
+        <styles.TextCard1>
+        <iframe src="https://res.cloudinary.com/doueg88fj/video/upload/v1707233408/video1_x47qst.mp4" height="530"></iframe>
+        </styles.TextCard1>
+      </styles.ContainerVideo> */}
     </styles.IntroDiv>
   );
 }
 
-export function Solucao(
+export function Zoom(
   props = {
     id: "",
     chapRef: null,
   }
 ) {
+  props = setDefaultProps(props);
+
   return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"solucaoTitle"}>A solução</styles.IntroTitle>
-      <styles.IntroText>
-        Para combater o crescimento desordenado da cidade, o avanço de
-        construções irregulares em áreas ambientalmente protegidas, preservar
-        vidas e asfixiar financeiramente o crime organizado, a{" "}
-        <styles.Textyellow>
-          Secretaria Municipal de Ordem Pública (SEOP) e a Secretaria Municipal
-          de Meio Ambiente da Cidade (SMAC) têm realizado operações constantes
-          de demolição destas construções,
-        </styles.Textyellow>{" "}
-        desde o começo de 2021. <br /> <br />
-        De lá para cá,{" "}
-        <styles.Textyellow>
-          mais de 1.300 imóveis não habitados, não finalizados, erguidos
-          ilegalmente e que traziam riscos à população, foram colocados abaixo.
-        </styles.Textyellow>{" "}
-        Essas ações pouparam a vida de milhares de cariocas que viviam em áreas
-        de risco.
-      </styles.IntroText>
-    </styles.IntroDiv>
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+      <styles.TextCard5><styles.Textyellow>Novas ferramentas</styles.Textyellow></styles.TextCard5>
+        <br />
+        <styles.TextCard1>
+        Outra inovação é a contratação do Sistema de Monitoramento e Alerta de Descargas Atmosféricas e Tempestades Severas. A ferramenta foi testada pelo Rio no último verão, quando a cidade contabilizou 31.900 raios atingindo o município entre os meses de janeiro e março. 
+      <br /> <br />
+      Já a Defesa Civil operacionalizou mais uma ferramenta de comunicação preventiva aos moradores que vivem em áreas de alto risco geológico. Avisos sonoros serão emitidos por sirenes localizadas em 103 comunidades. O objetivo é alertar a população, antecipadamente, que não possuem acesso aos meios de comunicação de massa sobre a chegada de chuva forte no município. O aviso será feito com base nas previsões meteorológicas do Sistema Alerta Rio, órgão de meteorologia da Prefeitura do Rio. </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv2>
   );
 }
 
@@ -156,15 +169,10 @@ export function Prejuizo(
           <styles.Grid1>
             <styles.BigNumber>R$</styles.BigNumber>
             <styles.BigNumber id="number">0</styles.BigNumber>
-            <styles.BigNumber1>milhões</styles.BigNumber1>
+            <styles.BigNumber1>Bilhões</styles.BigNumber1>
           </styles.Grid1>
           <styles.TextCard>
-            Graças as operações realizadas pela Prefeitura, essas organizações
-            ilegais também sentiram no bolso.{" "}
-            <styles.Textyellow>
-              Desde 2021, as operações da secretaria acarretaram um prejuízo
-              estimado em R$646 milhões para os cofres do crime organizado.
-            </styles.Textyellow>{" "}
+          Este é o investimento total do Plano Verão desde 2021. Ao todo, o programa já implementou 308 <styles.TextblueOne>ações</styles.TextblueOne> preventivas na cidade. A localidade de algumas destas ações você consegue conferir neste mapa.
           </styles.TextCard>
         </styles.Grid>
       </styles.ContainerCard>
@@ -172,7 +180,7 @@ export function Prejuizo(
   );
 }
 
-export function Grafico(
+export function Cor(
   props = {
     id: "",
     chapRef: null,
@@ -181,24 +189,99 @@ export function Grafico(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.NewsImage src={grafico}></styles.NewsImage>
-        <styles.TextCard>
-          Analisando as prioridades da Prefeitura, é possível perceber que o
-          assunto é tratado com a relevância necessária. Isto, entretanto, nem
-          sempre foi assim. Analisando os dados históricos de demolições
-          realizadas na cidade, é possível perceber que, ao longo da{" "}
-          <styles.Textyellow>
-            gestão anterior, apenas 359 demolições foram realizadas,
-          </styles.Textyellow>{" "}
-          número inferior as{" "}
-          <styles.Textyellow>
-            1.313 demolições feitas em apenas um ano e meio pela atual gestão.
-          </styles.Textyellow>{" "}
-        </styles.TextCard>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+      <styles.TextCard2><styles.Textyellow>Centro de Operações</styles.Textyellow></styles.TextCard2>
+        <br /> 
+        <styles.NewsImage src={seop2}></styles.NewsImage>
+        <styles.Credito>
+          Divulgação: Centro de Operações Rio
+        </styles.Credito>  
+        <styles.TextCard1>
+        Para se manter na vanguarda do que há de mais avançado em monitoramento no mundo, o Centro de Operações Rio (COR) investiu em novas aquisições tecnológicas. Após ampliar em 40% seu vídeo wall, que passou a ter 104 metros quadrados, composto por 125 telas de 55 polegadas e em alta resolução, um novo radar meteorológico foi adquirido.
+        <br /> <br />
+        O número de câmeras de monitoramento da cidade, que permitem um melhor planejamento durante os eventos também apresentou um crescimento. Em 2022 eram duas mil e, agora, já são três mil e quinhentas. 
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function CorUm(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerVideo>
+        <styles.TextCard1>
+        <iframe src="https://res.cloudinary.com/doueg88fj/video/upload/v1707233408/video1_x47qst.mp4" height="530"></iframe>
+        </styles.TextCard1>
+      </styles.ContainerVideo>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function Exemplo0(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+      <styles.TextCard5><styles.Textyellow>Dragagem dos rios</styles.Textyellow></styles.TextCard5>
+        <br /> 
+        <styles.TextCard1>
+        Uma das ações mais importantes é a de <styles.TextblueOne>dragagem dos rios.</styles.TextblueOne> A ação é necessária para a retirada de sedimentos no fundo dos rios. A ação é necessária para garantir o escoamento das chuvas e evitar inundações. 
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1>
+  );
+}
+
+export function Exemplo0um(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.TextCard1>
+        Em 2023, o investimento em dragagem de rios já totalizou a retirada de <styles.Textgrey>555,4 mil toneladas de lixo.</styles.Textgrey> O volume de lixo retirado nas ações foi o equivalente à <styles.Textgrey>46.283 caminhões cheios.</styles.Textgrey> O número recorde é cinco vezes maior que o retirado em 2018, quando 114 mil toneladas foram retiradas.
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1>
+  );
+}
+
+export function Exemplo0dois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.TextCard1>
+        As ações foram feitas nos principais rios da cidade, como o Rio Acari, o Rio Ita (Santa Cruz), o Rio Campinho (Campo Grande).
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1>
   );
 }
 
@@ -213,27 +296,30 @@ export function Exemplo1(
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
+      <styles.TextCard2><styles.Textyellow>Desassoreamento do Rio Acari</styles.Textyellow></styles.TextCard2>
+        <br /> 
         <styles.NewsImage src={exemplo1}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
+        <styles.Creditoum>
+          Divulgação: Fundação Rio-Águas
+        </styles.Creditoum>  
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1>
+  );
+}
+
+export function Exemplo1um(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
         <styles.TextCard1>
-          Adilma Rodrigues, de 35 anos, e seu marido, Cláudio Rodrigues, de 40
-          anos, morreram após o desabamento de dois prédios, construídos
-          irregularmente na região de{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/cidade/prefeitura-inicia-demolicoes-na-muzema/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Muzema,
-            </a>
-          </styles.Textyellow>{" "}
-          no Itanhangá, Zona Oeste. Ao todo, 24 pessoas morreram no desastre,
-          que ocorreu em abril de 2019.
+        Um dos principais rios da Zona Norte, o Rio Acari teve os serviços de limpeza e desassoreamento concluídos em julho de 2023. Com um investimento de R$ 8,7 milhões, os trabalhos cobriram a extensão de 3,1 km de rio e <styles.TextblueOne>retiraram mais de 191 mil toneladas de material do canal,</styles.TextblueOne> que representam em torno de 16 mil caminhões basculantes de 12 toneladas, <styles.TextblueOne>beneficiando 287.930 cariocas</styles.TextblueOne> que residem em seu entorno.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
@@ -249,70 +335,19 @@ export function Exemplo2(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={exemplo2}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
+      <styles.TextCard5><styles.Textyellow>Obras de drenagem</styles.Textyellow></styles.TextCard5>
+        <br />
         <styles.TextCard1>
-          Maitê Gomes Abreu, de 2 anos, e seu pai, Natan Gomes, de 30 anos,
-          foram encontrados mortos após nove horas de buscas entre os escombros.
-          Pai e filha foram vítimas do desabamento de um prédio de quatro
-          andares em{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://assistenciasocial.prefeitura.rio/noticias/prefeitura-atua-para-minimizar-os-impactos-do-desabamento-de-um-imovel-em-rio-das-pedras/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Rio das Pedras,
-            </a>
-          </styles.Textyellow>{" "}
-          na Zona Oeste em junho do ano passado. O imóvel era irregular.
+        Foram investidos R$ 9,8 milhões em <styles.TextblueOne>obras de drenagem</styles.TextblueOne> para eliminação de pontos críticos de alagamento na cidade. Os serviços foram executados na Avenida Borges de Medeiros, na Rua Alexandre Calaza e nas estradas da Pedra e do Catonho, onde os trabalhos entraram na reta final. No total, mais de 1,6 km de drenagem estão sendo executadas.
         </styles.TextCard1>
       </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
+    </styles.ChapterGenericDiv2>
   );
 }
 
-// export function Exemplo3(
-//   props = {
-//     id: "",
-//     chapRef: null,
-//   }
-// ) {
-//   props = setDefaultProps(props);
-
-//   return (
-//     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-//       <styles.ContainerCard1>
-//         <styles.TextCard1>
-//           Em novembro de 2021, uma tragédia: um prédio de quatro andares desabou
-//           no{" "}
-//           <styles.Textyellow>
-//             {" "}
-//             <a
-//               className="p-1"
-//               href="https://www1.folha.uol.com.br/cotidiano/2021/11/predio-de-4-andares-desaba-no-rio-e-deixa-um-morto-e-tres-feridos.shtml"
-//               target="_blank"
-//               rel="noreferrer"
-//             >
-//               Morro do Salgueiro,
-//             </a>
-//           </styles.Textyellow>{" "}
-//           na Zona Norte. Um homem de 22 anos faleceu e outras três pessoas
-//           ficaram feridas. Entre elas, uma criança de apenas quatro anos. A
-//           construção também não tinha alvará.
-//         </styles.TextCard1>
-//       </styles.ContainerCard1>
-//     </styles.ChapterGenericDiv>
-//   );
-// }
-
-export function Seop4(
+export function Exemplo2um(
   props = {
     id: "",
     chapRef: null,
@@ -321,30 +356,68 @@ export function Seop4(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={seop4}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
         <styles.TextCard1>
-          Também em Muzema,{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/ordem-publica/prefeitura-faz-demolicao-de-predio-de-tres-andares-no-valor-de-r-3-milhoes-na-muzema/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              uma construção irregular foi colocada abaixo.
-            </a>
-          </styles.Textyellow>{" "}
-          O prédio, com três andares, foi demolido pela equipe da Força-Tarefa
-          no mês passado.
+        Na intersecção entre as estradas do Catonho e Cafundá, o aumento da capacidade de escoamento das galerias pluviais solucionará o problema crônico de alagamento que motoristas e pedestres enfrentam em dias de chuvas fortes. Mais de 7,6 mil metros quadrados de drenagem estão sendo recuperados. Além disso, as calçadas estão sendo reconstruídas para melhorar a mobilidade e a acessibilidade. Por fim, o trecho ganhará nova pavimentação.
         </styles.TextCard1>
       </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function Exemplo3(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+      <styles.TextCard2><styles.Textyellow>Obra de drenagem no entorno do Mercadão de Madureira</styles.Textyellow></styles.TextCard2>
+        <styles.NewsImage src={exemplo2}></styles.NewsImage>
+        <styles.Creditoum>
+        Divulgação: Fundação Rio-Águas
+        </styles.Creditoum>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function Exemplo3um(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.TextCard1>As obras de drenagem foram iniciadas em novembro de 2022 para eliminar um ponto de alagamento na Rua Conselheiro Galvão, em Madureira, próximo ao Mercadão de Madureira, na Zona Norte da cidade. Foram implantados 400 metros de nova rede de drenagem na via, com isso, aumentará a capacidade das galerias pluviais e reduzirá bolsões d'água em um dos acessos do Mercadão.</styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv2>
+  );
+}
+
+export function Exemplo3dois(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.TextCard1>Com um investimento de R$ 10,1 milhões, <styles.TextblueOne>a obra beneficiará 38.366 moradores da região.</styles.TextblueOne></styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv2>
   );
 }
 
@@ -357,30 +430,21 @@ export function Seop3(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
+    <styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
+      <styles.TextCard2><styles.Textyellow>Novo radar meteorológico do Rio</styles.Textyellow></styles.TextCard2>
         <styles.NewsImage src={seop3}></styles.NewsImage>
         <styles.Credito>
           Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
+        </styles.Credito>        
+        <br />
         <styles.TextCard1>
-          Há quatro meses, um imóvel de sete andares, construído na região do
-          Terreirão, também no Recreio, foi demolido.{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/ordem-publica/seop-faz-a-demolicao-de-predio-de-sete-andares-construido-irregularmente-no-recreio/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              O prédio não atendia nenhum requisito técnico para construção no
-              local.
-            </a>
-          </styles.Textyellow>{" "}
+        Com um investimento de R$ 6,8 milhões, via Parceria Público-Privada firmada pela Rioluz, o radar de tecnologia ‘banda X’, é considerado o mais moderno em equipamentos deste tipo e que entrará em dezembro em operação. O novo equipamento é capaz de fazer a leitura de chuva de granizo com antecedência de até três horas e será instalado na Serra do Mendanha, na Zona Oeste.
+        <br /> <br />
+        O Rio passa a ser o primeiro município do país a contar com dois radares meteorológicos próprios. As imagens dos equipamentos, assim como já acontece com o que está instalado no Morro do Sumaré, serão disponibilizadas para a população do Rio.
         </styles.TextCard1>
       </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
+    </styles.ChapterGenericDiv2>
   );
 }
 
@@ -393,99 +457,105 @@ export function Seop2(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <styles.NewsImage src={seop2}></styles.NewsImage>
+    <styles.IntroDivGigante  style={{paddingTop:"230vh"}} ref={props.chapRef} id={props.id}>
+      <styles.IntroTitle>
+        Novas ferramentas
+      </styles.IntroTitle>
+      <styles.IntroText>
+      Outra inovação é a contratação do Sistema de Monitoramento e Alerta de Descargas Atmosféricas e Tempestades Severas. A ferramenta foi testada pelo Rio no último verão, quando a cidade contabilizou 31.900 raios atingindo o município entre os meses de janeiro e março.
+      <br /> <br />
+      Já a Defesa Civil operacionalizou mais uma ferramenta de comunicação preventiva aos moradores que vivem em áreas de alto risco geológico. Avisos sonoros serão emitidos por sirenes localizadas em 103 comunidades. O objetivo é alertar a população, antecipadamente, que não possuem acesso aos meios de comunicação de massa sobre a chegada de chuva forte no município. O aviso será feito com base nas previsões meteorológicas do Sistema Alerta Rio, órgão de meteorologia da Prefeitura do Rio.
+      </styles.IntroText>
+      <br /> <br /><br /> <br /><br /> <br />
+      <styles.IntroTitle>
+      Novo radar meteorológico do Rio
+      </styles.IntroTitle>
+      <styles.IntroText>
+      <styles.NewsImage src={seop3}></styles.NewsImage>
         <styles.Credito>
           Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
+        </styles.Credito>        
+        <br />
         <styles.TextCard1>
-          Outro imóvel também localizado no Recreio dos Bandeirantes foi abaixo
-          no começo deste ano. Com três andares já construídos, e um quarto em
-          desenvolvimento, o prédio irregular possuía cinco apartamentos por
-          andar. A estimativa é que cada unidade,{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/ordem-publica/seop-e-gaeco-realizam-megaoperacao-para-demolicao-de-construcoes-irregulares-no-recreio-dos-bandeirantes/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              construída sem nenhum parecer técnico
-            </a>
-          </styles.Textyellow>{" "}
-          que aprovasse a sua segurança, seria vendida por R$ 300 mil para os
-          moradores.
-        </styles.TextCard1>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1>
+        Com um investimento de R$ 6,8 milhões, via Parceria Público-Privada firmada pela Rioluz, o radar de tecnologia ‘banda X’, é considerado o mais moderno em equipamentos deste tipo e que entrará em dezembro em operação. O novo equipamento é capaz de fazer a leitura de chuva de granizo com antecedência de até três horas e será instalado na Serra do Mendanha, na Zona Oeste.
+        <br /> <br />
+        O Rio passa a ser o primeiro município do país a contar com dois radares meteorológicos próprios. As imagens dos equipamentos, assim como já acontece com o que está instalado no Morro do Sumaré, serão disponibilizadas para a população do Rio.
+        </styles.TextCard1></styles.IntroText>
+        <styles.NewsImage src={gif}></styles.NewsImage>
+        <styles.Credito>
+          Imagem: Prefeitura da Cidade do Rio Janeiro
+        </styles.Credito>  
+        <div>
+          <styles.Button>
+          <a
+            className="font-bold underline"
+            href="https://mapa-realizacoes-dev.dados.rio/"
+            target="_blank"
+            rel="noreferrer"
+          >Veja o mapa completo
+          </a>
+          </styles.Button>
+      </div>
+    </styles.IntroDivGigante>
   );
 }
 
-export function Seop1(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
+export function BairroMaravilha(props = { id: "", chapRef: null }) {
   props = setDefaultProps(props);
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={seop1}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
-        <styles.TextCard1>
-          No fim do ano passado, um imóvel onde funcionaria um supermercado, com
-          garagem subterrânea e espaços alugados, estava sendo{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/ordem-publica/seop-e-mprj-realizam-operacao-para-demolir-construcao-irregular-erguida-pela-milicia-de-rio-das-pedras/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              construído irregularmente
-            </a>
-          </styles.Textyellow>{" "}
-          na Estrada do Itanhangá, em Muzema, foi demolido pela Prefeitura. Uma
-          estimativa feita em parceria com o Ministério Público avaliou que
-          criminosos investiram aproximadamente R$ 5 milhões no empreendimento
-          irregular.
-        </styles.TextCard1>
+      <styles.TextCard2><styles.Textyellow>Bairro Maravilha: Rua Francisco Fragoso</styles.Textyellow></styles.TextCard2>
+        <ImgComparisonSlider hover="hover" tabindex="0" class="rendered border-[2px] border-black">
+          <img
+            slot="first"
+            src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BM%20ANTES.jpg"
+          />
+          <img
+            slot="second"
+            src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/obras/BM%20DEPOIS.jpg"
+          />
+          <svg slot="handle" class="custom-animated-handle" xmlns="http://www.w3.org/2000/svg" width="100" viewBox="-8 -3 16 6">
+            <path stroke="#fff" d="M -5 -2 L -7 0 L -5 2 M -5 -2 L -5 2 M 5 -2 L 7 0 L 5 2 M 5 -2 L 5 2" stroke-width="1" fill="#fff" vector-effect="non-scaling-stroke"></path>
+          </svg>
+        </ImgComparisonSlider>
+        <styles.Creditoum>
+          Divulgação: Prefeitura da Cidade do Rio Janeiro / Marcos de Paula
+        </styles.Creditoum>       
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
   );
 }
 
-export function Zoom(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
+export function BairroMaravilhaUm(props = { id: "", chapRef: null }) {
   props = setDefaultProps(props);
 
   return (
     <styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.TextCard1>
-          Infelizmente, nos últimos anos, casos recorrentes de desabamentos
-          foram registrados na cidade.{" "}
-          <styles.Textyellow>
-            Prédios construídos pelo crime organizado, sem a infraestrutura e os
-            cuidados técnicos necessários, vieram abaixo.
-          </styles.Textyellow>{" "}
-          Famílias inteiras perderam seus lares e suas vidas:
-        </styles.TextCard1>
+      <styles.TextCard1>
+      Outro projeto que atua diretamente na prevenção das chuvas é o Bairro Maravilha, responsável por urbanizar e levar infraestrutura à população. Já são 92 localidades beneficiadas e, até o fim de 2023, serão 49 km de ruas requalificadas, com R$ 977 milhões em investimentos no total.
+      </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1>
   );
 }
+
+export function BairroMaravilhaDois(props = { id: "", chapRef: null }) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1um ref={props.chapRef} id={props.id}>
+      <styles.ContainerVideo>
+        <styles.TextCard1>
+        <iframe src="https://res.cloudinary.com/doueg88fj/video/upload/v1707233405/video2_e5mexn.mp4" height="530"></iframe>
+        </styles.TextCard1>
+      </styles.ContainerVideo>
+    </styles.ChapterGenericDiv1um>
+  );
+}
+
 
 export function Mapa(
   props = {
@@ -523,74 +593,23 @@ export function Fim(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"fimTitle"}>Próximos passos</styles.IntroTitle>
-      <styles.IntroText>
-        A marca de <styles.Textyellow>1.313 demolições,</styles.Textyellow> em
-        apenas <styles.Textyellow>um ano e meio de gestão,</styles.Textyellow> é
-        extremamente importante para a cidade.
-        <br /> <br />
-        Para continuar seu trabalho, a Prefeitura do Rio de Janeiro vem
-        investindo na melhoria da capacidade de identificação de novas
-        construções, por meio de denúncias recebidas, e também através do{" "}
-        <styles.Textyellow>
-          uso de novas tecnologias, como o uso de drones, fotografias aéreas
-          (ortofotos) e imagens de satélites.
-          <br /> <br />
-        </styles.Textyellow>{" "}
-        A Prefeitura, juntamente com as secretarias de Ordem Pública e Meio
-        Ambiente da Cidade, seguem atentas, colocando abaixo aquelas estruturas
-        erguidas irregularmente em nosso município. Continuaremos atuantes e
-        firmes no combate à ocupação desordenada na cidade e no asfixiamento
-        financeiro do crime organizado.
-        <br /> <br />{" "}
-        <styles.Textyellow>
-          A preservação de vidas é, e sempre será, o nosso objetivo.
-        </styles.Textyellow>{" "}
-      </styles.IntroText>
+    <styles.IntroDivum ref={props.chapRef} id={props.id}>
+      {/* <styles.IntroTitle id={"fimTitle"}>Próximos passos</styles.IntroTitle> */}
+      <styles.TextCard3><styles.Textblack>Prefeito</styles.Textblack></styles.TextCard3>
+      <styles.IntroText1>Eduardo Paes</styles.IntroText1>
+      <br /> <br />
+      <styles.TextCard3><styles.Textblack>Autores</styles.Textblack></styles.TextCard3>
+      <styles.IntroText1>Caio Jacintho<br />João Carabetta<br />João Marcelo Ferraz<br />Judite Cypreste<br />Lucas Tavares</styles.IntroText1>
+      <br /> <br />
+      <styles.TextCard3><styles.Textblack>Agradecimentos</styles.Textblack></styles.TextCard3>
+      <styles.IntroText1>Diego Oliveira<br />Gabriela Hilário<br />Joice Nascimento<br />Ramon Carnaval</styles.IntroText1>
       <a href={"https://www.dados.rio/"}>
         <img
           src={logoed}
-          className="w-44 mt-[200px] lg:mt-[500px] lg:w-56"
+          className="w-44 mt-[200px] mb-[200px] lg:mt-[200px] lg:w-56"
         ></img>
       </a>
-    </styles.IntroDiv>
-  );
-}
-
-export function Acompanhe(
-  props = {
-    id: "",
-    chapRef: null,
-  }
-) {
-  props = setDefaultProps(props);
-
-  return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"acompanheTitle"}>
-        As ações da Prefeitura
-      </styles.IntroTitle>
-      <styles.IntroText>
-        As operações realizadas pela Ordem Pública e pela Secretaria de Meio
-        Ambiente reúnem diversos órgãos da Prefeitura, como a Guarda Municipal,
-        Comlurb, Secretaria de Conservação e Subprefeituras, além das
-        concessionárias de luz e água. Na maioria das ações, o apoio das forças
-        policiais também é necessário, devido à influência do crime organizado
-        nas regiões visitadas.
-        <br />
-        <br />
-        As ações também ajudam a Prefeitura a combater o desmatamento de aéreas
-        de preservação ambiental.
-        <br />
-        <br />
-        De 2021 a 2022, foram demolidas 257 construções irregulares em aéreas
-        preservadas, segundo dados da Secretaria de Meio Ambiente.
-        <br />
-        <br />
-        Foram mais de 797.198 m² de áreas verdes recuperadas.
-      </styles.IntroText>
-    </styles.IntroDiv>
+    </styles.IntroDivum>
   );
 }
 
@@ -603,22 +622,23 @@ export function Oeste(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"zonaOesteTitle"}>
+    <styles.IntroDivMaior ref={props.chapRef} id={props.id}>
+      {/* <styles.IntroTitle id={"zonaOesteTitle"}>
         Onde estão localizadas as construções irregulares
-      </styles.IntroTitle>
+      </styles.IntroTitle> */}
       <styles.IntroText>
-        Apesar de estarem presentes em todas as regiões da cidade, as{" "}
-        <styles.Textyellow>
-          construções irregulares têm maior incidência na Zona Oeste do
-          município.
-        </styles.Textyellow>{" "}
-        De todas as demolições realizadas pela atual gestão da Prefeitura, mais
-        de 70% estavam localizadas nesta região. Rio das Pedras, Muzema e
-        Recreio dos Bandeirantes, por exemplo, são locais em que são registradas
-        constantemente estas irregularidades.
+      <styles.IntroTitle>Obras de Contenção</styles.IntroTitle>
+      Também <styles.Textgrey>foram investidos cerca de R$ 35 milhões somente nas obras de contenção nas grandes vias </styles.Textgrey>com protocolos de fechamento nos dias de fortes chuvas. Com isso, foram registrados menos problemas com deslizamentos de terra nos últimos temporais. Nos últimos três anos <styles.Textgrey>conseguimos fazer a contenção de 880 mil metros quadrados em áreas de alto risco em comunidades cariocas, o equivalente a 107 campos de futebol.</styles.Textgrey>
+      <br /><br /><br />
+      <styles.IntroTitle>Obras de Drenagem</styles.IntroTitle>
+      Com um investimento de R$ 9,8 milhões em obras de drenagem para eliminação de pontos críticos de alagamento. Os serviços foram executados na Avenida Borges de Medeiros, na Rua Alexandre Calaza e nas estradas da Pedra e do Catonho, onde os trabalhos entraram na reta final. No total, mais de 1,6 km de drenagem estão sendo executadas. 
+      <br /><br />
+      Na intersecção entre as estradas do Catonho e Cafundá, o aumento da capacidade de escoamento das galerias pluviais solucionará o problema crônico de alagamento que motoristas e pedestres enfrentam em dias de chuvas fortes. Mais de 7,6 mil metros quadrados de drenagem estão sendo recuperados. Além disso, as calçadas estão sendo reconstruídas para melhorar a mobilidade e a acessibilidade. Por fim, o trecho ganhará nova pavimentação.
+      <br /><br /><br />
+      <styles.IntroTitle>Podas de árvores</styles.IntroTitle>
+      Podas de árvores e a limpeza urbana são outros pontos importantes na prevenção. <styles.Textgrey>Foram realizadas 150 mil podas, um serviço importante para evitar que a queda de árvores durante temporais.</styles.Textgrey>
       </styles.IntroText>
-    </styles.IntroDiv>
+    </styles.IntroDivMaior>
   );
 }
 
