@@ -246,6 +246,26 @@ export function Exemplo0(
     </styles.ChapterGenericDiv1>
   );
 }
+export function Exemplo00(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDivInvisivel ref={props.chapRef} id={props.id}>
+      {/* <styles.ContainerCard1>
+      <styles.TextCard5><styles.Textyellow>Dragagem dos rios</styles.Textyellow></styles.TextCard5>
+        <br /> 
+        <styles.TextCard1>
+        Uma das ações mais importantes é a de <styles.TextblueOne>dragagem dos rios.</styles.TextblueOne> A ação é necessária para a retirada de sedimentos no fundo dos rios. A ação é necessária para garantir o escoamento das chuvas e evitar inundações. 
+        </styles.TextCard1>
+      </styles.ContainerCard1> */}
+    </styles.ChapterGenericDivInvisivel>
+  );
+}
 
 export function Exemplo0um(
   props = {

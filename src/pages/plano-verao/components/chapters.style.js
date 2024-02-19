@@ -124,6 +124,16 @@ export const ChapterGenericDiv1 = tw.div`
   text-white
   -z-10 
   `;
+export const ChapterGenericDivInvisivel = tw.div`
+  flex
+  w-full h-[0vh] 
+  items-center
+  justify-center
+  lg:justify-start
+  lg:p-[10%]
+  text-white
+  -z-10 
+  `;
 
   export const ChapterGenericDiv1um = tw.div`
   flex

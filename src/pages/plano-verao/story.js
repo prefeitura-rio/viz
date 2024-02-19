@@ -51,6 +51,10 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Desassoreamento().location);
         setLayers(chapterMap.Desassoreamento().layers);
         break;
+      case "exemplo00":
+        setPosition(chapterMap.Desassoreamento().location);
+        setLayers(chapterMap.Desassoreamento().layers);
+        break;
       case "exemplo0um":
         setPosition(chapterMap.Desassoreamento().location);
         setLayers(chapterMap.Desassoreamento().layers);
@@ -122,6 +126,8 @@ export default function SubsidioSPPO() {
       default:
         break;
     }
+
+   console.log("chapterNumberMap", chapterNumberMap)
   }, [chapterNumberMap]);
 
   const vh = (coef) => window.innerHeight * (coef / 100);
@@ -168,6 +174,12 @@ export default function SubsidioSPPO() {
       },
     });
 
+    ScrollTrigger.create({
+      trigger: "#exemplo00",
+      onToggle: () => {
+        setChapterNumberMap("exemplo00");
+      },
+    });
     ScrollTrigger.create({
       trigger: "#exemplo0",
       onToggle: () => {
@@ -412,6 +424,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Prejuizo id={"prejuizo"} />
       {/* <chapterDiv.Cor id={"cor"} /> */}
       {/* <chapterDiv.CorUm id={"corum"} /> */}
+      <chapterDiv.Exemplo00 id={"exemplo00"} />
       <chapterDiv.Exemplo0 id={"exemplo0"} />
       <chapterDiv.Exemplo0um id={"exemplo0um"} />
       <chapterDiv.Exemplo0dois id={"exemplo0dois"} />
