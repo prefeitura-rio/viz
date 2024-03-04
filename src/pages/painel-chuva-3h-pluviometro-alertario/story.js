@@ -15,7 +15,7 @@ import { isMobile } from "react-device-detect";
 mapboxgl.workerClass =
   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
-export default function PainelChuvaPassadoPluviometroAlertario() {
+export default function PainelChuva3HPluviometroAlertario() {
   const mapRef = useRef();
 
   const [viewport, setViewport] = useState({
@@ -30,7 +30,7 @@ export default function PainelChuvaPassadoPluviometroAlertario() {
 
   const updateData = () => {
     let apiUrl =
-      "https://api.dados.rio/v2/clima_pluviometro/precipitacao_120min/";
+      "https://api.dados.rio/v2/clima_pluviometro/precipitacao_3h/";
     fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => {
@@ -48,8 +48,8 @@ export default function PainelChuvaPassadoPluviometroAlertario() {
 
   const getTooltip = ({ object }) => {
     let qtyText = "";
-    if (object && object.chuva_15min != 0) {
-      qtyText = `<p><b>Chuva </b> ${object.chuva_15min} mm</p>`;
+    if (object && object.quantidade != 0) {
+      qtyText = `<p><b>Chuva </b> ${object.quantidade} mm</p>`;
     }
     return (
       object && {
@@ -114,7 +114,7 @@ export default function PainelChuvaPassadoPluviometroAlertario() {
       hexToRgb(getColor(d.status)).b,
       180,
     ],
-    getElevation: (d) => d.chuva_15min,
+    getElevation: (d) => d.quantidade,
     getLineColor: [255, 255, 255, 0],
     getLineWidth: 120,
   });

@@ -33,11 +33,38 @@ const PainelAlagamentoRecenteComando = lazy(() =>
   import("./pages/painel-alagamento-recente-comando/story")
 );
 const PainelChuva = lazy(() => import("./pages/painel-chuva/story"));
-const PainelChuvaPassadoPluviometroAlertario = lazy(() =>
-  import("./pages/painel-chuva-passado-pluviometro-alertario/story")
+// const PainelChuvaPassadoPluviometroAlertario = lazy(() =>
+//   import("./pages/painel-chuva-passado-pluviometro-alertario/story")
+// );
+// const PainelChuvaRecentePluviometroAlertario = lazy(() =>
+//   import("./pages/painel-chuva-recente-pluviometro-alertario/story")
+// );
+const PainelChuva15MinPluviometroAlertario = lazy(() =>
+  import("./pages/painel-chuva-15min-pluviometro-alertario/story")
 );
-const PainelChuvaRecentePluviometroAlertario = lazy(() =>
-  import("./pages/painel-chuva-recente-pluviometro-alertario/story")
+const PainelChuva30MinPluviometroAlertario = lazy(() =>
+  import("./pages/painel-chuva-30min-pluviometro-alertario/story")
+);
+const PainelChuva60MinPluviometroAlertario = lazy(() =>
+  import("./pages/painel-chuva-60min-pluviometro-alertario/story")
+);
+const PainelChuva120MinPluviometroAlertario = lazy(() =>
+  import("./pages/painel-chuva-120min-pluviometro-alertario/story")
+);
+const PainelChuva3HPluviometroAlertario = lazy(() =>
+  import("./pages/painel-chuva-3h-pluviometro-alertario/story")
+);
+const PainelChuva6HPluviometroAlertario = lazy(() =>
+  import("./pages/painel-chuva-6h-pluviometro-alertario/story")
+);
+const PainelChuva12HPluviometroAlertario = lazy(() =>
+  import("./pages/painel-chuva-12h-pluviometro-alertario/story")
+);
+const PainelChuva24HPluviometroAlertario = lazy(() =>
+  import("./pages/painel-chuva-24h-pluviometro-alertario/story")
+);
+const PainelChuva96HPluviometroAlertario = lazy(() =>
+  import("./pages/painel-chuva-96h-pluviometro-alertario/story")
 );
 const PainelChuvaPassadoRadarINEA = lazy(() =>
   import("./pages/painel-chuva-passado-radar-inea/story")
@@ -135,7 +162,7 @@ function App() {
             <Route path="/chuva" element={<PainelChuva />}></Route>
           </Routes>
         </Suspense>
-        <Suspense fallback={<></>}>
+        {/* <Suspense fallback={<></>}>
           <Routes>
             <Route
               path="/chuva-passado-pluviometro-alertario"
@@ -148,6 +175,78 @@ function App() {
             <Route
               path="/chuva-recente-pluviometro-alertario"
               element={<PainelChuvaRecentePluviometroAlertario />}
+            ></Route>
+          </Routes>
+        </Suspense> */}
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route
+              path="/chuva-15min-pluviometro-alertario"
+              element={<PainelChuva15MinPluviometroAlertario />}
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route
+              path="/chuva-30min-pluviometro-alertario"
+              element={<PainelChuva30MinPluviometroAlertario />}
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route
+              path="/chuva-60min-pluviometro-alertario"
+              element={<PainelChuva60MinPluviometroAlertario />}
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route
+              path="/chuva-120min-pluviometro-alertario"
+              element={<PainelChuva120MinPluviometroAlertario />}
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route
+              path="/chuva-3h-pluviometro-alertario"
+              element={<PainelChuva3HPluviometroAlertario />}
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route
+              path="/chuva-6h-pluviometro-alertario"
+              element={<PainelChuva6HPluviometroAlertario />}
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route
+              path="/chuva-12h-pluviometro-alertario"
+              element={<PainelChuva12HPluviometroAlertario />}
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route
+              path="/chuva-24h-pluviometro-alertario"
+              element={<PainelChuva24HPluviometroAlertario />}
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route
+              path="/chuva-96h-pluviometro-alertario"
+              element={<PainelChuva96HPluviometroAlertario />}
             ></Route>
           </Routes>
         </Suspense>
