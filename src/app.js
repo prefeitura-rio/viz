@@ -33,6 +33,7 @@ const PainelAlagamentoRecenteComando = lazy(() =>
   import("./pages/painel-alagamento-recente-comando/story")
 );
 const PainelChuva = lazy(() => import("./pages/painel-chuva/story"));
+const PainelMonitoramentoWrapper = lazy(() => import("./pages/painel-monitoramento-wrapper/Wrapper"));
 const PainelChuvaPassadoPluviometroAlertario = lazy(() =>
   import("./pages/painel-chuva-passado-pluviometro-alertario/story")
 );
@@ -127,6 +128,14 @@ function App() {
             <Route
               path="/alagamento-recente-comando"
               element={<PainelAlagamentoRecenteComando />}
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route
+              path="/painel-monitoramento-wrapper"
+              element={<PainelMonitoramentoWrapper />}
             ></Route>
           </Routes>
         </Suspense>

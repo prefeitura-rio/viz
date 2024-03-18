@@ -31,6 +31,11 @@ export default function Home() {
           <Link to="/chuva">Painel Chuvas</Link>
         </li>
         <li>
+          <Link to="/painel-monitoramento-wrapper">
+            Painel de Monitoramento Wrapper 
+          </Link>
+        </li>
+        <li>
           <Link to="/chuva-passado-pluviometro-alertario">
             Painel Chuvas Passado Alertario
           </Link>

@@ -6,6 +6,7 @@ import { H3HexagonLayer } from "@deck.gl/geo-layers";
 import DeckGL from "@deck.gl/react";
 import { Oval } from "react-loader-spinner";
 import { isMobile } from "react-device-detect";
+import { ControlPanel } from "./control";
 // import DATA from "./data/chuva_15min.json";
 
 // The following is required to stop "npm build" from transpiling mapbox code.
@@ -15,7 +16,7 @@ import { isMobile } from "react-device-detect";
 mapboxgl.workerClass =
   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
-export default function PainelChuvaRecentePluviometroAlertario() {
+const PainelChuvaRecentePluviometroAlertario = ({data,update,precip_acumulada_ultimos_t_min}) => {
   const mapRef = useRef();
 
   const [viewport, setViewport] = useState({
@@ -25,31 +26,34 @@ export default function PainelChuvaRecentePluviometroAlertario() {
     minZoom: isMobile ? 8.5 : 10.3,
   });
 
-  const [data, setData] = useState([]);
-  const ref = useRef(null);
+  // const [data, setData] = useState([]);
+  // const ref = useRef(null);
 
-  const updateData = () => {
-    let apiUrl =
-      "https://api.dados.rio/v2/clima_pluviometro/precipitacao_15min/";
-    fetch(apiUrl)
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
-  };
+  // const updateData = () => {
+  //   let apiUrl =
+  //     "https://api.dados.rio/v2/clima_pluviometro/precipitacao_15min/";
+  //   fetch(apiUrl)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setData(data);
+  //     });
+  // };
 
-  useEffect(() => {
-    ref.current = setInterval(updateData, 1 * 60 * 1000); // every minute
-    updateData();
-    return () => {
-      clearInterval(ref.current);
-    };
-  }, []);
+  // useEffect(() => {
+  //   ref.current = setInterval(updateData, 1 * 60 * 1000); // every minute
+  //   updateData();
+  //   return () => {
+  //     clearInterval(ref.current);
+  //   };
+  // }, []);
 
   const getTooltip = ({ object }) => {
     let qtyText = "";
-    if (object && object.chuva_15min != 0) {
-      qtyText = `<p><b>Chuva </b> ${object.chuva_15min} mm</p>`;
+    if (object && object.chuva_15min && object.chuva_15min != 0) {
+      qtyText = `<p><b>Chuva</b> ${object.chuva_15min} mm</p>`;
+    }
+    if (object && object.quantidade && object.quantidade != 0) {
+      qtyText = `<p><b>Chuva</b> ${object.quantidade} mm</p>`;
     }
     return (
       object && {
@@ -150,6 +154,9 @@ export default function PainelChuvaRecentePluviometroAlertario() {
           ></Map>{" "}
         </DeckGL>
       )}
+      <ControlPanel update={update} precip_acumulada_ultimos_t_min={precip_acumulada_ultimos_t_min}/>
     </div>
   );
 }
+
+export default PainelChuvaRecentePluviometroAlertario;

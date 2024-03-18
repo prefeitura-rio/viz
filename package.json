@@ -23,6 +23,8 @@
   "homepage": "https://github.com/prefeitura-rio/viz#readme",
   "dependencies": {
     "@img-comparison-slider/react": "^8.0.0",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "css-loader": "^6.7.1",
     "d3": "^7.6.1",
     "deck.gl": "^8.8.3",
