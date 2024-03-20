@@ -164,9 +164,14 @@ function PainelMonitoramentoWrapper() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: '2em'
+        fontSize: '2em',
       }}>
-        Enfrentamos interrupções técnicas. Estamos atuando para restaurar o serviço completo em breve. Agradecemos sua compreensão.
+        <span style={{
+        maxWidth: "80vw",
+        textAlign: "center",
+        }}>
+        Enfrentamos interrupções técnicas.<br></br> Estamos atuando para restaurar o serviço completo em breve. <br></br><br></br>Agradecemos sua compreensão.
+        </span>
       </div> 
       ) : (
       <div className="dropdown" style={{ display: 'flex', justifyContent: 'center' }} >
