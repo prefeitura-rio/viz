@@ -49,8 +49,8 @@ function PainelMonitoramentoWrapper() {
       }
 
       else if (dropDownDataOption === 2 && dropDownLastUpdateOption === 1) {
-        apiUrlData = "https://api.dados.rio/v2/clima_radar/precipitacao_15min/";
-        apiUrlLastUpdate = "https://api.dados.rio/v2/clima_radar/ultima_atualizacao_precipitacao_15min/";
+        apiUrlData = "https://api.dados.rio/v2/clima_pluviometro/precipitacao_15min/";
+        apiUrlLastUpdate = "https://api.dados.rio/v2/clima_pluviometro/ultima_atualizacao_precipitacao_15min/";
         set_precip_acumulada_ultimos_t_min(15);
       }
       else if (dropDownDataOption === 2 && dropDownLastUpdateOption === 2) {
