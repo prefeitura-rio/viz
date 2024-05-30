@@ -32,10 +32,10 @@ export default function Home() {
         </li>
         <li>
           <Link to="/painel-monitoramento-wrapper">
-            Painel de Monitoramento Wrapper 
+            Painel de Monitoramento Wrapper
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/chuva-passado-pluviometro-alertario">
             Painel Chuvas Passado Alertario
           </Link>
@@ -43,6 +43,51 @@ export default function Home() {
         <li>
           <Link to="/chuva-recente-pluviometro-alertario">
             Painel Chuvas Recente Alertario
+          </Link>
+        </li> */}
+        <li>
+          <Link to="/chuva-15min-pluviometro-alertario">
+            Painel Chuvas Últimos 15Min Alertario
+          </Link>
+        </li>
+        <li>
+          <Link to="/chuva-30min-pluviometro-alertario">
+            Painel Chuvas Últimos 30Min Alertario
+          </Link>
+        </li>
+        <li>
+          <Link to="/chuva-60min-pluviometro-alertario">
+            Painel Chuvas Últimos 60Min Alertario
+          </Link>
+        </li>
+        <li>
+          <Link to="/chuva-120min-pluviometro-alertario">
+            Painel Chuvas Últimas 2H Alertario
+          </Link>
+        </li>
+        <li>
+          <Link to="/chuva-3h-pluviometro-alertario">
+            Painel Chuvas Últimas 3H Alertario
+          </Link>
+        </li>
+        <li>
+          <Link to="/chuva-6h-pluviometro-alertario">
+            Painel Chuvas Últimas 6H Alertario
+          </Link>
+        </li>
+        <li>
+          <Link to="/chuva-12h-pluviometro-alertario">
+            Painel Chuvas Últimas 12H Alertario
+          </Link>
+        </li>
+        <li>
+          <Link to="/chuva-24h-pluviometro-alertario">
+            Painel Chuvas Últimas 24H Alertario
+          </Link>
+        </li>
+        <li>
+          <Link to="/chuva-96h-pluviometro-alertario">
+            Painel Chuvas Últimas 96H Alertario
           </Link>
         </li>
         <li>
@@ -56,7 +101,9 @@ export default function Home() {
           </Link>
         </li>
         <li>
-          <Link to="/especial-seop/demolicoes">Especial SEOP | Demolicoes</Link>
+          <Link to="/especial-seop/demolicoes">
+            Especial SEOP | Demolicoes
+          </Link>
         </li>
         <li>
           <Link to="/plano-verao">Dataviz | Plano Verão</Link>
@@ -82,7 +129,10 @@ export default function Home() {
           <Link to="/sandbox/video"> Sandbox | Video </Link>
         </li>
         <li>
-          <Link to="/sandbox/test-linechart"> Sandbox | Test Line Chart </Link>
+          <Link to="/sandbox/test-linechart">
+            {" "}
+            Sandbox | Test Line Chart{" "}
+          </Link>
         </li>
         <li>
           <Link to="/sandbox/test-map"> Sandbox | Test Map </Link>
