@@ -6,8 +6,6 @@ import { H3HexagonLayer } from "@deck.gl/geo-layers";
 import DeckGL from "@deck.gl/react";
 import { Oval } from "react-loader-spinner";
 import { isMobile } from "react-device-detect";
-import { ControlPanel } from "./control";
-// import DATA from "./data/chuva_15min.json";
 // import DATA from "./data/quantidade.json";
 
 // The following is required to stop "npm build" from transpiling mapbox code.
@@ -17,11 +15,7 @@ import { ControlPanel } from "./control";
 mapboxgl.workerClass =
   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
-const PainelChuvaRecentePluviometroAlertario = ({
-  data,
-  update,
-  precip_acumulada_ultimos_t_min,
-}) => {
+export default function PainelChuva15MinPluviometroAlertario() {
   const mapRef = useRef();
 
   const [viewport, setViewport] = useState({
@@ -31,26 +25,26 @@ const PainelChuvaRecentePluviometroAlertario = ({
     minZoom: isMobile ? 8.5 : 10.3,
   });
 
-  // const [data, setData] = useState([]);
-  // const ref = useRef(null);
+  const [data, setData] = useState([]);
+  const ref = useRef(null);
 
-  // const updateData = () => {
-  //   let apiUrl =
-  //     "https://api.dados.rio/v2/clima_pluviometro/precipitacao_15min/";
-  //   fetch(apiUrl)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setData(data);
-  //     });
-  // };
+  const updateData = () => {
+    let apiUrl =
+      "https://api.dados.rio/v2/clima_pluviometro/precipitacao_15min/";
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      });
+  };
 
-  // useEffect(() => {
-  //   ref.current = setInterval(updateData, 1 * 60 * 1000); // every minute
-  //   updateData();
-  //   return () => {
-  //     clearInterval(ref.current);
-  //   };
-  // }, []);
+  useEffect(() => {
+    ref.current = setInterval(updateData, 1 * 60 * 1000); // every minute
+    updateData();
+    return () => {
+      clearInterval(ref.current);
+    };
+  }, []);
 
   const getTooltip = ({ object }) => {
     let qtyText = "";
@@ -156,12 +150,6 @@ const PainelChuvaRecentePluviometroAlertario = ({
           ></Map>{" "}
         </DeckGL>
       )}
-      <ControlPanel
-        update={update}
-        precip_acumulada_ultimos_t_min={precip_acumulada_ultimos_t_min}
-      />
     </div>
   );
-};
-
-export default PainelChuvaRecentePluviometroAlertario;
+}

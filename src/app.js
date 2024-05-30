@@ -33,12 +33,6 @@ const PainelAlagamentoRecenteComando = lazy(() =>
   import("./pages/painel-alagamento-recente-comando/story")
 );
 const PainelChuva = lazy(() => import("./pages/painel-chuva/story"));
-const PainelMonitoramentoWrapper = lazy(() =>
-  import("./pages/painel-monitoramento-wrapper/Wrapper")
-);
-// const PainelChuvaPassadoPluviometroAlertario = lazy(() =>
-//   import("./pages/painel-chuva-passado-pluviometro-alertario/story")
-// );
 // const PainelChuvaPassadoPluviometroAlertario = lazy(() =>
 //   import("./pages/painel-chuva-passado-pluviometro-alertario/story")
 // );
@@ -160,14 +154,6 @@ function App() {
             <Route
               path="/alagamento-recente-comando"
               element={<PainelAlagamentoRecenteComando />}
-            ></Route>
-          </Routes>
-        </Suspense>
-        <Suspense fallback={<></>}>
-          <Routes>
-            <Route
-              path="/painel-monitoramento-wrapper"
-              element={<PainelMonitoramentoWrapper />}
             ></Route>
           </Routes>
         </Suspense>
@@ -313,7 +299,10 @@ function App() {
         </Suspense>
         <Suspense fallback={<LoadingPlanoVerao />}>
           <Routes>
-            <Route path="/plano-verao" element={<VizPlanoVerao />}></Route>
+            <Route
+              path="/plano-verao"
+              element={<VizPlanoVerao />}
+            ></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<LoadingSeopCep />}>
@@ -323,10 +312,7 @@ function App() {
         </Suspense>
         <Suspense fallback={<LoadingSubsidioSPPO />}>
           <Routes>
-            <Route
-              path="/especial-sppo/subsidio"
-              element={<SubsidioSPPO />}
-            />
+            <Route path="/especial-sppo/subsidio" element={<SubsidioSPPO />} />
           </Routes>
         </Suspense>
         <Suspense fallback={<></>}>

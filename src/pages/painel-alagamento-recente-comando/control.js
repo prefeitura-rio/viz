@@ -1,59 +1,50 @@
-import "../painel-monitoramento-wrapper/ControlPanel.css";
-import React, { useEffect, useState } from "react";
+import tw from "tailwind-styled-components";
 
 import logo from "./images/logo.png";
 
-export const ControlPanel = ({update}) => {
+const CardBox = tw.div`
+    w-[560px] 
+    h-full
+    bg-[#ffffff] 
+    rounded 
+    font-nunito
+    flex 
+    flex-col
+    items-center
+    pt-[100px]
+    space-y-[200px]
+`;
 
-  useEffect(() => {
-    console.log(update);
-  }, [update]);
-  
+export function ControlPanel() {
   return (
-    <>
-      <img src={logo} className="logo"></img>
-    <div className="container">
-
-      <div className="main_text">
-        Onde está alagado agora?
+    <CardBox>
+      {/* <img src={logo} className=""></img> */}
+      <div className="ml-[30px] text-[50px] bold mb-10">
+        {" "}
+        Monitor de chuvas{" "}
       </div>
-
-      <div className="secundary_text">
-        Pontos de lâmina d'água, bolsão d'água e alagamento em ocorrência
-      </div>
-
-      <div className="fonte_cor_last_update">
-        <div className="fonte_cor">
-          <div id="fonte">Fonte</div>
-          <div id="cor">Centro de Operações Rio</div>
+      <div>
+        <div className="flex items-center w-full my-3">
+          <div className="w-[60px] h-[60px] bg-[#ffffff] rounded-full border border-gray-300"></div>
+          <div className="ml-[30px] text-[40px]">sem chuva</div>
         </div>
-        <div className="last_update">
-          <div id="last_update">Última atualização</div>
-          <div id="last_update_info">{update}</div>
+        <div className="flex items-center w-full my-3">
+          <div className="w-[60px] h-[60px] bg-[#DAECFB] rounded-full border border-gray-300"></div>
+          <div className="ml-[30px] text-[40px]">chuva fraca</div>
         </div>
-      </div>
-    </div>
-    <div className="container_legenda">
-        <div className="legenda">
-          <div className="retangulo1"></div>
-          <p>sem alagamento</p>
+        <div className="flex items-center w-full my-3">
+          <div className="w-[60px] h-[60px] bg-[#A9CBE8] rounded-full border border-gray-300"></div>
+          <div className="ml-[30px] text-[40px]">chuva moderada</div>
         </div>
-        <div className="legenda">
-          <div className="retangulo2"></div>
-          <p>lâmina d'água </p>
-          <p className="sub_legenda">pouco crítico</p>
+        <div className="flex items-center w-full my-3">
+          <div className="w-[60px] h-[60px] bg-[#77A9D5] rounded-full border border-gray-300"></div>
+          <div className="ml-[30px] text-[40px]">chuva forte</div>
         </div>
-        <div className="legenda">
-          <div className="retangulo3"></div>
-          <p>bolsão d'água</p>
-          <p className="sub_legenda">crítico</p>
-        </div>
-        <div className="legenda">
-          <div className="retangulo4"></div>
-          <p>alagamento</p>
-          <p className="sub_legenda">extremamente crítico</p>
+        <div className="flex items-center w-full my-3">
+          <div className="w-[60px] h-[60px] bg-[#125999] rounded-full border border-gray-300"></div>
+          <div className="ml-[30px] text-[40px]">chuva muito forte</div>
         </div>
       </div>
-    </>
+    </CardBox>
   );
 }

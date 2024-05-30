@@ -1,65 +1,50 @@
-import "../painel-monitoramento-wrapper/ControlPanel.css";
-import React, { useEffect, useState } from "react";
+import tw from "tailwind-styled-components";
 
 import logo from "./images/logo.png";
 
-export const ControlPanel = ({update,precip_acumulada_ultimos_t_min}) => {
+const CardBox = tw.div`
+    w-[560px] 
+    h-full
+    bg-[#ffffff] 
+    rounded 
+    font-nunito
+    flex 
+    flex-col
+    items-center
+    pt-[100px]
+    space-y-[200px]
+`;
 
-  useEffect(() => {
-    console.log(update);
-  }, [update]);
-  
+export function ControlPanel() {
   return (
-    <>
-      <img src={logo} className="logo"></img>
-    <div className="container">
-
-      <div className="main_text">
-      Onde está chovendo agora?
+    <CardBox>
+      {/* <img src={logo} className=""></img> */}
+      <div className="ml-[30px] text-[50px] bold mb-10">
+        {" "}
+        Monitor de chuvas{" "}
       </div>
-
-      <div className="secundary_text">
-      Precipitação acumulada {precip_acumulada_ultimos_t_min<=120?"dos últimos " + precip_acumulada_ultimos_t_min + " minutos" : "das últimas " + precip_acumulada_ultimos_t_min/60 + " horas"}
-      </div>
-
-      <div className="fonte_cor_last_update">
-        <div className="fonte_cor">
-          <div id="fonte">Fonte</div>
-          <div id="cor">Alerta Rio</div>
+      <div>
+        <div className="flex items-center w-full my-3">
+          <div className="w-[60px] h-[60px] bg-[#ffffff] rounded-full border border-gray-300"></div>
+          <div className="ml-[30px] text-[40px]">sem chuva</div>
         </div>
-        <div className="last_update">
-          <div id="last_update">Última atualização</div>
-          <div id="last_update_info">{update}</div>
+        <div className="flex items-center w-full my-3">
+          <div className="w-[60px] h-[60px] bg-[#DAECFB] rounded-full border border-gray-300"></div>
+          <div className="ml-[30px] text-[40px]">chuva fraca</div>
         </div>
-      </div>
-    </div>
-    <div className="container_legenda_chuva">
-        <div className="legenda">
-          <div className="retangulo1"></div>
-          <p>sem chuva</p>
-          <p className="sub_legenda">0 mm</p>
+        <div className="flex items-center w-full my-3">
+          <div className="w-[60px] h-[60px] bg-[#A9CBE8] rounded-full border border-gray-300"></div>
+          <div className="ml-[30px] text-[40px]">chuva moderada</div>
         </div>
-        <div className="legenda">
-          <div className="retangulo2"></div>
-          <p>chuva fraca</p>
-          <p className="sub_legenda"> &lt;{(1.25*precip_acumulada_ultimos_t_min)/15}mm </p>
+        <div className="flex items-center w-full my-3">
+          <div className="w-[60px] h-[60px] bg-[#77A9D5] rounded-full border border-gray-300"></div>
+          <div className="ml-[30px] text-[40px]">chuva forte</div>
         </div>
-        <div className="legenda">
-          <div className="retangulo3"></div>
-          <p>chuva moderada</p>
-          <p className="sub_legenda">{(1.25*precip_acumulada_ultimos_t_min)/15} a {(6.25*precip_acumulada_ultimos_t_min)/15}mm</p>
-        </div>
-        <div className="legenda">
-          <div className="retangulo4_chuva"></div>
-          <p>chuva forte</p>
-          <p className="sub_legenda">{(6.25*precip_acumulada_ultimos_t_min)/15} a {(12.25*precip_acumulada_ultimos_t_min)/15}mm</p>
-        </div>
-        <div className="legenda">
-          <div className="retangulo5_chuva"></div>
-          <p>chuva muito forte</p>
-          <p className="sub_legenda">&gt;{(12.25*precip_acumulada_ultimos_t_min)/15}mm</p>
+        <div className="flex items-center w-full my-3">
+          <div className="w-[60px] h-[60px] bg-[#125999] rounded-full border border-gray-300"></div>
+          <div className="ml-[30px] text-[40px]">chuva muito forte</div>
         </div>
       </div>
-    </>
+    </CardBox>
   );
 }

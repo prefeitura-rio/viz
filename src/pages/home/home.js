@@ -30,11 +30,6 @@ export default function Home() {
         <li>
           <Link to="/chuva">Painel Chuvas</Link>
         </li>
-        <li>
-          <Link to="/painel-monitoramento-wrapper">
-            Painel de Monitoramento Wrapper
-          </Link>
-        </li>
         {/* <li>
           <Link to="/chuva-passado-pluviometro-alertario">
             Painel Chuvas Passado Alertario
@@ -101,9 +96,7 @@ export default function Home() {
           </Link>
         </li>
         <li>
-          <Link to="/especial-seop/demolicoes">
-            Especial SEOP | Demolicoes
-          </Link>
+          <Link to="/especial-seop/demolicoes">Especial SEOP | Demolicoes</Link>
         </li>
         <li>
           <Link to="/plano-verao">Dataviz | Plano Verão</Link>
@@ -129,10 +122,7 @@ export default function Home() {
           <Link to="/sandbox/video"> Sandbox | Video </Link>
         </li>
         <li>
-          <Link to="/sandbox/test-linechart">
-            {" "}
-            Sandbox | Test Line Chart{" "}
-          </Link>
+          <Link to="/sandbox/test-linechart"> Sandbox | Test Line Chart </Link>
         </li>
         <li>
           <Link to="/sandbox/test-map"> Sandbox | Test Map </Link>

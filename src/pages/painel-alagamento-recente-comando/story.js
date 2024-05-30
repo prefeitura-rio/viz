@@ -6,7 +6,6 @@ import { H3HexagonLayer } from "@deck.gl/geo-layers";
 import DeckGL from "@deck.gl/react";
 import { Oval } from "react-loader-spinner";
 import { isMobile } from "react-device-detect";
-import { ControlPanel } from "./control";
 // import DATA from "./data/chuva_15min.json";
 
 // The following is required to stop "npm build" from transpiling mapbox code.
@@ -16,7 +15,7 @@ import { ControlPanel } from "./control";
 mapboxgl.workerClass =
   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
-const PainelAlagamentoRecenteComando = ({data,update}) => {
+export default function PainelAlagamentoRecenteComando() {
   const mapRef = useRef();
 
   const [viewport, setViewport] = useState({
@@ -26,26 +25,26 @@ const PainelAlagamentoRecenteComando = ({data,update}) => {
     minZoom: isMobile ? 8.5 : 10.3,
   });
 
-  // const [data, setData] = useState([]);
-  // const ref = useRef(null);
+  const [data, setData] = useState([]);
+  const ref = useRef(null);
 
-  // const updateData = () => {
-  //   let apiUrl =
-  //     "https://api.dados.rio/v2/clima_alagamento/alagamento_15min/";
-  //   fetch(apiUrl)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setData(data);
-  //     });
-  // };
+  const updateData = () => {
+    let apiUrl =
+      "https://api.dados.rio/v2/clima_alagamento/alagamento_15min/";
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      });
+  };
 
-  // useEffect(() => {
-  //   ref.current = setInterval(updateData, 1 * 60 * 1000); // every minute
-  //   updateData();
-  //   return () => {
-  //     clearInterval(ref.current);
-  //   };
-  // }, []);
+  useEffect(() => {
+    ref.current = setInterval(updateData, 1 * 60 * 1000); // every minute
+    updateData();
+    return () => {
+      clearInterval(ref.current);
+    };
+  }, []);
 
   const getTooltip = ({ object }) => {
     let qtyText = "";
@@ -151,9 +150,6 @@ const PainelAlagamentoRecenteComando = ({data,update}) => {
           ></Map>{" "}
         </DeckGL>
       )}
-      <ControlPanel update={update}/>
     </div>
   );
 }
-
-export default PainelAlagamentoRecenteComando;
