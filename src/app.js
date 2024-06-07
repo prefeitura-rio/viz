@@ -11,6 +11,7 @@ import { LoadingCarnaval2023 } from "./pages/carnaval-2023/loading";
 import { LoadingPlanoVerao } from "./pages/plano-verao/loading";
 import { LoadingPainelInvestimento } from "./pages/painel-investimentos/loading";
 import { LoadingEnchentes } from "./pages/enchentes/loading";
+import { LoadingMegaEventos } from "./pages/mega-eventos/loading";
 import { LoadingParques } from "./pages/parques/loading";
 
 import style, { createGlobalStyle } from "styled-components";
@@ -106,6 +107,13 @@ const PainelInvestimento = lazy(() => {
 const Enchentes = lazy(() => {
   return Promise.all([
     import("./pages/enchentes/story"),
+    new Promise((resolve) => setTimeout(resolve, 1)),
+  ]).then(([moduleExports]) => moduleExports);
+});
+
+const MegaEventos = lazy(() => {
+  return Promise.all([
+    import("./pages/mega-eventos/story"),
     new Promise((resolve) => setTimeout(resolve, 1)),
   ]).then(([moduleExports]) => moduleExports);
 });
@@ -289,6 +297,11 @@ function App() {
         <Suspense fallback={<LoadingEnchentes />}>
           <Routes>
             <Route path="/enchentes" element={<Enchentes />}></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<LoadingMegaEventos />}>
+          <Routes>
+            <Route path="/mega-eventos" element={<MegaEventos />}></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<LoadingParques />}>
