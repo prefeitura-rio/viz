@@ -102,7 +102,7 @@ export const ChapterGenericDiv2 = tw.div`
     justify-center
     w-auto h-[600vh]
     lg:w-auto lg:h-[600vh]
-    overflow-hidden
+    
     px-[30px]
     lg:p-[34px]
     bg-transparent	
@@ -114,7 +114,7 @@ export const ChapterQuadroDois = tw.div`
   justify-center
   w-auto h-[1100vh]
   lg:w-auto lg:h-[1100vh]
-  overflow-hidden
+
   px-[30px]
   lg:p-[34px]
   bg-transparent	
@@ -154,7 +154,7 @@ export const ContainerCard2 = tw.div`
 export const ContainerCard3 = tw.div`
     absolute
     z-10
-    h-auto w-[80%] lg:w-[460px]
+    h-auto w-[80vw] lg:w-[460px]
     bg-[#ffffff99]
     px-[40px]
     py-[34px]

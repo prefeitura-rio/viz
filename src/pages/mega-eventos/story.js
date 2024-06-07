@@ -30,7 +30,7 @@ export default function MegaEventos() {
     ScrollTrigger.create({
       trigger: "#quadro_um",
       onUpdate: (self) => {
-        const video = document.getElementById("quadro_video");
+        const video = document.getElementById("quadro_video_um");
         let frameNumber = Math.floor(self.progress * 497) + 1;
         if (frameNumber > 450) {
           frameNumber = 450;
@@ -42,54 +42,191 @@ export default function MegaEventos() {
       },
     });
 
-    ScrollTrigger.create({
-      trigger: "#parteum",
-      onUpdate: (self) => {
-        const video = document.getElementById("quadro_video");
-        const progress = self.progress;
-        const imageUrl =
-          progress < 0.5
-            ? "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/450.jpg"
-            : "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_dois/1.jpg";
-        video.src = imageUrl;
-      },
-    });
+    // ScrollTrigger.create({
+    //   trigger: "#parteum",
+    //   onUpdate: (self) => {
+    //     const video = document.getElementById("quadro_video_um");
+    //     const progress = self.progress;
+    //     const imageUrl =
+    //       progress < 0.5
+    //         ? "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/450.jpg"
+    //         : "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_dois/1.jpg";
+    //     video.src = imageUrl;
+    //   },
+    // });
 
     ScrollTrigger.create({
       trigger: "#quadro_dois",
       onUpdate: (self) => {
-        const video = document.getElementById("quadro_video");
-        let frameNumber = Math.floor(self.progress * 1742) + 1;
-        if (frameNumber > 1703) {
-          frameNumber = 1703;
+        const video = document.getElementById("quadro_video_dois");
+        let frameNumber = Math.floor(self.progress * 450) + 1;
+        if (frameNumber > 450) {
+          frameNumber = 450;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_dois/${frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
         console.log(imageUrl);
         video.src = imageUrl;
       },
     });
+
+
+    ScrollTrigger.create({
+      trigger: "#quadro_tres",
+      onUpdate: (self) => {
+        const video = document.getElementById("quadro_video_tres");
+        let frameNumber = Math.floor(self.progress * 450) + 1;
+        if (frameNumber > 450) {
+          frameNumber = 450;
+        }
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        console.log(imageUrl);
+        video.src = imageUrl;
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#quadro_quatro",
+      onUpdate: (self) => {
+        const video = document.getElementById("quadro_video_quatro");
+        let frameNumber = Math.floor(self.progress * 450) + 1;
+        if (frameNumber > 450) {
+          frameNumber = 450;
+        }
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        console.log(imageUrl);
+        video.src = imageUrl;
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#quadro_cinco",
+      onUpdate: (self) => {
+        const video = document.getElementById("quadro_video_cinco");
+        let frameNumber = Math.floor(self.progress * 450) + 1;
+        if (frameNumber > 450) {
+          frameNumber = 450;
+        }
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        console.log(imageUrl);
+        video.src = imageUrl;
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: "#quadro_seis",
+      onUpdate: (self) => {
+        const video = document.getElementById("quadro_video_seis");
+        let frameNumber = Math.floor(self.progress * 450) + 1;
+        if (frameNumber > 450) {
+          frameNumber = 450;
+        }
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        console.log(imageUrl);
+        video.src = imageUrl;
+      },
+    });
+
   }, []);
 
   return (
-    <>
-      <div className="fixed -z-10 flex flex-col items-center justify-center h-[100vh] w-[100vw]">
+    <> 
+      {/* <chapterDiv.Capa id={"capa"} /> 
+      <chapterDiv.ContextoHistorico id={"contexto_historico"} />  */}
+
+      {/* ******************************** Video Scrolling 1 ********************************  */}
+
+      <div style={{display:"flex", flexDirection:"column", height:"680vh", width:"100%", alignItems:"center"}}>
         <img
-          id={"quadro_video"}
+          style={{position:"sticky",top:"calc(50vh - 310px)"}}
+          id={"quadro_video_um"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
           }
           className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
         ></img>
+         <chapterDiv.QuadroUm id={"quadro_um"} />
       </div>
-      {/* <chapterDiv.Capa id={"capa"} /> */}
-      {/* <chapterDiv.ContextoHistorico id={"contexto_historico"} /> */}
-      <div className="h-[95vh] w-full bg-transparent"></div>
-      <chapterDiv.QuadroUm id={"quadro_um"} />
       <chapterDiv.ParteUm id={"parteum"} />
-      <div className="h-[95vh] w-full bg-transparent"></div>
-      <chapterDiv.QuadroDois id={"quadro_dois"} />
+      {/* ******************************** Video Scrolling 1 Fim ********************************  */}
+    
+      {/* ******************************** Video Scrolling 2 ********************************  */}
+      <div style={{display:"flex", flexDirection:"column", height:"680vh", width:"100%", alignItems:"center"}}>
+        <img
+          style={{position:"sticky",top:"calc(50vh - 310px)"}}
+          id={"quadro_video_dois"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
+          }
+          className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
+        ></img>
+         <chapterDiv.QuadroDois id={"quadro_dois"} />
+      </div>
       <chapterDiv.ParteDois id={"partedois"} />
-      <chapterDiv.Creditos id={"creditos"} />
+      {/* ******************************** Video Scrolling 2 Fim ********************************  */}
+
+      {/* ******************************** Video Scrolling 3 ********************************  */}
+      <div style={{display:"flex", flexDirection:"column", height:"680vh", width:"100%", alignItems:"center"}}>
+        <img
+          style={{position:"sticky",top:"calc(50vh - 310px)"}}
+          id={"quadro_video_tres"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
+          }
+          className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
+        ></img>
+         <chapterDiv.QuadroTres id={"quadro_tres"} />
+      </div>
+      <chapterDiv.ParteTres id={"partetres"} />
+      {/* ******************************** Video Scrolling 3 Fim ********************************  */}
+
+      {/* ******************************** Video Scrolling 4 ********************************  */}
+      <div style={{display:"flex", flexDirection:"column", height:"680vh", width:"100%", alignItems:"center"}}>
+        <img
+          style={{position:"sticky",top:"calc(50vh - 310px)"}}
+          id={"quadro_video_quatro"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
+          }
+          className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
+        ></img>
+         <chapterDiv.QuadroQuatro id={"quadro_quatro"} />
+      </div>
+      <chapterDiv.ParteQuatro id={"partequatro"} />
+      {/* ******************************** Video Scrolling 4 Fim ********************************  */}
+
+      {/* ******************************** Video Scrolling 5 ********************************  */}
+      <div style={{display:"flex", flexDirection:"column", height:"680vh", width:"100%", alignItems:"center"}}>
+        <img
+          style={{position:"sticky",top:"calc(50vh - 310px)"}}
+          id={"quadro_video_cinco"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
+          }
+          className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
+        ></img>
+         <chapterDiv.QuadroCinco id={"quadro_cinco"} />
+      </div>
+      <chapterDiv.ParteCinco id={"partecinco"} />
+      {/* ******************************** Video Scrolling 5 Fim ********************************  */}
+
+      {/* ******************************** Video Scrolling 6 ********************************  */}
+      <div style={{display:"flex", flexDirection:"column", height:"680vh", width:"100%", alignItems:"center"}}>
+        <img
+          style={{position:"sticky",top:"calc(50vh - 310px)"}}
+          id={"quadro_video_seis"}
+          src={
+            "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
+          }
+          className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
+        ></img>
+         <chapterDiv.QuadroSeis id={"quadro_seis"} />
+      </div>
+      <chapterDiv.ParteSeis id={"parteseis"} />
+      {/* ******************************** Video Scrolling 6 Fim ********************************  */}
+
+
+
+      {/* <chapterDiv.Creditos id={"creditos"} /> */}
     </>
   );
 }
