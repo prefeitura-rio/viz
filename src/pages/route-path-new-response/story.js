@@ -50,7 +50,6 @@ export default function RoutePath() {
       });
     }
   }, [selectedTrip]);
-
   const getPointLayerData = () => {
     return {
       type: "FeatureCollection",
@@ -63,6 +62,8 @@ export default function RoutePath() {
         properties: {
           datahora: location.datahora,
           camera_numero: location.camera_numero,
+          bairro: location.bairro,
+          localidade: location.localidade,
         },
       })),
     };
