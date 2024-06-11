@@ -139,6 +139,9 @@ export default function Home() {
         <li>
           <Link to="/sandbox/test-map"> Sandbox | Test Map </Link>
         </li>
+        <li>
+          <Link to="/mega-eventos">Especial | Mega Eventos</Link>
+        </li>
       </lu>
     </div>
   );
