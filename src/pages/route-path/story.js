@@ -5,7 +5,6 @@ import mapboxgl from "mapbox-gl"; // do not remove this line
 import { GeoJsonLayer } from "@deck.gl/layers";
 import { Oval } from "react-loader-spinner";
 import { isMobile } from "react-device-detect";
-import DATA from "./data/path_data.json";
 
 // The following is required to stop "npm build" from transpiling mapbox code.
 // notice the exclamation point in the import.
