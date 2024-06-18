@@ -35,6 +35,9 @@ const PainelAlagamentoRecenteComando = lazy(() =>
 );
 const PainelChuva = lazy(() => import("./pages/painel-chuva/story"));
 const RoutePath = lazy(() => import("./pages/route-path/story"));
+const RoutePathNew = lazy(() =>
+  import("./pages/route-path-new-response/story")
+);
 
 // const PainelChuvaPassadoPluviometroAlertario = lazy(() =>
 //   import("./pages/painel-chuva-passado-pluviometro-alertario/story")
@@ -175,6 +178,11 @@ function App() {
         <Suspense fallback={<></>}>
           <Routes>
             <Route path="/routepath" element={<RoutePath />}></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route path="/routepathnew" element={<RoutePathNew />}></Route>
           </Routes>
         </Suspense>
         {/* <Suspense fallback={<></>}>

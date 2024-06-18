@@ -6,6 +6,9 @@ export default function Home() {
     <div>
       <lu>
         <li>
+          <Link to="/routepathnew">Route Path New</Link>
+        </li>
+        <li>
           <Link to="/routepath">Route Path</Link>
         </li>
         <li>
