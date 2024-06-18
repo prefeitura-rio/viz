@@ -129,104 +129,104 @@ export default function MegaEventos() {
   }, []);
 
   return (
-    <> 
-      {/* <chapterDiv.Capa id={"capa"} /> 
-      <chapterDiv.ContextoHistorico id={"contexto_historico"} />  */}
+    <>
+      <chapterDiv.Capa style={{display:"none"}} id={"capa"} />
+      <chapterDiv.ContextoHistorico id={"contexto_historico"} />
 
       {/* ******************************** Video Scrolling 1 ********************************  */}
 
-      <div style={{display:"flex", flexDirection:"column", height:"680vh", width:"100%", alignItems:"center"}}>
+      <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
         <img
-          style={{position:"sticky",top:"calc(50vh - 310px)"}}
+          style={{ position: "sticky", top: "calc(50vh - 310px)" }}
           id={"quadro_video_um"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
           }
           className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
         ></img>
-         <chapterDiv.QuadroUm id={"quadro_um"} />
+        <chapterDiv.QuadroUm id={"quadro_um"} />
       </div>
       <chapterDiv.ParteUm id={"parteum"} />
       {/* ******************************** Video Scrolling 1 Fim ********************************  */}
-    
+
       {/* ******************************** Video Scrolling 2 ********************************  */}
-      <div style={{display:"flex", flexDirection:"column", height:"680vh", width:"100%", alignItems:"center"}}>
+      <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
         <img
-          style={{position:"sticky",top:"calc(50vh - 310px)"}}
+          style={{ position: "sticky", top: "calc(50vh - 310px)" }}
           id={"quadro_video_dois"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
           }
           className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
         ></img>
-         <chapterDiv.QuadroDois id={"quadro_dois"} />
+        <chapterDiv.QuadroDois id={"quadro_dois"} />
       </div>
       <chapterDiv.ParteDois id={"partedois"} />
       {/* ******************************** Video Scrolling 2 Fim ********************************  */}
 
       {/* ******************************** Video Scrolling 3 ********************************  */}
-      <div style={{display:"flex", flexDirection:"column", height:"680vh", width:"100%", alignItems:"center"}}>
+      <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
         <img
-          style={{position:"sticky",top:"calc(50vh - 310px)"}}
+          style={{ position: "sticky", top: "calc(50vh - 310px)" }}
           id={"quadro_video_tres"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
           }
           className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
         ></img>
-         <chapterDiv.QuadroTres id={"quadro_tres"} />
+        <chapterDiv.QuadroTres id={"quadro_tres"} />
       </div>
       <chapterDiv.ParteTres id={"partetres"} />
       {/* ******************************** Video Scrolling 3 Fim ********************************  */}
 
       {/* ******************************** Video Scrolling 4 ********************************  */}
-      <div style={{display:"flex", flexDirection:"column", height:"680vh", width:"100%", alignItems:"center"}}>
+      <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
         <img
-          style={{position:"sticky",top:"calc(50vh - 310px)"}}
+          style={{ position: "sticky", top: "calc(50vh - 310px)" }}
           id={"quadro_video_quatro"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
           }
           className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
         ></img>
-         <chapterDiv.QuadroQuatro id={"quadro_quatro"} />
+        <chapterDiv.QuadroQuatro id={"quadro_quatro"} />
       </div>
       <chapterDiv.ParteQuatro id={"partequatro"} />
       {/* ******************************** Video Scrolling 4 Fim ********************************  */}
 
       {/* ******************************** Video Scrolling 5 ********************************  */}
-      <div style={{display:"flex", flexDirection:"column", height:"680vh", width:"100%", alignItems:"center"}}>
+      <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
         <img
-          style={{position:"sticky",top:"calc(50vh - 310px)"}}
+          style={{ position: "sticky", top: "calc(50vh - 310px)" }}
           id={"quadro_video_cinco"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
           }
           className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
         ></img>
-         <chapterDiv.QuadroCinco id={"quadro_cinco"} />
+        <chapterDiv.QuadroCinco id={"quadro_cinco"} />
       </div>
       <chapterDiv.ParteCinco id={"partecinco"} />
       {/* ******************************** Video Scrolling 5 Fim ********************************  */}
 
       {/* ******************************** Video Scrolling 6 ********************************  */}
-      <div style={{display:"flex", flexDirection:"column", height:"680vh", width:"100%", alignItems:"center"}}>
+      <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
         <img
-          style={{position:"sticky",top:"calc(50vh - 310px)"}}
+          style={{ position: "sticky", top: "calc(50vh - 310px)" }}
           id={"quadro_video_seis"}
           src={
             "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
           }
           className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
         ></img>
-         <chapterDiv.QuadroSeis id={"quadro_seis"} />
+        <chapterDiv.QuadroSeis id={"quadro_seis"} />
       </div>
       <chapterDiv.ParteSeis id={"parteseis"} />
       {/* ******************************** Video Scrolling 6 Fim ********************************  */}
 
 
 
-      {/* <chapterDiv.Creditos id={"creditos"} /> */}
+      <chapterDiv.Creditos id={"creditos"} />
     </>
   );
 }

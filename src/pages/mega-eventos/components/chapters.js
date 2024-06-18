@@ -51,9 +51,9 @@ export function Capa(
 				<img
 					src={logo}
 					className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14"></img>
-				<styles.Title>Por que o Rio de Janeiro alaga? </styles.Title>
+				<styles.Title>Rio, palco mundial da cultura </styles.Title>
 				<styles.Subtitle>
-					E como a prefeitura trabalha para que a chuva não castigue os cariocas
+				Como os megaeventos melhoram a economia e transformam a cidade em epicentro cultural do Mundo
 				</styles.Subtitle>
 				<img src={scroll} className="h-7 lg:h-9 mt-[20px] lg:mt-[20px]"></img>{" "}
 			</styles.CapaAutor>
@@ -98,12 +98,29 @@ export function ContextoHistorico(
 		<>
 			<styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
 				<styles.ContainerCard>
-					<styles.Video>
+					{/* <styles.Video>
 						<video autoPlay muted className="w-full h-full" id="video_capa">
 							<source src={video_capa} type="video/mp4" />
 						</video>
-					</styles.Video>
+					</styles.Video> */}
 
+					{/* <div className="h-[10px] w-[50px] bg-black mb-[10px]"></div> */}
+					{/* <styles.TextCard>Introdução</styles.TextCard> */}
+					<styles.TextCard1>
+					Que o Rio de Janeiro sempre foi palco de diversos grandes eventos nacionais e internacionais, todo mundo já sabe. Mas você conhece a verdadeira importância desses eventos para a economia da cidade?
+						<br />
+						<br />
+						Os megaeventos, que vão desde o icônico carnaval até espetáculos de artistas como Madonna, não só atraem turistas do mundo inteiro, como também impulsionam significativamente a economia local.
+						<br />
+						<br />
+						O impacto econômico é perceptível em diversos setores, como hotelaria, gastronomia, comércio e serviços. A demanda gerada por esses eventos ajuda  na criação de milhares de empregos temporários e permanentes, beneficiando diretamente a população carioca.
+						<br />
+						<br />
+						Neste dataviz, elaborado pelo Escritório de Dados da Prefeitura do Rio de Janeiro em parceria com a Secretaria Municipal de Desenvolvimento Econômico, Inovação e Simplificação (SMDEIS), você poderá acompanhar a jornada de um turista que veio à cidade para assistir a um megashow e como em sua visita ele contribui para a economia local e se apaixona pelo Rio.	
+						<br />
+						<br />
+					</styles.TextCard1>
+			
 					<div>
 						<div className="mt-[30px] h-[3px] w-[20px] bg-black"></div>
 						<styles.AuthorText className="mt-[8px] mr-[20px] lg:w-[420px]">
@@ -118,59 +135,6 @@ export function ContextoHistorico(
 							da Prefeitura da Cidade do Rio de Janeiro
 						</styles.AuthorText>{" "}
 					</div>
-					<div className="h-[10px] w-[50px] bg-black mb-[10px]"></div>
-					<styles.TextCard>Introdução</styles.TextCard>
-					<styles.TextCard1>
-						Dados do Alerta Rio, sistema de alerta de chuvas intensas e de
-						deslizamentos em encostas do Rio de Janeiro, mostram que nunca
-						choveu tanto na nossa cidade.
-						<br />
-						<br />
-						Uma análise feita com base nos dados de ocorrências registradas pelo
-						Centro de Operações da cidade (COR) desde 2018, mostra que a cidade
-						já registrou pelo menos 8.222 incidentes causados pelas chuvas.
-						Destes, 486 foram alagamentos e enchentes.
-						<br />
-						<br />E este não é um problema exclusivo nosso.
-						<br />
-						<br />
-						Segundo a ONU, no último Painel Intergovernamental de Mudança do
-						Clima, as fortes chuvas no mundo já são 0,3% mais frequentes e 6,7%
-						mais intensas. Especialistas vêm alertando sobre as consequências
-						deste fenômeno, que vem ameaçando a existência de regiões em todo o
-						mundo.
-						<br />
-						<br />
-						Com a elevação da temperatura da Terra, causada pelo Aquecimento
-						Global, a retenção de umidade do ar é maior. Quando essa umidade se
-						condensa, liberando calor ou energia, transforma chuviscos em
-						tempestades. Com isso, enchentes, alagamentos e todas as ocorrências
-						provocadas pelas chuvas se tornam ainda mais comuns.
-						<br />
-						<br />
-						Com estas informações, talvez vocês esteja se perguntando se este é
-						mais um material elaborado para os telejornais ficarem falando que
-						“a chuva castiga os cariocas”. (Sim, nos conhecemos o meme). Mas
-						não, esta não é nossa intenção.
-						<br />
-						<br />
-						Neste especial do Escritório de Dados, elaborado em parceria com a
-						Comlurb, o COR, a Fundação Rio-Águas e a Secretaria Municipal de
-						Conservação (SECONSERVA), explicaremos como o aquecimento global, o
-						lixo e até mesmo o vandalismo, vêm fazendo com que a nossa cidade
-						sofra ainda mais com alagamentos e enchentes. E como a Prefeitura
-						trabalha para mitigar estes problemas.
-					</styles.TextCard1>
-					<div className="mt-[140px] h-[10px] w-[50px] bg-black mb-[10px]"></div>
-					<styles.TextCard>Contexto histórico dos alagamentos</styles.TextCard>
-					<styles.TextCard1 className="lg:mb-[60px]">
-						Existem diversos motivos pelos quais uma cidade como a nossa sofre
-						com estes problemas. Mas antes, precisamos falar um pouco sobre como
-						a nossa cidade foi criada e como as escolhas do passado
-						contribuíram, infelizmente, para que estes problemas fossem muito
-						comuns.
-					</styles.TextCard1>
-					{/* <img src={marco} className="h-auto w-auto lg:mt-[60px]"></img> */}
 				</styles.ContainerCard>
 			</styles.ChapterGenericDiv>
 		</>
@@ -189,27 +153,17 @@ export function QuadroUm(
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard3 id={"quadro_um_card1"}className=" top-[10vh]">
 				<styles.TextCard3>
-					Esse é o Rio como você conhece hoje. Foram diversas mudanças até
-					chegarmos aqui e em 458 anos de história, muita coisa mudou.
+				Nosso turista chega ao Rio de Janeiro pronto para curtir mais um mega show em Copacabana e aproveitar tudo que a cidade tem a oferecer.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
 				<styles.TextCard3>
-					A ligação da nossa cidade com a água está no nosso nome.
-					Originalmente, a cidade possuía diversos{" "}
-					<styles.TextHighlightBlue>cursos de água</styles.TextHighlightBlue>,
-					que a cortavam por todas as regiões. Utilizados como cursos náuticos
-					para transporte de passageiros e cargas.
+				Ele já inicia sua jornada movimentando a economia local, pagando pela passagem aérea até a cidade e pelo transporte que o levará até o hotel em que ficará hospedado.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
 				<styles.TextCard3>
-					Graças ao processo de urbanização, diversos rios e mangues foram
-					<styles.TextHighlightBlueUm>
-						aterrados ou canalizados.
-					</styles.TextHighlightBlueUm>{" "}
-					Sem muito planejamento urbano, estes processos não consideraram as
-					dinâmicas de cheias destes rios.
+				Em dezembro de 2023 houve um significativo crescimento de 86% na movimentação de passageiros no Galeão em relação ao mesmo mês no ano anterior.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 		</styles.ChapterGenericDiv2>
@@ -252,22 +206,17 @@ export function QuadroDois(
 		<styles.ChapterQuadroDois ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[50vh]">
 				<styles.TextCard3>
-					A impermeabilização do solo, resultado do excesso de asfalto e
-					construções, é uma das principais causas dos frequentes alagamentos e
-					enchentes que atingem o Rio de Janeiro.
+				Hospedado em um hotel com vista para a praia de Copacabana, o turista desfruta de uma das mais belas vistas do mundo.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[150vh]">
 				<styles.TextCard3>
-					A urbanização desenfreada comprometeu a capacidade do solo de absorver
-					a água da chuva, dificultando desta forma o escoamento e aumentando o
-					risco de inundações.
+				Estudos indicam que estrangeiros geralmente ficam na cidade por cerca de quatro dias, enquanto turistas brasileiros tendem a ficar por cerca de dois dias.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[250vh]">
 				<styles.TextCard3>
-					Além disso, a cidade costeira, rodeada pela Baía de Guanabara, sofre
-					com a influência direta da maré alta.
+				Além de contribuir para a economia local ao pagar pela diária do hotel, o turista também usufrui dos serviços adicionais que o local oferece.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			{/* <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[310vh]">
@@ -374,27 +323,22 @@ export function QuadroTres(
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard3 id={"quadro_um_card1"}className=" top-[10vh]">
 				<styles.TextCard3>
-					3 Esse é o Rio como você conhece hoje. Foram diversas mudanças até
-					chegarmos aqui e em 458 anos de história, muita coisa mudou.
+				Em um restaurante no bairro mais boêmio da cidade, a Lapa, nosso turista se delicia com uma boa refeição e um sambinha para acompanhar.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
 				<styles.TextCard3>
-				3 	A ligação da nossa cidade com a água está no nosso nome.
-					Originalmente, a cidade possuía diversos{" "}
-					<styles.TextHighlightBlue>cursos de água</styles.TextHighlightBlue>,
-					que a cortavam por todas as regiões. Utilizados como cursos náuticos
-					para transporte de passageiros e cargas.
+				De quebra, ele contribui para a economia local ao pagar pela refeição e couvert dos músicos, movimentando o comércio e gerando renda.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
 				<styles.TextCard3>
-				3	Graças ao processo de urbanização, diversos rios e mangues foram
-					<styles.TextHighlightBlueUm>
-						aterrados ou canalizados.
-					</styles.TextHighlightBlueUm>{" "}
-					Sem muito planejamento urbano, estes processos não consideraram as
-					dinâmicas de cheias destes rios.
+				Segundo estimativas da Secretaria Municipal de Desenvolvimento Urbano e Econômico (SMDUE), com base na pesquisa “Rio de Janeiro a Janeiro” da Fundação Getulio Vargas (FGV), o ticket-médio de um turista brasileiro na cidade é de R$ 491,01 por dia, enquanto o do turista estrangeiro é de R$ 561,98. Já o ticket-médio do carioca e morador da Região Metropolitana do Rio de Janeiro é de R$ 127,17.
+				</styles.TextCard3>
+			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[300vh]">
+				<styles.TextCard3>
+				Segundo o estudo “Potenciais Impactos Econômicos do Web Summit Rio” da SMDUE em parceria com a Invest.Rio, os setores que turistas mais gastam são com a hospedagem, a alimentação, meios de transporte, para deslocamentos, atrações e compras.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 		</styles.ChapterGenericDiv2>
@@ -438,27 +382,22 @@ export function QuadroQuatro(
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard3 id={"quadro_um_card1"}className=" top-[10vh]">
 				<styles.TextCard3>
-					4 Esse é o Rio como você conhece hoje. Foram diversas mudanças até
-					chegarmos aqui e em 458 anos de história, muita coisa mudou.
+				Depois de visitar a Lapa, nosso turista decide levar um pedacinho do Rio para casa.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
 				<styles.TextCard3>
-				4 	A ligação da nossa cidade com a água está no nosso nome.
-					Originalmente, a cidade possuía diversos{" "}
-					<styles.TextHighlightBlue>cursos de água</styles.TextHighlightBlue>,
-					que a cortavam por todas as regiões. Utilizados como cursos náuticos
-					para transporte de passageiros e cargas.
+				No Saara, maior comércio popular da cidade, ele se encanta com uma camiseta com estampa do Rio em uma loja de souvenirs e decide levar uma lembrança, contribuindo para a economia local.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
 				<styles.TextCard3>
-				4	Graças ao processo de urbanização, diversos rios e mangues foram
-					<styles.TextHighlightBlueUm>
-						aterrados ou canalizados.
-					</styles.TextHighlightBlueUm>{" "}
-					Sem muito planejamento urbano, estes processos não consideraram as
-					dinâmicas de cheias destes rios.
+				Durante grandes eventos, o Rio arrecada mais com impostos. No show da cantora Madonna, por exemplo, estima-se que a arrecadação de impostos tenha aumentado em 20%, elevando a arrecadação de maio para R$ 60,9 milhões, um aumento de R$ 10,2 milhões em comparação com o mesmo mês do ano anterior.
+				</styles.TextCard3>
+			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[300vh]">
+				<styles.TextCard3>
+				No Carnaval, o Rio arrecada quase R$ 500 milhões com todos os serviços, ligados ou não à festa. Já no Réveillon, a cidade arrecada quase meio bilhão de reais em impostos, o que corresponde a 8,8% da arrecadação anual dos impostos de turismo e eventos.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 		</styles.ChapterGenericDiv2>
@@ -501,27 +440,22 @@ export function QuadroCinco(
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard3 id={"quadro_um_card1"}className=" top-[10vh]">
 				<styles.TextCard3>
-					5 Esse é o Rio como você conhece hoje. Foram diversas mudanças até
-					chegarmos aqui e em 458 anos de história, muita coisa mudou.
+				O mega show em Copacabana é a atração principal da viagem do turista.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
 				<styles.TextCard3>
-				5 	A ligação da nossa cidade com a água está no nosso nome.
-					Originalmente, a cidade possuía diversos{" "}
-					<styles.TextHighlightBlue>cursos de água</styles.TextHighlightBlue>,
-					que a cortavam por todas as regiões. Utilizados como cursos náuticos
-					para transporte de passageiros e cargas.
+				Ele se junta à multidão e se diverte com a música, a energia do público e a beleza do cenário.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
 				<styles.TextCard3>
-				5	Graças ao processo de urbanização, diversos rios e mangues foram
-					<styles.TextHighlightBlueUm>
-						aterrados ou canalizados.
-					</styles.TextHighlightBlueUm>{" "}
-					Sem muito planejamento urbano, estes processos não consideraram as
-					dinâmicas de cheias destes rios.
+				O turista consome de ambulantes credenciados para matar a sede enquanto aproveita o show.
+				</styles.TextCard3>
+			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[300vh]">
+				<styles.TextCard3>
+				Durante o Carnaval, por exemplo, 45 mil trabalhadores estão envolvidos na festa, sejam servidores públicos, ambulantes ou pessoas que atuam no Sambódromo. Já no Réveillon, 49 mil empregos são gerados (direta e indiretamente) para garantir que a virada do ano seja um grande espetáculo.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 		</styles.ChapterGenericDiv2>
@@ -564,28 +498,27 @@ export function QuadroSeis(
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard3 id={"quadro_um_card1"}className=" top-[10vh]">
 				<styles.TextCard3>
-					6 Esse é o Rio como você conhece hoje. Foram diversas mudanças até
-					chegarmos aqui e em 468 anos de história, muita coisa mudou.
+				A viagem ao Rio de Janeiro para o mega show em Copacabana foi uma experiência inesquecível para o turista.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
 				<styles.TextCard3>
-				6 	A ligação da nossa cidade com a água está no nosso nome.
-					Originalmente, a cidade possuía diversos{" "}
-					<styles.TextHighlightBlue>cursos de água</styles.TextHighlightBlue>,
-					que a cortavam por todas as regiões. Utilizados como cursos náuticos
-					para transporte de passageiros e cargas.
+				Ele retorna para casa e compartilha com amigos e familiares como foi incrível a sua experiência.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
 				<styles.TextCard3>
-				6	Graças ao processo de urbanização, diversos rios e mangues foram
-					<styles.TextHighlightBlueUm>
-						aterrados ou canalizados.
-					</styles.TextHighlightBlueUm>{" "}
-					Sem muito planejamento urbano, estes processos não consideraram as
-					dinâmicas de cheias destes rios.
+				Enquanto isso, jornais do mundo todo mostram o sucesso do show na Cidade Maravilhosa.
 				</styles.TextCard3>
+			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[300vh]">
+				<styles.TextCard3>
+				A divulgação da cidade também traz benefícios econômicos para o Rio. Com base em dados da organização do evento, compilados pela Secretaria Municipal de Turismo (SMTUR), a exposição na mídia internacional do show da Madonna no Rio, após o anúncio oficial, foi de US$ 43,9 milhões, o equivalente a R$ 217,6 milhões.
+				</styles.TextCard3>
+			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[400vh]">
+				<styles.TextCard3>
+				Ou seja, caso a cidade do Rio fizesse uma campanha de publicidade na imprensa internacional, teria que gastar mais de R$ 200 milhões, valor conquistado espontaneamente com a oficialização do show.				</styles.TextCard3>
 			</styles.ContainerCard3>
 		</styles.ChapterGenericDiv2>
 	);
@@ -601,15 +534,15 @@ export function ParteSeis(
 	return (
 		<styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard>
+			<br />
+			<br />
+			<br />
+					<br />
 			<styles.TextCard1>
-					6 Seja por eventos naturais ou pela ação humana, a função de uma boa
-					gestão pública é mitigar estes problemas e evitar que eles interrompam
-					o funcionamento das atividades na cidade.
+			Com uma agenda repleta de grandes eventos, o Rio de Janeiro agora desfruta de uma diversidade de atrações que impulsionam sua economia e mostram o grande potencial que a cidade tem em ser um importante polo cultural e turístico de destaque internacional.
 					<br />
 					<br />
-					6 A seguir, explicaremos para você alguns dos principais motivos
-					pelos quais a nossa cidade é um território propício para que este tipo
-					de incidente ocorra de forma tão frequente.
+					Esse cenário reforça o papel da nossa cidade como um dos melhores destinos para qualquer um que queira viver todas as belezas e carioquices que só o Rio tem a oferecer.
 				</styles.TextCard1>
 			</styles.ContainerCard>
 		</styles.ChapterGenericDiv1>
@@ -628,42 +561,42 @@ export function Creditos(
 	return (
 		<styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard>
+				<styles.TextCreditos2>Referências</styles.TextCreditos2>
+				<styles.TextCreditos>Links</styles.TextCreditos>
+				<styles.TextCreditos1 >
+					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2024/04/Estudo-Impacto-Show-Madonna.pdf" target="_blank">Show de madona</a> <br />
+					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2024/02/Carnaval-de-Dados-2024.pdf" target="_blank">Carnaval de Dados 2024</a> <br />
+					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2023/12/VERSAO-FINAL-Relatorio-REVEILLON-EM-DADOS-REVISADO-1.pdf" target="_blank">Réveillon em Dados 2023</a> <br />
+					
+				</styles.TextCreditos1>
+				<br></br>
+				<br></br>
 				<styles.TextCreditos2>Créditos</styles.TextCreditos2>
 				<styles.TextCreditos>Autores</styles.TextCreditos>
 				<styles.TextCreditos1>
 					Caio Jacintho <br />
-					Diego Oliveira <br />
-					João Carabetta <br />
+					Fernando Santana <br />
 					Judite Cypreste <br />
+					Lucas Tavares <br />
+					Marcel Grillo Balassiano <br />
+					Pedro Meneghel <br />
 				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px] ">
 					Agradecimentos
 				</styles.TextCreditos>
 				<styles.TextCreditos1>
-					Alexandre Ferreira Reis <br />
-					Ana Carla Badaró <br />
-					Ana Rebouças <br />
-					Flávio Lopes <br />
-					Gabriel Gazola Milan <br />
-					Luiz Guilherme Gomes <br />
-					Marcelo Sepúlvida <br />
-					Marco Aurélio Regalo <br />
-					Marcus Belchior <br />
-					Mylenna Merlo <br />
-					Roberto Amazonas <br />
-					Vitor Sá Mario Oliveira <br />
-					Wanderson José dos Santos <br />
+				  Janaína Salles <br />
 				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
-					Parceria
+				COORDENADOR DO ESCRITÓRIO DE DADOS
 				</styles.TextCreditos>
 				<styles.TextCreditos1>
-					Centro de Operações Rio <br />
-					Companhia Municipal de Limpeza Urbana <br />
-					Fundação Instituto das Águas do Município do Rio de Janeiro <br />
-					Imagine Rio <br />
-					Secretaria Municipal de Conservação <br />
-				</styles.TextCreditos1>
+				João Carabetta <br />
+									</styles.TextCreditos1>
+				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
+				SECRETÁRIO DE DESENVOLVIMENTO URBANO E ECONÔMICO
+				</styles.TextCreditos>
+				<styles.TextCreditos1>Chicão Bulhões</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
 					Prefeito
 				</styles.TextCreditos>

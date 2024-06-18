@@ -2,7 +2,7 @@
 import { Container } from "postcss";
 import styled from "styled-components";
 import tw from "tailwind-styled-components";
-import capa from "../images/capa.gif";
+import capa from "../images/rj_capa.jpg";
 
 export const CapaDivSC = styled.div`
   background-image: url(${capa});
@@ -139,7 +139,7 @@ export const ChapterGenericDiv4 = tw.div`
   `;
 
 export const ContainerCard = tw.div`
-h-auto w-[700px]
+h-auto w-[42rem]
 mb-[60px]
 mt-[60px]
 `;
