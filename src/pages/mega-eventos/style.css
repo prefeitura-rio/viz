@@ -3,3 +3,24 @@
 .containerr {
   font-family: 'VT323', monospace !important;
 }
+.trail {
+  position: absolute;
+  width: 50px; /* Tamanho maior da imagem */
+  height: 50px; /* Tamanho maior da imagem */
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: fade 1s linear forwards;
+}
+
+@keyframes fade {
+  from {
+      opacity: 1;
+      transform: scale(1);
+  }
+  to {
+      opacity: 0;
+      transform: scale(1.5); /* Aumentando o tamanho durante o fade */
+  }
+}

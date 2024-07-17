@@ -117,7 +117,7 @@ const Enchentes = lazy(() => {
 const MegaEventos = lazy(() => {
   return Promise.all([
     import("./pages/mega-eventos/story"),
-    new Promise((resolve) => setTimeout(resolve, 1)),
+    new Promise((resolve) => setTimeout(resolve, 4000)),
   ]).then(([moduleExports]) => moduleExports);
 });
 

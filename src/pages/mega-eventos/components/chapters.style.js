@@ -27,14 +27,15 @@ export const CapaAutor = tw.div`
 
 export const Title = tw.div`  
   font-[300]
-  text-[32px]
+  text-[70px]
+  md:text-[96px]
   text-center
   leading-[120%]
   py-[10px]
   px-8
   lg:py-0
   lg:px-0
-  lg:text-[80px]
+  lg:text-[240px]
   lg:mt-[100px]
   text-black
   
@@ -157,7 +158,7 @@ export const ContainerCard3 = tw.div`
     h-auto w-[80vw] lg:w-[460px]
     bg-white 
     border border-black
-    border-2
+    border-4
     px-[40px]
     py-[34px]
     lg:px-[56px]
@@ -198,9 +199,8 @@ export const IntroDiv = tw.div`
 
 export const TextCreditos = tw.div`
   text-black
-  
-  
-  text-[20px]
+  underline
+  text-[30px]
   mb-[2px]
 `;
 
@@ -295,7 +295,7 @@ mt-[20px]
 
 export const TextCard3 = tw.div`
 
-text-[20px]
+text-[22px]
 text-left
 lg:leading-[150%]
 text-black

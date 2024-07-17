@@ -28,6 +28,10 @@ import video_capa from "../videos/capa.mp4";
 import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useRef } from "react";
+import trailImage from '../images/money.gif';
+import { useEffect } from "react";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const setDefaultProps = (providedProps) => {
@@ -40,24 +44,71 @@ const setDefaultProps = (providedProps) => {
 
 export function Capa(
 	props = {
-		id: "",
-		chapRef: null,
+			id: "",
+			chapRef: null,
 	}
 ) {
 	props = setDefaultProps(props);
+
+	const lastPosition = useRef({ x: 0, y: 0 });
+	const capaRef = useRef(null);
+
+	const handleMouseMove = (e) => {
+			const spacing = 50; // Espaçamento entre as imagens do rastro
+			const currentPosition = { x: e.clientX, y: e.clientY };
+
+			if (capaRef.current) {
+					const { left, top, right, bottom } = capaRef.current.getBoundingClientRect();
+
+					// Verifica se o mouse está dentro do componente Capa
+					if (
+							e.clientX >= left &&
+							e.clientX <= right &&
+							e.clientY >= top &&
+							e.clientY <= bottom
+					) {
+							const distance = Math.sqrt(
+									Math.pow(currentPosition.x - lastPosition.current.x, 2) +
+									Math.pow(currentPosition.y - lastPosition.current.y, 2)
+							);
+
+							if (distance >= spacing) {
+									lastPosition.current = currentPosition;
+
+									const trail = document.createElement("div");
+									trail.className = "trail";
+									trail.style.left = `${e.pageX}px`;
+									trail.style.top = `${e.pageY}px`;
+									trail.style.backgroundImage = `url(${trailImage})`;
+									document.body.appendChild(trail);
+
+									setTimeout(() => {
+											trail.remove();
+									}, 1000); // Correspondente à duração da animação
+							}
+					}
+			}
+	};
+
 	return (
-		<styles.CapaDiv id={props.id} ref={props.chapRef}>
-			<styles.CapaAutor>
-			<img
-  src={logo}
-  className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14 filter grayscale invert"></img>
-				<styles.Title>MEGAEVENTOS</styles.Title>
-				<styles.Subtitle>
-				Como os megaeventos melhoram a economia e transformam <br></br>a cidade em epicentro cultural do Mundo
-				</styles.Subtitle>
-				<img src={scroll} className="h-7 lg:h-9 mt-[20px] lg:mt-[20px] filter grayscale invert"></img>{" "}
-			</styles.CapaAutor>
-		</styles.CapaDiv>
+			<styles.CapaDiv
+					id={props.id}
+					ref={capaRef}
+					onMouseMove={handleMouseMove}
+			>
+					<styles.CapaAutor>
+							<img
+									src={logo}
+									className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14 filter grayscale invert"
+									alt="logo"
+							/>
+							<styles.Title>MEGAEVENTOS</styles.Title>
+							<styles.Subtitle>
+									Como os megaeventos melhoram a economia e transformam <br />
+									a cidade em epicentro cultural do Mundo
+							</styles.Subtitle>
+					</styles.CapaAutor>
+			</styles.CapaDiv>
 	);
 }
 
@@ -564,9 +615,9 @@ export function Creditos(
 				<styles.TextCreditos2>Referências</styles.TextCreditos2>
 				<styles.TextCreditos>Links</styles.TextCreditos>
 				<styles.TextCreditos1 >
-					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2024/04/Estudo-Impacto-Show-Madonna.pdf" target="_blank">Show de madona</a> <br />
-					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2024/02/Carnaval-de-Dados-2024.pdf" target="_blank">Carnaval de Dados 2024</a> <br />
-					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2023/12/VERSAO-FINAL-Relatorio-REVEILLON-EM-DADOS-REVISADO-1.pdf" target="_blank">Réveillon em Dados 2023</a> <br />
+					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2024/04/Estudo-Impacto-Show-Madonna.pdf" target="_blank">Potenciais impactos econômicos do Show da Madonna no Rio. 2024</a> <br />
+					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2024/02/Carnaval-de-Dados-2024.pdf" target="_blank">Carnaval de Dados. 2024</a> <br />
+					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2023/12/VERSAO-FINAL-Relatorio-REVEILLON-EM-DADOS-REVISADO-1.pdf" target="_blank">Réveillon em Dados. 2023</a> <br />
 					
 				</styles.TextCreditos1>
 				<br></br>
@@ -579,6 +630,7 @@ export function Creditos(
 					Judite Cypreste <br />
 					Lucas Tavares <br />
 					Marcel Grillo Balassiano <br />
+					Mateus Lana <br />
 					Pedro Meneghel <br />
 				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px] ">
@@ -588,7 +640,7 @@ export function Creditos(
 				  Janaína Salles <br />
 				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
-				COORDENADOR DO ESCRITÓRIO DE DADOS
+				CHEFE EXECUTIVO DO ESCRITÓRIO DE DADOS
 				</styles.TextCreditos>
 				<styles.TextCreditos1>
 				João Carabetta <br />

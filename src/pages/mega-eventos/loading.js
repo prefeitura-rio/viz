@@ -20,9 +20,7 @@ border-black
 export function LoadingMegaEventos() {
   return (
     <LoadingDiv>
-      {/* <LoadingImage src={logo} className="mb-[20%]"></LoadingImage> */}
       <LoadingImage src={gif}></LoadingImage>
-      {/* <div>carregando</div> */}
     </LoadingDiv>
   );
 }
