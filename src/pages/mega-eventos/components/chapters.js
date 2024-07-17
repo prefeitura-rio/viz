@@ -43,73 +43,66 @@ const setDefaultProps = (providedProps) => {
 };
 
 export function Capa(
-	props = {
-			id: "",
-			chapRef: null,
-	}
+    props = {
+        id: "",
+        chapRef: null,
+    }
 ) {
-	props = setDefaultProps(props);
+    props = setDefaultProps(props);
 
-	const lastPosition = useRef({ x: 0, y: 0 });
-	const capaRef = useRef(null);
+    const lastPosition = useRef({ x: 0, y: 0 });
 
-	const handleMouseMove = (e) => {
-			const spacing = 50; // Espaçamento entre as imagens do rastro
-			const currentPosition = { x: e.clientX, y: e.clientY };
+    const handleMouseMove = (e) => {
+        const spacing = 50; // espaçamento entre as imagens do rastro
+        const currentPosition = { x: e.pageX, y: e.pageY };
 
-			if (capaRef.current) {
-					const { left, top, right, bottom } = capaRef.current.getBoundingClientRect();
+        const distance = Math.sqrt(
+            Math.pow(currentPosition.x - lastPosition.current.x, 2) +
+            Math.pow(currentPosition.y - lastPosition.current.y, 2)
+        );
 
-					// Verifica se o mouse está dentro do componente Capa
-					if (
-							e.clientX >= left &&
-							e.clientX <= right &&
-							e.clientY >= top &&
-							e.clientY <= bottom
-					) {
-							const distance = Math.sqrt(
-									Math.pow(currentPosition.x - lastPosition.current.x, 2) +
-									Math.pow(currentPosition.y - lastPosition.current.y, 2)
-							);
+        if (distance >= spacing) {
+            lastPosition.current = currentPosition;
 
-							if (distance >= spacing) {
-									lastPosition.current = currentPosition;
+            const trail = document.createElement("div");
+            trail.className = "trail";
+            trail.style.left = `${e.pageX}px`;
+            trail.style.top = `${e.pageY}px`;
+            trail.style.backgroundImage = `url(${trailImage})`;
+            document.body.appendChild(trail);
 
-									const trail = document.createElement("div");
-									trail.className = "trail";
-									trail.style.left = `${e.pageX}px`;
-									trail.style.top = `${e.pageY}px`;
-									trail.style.backgroundImage = `url(${trailImage})`;
-									document.body.appendChild(trail);
+            setTimeout(() => {
+                trail.remove();
+            }, 1000); // duração da animação
+        }
+    };
 
-									setTimeout(() => {
-											trail.remove();
-									}, 1000); // Correspondente à duração da animação
-							}
-					}
-			}
-	};
+    useEffect(() => {
+        const handleMouseMoveWrapper = (e) => handleMouseMove(e);
+        document.addEventListener("mousemove", handleMouseMoveWrapper);
+        return () => {
+            document.removeEventListener("mousemove", handleMouseMoveWrapper);
+        };
+    }, []);
 
-	return (
-			<styles.CapaDiv
-					id={props.id}
-					ref={capaRef}
-					onMouseMove={handleMouseMove}
-			>
-					<styles.CapaAutor>
-							<img
-									src={logo}
-									className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14 filter grayscale invert"
-									alt="logo"
-							/>
-							<styles.Title>MEGAEVENTOS</styles.Title>
-							<styles.Subtitle>
-									Como os megaeventos melhoram a economia e transformam <br />
-									a cidade em epicentro cultural do Mundo
-							</styles.Subtitle>
-					</styles.CapaAutor>
-			</styles.CapaDiv>
-	);
+    return (
+        <styles.CapaDiv
+            id={props.id}
+        >
+            <styles.CapaAutor>
+                <img
+                    src={logo}
+                    className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14 filter grayscale invert"
+                    alt="logo"
+                />
+                <styles.Title>MEGAEVENTOS</styles.Title>
+                <styles.Subtitle>
+                    Como os megaeventos melhoram a economia e transformam <br />
+                    a cidade em epicentro cultural do Mundo
+                </styles.Subtitle>
+            </styles.CapaAutor>
+        </styles.CapaDiv>
+    );
 }
 
 export function CepImages(
