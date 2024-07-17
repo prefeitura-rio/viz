@@ -11,6 +11,9 @@ import * as chapterDiv from "./components/chapters";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+//style css
+import "./style.css";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function MegaEventos() {
@@ -129,7 +132,7 @@ export default function MegaEventos() {
   }, []);
 
   return (
-    <>
+    <div className="container" style={{backgroundColor:"beige",backgroundImage: "radial-gradient(circle, rgba(211, 211, 211, 0.4) 20%, transparent 20%)",backgroundSize: "10px 10px"}}>
       <chapterDiv.Capa style={{display:"none"}} id={"capa"} />
       <chapterDiv.ContextoHistorico id={"contexto_historico"} />
 
@@ -227,6 +230,6 @@ export default function MegaEventos() {
 
 
       <chapterDiv.Creditos id={"creditos"} />
-    </>
+    </div>
   );
 }

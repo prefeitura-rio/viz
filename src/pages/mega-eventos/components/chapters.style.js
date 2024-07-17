@@ -5,7 +5,7 @@ import tw from "tailwind-styled-components";
 import capa from "../images/rj_capa.jpg";
 
 export const CapaDivSC = styled.div`
-  background-image: url(${capa});
+
   background-size: cover;
   background-position: center;
 `;
@@ -26,7 +26,7 @@ export const CapaAutor = tw.div`
   `;
 
 export const Title = tw.div`  
-  font-geologica font-[700]
+  font-[300]
   text-[32px]
   text-center
   leading-[120%]
@@ -34,14 +34,14 @@ export const Title = tw.div`
   px-8
   lg:py-0
   lg:px-0
-  lg:text-[48px]
+  lg:text-[80px]
   lg:mt-[100px]
-  text-white
-  drop-shadow-[0_8px_8px_rgba(0,0,0,0.99)]
+  text-black
+  
   `;
 
 export const Subtitle = tw.div`
-font-geologica font-[100]
+ font-[100]
 text-center
 text-[18px]
 lg:text-[22px]
@@ -50,8 +50,8 @@ py-0
 px-8
 lg:py-[12px]
 lg:px-0
-text-white
-drop-shadow-[0_1px_1px_rgba(0,0,0,0.99)]
+text-black
+
 `;
 
 export const Video = tw.div`
@@ -70,8 +70,8 @@ export const Scroll = tw.div`
   `;
 
 export const AuthorText = tw.div`
-  font-geologica
-  text-[14px] text-left text-black
+  
+  text-[20px] text-left text-black
   leading-[150%]
   mb-[88px]
  `;
@@ -83,7 +83,7 @@ items-center
 justify-center
 px-[48px]
 lg:p-[34px]
-bg-white
+
 `;
 
 export const ChapterGenericDiv1 = tw.div`
@@ -93,7 +93,7 @@ export const ChapterGenericDiv1 = tw.div`
   justify-center
   p-[34px]
   lg:p-[34px]
-  bg-white
+
   `;
 
 export const ChapterGenericDiv2 = tw.div`
@@ -124,7 +124,7 @@ export const ChapterGenericDiv3 = tw.div`
 h-full w-full
 items-center
 justify-center
-bg-white
+
 `;
 
 export const ChapterGenericDiv4 = tw.div`
@@ -135,7 +135,7 @@ export const ChapterGenericDiv4 = tw.div`
   justify-center
   p-[34px]
   lg:p-[34px]
-  bg-white
+
   `;
 
 export const ContainerCard = tw.div`
@@ -155,13 +155,15 @@ export const ContainerCard3 = tw.div`
     absolute
     z-10
     h-auto w-[80vw] lg:w-[460px]
-    bg-[#ffffff99]
+    bg-white 
+    border border-black
+    border-2
     px-[40px]
     py-[34px]
     lg:px-[56px]
     lg:py-[42px]
-    rounded-lg
     backdrop-blur-md
+    shadow-[12px_12px_black]
   `;
 
 export const Grafico = tw.div`
@@ -171,7 +173,7 @@ export const Grafico = tw.div`
 `;
 
 export const Imagem = tw.div`
-  font-libre font-[700] 
+  
   text-[12px]
   text-left
   lg:leading-[150%]
@@ -179,7 +181,7 @@ text-black
 `;
 
 export const Imagem1 = tw.div`
-  font-libre font-[400] 
+  
   text-[12px]
   text-left
   lg:leading-[150%]
@@ -196,21 +198,21 @@ export const IntroDiv = tw.div`
 
 export const TextCreditos = tw.div`
   text-black
-  font-geologica
-  font-semibold
+  
+  
   text-[20px]
   mb-[2px]
 `;
 
 export const TextCreditos1 = tw.div`
   text-black
-  font-libre font-[400] 
-  text-[14px]
+  
+  text-[20px]
 `;
 
 export const TextCreditos2 = tw.div`
   text-black
-  font-geologica
+  
   font-black
   text-[32px]
   lg:text-[40px]
@@ -218,7 +220,7 @@ export const TextCreditos2 = tw.div`
 `;
 
 export const TextCard = tw.div`
-  font-geologica font-bold 
+   font-bold 
   w-[70%]
   text-[24px]
   lg:text-[40px]
@@ -230,9 +232,9 @@ export const TextCard = tw.div`
 `;
 
 export const TextHighlightBlue = tw.div`
-  font-libre font-[400] 
+  
   inline-block
-  text-[14px]
+  text-[20px]
   text-left
   lg:leading-[150%]
   text-white
@@ -242,9 +244,9 @@ export const TextHighlightBlue = tw.div`
 `;
 
 export const TextHighlightBlueUm = tw.div`
-  font-libre font-[400] 
+  
   inline-block
-  text-[14px]
+  text-[20px]
   text-left
   lg:leading-[150%]
   text-white
@@ -254,9 +256,9 @@ export const TextHighlightBlueUm = tw.div`
 `;
 
 export const TextHighlightBlueDois = tw.div`
-  font-libre font-[400] 
+  
   inline-block
-  text-[14px]
+  text-[20px]
   text-left
   lg:leading-[150%]
   text-white
@@ -267,7 +269,7 @@ export const TextHighlightBlueDois = tw.div`
 // selection:bg-[#ef4444] selection:text-white
 
 export const TextHighlightDark = tw.div`
-  font-libre font-[700] 
+  
   text-[15px]
   text-left
   lg:leading-[150%]
@@ -275,15 +277,15 @@ export const TextHighlightDark = tw.div`
 `;
 
 export const TextCard1 = tw.div`
-font-libre font-[400] 
-text-[14px]
+
+text-[20px]
 text-left
 lg:leading-[150%]
 text-black
 `;
 
 export const TextCard2 = tw.div`
-font-geologica font-[400] 
+ font-[400] 
 text-[18px]
 text-left
 lg:leading-[120%]
@@ -292,8 +294,8 @@ mt-[20px]
 `;
 
 export const TextCard3 = tw.div`
-font-libre font-[400] 
-text-[14px]
+
+text-[20px]
 text-left
 lg:leading-[150%]
 text-black

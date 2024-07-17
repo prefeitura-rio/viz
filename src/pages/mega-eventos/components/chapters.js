@@ -48,14 +48,14 @@ export function Capa(
 	return (
 		<styles.CapaDiv id={props.id} ref={props.chapRef}>
 			<styles.CapaAutor>
-				<img
-					src={logo}
-					className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14"></img>
-				<styles.Title>Rio, palco mundial da cultura </styles.Title>
+			<img
+  src={logo}
+  className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14 filter grayscale invert"></img>
+				<styles.Title>MEGAEVENTOS</styles.Title>
 				<styles.Subtitle>
-				Como os megaeventos melhoram a economia e transformam a cidade em epicentro cultural do Mundo
+				Como os megaeventos melhoram a economia e transformam <br></br>a cidade em epicentro cultural do Mundo
 				</styles.Subtitle>
-				<img src={scroll} className="h-7 lg:h-9 mt-[20px] lg:mt-[20px]"></img>{" "}
+				<img src={scroll} className="h-7 lg:h-9 mt-[20px] lg:mt-[20px] filter grayscale invert"></img>{" "}
 			</styles.CapaAutor>
 		</styles.CapaDiv>
 	);
