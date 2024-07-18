@@ -27,18 +27,18 @@ export const CapaAutor = tw.div`
 
 export const Title = tw.div`  
   font-[300]
-  text-[70px]
+  text-[50px]
   md:text-[96px]
   text-center
-  leading-[120%]
+  leading-[90%]
   py-[10px]
   px-8
   lg:py-0
   lg:px-0
-  lg:text-[240px]
+  lg:text-[200px]
   lg:mt-[100px]
   text-black
-  
+  whitespace-nowrap
   `;
 
 export const Subtitle = tw.div`

@@ -43,66 +43,66 @@ const setDefaultProps = (providedProps) => {
 };
 
 export function Capa(
-    props = {
-        id: "",
-        chapRef: null,
-    }
+	props = {
+		id: "",
+		chapRef: null,
+	}
 ) {
-    props = setDefaultProps(props);
+	props = setDefaultProps(props);
 
-    const lastPosition = useRef({ x: 0, y: 0 });
+	const lastPosition = useRef({ x: 0, y: 0 });
 
-    const handleMouseMove = (e) => {
-        const spacing = 50; // espaçamento entre as imagens do rastro
-        const currentPosition = { x: e.pageX, y: e.pageY };
+	const handleMouseMove = (e) => {
+		const spacing = 50; // espaçamento entre as imagens do rastro
+		const currentPosition = { x: e.pageX, y: e.pageY };
 
-        const distance = Math.sqrt(
-            Math.pow(currentPosition.x - lastPosition.current.x, 2) +
-            Math.pow(currentPosition.y - lastPosition.current.y, 2)
-        );
+		const distance = Math.sqrt(
+			Math.pow(currentPosition.x - lastPosition.current.x, 2) +
+			Math.pow(currentPosition.y - lastPosition.current.y, 2)
+		);
 
-        if (distance >= spacing) {
-            lastPosition.current = currentPosition;
+		if (distance >= spacing) {
+			lastPosition.current = currentPosition;
 
-            const trail = document.createElement("div");
-            trail.className = "trail";
-            trail.style.left = `${e.pageX}px`;
-            trail.style.top = `${e.pageY}px`;
-            trail.style.backgroundImage = `url(${trailImage})`;
-            document.body.appendChild(trail);
+			const trail = document.createElement("div");
+			trail.className = "trail";
+			trail.style.left = `${e.pageX}px`;
+			trail.style.top = `${e.pageY}px`;
+			trail.style.backgroundImage = `url(${trailImage})`;
+			document.body.appendChild(trail);
 
-            setTimeout(() => {
-                trail.remove();
-            }, 1000); // duração da animação
-        }
-    };
+			setTimeout(() => {
+				trail.remove();
+			}, 1000); // duração da animação
+		}
+	};
 
-    useEffect(() => {
-        const handleMouseMoveWrapper = (e) => handleMouseMove(e);
-        document.addEventListener("mousemove", handleMouseMoveWrapper);
-        return () => {
-            document.removeEventListener("mousemove", handleMouseMoveWrapper);
-        };
-    }, []);
+	useEffect(() => {
+		const handleMouseMoveWrapper = (e) => handleMouseMove(e);
+		document.addEventListener("mousemove", handleMouseMoveWrapper);
+		return () => {
+			document.removeEventListener("mousemove", handleMouseMoveWrapper);
+		};
+	}, []);
 
-    return (
-        <styles.CapaDiv
-            id={props.id}
-        >
-            <styles.CapaAutor>
-                <img
-                    src={logo}
-                    className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14 filter grayscale invert"
-                    alt="logo"
-                />
-                <styles.Title>MEGAEVENTOS</styles.Title>
-                <styles.Subtitle>
-                    Como os megaeventos melhoram a economia e transformam <br />
-                    a cidade em epicentro cultural do Mundo
-                </styles.Subtitle>
-            </styles.CapaAutor>
-        </styles.CapaDiv>
-    );
+	return (
+		<styles.CapaDiv
+			id={props.id}
+		>
+			<styles.CapaAutor>
+				<img
+					src={logo}
+					className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14 filter grayscale invert"
+					alt="logo"
+				/>
+				<styles.Title>Destino:<br></br> Rio de Janeiro</styles.Title>
+				<styles.Subtitle>
+					Como os megaeventos melhoram a economia e transformam <br />
+					a cidade em epicentro cultural do Mundo
+				</styles.Subtitle>
+			</styles.CapaAutor>
+		</styles.CapaDiv>
+	);
 }
 
 export function CepImages(
@@ -151,20 +151,20 @@ export function ContextoHistorico(
 					{/* <div className="h-[10px] w-[50px] bg-black mb-[10px]"></div> */}
 					{/* <styles.TextCard>Introdução</styles.TextCard> */}
 					<styles.TextCard1>
-					Que o Rio de Janeiro sempre foi palco de diversos grandes eventos nacionais e internacionais, todo mundo já sabe. Mas você conhece a verdadeira importância desses eventos para a economia da cidade?
+						O Rio de Janeiro tem fama de anfitrião do mundo: somos reconhecidos internacionalmente como palco de grandes eventos. Mas porquê gastar recursos públicos neles? Só pra ficar bem na fita?
 						<br />
 						<br />
-						Os megaeventos, que vão desde o icônico carnaval até espetáculos de artistas como Madonna, não só atraem turistas do mundo inteiro, como também impulsionam significativamente a economia local.
+						Ser famoso é até legal, mas a verdade é que grandes eventos significam grandes públicos. E grandes públicos significam grandes números. Para pular um carnaval ou ver o show da Madonna, turistas do mundo inteiro visitam a cidade. E essa gente toda se hospeda, pega transporte, come, compra e faz negócios.
 						<br />
 						<br />
-						O impacto econômico é perceptível em diversos setores, como hotelaria, gastronomia, comércio e serviços. A demanda gerada por esses eventos ajuda  na criação de milhares de empregos temporários e permanentes, beneficiando diretamente a população carioca.
+						Setores como hotelaria, gastronomia, comércio e serviços são diretamente impactados, aumentando faturamentos e recolhimento de impostos, o que beneficia toda a população carioca. Além disso, a demanda gerada por estes eventos cria milhares de empregos temporários e permanentes.
 						<br />
 						<br />
-						Neste dataviz, elaborado pelo Escritório de Dados da Prefeitura do Rio de Janeiro em parceria com a Secretaria Municipal de Desenvolvimento Econômico, Inovação e Simplificação (SMDEIS), você poderá acompanhar a jornada de um turista que veio à cidade para assistir a um megashow e como em sua visita ele contribui para a economia local e se apaixona pelo Rio.	
+						Neste dataviz, elaborado pelo Escritório de Dados da Prefeitura da Cidade do Rio de Janeiro em parceria com a Secretaria Municipal de Desenvolvimento Urbano e Econômico do Rio de Janeiro (SMDUE), você acompanhará a viagem de John, um turista que veio à cidade para assistir a um megashow, e verá como sua presença alimenta uma longa cadeia econômica. Spoiler: no fim, John se apaixona… mas por quem será?
 						<br />
 						<br />
 					</styles.TextCard1>
-			
+
 					<div>
 						<div className="mt-[30px] h-[3px] w-[20px] bg-black"></div>
 						<styles.AuthorText className="mt-[8px] mr-[20px] lg:w-[420px]">
@@ -195,19 +195,19 @@ export function QuadroUm(
 
 	return (
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-			<styles.ContainerCard3 id={"quadro_um_card1"}className=" top-[10vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[10vh]">
 				<styles.TextCard3>
-				Nosso turista chega ao Rio de Janeiro pronto para curtir mais um mega show em Copacabana e aproveitar tudo que a cidade tem a oferecer.
+					John ouviu dizer que o Rio era um destino incrível. Por isso, ele desembarca pronto para curtir um mega show em Copacabana e aproveitar tudo que a cidade tem a oferecer. Seja bem vindo, John.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
 				<styles.TextCard3>
-				Ele já inicia sua jornada movimentando a economia local, pagando pela passagem aérea até a cidade e pelo transporte que o levará até o hotel em que ficará hospedado.
+					E ele já chega somando! Ao pagar pela passagem aérea e pelo transporte que o leva até o hotel, ele começa a deixar seu rastro positivo de contribuição. Marina, funcionária do Galeão, e Josiel, motorista de aplicativo, agradecem.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
 				<styles.TextCard3>
-				Em dezembro de 2023 houve um significativo crescimento de 86% na movimentação de passageiros no Galeão em relação ao mesmo mês no ano anterior.
+					Entre 2022 e 2023, a movimentação de passageiros no Galeão quase dobrou: um crescimento de 86% em um ano. Por isso, as taxas de ocupação dos hoteis próximos aos eventos chegam a 100%. Isso porque a cidade recebe entre 200 e 400 mil turistas em cada megashow.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 		</styles.ChapterGenericDiv2>
@@ -223,9 +223,9 @@ export function ParteUm(
 	props = setDefaultProps(props);
 
 	return (
-		<styles.ChapterGenericDiv4 ref={props.chapRef} id={props.id} >
+		<styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id} >
 			<styles.ContainerCard>
-				<styles.TextCard1>
+				{/* <styles.TextCard1>
 					Seja por eventos naturais ou pela ação humana, a função de uma boa
 					gestão pública é mitigar estes problemas e evitar que eles interrompam
 					o funcionamento das atividades na cidade.
@@ -233,9 +233,9 @@ export function ParteUm(
 					<br />A seguir, explicaremos para você alguns dos principais motivos
 					pelos quais a nossa cidade é um território propício para que este tipo
 					de incidente ocorra de forma tão frequente.
-				</styles.TextCard1>
+				</styles.TextCard1> */}
 			</styles.ContainerCard>
-		</styles.ChapterGenericDiv4>
+		</styles.ChapterGenericDiv1>
 	);
 }
 
@@ -250,18 +250,16 @@ export function QuadroDois(
 		<styles.ChapterQuadroDois ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[50vh]">
 				<styles.TextCard3>
-				Hospedado em um hotel com vista para a praia de Copacabana, o turista desfruta de uma das mais belas vistas do mundo.
+					Hospedado com vista para a praia de Copacabana, John desfruta de uma das mais belas vistas do mundo, enquanto pensa: “isso não tem preço, e São Paulo não tem isso”.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[150vh]">
 				<styles.TextCard3>
-				Estudos indicam que estrangeiros geralmente ficam na cidade por cerca de quatro dias, enquanto turistas brasileiros tendem a ficar por cerca de dois dias.
-				</styles.TextCard3>
+					Estudos indicam que estrangeiros ficam na cidade por quatro dias em média, enquanto turistas brasileiros tendem a passar duas diárias por aqui.				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[250vh]">
 				<styles.TextCard3>
-				Além de contribuir para a economia local ao pagar pela diária do hotel, o turista também usufrui dos serviços adicionais que o local oferece.
-				</styles.TextCard3>
+					Depois de contribuir para a economia local ao pagar pela diária do hotel (onde trabalha Débora, a camareira), o turista quer conhecer a cidade. Onde se come bem por aqui?				</styles.TextCard3>
 			</styles.ContainerCard3>
 			{/* <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[310vh]">
 				<styles.TextCard3>
@@ -341,7 +339,7 @@ export function ParteDois(
 	return (
 		<styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard>
-			<styles.TextCard1>
+				{/* <styles.TextCard1>
 					Seja por eventos naturais ou pela ação humana, a função de uma boa
 					gestão pública é mitigar estes problemas e evitar que eles interrompam
 					o funcionamento das atividades na cidade.
@@ -349,7 +347,7 @@ export function ParteDois(
 					<br />A seguir, explicaremos para você alguns dos principais motivos
 					pelos quais a nossa cidade é um território propício para que este tipo
 					de incidente ocorra de forma tão frequente.
-				</styles.TextCard1>
+				</styles.TextCard1> */}
 			</styles.ContainerCard>
 		</styles.ChapterGenericDiv1>
 	);
@@ -365,25 +363,21 @@ export function QuadroTres(
 
 	return (
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-			<styles.ContainerCard3 id={"quadro_um_card1"}className=" top-[10vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[10vh]">
 				<styles.TextCard3>
-				Em um restaurante no bairro mais boêmio da cidade, a Lapa, nosso turista se delicia com uma boa refeição e um sambinha para acompanhar.
-				</styles.TextCard3>
+					No restaurante de Gustavo, no bairro mais boêmio da cidade, a Lapa, nosso turista se delicia com uma boa feijoada, uma caipirinha e um samba para acompanhar.				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
 				<styles.TextCard3>
-				De quebra, ele contribui para a economia local ao pagar pela refeição e couvert dos músicos, movimentando o comércio e gerando renda.
-				</styles.TextCard3>
+					De quebra, ele faz a roda girar ao pagar pelo consumo e couvert dos músicos Eliomar e Marcinho, movimentando o comércio e gerando renda. Afinal, o cara do violão também tem família!				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
 				<styles.TextCard3>
-				Segundo estimativas da Secretaria Municipal de Desenvolvimento Urbano e Econômico (SMDUE), com base na pesquisa “Rio de Janeiro a Janeiro” da Fundação Getulio Vargas (FGV), o ticket-médio de um turista brasileiro na cidade é de R$ 491,01 por dia, enquanto o do turista estrangeiro é de R$ 561,98. Já o ticket-médio do carioca e morador da Região Metropolitana do Rio de Janeiro é de R$ 127,17.
-				</styles.TextCard3>
+					O ticket-médio de um turista brasileiro na cidade é de R$491,01 por dia, enquanto o do turista estrangeiro é de R$561,98. Já o ticket-médio do carioca e morador da Região Metropolitana do Rio de Janeiro é de R$127,17. Pois é, John não economiza.				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[300vh]">
 				<styles.TextCard3>
-				Segundo o estudo “Potenciais Impactos Econômicos do Web Summit Rio” da SMDUE em parceria com a Invest.Rio, os setores que turistas mais gastam são com a hospedagem, a alimentação, meios de transporte, para deslocamentos, atrações e compras.
-				</styles.TextCard3>
+					Segundo o estudo “Potenciais Impactos Econômicos do Web Summit Rio” da SMDUE em parceria com a Invest.Rio, os setores em que os turistas mais gastam são hospedagem, alimentação, meios de transporte, atrações e compras. A oferta é farta!				</styles.TextCard3>
 			</styles.ContainerCard3>
 		</styles.ChapterGenericDiv2>
 	);
@@ -399,7 +393,7 @@ export function ParteTres(
 	return (
 		<styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard>
-			<styles.TextCard1>
+				{/* <styles.TextCard1>
 					3 Seja por eventos naturais ou pela ação humana, a função de uma boa
 					gestão pública é mitigar estes problemas e evitar que eles interrompam
 					o funcionamento das atividades na cidade.
@@ -408,7 +402,7 @@ export function ParteTres(
 					3 A seguir, explicaremos para você alguns dos principais motivos
 					pelos quais a nossa cidade é um território propício para que este tipo
 					de incidente ocorra de forma tão frequente.
-				</styles.TextCard1>
+				</styles.TextCard1> */}
 			</styles.ContainerCard>
 		</styles.ChapterGenericDiv1>
 	);
@@ -424,25 +418,22 @@ export function QuadroQuatro(
 
 	return (
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-			<styles.ContainerCard3 id={"quadro_um_card1"}className=" top-[10vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[10vh]">
 				<styles.TextCard3>
-				Depois de visitar a Lapa, nosso turista decide levar um pedacinho do Rio para casa.
+					Depois de visitar a Lapa, nosso turista decide levar um pedacinho do Rio para casa.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
 				<styles.TextCard3>
-				No Saara, maior comércio popular da cidade, ele se encanta com uma camiseta com estampa do Rio em uma loja de souvenirs e decide levar uma lembrança, contribuindo para a economia local.
-				</styles.TextCard3>
+					Na lojinha de Solange, no Saara, maior comércio popular da cidade, John se encanta com uma camiseta estampada com o Cristo Redentor e a compra como lembrança, movimentando o comércio de bens. Além disso, ele passa no barbeiro Luiz e faz um corte de cria, aquecendo o setor de serviços. O que é importante, porque 85% da economia do Rio vem daí.				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
 				<styles.TextCard3>
-				Durante grandes eventos, o Rio arrecada mais com impostos. No show da cantora Madonna, por exemplo, estima-se que a arrecadação de impostos tenha aumentado em 20%, elevando a arrecadação de maio para R$ 60,9 milhões, um aumento de R$ 10,2 milhões em comparação com o mesmo mês do ano anterior.
-				</styles.TextCard3>
+					Durante grandes eventos, o Rio arrecada mais com impostos. No show da cantora Madonna, por exemplo, estima-se que a arrecadação de impostos tenha aumentado em 20%, um aumento de R$ 10,2 milhões em comparação com o mesmo mês do ano anterior. O valor é superior ao desembolsado pela prefeitura para cobrir o custo do próprio show! E o retorno esperado é quase 30 vezes o investido: R$293,4 milhões.				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[300vh]">
 				<styles.TextCard3>
-				No Carnaval, o Rio arrecada quase R$ 500 milhões com todos os serviços, ligados ou não à festa. Já no Réveillon, a cidade arrecada quase meio bilhão de reais em impostos, o que corresponde a 8,8% da arrecadação anual dos impostos de turismo e eventos.
-				</styles.TextCard3>
+					No Carnaval, o Rio arrecada quase R$500 milhões com todos os serviços, ligados ou não à festa. São R$5 bilhões em movimentação graças à folia. Já no Réveillon, esse valor é de R$3 bilhões, e a cidade arrecada quase meio bilhão de reais em impostos, o que corresponde a 8,8% da arrecadação anual dos impostos de turismo e eventos.				</styles.TextCard3>
 			</styles.ContainerCard3>
 		</styles.ChapterGenericDiv2>
 	);
@@ -458,7 +449,7 @@ export function ParteQuatro(
 	return (
 		<styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard>
-			<styles.TextCard1>
+				{/* <styles.TextCard1>
 					4 Seja por eventos naturais ou pela ação humana, a função de uma boa
 					gestão pública é mitigar estes problemas e evitar que eles interrompam
 					o funcionamento das atividades na cidade.
@@ -467,7 +458,7 @@ export function ParteQuatro(
 					4 A seguir, explicaremos para você alguns dos principais motivos
 					pelos quais a nossa cidade é um território propício para que este tipo
 					de incidente ocorra de forma tão frequente.
-				</styles.TextCard1>
+				</styles.TextCard1> */}
 			</styles.ContainerCard>
 		</styles.ChapterGenericDiv1>
 	);
@@ -482,24 +473,24 @@ export function QuadroCinco(
 
 	return (
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-			<styles.ContainerCard3 id={"quadro_um_card1"}className=" top-[10vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[10vh]">
 				<styles.TextCard3>
-				O mega show em Copacabana é a atração principal da viagem do turista.
+					Chegou a hora: o mega show em Copacabana é a atração principal da viagem de John. Ele se junta à multidão e se diverte com a música, a energia do público e a beleza do cenário.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
 				<styles.TextCard3>
-				Ele se junta à multidão e se diverte com a música, a energia do público e a beleza do cenário.
+					John canta tanto que seca a garganta, dança tanto que sente fome: logo ele consome bebidas e petiscos de Félix e Genilson, ambulantes credenciados enquanto aproveita o show.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
 				<styles.TextCard3>
-				O turista consome de ambulantes credenciados para matar a sede enquanto aproveita o show.
+					Assim como o ambulante ganha uma renda extra, outros profissionais também são beneficiados com a vinda de grandes eventos para a cidade do Rio
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[300vh]">
 				<styles.TextCard3>
-				Durante o Carnaval, por exemplo, 45 mil trabalhadores estão envolvidos na festa, sejam servidores públicos, ambulantes ou pessoas que atuam no Sambódromo. Já no Réveillon, 49 mil empregos são gerados (direta e indiretamente) para garantir que a virada do ano seja um grande espetáculo.
+					Durante o Carnaval, por exemplo, 45 mil trabalhadores estão envolvidos na festa, sejam servidores públicos, ambulantes ou pessoas que atuam no Sambódromo. Já no Réveillon, 49 mil empregos são gerados (direta e indiretamente) para garantir que a virada do ano seja um grande espetáculo. E emprego, a gente sabe, é dignidade e segurança.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 		</styles.ChapterGenericDiv2>
@@ -516,7 +507,7 @@ export function ParteCinco(
 	return (
 		<styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard>
-			<styles.TextCard1>
+				{/* <styles.TextCard1>
 					5 Seja por eventos naturais ou pela ação humana, a função de uma boa
 					gestão pública é mitigar estes problemas e evitar que eles interrompam
 					o funcionamento das atividades na cidade.
@@ -525,7 +516,7 @@ export function ParteCinco(
 					5 A seguir, explicaremos para você alguns dos principais motivos
 					pelos quais a nossa cidade é um território propício para que este tipo
 					de incidente ocorra de forma tão frequente.
-				</styles.TextCard1>
+				</styles.TextCard1> */}
 			</styles.ContainerCard>
 		</styles.ChapterGenericDiv1>
 	);
@@ -540,29 +531,30 @@ export function QuadroSeis(
 
 	return (
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-			<styles.ContainerCard3 id={"quadro_um_card1"}className=" top-[10vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[10vh]">
 				<styles.TextCard3>
-				A viagem ao Rio de Janeiro para o mega show em Copacabana foi uma experiência inesquecível para o turista.
+					A viagem à cidade para o mega show em Copacabana foi uma experiência inesquecível para John, que já sente saudades.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
 				<styles.TextCard3>
-				Ele retorna para casa e compartilha com amigos e familiares como foi incrível a sua experiência.
-				</styles.TextCard3>
+					Ele compartilha com amigos e familiares como são as pessoas, o evento e sua nova paixão: a cidade do Rio de Janeiro.				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
 				<styles.TextCard3>
-				Enquanto isso, jornais do mundo todo mostram o sucesso do show na Cidade Maravilhosa.
-				</styles.TextCard3>
+					Enquanto isso, jornais do mundo todo mostram o sucesso do show na Cidade Maravilhosa.				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[300vh]">
 				<styles.TextCard3>
-				A divulgação da cidade também traz benefícios econômicos para o Rio. Com base em dados da organização do evento, compilados pela Secretaria Municipal de Turismo (SMTUR), a exposição na mídia internacional do show da Madonna no Rio, após o anúncio oficial, foi de US$ 43,9 milhões, o equivalente a R$ 217,6 milhões.
-				</styles.TextCard3>
+					A divulgação da cidade também traz benefícios econômicos para o Rio. Com base em dados da organização do evento, compilados pela Secretaria Municipal de Turismo (SMTUR), a exposição na mídia internacional do show da Madonna no Rio foi equivalente a uma campanha de R$217,6 milhões.				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[400vh]">
 				<styles.TextCard3>
-				Ou seja, caso a cidade do Rio fizesse uma campanha de publicidade na imprensa internacional, teria que gastar mais de R$ 200 milhões, valor conquistado espontaneamente com a oficialização do show.				</styles.TextCard3>
+					Ou seja, caso a cidade do Rio fizesse uma campanha de publicidade na imprensa internacional, teria que gastar mais de R$200 milhões, valor conquistado espontaneamente com a oficialização do show.					</styles.TextCard3>
+			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[500vh]">
+				<styles.TextCard3>
+					Desse jeito, os primos de John - ou melhor, João! -  já sabem para onde ir nas próximas férias.					</styles.TextCard3>
 			</styles.ContainerCard3>
 		</styles.ChapterGenericDiv2>
 	);
@@ -578,15 +570,18 @@ export function ParteSeis(
 	return (
 		<styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard>
-			<br />
-			<br />
-			<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<styles.TextCard1>
+					Com uma agenda repleta de grandes eventos, o Rio de Janeiro agora desfruta de uma diversidade de atrações que estimulam sua economia e mostram o grande potencial da cidade em ser um polo cultural e turístico de destaque internacional.
 					<br />
-			<styles.TextCard1>
-			Com uma agenda repleta de grandes eventos, o Rio de Janeiro agora desfruta de uma diversidade de atrações que impulsionam sua economia e mostram o grande potencial que a cidade tem em ser um importante polo cultural e turístico de destaque internacional.
+					<br />
+					Esse cenário reforça o papel da nossa cidade como um dos melhores destinos para qualquer turista ávido por viver todas as belezas e carioquices que só o Rio oferece.
 					<br />
 					<br />
-					Esse cenário reforça o papel da nossa cidade como um dos melhores destinos para qualquer um que queira viver todas as belezas e carioquices que só o Rio tem a oferecer.
+					Porque no fim das contas, grandes eventos fazem do Rio uma grande cidade.
 				</styles.TextCard1>
 			</styles.ContainerCard>
 		</styles.ChapterGenericDiv1>
@@ -605,13 +600,13 @@ export function Creditos(
 	return (
 		<styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard>
-				<styles.TextCreditos2>Referências</styles.TextCreditos2>
+				<styles.TextCreditos2>Fontes</styles.TextCreditos2>
 				<styles.TextCreditos>Links</styles.TextCreditos>
 				<styles.TextCreditos1 >
 					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2024/04/Estudo-Impacto-Show-Madonna.pdf" target="_blank">Potenciais impactos econômicos do Show da Madonna no Rio. 2024</a> <br />
 					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2024/02/Carnaval-de-Dados-2024.pdf" target="_blank">Carnaval de Dados. 2024</a> <br />
 					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2023/12/VERSAO-FINAL-Relatorio-REVEILLON-EM-DADOS-REVISADO-1.pdf" target="_blank">Réveillon em Dados. 2023</a> <br />
-					
+
 				</styles.TextCreditos1>
 				<br></br>
 				<br></br>
@@ -630,16 +625,16 @@ export function Creditos(
 					Agradecimentos
 				</styles.TextCreditos>
 				<styles.TextCreditos1>
-				  Janaína Salles <br />
+					Janaína Salles <br />
 				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
-				CHEFE EXECUTIVO DO ESCRITÓRIO DE DADOS
+					CHEFE EXECUTIVO DO ESCRITÓRIO DE DADOS
 				</styles.TextCreditos>
 				<styles.TextCreditos1>
-				João Carabetta <br />
-									</styles.TextCreditos1>
+					João Carabetta <br />
+				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
-				SECRETÁRIO DE DESENVOLVIMENTO URBANO E ECONÔMICO
+					SECRETÁRIO DE DESENVOLVIMENTO URBANO E ECONÔMICO
 				</styles.TextCreditos>
 				<styles.TextCreditos1>Chicão Bulhões</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
