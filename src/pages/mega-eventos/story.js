@@ -13,6 +13,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 //style css
 import "./style.css";
+import { isMobile } from "react-device-detect";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -141,12 +142,12 @@ export default function MegaEventos() {
 
         <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
-            style={{ position: "sticky", top: "calc(50vh - 45vh)" }}
+            style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_um"}
             src={
               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/1.jpg"
             }
-            className="h-[600px] w-[480px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
+            className="h-[450px] w-[360px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
           <chapterDiv.QuadroUm id={"quadro_um"} />
         </div>
@@ -156,7 +157,7 @@ export default function MegaEventos() {
         {/* ******************************** Video Scrolling 2 ********************************  */}
         <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
-            style={{ position: "sticky", top: "calc(50vh - 45vh)" }}
+            style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_dois"}
             src={
               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_dois/1.jpg"
@@ -171,7 +172,7 @@ export default function MegaEventos() {
         {/* ******************************** Video Scrolling 3 ********************************  */}
         <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
-            style={{ position: "sticky", top: "calc(50vh - 45vh)" }}
+            style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_tres"}
             src={
               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_tres/1.jpg"
@@ -186,7 +187,7 @@ export default function MegaEventos() {
         {/* ******************************** Video Scrolling 4 ********************************  */}
         <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
-            style={{ position: "sticky", top: "calc(50vh - 45vh)" }}
+            style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_quatro"}
             src={
               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_quatro/1.jpg"
@@ -201,7 +202,7 @@ export default function MegaEventos() {
         {/* ******************************** Video Scrolling 5 ********************************  */}
         <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
-            style={{ position: "sticky", top: "calc(50vh - 45vh)" }}
+            style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_cinco"}
             src={
               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_cinco/1.jpg"
@@ -216,7 +217,7 @@ export default function MegaEventos() {
         {/* ******************************** Video Scrolling 6 ********************************  */}
         <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
-            style={{ position: "sticky", top: "calc(50vh - 45vh)" }}
+            style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_seis"}
             src={
               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_seis/1.jpg"

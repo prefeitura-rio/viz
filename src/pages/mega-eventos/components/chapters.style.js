@@ -159,10 +159,10 @@ export const ContainerCard3 = tw.div`
     bg-white 
     border border-black
     border-4
-    px-[40px]
-    py-[34px]
-    lg:px-[56px]
-    lg:py-[42px]
+    px-[25px]
+    py-[20px]
+    lg:px-[32px]
+    lg:py-[25px]
     backdrop-blur-md
     shadow-[12px_12px_black]
   `;
@@ -297,6 +297,7 @@ export const TextCard3 = tw.div`
 
 text-[22px]
 text-left
-lg:leading-[150%]
+lg:leading-[110%]
 text-black
+leading-[100%]
 `;

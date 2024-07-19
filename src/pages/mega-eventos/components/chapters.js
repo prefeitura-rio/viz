@@ -167,10 +167,10 @@ export function ContextoHistorico(
 
 					<div>
 						<div className="mt-[30px] h-[3px] w-[20px] bg-black"></div>
-						<styles.AuthorText className="mt-[8px] mr-[20px] lg:w-[420px]">
+						<styles.AuthorText className="font-bold mt-[8px] mr-[20px] lg:w-[420px]">
 							Desenvolvido pela Equipe de Visualização de Dados do{" "}
 							<a
-								className="font-bold underline"
+								className="underline"
 								href="https://www.dados.rio/"
 								target="_blank"
 								rel="noreferrer">
