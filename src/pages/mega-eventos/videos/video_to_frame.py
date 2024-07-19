@@ -2,7 +2,7 @@ from pathlib import Path
 import cv2
 import shutil
 
-def chop_video_into_frames(video_path: str, output_folder: str, resize_factor: float = 0.5, jpeg_quality: int = 20):
+def chop_video_into_frames(video_path: str, output_folder: str, resize_factor: float = 0.5, jpeg_quality: int = 25):
     path = Path(video_path).parent
     images_path = path / output_folder
     vidcap = cv2.VideoCapture(video_path)
@@ -35,6 +35,6 @@ def chop_video_into_frames(video_path: str, output_folder: str, resize_factor: f
         count += 1
 
 if __name__ == "__main__":
-    video_path = "./cena01.mp4"
-    output_folder = "./quadro_um"
+    video_path = "./cena02.mp4"
+    output_folder = "./quadro_dois"
     chop_video_into_frames(video_path, output_folder)

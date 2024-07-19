@@ -2,28 +2,40 @@
 import { Container } from "postcss";
 import styled from "styled-components";
 import tw from "tailwind-styled-components";
-import capa from "../images/rj_capa.jpg";
+import capa from "../images/capa_megaeventos.gif";
 
 export const CapaDivSC = styled.div`
+  background-image: url(${capa});
+ background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center; 
 
-  background-size: cover;
-  background-position: center;
+  @media (max-width: 600px) {
+    background-size: 150%; 
+  }
 `;
+// export const CapaDivSC = styled.div`
+//   background-image: url(${capa});
+//   background-size: 100%; 
+//   background-repeat: no-repeat;
+//   background-position: center;
 
-// @media only screen and (min-width: 768px) {
-//   background-size: 21%;
+//   @media (min-width: 1024px) {
+//     background-size: 60%; 
+//   }
+// `;
 
 export const CapaDiv = tw(CapaDivSC)`
   h-[100vh] w-full
   flex flex-col
-  justify-center  items-center
-  `;
+  justify-center items-center
+`;
 
 export const CapaAutor = tw.div`
-  flex flex-col  
+  flex flex-col
   lg:h-auto lg:w-[800px]
   justify-center items-center
-  `;
+`;
 
 export const Title = tw.div`  
   font-[300]

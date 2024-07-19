@@ -63,9 +63,9 @@ export default function MegaEventos() {
       trigger: "#quadro_dois",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video_dois");
-        let frameNumber = Math.floor(self.progress * 275) + 1;
-        if (frameNumber > 274) {
-          frameNumber = 274;
+        let frameNumber = Math.floor(self.progress * 500) + 1;
+        if (frameNumber > 494) {
+          frameNumber = 494;
         }
         const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_dois/${frameNumber}.jpg`;
         console.log(imageUrl);
@@ -155,7 +155,7 @@ export default function MegaEventos() {
         {/* ******************************** Video Scrolling 1 Fim ********************************  */}
 
         {/* ******************************** Video Scrolling 2 ********************************  */}
-        <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", height: "700vh", width: "100%", alignItems: "center" }}>
           <img
             style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_dois"}

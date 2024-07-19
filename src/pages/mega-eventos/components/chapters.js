@@ -77,6 +77,14 @@ export function Capa(
 		}
 	};
 
+	const handleClick = () => {
+		window.scrollBy({
+			top: window.innerHeight * 1, // 100vh
+			left: 0,
+			behavior: 'smooth'
+		});
+	};
+
 	useEffect(() => {
 		const handleMouseMoveWrapper = (e) => handleMouseMove(e);
 		document.addEventListener("mousemove", handleMouseMoveWrapper);
@@ -88,23 +96,15 @@ export function Capa(
 	return (
 		<styles.CapaDiv
 			id={props.id}
+			onClick={handleClick}
+			style={{ cursor: 'pointer' }}
 		>
-			<styles.CapaAutor>
-				<img
-					src={logo}
-					className="absolute top-[5%] lg:absolute lg:top-[20px] h-11 lg:h-14 filter grayscale invert"
-					alt="logo"
-				/>
-				<styles.Title>Destino:<br></br> Rio de Janeiro</styles.Title>
-				<styles.Subtitle>
-					Como os megaeventos melhoram a economia e transformam <br />
-					a cidade em epicentro cultural do Mundo
-				</styles.Subtitle>
+			<styles.CapaAutor >
+
 			</styles.CapaAutor>
 		</styles.CapaDiv>
 	);
 }
-
 export function CepImages(
 	props = {
 		id: "",
