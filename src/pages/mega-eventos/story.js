@@ -52,7 +52,7 @@ export default function MegaEventos() {
     //     const progress = self.progress;
     //     const imageUrl =
     //       progress < 0.5
-    //         ? "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/450.jpg"
+    //         ? "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/450.jpg"
     //         : "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_dois/1.jpg";
     //     video.src = imageUrl;
     //   },
@@ -62,11 +62,11 @@ export default function MegaEventos() {
       trigger: "#quadro_dois",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video_dois");
-        let frameNumber = Math.floor(self.progress * 450) + 1;
-        if (frameNumber > 450) {
-          frameNumber = 450;
+        let frameNumber = Math.floor(self.progress * 275) + 1;
+        if (frameNumber > 274) {
+          frameNumber = 274;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_dois/${frameNumber}.jpg`;
         console.log(imageUrl);
         video.src = imageUrl;
       },
@@ -81,7 +81,7 @@ export default function MegaEventos() {
         if (frameNumber > 450) {
           frameNumber = 450;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_tres/${frameNumber}.jpg`;
         console.log(imageUrl);
         video.src = imageUrl;
       },
@@ -95,7 +95,7 @@ export default function MegaEventos() {
         if (frameNumber > 450) {
           frameNumber = 450;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_quatro/${frameNumber}.jpg`;
         console.log(imageUrl);
         video.src = imageUrl;
       },
@@ -109,7 +109,7 @@ export default function MegaEventos() {
         if (frameNumber > 450) {
           frameNumber = 450;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_cinco/${frameNumber}.jpg`;
         console.log(imageUrl);
         video.src = imageUrl;
       },
@@ -123,7 +123,7 @@ export default function MegaEventos() {
         if (frameNumber > 450) {
           frameNumber = 450;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_seis/${frameNumber}.jpg`;
         console.log(imageUrl);
         video.src = imageUrl;
       },
@@ -156,12 +156,12 @@ export default function MegaEventos() {
         {/* ******************************** Video Scrolling 2 ********************************  */}
         <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
-            style={{ position: "sticky", top: "calc(50vh - 310px)" }}
+            style={{ position: "sticky", top: "calc(50vh - 45vh)" }}
             id={"quadro_video_dois"}
             src={
-              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
+              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_dois/1.jpg"
             }
-            className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
+            className="h-[600px] w-[480px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
           <chapterDiv.QuadroDois id={"quadro_dois"} />
         </div>
@@ -171,12 +171,12 @@ export default function MegaEventos() {
         {/* ******************************** Video Scrolling 3 ********************************  */}
         <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
-            style={{ position: "sticky", top: "calc(50vh - 310px)" }}
+            style={{ position: "sticky", top: "calc(50vh - 45vh)" }}
             id={"quadro_video_tres"}
             src={
-              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
+              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_tres/1.jpg"
             }
-            className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
+            className="h-[600px] w-[480px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
           <chapterDiv.QuadroTres id={"quadro_tres"} />
         </div>
@@ -186,12 +186,12 @@ export default function MegaEventos() {
         {/* ******************************** Video Scrolling 4 ********************************  */}
         <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
-            style={{ position: "sticky", top: "calc(50vh - 310px)" }}
+            style={{ position: "sticky", top: "calc(50vh - 45vh)" }}
             id={"quadro_video_quatro"}
             src={
-              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
+              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_quatro/1.jpg"
             }
-            className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
+            className="h-[600px] w-[480px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
           <chapterDiv.QuadroQuatro id={"quadro_quatro"} />
         </div>
@@ -201,12 +201,12 @@ export default function MegaEventos() {
         {/* ******************************** Video Scrolling 5 ********************************  */}
         <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
-            style={{ position: "sticky", top: "calc(50vh - 310px)" }}
+            style={{ position: "sticky", top: "calc(50vh - 45vh)" }}
             id={"quadro_video_cinco"}
             src={
-              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
+              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_cinco/1.jpg"
             }
-            className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
+            className="h-[600px] w-[480px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
           <chapterDiv.QuadroCinco id={"quadro_cinco"} />
         </div>
@@ -216,12 +216,12 @@ export default function MegaEventos() {
         {/* ******************************** Video Scrolling 6 ********************************  */}
         <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
-            style={{ position: "sticky", top: "calc(50vh - 310px)" }}
+            style={{ position: "sticky", top: "calc(50vh - 45vh)" }}
             id={"quadro_video_seis"}
             src={
-              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
+              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_seis/1.jpg"
             }
-            className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
+            className="h-[600px] w-[480px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
           <chapterDiv.QuadroSeis id={"quadro_seis"} />
         </div>
