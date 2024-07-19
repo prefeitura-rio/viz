@@ -19,7 +19,7 @@ border-black
 
 export function LoadingMegaEventos() {
   return (
-    <LoadingDiv>
+    <LoadingDiv style={{ backgroundColor: "beige", backgroundImage: "radial-gradient(circle, rgba(211, 211, 211, 0.4) 20%, transparent 20%)", backgroundSize: "10px 10px" }}>
       <LoadingImage src={gif}></LoadingImage>
     </LoadingDiv>
   );
