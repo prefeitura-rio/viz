@@ -207,8 +207,7 @@ export function QuadroUm(
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[400vh]">
 				<styles.TextCard3>
-					Entre 2022 e 2023, a movimentação de passageiros no Galeão quase dobrou: um crescimento de 86% em um ano. Por isso, as taxas de ocupação dos hoteis próximos aos eventos chegam a 100%. Isso porque a cidade recebe entre 200 e 400 mil turistas em cada megashow.
-				</styles.TextCard3>
+					Entre 2022 e 2023, a movimentação de passageiros no Galeão quase dobrou: um crescimento de 86% em um ano. A cidade recebe entre 200 e 400 mil turistas em cada megashow. Por isso, as taxas de ocupação dos hoteis próximos aos eventos chegam a 100%.				</styles.TextCard3>
 			</styles.ContainerCard3>
 		</styles.ChapterGenericDiv2>
 	);
@@ -248,16 +247,16 @@ export function QuadroDois(
 	props = setDefaultProps(props);
 	return (
 		<styles.ChapterQuadroDois ref={props.chapRef} id={props.id}>
-			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[50vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[120vh]">
 				<styles.TextCard3>
 					Hospedado com vista para a praia de Copacabana, John desfruta de uma das mais belas vistas do mundo, enquanto pensa: “isso não tem preço, e São Paulo não tem isso”.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[150vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[300vh]">
 				<styles.TextCard3>
 					Estudos indicam que estrangeiros ficam na cidade por quatro dias em média, enquanto turistas brasileiros tendem a passar duas diárias por aqui.				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[250vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[480vh]">
 				<styles.TextCard3>
 					Depois de contribuir para a economia local ao pagar pela diária do hotel (onde trabalha Débora, a camareira), o turista quer conhecer a cidade. Onde se come bem por aqui?				</styles.TextCard3>
 			</styles.ContainerCard3>
