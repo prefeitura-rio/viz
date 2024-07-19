@@ -162,7 +162,7 @@ export default function MegaEventos() {
             src={
               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_dois/1.jpg"
             }
-            className="h-[600px] w-[480px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
+            className="h-[450px] w-[360px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
           <chapterDiv.QuadroDois id={"quadro_dois"} />
         </div>
@@ -177,7 +177,7 @@ export default function MegaEventos() {
             src={
               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_tres/1.jpg"
             }
-            className="h-[600px] w-[480px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
+            className="h-[450px] w-[360px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
           <chapterDiv.QuadroTres id={"quadro_tres"} />
         </div>
@@ -192,7 +192,7 @@ export default function MegaEventos() {
             src={
               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_quatro/1.jpg"
             }
-            className="h-[600px] w-[480px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
+            className="h-[450px] w-[360px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
           <chapterDiv.QuadroQuatro id={"quadro_quatro"} />
         </div>
@@ -207,7 +207,7 @@ export default function MegaEventos() {
             src={
               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_cinco/1.jpg"
             }
-            className="h-[600px] w-[480px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
+            className="h-[450px] w-[360px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
           <chapterDiv.QuadroCinco id={"quadro_cinco"} />
         </div>
@@ -222,7 +222,7 @@ export default function MegaEventos() {
             src={
               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_seis/1.jpg"
             }
-            className="h-[600px] w-[480px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
+            className="h-[450px] w-[360px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
           <chapterDiv.QuadroSeis id={"quadro_seis"} />
         </div>
