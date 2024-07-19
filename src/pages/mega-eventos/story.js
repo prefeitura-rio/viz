@@ -170,7 +170,7 @@ export default function MegaEventos() {
         {/* ******************************** Video Scrolling 2 Fim ********************************  */}
 
         {/* ******************************** Video Scrolling 3 ********************************  */}
-        <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", height: "700vh", width: "100%", alignItems: "center" }}>
           <img
             style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_tres"}

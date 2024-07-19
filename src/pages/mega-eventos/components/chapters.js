@@ -362,19 +362,19 @@ export function QuadroTres(
 
 	return (
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[10vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[110vh]">
 				<styles.TextCard3>
 					No restaurante de Gustavo, no bairro mais boêmio da cidade, a Lapa, nosso turista se delicia com uma boa feijoada, uma caipirinha e um samba para acompanhar.				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
+			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[300vh]">
 				<styles.TextCard3>
 					De quebra, ele faz a roda girar ao pagar pelo consumo e couvert dos músicos Eliomar e Marcinho, movimentando o comércio e gerando renda. Afinal, o cara do violão também tem família!				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[420vh]">
 				<styles.TextCard3>
 					O ticket-médio de um turista brasileiro na cidade é de R$491,01 por dia, enquanto o do turista estrangeiro é de R$561,98. Já o ticket-médio do carioca e morador da Região Metropolitana do Rio de Janeiro é de R$127,17. Pois é, John não economiza.				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[300vh]">
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[520vh]">
 				<styles.TextCard3>
 					Segundo o estudo “Potenciais Impactos Econômicos do Web Summit Rio” da SMDUE em parceria com a Invest.Rio, os setores em que os turistas mais gastam são hospedagem, alimentação, meios de transporte, atrações e compras. A oferta é farta!				</styles.TextCard3>
 			</styles.ContainerCard3>
