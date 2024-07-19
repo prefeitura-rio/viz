@@ -78,9 +78,9 @@ export default function MegaEventos() {
       trigger: "#quadro_tres",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video_tres");
-        let frameNumber = Math.floor(self.progress * 450) + 1;
-        if (frameNumber > 450) {
-          frameNumber = 450;
+        let frameNumber = Math.floor(self.progress * 185) + 1;
+        if (frameNumber > 184) {
+          frameNumber = 184;
         }
         const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_tres/${frameNumber}.jpg`;
         console.log(imageUrl);

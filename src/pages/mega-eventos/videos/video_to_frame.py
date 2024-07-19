@@ -35,6 +35,6 @@ def chop_video_into_frames(video_path: str, output_folder: str, resize_factor: f
         count += 1
 
 if __name__ == "__main__":
-    video_path = "./cena02.mp4"
-    output_folder = "./quadro_dois"
+    video_path = "./cena03.mp4"
+    output_folder = "./quadro_tres"
     chop_video_into_frames(video_path, output_folder)
