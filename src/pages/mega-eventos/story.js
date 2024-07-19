@@ -141,12 +141,12 @@ export default function MegaEventos() {
 
         <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
-            style={{ position: "sticky", top: "calc(50vh - 310px)" }}
+            style={{ position: "sticky", top: "calc(50vh - 45vh)" }}
             id={"quadro_video_um"}
             src={
               "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/1.jpg"
             }
-            className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
+            className="h-[600px] w-[480px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
           <chapterDiv.QuadroUm id={"quadro_um"} />
         </div>
