@@ -9,6 +9,7 @@ export const CapaDivSC = styled.div`
  background-size: contain; 
   background-repeat: no-repeat; 
   background-position: center; 
+  background-size: 65%;
 
   @media (max-width: 600px) {
     background-size: 150%; 
