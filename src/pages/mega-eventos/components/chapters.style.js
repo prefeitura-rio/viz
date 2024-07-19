@@ -82,7 +82,7 @@ flex
 w-full h-auto
 items-center
 justify-center
-px-[48px]
+px-[24px]
 lg:p-[34px]
 
 `;
