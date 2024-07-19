@@ -23,7 +23,7 @@ import cep1 from "../images/cep1.png";
 import cep2 from "../images/cep2.png";
 import cep3 from "../images/cep3.gif";
 
-import video_capa from "../videos/capa.mp4";
+// import video_capa from "../videos/capa.mp4";
 
 import { gsap } from "gsap";
 
@@ -195,17 +195,17 @@ export function QuadroUm(
 
 	return (
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[10vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[30vh]">
 				<styles.TextCard3>
 					John ouviu dizer que o Rio era um destino incrível. Por isso, ele desembarca pronto para curtir um mega show em Copacabana e aproveitar tudo que a cidade tem a oferecer. Seja bem vindo, John.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
+			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[250vh]">
 				<styles.TextCard3>
 					E ele já chega somando! Ao pagar pela passagem aérea e pelo transporte que o leva até o hotel, ele começa a deixar seu rastro positivo de contribuição. Marina, funcionária do Galeão, e Josiel, motorista de aplicativo, agradecem.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[400vh]">
 				<styles.TextCard3>
 					Entre 2022 e 2023, a movimentação de passageiros no Galeão quase dobrou: um crescimento de 86% em um ano. Por isso, as taxas de ocupação dos hoteis próximos aos eventos chegam a 100%. Isso porque a cidade recebe entre 200 e 400 mil turistas em cada megashow.
 				</styles.TextCard3>

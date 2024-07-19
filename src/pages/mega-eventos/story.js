@@ -34,12 +34,12 @@ export default function MegaEventos() {
       trigger: "#quadro_um",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video_um");
-        let frameNumber = Math.floor(self.progress * 497) + 1;
-        if (frameNumber > 450) {
-          frameNumber = 450;
+        let frameNumber = Math.floor(self.progress * 600) + 1;
+        if (frameNumber > 548) {
+          frameNumber = 548;
         }
 
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/${frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${frameNumber}.jpg`;
         video.src = imageUrl;
         console.log(imageUrl);
       },
@@ -144,7 +144,7 @@ export default function MegaEventos() {
             style={{ position: "sticky", top: "calc(50vh - 310px)" }}
             id={"quadro_video_um"}
             src={
-              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_um/1.jpg"
+              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/1.jpg"
             }
             className="h-auto w-[90%] lg:h-auto lg:w-[46%] lg:max-h-[620px] lg:max-w-[620px] border-4 border-black"
           ></img>
