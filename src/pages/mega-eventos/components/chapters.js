@@ -417,20 +417,20 @@ export function QuadroQuatro(
 
 	return (
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[10vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[110vh]">
 				<styles.TextCard3>
 					Depois de visitar a Lapa, nosso turista decide levar um pedacinho do Rio para casa.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
+			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[250vh]">
 				<styles.TextCard3>
 					Na lojinha de Solange, no Saara, maior comércio popular da cidade, John se encanta com uma camiseta estampada com o Cristo Redentor e a compra como lembrança, movimentando o comércio de bens. Além disso, ele passa no barbeiro Luiz e faz um corte de cria, aquecendo o setor de serviços. O que é importante, porque 85% da economia do Rio vem daí.				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[350vh]">
 				<styles.TextCard3>
 					Durante grandes eventos, o Rio arrecada mais com impostos. No show da cantora Madonna, por exemplo, estima-se que a arrecadação de impostos tenha aumentado em 20%, um aumento de R$ 10,2 milhões em comparação com o mesmo mês do ano anterior. O valor é superior ao desembolsado pela prefeitura para cobrir o custo do próprio show! E o retorno esperado é quase 30 vezes o investido: R$293,4 milhões.				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[300vh]">
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[500vh]">
 				<styles.TextCard3>
 					No Carnaval, o Rio arrecada quase R$500 milhões com todos os serviços, ligados ou não à festa. São R$5 bilhões em movimentação graças à folia. Já no Réveillon, esse valor é de R$3 bilhões, e a cidade arrecada quase meio bilhão de reais em impostos, o que corresponde a 8,8% da arrecadação anual dos impostos de turismo e eventos.				</styles.TextCard3>
 			</styles.ContainerCard3>
