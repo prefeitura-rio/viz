@@ -35,98 +35,79 @@ export default function MegaEventos() {
       trigger: "#quadro_um",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video_um");
-        let frameNumber = Math.floor(self.progress * 600) + 1;
+        let frameNumber = Math.floor(self.progress * 548) + 1;
         if (frameNumber > 548) {
           frameNumber = 548;
         }
 
         const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${frameNumber}.jpg`;
         video.src = imageUrl;
-        console.log(imageUrl);
+        console.log("frameNumber", frameNumber);
       },
     });
-
-    // ScrollTrigger.create({
-    //   trigger: "#parteum",
-    //   onUpdate: (self) => {
-    //     const video = document.getElementById("quadro_video_um");
-    //     const progress = self.progress;
-    //     const imageUrl =
-    //       progress < 0.5
-    //         ? "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/450.jpg"
-    //         : "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/enchentes/quadro_dois/1.jpg";
-    //     video.src = imageUrl;
-    //   },
-    // });
-
     ScrollTrigger.create({
       trigger: "#quadro_dois",
       onUpdate: (self) => {
-        const video = document.getElementById("quadro_video_dois");
-        let frameNumber = Math.floor(self.progress * 500) + 1;
-        if (frameNumber > 494) {
-          frameNumber = 494;
+        const video = document.getElementById("quadro_video_um");
+        let frameNumber = Math.floor(self.progress * 493) + 1;
+        if (frameNumber > 493) {
+          frameNumber = 493;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_dois/${frameNumber}.jpg`;
-        console.log(imageUrl);
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + frameNumber}.jpg`;
         video.src = imageUrl;
+        console.log("frameNumber2", frameNumber);
       },
     });
-
-
     ScrollTrigger.create({
       trigger: "#quadro_tres",
       onUpdate: (self) => {
-        const video = document.getElementById("quadro_video_tres");
-        let frameNumber = Math.floor(self.progress * 185) + 1;
-        if (frameNumber > 184) {
-          frameNumber = 184;
+        const video = document.getElementById("quadro_video_um");
+        let frameNumber = Math.floor(self.progress * 191) + 1;
+        if (frameNumber > 191) {
+          frameNumber = 191;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_tres/${frameNumber}.jpg`;
-        console.log(imageUrl);
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + 493 + frameNumber}.jpg`;
         video.src = imageUrl;
+        console.log("frameNumber3", frameNumber);
       },
     });
-
     ScrollTrigger.create({
       trigger: "#quadro_quatro",
       onUpdate: (self) => {
-        const video = document.getElementById("quadro_video_quatro");
-        let frameNumber = Math.floor(self.progress * 275) + 1;
-        if (frameNumber > 274) {
-          frameNumber = 274;
+        const video = document.getElementById("quadro_video_um");
+        let frameNumber = Math.floor(self.progress * 268) + 1;
+        if (frameNumber > 268) {
+          frameNumber = 268;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_quatro/${frameNumber}.jpg`;
-        console.log(imageUrl);
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + 493 + 191 + frameNumber}.jpg`;
         video.src = imageUrl;
+        console.log("frameNumber3", frameNumber);
       },
     });
-
     ScrollTrigger.create({
       trigger: "#quadro_cinco",
       onUpdate: (self) => {
-        const video = document.getElementById("quadro_video_cinco");
-        let frameNumber = Math.floor(self.progress * 450) + 1;
-        if (frameNumber > 450) {
-          frameNumber = 450;
+        const video = document.getElementById("quadro_video_um");
+        let frameNumber = Math.floor(self.progress * 187) + 1;
+        if (frameNumber > 187) {
+          frameNumber = 187;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_cinco/${frameNumber}.jpg`;
-        console.log(imageUrl);
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + 493 + 191 + 268 + frameNumber}.jpg`;
         video.src = imageUrl;
+        console.log("frameNumber3", frameNumber);
       },
     });
-
     ScrollTrigger.create({
       trigger: "#quadro_seis",
       onUpdate: (self) => {
-        const video = document.getElementById("quadro_video_seis");
-        let frameNumber = Math.floor(self.progress * 450) + 1;
-        if (frameNumber > 450) {
-          frameNumber = 450;
+        const video = document.getElementById("quadro_video_um");
+        let frameNumber = Math.floor(self.progress * 188) + 1;
+        if (frameNumber > 188) {
+          frameNumber = 188;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_seis/${frameNumber}.jpg`;
-        console.log(imageUrl);
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + 493 + 191 + 268 + 187 + frameNumber}.jpg`;
         video.src = imageUrl;
+        console.log("frameNumber3", frameNumber);
       },
     });
 
@@ -140,7 +121,7 @@ export default function MegaEventos() {
 
         {/* ******************************** Video Scrolling 1 ********************************  */}
 
-        <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", height: "4200vh", width: "100%", alignItems: "center" }}>
           <img
             style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_um"}
@@ -150,12 +131,18 @@ export default function MegaEventos() {
             className="h-[450px] w-[360px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
           <chapterDiv.QuadroUm id={"quadro_um"} />
+          <chapterDiv.QuadroDois id={"quadro_dois"} />
+          <chapterDiv.QuadroTres id={"quadro_tres"} />
+          <chapterDiv.QuadroQuatro id={"quadro_quatro"} />
+          <chapterDiv.QuadroCinco id={"quadro_cinco"} />
+          <chapterDiv.QuadroSeis id={"quadro_seis"} />
+          {/* <chapterDiv.QuadroTres id={"quadro_seis"} /> */}
         </div>
         <chapterDiv.ParteUm id={"parteum"} />
         {/* ******************************** Video Scrolling 1 Fim ********************************  */}
 
         {/* ******************************** Video Scrolling 2 ********************************  */}
-        <div style={{ display: "flex", flexDirection: "column", height: "700vh", width: "100%", alignItems: "center" }}>
+        {/* <div style={{ display: "flex", flexDirection: "column", height: "700vh", width: "100%", alignItems: "center" }}>
           <img
             style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_dois"}
@@ -166,11 +153,11 @@ export default function MegaEventos() {
           ></img>
           <chapterDiv.QuadroDois id={"quadro_dois"} />
         </div>
-        <chapterDiv.ParteDois id={"partedois"} />
+        <chapterDiv.ParteDois id={"partedois"} /> */}
         {/* ******************************** Video Scrolling 2 Fim ********************************  */}
 
         {/* ******************************** Video Scrolling 3 ********************************  */}
-        <div style={{ display: "flex", flexDirection: "column", height: "700vh", width: "100%", alignItems: "center" }}>
+        {/* <div style={{ display: "flex", flexDirection: "column", height: "700vh", width: "100%", alignItems: "center" }}>
           <img
             style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_tres"}
@@ -181,11 +168,11 @@ export default function MegaEventos() {
           ></img>
           <chapterDiv.QuadroTres id={"quadro_tres"} />
         </div>
-        <chapterDiv.ParteTres id={"partetres"} />
+        <chapterDiv.ParteTres id={"partetres"} /> */}
         {/* ******************************** Video Scrolling 3 Fim ********************************  */}
 
         {/* ******************************** Video Scrolling 4 ********************************  */}
-        <div style={{ display: "flex", flexDirection: "column", height: "720vh", width: "100%", alignItems: "center" }}>
+        {/* <div style={{ display: "flex", flexDirection: "column", height: "720vh", width: "100%", alignItems: "center" }}>
           <img
             style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_quatro"}
@@ -196,11 +183,11 @@ export default function MegaEventos() {
           ></img>
           <chapterDiv.QuadroQuatro id={"quadro_quatro"} />
         </div>
-        <chapterDiv.ParteQuatro id={"partequatro"} />
+        <chapterDiv.ParteQuatro id={"partequatro"} /> */}
         {/* ******************************** Video Scrolling 4 Fim ********************************  */}
 
         {/* ******************************** Video Scrolling 5 ********************************  */}
-        <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
+        {/* <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
             style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_cinco"}
@@ -211,11 +198,11 @@ export default function MegaEventos() {
           ></img>
           <chapterDiv.QuadroCinco id={"quadro_cinco"} />
         </div>
-        <chapterDiv.ParteCinco id={"partecinco"} />
+        <chapterDiv.ParteCinco id={"partecinco"} /> */}
         {/* ******************************** Video Scrolling 5 Fim ********************************  */}
 
         {/* ******************************** Video Scrolling 6 ********************************  */}
-        <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
+        {/* <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
           <img
             style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_seis"}
@@ -226,7 +213,7 @@ export default function MegaEventos() {
           ></img>
           <chapterDiv.QuadroSeis id={"quadro_seis"} />
         </div>
-        <chapterDiv.ParteSeis id={"parteseis"} />
+        <chapterDiv.ParteSeis id={"parteseis"} /> */}
         {/* ******************************** Video Scrolling 6 Fim ********************************  */}
 
 
