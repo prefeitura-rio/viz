@@ -32,7 +32,7 @@ export default function MegaEventos() {
     });
 
     ScrollTrigger.create({
-      trigger: "#quadro_um",
+      trigger: "#quadro",
       onUpdate: (self) => {
         const video = document.getElementById("quadro_video_um");
         let frameNumber = Math.floor(self.progress * 548) + 1;
@@ -40,7 +40,7 @@ export default function MegaEventos() {
           frameNumber = 548;
         }
 
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro/${frameNumber}.jpg`;
         video.src = imageUrl;
       },
     });
@@ -52,7 +52,7 @@ export default function MegaEventos() {
         if (frameNumber > 493) {
           frameNumber = 493;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro/${548 + frameNumber}.jpg`;
         video.src = imageUrl;
       },
     });
@@ -64,7 +64,7 @@ export default function MegaEventos() {
         if (frameNumber > 191) {
           frameNumber = 191;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + 493 + frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro/${548 + 493 + frameNumber}.jpg`;
         video.src = imageUrl;
       },
     });
@@ -76,7 +76,7 @@ export default function MegaEventos() {
         if (frameNumber > 268) {
           frameNumber = 268;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + 493 + 191 + frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro/${548 + 493 + 191 + frameNumber}.jpg`;
         video.src = imageUrl;
       },
     });
@@ -88,7 +88,7 @@ export default function MegaEventos() {
         if (frameNumber > 187) {
           frameNumber = 187;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + 493 + 191 + 268 + frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro/${548 + 493 + 191 + 268 + frameNumber}.jpg`;
         video.src = imageUrl;
       },
     });
@@ -100,7 +100,7 @@ export default function MegaEventos() {
         if (frameNumber > 188) {
           frameNumber = 188;
         }
-        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + 493 + 191 + 268 + 187 + frameNumber}.jpg`;
+        const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro/${548 + 493 + 191 + 268 + 187 + frameNumber}.jpg`;
         video.src = imageUrl;
       },
     });
@@ -120,11 +120,11 @@ export default function MegaEventos() {
             style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
             id={"quadro_video_um"}
             src={
-              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/1.jpg"
+              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro/1.jpg"
             }
             className="h-[450px] w-[360px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
           ></img>
-          <chapterDiv.QuadroUm id={"quadro_um"} />
+          <chapterDiv.QuadroUm id={"quadro"} />
           <chapterDiv.QuadroDois id={"quadro_dois"} />
           <chapterDiv.QuadroTres style={{ height: "2000vh" }} id={"quadro_tres"} />
           <chapterDiv.QuadroQuatro id={"quadro_quatro"} />
