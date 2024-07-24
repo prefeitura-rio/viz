@@ -42,7 +42,6 @@ export default function MegaEventos() {
 
         const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${frameNumber}.jpg`;
         video.src = imageUrl;
-        console.log("frameNumber", frameNumber);
       },
     });
     ScrollTrigger.create({
@@ -55,7 +54,6 @@ export default function MegaEventos() {
         }
         const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + frameNumber}.jpg`;
         video.src = imageUrl;
-        console.log("frameNumber2", frameNumber);
       },
     });
     ScrollTrigger.create({
@@ -68,7 +66,6 @@ export default function MegaEventos() {
         }
         const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + 493 + frameNumber}.jpg`;
         video.src = imageUrl;
-        console.log("frameNumber3", frameNumber);
       },
     });
     ScrollTrigger.create({
@@ -81,7 +78,6 @@ export default function MegaEventos() {
         }
         const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + 493 + 191 + frameNumber}.jpg`;
         video.src = imageUrl;
-        console.log("frameNumber3", frameNumber);
       },
     });
     ScrollTrigger.create({
@@ -94,7 +90,6 @@ export default function MegaEventos() {
         }
         const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + 493 + 191 + 268 + frameNumber}.jpg`;
         video.src = imageUrl;
-        console.log("frameNumber3", frameNumber);
       },
     });
     ScrollTrigger.create({
@@ -107,7 +102,6 @@ export default function MegaEventos() {
         }
         const imageUrl = `https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_um/${548 + 493 + 191 + 268 + 187 + frameNumber}.jpg`;
         video.src = imageUrl;
-        console.log("frameNumber3", frameNumber);
       },
     });
 
@@ -132,7 +126,7 @@ export default function MegaEventos() {
           ></img>
           <chapterDiv.QuadroUm id={"quadro_um"} />
           <chapterDiv.QuadroDois id={"quadro_dois"} />
-          <chapterDiv.QuadroTres id={"quadro_tres"} />
+          <chapterDiv.QuadroTres style={{ height: "2000vh" }} id={"quadro_tres"} />
           <chapterDiv.QuadroQuatro id={"quadro_quatro"} />
           <chapterDiv.QuadroCinco id={"quadro_cinco"} />
           <chapterDiv.QuadroSeis id={"quadro_seis"} />

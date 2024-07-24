@@ -464,15 +464,23 @@ export function QuadroQuatro(
 					Depois de visitar a Lapa, nosso turista decide levar um pedacinho do Rio para casa.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[250vh]">
+			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[210vh]">
 				<styles.TextCard3>
-					Na lojinha de Solange, no Saara, maior comércio popular da cidade, John se encanta com uma camiseta estampada com o Cristo Redentor e a compra como lembrança, movimentando o comércio de bens. Além disso, ele passa no barbeiro Luiz e faz um corte de cria, aquecendo o setor de serviços. O que é importante, porque 85% da economia do Rio vem daí.				</styles.TextCard3>
+					Na lojinha de Solange, no Saara, maior comércio popular da cidade, John se encanta com uma camiseta estampada com o Cristo Redentor e a compra como lembrança, movimentando o comércio de bens. </styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[350vh]">
+			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[310vh]">
 				<styles.TextCard3>
-					Durante grandes eventos, o Rio arrecada mais com impostos. No show da cantora Madonna, por exemplo, estima-se que a arrecadação de impostos tenha aumentado em 20%, um aumento de R$ 10,2 milhões em comparação com o mesmo mês do ano anterior. O valor é superior ao desembolsado pela prefeitura para cobrir o custo do próprio show! E o retorno esperado é quase 30 vezes o investido: R$293,4 milhões.				</styles.TextCard3>
+					Além disso, ele passa no barbeiro Luiz e faz um corte de cria, aquecendo o setor de serviços. O que é importante, porque 85% da economia do Rio vem daí.				 </styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[500vh]">
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[410vh]">
+				<styles.TextCard3>
+					Durante grandes eventos, o Rio arrecada mais com impostos. No show da cantora Madonna, por exemplo, estima-se que a arrecadação de impostos tenha aumentado em 20%, um aumento de R$ 10,2 milhões em comparação com o mesmo mês do ano anterior.</styles.TextCard3>
+			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[510vh]">
+				<styles.TextCard3>
+					O valor é superior ao desembolsado pela prefeitura para cobrir o custo do próprio show! E o retorno esperado é quase 30 vezes o investido: R$293,4 milhões.				</styles.TextCard3>
+			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[590vh]">
 				<styles.TextCard3>
 					No Carnaval, o Rio arrecada quase R$500 milhões com todos os serviços, ligados ou não à festa. São R$5 bilhões em movimentação graças à folia. Já no Réveillon, esse valor é de R$3 bilhões, e a cidade arrecada quase meio bilhão de reais em impostos, o que corresponde a 8,8% da arrecadação anual dos impostos de turismo e eventos.				</styles.TextCard3>
 			</styles.ContainerCard3>
@@ -514,25 +522,29 @@ export function QuadroCinco(
 
 	return (
 		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
-			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[10vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[90vh]">
 				<styles.TextCard3>
 					Chegou a hora: o mega show em Copacabana é a atração principal da viagem de John. Ele se junta à multidão e se diverte com a música, a energia do público e a beleza do cenário.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[110vh]">
+			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[180vh]">
 				<styles.TextCard3>
 					John canta tanto que seca a garganta, dança tanto que sente fome: logo ele consome bebidas e petiscos de Félix e Genilson, ambulantes credenciados enquanto aproveita o show.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[200vh]">
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[270vh]">
 				<styles.TextCard3>
 					Assim como o ambulante ganha uma renda extra, outros profissionais também são beneficiados com a vinda de grandes eventos para a cidade do Rio
 				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[300vh]">
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[360vh]">
 				<styles.TextCard3>
-					Durante o Carnaval, por exemplo, 45 mil trabalhadores estão envolvidos na festa, sejam servidores públicos, ambulantes ou pessoas que atuam no Sambódromo. Já no Réveillon, 49 mil empregos são gerados (direta e indiretamente) para garantir que a virada do ano seja um grande espetáculo. E emprego, a gente sabe, é dignidade e segurança.
+					Durante o Carnaval, por exemplo, 45 mil trabalhadores estão envolvidos na festa, sejam servidores públicos, ambulantes ou pessoas que atuam no Sambódromo.
 				</styles.TextCard3>
+			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[450vh]">
+				<styles.TextCard3>
+					Já no Réveillon, 49 mil empregos são gerados (direta e indiretamente) para garantir que a virada do ano seja um grande espetáculo. E emprego, a gente sabe, é dignidade e segurança.				</styles.TextCard3>
 			</styles.ContainerCard3>
 			{/* <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[400vh]">
 				<styles.TextCard3>

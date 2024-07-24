@@ -13,7 +13,7 @@ import { LoadingPainelInvestimento } from "./pages/painel-investimentos/loading"
 import { LoadingEnchentes } from "./pages/enchentes/loading";
 import { LoadingMegaEventos } from "./pages/mega-eventos/loading";
 import { LoadingParques } from "./pages/parques/loading";
-
+import MetaTags from "./metaTags";
 import style, { createGlobalStyle } from "styled-components";
 import mapboxCss from "mapbox-gl/dist/mapbox-gl.css";
 import "./tailwind.css";
@@ -309,7 +309,17 @@ function App() {
         </Suspense>
         <Suspense fallback={<LoadingMegaEventos />}>
           <Routes>
-            <Route path="/mega-eventos" element={<MegaEventos />}></Route>
+            <Route path="/mega-eventos" element={
+              <>
+                <MetaTags
+                  title="Megaeventos"
+                  description="Descubra como a Prefeitura do Rio de Janeiro se beneficia de megaeventos para melhorar a cidade."
+                  thumbnail="./src/pages/mega-eventos/images/capa_megaeventos.png"
+                />
+                <MegaEventos />
+              </>
+            }
+            ></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<LoadingParques />}>
