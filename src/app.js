@@ -11,7 +11,7 @@ import { LoadingCarnaval2023 } from "./pages/carnaval-2023/loading";
 import { LoadingPlanoVerao } from "./pages/plano-verao/loading";
 import { LoadingPainelInvestimento } from "./pages/painel-investimentos/loading";
 import { LoadingEnchentes } from "./pages/enchentes/loading";
-import { LoadingMegaEventos } from "./pages/mega-eventos/loading";
+import { LoadingMegaEventos } from "./pages/megaeventos/loading";
 import { LoadingParques } from "./pages/parques/loading";
 import MetaTags from "./metaTags";
 import style, { createGlobalStyle } from "styled-components";
@@ -116,7 +116,7 @@ const Enchentes = lazy(() => {
 
 const MegaEventos = lazy(() => {
   return Promise.all([
-    import("./pages/mega-eventos/story"),
+    import("./pages/megaeventos/story"),
     new Promise((resolve) => setTimeout(resolve, 4000)),
   ]).then(([moduleExports]) => moduleExports);
 });
@@ -309,12 +309,12 @@ function App() {
         </Suspense>
         <Suspense fallback={<LoadingMegaEventos />}>
           <Routes>
-            <Route path="/mega-eventos" element={
+            <Route path="/megaeventos" element={
               <>
                 <MetaTags
                   title="Megaeventos"
                   description="Descubra como a Prefeitura do Rio de Janeiro se beneficia de megaeventos para melhorar a cidade."
-                  thumbnail="./src/pages/mega-eventos/images/capa_megaeventos.png"
+                  thumbnail="./src/pages/megaeventos/images/capa_megaeventos.png"
                 />
                 <MegaEventos />
               </>

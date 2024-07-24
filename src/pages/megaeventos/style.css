@@ -49,3 +49,26 @@
 body {
   overflow-x: hidden; /*sem scroll horizontal */
 }
+
+@keyframes flickerAnimation {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.scroll-arrow-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-arrow-container img {
+  width: 50px;
+  animation: flickerAnimation 1s infinite;
+}

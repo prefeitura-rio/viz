@@ -1,7 +1,7 @@
 import tw from "tailwind-styled-components";
 import styled from "styled-components";
-import logo from "../../pages/mega-eventos/images/logo.png";
-import gif from "../../pages/mega-eventos/images/loading.gif";
+import logo from "../../pages/megaeventos/images/logo.png";
+import gif from "../../pages/megaeventos/images/loading.gif";
 
 const LoadingDiv = tw.div`
 w-full h-screen

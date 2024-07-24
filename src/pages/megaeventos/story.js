@@ -14,7 +14,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 //style css
 import "./style.css";
 import { isMobile } from "react-device-detect";
-
+import arrowdown from "../megaeventos/images/arrowdown.png";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function MegaEventos() {
@@ -134,83 +134,6 @@ export default function MegaEventos() {
         </div>
         <chapterDiv.ParteUm id={"parteum"} />
         {/* ******************************** Video Scrolling 1 Fim ********************************  */}
-
-        {/* ******************************** Video Scrolling 2 ********************************  */}
-        {/* <div style={{ display: "flex", flexDirection: "column", height: "700vh", width: "100%", alignItems: "center" }}>
-          <img
-            style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
-            id={"quadro_video_dois"}
-            src={
-              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_dois/1.jpg"
-            }
-            className="h-[450px] w-[360px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
-          ></img>
-          <chapterDiv.QuadroDois id={"quadro_dois"} />
-        </div>
-        <chapterDiv.ParteDois id={"partedois"} /> */}
-        {/* ******************************** Video Scrolling 2 Fim ********************************  */}
-
-        {/* ******************************** Video Scrolling 3 ********************************  */}
-        {/* <div style={{ display: "flex", flexDirection: "column", height: "700vh", width: "100%", alignItems: "center" }}>
-          <img
-            style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
-            id={"quadro_video_tres"}
-            src={
-              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_tres/1.jpg"
-            }
-            className="h-[450px] w-[360px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
-          ></img>
-          <chapterDiv.QuadroTres id={"quadro_tres"} />
-        </div>
-        <chapterDiv.ParteTres id={"partetres"} /> */}
-        {/* ******************************** Video Scrolling 3 Fim ********************************  */}
-
-        {/* ******************************** Video Scrolling 4 ********************************  */}
-        {/* <div style={{ display: "flex", flexDirection: "column", height: "720vh", width: "100%", alignItems: "center" }}>
-          <img
-            style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
-            id={"quadro_video_quatro"}
-            src={
-              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_quatro/1.jpg"
-            }
-            className="h-[450px] w-[360px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
-          ></img>
-          <chapterDiv.QuadroQuatro id={"quadro_quatro"} />
-        </div>
-        <chapterDiv.ParteQuatro id={"partequatro"} /> */}
-        {/* ******************************** Video Scrolling 4 Fim ********************************  */}
-
-        {/* ******************************** Video Scrolling 5 ********************************  */}
-        {/* <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
-          <img
-            style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
-            id={"quadro_video_cinco"}
-            src={
-              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_cinco/1.jpg"
-            }
-            className="h-[450px] w-[360px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
-          ></img>
-          <chapterDiv.QuadroCinco id={"quadro_cinco"} />
-        </div>
-        <chapterDiv.ParteCinco id={"partecinco"} /> */}
-        {/* ******************************** Video Scrolling 5 Fim ********************************  */}
-
-        {/* ******************************** Video Scrolling 6 ********************************  */}
-        {/* <div style={{ display: "flex", flexDirection: "column", height: "680vh", width: "100%", alignItems: "center" }}>
-          <img
-            style={{ position: "sticky", top: `${isMobile ? 'calc(50vh - 225px)' : 'calc(50vh - 45vh)'}` }}
-            id={"quadro_video_seis"}
-            src={
-              "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro_seis/1.jpg"
-            }
-            className="h-[450px] w-[360px] lg:h-auto lg:w-[72%] lg:max-h-[90vh] lg:max-w-[72vh] border-4 border-black"
-          ></img>
-          <chapterDiv.QuadroSeis id={"quadro_seis"} />
-        </div>
-        <chapterDiv.ParteSeis id={"parteseis"} /> */}
-        {/* ******************************** Video Scrolling 6 Fim ********************************  */}
-
-
 
         <chapterDiv.Creditos id={"creditos"} />
       </div>

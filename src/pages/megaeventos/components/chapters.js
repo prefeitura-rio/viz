@@ -28,9 +28,10 @@ import cep3 from "../images/cep3.gif";
 import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import trailImage from '../images/money.gif';
 import { useEffect } from "react";
+import arrowdown from "../images/arrowdown.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,6 +42,36 @@ const setDefaultProps = (providedProps) => {
 
 	return { ...defaultProps, ...providedProps };
 };
+
+export function useScrollArrow() {
+	const [showArrow, setShowArrow] = useState(false);
+	const sectionRef = useRef(null);
+	const scrollTimeoutRef = useRef(null);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (!sectionRef.current) return;
+			setShowArrow(false);
+			clearTimeout(scrollTimeoutRef.current);
+			const sectionTop = sectionRef.current.offsetTop;
+			const sectionHeight = sectionRef.current.offsetHeight;
+			const scrollPosition = window.scrollY + window.innerHeight;
+			scrollTimeoutRef.current = setTimeout(() => {
+				if (scrollPosition > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+					setShowArrow(true);
+				}
+			}, 1000);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+			clearTimeout(scrollTimeoutRef.current);
+		};
+	}, []);
+
+	return { showArrow, sectionRef };
+}
 
 export function Capa(
 	props = {
@@ -185,16 +216,17 @@ export function ContextoHistorico(
 	);
 }
 
-export function QuadroUm(
-	props = {
-		id: "",
-		chapRef: null,
-	}
-) {
-	props = setDefaultProps(props);
+export function QuadroUm(props) {
+	const { showArrow, sectionRef } = useScrollArrow();
 
 	return (
-		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+		<styles.ChapterGenericDiv2 ref={sectionRef} id={props.id}>
+			{showArrow && (
+				<div className="scroll-arrow-container" style={{ position: 'fixed', bottom: '10px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
+					<img src={arrowdown} alt="Keep scrolling" />
+					<p style={{ paddingTop: "15px", fontSize: "20px" }}>Continue descendo</p>
+				</div>
+			)}
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[30vh]">
 				<styles.TextCard3>
 					John ouviu dizer que o Rio era um destino incrível. Por isso, ele desembarca pronto para curtir um mega show em Copacabana e aproveitar tudo que a cidade tem a oferecer. Seja bem vindo, John.
@@ -210,111 +242,6 @@ export function QuadroUm(
 					Entre 2022 e 2023, a movimentação de passageiros no Galeão quase dobrou: um crescimento de 86% em um ano. A cidade recebe entre 200 e 400 mil turistas em cada megashow. Por isso, as taxas de ocupação dos hoteis próximos aos eventos chegam a 100%.				</styles.TextCard3>
 			</styles.ContainerCard3>
 
-			{/* *************************** Quadro 2 *************************** */}
-			{/* <styles.ContainerCard3 id={"quadro_um_card4"} className=" top-[550vh]">
-				<styles.TextCard3>
-					Hospedado com vista para a praia de Copacabana, John desfruta de uma das mais belas vistas do mundo, enquanto pensa: “isso não tem preço, e São Paulo não tem isso”.
-				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card5"} className=" top-[650vh]">
-				<styles.TextCard3>
-					Estudos indicam que estrangeiros ficam na cidade por quatro dias em média, enquanto turistas brasileiros tendem a passar duas diárias por aqui.				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card6"} className=" top-[750vh]">
-				<styles.TextCard3>
-					Depois de contribuir para a economia local ao pagar pela diária do hotel (onde trabalha Débora, a camareira), o turista quer conhecer a cidade. Onde se come bem por aqui?				</styles.TextCard3>
-			</styles.ContainerCard3> */}
-			{/* *************************** Fim Quadro 2 *************************** */}
-
-			{/* *************************** Quadro 3 *************************** */}
-			{/* <styles.ContainerCard3 id={"quadro_um_card7"} className=" top-[850vh]">
-				<styles.TextCard3>
-					No restaurante de Gustavo, no bairro mais boêmio da cidade, a Lapa, nosso turista se delicia com uma boa feijoada, uma caipirinha e um samba para acompanhar.				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card8"} className=" top-[950vh]">
-				<styles.TextCard3>
-					De quebra, ele faz a roda girar ao pagar pelo consumo e couvert dos músicos Eliomar e Marcinho, movimentando o comércio e gerando renda. Afinal, o cara do violão também tem família!				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card9"} className=" top-[1050vh]">
-				<styles.TextCard3>
-					O ticket-médio de um turista brasileiro na cidade é de R$491,01 por dia, enquanto o do turista estrangeiro é de R$561,98. Já o ticket-médio do carioca e morador da Região Metropolitana do Rio de Janeiro é de R$127,17. Pois é, John não economiza.				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card10"} className=" top-[1150vh]">
-				<styles.TextCard3>
-					Segundo o estudo “Potenciais Impactos Econômicos do Web Summit Rio” da SMDUE em parceria com a Invest.Rio, os setores em que os turistas mais gastam são hospedagem, alimentação, meios de transporte, atrações e compras. A oferta é farta!				</styles.TextCard3>
-			</styles.ContainerCard3> */}
-			{/* *************************** Fim Quadro 3 *************************** */}
-
-			{/* *************************** Quadro 4 *************************** */}
-			{/* <styles.ContainerCard3 id={"quadro_um_card11"} className=" top-[1250vh]">
-				<styles.TextCard3>
-					Depois de visitar a Lapa, nosso turista decide levar um pedacinho do Rio para casa.
-				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card12"} className=" top-[1350vh]">
-				<styles.TextCard3>
-					Na lojinha de Solange, no Saara, maior comércio popular da cidade, John se encanta com uma camiseta estampada com o Cristo Redentor e a compra como lembrança, movimentando o comércio de bens. Além disso, ele passa no barbeiro Luiz e faz um corte de cria, aquecendo o setor de serviços. O que é importante, porque 85% da economia do Rio vem daí.				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card13"} className=" top-[1450vh]">
-				<styles.TextCard3>
-					Durante grandes eventos, o Rio arrecada mais com impostos. No show da cantora Madonna, por exemplo, estima-se que a arrecadação de impostos tenha aumentado em 20%, um aumento de R$ 10,2 milhões em comparação com o mesmo mês do ano anterior. O valor é superior ao desembolsado pela prefeitura para cobrir o custo do próprio show! E o retorno esperado é quase 30 vezes o investido: R$293,4 milhões.				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card14"} className=" top-[1550vh]">
-				<styles.TextCard3>
-					No Carnaval, o Rio arrecada quase R$500 milhões com todos os serviços, ligados ou não à festa. São R$5 bilhões em movimentação graças à folia. Já no Réveillon, esse valor é de R$3 bilhões, e a cidade arrecada quase meio bilhão de reais em impostos, o que corresponde a 8,8% da arrecadação anual dos impostos de turismo e eventos.				</styles.TextCard3>
-			</styles.ContainerCard3> */}
-			{/* *************************** Fim Quadro 4 *************************** */}
-
-			{/* *************************** Quadro 5 *************************** */}
-			{/* <styles.ContainerCard3 id={"quadro_um_card15"} className=" top-[1650vh]">
-				<styles.TextCard3>
-					Chegou a hora: o mega show em Copacabana é a atração principal da viagem de John. Ele se junta à multidão e se diverte com a música, a energia do público e a beleza do cenário.
-				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card16"} className=" top-[1750vh]">
-				<styles.TextCard3>
-					John canta tanto que seca a garganta, dança tanto que sente fome: logo ele consome bebidas e petiscos de Félix e Genilson, ambulantes credenciados enquanto aproveita o show.
-				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card17"} className=" top-[1850vh]">
-				<styles.TextCard3>
-					Assim como o ambulante ganha uma renda extra, outros profissionais também são beneficiados com a vinda de grandes eventos para a cidade do Rio
-				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card18"} className=" top-[1950vh]">
-				<styles.TextCard3>
-					Durante o Carnaval, por exemplo, 45 mil trabalhadores estão envolvidos na festa, sejam servidores públicos, ambulantes ou pessoas que atuam no Sambódromo. Já no Réveillon, 49 mil empregos são gerados (direta e indiretamente) para garantir que a virada do ano seja um grande espetáculo. E emprego, a gente sabe, é dignidade e segurança.
-				</styles.TextCard3>
-			</styles.ContainerCard3> */}
-			{/* *************************** Fim Quadro 5 *************************** */}
-
-			{/* *************************** Quadro 6 *************************** */}
-			{/* <styles.ContainerCard3 id={"quadro_um_card19"} className=" top-[2050vh]">
-				<styles.TextCard3>
-					A viagem à cidade para o mega show em Copacabana foi uma experiência inesquecível para John, que já sente saudades.
-				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card20"} className=" top-[2150vh]">
-				<styles.TextCard3>
-					Ele compartilha com amigos e familiares como são as pessoas, o evento e sua nova paixão: a cidade do Rio de Janeiro.				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card21"} className=" top-[2250vh]">
-				<styles.TextCard3>
-					Enquanto isso, jornais do mundo todo mostram o sucesso do show na Cidade Maravilhosa.				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card22"} className=" top-[2350vh]">
-				<styles.TextCard3>
-					A divulgação da cidade também traz benefícios econômicos para o Rio. Com base em dados da organização do evento, compilados pela Secretaria Municipal de Turismo (SMTUR), a exposição na mídia internacional do show da Madonna no Rio foi equivalente a uma campanha de R$217,6 milhões.				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card23"} className=" top-[2450vh]">
-				<styles.TextCard3>
-					Ou seja, caso a cidade do Rio fizesse uma campanha de publicidade na imprensa internacional, teria que gastar mais de R$200 milhões, valor conquistado espontaneamente com a oficialização do show.					</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card24"} className=" top-[2550vh]">
-				<styles.TextCard3>
-					Desse jeito, os primos de John - ou melhor, João! -  já sabem para onde ir nas próximas férias.					</styles.TextCard3>
-			</styles.ContainerCard3> */}
-			{/* *************************** Fim Quadro 6 *************************** */}
 		</styles.ChapterGenericDiv2>
 	);
 }
@@ -351,18 +278,26 @@ export function QuadroDois(
 	}
 ) {
 	props = setDefaultProps(props);
+	const { showArrow, sectionRef } = useScrollArrow();
 	return (
-		<styles.ChapterQuadroDois ref={props.chapRef} id={props.id}>
-			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[120vh]">
+
+		<styles.ChapterQuadroDois ref={sectionRef} id={props.id}>
+			{showArrow && (
+				<div className="scroll-arrow-container" style={{ position: 'fixed', bottom: '10px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
+					<img src={arrowdown} alt="Keep scrolling" />
+					<p style={{ paddingTop: "15px", fontSize: "20px" }}>Continue descendo</p>
+				</div>
+			)}
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[220vh]">
 				<styles.TextCard3>
 					Hospedado com vista para a praia de Copacabana, John desfruta de uma das mais belas vistas do mundo, enquanto pensa: “isso não tem preço, e São Paulo não tem isso”.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[300vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[500vh]">
 				<styles.TextCard3>
 					Estudos indicam que estrangeiros ficam na cidade por quatro dias em média, enquanto turistas brasileiros tendem a passar duas diárias por aqui.				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[480vh]">
+			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[800vh]">
 				<styles.TextCard3>
 					Depois de contribuir para a economia local ao pagar pela diária do hotel (onde trabalha Débora, a camareira), o turista quer conhecer a cidade. Onde se come bem por aqui?				</styles.TextCard3>
 			</styles.ContainerCard3>
@@ -401,9 +336,17 @@ export function QuadroTres(
 	}
 ) {
 	props = setDefaultProps(props);
+	const { showArrow, sectionRef } = useScrollArrow();
+
 
 	return (
-		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+		<styles.ChapterGenericDiv2 ref={sectionRef} id={props.id}>
+			{showArrow && (
+				<div className="scroll-arrow-container" style={{ position: 'fixed', bottom: '10px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
+					<img src={arrowdown} alt="Keep scrolling" />
+					<p style={{ paddingTop: "15px", fontSize: "20px" }}>Continue descendo</p>
+				</div>
+			)}
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[110vh]">
 				<styles.TextCard3>
 					No restaurante de Gustavo, no bairro mais boêmio da cidade, a Lapa, nosso turista se delicia com uma boa feijoada, uma caipirinha e um samba para acompanhar.				</styles.TextCard3>
@@ -456,9 +399,16 @@ export function QuadroQuatro(
 	}
 ) {
 	props = setDefaultProps(props);
+	const { showArrow, sectionRef } = useScrollArrow();
 
 	return (
-		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+		<styles.ChapterGenericDiv2 ref={sectionRef} id={props.id}>
+			{showArrow && (
+				<div className="scroll-arrow-container" style={{ position: 'fixed', bottom: '10px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
+					<img src={arrowdown} alt="Keep scrolling" />
+					<p style={{ paddingTop: "15px", fontSize: "20px" }}>Continue descendo</p>
+				</div>
+			)}
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[110vh]">
 				<styles.TextCard3>
 					Depois de visitar a Lapa, nosso turista decide levar um pedacinho do Rio para casa.
@@ -519,9 +469,16 @@ export function QuadroCinco(
 	}
 ) {
 	props = setDefaultProps(props);
+	const { showArrow, sectionRef } = useScrollArrow();
 
 	return (
-		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+		<styles.ChapterGenericDiv2 ref={sectionRef} id={props.id}>
+			{showArrow && (
+				<div className="scroll-arrow-container" style={{ position: 'fixed', bottom: '10px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
+					<img src={arrowdown} alt="Keep scrolling" />
+					<p style={{ paddingTop: "15px", fontSize: "20px" }}>Continue descendo</p>
+				</div>
+			)}
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[90vh]">
 				<styles.TextCard3>
 					Chegou a hora: o mega show em Copacabana é a atração principal da viagem de John. Ele se junta à multidão e se diverte com a música, a energia do público e a beleza do cenário.
@@ -606,9 +563,15 @@ export function QuadroSeis(
 	}
 ) {
 	props = setDefaultProps(props);
-
+	const { showArrow, sectionRef } = useScrollArrow();
 	return (
-		<styles.ChapterGenericDiv2 ref={props.chapRef} id={props.id}>
+		<styles.ChapterGenericDiv2 ref={sectionRef} id={props.id}>
+			{showArrow && (
+				<div className="scroll-arrow-container" style={{ position: 'fixed', bottom: '10px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
+					<img src={arrowdown} alt="Keep scrolling" />
+					<p style={{ paddingTop: "15px", fontSize: "20px" }}>Continue descendo</p>
+				</div>
+			)}
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[10vh]">
 				<styles.TextCard3>
 					A viagem à cidade para o mega show em Copacabana foi uma experiência inesquecível para John, que já sente saudades.
