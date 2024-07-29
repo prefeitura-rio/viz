@@ -191,7 +191,7 @@ export function ContextoHistorico(
 						Setores como hotelaria, gastronomia, comércio e serviços são diretamente impactados, aumentando faturamentos e recolhimento de impostos, o que beneficia toda a população carioca. Além disso, a demanda gerada por estes eventos cria milhares de empregos temporários e permanentes.
 						<br />
 						<br />
-						Neste dataviz, elaborado pelo Escritório de Dados da Prefeitura da Cidade do Rio de Janeiro em parceria com a Secretaria Municipal de Desenvolvimento Urbano e Econômico do Rio de Janeiro (SMDUE), você acompanhará a viagem de John, um turista que veio à cidade para assistir a um megashow, e verá como sua presença alimenta uma longa cadeia econômica. Spoiler: no fim, John se apaixona… mas por quem será?
+						Neste dataviz, elaborado pelo Escritório de Dados da Prefeitura da Cidade do Rio de Janeiro em parceria com a Secretaria Municipal de Desenvolvimento Urbano e Econômico do Rio de Janeiro (SMDUE) e com o Instituto Fundação João Goulart (FJG), você acompanhará a viagem de John, um turista que veio à cidade para assistir a um megashow, e verá como sua presença alimenta uma longa cadeia econômica. Spoiler: no fim, John se apaixona… mas por quem será?
 						<br />
 						<br />
 					</styles.TextCard1>
@@ -658,6 +658,7 @@ export function Creditos(
 					Lucas Tavares <br />
 					Marcel Grillo Balassiano <br />
 					Mateus Lana <br />
+					Pedro Arias <br />
 					Pedro Meneghel <br />
 					Renata Paes Leme <br />
 				</styles.TextCreditos1>
@@ -680,6 +681,10 @@ export function Creditos(
 					SECRETÁRIO DE DESENVOLVIMENTO URBANO E ECONÔMICO
 				</styles.TextCreditos>
 				<styles.TextCreditos1>Chicão Bulhões</styles.TextCreditos1>
+				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
+					Fundação João Goulart
+				</styles.TextCreditos>
+				<styles.TextCreditos1>Rafaela Bastos</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
 					Prefeito
 				</styles.TextCreditos>
