@@ -11,8 +11,9 @@ import { LoadingCarnaval2023 } from "./pages/carnaval-2023/loading";
 import { LoadingPlanoVerao } from "./pages/plano-verao/loading";
 import { LoadingPainelInvestimento } from "./pages/painel-investimentos/loading";
 import { LoadingEnchentes } from "./pages/enchentes/loading";
+import { LoadingMegaEventos } from "./pages/megaeventos/loading";
 import { LoadingParques } from "./pages/parques/loading";
-
+import MetaTags from "./metaTags";
 import style, { createGlobalStyle } from "styled-components";
 import mapboxCss from "mapbox-gl/dist/mapbox-gl.css";
 import "./tailwind.css";
@@ -33,6 +34,11 @@ const PainelAlagamentoRecenteComando = lazy(() =>
   import("./pages/painel-alagamento-recente-comando/story")
 );
 const PainelChuva = lazy(() => import("./pages/painel-chuva/story"));
+const RoutePath = lazy(() => import("./pages/route-path/story"));
+const RoutePathNew = lazy(() =>
+  import("./pages/route-path-new-response/story")
+);
+
 // const PainelChuvaPassadoPluviometroAlertario = lazy(() =>
 //   import("./pages/painel-chuva-passado-pluviometro-alertario/story")
 // );
@@ -108,6 +114,13 @@ const Enchentes = lazy(() => {
   ]).then(([moduleExports]) => moduleExports);
 });
 
+const MegaEventos = lazy(() => {
+  return Promise.all([
+    import("./pages/megaeventos/story"),
+    new Promise((resolve) => setTimeout(resolve, 4000)),
+  ]).then(([moduleExports]) => moduleExports);
+});
+
 const Parques = lazy(() => {
   return Promise.all([
     import("./pages/parques/story"),
@@ -160,6 +173,16 @@ function App() {
         <Suspense fallback={<></>}>
           <Routes>
             <Route path="/chuva" element={<PainelChuva />}></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route path="/routepath" element={<RoutePath />}></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Routes>
+            <Route path="/routepathnew" element={<RoutePathNew />}></Route>
           </Routes>
         </Suspense>
         {/* <Suspense fallback={<></>}>
@@ -284,6 +307,21 @@ function App() {
             <Route path="/enchentes" element={<Enchentes />}></Route>
           </Routes>
         </Suspense>
+        <Suspense fallback={<LoadingMegaEventos />}>
+          <Routes>
+            <Route path="/megaeventos" element={
+              <>
+                <MetaTags
+                  title="Megaeventos"
+                  description="Descubra como a Prefeitura do Rio de Janeiro se beneficia de megaeventos para melhorar a cidade."
+                  thumbnail="./src/pages/megaeventos/images/capa_megaeventos.png"
+                />
+                <MegaEventos />
+              </>
+            }
+            ></Route>
+          </Routes>
+        </Suspense>
         <Suspense fallback={<LoadingParques />}>
           <Routes>
             <Route path="/parques" element={<Parques />}></Route>
@@ -299,10 +337,7 @@ function App() {
         </Suspense>
         <Suspense fallback={<LoadingPlanoVerao />}>
           <Routes>
-            <Route
-              path="/plano-verao"
-              element={<VizPlanoVerao />}
-            ></Route>
+            <Route path="/plano-verao" element={<VizPlanoVerao />}></Route>
           </Routes>
         </Suspense>
         <Suspense fallback={<LoadingSeopCep />}>
@@ -312,7 +347,10 @@ function App() {
         </Suspense>
         <Suspense fallback={<LoadingSubsidioSPPO />}>
           <Routes>
-            <Route path="/especial-sppo/subsidio" element={<SubsidioSPPO />} />
+            <Route
+              path="/especial-sppo/subsidio"
+              element={<SubsidioSPPO />}
+            />
           </Routes>
         </Suspense>
         <Suspense fallback={<></>}>
