@@ -239,7 +239,7 @@ export function QuadroUm(props) {
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[400vh]">
 				<styles.TextCard3>
-					Entre 2022 e 2023, a movimentação de passageiros no Galeão quase dobrou: um crescimento de 86% em um ano. A cidade recebe entre 200 e 400 mil turistas em cada megashow. Por isso, as taxas de ocupação dos hoteis próximos aos eventos chegam a 100%.				</styles.TextCard3>
+					Entre 2022 e 2023, a movimentação de passageiros no Galeão quase dobrou: um crescimento de 86% em um ano. A cidade recebeu 1,3 milhões de turistas estrangeiros e 16,4 milhões de turistas nacionais em 2023, totalizando 17,8 milhões turistas, segundo a Secretaria Municipal de Turismo do Rio de Janeiro (SMTUR).				</styles.TextCard3>
 			</styles.ContainerCard3>
 
 		</styles.ChapterGenericDiv2>
@@ -295,7 +295,7 @@ export function QuadroDois(
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[500vh]">
 				<styles.TextCard3>
-					Estudos indicam que estrangeiros ficam na cidade por quatro dias em média, enquanto turistas brasileiros tendem a passar duas diárias por aqui.				</styles.TextCard3>
+					Estudos indicam que estrangeiros ficam na cidade por 7 dias em média, enquanto turistas brasileiros tendem a passar quase 6 diárias por aqui.				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[800vh]">
 				<styles.TextCard3>
@@ -357,7 +357,7 @@ export function QuadroTres(
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[420vh]">
 				<styles.TextCard3>
-					O ticket-médio de um turista brasileiro na cidade é de R$491,01 por dia, enquanto o do turista estrangeiro é de R$561,98. Já o ticket-médio do carioca e morador da Região Metropolitana do Rio de Janeiro é de R$127,17. Pois é, John não economiza.				</styles.TextCard3>
+					O ticket-médio de um turista brasileiro na cidade é de R$384,35 por dia, enquanto o do turista estrangeiro é de R$462,20. Pois é, John não economiza.			</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[520vh]">
 				<styles.TextCard3>
@@ -424,15 +424,12 @@ export function QuadroQuatro(
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[410vh]">
 				<styles.TextCard3>
-					Durante grandes eventos, o Rio arrecada mais com impostos. No show da cantora Madonna, por exemplo, estima-se que a arrecadação de impostos tenha aumentado em 20%, um aumento de R$ 10,2 milhões em comparação com o mesmo mês do ano anterior.</styles.TextCard3>
+					Durante grandes eventos, o Rio arrecada mais com impostos. Os setores de eventos e turismo são responsáveis pela arrecadação de mais de R$300 milhões de impostos (ISS) por ano. </styles.TextCard3>
 			</styles.ContainerCard3>
+
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[510vh]">
 				<styles.TextCard3>
-					O valor é superior ao desembolsado pela prefeitura para cobrir o custo do próprio show! E o retorno esperado é quase 30 vezes o investido: R$293,4 milhões.				</styles.TextCard3>
-			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[590vh]">
-				<styles.TextCard3>
-					No Carnaval, o Rio arrecada quase R$500 milhões com todos os serviços, ligados ou não à festa. São R$5 bilhões em movimentação graças à folia. Já no Réveillon, esse valor é de R$3 bilhões, e a cidade arrecada quase meio bilhão de reais em impostos, o que corresponde a 8,8% da arrecadação anual dos impostos de turismo e eventos.				</styles.TextCard3>
+					O Carnaval movimenta R$5 bilhões na economia do Rio. Já o Réveillon, R$3 bilhões, e o Rock In Rio, R$1,7 bilhão. Estima-se que as seis edições do Web Summit Rio (2023-2028) devem impactar a economia carioca em R$1,5 bilhão.				</styles.TextCard3>
 			</styles.ContainerCard3>
 		</styles.ChapterGenericDiv2>
 	);
@@ -496,12 +493,13 @@ export function QuadroCinco(
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[360vh]">
 				<styles.TextCard3>
-					Durante o Carnaval, por exemplo, 45 mil trabalhadores estão envolvidos na festa, sejam servidores públicos, ambulantes ou pessoas que atuam no Sambódromo.
+					Durante o Carnaval, por exemplo, 45 mil trabalhadores estão envolvidos diretamente na festa, sejam servidores públicos, ambulantes ou pessoas que atuam no Sambódromo.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[450vh]">
 				<styles.TextCard3>
-					Já no Réveillon, 49 mil empregos são gerados (direta e indiretamente) para garantir que a virada do ano seja um grande espetáculo. E emprego, a gente sabe, é dignidade e segurança.				</styles.TextCard3>
+					Já no Réveillon, quase 50 mil empregos são gerados (direta e indiretamente) para garantir que a virada do ano seja um grande espetáculo. E emprego, a gente sabe, é dignidade e segurança.
+				</styles.TextCard3>
 			</styles.ContainerCard3>
 			{/* <styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[400vh]">
 				<styles.TextCard3>
@@ -587,7 +585,7 @@ export function QuadroSeis(
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[300vh]">
 				<styles.TextCard3>
-					A divulgação da cidade também traz benefícios econômicos para o Rio. Com base em dados da organização do evento, compilados pela Secretaria Municipal de Turismo (SMTUR), a exposição na mídia internacional do show da Madonna no Rio foi equivalente a uma campanha de R$217,6 milhões.				</styles.TextCard3>
+					A divulgação da cidade também traz benefícios econômicos para o Rio. Com base em dados da organização do evento, compilados pela Secretaria Municipal de Turismo (SMTUR), a exposição na mídia internacional do anúncio do show da Madonna no Rio foi equivalente a uma campanha de R$217,6 milhões.				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[400vh]">
 				<styles.TextCard3>
@@ -595,7 +593,7 @@ export function QuadroSeis(
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[500vh]">
 				<styles.TextCard3>
-					Desse jeito, os primos de John - ou melhor, João! -  já sabem para onde ir nas próximas férias.					</styles.TextCard3>
+					Desse jeito, os amigos de John - ou melhor, João! -  já sabem para onde ir nas próximas férias.					</styles.TextCard3>
 			</styles.ContainerCard3>
 		</styles.ChapterGenericDiv2>
 	);
@@ -661,12 +659,16 @@ export function Creditos(
 					Marcel Grillo Balassiano <br />
 					Mateus Lana <br />
 					Pedro Meneghel <br />
+					Renata Paes Leme <br />
 				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px] ">
 					Agradecimentos
 				</styles.TextCreditos>
 				<styles.TextCreditos1>
+					Caroline Brito  <br />
 					Janaína Salles <br />
+					Miguel Sebastian Saavedra <br />
+					Rafael Lisboa <br />
 				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
 					CHEFE EXECUTIVO DO ESCRITÓRIO DE DADOS
