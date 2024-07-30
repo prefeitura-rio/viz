@@ -668,6 +668,7 @@ export function Creditos(
 				<styles.TextCreditos1>
 					Caroline Brito  <br />
 					Janaína Salles <br />
+					Jeferson Monteiro <br />
 					Miguel Sebastian Saavedra <br />
 					Rafael Lisboa <br />
 				</styles.TextCreditos1>
@@ -685,6 +686,10 @@ export function Creditos(
 					Fundação João Goulart
 				</styles.TextCreditos>
 				<styles.TextCreditos1>Rafaela Bastos</styles.TextCreditos1>
+				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
+					Secretaria de Turismo
+				</styles.TextCreditos>
+				<styles.TextCreditos1>Daniela Maia</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
 					Prefeito
 				</styles.TextCreditos>
