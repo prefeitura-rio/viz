@@ -142,6 +142,11 @@ export default function Home() {
         <li>
           <Link to="/megaeventos">Especial | Mega Eventos</Link>
         </li>
+        <li>
+          <Link to="/civitas">
+            Especial | Civitas
+          </Link>
+        </li>
       </lu>
     </div>
   );
