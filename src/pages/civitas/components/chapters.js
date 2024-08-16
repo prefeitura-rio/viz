@@ -8,7 +8,8 @@ import tw from "tailwind-styled-components";
 import logo from "../images/logo.png";
 import exemplo1 from "../images/exemplo1.png";
 import exemplo2 from "../images/exemplo2.png";
-import seop1 from "../images/seop1.png";
+import infrator from "../images/infrator.png";
+import bo from "../images/bo.png";
 import seop2 from "../images/seop2.png";
 import seop3 from "../images/seop3.png";
 import seop4 from "../images/seop4.png";
@@ -112,63 +113,56 @@ export function Intro(
   );
 }
 
-export function Solucao(
+export function Exemplo6(
   props = {
     id: "",
     chapRef: null,
   }
 ) {
   return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"solucaoTitle"}>A solução</styles.IntroTitle>
-      <styles.IntroText>
-        Para combater o crescimento desordenado da cidade, o avanço de
-        construções irregulares em áreas ambientalmente protegidas, preservar
-        vidas e asfixiar financeiramente o crime organizado, a{" "}
-        <styles.Textyellow>
-          Secretaria Municipal de Ordem Pública (SEOP) e a Secretaria Municipal
-          de Meio Ambiente da Cidade (SMAC) têm realizado operações constantes
-          de demolição destas construções,
-        </styles.Textyellow>{" "}
-        desde o começo de 2021. <br /> <br />
-        De lá para cá,{" "}
-        <styles.Textyellow>
-          mais de 1.300 imóveis não habitados, não finalizados, erguidos
-          ilegalmente e que traziam riscos à população, foram colocados abaixo.
-        </styles.Textyellow>{" "}
-        Essas ações pouparam a vida de milhares de cariocas que viviam em áreas
-        de risco.
-      </styles.IntroText>
-    </styles.IntroDiv>
+    <>
+      <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
+        <styles.ContainerCard1>
+          <styles.TextCard1>
+            Rua Dias da Cruz, Méier, 10h17. O carro é utilizado num assalto a uma agência bancária.        </styles.TextCard1>
+        </styles.ContainerCard1>
+      </styles.ChapterGenericDiv1Right>
+      <styles.ChapterGenericDiv1Left>
+        <styles.ContainerCard1>
+          <styles.TextCard1>
+            Uma testemunha vê parcialmente a placa do carro. Outra é sequestrada pelos criminosos como refém.         </styles.TextCard1>
+        </styles.ContainerCard1>
+      </styles.ChapterGenericDiv1Left>
+    </>
   );
 }
 
-export function Prejuizo(
+export function Exemplo7(
   props = {
     id: "",
     chapRef: null,
   }
 ) {
   return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.Grid>
-          <styles.Grid1>
-            <styles.BigNumber>R$</styles.BigNumber>
-            <styles.BigNumber id="number">0</styles.BigNumber>
-            <styles.BigNumber1>milhões</styles.BigNumber1>
-          </styles.Grid1>
-          <styles.TextCard>
-            Graças as operações realizadas pela Prefeitura, essas organizações
-            ilegais também sentiram no bolso.{" "}
-            <styles.Textyellow>
-              Desde 2021, as operações da secretaria acarretaram um prejuízo
-              estimado em R$646 milhões para os cofres do crime organizado.
-            </styles.Textyellow>{" "}
-          </styles.TextCard>
-        </styles.Grid>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
+    <>
+      <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
+        <styles.ContainerCard1>
+          <styles.NewsImage src={bo}></styles.NewsImage>
+          <styles.Credito>
+            Imagem:  Imagem do B.O
+          </styles.Credito>
+          <styles.TextCard1>
+            COR, 10h28. Chega à CIVITAS o ofício da Polícia Militar com o B.O do roubo/sequestro,  solicitando imagens das câmeras do local e informando a placa parcial.
+          </styles.TextCard1>
+        </styles.ContainerCard1>
+      </styles.ChapterGenericDiv1Right>
+      <styles.ChapterGenericDiv1Left >
+        <styles.ContainerCard1>
+          <styles.TextCard1>
+            COR, 10h30. A placa parcial com a descrição do carro é inserida no sistema próprio, desenvolvido pelo Prefeitura do Rio, que  conecta diversas bases de dados. Com isso, é possível gerar todo um histórico de circulação desse veículo pela cidade, mostrando diversos padrões. Esses dados são utilizados para gerar um relatório automático e auditável, que é enviado à polícia. Ao mesmo tempo, é feito o cadastramento da placa no sistema para o acionamento de alerta.        </styles.TextCard1>
+        </styles.ContainerCard1>
+      </styles.ChapterGenericDiv1Left>
+    </>
   );
 }
 
@@ -242,68 +236,34 @@ export function Exemplo2(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+    <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={exemplo2}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
         <styles.TextCard1>
-          Maitê Gomes Abreu, de 2 anos, e seu pai, Natan Gomes, de 30 anos,
-          foram encontrados mortos após nove horas de buscas entre os escombros.
-          Pai e filha foram vítimas do desabamento de um prédio de quatro
-          andares em{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://assistenciasocial.prefeitura.rio/noticias/prefeitura-atua-para-minimizar-os-impactos-do-desabamento-de-um-imovel-em-rio-das-pedras/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Rio das Pedras,
-            </a>
-          </styles.Textyellow>{" "}
-          na Zona Oeste em junho do ano passado. O imóvel era irregular.
+          Senador Vasconcelos, Rio de Janeiro, 5h43 da manhã.
         </styles.TextCard1>
       </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1Center>
+    </styles.ChapterGenericDiv1Right>
+  );
+}
+export function Exemplo3(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.TextCard1>
+          Dois homens numa moto estacionam ao lado de um Honda Civic, placa XXXXXX. Um deles desce da moto, arromba o carro e faz uma ligação direta. Os dois saem dirigindo.
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1Right>
   );
 }
 
-// export function Exemplo3(
-//   props = {
-//     id: "",
-//     chapRef: null,
-//   }
-// ) {
-//   props = setDefaultProps(props);
-
-//   return (
-//     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-//       <styles.ContainerCard1>
-//         <styles.TextCard1>
-//           Em novembro de 2021, uma tragédia: um prédio de quatro andares desabou
-//           no{" "}
-//           <styles.Textyellow>
-//             {" "}
-//             <a
-//               className="p-1"
-//               href="https://www1.folha.uol.com.br/cotidiano/2021/11/predio-de-4-andares-desaba-no-rio-e-deixa-um-morto-e-tres-feridos.shtml"
-//               target="_blank"
-//               rel="noreferrer"
-//             >
-//               Morro do Salgueiro,
-//             </a>
-//           </styles.Textyellow>{" "}
-//           na Zona Norte. Um homem de 22 anos faleceu e outras três pessoas
-//           ficaram feridas. Entre elas, uma criança de apenas quatro anos. A
-//           construção também não tinha alvará.
-//         </styles.TextCard1>
-//       </styles.ContainerCard1>
-//     </styles.ChapterGenericDiv>
-//   );
-// }
 
 export function Seop4(
   props = {
@@ -427,7 +387,7 @@ export function Seop1(
   return (
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={seop1}></styles.NewsImage>
+        <styles.NewsImage src={infrator}></styles.NewsImage>
         <styles.Credito>
           Imagem: Prefeitura da Cidade do Rio Janeiro
         </styles.Credito>
@@ -478,7 +438,7 @@ export function Zoom(
   );
 }
 
-export function Mapa(
+export function Exemplo5(
   props = {
     id: "",
     chapRef: null,
@@ -487,21 +447,33 @@ export function Mapa(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.TextCard1>
-          Manguinhos (219 demolições), Recreio dos Bandeirantes (214
-          demolições), Gardênia Azul (178 demolições), Jacarepaguá (90
-          demolições) e Campo Grande (67 demolições) foram os cinco bairros com
-          mais ações realizadas. Outros bairros localizados na Zona Sul, como
-          Botafogo (33 demolições) e São Conrado (27 demolições), e da Zona
-          Norte, como Del Castilho (38 demolições) e Mangueira (14 demolições)
-          também tiveram construções irregulares identificadas e demolidas pelo
-          poder público.
-        </styles.TextCard1>
-        <styles.NewsImage1 src={legenda}></styles.NewsImage1>
-      </styles.ContainerCard>
-    </styles.ChapterGenericDiv>
+    <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.NewsImage src={infrator}></styles.NewsImage>
+        <styles.Credito>
+          Imagem:  Imagem do suspeito
+        </styles.Credito>
+        {/* <styles.TextCard1>
+          No fim do ano passado, um imóvel onde funcionaria um supermercado, com
+          garagem subterrânea e espaços alugados, estava sendo{" "}
+          <styles.Textyellow>
+            {" "}
+            <a
+              className="p-1"
+              href="https://prefeitura.rio/ordem-publica/seop-e-mprj-realizam-operacao-para-demolir-construcao-irregular-erguida-pela-milicia-de-rio-das-pedras/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              construído irregularmente
+            </a>
+          </styles.Textyellow>{" "}
+          na Estrada do Itanhangá, em Muzema, foi demolido pela Prefeitura. Uma
+          estimativa feita em parceria com o Ministério Público avaliou que
+          criminosos investiram aproximadamente R$ 5 milhões no empreendimento
+          irregular.
+        </styles.TextCard1> */}
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1Center>
   );
 }
 
@@ -585,7 +557,7 @@ export function Acompanhe(
   );
 }
 
-export function Oeste(
+export function Exemplo4(
   props = {
     id: "",
     chapRef: null,
@@ -594,22 +566,13 @@ export function Oeste(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"zonaOesteTitle"}>
-        Onde estão localizadas as construções irregulares
-      </styles.IntroTitle>
-      <styles.IntroText>
-        Apesar de estarem presentes em todas as regiões da cidade, as{" "}
-        <styles.Textyellow>
-          construções irregulares têm maior incidência na Zona Oeste do
-          município.
-        </styles.Textyellow>{" "}
-        De todas as demolições realizadas pela atual gestão da Prefeitura, mais
-        de 70% estavam localizadas nesta região. Rio das Pedras, Muzema e
-        Recreio dos Bandeirantes, por exemplo, são locais em que são registradas
-        constantemente estas irregularidades.
-      </styles.IntroText>
-    </styles.IntroDiv>
+    <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.TextCard1>
+          Rua João Vicente, Bento Ribeiro, 6h55. O Honda Civic passa por um dos equipamentos do cerco eletrônico na Rua João Vicente, sentido Centro.
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1Right>
   );
 }
 

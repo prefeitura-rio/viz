@@ -16,7 +16,7 @@ export const CapaDiv = tw(CapaDivSC)`
   h-screen 
   flex flex-col 
   justify-center items-center 
-    bg-opacity-40 backdrop-blur
+  bg-opacity-40 backdrop-blur
 `;
 export const Wrap = tw.div`
   h-[600px] w-full
@@ -125,7 +125,7 @@ export const ChapterGenericDiv1Left = tw.div`
   items-center
   justify-center
   lg:justify-start
-  lg:p-[10%]
+  lg:p-[5%]
   text-white
   -z-10 
   `;
@@ -133,9 +133,9 @@ export const ChapterGenericDiv1Right = tw.div`
   flex 
   w-full h-[150vh] 
   items-center
-  justify-end
-  lg:justify-center
-  lg:p-[10%]
+  justify-center
+  lg:justify-end
+  lg:p-[5%]
   text-white
   -z-10 
   `;

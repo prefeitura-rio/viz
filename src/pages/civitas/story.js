@@ -51,32 +51,32 @@ export default function SubsidioSPPO() {
       //   setLayers(chapterMap.Intro().layers);
       //   break;
       case "zoom":
-        // setPosition(chapterMap.Zoom().location);
-        // setLayers(chapterMap.Zoom().layers);
+        setPosition(chapterMap.Zoom().location);
+        setLayers(chapterMap.Zoom().layers);
         break;
-      // case "exemplo1":
-      //   setPosition(chapterMap.Exemplo1().location);
-      //   setLayers(chapterMap.Exemplo1().layers);
-      //   break;
+      case "exemplo1":
+        setPosition(chapterMap.Exemplo1().location);
+        setLayers(chapterMap.Exemplo1().layers);
+        break;
       case "exemplo2":
         setPosition(chapterMap.Exemplo2().location);
         setLayers(chapterMap.Exemplo2().layers);
         break;
-      // case "exemplo3":
-      //   setPosition(chapterMap.Exemplo3().location);
-      //   setLayers(chapterMap.Exemplo3().layers);
+      case "exemplo3":
+        setPosition(chapterMap.Exemplo3().location);
+        setLayers(chapterMap.Exemplo3().layers);
+        break;
+      // case "exemplo5":
+      //   setPosition(chapterMap.Exemplo5().location);
+      //   setLayers(chapterMap.Exemplo5().layers);
       //   break;
-      case "mapa":
-        setPosition(chapterMap.Mapa().location);
-        setLayers(chapterMap.Mapa().layers);
+      case "exemplo6":
+        setPosition(chapterMap.Exemplo6().location);
+        setLayers(chapterMap.Exemplo6().layers);
         break;
-      case "solucao":
-        setPosition(chapterMap.Solucao().location);
-        setLayers(chapterMap.Solucao().layers);
-        break;
-      case "prejuizo":
-        setPosition(chapterMap.Prejuizo().location);
-        setLayers(chapterMap.Prejuizo().layers);
+      case "exemplo7":
+        setPosition(chapterMap.Exemplo7().location);
+        setLayers(chapterMap.Exemplo7().layers);
         break;
       case "grafico":
         setPosition(chapterMap.Grafico().location);
@@ -106,9 +106,9 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Acompanhe().location);
         setLayers(chapterMap.Acompanhe().layers);
         break;
-      case "oeste":
-        setPosition(chapterMap.Oeste().location);
-        setLayers(chapterMap.Oeste().layers);
+      case "exemplo4":
+        setPosition(chapterMap.Exemplo4().location);
+        setLayers(chapterMap.Exemplo4().layers);
         break;
       default:
         break;
@@ -117,7 +117,7 @@ export default function SubsidioSPPO() {
 
   const vh = (coef) => window.innerHeight * (coef / 100);
   const vw = (coef) => window.innerWidth * (coef / 100);
-
+  const [cardHeight, setCardHeight] = useState(1);
   useEffect(() => {
     gsap.defaults({ ease: "none" });
 
@@ -173,73 +173,94 @@ export default function SubsidioSPPO() {
       },
     });
 
+
+    ScrollTrigger.create({
+      trigger: "#exemplo3",
+      onToggle: () => {
+        setChapterNumberMap("exemplo3");
+      },
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const elementHeightPercent = 1 + progress * 1.8;
+        if (elementHeightPercent > 1.6) {
+          setCardHeight(elementHeightPercent);
+        } else {
+          setCardHeight(1);
+        }
+        console.log(elementHeightPercent);
+      }
+    });
+
+    // const tl13 = gsap.timeline();
+    // tl13
+    //   .set("#exemplo4", { opacity: 0 })
+    //   .to("#exemplo4", { opacity: 0, duration: 30 })
+    //   .to("#exemplo4", { opacity: 1, duration: 6 })
+    //   .to("#exemplo4", { opacity: 1, duration: 20 })
+    //   .to("#exemplo4", { opacity: 0, duration: 6 })
+    //   .to("#exemplo4", { opacity: 0, duration: 28 });
+
+    ScrollTrigger.create({
+      // animation: tl13,
+      trigger: "#exemplo4",
+      onToggle: () => {
+        setChapterNumberMap("exemplo4");
+      },
+    });
+
     // ScrollTrigger.create({
-    //   trigger: "#exemplo3",
+    //   trigger: "#exemplo5",
     //   onToggle: () => {
-    //     setChapterNumberMap("exemplo3");
+    //     setChapterNumberMap("exemplo5");
     //   },
     // });
 
-    const tl13 = gsap.timeline();
-    tl13
-      .set("#oeste", { opacity: 0 })
-      .to("#oeste", { opacity: 0, duration: 30 })
-      .to("#oeste", { opacity: 1, duration: 6 })
-      .to("#oeste", { opacity: 1, duration: 20 })
-      .to("#oeste", { opacity: 0, duration: 6 })
-      .to("#oeste", { opacity: 0, duration: 28 });
+    // const tl14 = gsap.timeline();
+    // tl14
+    //   .set("#exemplo6", { opacity: 0 })
+    //   .to("#exemplo6", { opacity: 0, duration: 30 })
+    //   .to("#exemplo6", { opacity: 1, duration: 6 })
+    //   .to("#exemplo6", { opacity: 1, duration: 20 })
+    //   .to("#exemplo6", { opacity: 0, duration: 6 })
+    //   .to("#exemplo6", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
-      animation: tl13,
-      trigger: "#oeste",
+      // animation: tl14,
+      trigger: "#exemplo6",
       onToggle: () => {
-        setChapterNumberMap("oeste");
+        setChapterNumberMap("exemplo6");
       },
-    });
-
-    ScrollTrigger.create({
-      trigger: "#mapa",
-      onToggle: () => {
-        setChapterNumberMap("mapa");
-      },
-    });
-
-    const tl14 = gsap.timeline();
-    tl14
-      .set("#solucao", { opacity: 0 })
-      .to("#solucao", { opacity: 0, duration: 30 })
-      .to("#solucao", { opacity: 1, duration: 6 })
-      .to("#solucao", { opacity: 1, duration: 20 })
-      .to("#solucao", { opacity: 0, duration: 6 })
-      .to("#solucao", { opacity: 0, duration: 28 });
-
-    ScrollTrigger.create({
-      animation: tl14,
-      trigger: "#solucao",
-      onToggle: () => {
-        setChapterNumberMap("solucao");
-      },
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const elementHeightPercent = 1 + progress * 1.8;
+        if (elementHeightPercent > 1.6) {
+          setCardHeight(elementHeightPercent);
+        } else {
+          setCardHeight(1);
+        }
+        console.log(elementHeightPercent);
+      }
     });
 
     var startCount = 0,
       num = { var: startCount };
-    function changeNumber() {
-      // id of the element you want to change
-      number.innerHTML = num.var.toFixed();
-    }
+    // function changeNumber() {
+    //   // id of the element you want to change
+    //   number.innerHTML = num.var.toFixed();
+    // }
     const tl4 = gsap.timeline();
     tl4.to(num, {
       var: 646,
       duration: 1,
-      onUpdate: changeNumber,
+      // onUpdate: changeNumber,
     });
     ScrollTrigger.create({
       animation: tl4,
-      trigger: "#prejuizo",
+      trigger: "#exemplo7",
       scrub: false,
       toggleActions: "play reverse play reverse",
       onToggle: () => {
-        setChapterNumberMap("prejuizo");
+        setChapterNumberMap("exemplo7");
       },
     });
 
@@ -325,31 +346,63 @@ export default function SubsidioSPPO() {
         mapStyle="mapbox://styles/escritoriodedados/clzu707th00ro01pc69du960f"
         layers={layers}
         location={location}
+        chapterNumberMap={chapterNumberMap}
+        cardHeight={cardHeight}
         videoInfoArray={[
           {
-            lat: -22.92640,
-            lon: -43.61339,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            lat: -22.89389,
+            lon: -43.53625,
+            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            chapterNumberMap: "exemplo2"
+          },
+          {
+            lat: -22.89389,
+            lon: -43.53625,
+            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            chapterNumberMap: "exemplo3"
+          },
+          {
+            lat: -22.86589,
+            lon: -43.35988,
+            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+            chapterNumberMap: "exemplo4",
+            ehRadar: true
           },
           {
             lat: -23.01473,
             lon: -43.57571,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+            chapterNumberMap: "exemplo1"
           },
           {
             lat: -22.99386,
             lon: -43.27872,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+            chapterNumberMap: "exemplo2"
           },
           {
             lat: -22.87866,
             lon: -43.27090,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+            chapterNumberMap: "exemplo5"
           },
           {
             lat: -22.91400,
             lon: -43.43400,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+            chapterNumberMap: "exemplo55",
+          },
+          {
+            lat: -22.90345,
+            lon: -43.28141,
+            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+            chapterNumberMap: "exemplo6",
+          },
+          {
+            lat: -22.91209,
+            lon: -43.20346,
+            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+            chapterNumberMap: "exemplo7",
           },
         ]}
         mapCSS={{
@@ -370,11 +423,11 @@ export default function SubsidioSPPO() {
       <chapterDiv.Zoom id={"zoom"} />
       <chapterDiv.Exemplo1 id={"exemplo1"} />
       <chapterDiv.Exemplo2 id={"exemplo2"} />
-      {/* <chapterDiv.Exemplo3 id={"exemplo3"} /> */}
-      <chapterDiv.Oeste id={"oeste"} />
-      <chapterDiv.Mapa id={"mapa"} />
-      <chapterDiv.Solucao id={"solucao"} />
-      <chapterDiv.Prejuizo id={"prejuizo"} />
+      <chapterDiv.Exemplo3 id={"exemplo3"} />
+      <chapterDiv.Exemplo4 id={"exemplo4"} />
+      <chapterDiv.Exemplo5 id={"exemplo5"} />
+      <chapterDiv.Exemplo6 id={"exemplo6"} />
+      <chapterDiv.Exemplo7 id={"exemplo7"} />
       <chapterDiv.Grafico id={"grafico"} />
       <chapterDiv.Acompanhe id={"acompanhe"} />
       <chapterDiv.Seop1 id={"seop1"} />

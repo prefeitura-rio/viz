@@ -31,15 +31,7 @@ export const Capa = () => {
         duration: 4000,
       },
     },
-    layers: [
-      // {
-      //   layerType: "mapbox",
-      //   targetOpacity: 1,
-      //   layer: {
-      //     id: "video-layer",
-      //   },
-      // },
-    ],
+    layers: [],
   };
 };
 
@@ -71,18 +63,18 @@ export const Intro = () => {
   };
 };
 
-export const Prejuizo = () => {
+export const Exemplo7 = () => {
   return {
     location: {
       desktop: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.20346,
+          lat: -22.91209,
         },
-        zoom: 10.38,
-        pitch: 0.0,
-        bearing: 0.0,
-        duration: 4000,
+        zoom: 17.38,
+        pitch: 90.0,
+        bearing: 0,
+        duration: 5000,
       },
       mobile: {
         center: {
@@ -97,24 +89,43 @@ export const Prejuizo = () => {
     },
     layers: [
       {
-        layerType: "reuse",
-        targetOpacity: 0.5,
-        layer: { id: "consolidado-cor" },
+        layerType: "mapbox",
+        targetOpacity: 0.8,
+        layer: {
+          ...{
+
+            "id": "mapa-4zkq0r",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "line",
+            "paint": {
+              "line-width": 3,
+              "line-opacity": 0,
+              "line-color": "hsl(56, 95%, 71%)"
+            },
+            "layout": {
+              "line-join": "round"
+            },
+            "source": "composite",
+            "source-layer": "mapa-4zkq0r"
+
+          },
+        },
       },
     ],
   };
 };
 
-export const Solucao = () => {
+export const Exemplo6 = () => {
   return {
     location: {
       desktop: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.28141,
+          lat: -22.90345,
         },
-        zoom: 10.38,
-        pitch: 0.0,
+        zoom: 15.38,
+        pitch: 45.0,
         bearing: 0.0,
         duration: 4000,
       },
@@ -130,11 +141,6 @@ export const Solucao = () => {
       },
     },
     layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 0.5,
-        layer: { id: "consolidado-cor" },
-      },
     ],
   };
 };
@@ -164,11 +170,6 @@ export const Grafico = () => {
       },
     },
     layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 0.5,
-        layer: { id: "consolidado-cor" },
-      },
     ],
   };
 };
@@ -354,7 +355,35 @@ export const Acompanhe = () => {
   };
 };
 
-export const Oeste = () => {
+export const Exemplo4 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.36001,
+          lat: -22.86610,
+        },
+        zoom: 16.38,
+        pitch: 45,
+        bearing: -45,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.45632,
+          lat: -22.92106,
+        },
+        zoom: 8.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [],
+  };
+};
+
+export const Exemplo1 = () => {
   return {
     location: {
       desktop: {
@@ -378,75 +407,7 @@ export const Oeste = () => {
         duration: 4000,
       },
     },
-    layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.5,
-        layer: {
-          ...{
-            id: "consolidado-cor",
-            type: "circle",
-            source: "composite",
-            "source-layer": "consolidado1-2cgaz2",
-            paint: {
-              "circle-radius": [
-                "match",
-                ["get", "total_demolicoes"],
-                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 16],
-                isMobile ? 3 : 7,
-                [21, 23, 24, 27, 25, 29, 31, 38, 44, 54, 33],
-                isMobile ? 10 : 25,
-                isMobile ? 20 : 50,
-              ],
-              "circle-color": [
-                "match",
-                ["get", "total_demolicoes"],
-                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 11, 13, 14, 16, 15, 20],
-                "#f1d6a5",
-                [21, 23, 24, 25, 27, 29, 31, 33, 38, 44, 54],
-                "#d5aa5d",
-                "#a96e04",
-              ],
-              "circle-opacity": 0,
-            },
-          },
-        },
-      },
-    ],
-  };
-};
-
-export const Exemplo1 = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.32527,
-          lat: -22.9864,
-        },
-        zoom: 15.85,
-        pitch: 41.0,
-        bearing: 17.2,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.32127,
-          lat: -22.9864,
-        },
-        zoom: 15.85,
-        pitch: 41.0,
-        bearing: 17.2,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 1,
-        layer: { id: "desabamento-icone" },
-      },
-    ],
+    layers: [],
   };
 };
 
@@ -455,10 +416,10 @@ export const Exemplo2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.34213,
-          lat: -22.98032,
+          lon: -43.53625,
+          lat: -22.89389,
         },
-        zoom: 15.85,
+        zoom: 13.85,
         pitch: 44.5,
         bearing: 46.0,
         duration: 4000,
@@ -476,119 +437,83 @@ export const Exemplo2 = () => {
     },
     layers: [
       {
-        layerType: "reuse",
-        targetOpacity: 1,
-        layer: { id: "desabamento-icone" },
+        layerType: "mapbox",
+        targetOpacity: 0.5,
+        layer: {
+          ...{
+
+            "id": "senadorv-8m3es0",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "fill",
+            "paint": {
+              "fill-emissive-strength": 1,
+              "fill-color": "hsl(60, 86%, 62%)",
+              "fill-opacity": 0
+            },
+            "layout": {},
+            "source": "composite",
+            "source-layer": "senadorv-8m3es0"
+
+          },
+        },
       },
     ],
   };
 };
 
-// export const Exemplo3 = () => {
-//   return {
-//     location: {
-//       desktop: {
-//         center: {
-//           lon: -43.22925,
-//           lat: -22.93012,
-//         },
-//         zoom: 15.72,
-//         pitch: 45.5,
-//         bearing: 12.4,
-//         duration: 4000,
-//       },
-//       mobile: {
-//         center: {
-//           lon: -43.22925,
-//           lat: -22.93012,
-//         },
-//         zoom: 15.72,
-//         pitch: 45.5,
-//         bearing: 12.4,
-//         duration: 4000,
-//       },
-//     },
-//     layers: [
-//       {
-//         layerType: "reuse",
-//         targetOpacity: 1,
-//         layer: { id: "desabamento-icone" },
-//       },
-//     ],
-//   };
-// };
-
-export const Zoom = () => {
+export const Exemplo3 = () => {
   return {
     location: {
       desktop: {
         center: {
-          lon: -43.32838,
-          lat: -22.98401,
+          lon: -43.53625,
+          lat: -22.89389,
         },
-        zoom: 13.6,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 15.85,
+        pitch: 44.5,
+        bearing: -46.0,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.32838,
-          lat: -22.98401,
+          lon: -43.33913,
+          lat: -22.98032,
         },
-        zoom: 12.6,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 15.85,
+        pitch: 44.5,
+        bearing: 46.0,
         duration: 4000,
       },
     },
     layers: [
       {
         layerType: "mapbox",
-        targetOpacity: 1,
+        targetOpacity: 0.5,
         layer: {
           ...{
-            id: "desabamento-icone",
-            type: "symbol",
-            source: "composite",
-            "source-layer": "desabamento1-9gi1wf",
-            layout: {
-              "icon-image": "hospital",
-              "icon-rotate": 45,
-              "icon-allow-overlap": true,
-              "icon-size": 2,
+
+            "id": "senadorv-8m3es0",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "fill",
+            "paint": {
+              "fill-emissive-strength": 1,
+              "fill-color": "hsl(60, 86%, 62%)",
+              "fill-opacity": 0
             },
-            paint: {
-              "icon-opacity": 0,
-            },
+            "layout": {},
+            "source": "composite",
+            "source-layer": "senadorv-8m3es0"
+
           },
         },
       },
-      // {
-      //   layerType: "mapbox",
-      //   targetOpacity: 1,
-      //   layer: {
-      //     id: "video-layer",
-      //     type: "raster",
-      //     source: {
-      //       type: "video",
-      //       urls: [
-      //         "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-      //       ],
-      //       coordinates: [
-      //         [-43.4787084571239, -22.95312678055636],
-      //         [-43.4787084571239, -23.007247644910493],
-      //         [-43.42101834430122, -23.007247644910493],
-      //         [-43.42101834430122, -22.95312678055636],
-      //       ],
-      //     },
-      //   },
-      // },
     ],
   };
 };
 
-export const Mapa = () => {
+export const Zoom = () => {
   return {
     location: {
       desktop: {
@@ -612,13 +537,35 @@ export const Mapa = () => {
         duration: 4000,
       },
     },
-    layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 0.5,
-        layer: { id: "consolidado-cor" },
+    layers: [],
+  };
+};
+
+export const Exemplo5 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.36001,
+          lat: -22.86610,
+        },
+        zoom: 16.38,
+        pitch: 45,
+        bearing: -45,
+        duration: 4000,
       },
-    ],
+      mobile: {
+        center: {
+          lon: -43.45632,
+          lat: -22.92106,
+        },
+        zoom: 8.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [],
   };
 };
 
