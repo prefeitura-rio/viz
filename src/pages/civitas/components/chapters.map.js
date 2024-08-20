@@ -78,8 +78,8 @@ export const Exemplo7 = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.20346,
+          lat: -22.91209,
         },
         zoom: 8.38,
         pitch: 0.0,
@@ -108,8 +108,8 @@ export const Exemplo6 = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.28141,
+          lat: -22.90345,
         },
         zoom: 8.38,
         pitch: 0.0,
@@ -226,6 +226,140 @@ export const Seop7 = () => {
     ],
   };
 };
+export const Seop8 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.41124038272067,
+          lat: -22.999586702947127,
+        },
+        zoom: 13.38,
+        pitch: 34.0,
+        bearing: -45.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.41124038272067,
+          lat: -22.999586702947127,
+        },
+        zoom: 8.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.8,
+        layer: {
+          ...{
+
+            "id": "mapa-4zkq0r",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "line",
+            "paint": {
+              "line-width": 3,
+              "line-opacity": 0,
+              "line-color": "hsl(56, 95%, 71%)"
+            },
+            "layout": {
+              "line-join": "round"
+            },
+            "source": "composite",
+            "source-layer": "mapa-4zkq0r"
+
+          },
+        },
+      },
+    ],
+  };
+};
+export const Seop9 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.41124038272067,
+          lat: -22.999586702947127,
+        },
+        zoom: 13.38,
+        pitch: 34.0,
+        bearing: -45.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.41124038272067,
+          lat: -22.999586702947127,
+        },
+        zoom: 8.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.8,
+        layer: {
+          ...{
+
+            "id": "mapa-4zkq0r",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "line",
+            "paint": {
+              "line-width": 3,
+              "line-opacity": 0,
+              "line-color": "hsl(56, 95%, 71%)"
+            },
+            "layout": {
+              "line-join": "round"
+            },
+            "source": "composite",
+            "source-layer": "mapa-4zkq0r"
+
+          },
+        },
+      },
+    ],
+  };
+};
+export const Seop10 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.41124038272067,
+          lat: -22.999586702947127,
+        },
+        zoom: 13.38,
+        pitch: 34.0,
+        bearing: -45.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.41124038272067,
+          lat: -22.999586702947127,
+        },
+        zoom: 8.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+
+    ],
+  };
+};
+
 
 export const Seop1 = () => {
   return {
@@ -242,8 +376,8 @@ export const Seop1 = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.20346,
+          lat: -22.91209,
         },
         zoom: 8.38,
         pitch: 0.0,
@@ -272,8 +406,8 @@ export const Seop2 = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.20346,
+          lat: -22.91209,
         },
         zoom: 8.38,
         pitch: 0.0,
@@ -302,8 +436,8 @@ export const Seop3 = () => {
       },
       mobile: {
         center: {
-          lon: -43.4785,
-          lat: -23.02842,
+          lon: -43.20708,
+          lat: -22.91430,
         },
         zoom: 14.71,
         pitch: 52.5,
@@ -330,8 +464,8 @@ export const Seop3_2 = () => {
       },
       mobile: {
         center: {
-          lon: -43.4785,
-          lat: -23.02842,
+          lon: -43.20708,
+          lat: -22.91430,
         },
         zoom: 14.71,
         pitch: 52.5,
@@ -359,8 +493,8 @@ export const Seop4 = () => {
       },
       mobile: {
         center: {
-          lon: -43.32128,
-          lat: -22.99349,
+          lon: -43.543917233799284,
+          lat: -22.86300034959031,
         },
         zoom: 16.14,
         pitch: 52.5,
@@ -392,8 +526,8 @@ export const Seop5 = () => {
       },
       mobile: {
         center: {
-          lon: -43.32128,
-          lat: -22.99349,
+          lon: -43.361335152023315,
+          lat: -22.867618828789663,
         },
         zoom: 16.14,
         pitch: 52.5,
@@ -448,8 +582,8 @@ export const Seop5_2 = () => {
       },
       mobile: {
         center: {
-          lon: -43.32128,
-          lat: -22.99349,
+          lon: -43.361403212469696,
+          lat: -22.86599669984288,
         },
         zoom: 16.14,
         pitch: 52.5,
@@ -504,8 +638,8 @@ export const Seop6 = () => {
       },
       mobile: {
         center: {
-          lon: -43.32128,
-          lat: -22.99349,
+          lon: -43.361403212469696,
+          lat: -22.86599669984288,
         },
         zoom: 16.14,
         pitch: 52.5,
@@ -534,8 +668,8 @@ export const Exemplo8 = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.20346,
+          lat: -22.91209,
         },
         zoom: 8.38,
         pitch: 0.0,
@@ -587,8 +721,8 @@ export const Exemplo4 = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.36001,
+          lat: -22.86610,
         },
         zoom: 8.38,
         pitch: 0.0,
@@ -643,8 +777,8 @@ export const Exemplo2 = () => {
       },
       mobile: {
         center: {
-          lon: -43.33913,
-          lat: -22.98032,
+          lon: -43.53625,
+          lat: -22.89389,
         },
         zoom: 15.85,
         pitch: 44.5,
@@ -694,8 +828,8 @@ export const Exemplo3 = () => {
       },
       mobile: {
         center: {
-          lon: -43.33913,
-          lat: -22.98032,
+          lon: -43.53625,
+          lat: -22.89389,
         },
         zoom: 15.85,
         pitch: 44.5,
@@ -773,8 +907,8 @@ export const Exemplo5 = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.36001,
+          lat: -22.86610,
         },
         zoom: 8.38,
         pitch: 0.0,

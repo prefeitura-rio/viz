@@ -150,6 +150,17 @@ export const IntroDiv = tw.div`
   lg:pr-[25%]
   lg:pl-[25%]
 `;
+export const FimDiv = tw.div`
+  w-full h-100
+  bg-opacity-40 backdrop-blur
+  flex flex-col 
+  justify-center items-center 
+  bg-black/50
+  pr-[10%] pl-[10%]
+  lg:pt-[25%]
+  lg:pr-[25%]
+  lg:pl-[25%]
+`;
 
 export const Footer = tw.div`
   w-full h-[20%]

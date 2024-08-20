@@ -291,7 +291,7 @@ class CustomMultilayerMap extends React.Component {
                         position: "relative",
                         flexDirection: "column",
                         alignItems: "center",
-                        top: "-100px",
+                        top: "-50px",
                       }}
                     >
                       {!videoInfo.ehImagem ? (
@@ -419,6 +419,62 @@ class CustomMultilayerMap extends React.Component {
                       </div>
                     </Marker>
                   )}
+                {
+                  chapterNumberMap === "seop5_2" && (
+                    <Marker
+                      latitude="-22.86599669984288"
+                      longitude="-43.361403212469696"
+                    >
+                      <div
+                        style={{
+                          position: "relative",
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          top: "-50px",
+                        }}
+                      >
+                        <img
+                          style={{
+                            transform: `scale(${chapterNumberMap === "exemplo3" || chapterNumberMap === "exemplo6"
+                              ? cardHeight
+                              : (chapterNumberMap === "exemplo8" || chapterNumberMap === "seop3_2") && cardHeight < 2
+                                ? cardHeight * 1.1
+                                : 1
+                              })`,
+                            width: `${(chapterNumberMap === "exemplo8" || chapterNumberMap === "seop3_2") && cardHeight > 2
+                              ? "100vw"
+                              : "200px"
+                              }`,
+                            zIndex: "1",
+                            border: "3px solid white",
+                            borderRadius: "5px",
+                            boxShadow: "0px 0px 10px rgba(0,0,0,0.5)",
+                            transition: "transform 0.5s",
+                          }}
+                          src={imagem16}
+                        />
+                        <div
+                          style={{
+                            width: "2px",
+                            height: "20px",
+                            backgroundColor: "white",
+                            zIndex: "0",
+                          }}
+                        ></div>
+                        <div
+                          style={{
+                            width: "5px",
+                            height: "5px",
+                            backgroundColor: "white",
+                            zIndex: "0",
+                          }}
+                        ></div>
+                      </div>
+                    </Marker>
+                  )
+                }
+
               </>
             ))
           )}

@@ -122,6 +122,18 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Seop7().location);
         setLayers(chapterMap.Seop7().layers);
         break;
+      case "seop8":
+        setPosition(chapterMap.Seop8().location);
+        setLayers(chapterMap.Seop8().layers);
+        break;
+      case "seop9":
+        setPosition(chapterMap.Seop9().location);
+        setLayers(chapterMap.Seop9().layers);
+        break;
+      case "seop10":
+        setPosition(chapterMap.Seop10().location);
+        setLayers(chapterMap.Seop10().layers);
+        break;
       case "exemplo8":
         setPosition(chapterMap.Exemplo8().location);
         setLayers(chapterMap.Exemplo8().layers);
@@ -398,6 +410,25 @@ export default function SubsidioSPPO() {
         setChapterNumberMap("seop7");
       },
     });
+    ScrollTrigger.create({
+      trigger: "#seop8",
+      onToggle: () => {
+        setChapterNumberMap("seop8");
+      },
+    });
+    // ScrollTrigger.create({
+    //   trigger: "#seop9",
+    //   onToggle: () => {
+    //     setChapterNumberMap("seop9");
+    //   },
+    // });
+    // ScrollTrigger.create({
+    //   trigger: "#seop10",
+    //   onToggle: () => {
+    //     setChapterNumberMap("seop10");
+    //   },
+    // });
+
 
     const tl11 = gsap.timeline();
     tl11
@@ -516,14 +547,14 @@ export default function SubsidioSPPO() {
             ehPin: true
           },
 
-          {
-            lat: -22.86599669984288,
-            lon: -43.361403212469696,
-            src: "imagem16.png",
-            ehImagem: true,
-            chapterNumberMap: "seop5_2",
-            ehPin: false
-          },
+          // {
+          //   lat: -22.86599669984288,
+          //   lon: -43.361403212469696,
+          //   src: "imagem16.png",
+          //   ehImagem: true,
+          //   chapterNumberMap: "seop5_2",
+          //   ehPin: false
+          // },
         ]}
         mapCSS={{
           position: "fixed",
@@ -559,7 +590,10 @@ export default function SubsidioSPPO() {
       <chapterDiv.Seop5_2 id={"seop5_2"} />
       <chapterDiv.Seop6 id={"seop6"} />
       <chapterDiv.Seop7 id={"seop7"} />
-      {/* <chapterDiv.Fim id={"fim"} /> */}
+      <chapterDiv.Seop8 id={"seop8"} />
+      <chapterDiv.Seop9 id={"seop9"} />
+      <chapterDiv.Seop10 id={"seop10"} />
+      <chapterDiv.Fim id={"fim"} />
     </>
   );
 }

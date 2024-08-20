@@ -203,6 +203,70 @@ export function Seop7(
     </>
   );
 }
+export function Seop8(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <>
+      <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      </styles.ChapterGenericDiv>
+      {/* <styles.ChapterGenericDiv1Left >
+        <styles.ContainerCard1>
+          <styles.TextCard1>
+            Os registros indicam a movimentação da moto até a Barra da Tijuca.           </styles.TextCard1>
+        </styles.ContainerCard1>
+      </styles.ChapterGenericDiv1Left> */}
+    </>
+  );
+}
+export function Seop9(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <>
+      {/* <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      </styles.ChapterGenericDiv> */}
+      <styles.ChapterGenericDiv1Center >
+        <styles.ContainerCard1>
+          <styles.TextCard1>
+            Central Disque Denúncia, 12h55.  Chega uma denúncia anônima denunciando uma pessoa refém na mesma área. Os agentes repassam as informações à polícia, que já está no local, e encontraram a moto, agora sem placa, graças às imagens das câmeras de segurança.          </styles.TextCard1>
+        </styles.ContainerCard1>
+      </styles.ChapterGenericDiv1Center>
+    </>
+  );
+}
+export function Seop10(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <>
+      {/* <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      </styles.ChapterGenericDiv> */}
+      <styles.ChapterGenericDiv1Right >
+        <styles.ContainerCard1>
+          <styles.TextCard1>
+            13h33. Graças à denúncia e ao rastreio das placas dos veículos, a polícia encontra o cativeiro, prende o segundo suspeito e liberta o refém.          </styles.TextCard1>
+        </styles.ContainerCard1>
+      </styles.ChapterGenericDiv1Right>
+    </>
+  );
+}
+
 
 export function Exemplo1(
   props = {
@@ -493,38 +557,24 @@ export function Fim(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"fimTitle"}>Próximos passos</styles.IntroTitle>
+    <styles.FimDiv ref={props.chapRef} id={props.id}>
+      <styles.IntroTitle id={"fimTitle"}>Conclusão</styles.IntroTitle>
       <styles.IntroText>
-        A marca de <styles.Textyellow>1.313 demolições,</styles.Textyellow> em
-        apenas <styles.Textyellow>um ano e meio de gestão,</styles.Textyellow> é
-        extremamente importante para a cidade.
-        <br /> <br />
-        Para continuar seu trabalho, a Prefeitura do Rio de Janeiro vem
-        investindo na melhoria da capacidade de identificação de novas
-        construções, por meio de denúncias recebidas, e também através do{" "}
-        <styles.Textyellow>
-          uso de novas tecnologias, como o uso de drones, fotografias aéreas
-          (ortofotos) e imagens de satélites.
-          <br /> <br />
-        </styles.Textyellow>{" "}
-        A Prefeitura, juntamente com as secretarias de Ordem Pública e Meio
-        Ambiente da Cidade, seguem atentas, colocando abaixo aquelas estruturas
-        erguidas irregularmente em nosso município. Continuaremos atuantes e
-        firmes no combate à ocupação desordenada na cidade e no asfixiamento
-        financeiro do crime organizado.
-        <br /> <br />{" "}
-        <styles.Textyellow>
-          A preservação de vidas é, e sempre será, o nosso objetivo.
-        </styles.Textyellow>{" "}
+        Além do cerco eletrônico, a CIVITAS atua em dois outros eixos:
+        <br></br>
+        <br></br>
+
+        A Rede de Vigilância Comunitária aproveita informações já produzidas pelos cidadãos para entender, monitorar e responder a dinâmicas criminais e incidentes de desordem de forma célere e eficaz. Utiliza diversas fontes de dados, como linhas diretas e serviços de denúncia (1746 e disque denúncia),  raspagem de redes sociais e integração com câmeras privadas para obter uma visão abrangente e dinâmica da cidade.
+        <br></br>
+        <br></br>
+        Em Controle, segurança urbana e cidadania o objetivo é criação e execução de estratégias de prevenção ao crime e à violência que podem ser implementadas com os recursos e a infraestrutura municipais. Por exemplo, uso das câmeras e Inteligência Artificial para identificar movimentações suspeitas em túneis da cidade, evitando roubos, furtos e arrastões.
+        <br></br>
+        <br></br>
+        No fim do dia, cada crime deixa um rastro. Através da integração entre vigilância, tecnologia e inteligência, a CIVITAS monitora um cinturão de tecnologia pela cidade inteira e assim dá apoio à segurança pública do Rio.
+
       </styles.IntroText>
-      <a href={"https://www.dados.rio/"}>
-        <img
-          src={logoed}
-          className="w-44 mt-[200px] lg:mt-[500px] lg:w-56"
-        ></img>
-      </a>
-    </styles.IntroDiv>
+      <div className="w-44 mt-[200px] lg:mt-[200px] lg:w-56"></div>
+    </styles.FimDiv>
   );
 }
 
