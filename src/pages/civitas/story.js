@@ -1,6 +1,6 @@
 // Mandatory.
 import { useEffect, useState, useRef } from "react";
-import MultilayerMap from "../../components/maps/multilayer_map";
+import CustomMultilayerMap from "../civitas/components/custom_multilayer_map";
 
 // Chapters
 import * as chapterMap from "./components/chapters.map";
@@ -98,13 +98,33 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Seop3().location);
         setLayers(chapterMap.Seop3().layers);
         break;
+      case "seop3_2":
+        setPosition(chapterMap.Seop3_2().location);
+        setLayers(chapterMap.Seop3_2().layers);
+        break;
       case "seop4":
         setPosition(chapterMap.Seop4().location);
         setLayers(chapterMap.Seop4().layers);
         break;
-      case "acompanhe":
-        setPosition(chapterMap.Acompanhe().location);
-        setLayers(chapterMap.Acompanhe().layers);
+      case "seop5":
+        setPosition(chapterMap.Seop5().location);
+        setLayers(chapterMap.Seop5().layers);
+        break;
+      case "seop5_2":
+        setPosition(chapterMap.Seop5_2().location);
+        setLayers(chapterMap.Seop5_2().layers);
+        break;
+      case "seop6":
+        setPosition(chapterMap.Seop6().location);
+        setLayers(chapterMap.Seop6().layers);
+        break;
+      case "seop7":
+        setPosition(chapterMap.Seop7().location);
+        setLayers(chapterMap.Seop7().layers);
+        break;
+      case "exemplo8":
+        setPosition(chapterMap.Exemplo8().location);
+        setLayers(chapterMap.Exemplo8().layers);
         break;
       case "exemplo4":
         setPosition(chapterMap.Exemplo4().location);
@@ -187,7 +207,7 @@ export default function SubsidioSPPO() {
         } else {
           setCardHeight(1);
         }
-        console.log(elementHeightPercent);
+        // console.log(elementHeightPercent);
       }
     });
 
@@ -238,7 +258,7 @@ export default function SubsidioSPPO() {
         } else {
           setCardHeight(1);
         }
-        console.log(elementHeightPercent);
+        // console.log(elementHeightPercent);
       }
     });
 
@@ -275,19 +295,29 @@ export default function SubsidioSPPO() {
 
     const tl12 = gsap.timeline();
     tl12
-      .set("#acompanhe", { opacity: 0 })
-      .to("#acompanhe", { opacity: 0, duration: 30 })
-      .to("#acompanhe", { opacity: 1, duration: 6 })
-      .to("#acompanhe", { opacity: 1, duration: 20 })
-      .to("#acompanhe", { opacity: 0, duration: 6 })
-      .to("#acompanhe", { opacity: 0, duration: 28 });
+      .set("#exemplo8", { opacity: 0 })
+      .to("#exemplo8", { opacity: 0, duration: 30 })
+      .to("#exemplo8", { opacity: 1, duration: 6 })
+      .to("#exemplo8", { opacity: 1, duration: 20 })
+      .to("#exemplo8", { opacity: 0, duration: 6 })
+      .to("#exemplo8", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
       animation: tl12,
-      trigger: "#acompanhe",
+      trigger: "#exemplo8",
       onToggle: () => {
-        setChapterNumberMap("acompanhe");
+        setChapterNumberMap("exemplo8");
       },
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const elementHeightPercent = 1 + progress * 1.8;
+        if (elementHeightPercent > 1.6) {
+          setCardHeight(elementHeightPercent);
+        } else {
+          setCardHeight(1);
+        }
+        // console.log(elementHeightPercent);
+      }
     });
 
     ScrollTrigger.create({
@@ -297,7 +327,17 @@ export default function SubsidioSPPO() {
       },
     });
 
+    const tl14 = gsap.timeline();
+    tl14
+      .set("#seop2", { opacity: 0 })
+      .to("#seop2", { opacity: 0, duration: 30 })
+      .to("#seop2", { opacity: 1, duration: 6 })
+      .to("#seop2", { opacity: 1, duration: 20 })
+      .to("#seop2", { opacity: 0, duration: 6 })
+      .to("#seop2", { opacity: 0, duration: 28 });
+
     ScrollTrigger.create({
+      animation: tl14,
       trigger: "#seop2",
       onToggle: () => {
         setChapterNumberMap("seop2");
@@ -308,13 +348,54 @@ export default function SubsidioSPPO() {
       trigger: "#seop3",
       onToggle: () => {
         setChapterNumberMap("seop3");
+      }
+    });
+
+    ScrollTrigger.create({
+      trigger: "#seop3_2",
+      onToggle: () => {
+        setChapterNumberMap("seop3_2");
       },
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const elementHeightPercent = 1 + progress * 1.8;
+        if (elementHeightPercent > 1.6) {
+          setCardHeight(elementHeightPercent);
+        } else {
+          setCardHeight(1);
+        }
+        // console.log(elementHeightPercent);
+      }
     });
 
     ScrollTrigger.create({
       trigger: "#seop4",
       onToggle: () => {
         setChapterNumberMap("seop4");
+      },
+    });
+    ScrollTrigger.create({
+      trigger: "#seop5",
+      onToggle: () => {
+        setChapterNumberMap("seop5");
+      },
+    });
+    ScrollTrigger.create({
+      trigger: "#seop5_2",
+      onToggle: () => {
+        setChapterNumberMap("seop5_2");
+      },
+    });
+    ScrollTrigger.create({
+      trigger: "#seop6",
+      onToggle: () => {
+        setChapterNumberMap("seop6");
+      },
+    });
+    ScrollTrigger.create({
+      trigger: "#seop7",
+      onToggle: () => {
+        setChapterNumberMap("seop7");
       },
     });
 
@@ -338,7 +419,7 @@ export default function SubsidioSPPO() {
 
   return (
     <>
-      <MultilayerMap
+      <CustomMultilayerMap
         interactive={false}
         scrollZoom={false}
         showLayers={false}
@@ -353,56 +434,95 @@ export default function SubsidioSPPO() {
             lat: -22.89389,
             lon: -43.53625,
             src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-            chapterNumberMap: "exemplo2"
+            chapterNumberMap: "exemplo2",
+            ehPin: false
           },
           {
             lat: -22.89389,
             lon: -43.53625,
             src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-            chapterNumberMap: "exemplo3"
+            chapterNumberMap: "exemplo3",
+            ehPin: false
           },
           {
             lat: -22.86589,
             lon: -43.35988,
             src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
             chapterNumberMap: "exemplo4",
-            ehRadar: true
+            ehRadar: true,
+            ehPin: false
           },
           {
             lat: -23.01473,
             lon: -43.57571,
             src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-            chapterNumberMap: "exemplo1"
+            chapterNumberMap: "exemplo1",
+            ehPin: false
           },
           {
             lat: -22.99386,
             lon: -43.27872,
             src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-            chapterNumberMap: "exemplo2"
+            chapterNumberMap: "exemplo2",
+            ehPin: false
           },
           {
             lat: -22.87866,
             lon: -43.27090,
             src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-            chapterNumberMap: "exemplo5"
-          },
-          {
-            lat: -22.91400,
-            lon: -43.43400,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-            chapterNumberMap: "exemplo55",
+            chapterNumberMap: "exemplo5",
+            ehPin: false
           },
           {
             lat: -22.90345,
             lon: -43.28141,
             src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
             chapterNumberMap: "exemplo6",
+            ehPin: false
           },
           {
             lat: -22.91209,
             lon: -43.20346,
             src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
             chapterNumberMap: "exemplo7",
+            ehPin: true
+          },
+          {
+            lat: -22.91209,
+            lon: -43.20346,
+            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+            chapterNumberMap: "exemplo8",
+            ehPin: false
+          },
+          {
+            lat: -22.91430,
+            lon: -43.20708,
+            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+            chapterNumberMap: "seop3",
+            ehPin: false
+          },
+          {
+            lat: -22.91430,
+            lon: -43.20708,
+            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+            chapterNumberMap: "seop3_2",
+            ehPin: false
+          },
+          {
+            lat: -22.86300034959031,
+            lon: -43.543917233799284,
+            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+            chapterNumberMap: "seop4",
+            ehPin: true
+          },
+
+          {
+            lat: -22.86599669984288,
+            lon: -43.361403212469696,
+            src: "imagem16.png",
+            ehImagem: true,
+            chapterNumberMap: "seop5_2",
+            ehPin: false
           },
         ]}
         mapCSS={{
@@ -429,12 +549,17 @@ export default function SubsidioSPPO() {
       <chapterDiv.Exemplo6 id={"exemplo6"} />
       <chapterDiv.Exemplo7 id={"exemplo7"} />
       <chapterDiv.Grafico id={"grafico"} />
-      <chapterDiv.Acompanhe id={"acompanhe"} />
+      <chapterDiv.Exemplo8 id={"exemplo8"} />
       <chapterDiv.Seop1 id={"seop1"} />
       <chapterDiv.Seop2 id={"seop2"} />
       <chapterDiv.Seop3 id={"seop3"} />
+      <chapterDiv.Seop3_2 id={"seop3_2"} />
       <chapterDiv.Seop4 id={"seop4"} />
-      <chapterDiv.Fim id={"fim"} />
+      <chapterDiv.Seop5 id={"seop5"} />
+      <chapterDiv.Seop5_2 id={"seop5_2"} />
+      <chapterDiv.Seop6 id={"seop6"} />
+      <chapterDiv.Seop7 id={"seop7"} />
+      {/* <chapterDiv.Fim id={"fim"} /> */}
     </>
   );
 }

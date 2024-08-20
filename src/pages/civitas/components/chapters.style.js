@@ -145,7 +145,7 @@ export const IntroDiv = tw.div`
   bg-opacity-40 backdrop-blur
   flex flex-col 
   justify-center items-center 
-  bg-black/50
+  bg-red-500/50
   pr-[10%] pl-[10%]
   lg:pr-[25%]
   lg:pl-[25%]

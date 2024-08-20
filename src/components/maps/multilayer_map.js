@@ -1,9 +1,7 @@
 import React from "react";
-import { Map, Marker } from "react-map-gl";
+import { Map } from "react-map-gl";
 import mapboxgl from "mapbox-gl"; // do not remove this line
 import { isMobile } from "react-device-detect";
-import { useState } from "react";
-import dialogBallon from "../../pages/civitas/images/ballon.png"
 // Theis 3 types of layers, mapbox, mapbox-style and deckgl
 
 // The following is required to stop "npm build" from transpiling mapbox code.
@@ -187,24 +185,8 @@ class MultilayerMap extends React.Component {
       this.toggleLayers(this.props.layers, true);
     }
   }
-
   // Render
   render() {
-    const { videoInfoArray, chapterNumberMap, cardHeight } = this.props;
-
-    const gridStyle = {
-      display: "grid",
-      gridTemplateColumns: "repeat(4, 1fr)",
-      gridTemplateRows: "repeat(2, 1fr)",
-      gap: "0",
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      zIndex: 2,
-      overflow: "visible", // Permite overflow
-    };
     return (
       <Map
         ref={this.state.mapRef}
@@ -227,7 +209,7 @@ class MultilayerMap extends React.Component {
         }
         {...this.state.mapSettings}
         onLoad={({ target }) => {
-          this.setState({ mapLoaded: true });
+          this.state.mapLoaded = true;
           this.toggleLayers(this.props.layers, true);
           this.startAnimation();
         }}
@@ -243,141 +225,7 @@ class MultilayerMap extends React.Component {
             }
           });
         }}
-      >
-        <div>
-
-
-          {chapterNumberMap == "capa" || chapterNumberMap == "zoom" ? (
-            <div style={gridStyle}>
-              {videoInfoArray.map((videoInfo, index) => (
-                <div key={index} style={{ position: "relative", overflow: "visible" }}>
-                  <video
-                    src={videoInfo.src}
-                    controls={false}
-                    autoPlay
-                    muted
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      zIndex: index,
-                      border: "3px solid black",
-                      borderRadius: "5px",
-                      boxShadow: "0px 0px 10px rgba(0,0,0,0.5)",
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
-          ) : (
-            videoInfoArray.map((videoInfo, index) => (
-              <Marker
-                key={index}
-                latitude={videoInfo.lat}
-                longitude={videoInfo.lon}
-              >
-                {!videoInfo.ehRadar ?
-                  <div
-                    style={{
-                      opacity: `${videoInfo.chapterNumberMap == chapterNumberMap && chapterNumberMap != "exemplo7" || chapterNumberMap == "exemplo1" ? 1 : 0}`,
-                      position: "relative",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  >
-                    <video
-                      src={videoInfo.src}
-                      controls={false}
-                      autoPlay
-                      muted
-                      style={{
-                        transform: `scale(${chapterNumberMap == "exemplo3" || chapterNumberMap == "exemplo6" ? cardHeight : 1})`,
-                        width: "200px",
-                        zIndex: "1",
-                        border: "3px solid white",
-                        borderRadius: "5px",
-                        boxShadow: "0px 0px 10px rgba(0,0,0,0.5)",
-                      }}
-                    />
-                    <div
-                      style={{
-                        width: "2px",
-                        height: "20px",
-                        backgroundColor: "white",
-                        zIndex: "0",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        width: "5px",
-                        height: "5px",
-                        backgroundColor: "white",
-                        zIndex: "0",
-                      }}
-                    ></div>
-                  </div>
-                  :
-                  <div style={{
-                    opacity: chapterNumberMap == "exemplo4" ? 1 : 0,
-                    position: 'relative',
-                  }}>
-
-                    <svg id="radar-circle">
-                      <circle cx="50%" cy="50%" r="0" fill-opacity="0" stroke="white" stroke-width="2px" stroke-opacity="1">
-                        <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" />
-                        <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite"></animate>
-                      </circle>
-                      <circle cx="50%" cy="50%" r="0" fill-opacity="0" stroke="white" stroke-width="2px" stroke-opacity="1">
-                        <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="0.75s" />
-                        <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="0.75s"></animate>
-                      </circle>
-                      <circle cx="50%" cy="50%" r="0" fill-opacity="0" stroke="white" stroke-width="2px" stroke-opacity="1">
-                        <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="1.5s" />
-                        <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="1.5s"></animate>
-                      </circle>
-                      <circle cx="50%" cy="50%" r="10" fill="#00BFFF" stroke="#00BFFF"></circle>
-                    </svg>
-
-                    <div style={{
-                      position: 'absolute',
-                      top: '-90px',
-                      right: '-15px',
-                      textAlign: 'center',
-                      width: '150px', // Ensures the text stays within the bounds of the image
-                    }}>
-                      <img src={dialogBallon} alt="Text Background" style={{
-                        width: '150px',
-                        height: 'auto',
-                        display: 'block',
-                      }} />
-
-                      <div style={{
-                        position: 'absolute',
-                        top: '20px', // Adjust this value to fine-tune the positioning of the text
-                        left: '20px',
-                        right: '0',
-                        padding: '5px',
-                        textAlign: "left",
-                        fontSize: '13.5px', // Adjust the font size as needed
-                        color: 'white', // Assuming black text color, change as necessary
-                      }}>
-                        <div>6h55 AM</div>
-                        <div>Placa XXXX</div>
-                        <div>Rua João Vicente</div>
-                        <div>Sentido Centro</div>
-                      </div>
-                    </div>
-                  </div>
-                }
-              </Marker>
-            ))
-          )}
-        </div>
-      </Map>
+      />
     );
   }
 }
@@ -391,7 +239,6 @@ MultilayerMap.defaultProps = {
   animated: true,
   mapboxAccessToken: "",
   mapStyle: "",
-  chapterNumberMap: "",
   mapCSS: {
     position: "fixed",
     top: "0",
@@ -423,7 +270,6 @@ MultilayerMap.defaultProps = {
       duration: 4000,
     },
   },
-  videoInfoArray: [],
 };
 
 export default MultilayerMap;

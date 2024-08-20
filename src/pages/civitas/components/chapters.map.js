@@ -88,30 +88,7 @@ export const Exemplo7 = () => {
       },
     },
     layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.8,
-        layer: {
-          ...{
 
-            "id": "mapa-4zkq0r",
-            "minzoom": 0,
-            "maxzoom": 22,
-            "type": "line",
-            "paint": {
-              "line-width": 3,
-              "line-opacity": 0,
-              "line-color": "hsl(56, 95%, 71%)"
-            },
-            "layout": {
-              "line-join": "round"
-            },
-            "source": "composite",
-            "source-layer": "mapa-4zkq0r"
-
-          },
-        },
-      },
     ],
   };
 };
@@ -170,6 +147,82 @@ export const Grafico = () => {
       },
     },
     layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.8,
+        layer: {
+          ...{
+
+            "id": "mapa-4zkq0r",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "line",
+            "paint": {
+              "line-width": 3,
+              "line-opacity": 0,
+              "line-color": "hsl(56, 95%, 71%)"
+            },
+            "layout": {
+              "line-join": "round"
+            },
+            "source": "composite",
+            "source-layer": "mapa-4zkq0r"
+
+          },
+        },
+      },
+    ],
+  };
+};
+export const Seop7 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.45632,
+          lat: -22.92106,
+        },
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.45632,
+          lat: -22.92106,
+        },
+        zoom: 8.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.8,
+        layer: {
+          ...{
+
+            "id": "mapa-4zkq0r",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "line",
+            "paint": {
+              "line-width": 3,
+              "line-opacity": 0,
+              "line-color": "hsl(56, 95%, 71%)"
+            },
+            "layout": {
+              "line-join": "round"
+            },
+            "source": "composite",
+            "source-layer": "mapa-4zkq0r"
+
+          },
+        },
+      },
     ],
   };
 };
@@ -179,48 +232,27 @@ export const Seop1 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.32527,
-          lat: -22.9864,
+          lon: -43.20346,
+          lat: -22.91209,
         },
-        zoom: 15.85,
-        pitch: 41.0,
-        bearing: 17.2,
-        duration: 4000,
+        zoom: 17.38,
+        pitch: 135.0,
+        bearing: 45,
+        duration: 5000,
       },
       mobile: {
         center: {
-          lon: -43.32127,
-          lat: -22.9864,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 15.85,
-        pitch: 41.0,
-        bearing: 17.2,
+        zoom: 8.38,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
     },
     layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 1,
-        layer: {
-          ...{
-            id: "demolicao-icone",
-            type: "symbol",
-            source: "composite",
-            "source-layer": "demolicao-ar7k7f",
-            layout: {
-              "icon-image": "hospital",
-              "icon-rotate": 45,
-              "icon-allow-overlap": true,
-              "icon-size": 2,
-            },
-            paint: {
-              "icon-opacity": 0,
-            },
-          },
-        },
 
-      },
     ],
   };
 };
@@ -230,31 +262,27 @@ export const Seop2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.4885,
-          lat: -23.02842,
+          lon: -43.20346,
+          lat: -22.91209,
         },
-        zoom: 14.71,
-        pitch: 51.0,
-        bearing: 11.2,
-        duration: 4000,
+        zoom: 17.38,
+        pitch: 135.0,
+        bearing: 45,
+        duration: 5000,
       },
       mobile: {
         center: {
-          lon: -43.4785,
-          lat: -23.02842,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 14.71,
-        pitch: 51.0,
-        bearing: 11.2,
+        zoom: 8.38,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
     },
     layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 1,
-        layer: { id: "demolicao-icone" },
-      },
+
     ],
   };
 };
@@ -264,12 +292,12 @@ export const Seop3 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.4885,
-          lat: -23.02842,
+          lon: -43.20708,
+          lat: -22.91430,
         },
-        zoom: 14.71,
-        pitch: 52.5,
-        bearing: -53.6,
+        zoom: 17.38,
+        pitch: 135.0,
+        bearing: -45,
         duration: 4000,
       },
       mobile: {
@@ -284,11 +312,34 @@ export const Seop3 = () => {
       },
     },
     layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 1,
-        layer: { id: "demolicao-icone" },
+    ],
+  };
+};
+export const Seop3_2 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.20708,
+          lat: -22.91430,
+        },
+        zoom: 17.6,
+        pitch: 150.0,
+        bearing: -3,
+        duration: 4000,
       },
+      mobile: {
+        center: {
+          lon: -43.4785,
+          lat: -23.02842,
+        },
+        zoom: 14.71,
+        pitch: 52.5,
+        bearing: -53.6,
+        duration: 4000,
+      },
+    },
+    layers: [
     ],
   };
 };
@@ -298,8 +349,8 @@ export const Seop4 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.31816,
-          lat: -22.99102,
+          lon: -43.543917233799284,
+          lat: -22.86300034959031,
         },
         zoom: 15.77,
         pitch: 59.0,
@@ -326,16 +377,157 @@ export const Seop4 = () => {
     ],
   };
 };
-
-export const Acompanhe = () => {
+export const Seop5 = () => {
   return {
     location: {
       desktop: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.361335152023315,
+          lat: -22.867618828789663,
         },
-        zoom: 10.38,
+        zoom: 15.77,
+        pitch: 59.0,
+        bearing: 124.47,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.32128,
+          lat: -22.99349,
+        },
+        zoom: 16.14,
+        pitch: 52.5,
+        bearing: 127.03,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+
+            "id": "bentor-cmvxk1",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "symbol",
+            "layout": {
+              "icon-image": [
+                "step",
+                [
+                  "zoom"
+                ],
+                "attraction",
+                22,
+                "attraction"
+              ],
+              "icon-size": 2
+            },
+            "source": "composite",
+            "source-layer": "bentor-cmvxk1",
+
+          },
+        },
+      },
+    ],
+  };
+};
+export const Seop5_2 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.361403212469696,
+          lat: -22.86599669984288,
+        },
+        zoom: 16.77,
+        pitch: 135.0,
+        bearing: 124.47,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.32128,
+          lat: -22.99349,
+        },
+        zoom: 16.14,
+        pitch: 52.5,
+        bearing: 127.03,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+
+            "id": "bentor1only-6d5ivl",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "symbol",
+            "layout": {
+              "icon-image": [
+                "step",
+                [
+                  "zoom"
+                ],
+                "attraction",
+                22,
+                "attraction"
+              ],
+              "icon-size": 2
+            },
+            "source": "composite",
+            "source-layer": "bentor1only-6d5ivl",
+
+          },
+        },
+      },
+    ],
+  };
+};
+export const Seop6 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.361403212469696,
+          lat: -22.86599669984288,
+        },
+        zoom: 16.77,
+        pitch: 135.0,
+        bearing: 124.47,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.32128,
+          lat: -22.99349,
+        },
+        zoom: 16.14,
+        pitch: 52.5,
+        bearing: 127.03,
+        duration: 4000,
+      },
+    },
+    layers: [
+
+    ],
+  };
+};
+
+export const Exemplo8 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.20346,
+          lat: -22.91209,
+        },
+        zoom: 15.38,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -351,7 +543,32 @@ export const Acompanhe = () => {
         duration: 4000,
       },
     },
-    layers: [],
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.8,
+        layer: {
+          ...{
+
+            "id": "mapa-4zkq0r",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "line",
+            "paint": {
+              "line-width": 3,
+              "line-opacity": 0,
+              "line-color": "hsl(56, 95%, 71%)"
+            },
+            "layout": {
+              "line-join": "round"
+            },
+            "source": "composite",
+            "source-layer": "mapa-4zkq0r"
+
+          },
+        },
+      },
+    ],
   };
 };
 

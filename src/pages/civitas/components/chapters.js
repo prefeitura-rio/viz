@@ -9,7 +9,10 @@ import logo from "../images/logo.png";
 import exemplo1 from "../images/exemplo1.png";
 import exemplo2 from "../images/exemplo2.png";
 import infrator from "../images/infrator.png";
+import suspeito from "../images/suspeito.png";
+import alert from "../images/alert.gif";
 import bo from "../images/bo.png";
+import imagem17 from "../images/imagem17.png";
 import seop2 from "../images/seop2.png";
 import seop3 from "../images/seop3.png";
 import seop4 from "../images/seop4.png";
@@ -176,23 +179,28 @@ export function Grafico(
 
   return (
     <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard>
-        <styles.NewsImage src={grafico}></styles.NewsImage>
-        <styles.TextCard>
-          Analisando as prioridades da Prefeitura, é possível perceber que o
-          assunto é tratado com a relevância necessária. Isto, entretanto, nem
-          sempre foi assim. Analisando os dados históricos de demolições
-          realizadas na cidade, é possível perceber que, ao longo da{" "}
-          <styles.Textyellow>
-            gestão anterior, apenas 359 demolições foram realizadas,
-          </styles.Textyellow>{" "}
-          número inferior as{" "}
-          <styles.Textyellow>
-            1.313 demolições feitas em apenas um ano e meio pela atual gestão.
-          </styles.Textyellow>{" "}
-        </styles.TextCard>
-      </styles.ContainerCard>
     </styles.ChapterGenericDiv>
+  );
+}
+export function Seop7(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <>
+      <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
+      </styles.ChapterGenericDiv>
+      <styles.ChapterGenericDiv1Left >
+        <styles.ContainerCard1>
+          <styles.TextCard1>
+            Os registros indicam a movimentação da moto até a Barra da Tijuca.           </styles.TextCard1>
+        </styles.ContainerCard1>
+      </styles.ChapterGenericDiv1Left>
+    </>
   );
 }
 
@@ -276,26 +284,60 @@ export function Seop4(
   return (
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={seop4}></styles.NewsImage>
+        <styles.TextCard1>
+          40º Batalhão da Polícia Militar, Campo Grande, 11h02. É aberto o B.O. do furto de carro (depois dele ter sido recuperado!).                </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1Center>
+  );
+}
+export function Seop5_2(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+    </styles.ChapterGenericDiv1Center>
+  );
+}
+export function Seop6(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.NewsImage src={imagem17}></styles.NewsImage>
         <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
+          Imagem: Documento da moto.
         </styles.Credito>
         <styles.TextCard1>
-          Também em Muzema,{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/ordem-publica/prefeitura-faz-demolicao-de-predio-de-tres-andares-no-valor-de-r-3-milhoes-na-muzema/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              uma construção irregular foi colocada abaixo.
-            </a>
-          </styles.Textyellow>{" "}
-          O prédio, com três andares, foi demolido pela equipe da Força-Tarefa
-          no mês passado.
+          As imagens revelam a placa da moto. Ela é inserida no sistema.
         </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1Center>
+  );
+}
+export function Seop5(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.TextCard1>
+          Bento Ribeiro. Os detalhes do furto permitem à polícia solicitar à Civitas imagens das câmeras do local do furto.              </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
   );
@@ -312,26 +354,25 @@ export function Seop3(
   return (
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={seop3}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
         <styles.TextCard1>
-          Há quatro meses, um imóvel de sete andares, construído na região do
-          Terreirão, também no Recreio, foi demolido.{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/ordem-publica/seop-faz-a-demolicao-de-predio-de-sete-andares-construido-irregularmente-no-recreio/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              O prédio não atendia nenhum requisito técnico para construção no
-              local.
-            </a>
-          </styles.Textyellow>{" "}
-        </styles.TextCard1>
+          10h40. O carro passa em outro equipamento do cerco eletrônico, um alerta em tempo real é gerado e a polícia é prontamente avisada. Com o histórico de movimentação do carro em mão, a polícia consegue se preparar melhor para abordar o suspeito.         </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1Center>
+  );
+}
+export function Seop3_2(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.TextCard1>
+          Estácio, 10h51. 32 minutos depois do assalto, o carro é interceptado pela polícia militar e um dos suspeitos é detido em flagrante, em tempo recorde.              </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
   );
@@ -346,33 +387,15 @@ export function Seop2(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <styles.NewsImage src={seop2}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito>
-        <styles.TextCard1>
-          Outro imóvel também localizado no Recreio dos Bandeirantes foi abaixo
-          no começo deste ano. Com três andares já construídos, e um quarto em
-          desenvolvimento, o prédio irregular possuía cinco apartamentos por
-          andar. A estimativa é que cada unidade,{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/ordem-publica/seop-e-gaeco-realizam-megaoperacao-para-demolicao-de-construcoes-irregulares-no-recreio-dos-bandeirantes/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              construída sem nenhum parecer técnico
-            </a>
-          </styles.Textyellow>{" "}
-          que aprovasse a sua segurança, seria vendida por R$ 300 mil para os
-          moradores.
-        </styles.TextCard1>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1Center>
+    <styles.IntroDiv ref={props.chapRef} id={props.id}>
+      <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+        <styles.ContainerCard1>
+          <styles.NewsImage src={alert}></styles.NewsImage>
+
+          <styles.IntroTitle id={"solucaoTitle"}>Nova localização do veículo foi registrada!</styles.IntroTitle>
+        </styles.ContainerCard1>
+      </styles.ChapterGenericDiv1Center>
+    </styles.IntroDiv>
   );
 }
 
@@ -387,28 +410,12 @@ export function Seop1(
   return (
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={infrator}></styles.NewsImage>
+        <styles.NewsImage src={suspeito}></styles.NewsImage>
         <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
+          Imagem: Imagem do suspeito
         </styles.Credito>
         <styles.TextCard1>
-          No fim do ano passado, um imóvel onde funcionaria um supermercado, com
-          garagem subterrânea e espaços alugados, estava sendo{" "}
-          <styles.Textyellow>
-            {" "}
-            <a
-              className="p-1"
-              href="https://prefeitura.rio/ordem-publica/seop-e-mprj-realizam-operacao-para-demolir-construcao-irregular-erguida-pela-milicia-de-rio-das-pedras/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              construído irregularmente
-            </a>
-          </styles.Textyellow>{" "}
-          na Estrada do Itanhangá, em Muzema, foi demolido pela Prefeitura. Uma
-          estimativa feita em parceria com o Ministério Público avaliou que
-          criminosos investiram aproximadamente R$ 5 milhões no empreendimento
-          irregular.
+          COR, 10H35. As imagens de câmeras do local do crime são acessadas e analisadas. O vídeo é enviado para a polícia, que analisa e levanta as características físicas e a vestimenta do acusado.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
@@ -521,7 +528,7 @@ export function Fim(
   );
 }
 
-export function Acompanhe(
+export function Exemplo8(
   props = {
     id: "",
     chapRef: null,
@@ -530,30 +537,17 @@ export function Acompanhe(
   props = setDefaultProps(props);
 
   return (
-    <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"acompanheTitle"}>
-        As ações da Prefeitura
-      </styles.IntroTitle>
-      <styles.IntroText>
-        As operações realizadas pela Ordem Pública e pela Secretaria de Meio
-        Ambiente reúnem diversos órgãos da Prefeitura, como a Guarda Municipal,
-        Comlurb, Secretaria de Conservação e Subprefeituras, além das
-        concessionárias de luz e água. Na maioria das ações, o apoio das forças
-        policiais também é necessário, devido à influência do crime organizado
-        nas regiões visitadas.
-        <br />
-        <br />
-        As ações também ajudam a Prefeitura a combater o desmatamento de aéreas
-        de preservação ambiental.
-        <br />
-        <br />
-        De 2021 a 2022, foram demolidas 257 construções irregulares em aéreas
-        preservadas, segundo dados da Secretaria de Meio Ambiente.
-        <br />
-        <br />
-        Foram mais de 797.198 m² de áreas verdes recuperadas.
-      </styles.IntroText>
-    </styles.IntroDiv>
+    <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+      {/* <styles.ContainerCard1>
+      <styles.TextCard1>
+        A cidade do Rio de Janeiro registra{" "}
+        <styles.Textyellow>
+          XXX
+        </styles.Textyellow>{" "}
+        ocorrências todos os dias. Roubos, furtos, sequestros, arrastões, assaltos, vandalismo, agressões. Como a Prefeitura do Rio pode ajudar a resolver isso? A CIVITAS é uma central de inteligência, vigilância e tecnologia voltada para o apoio à segurança pública carioca.
+      </styles.TextCard1>
+    </styles.ContainerCard1> */}
+    </styles.ChapterGenericDiv1Center>
   );
 }
 
