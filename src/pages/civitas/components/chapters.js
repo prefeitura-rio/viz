@@ -238,6 +238,8 @@ export function Seop9(
       </styles.ChapterGenericDiv> */}
       <styles.ChapterGenericDiv1Center >
         <styles.ContainerCard1>
+          <video autoPlay src="https://www.shutterstock.com/shutterstock/videos/1107056163/preview/stock-footage-audio-voice-message-animation-playing-record-voice-message-animation-voice-chat-voice-mail.webm"></video>
+
           <styles.TextCard1>
             Central Disque Denúncia, 12h55.  Chega uma denúncia anônima denunciando uma pessoa refém na mesma área. Os agentes repassam as informações à polícia, que já está no local, e encontraram a moto, agora sem placa, graças às imagens das câmeras de segurança.          </styles.TextCard1>
         </styles.ContainerCard1>
@@ -375,7 +377,7 @@ export function Seop6(
 ) {
   props = setDefaultProps(props);
 
-  return (
+  return (<>
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.NewsImage src={imagem17}></styles.NewsImage>
@@ -387,6 +389,15 @@ export function Seop6(
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
+    <styles.ChapterGenericDiv1Center >
+      <styles.ContainerCard1>
+
+        <styles.TextCard1>
+          A moto também tem seu trajeto do dia rastreado.
+        </styles.TextCard1>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1Center>
+  </>
   );
 }
 export function Seop5(

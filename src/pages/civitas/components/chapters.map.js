@@ -335,18 +335,18 @@ export const Seop10 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.41124038272067,
-          lat: -22.999586702947127,
+          lon: -43.45632,
+          lat: -22.92106,
         },
-        zoom: 13.38,
-        pitch: 34.0,
-        bearing: -45.0,
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.41124038272067,
-          lat: -22.999586702947127,
+          lon: -43.45632,
+          lat: -22.92106,
         },
         zoom: 8.38,
         pitch: 0.0,
@@ -354,9 +354,7 @@ export const Seop10 = () => {
         duration: 4000,
       },
     },
-    layers: [
-
-    ],
+    layers: [],
   };
 };
 

@@ -279,12 +279,12 @@ class CustomMultilayerMap extends React.Component {
           ) : (
             videoInfoArray.map((videoInfo, index) => (
               <>
-                <Marker
-                  key={index}
-                  latitude={videoInfo.lat}
-                  longitude={videoInfo.lon}
-                >
-                  {!videoInfo.ehRadar && !videoInfo.ehPin ?
+                {!videoInfo.ehRadar && !videoInfo.ehPin && (
+                  <Marker
+                    key={index}
+                    latitude={videoInfo.lat}
+                    longitude={videoInfo.lon}
+                  >
                     <div
                       style={{
                         display: `${videoInfo.chapterNumberMap == chapterNumberMap && chapterNumberMap != "exemplo7" || chapterNumberMap == "exemplo1" ? "flex" : "none"}`,
@@ -303,6 +303,7 @@ class CustomMultilayerMap extends React.Component {
                           style={{
                             transform: `scale(${chapterNumberMap == "exemplo3" || chapterNumberMap == "exemplo6" ? cardHeight : ((chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight < 2) ? cardHeight * 1.1 : 1})`,
                             width: `${(chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight > 2 ? "100vw" : "200px"}`,
+                            maxWidth: "100vw",
                             zIndex: "1",
                             border: "3px solid white",
                             borderRadius: "5px",
@@ -335,69 +336,78 @@ class CustomMultilayerMap extends React.Component {
                         }}
                       ></div>
                     </div>
-                    :
-                    <div style={{
-                      opacity: chapterNumberMap == "exemplo4" ? 1 : 0,
-                      position: 'relative',
-                    }}>
 
-                      <svg id="radar-circle">
-                        <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
-                          <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" />
-                          <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite"></animate>
-                        </circle>
-                        <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
-                          <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="0.75s" />
-                          <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="0.75s"></animate>
-                        </circle>
-                        <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
-                          <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="1.5s" />
-                          <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="1.5s"></animate>
-                        </circle>
-                        <circle cx="50%" cy="50%" r="10" fill="#00BFFF" stroke="#00BFFF"></circle>
-                      </svg>
 
+                  </Marker>
+                )}
+                {
+                  chapterNumberMap == "exemplo4" && (
+                    <Marker
+                      latitude="-22.86610"
+                      longitude="-43.36001"
+                    >
                       <div style={{
-                        position: 'absolute',
-                        top: '-90px',
-                        right: '-15px',
-                        textAlign: 'center',
-                        width: '150px', // Ensures the text stays within the bounds of the image
+                        position: 'relative',
                       }}>
-                        <img src={dialogBallon} alt="Text Background" style={{
-                          width: '150px',
-                          height: 'auto',
-                          display: 'block',
-                        }} />
+
+                        <svg id="radar-circle">
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite"></animate>
+                          </circle>
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="0.75s" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="0.75s"></animate>
+                          </circle>
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="1.5s" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="1.5s"></animate>
+                          </circle>
+                          <circle cx="50%" cy="50%" r="10" fill="#00BFFF" stroke="#00BFFF"></circle>
+                        </svg>
 
                         <div style={{
                           position: 'absolute',
-                          top: '20px', // Adjust this value to fine-tune the positioning of the text
-                          left: '20px',
-                          right: '0',
-                          padding: '5px',
-                          textAlign: "left",
-                          fontSize: '13.5px', // Adjust the font size as needed
-                          color: 'white', // Assuming black text color, change as necessary
+                          top: '-90px',
+                          right: '-15px',
+                          textAlign: 'center',
+                          width: '150px', // Ensures the text stays within the bounds of the image
                         }}>
-                          <div>6h55 AM</div>
-                          <div>Placa XXXX</div>
-                          <div>Rua João Vicente</div>
-                          <div>Sentido Centro</div>
+                          <img src={dialogBallon} alt="Text Background" style={{
+                            width: '150px',
+                            height: 'auto',
+                            display: 'block',
+                          }} />
+
+                          <div style={{
+                            position: 'absolute',
+                            top: '20px', // Adjust this value to fine-tune the positioning of the text
+                            left: '20px',
+                            right: '0',
+                            padding: '5px',
+                            textAlign: "left",
+                            fontSize: '13.5px', // Adjust the font size as needed
+                            color: 'white', // Assuming black text color, change as necessary
+                          }}>
+                            <div>6h55 AM</div>
+                            <div>Placa XXXX</div>
+                            <div>Rua João Vicente</div>
+                            <div>Sentido Centro</div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  }
-                </Marker>
+
+
+                    </Marker>
+                  )
+                }
                 {
-                  videoInfo.ehPin && !videoInfo.ehRadar && (
+                  chapterNumberMap == "seop4" && (
                     <Marker
-                      key={index + 9999}
-                      latitude={videoInfo.lat}
-                      longitude={videoInfo.lon}
+                      latitude="-22.86300034959031"
+                      longitude="-43.543917233799284"
                     >
                       <div style={{
-                        opacity: chapterNumberMap == "seop4" || chapterNumberMap == "exemplo7" ? 1 : 0,
                         position: 'relative',
                       }}>
                         <img src={locationpin} alt="Pin" style={{ width: '50px' }} />
@@ -405,20 +415,20 @@ class CustomMultilayerMap extends React.Component {
                     </Marker>
                   )}
                 {
-                  videoInfo.chapterNumberMap == "seop5_2" && (
+                  chapterNumberMap == "exemplo7" && (
                     <Marker
-                      key={index + "a"}
-                      latitude={videoInfo.lat}
-                      longitude={videoInfo.lon}
+                      latitude="-22.91209"
+                      longitude="-43.20346"
                     >
                       <div style={{
-                        opacity: chapterNumberMap == "seop4" || chapterNumberMap == "exemplo7" ? 1 : 0,
                         position: 'relative',
                       }}>
                         <img src={locationpin} alt="Pin" style={{ width: '50px' }} />
                       </div>
                     </Marker>
                   )}
+
+
                 {
                   chapterNumberMap === "seop5_2" && (
                     <Marker

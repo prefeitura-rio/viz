@@ -511,13 +511,13 @@ export default function SubsidioSPPO() {
             chapterNumberMap: "exemplo6",
             ehPin: false
           },
-          {
-            lat: -22.91209,
-            lon: -43.20346,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
-            chapterNumberMap: "exemplo7",
-            ehPin: true
-          },
+          // {
+          //   lat: -22.91209,
+          //   lon: -43.20346,
+          //   src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+          //   chapterNumberMap: "exemplo7",
+          //   ehPin: true
+          // },
           {
             lat: -22.91209,
             lon: -43.20346,
@@ -539,13 +539,13 @@ export default function SubsidioSPPO() {
             chapterNumberMap: "seop3_2",
             ehPin: false
           },
-          {
-            lat: -22.86300034959031,
-            lon: -43.543917233799284,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
-            chapterNumberMap: "seop4",
-            ehPin: true
-          },
+          // {
+          //   lat: -22.86300034959031,
+          //   lon: -43.543917233799284,
+          //   src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+          //   chapterNumberMap: "seop4",
+          //   ehPin: true
+          // },
 
           // {
           //   lat: -22.86599669984288,
