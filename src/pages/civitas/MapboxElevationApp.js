@@ -3,14 +3,16 @@ import mapboxgl from 'mapbox-gl';
 import { lineString } from '@turf/helpers';
 import along from '@turf/along';
 import length from '@turf/length';
+import bearing from '@turf/bearing'; // Importing bearing from the correct module
 import 'mapbox-gl/dist/mapbox-gl.css';
 import pinRouteGeojson from './pinRouteGeojson.json';
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w';
 
 const MapboxElevationApp = () => {
   const mapContainerRef = useRef(null);
   const animationFrameRef = useRef(null);
-  const containerRef = useRef(null); // Ref for the 200vh container
+  const containerRef = useRef(null);
 
   useEffect(() => {
     (async () => {
@@ -41,8 +43,8 @@ const MapboxElevationApp = () => {
       const marker = new mapboxgl.Marker({
         element: markerElement,
         draggable: false,
-        pitchAlignment: 'auto',
-        rotationAlignment: 'auto',
+        pitchAlignment: '90',
+        rotationAlignment: 'map',
       })
         .setLngLat(pinRoute[0])
         .addTo(map);
@@ -52,6 +54,7 @@ const MapboxElevationApp = () => {
         lineMetrics: true,
         data: pinRouteGeojson,
       });
+
       map.addLayer({
         type: 'line',
         source: 'line',
@@ -76,6 +79,8 @@ const MapboxElevationApp = () => {
         const scrollProgress = (window.innerHeight - 500 - containerTop) / containerHeight;
 
         const alongPath = along(path, pathDistance * scrollProgress).geometry.coordinates;
+        const nextAlongPath = along(path, pathDistance * (scrollProgress + 0.0001)).geometry.coordinates;
+
         const lngLat = {
           lng: alongPath[0],
           lat: alongPath[1],
@@ -85,7 +90,11 @@ const MapboxElevationApp = () => {
           map.queryTerrainElevation(lngLat, { exaggerated: false })
         );
 
+        // Calculate the bearing between the current position and the next position
+        const markerBearing = bearing(alongPath, nextAlongPath) - 90; // Adjusted bearing
+
         marker.setLngLat(lngLat);
+        marker.setRotation(markerBearing);
 
         map.setPaintProperty('line', 'line-gradient', [
           'step',
@@ -102,7 +111,7 @@ const MapboxElevationApp = () => {
           center: lngLat,
           bearing: rotation % 360,
           duration: 0,
-          pitch: 50
+          pitch: 50,
         });
 
         animationFrameRef.current = requestAnimationFrame(updateAnimation);
