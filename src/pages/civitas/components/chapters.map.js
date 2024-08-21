@@ -226,16 +226,16 @@ export const Seop7 = () => {
     ],
   };
 };
-export const Seop8 = () => {
+export const DrawMap = () => {
   return {
     location: {
       desktop: {
         center: {
-          lon: -43.41124038272067,
-          lat: -22.999586702947127,
+          lon: -43.35808542573136,
+          lat: -22.86497771755093,
         },
-        zoom: 13.38,
-        pitch: 34.0,
+        zoom: 14,
+        pitch: 50,
         bearing: -45.0,
         duration: 4000,
       },
@@ -251,30 +251,34 @@ export const Seop8 = () => {
       },
     },
     layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.8,
-        layer: {
-          ...{
-
-            "id": "mapa-4zkq0r",
-            "minzoom": 0,
-            "maxzoom": 22,
-            "type": "line",
-            "paint": {
-              "line-width": 3,
-              "line-opacity": 0,
-              "line-color": "hsl(56, 95%, 71%)"
-            },
-            "layout": {
-              "line-join": "round"
-            },
-            "source": "composite",
-            "source-layer": "mapa-4zkq0r"
-
-          },
+    ],
+  };
+};
+export const Seop8 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.340530629055735,
+          lat: -23.000114890524202,
         },
+        zoom: 14,
+        pitch: 50,
+        bearing: -45.0,
+        duration: 4000,
       },
+      mobile: {
+        center: {
+          lon: -43.41124038272067,
+          lat: -22.999586702947127,
+        },
+        zoom: 8.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
     ],
   };
 };
@@ -303,30 +307,7 @@ export const Seop9 = () => {
       },
     },
     layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.8,
-        layer: {
-          ...{
 
-            "id": "mapa-4zkq0r",
-            "minzoom": 0,
-            "maxzoom": 22,
-            "type": "line",
-            "paint": {
-              "line-width": 3,
-              "line-opacity": 0,
-              "line-color": "hsl(56, 95%, 71%)"
-            },
-            "layout": {
-              "line-join": "round"
-            },
-            "source": "composite",
-            "source-layer": "mapa-4zkq0r"
-
-          },
-        },
-      },
     ],
   };
 };

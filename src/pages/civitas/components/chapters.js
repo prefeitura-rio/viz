@@ -27,6 +27,8 @@ import { gsap } from "gsap";
 import CustomEase from "gsap/CustomEase";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import MapboxElevationApp from "../MapboxElevationApp";
+import { useEffect, useState } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 export function Capa(
@@ -200,6 +202,53 @@ export function Seop7(
             Os registros indicam a movimentação da moto até a Barra da Tijuca.           </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Left>
+    </>
+  );
+}
+
+export function DrawMap(
+  props = {
+    id: "",
+    chapRef: null,
+    chapterNumberMap: null
+  }
+) {
+  props = setDefaultProps(props);
+
+  const [showMap, setShowMap] = useState(false);
+
+  useEffect(() => {
+    if (props.chapterNumberMap === "drawMap") {
+      const timer = setTimeout(() => {
+        setShowMap(true);
+      }, 4000);
+      return () => clearTimeout(timer); // Cleanup the timer on unmount
+    }
+  }, [props.chapterNumberMap]);
+
+  return (
+    <>
+      <style>
+        {`
+          .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+          }
+
+          @keyframes fadeIn {
+            to {
+              opacity: 1;
+            }
+          }
+        `}
+      </style>
+      <div style={{ height: "1050vh" }} ref={props.chapRef} id={props.id}>
+        {props.chapterNumberMap == "drawMap" && showMap && (
+          <div className="fade-in">
+            <MapboxElevationApp />
+          </div>
+        )}
+      </div>
     </>
   );
 }

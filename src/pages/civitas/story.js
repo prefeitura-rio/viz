@@ -1,7 +1,7 @@
 // Mandatory.
 import { useEffect, useState, useRef } from "react";
 import CustomMultilayerMap from "../civitas/components/custom_multilayer_map";
-
+import MapboxElevationApp from "./MapboxElevationApp";
 // Chapters
 import * as chapterMap from "./components/chapters.map";
 import * as chapterDiv from "./components/chapters";
@@ -121,6 +121,10 @@ export default function SubsidioSPPO() {
       case "seop7":
         setPosition(chapterMap.Seop7().location);
         setLayers(chapterMap.Seop7().layers);
+        break;
+      case "drawMap":
+        setPosition(chapterMap.DrawMap().location);
+        // setLayers(chapterMap.DrawMap().layers);
         break;
       case "seop8":
         setPosition(chapterMap.Seop8().location);
@@ -411,6 +415,13 @@ export default function SubsidioSPPO() {
       },
     });
     ScrollTrigger.create({
+      trigger: "#drawMap",
+      start: "top bottom",
+      onToggle: () => {
+        setChapterNumberMap("drawMap");
+      },
+    });
+    ScrollTrigger.create({
       trigger: "#seop8",
       onToggle: () => {
         setChapterNumberMap("seop8");
@@ -590,6 +601,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Seop5_2 id={"seop5_2"} />
       <chapterDiv.Seop6 id={"seop6"} />
       <chapterDiv.Seop7 id={"seop7"} />
+      <chapterDiv.DrawMap chapterNumberMap={chapterNumberMap} id={"drawMap"} />
       <chapterDiv.Seop8 id={"seop8"} />
       <chapterDiv.Seop9 id={"seop9"} />
       <chapterDiv.Seop10 id={"seop10"} />
