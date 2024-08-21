@@ -31,9 +31,15 @@ const MapboxElevationApp = () => {
 
       const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
 
+      const markerElement = document.createElement('div');
+      markerElement.style.backgroundImage = 'url(https://www.onlygfx.com/wp-content/uploads/2017/03/motorcycle-silhouette-6.png)';
+      markerElement.style.width = '50px';
+      markerElement.style.height = '50px';
+      markerElement.style.backgroundSize = 'contain';
+      markerElement.style.backgroundRepeat = 'no-repeat';
+
       const marker = new mapboxgl.Marker({
-        color: 'red',
-        scale: 0.8,
+        element: markerElement,
         draggable: false,
         pitchAlignment: 'auto',
         rotationAlignment: 'auto',
@@ -84,7 +90,7 @@ const MapboxElevationApp = () => {
         map.setPaintProperty('line', 'line-gradient', [
           'step',
           ['line-progress'],
-          'red',
+          '#00BFFF',
           scrollProgress,
           'rgba(255, 0, 0, 0)',
         ]);
