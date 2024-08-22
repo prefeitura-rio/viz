@@ -6,6 +6,7 @@ import length from '@turf/length';
 import bearing from '@turf/bearing'; // Importing bearing from the correct module
 import 'mapbox-gl/dist/mapbox-gl.css';
 import pinRouteGeojson from './pinRouteGeojson.json';
+import motobg from './images/motobg.png';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w';
 
@@ -34,8 +35,8 @@ const MapboxElevationApp = () => {
       const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
 
       const markerElement = document.createElement('div');
-      markerElement.style.backgroundImage = 'url(https://www.onlygfx.com/wp-content/uploads/2017/03/motorcycle-silhouette-6.png)';
-      markerElement.style.width = '50px';
+      markerElement.style.backgroundImage = `url(${motobg})`;
+      markerElement.style.width = '20px';
       markerElement.style.height = '50px';
       markerElement.style.backgroundSize = 'contain';
       markerElement.style.backgroundRepeat = 'no-repeat';
@@ -91,7 +92,7 @@ const MapboxElevationApp = () => {
         );
 
         // Calculate the bearing between the current position and the next position
-        const markerBearing = bearing(alongPath, nextAlongPath) - 90; // Adjusted bearing
+        const markerBearing = bearing(alongPath, nextAlongPath); // Adjusted bearing
 
         marker.setLngLat(lngLat);
         marker.setRotation(markerBearing);
