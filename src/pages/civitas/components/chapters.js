@@ -13,6 +13,7 @@ import suspeito from "../images/suspeito.png";
 import alert from "../images/alert.gif";
 import bo from "../images/bo.png";
 import imagem17 from "../images/imagem17.png";
+import arrested from "../images/arrested.png";
 import seop2 from "../images/seop2.png";
 import seop3 from "../images/seop3.png";
 import seop4 from "../images/seop4.png";
@@ -224,6 +225,9 @@ export function DrawMap(
       }, 4000);
       return () => clearTimeout(timer); // Cleanup the timer on unmount
     }
+    else {
+      setShowMap(false);
+    }
   }, [props.chapterNumberMap]);
 
   return (
@@ -287,7 +291,7 @@ export function Seop9(
       </styles.ChapterGenericDiv> */}
       <styles.ChapterGenericDiv1Center >
         <styles.ContainerCard1>
-          <video autoPlay src="https://www.shutterstock.com/shutterstock/videos/1107056163/preview/stock-footage-audio-voice-message-animation-playing-record-voice-message-animation-voice-chat-voice-mail.webm"></video>
+          <video autoPlay loop src="https://www.shutterstock.com/shutterstock/videos/1107056163/preview/stock-footage-audio-voice-message-animation-playing-record-voice-message-animation-voice-chat-voice-mail.webm"></video>
 
           <styles.TextCard1>
             Central Disque Denúncia, 12h55.  Chega uma denúncia anônima denunciando uma pessoa refém na mesma área. Os agentes repassam as informações à polícia, que já está no local, e encontraram a moto, agora sem placa, graças às imagens das câmeras de segurança.          </styles.TextCard1>
@@ -306,14 +310,17 @@ export function Seop10(
 
   return (
     <>
-      {/* <styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-      </styles.ChapterGenericDiv> */}
-      <styles.ChapterGenericDiv1Right >
+      <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
+          <styles.NewsImage src={arrested}></styles.NewsImage>
+          <styles.Credito>
+            Imagem: Bandido sendo preso.
+          </styles.Credito>
           <styles.TextCard1>
-            13h33. Graças à denúncia e ao rastreio das placas dos veículos, a polícia encontra o cativeiro, prende o segundo suspeito e liberta o refém.          </styles.TextCard1>
+            13h33. Graças à denúncia e ao rastreio das placas dos veículos, a polícia encontra o cativeiro, prende o segundo suspeito e liberta o refém.
+          </styles.TextCard1>
         </styles.ContainerCard1>
-      </styles.ChapterGenericDiv1Right>
+      </styles.ChapterGenericDiv1Center>
     </>
   );
 }

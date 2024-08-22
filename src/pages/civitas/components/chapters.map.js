@@ -71,8 +71,8 @@ export const Exemplo7 = () => {
           lon: -43.20346,
           lat: -22.91209,
         },
-        zoom: 17.38,
-        pitch: 90.0,
+        zoom: 18.5,
+        pitch: 120.0,
         bearing: 0,
         duration: 5000,
       },
@@ -88,7 +88,39 @@ export const Exemplo7 = () => {
       },
     },
     layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.8,
+        layer: {
+          ...{
 
+            "id": "cor-909lki",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "fill",
+            "paint": {
+              "fill-emissive-strength": 1,
+              "fill-opacity": 0,
+              "fill-color": [
+                "interpolate",
+                [
+                  "linear"
+                ],
+                [
+                  "zoom"
+                ],
+                0,
+                "hsl(195, 100%, 50%)",
+                22,
+                "hsl(195, 100%, 50%)"
+              ]
+            },
+            "layout": {},
+            "source": "composite",
+            "source-layer": "cor-909lki"
+          },
+        },
+      },
     ],
   };
 };
@@ -153,20 +185,18 @@ export const Grafico = () => {
         layer: {
           ...{
 
-            "id": "mapa-4zkq0r",
+            "id": "percurso-carro-v2-24pm81",
             "minzoom": 0,
             "maxzoom": 22,
             "type": "line",
             "paint": {
-              "line-width": 3,
+              "line-emissive-strength": 1,
               "line-opacity": 0,
-              "line-color": "hsl(56, 95%, 71%)"
+              "line-color": "hsl(195, 100%, 50%)"
             },
-            "layout": {
-              "line-join": "round"
-            },
+            "layout": {},
             "source": "composite",
-            "source-layer": "mapa-4zkq0r"
+            "source-layer": "percurso_carro_v2-24pm81"
 
           },
         },
@@ -205,20 +235,18 @@ export const Seop7 = () => {
         layer: {
           ...{
 
-            "id": "mapa-4zkq0r",
+            "id": "percurso-carro-v2-24pm81",
             "minzoom": 0,
             "maxzoom": 22,
             "type": "line",
             "paint": {
-              "line-width": 3,
+              "line-emissive-strength": 1,
               "line-opacity": 0,
-              "line-color": "hsl(56, 95%, 71%)"
+              "line-color": "hsl(195, 100%, 50%)"
             },
-            "layout": {
-              "line-join": "round"
-            },
+            "layout": {},
             "source": "composite",
-            "source-layer": "mapa-4zkq0r"
+            "source-layer": "percurso_carro_v2-24pm81"
 
           },
         },
@@ -231,8 +259,8 @@ export const DrawMap = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.35808542573136,
-          lat: -22.86497771755093,
+          lon: -43.57055476830868,
+          lat: -22.911240842215918
         },
         zoom: 14,
         pitch: 50,
@@ -259,8 +287,8 @@ export const Seop8 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.340530629055735,
-          lat: -23.000114890524202,
+          lon: -43.33157970337831,
+          lat: -23.003932747780283
         },
         zoom: 14,
         pitch: 50,
@@ -348,9 +376,9 @@ export const Seop1 = () => {
           lon: -43.20346,
           lat: -22.91209,
         },
-        zoom: 17.38,
-        pitch: 135.0,
-        bearing: 45,
+        zoom: 18.5,
+        pitch: 120.0,
+        bearing: 0,
         duration: 5000,
       },
       mobile: {
@@ -365,7 +393,39 @@ export const Seop1 = () => {
       },
     },
     layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.8,
+        layer: {
+          ...{
 
+            "id": "cor-909lki",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "fill",
+            "paint": {
+              "fill-emissive-strength": 1,
+              "fill-opacity": 0,
+              "fill-color": [
+                "interpolate",
+                [
+                  "linear"
+                ],
+                [
+                  "zoom"
+                ],
+                0,
+                "hsl(195, 100%, 50%)",
+                22,
+                "hsl(195, 100%, 50%)"
+              ]
+            },
+            "layout": {},
+            "source": "composite",
+            "source-layer": "cor-909lki"
+          },
+        },
+      },
     ],
   };
 };
@@ -462,51 +522,18 @@ export const Seop4 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.543917233799284,
-          lat: -22.86300034959031,
+          lon: -43.55502657577313,
+          lat: -22.87620428625697,
         },
-        zoom: 15.77,
+        zoom: 20.0,
         pitch: 59.0,
-        bearing: 124.47,
+        bearing: 250.47,
         duration: 4000,
       },
       mobile: {
         center: {
           lon: -43.543917233799284,
           lat: -22.86300034959031,
-        },
-        zoom: 16.14,
-        pitch: 52.5,
-        bearing: 127.03,
-        duration: 4000,
-      },
-    },
-    layers: [
-      {
-        layerType: "reuse",
-        targetOpacity: 1,
-        layer: { id: "demolicao-icone" },
-      },
-    ],
-  };
-};
-export const Seop5 = () => {
-  return {
-    location: {
-      desktop: {
-        center: {
-          lon: -43.361335152023315,
-          lat: -22.867618828789663,
-        },
-        zoom: 15.77,
-        pitch: 59.0,
-        bearing: 124.47,
-        duration: 4000,
-      },
-      mobile: {
-        center: {
-          lon: -43.361335152023315,
-          lat: -22.867618828789663,
         },
         zoom: 16.14,
         pitch: 52.5,
@@ -517,29 +544,71 @@ export const Seop5 = () => {
     layers: [
       {
         layerType: "mapbox",
+        targetOpacity: 0.5,
+        layer: {
+          ...{
+            "id": "40batalhao-2af7w6",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "fill",
+            "paint": {
+              "fill-emissive-strength": 1,
+              "fill-color": "hsl(195, 100%, 50%)",
+              "fill-opacity": 0
+            },
+            "layout": {},
+            "source": "composite",
+            "source-layer": "40batalhao-2af7w6"
+          },
+        },
+      },
+    ],
+  };
+};
+export const Seop5 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.3605,
+          lat: -22.8648,
+        },
+        zoom: 16.5,
+        pitch: 59.0,
+        bearing: 100.47,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.361335152023315,
+          lat: -22.867618828789663,
+        },
+        zoom: 16.14,
+        pitch: 52.5,
+        bearing: 160.03,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
         targetOpacity: 1,
         layer: {
           ...{
 
-            "id": "bentor-cmvxk1",
+            "id": "bentoribeiro-as8oj1",
             "minzoom": 0,
             "maxzoom": 22,
             "type": "symbol",
+            "paint": {
+              "icon-opacity": 0
+            },
             "layout": {
-              "icon-image": [
-                "step",
-                [
-                  "zoom"
-                ],
-                "attraction",
-                22,
-                "attraction"
-              ],
-              "icon-size": 2
+              "icon-image": "laundry",
+              "icon-size": 2.7
             },
             "source": "composite",
-            "source-layer": "bentor-cmvxk1",
-
+            "source-layer": "bentoribeiro-as8oj1"
           },
         },
       },
@@ -551,12 +620,12 @@ export const Seop5_2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.361403212469696,
-          lat: -22.86599669984288,
+          lon: -43.3605,
+          lat: -22.8648,
         },
-        zoom: 16.77,
-        pitch: 135.0,
-        bearing: 124.47,
+        zoom: 16.65,
+        pitch: 59.0,
+        bearing: 120.47,
         duration: 4000,
       },
       mobile: {
@@ -577,24 +646,19 @@ export const Seop5_2 = () => {
         layer: {
           ...{
 
-            "id": "bentor1only-6d5ivl",
+            "id": "geoimg-dhj13l",
             "minzoom": 0,
             "maxzoom": 22,
             "type": "symbol",
+            "paint": {
+              "icon-opacity": 0
+            },
             "layout": {
-              "icon-image": [
-                "step",
-                [
-                  "zoom"
-                ],
-                "attraction",
-                22,
-                "attraction"
-              ],
-              "icon-size": 2
+              "icon-image": "laundry",
+              "icon-size": 2.9
             },
             "source": "composite",
-            "source-layer": "bentor1only-6d5ivl",
+            "source-layer": "geoimg-dhj13l"
 
           },
         },
@@ -607,12 +671,12 @@ export const Seop6 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.361403212469696,
-          lat: -22.86599669984288,
+          lon: -43.3605,
+          lat: -22.8648,
         },
-        zoom: 16.77,
-        pitch: 135.0,
-        bearing: 124.47,
+        zoom: 16.5,
+        pitch: 59.0,
+        bearing: 100.47,
         duration: 4000,
       },
       mobile: {
@@ -663,20 +727,18 @@ export const Exemplo8 = () => {
         layer: {
           ...{
 
-            "id": "mapa-4zkq0r",
+            "id": "percurso-carro-v2-24pm81",
             "minzoom": 0,
             "maxzoom": 22,
             "type": "line",
             "paint": {
-              "line-width": 3,
+              "line-emissive-strength": 1,
               "line-opacity": 0,
-              "line-color": "hsl(56, 95%, 71%)"
+              "line-color": "hsl(195, 100%, 50%)"
             },
-            "layout": {
-              "line-join": "round"
-            },
+            "layout": {},
             "source": "composite",
-            "source-layer": "mapa-4zkq0r"
+            "source-layer": "percurso_carro_v2-24pm81"
 
           },
         },

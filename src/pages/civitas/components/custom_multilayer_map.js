@@ -305,7 +305,7 @@ class CustomMultilayerMap extends React.Component {
                             width: `${(chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight > 2 ? "100vw" : "200px"}`,
                             maxWidth: "100vw",
                             zIndex: "1",
-                            border: "3px solid white",
+                            border: "2px solid black",
                             borderRadius: "5px",
                             boxShadow: "0px 0px 10px rgba(0,0,0,0.5)",
                             transition: "transform 0.5s",
@@ -314,7 +314,7 @@ class CustomMultilayerMap extends React.Component {
                           transform: `scale(${chapterNumberMap == "exemplo3" || chapterNumberMap == "exemplo6" ? cardHeight : ((chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight < 2) ? cardHeight * 1.1 : 1})`,
                           width: `${(chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight > 2 ? "100vw" : "200px"}`,
                           zIndex: "1",
-                          border: "3px solid white",
+                          border: "2px solid black",
                           borderRadius: "5px",
                           boxShadow: "0px 0px 10px rgba(0,0,0,0.5)",
                           transition: "transform 0.5s",
@@ -401,39 +401,13 @@ class CustomMultilayerMap extends React.Component {
                     </Marker>
                   )
                 }
-                {
-                  chapterNumberMap == "seop4" && (
-                    <Marker
-                      latitude="-22.86300034959031"
-                      longitude="-43.543917233799284"
-                    >
-                      <div style={{
-                        position: 'relative',
-                      }}>
-                        <img src={locationpin} alt="Pin" style={{ width: '50px' }} />
-                      </div>
-                    </Marker>
-                  )}
-                {
-                  chapterNumberMap == "exemplo7" && (
-                    <Marker
-                      latitude="-22.91209"
-                      longitude="-43.20346"
-                    >
-                      <div style={{
-                        position: 'relative',
-                      }}>
-                        <img src={locationpin} alt="Pin" style={{ width: '50px' }} />
-                      </div>
-                    </Marker>
-                  )}
 
 
                 {
                   chapterNumberMap === "seop5_2" && (
                     <Marker
-                      latitude="-22.86599669984288"
-                      longitude="-43.361403212469696"
+                      latitude="-22.8648"
+                      longitude="-43.3605"
                     >
                       <div
                         style={{
@@ -441,7 +415,7 @@ class CustomMultilayerMap extends React.Component {
                           display: "flex",
                           flexDirection: "column",
                           alignItems: "center",
-                          top: "-50px",
+                          top: "-110px",
                         }}
                       >
                         <img
@@ -457,7 +431,7 @@ class CustomMultilayerMap extends React.Component {
                               : "200px"
                               }`,
                             zIndex: "1",
-                            border: "3px solid white",
+                            border: "2px solid black",
                             borderRadius: "5px",
                             boxShadow: "0px 0px 10px rgba(0,0,0,0.5)",
                             transition: "transform 0.5s",
@@ -467,19 +441,12 @@ class CustomMultilayerMap extends React.Component {
                         <div
                           style={{
                             width: "2px",
-                            height: "20px",
+                            height: "40px",
                             backgroundColor: "white",
                             zIndex: "0",
                           }}
                         ></div>
-                        <div
-                          style={{
-                            width: "5px",
-                            height: "5px",
-                            backgroundColor: "white",
-                            zIndex: "0",
-                          }}
-                        ></div>
+
                       </div>
                     </Marker>
                   )

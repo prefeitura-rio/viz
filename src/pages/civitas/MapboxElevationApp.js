@@ -20,7 +20,7 @@ const MapboxElevationApp = () => {
       const map = new mapboxgl.Map({
         container: mapContainerRef.current,
         zoom: 14,
-        center: [-43.35808542573136, -22.86497771755093],
+        center: [-43.57055476830868, -22.911240842215918],
         pitch: 50,
         bearing: 150,
         style: 'mapbox://styles/escritoriodedados/clzu707th00ro01pc69du960f',

@@ -124,6 +124,7 @@ export default function SubsidioSPPO() {
         break;
       case "drawMap":
         setPosition(chapterMap.DrawMap().location);
+        setTimeout(() => { setPosition(chapterMap.Seop8().location) }, 4100);
         // setLayers(chapterMap.DrawMap().layers);
         break;
       case "seop8":
@@ -163,12 +164,6 @@ export default function SubsidioSPPO() {
       markers: false,
       scrub: true,
       // toggleActions: "play reverse play reverse",
-    });
-    ScrollTrigger.create({
-      trigger: "#capa",
-      onToggle: () => {
-        setChapterNumberMap("capa");
-      },
     });
 
     const tl2 = gsap.timeline();
@@ -433,12 +428,12 @@ export default function SubsidioSPPO() {
     //     setChapterNumberMap("seop9");
     //   },
     // });
-    // ScrollTrigger.create({
-    //   trigger: "#seop10",
-    //   onToggle: () => {
-    //     setChapterNumberMap("seop10");
-    //   },
-    // });
+    ScrollTrigger.create({
+      trigger: "#seop10",
+      onToggle: () => {
+        setChapterNumberMap("seop10");
+      },
+    });
 
 
     const tl11 = gsap.timeline();
