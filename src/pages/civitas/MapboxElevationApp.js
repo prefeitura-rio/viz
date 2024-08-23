@@ -110,7 +110,7 @@ const MapboxElevationApp = () => {
 
         map.easeTo({
           center: lngLat,
-          bearing: rotation % 360,
+          bearing: 108.625,
           duration: 0,
           pitch: 50,
         });

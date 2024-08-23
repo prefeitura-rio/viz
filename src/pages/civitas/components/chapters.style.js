@@ -76,8 +76,7 @@ export const Subtitle = tw.div`
 `;
 
 export const Credito = tw.div`
-  mb-7
-  lg:mb-7
+  
   font-serif
   text-sm text-left text-white
   lg:text-sm

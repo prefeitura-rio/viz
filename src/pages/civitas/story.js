@@ -124,7 +124,7 @@ export default function SubsidioSPPO() {
         break;
       case "drawMap":
         setPosition(chapterMap.DrawMap().location);
-        setTimeout(() => { setPosition(chapterMap.Seop8().location) }, 4100);
+        setTimeout(() => { setPosition(chapterMap.Seop8().location) }, 3100);
         // setLayers(chapterMap.DrawMap().layers);
         break;
       case "seop8":
@@ -470,53 +470,57 @@ export default function SubsidioSPPO() {
           {
             lat: -22.89389,
             lon: -43.53625,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/V%C3%ADdeo%20capa%20moto%20meier%20cortado.mp4",
             chapterNumberMap: "exemplo2",
+            ehImagem: true,
+            srcImagem: "imagem16.png",
             ehPin: false
           },
           {
             lat: -22.89389,
             lon: -43.53625,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/V%C3%ADdeo%20capa_historia%20carro%20radar%20cortado.mp4",
+            ehImagem: true,
+            srcImagem: "imagem16.png",
             chapterNumberMap: "exemplo3",
             ehPin: false
           },
           {
             lat: -22.86589,
             lon: -43.35988,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/V%C3%ADdeo%20furto%20santa%20barbara%20cortado%20pb.mp4",
             chapterNumberMap: "exemplo4",
             ehRadar: true,
             ehPin: false
           },
           {
-            lat: -23.01473,
-            lon: -43.57571,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-            chapterNumberMap: "exemplo1",
+            lat: -22.90345,
+            lon: -43.28141,
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/10.%20video%20assalto%20agencia%20cortado.mp4",
+            chapterNumberMap: "exemplo6",
             ehPin: false
           },
           {
             lat: -22.99386,
             lon: -43.27872,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/16.%20Video%20moto%20andando%20cortad.mp4",
             chapterNumberMap: "exemplo2",
             ehPin: false
           },
-          {
-            lat: -22.87866,
-            lon: -43.27090,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-            chapterNumberMap: "exemplo5",
-            ehPin: false
-          },
-          {
-            lat: -22.90345,
-            lon: -43.28141,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
-            chapterNumberMap: "exemplo6",
-            ehPin: false
-          },
+          // {
+          //   lat: -22.87866,
+          //   lon: -43.27090,
+          //   src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+          //   chapterNumberMap: "exemplo5",
+          //   ehPin: false
+          // },
+          // {
+          //   lat: -22.90345,
+          //   lon: -43.28141,
+          //   src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+          //   chapterNumberMap: "exemplo6",
+          //   ehPin: false
+          // },
           // {
           //   lat: -22.91209,
           //   lon: -43.20346,
@@ -525,23 +529,23 @@ export default function SubsidioSPPO() {
           //   ehPin: true
           // },
           {
-            lat: -22.91209,
-            lon: -43.20346,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+            lat: -22.870894075477764,
+            lon: -43.36705499276124,
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_011.mp4",
             chapterNumberMap: "exemplo8",
             ehPin: false
           },
           {
             lat: -22.91430,
             lon: -43.20708,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_011.mp4",
             chapterNumberMap: "seop3",
             ehPin: false
           },
           {
             lat: -22.91430,
             lon: -43.20708,
-            src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_011.mp4",
             chapterNumberMap: "seop3_2",
             ehPin: false
           },

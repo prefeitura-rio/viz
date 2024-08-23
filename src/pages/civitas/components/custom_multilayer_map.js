@@ -6,6 +6,7 @@ import { useState } from "react";
 import dialogBallon from "../images/ballon.png"
 import imagem16 from "../images/imagem16.png"
 import locationpin from "../images/locationpin.gif"
+import { zoom } from "d3";
 // Theis 3 types of layers, mapbox, mapbox-style and deckgl
 
 // The following is required to stop "npm build" from transpiling mapbox code.
@@ -196,7 +197,7 @@ class CustomMultilayerMap extends React.Component {
 
     const gridStyle = {
       display: "grid",
-      gridTemplateColumns: "repeat(4, 1fr)",
+      gridTemplateColumns: "repeat(3, 1fr)",
       gridTemplateRows: "repeat(2, 1fr)",
       gap: "0",
       position: "absolute",
@@ -204,8 +205,7 @@ class CustomMultilayerMap extends React.Component {
       left: 0,
       width: "100%",
       height: "100%",
-      zIndex: 2,
-      overflow: "visible", // Permite overflow
+      zIndex: 2
     };
     return (
       <Map
@@ -252,8 +252,7 @@ class CustomMultilayerMap extends React.Component {
           {chapterNumberMap == "capa" || chapterNumberMap == "zoom" ? (
             <div style={gridStyle}>
               {videoInfoArray.map((videoInfo, index) => (
-                !videoInfo.ehImagem &&
-                <div key={index} style={{ position: "relative", overflow: "visible" }}>
+                <div key={index} style={{ position: "relative", overflow: "hidden", width: "100%", height: "100%" }}>
                   <video
                     loop
                     src={videoInfo.src}
@@ -268,9 +267,8 @@ class CustomMultilayerMap extends React.Component {
                       height: "100%",
                       objectFit: "cover",
                       zIndex: index,
-                      border: "3px solid black",
+                      border: "1px solid black",
                       borderRadius: "5px",
-                      boxShadow: "0px 0px 10px rgba(0,0,0,0.5)",
                     }}
                   />
                 </div>
@@ -300,23 +298,22 @@ class CustomMultilayerMap extends React.Component {
                           controls={false}
                           autoPlay
                           muted
+                          loop
                           style={{
                             transform: `scale(${chapterNumberMap == "exemplo3" || chapterNumberMap == "exemplo6" ? cardHeight : ((chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight < 2) ? cardHeight * 1.1 : 1})`,
                             width: `${(chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight > 2 ? "100vw" : "200px"}`,
                             maxWidth: "100vw",
                             zIndex: "1",
-                            border: "2px solid black",
+                            border: "1px solid black",
                             borderRadius: "5px",
-                            boxShadow: "0px 0px 10px rgba(0,0,0,0.5)",
                             transition: "transform 0.5s",
                           }}
                         />) : <img style={{
                           transform: `scale(${chapterNumberMap == "exemplo3" || chapterNumberMap == "exemplo6" ? cardHeight : ((chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight < 2) ? cardHeight * 1.1 : 1})`,
                           width: `${(chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight > 2 ? "100vw" : "200px"}`,
                           zIndex: "1",
-                          border: "2px solid black",
+                          border: "1px solid black",
                           borderRadius: "5px",
-                          boxShadow: "0px 0px 10px rgba(0,0,0,0.5)",
                           transition: "transform 0.5s",
                         }} src={imagem16}></img>}
                       <div
@@ -404,7 +401,7 @@ class CustomMultilayerMap extends React.Component {
 
 
                 {
-                  chapterNumberMap === "seop5_2" && (
+                  (chapterNumberMap === "seop5_2" || chapterNumberMap === "seop6") && (
                     <Marker
                       latitude="-22.8648"
                       longitude="-43.3605"
@@ -431,9 +428,8 @@ class CustomMultilayerMap extends React.Component {
                               : "200px"
                               }`,
                             zIndex: "1",
-                            border: "2px solid black",
+                            border: "1px solid black",
                             borderRadius: "5px",
-                            boxShadow: "0px 0px 10px rgba(0,0,0,0.5)",
                             transition: "transform 0.5s",
                           }}
                           src={imagem16}
@@ -451,6 +447,54 @@ class CustomMultilayerMap extends React.Component {
                     </Marker>
                   )
                 }
+
+                {/* {
+                  (chapterNumberMap == "exemplo1" || chapterNumberMap == "exemplo2" || chapterNumberMap == "exemplo3") && (
+                    <Marker
+                      latitude="-23.01473"
+                      longitude="-43.57571"
+                    >
+                      <div
+                        style={{
+                          position: "relative",
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          top: "-110px",
+                        }}
+                      >
+                        <img
+                          style={{
+                            transform: `scale(${chapterNumberMap === "exemplo3" || chapterNumberMap === "exemplo6"
+                              ? cardHeight
+                              : (chapterNumberMap === "exemplo8" || chapterNumberMap === "seop3_2") && cardHeight < 2
+                                ? cardHeight * 1.1
+                                : 1
+                              })`,
+                            width: `${(chapterNumberMap === "exemplo8" || chapterNumberMap === "seop3_2") && cardHeight > 2
+                              ? "100vw"
+                              : "200px"
+                              }`,
+                            zIndex: "1",
+                            border: "1px solid black",
+                            borderRadius: "5px",
+                            transition: "transform 0.5s",
+                          }}
+                          src={imagem16}
+                        />
+                        <div
+                          style={{
+                            width: "2px",
+                            height: "40px",
+                            backgroundColor: "white",
+                            zIndex: "0",
+                          }}
+                        ></div>
+
+                      </div>
+                    </Marker>
+                  )
+                } */}
 
               </>
             ))

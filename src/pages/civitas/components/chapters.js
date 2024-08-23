@@ -8,7 +8,7 @@ import tw from "tailwind-styled-components";
 import logo from "../images/logo.png";
 import exemplo1 from "../images/exemplo1.png";
 import exemplo2 from "../images/exemplo2.png";
-import infrator from "../images/infrator.png";
+import radar_foto from "../images/radar_foto.png";
 import suspeito from "../images/suspeito.png";
 import alert from "../images/alert.gif";
 import bo from "../images/bo.png";
@@ -222,7 +222,7 @@ export function DrawMap(
     if (props.chapterNumberMap === "drawMap") {
       const timer = setTimeout(() => {
         setShowMap(true);
-      }, 4000);
+      }, 3000);
       return () => clearTimeout(timer); // Cleanup the timer on unmount
     }
     else {
@@ -436,10 +436,10 @@ export function Seop6(
   return (<>
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={imagem17}></styles.NewsImage>
+        {/* <styles.NewsImage src={imagem17}></styles.NewsImage>
         <styles.Credito>
           Imagem: Documento da moto.
-        </styles.Credito>
+        </styles.Credito> */}
         <styles.TextCard1>
           As imagens revelam a placa da moto. Ela é inserida no sistema.
         </styles.TextCard1>
@@ -587,7 +587,7 @@ export function Exemplo5(
   return (
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.NewsImage src={infrator}></styles.NewsImage>
+        <styles.NewsImage src={radar_foto}></styles.NewsImage>
         <styles.Credito>
           Imagem:  Imagem do suspeito
         </styles.Credito>
