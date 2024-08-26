@@ -2,6 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import CustomMultilayerMap from "../civitas/components/custom_multilayer_map";
 import MapboxElevationApp from "./MapboxElevationApp";
+import "./style.css";
 // Chapters
 import * as chapterMap from "./components/chapters.map";
 import * as chapterDiv from "./components/chapters";
@@ -155,6 +156,8 @@ export default function SubsidioSPPO() {
   const vh = (coef) => window.innerHeight * (coef / 100);
   const vw = (coef) => window.innerWidth * (coef / 100);
   const [cardHeight, setCardHeight] = useState(1);
+  const [currentHour, setCurrentHour] = useState("5:43");
+  const [currentBairro, setCurrentBairro] = useState("");
   useEffect(() => {
     gsap.defaults({ ease: "none" });
 
@@ -201,6 +204,8 @@ export default function SubsidioSPPO() {
       trigger: "#exemplo2",
       onToggle: () => {
         setChapterNumberMap("exemplo2");
+        setCurrentHour("5:43");
+        setCurrentBairro("Senador Vasconcelos");
       },
     });
 
@@ -209,6 +214,8 @@ export default function SubsidioSPPO() {
       trigger: "#exemplo3",
       onToggle: () => {
         setChapterNumberMap("exemplo3");
+        setCurrentHour("5:43");
+        setCurrentBairro("Senador Vasconcelos");
       },
       onUpdate: (self) => {
         const progress = self.progress;
@@ -231,11 +238,26 @@ export default function SubsidioSPPO() {
     //   .to("#exemplo4", { opacity: 0, duration: 6 })
     //   .to("#exemplo4", { opacity: 0, duration: 28 });
 
+    const flicker = () => {
+      const clockElement = document.querySelector('.clock');
+      if (clockElement) {
+        clockElement.classList.add('flicker');
+
+        // Remove the flicker class after the animation completes
+        setTimeout(() => {
+          clockElement.classList.remove('flicker');
+        }, 1500); // Match the duration of the CSS animation
+      }
+    }
+
     ScrollTrigger.create({
       // animation: tl13,
       trigger: "#exemplo4",
       onToggle: () => {
         setChapterNumberMap("exemplo4");
+        setCurrentHour("6:55");
+        setCurrentBairro("Bento Ribeiro");
+        flicker();
       },
     });
 
@@ -260,6 +282,9 @@ export default function SubsidioSPPO() {
       trigger: "#exemplo6",
       onToggle: () => {
         setChapterNumberMap("exemplo6");
+        setCurrentHour("10:17");
+        setCurrentBairro("Méier");
+        flicker();
       },
       onUpdate: (self) => {
         const progress = self.progress;
@@ -292,6 +317,20 @@ export default function SubsidioSPPO() {
       toggleActions: "play reverse play reverse",
       onToggle: () => {
         setChapterNumberMap("exemplo7");
+        setCurrentHour("10:28");
+        setCurrentBairro("Centro de Operações");
+      },
+    });
+    ScrollTrigger.create({
+      animation: tl4,
+      trigger: "#exemplo72",
+      scrub: false,
+      toggleActions: "play reverse play reverse",
+      onToggle: () => {
+        flicker();
+        setChapterNumberMap("exemplo7");
+        setCurrentHour("10:30");
+        setCurrentBairro("Centro de Operações");
       },
     });
 
@@ -318,6 +357,7 @@ export default function SubsidioSPPO() {
       trigger: "#exemplo8",
       onToggle: () => {
         setChapterNumberMap("exemplo8");
+        flicker();
       },
       onUpdate: (self) => {
         const progress = self.progress;
@@ -335,6 +375,9 @@ export default function SubsidioSPPO() {
       trigger: "#seop1",
       onToggle: () => {
         setChapterNumberMap("seop1");
+        setCurrentHour("10:35");
+        setCurrentBairro("Centro de Operações");
+        flicker();
       },
     });
 
@@ -359,6 +402,9 @@ export default function SubsidioSPPO() {
       trigger: "#seop3",
       onToggle: () => {
         setChapterNumberMap("seop3");
+        setCurrentHour("10:40");
+        setCurrentBairro("Estácio");
+        flicker();
       }
     });
 
@@ -366,6 +412,9 @@ export default function SubsidioSPPO() {
       trigger: "#seop3_2",
       onToggle: () => {
         setChapterNumberMap("seop3_2");
+        setCurrentHour("10:51");
+        setCurrentBairro("Estácio");
+        flicker();
       },
       onUpdate: (self) => {
         const progress = self.progress;
@@ -383,6 +432,9 @@ export default function SubsidioSPPO() {
       trigger: "#seop4",
       onToggle: () => {
         setChapterNumberMap("seop4");
+        setCurrentHour("11:02");
+        setCurrentBairro("Campo Grande");
+        flicker();
       },
     });
     ScrollTrigger.create({
@@ -420,6 +472,9 @@ export default function SubsidioSPPO() {
       trigger: "#seop8",
       onToggle: () => {
         setChapterNumberMap("seop8");
+        setCurrentHour("12:55");
+        setCurrentBairro("Central Disque Den.");
+        flicker();
       },
     });
     // ScrollTrigger.create({
@@ -432,6 +487,9 @@ export default function SubsidioSPPO() {
       trigger: "#seop10",
       onToggle: () => {
         setChapterNumberMap("seop10");
+        setCurrentHour("13:33");
+        setCurrentBairro("Bandidos presos");
+        flicker();
       },
     });
 
@@ -538,7 +596,7 @@ export default function SubsidioSPPO() {
           {
             lat: -22.91430,
             lon: -43.20708,
-            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_011.mp4",
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_02.mp4",
             chapterNumberMap: "seop3",
             ehPin: false
           },
@@ -579,6 +637,12 @@ export default function SubsidioSPPO() {
         animationSpeed={1}
       />
       <styles.Logo src={logo}></styles.Logo>
+      {(chapterNumberMap != "capa" && chapterNumberMap !== "zoom" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "seop7" && chapterNumberMap !== "drawMap") &&
+        <div className="clock">
+          {currentHour} AM
+          <div className="clock-description">{currentBairro}</div>
+        </div>
+      }
       <chapterDiv.Capa id={"capa"} />
       {/* <chapterDiv.Intro id={"intro"} /> */}
       <chapterDiv.Zoom id={"zoom"} />
@@ -589,6 +653,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Exemplo5 id={"exemplo5"} />
       <chapterDiv.Exemplo6 id={"exemplo6"} />
       <chapterDiv.Exemplo7 id={"exemplo7"} />
+      <chapterDiv.Exemplo72 id={"exemplo72"} />
       <chapterDiv.Grafico id={"grafico"} />
       <chapterDiv.Exemplo8 id={"exemplo8"} />
       <chapterDiv.Seop1 id={"seop1"} />

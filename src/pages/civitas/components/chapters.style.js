@@ -3,7 +3,6 @@ import { Container } from "postcss";
 import styled from "styled-components";
 import tw from "tailwind-styled-components";
 import capa from "../images/capa.gif";
-
 export const CapaDivSC = styled.div`
   // background-image: url(${capa});
   background-size: cover;
@@ -12,6 +11,24 @@ export const CapaDivSC = styled.div`
 export const Logo = tw.img`
   w-24 mt-[2vh] lg:w-20 fixed top-0 left-1/2 transform -translate-x-1/2
 `
+
+export const Clock = tw.div`
+ font-family: 'Digital Numbers', sans-serif;                                                
+  fixed
+  top-0
+  right-0
+  w-[200px]
+  h-[100px]
+  bg-red-500
+  mt-[2vh]
+  mr-[2vh]
+  flex
+  items-center
+  justify-center
+  text-white
+  text-3xl
+  pr-2
+`;
 export const CapaDiv = tw(CapaDivSC)`
   h-screen 
   flex flex-col 
@@ -118,6 +135,17 @@ export const ChapterGenericDiv1Center = tw.div`
   text-white
   -z-10 
   `;
+export const ChapterGenericDiv1CenterBig = tw.div`
+  flex flex-col 
+  justify-center items-center 
+  w-full h-[250vh] 
+  items-center
+  justify-center
+  lg:justify-start
+  lg:p-[10%]
+  text-white
+  -z-10 
+  `;
 export const ChapterGenericDiv1Left = tw.div`
   flex 
   w-full h-[150vh] 
@@ -131,6 +159,16 @@ export const ChapterGenericDiv1Left = tw.div`
 export const ChapterGenericDiv1Right = tw.div`
   flex 
   w-full h-[150vh] 
+  items-center
+  justify-center
+  lg:justify-end
+  lg:p-[5%]
+  text-white
+  -z-10 
+  `;
+export const ChapterGenericDiv1RightBig = tw.div`
+  flex 
+  w-full h-[250vh] 
   items-center
   justify-center
   lg:justify-end
@@ -247,7 +285,7 @@ export const Ball1 = tw.div`
 `;
 export const Ball2 = tw.div`
   w-5 h-5 
-  bg-[yellow]
+  bg-[grey]
   rounded-full 
   mr-2
 `;
@@ -299,6 +337,24 @@ const TextyellowSC = styled.div`
 `;
 
 export const Textyellow = tw(TextyellowSC)`
+  text-white
+  inline
+`;
+const TextgreySC2 = styled.div`
+
+`;
+
+export const Textgrey2 = tw(TextgreySC2)`
+border-2 border-[grey] 
+text-white
+  inline
+`;
+const TextBlueSC = styled.div`
+
+`;
+
+export const TextBlue = tw(TextBlueSC)`
+border-2 border-[#00BFFF]
   text-white
   inline
 `;

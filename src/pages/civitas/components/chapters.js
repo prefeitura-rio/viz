@@ -127,12 +127,12 @@ export function Exemplo6(
 ) {
   return (
     <>
-      <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
+      <styles.ChapterGenericDiv1RightBig ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
           <styles.TextCard1>
             Rua Dias da Cruz, Méier, 10h17. O carro é utilizado num assalto a uma agência bancária.        </styles.TextCard1>
         </styles.ContainerCard1>
-      </styles.ChapterGenericDiv1Right>
+      </styles.ChapterGenericDiv1RightBig>
       <styles.ChapterGenericDiv1Left>
         <styles.ContainerCard1>
           <styles.TextCard1>
@@ -162,7 +162,18 @@ export function Exemplo7(
           </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Right>
-      <styles.ChapterGenericDiv1Left >
+    </>
+  );
+}
+export function Exemplo72(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  return (
+    <>
+      <styles.ChapterGenericDiv1Left ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
           <styles.TextCard1>
             COR, 10h30. A placa parcial com a descrição do carro é inserida no sistema próprio, desenvolvido pelo Prefeitura do Rio, que  conecta diversas bases de dados. Com isso, é possível gerar todo um histórico de circulação desse veículo pela cidade, mostrando diversos padrões. Esses dados são utilizados para gerar um relatório automático e auditável, que é enviado à polícia. Ao mesmo tempo, é feito o cadastramento da placa no sistema para o acionamento de alerta.        </styles.TextCard1>
@@ -339,14 +350,14 @@ export function Exemplo1(
       <styles.ContainerCard1>
         <styles.TextCard1>
           Mas e aí? O que a CIVITAS faz, afinal? Uma das atuações da Central é o Cerco Eletrônico, que utiliza o parque tecnológico de{" "}
-          <styles.Textyellow>
+          <styles.TextBlue>
 
             3.800
-          </styles.Textyellow>
+          </styles.TextBlue>
           {" "} câmeras do COR e{" "}
-          <styles.Textyellow>
+          <styles.Textgrey2>
             1.500
-          </styles.Textyellow>{" "} radares da CET-Rio espalhados por toda a cidade para rastrear atividades suspeitas mediante solicitação das forças de segurança.
+          </styles.Textgrey2>{" "} radares da CET-Rio espalhados por toda a cidade para rastrear atividades suspeitas mediante solicitação das forças de segurança.
         </styles.TextCard1>
         <styles.BallsContainer>
           <styles.BallWithLabel>
@@ -374,7 +385,7 @@ export function Exemplo2(
   return (
     <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        <styles.TextCard1>
+        <styles.TextCard1 id="hour1">
           Senador Vasconcelos, Rio de Janeiro, 5h43 da manhã.
         </styles.TextCard1>
       </styles.ContainerCard1>
@@ -489,12 +500,12 @@ export function Seop3(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+    <styles.ChapterGenericDiv1CenterBig ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
           10h40. O carro passa em outro equipamento do cerco eletrônico, um alerta em tempo real é gerado e a polícia é prontamente avisada. Com o histórico de movimentação do carro em mão, a polícia consegue se preparar melhor para abordar o suspeito.         </styles.TextCard1>
       </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1Center>
+    </styles.ChapterGenericDiv1CenterBig>
   );
 }
 export function Seop3_2(
@@ -660,7 +671,7 @@ export function Exemplo8(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+    <styles.ChapterGenericDiv1CenterBig ref={props.chapRef} id={props.id}>
       {/* <styles.ContainerCard1>
       <styles.TextCard1>
         A cidade do Rio de Janeiro registra{" "}
@@ -670,7 +681,7 @@ export function Exemplo8(
         ocorrências todos os dias. Roubos, furtos, sequestros, arrastões, assaltos, vandalismo, agressões. Como a Prefeitura do Rio pode ajudar a resolver isso? A CIVITAS é uma central de inteligência, vigilância e tecnologia voltada para o apoio à segurança pública carioca.
       </styles.TextCard1>
     </styles.ContainerCard1> */}
-    </styles.ChapterGenericDiv1Center>
+    </styles.ChapterGenericDiv1CenterBig>
   );
 }
 

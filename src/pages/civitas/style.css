@@ -1,0 +1,47 @@
+@import url("https://fonts.cdnfonts.com/css/digital-numbers");
+
+.clock {
+  font-family: 'Digital Numbers', sans-serif !important;
+  background-color: black;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  z-index: 999 !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 25px;
+  box-shadow: 4px 4px 8px #00BFFF;
+  transition: fade 1s ease-in-out;
+}
+/* Define keyframes for the background color transition */
+@keyframes flicker {
+  0% {
+    background-color: #00BFFF;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+/* Apply the animation to the .clock element */
+.clock.flicker {
+  animation: flicker 1.5s ease-in-out;
+}
+.clock-description{
+  font-size: 10px;
+  margin-top: 10px;
+  line-height: 15px;
+}
+.clock-wrapper{
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column; */
+}
