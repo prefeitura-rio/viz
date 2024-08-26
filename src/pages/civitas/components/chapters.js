@@ -43,7 +43,7 @@ export function Capa(
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       <styles.Wrap>
         <styles.Title>
-          Qual o novo papel do município na segurança pública?
+          Estamos de olho 👀
         </styles.Title>
         <styles.Subtitle>
           Inaugurada em julho de 2024, A CIVITAS é uma central de inteligência, vigilância e tecnologia para o apoio à segurança pública carioca
@@ -337,10 +337,6 @@ export function Exemplo1(
   return (
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
-        {/* <styles.NewsImage src={exemplo1}></styles.NewsImage>
-        <styles.Credito>
-          Imagem: Prefeitura da Cidade do Rio Janeiro
-        </styles.Credito> */}
         <styles.TextCard1>
           Mas e aí? O que a CIVITAS faz, afinal? Uma das atuações da Central é o Cerco Eletrônico, que utiliza o parque tecnológico de{" "}
           <styles.Textyellow>
@@ -352,6 +348,16 @@ export function Exemplo1(
             1.500
           </styles.Textyellow>{" "} radares da CET-Rio espalhados por toda a cidade para rastrear atividades suspeitas mediante solicitação das forças de segurança.
         </styles.TextCard1>
+        <styles.BallsContainer>
+          <styles.BallWithLabel>
+            <styles.Ball1 />
+            <styles.BallLabel>Câmeras</styles.BallLabel>
+          </styles.BallWithLabel>
+          <styles.BallWithLabel>
+            <styles.Ball2 />
+            <styles.BallLabel>Radares</styles.BallLabel>
+          </styles.BallWithLabel>
+        </styles.BallsContainer>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
   );

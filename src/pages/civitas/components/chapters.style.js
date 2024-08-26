@@ -16,7 +16,7 @@ export const CapaDiv = tw(CapaDivSC)`
   h-screen 
   flex flex-col 
   justify-center items-center 
-  bg-opacity-40 backdrop-blur
+  bg-black bg-opacity-40 backdrop-blur
 `;
 export const Wrap = tw.div`
   h-[600px] w-full
@@ -225,6 +225,36 @@ export const TextCard1 = tw(TextCardSC)`
   text-left
   mt-0
   mb-0
+`;
+export const BallsContainer = tw.div`
+  flex 
+  justify-center 
+  items-center 
+  mt-4
+`;
+
+export const BallWithLabel = tw.div`
+  flex 
+  items-center 
+  mx-4
+`;
+
+export const Ball1 = tw.div`
+  w-5 h-5 
+  bg-[#00BFFF]
+  rounded-full 
+  mr-2
+`;
+export const Ball2 = tw.div`
+  w-5 h-5 
+  bg-[yellow]
+  rounded-full 
+  mr-2
+`;
+
+export const BallLabel = tw.span`
+  text-white
+  text-sm
 `;
 
 export const Grid1 = tw.div`

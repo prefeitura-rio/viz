@@ -821,7 +821,50 @@ export const Exemplo1 = () => {
         duration: 4000,
       },
     },
-    layers: [],
+
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            "id": "radares-2i2tet",
+            "type": "circle",
+            "paint": {
+              "circle-radius": 2,
+              "circle-color": "hsl(60, 100%, 50%)",
+              "circle-opacity": 0
+            },
+            "layout": {},
+            "source": "composite",
+            "source-layer": "radares-2i2tet"
+
+
+          },
+        },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            "id": "cameras-66ijxh",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "circle",
+            "paint": {
+              "circle-emissive-strength": 1,
+              "circle-color": "hsl(195, 100%, 50%)",
+              "circle-radius": 2,
+              "circle-opacity": 0
+            },
+            "layout": {},
+            "source": "composite",
+            "source-layer": "cameras-66ijxh"
+          },
+        },
+      },
+    ],
   };
 };
 
