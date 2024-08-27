@@ -40,7 +40,7 @@ export const Wrap = tw.div`
   flex flex-col 
   justify-center items-center 
   pl-5 pr-5  
-   mt-[15vh]
+
 `;
 // mt-[10%]
 // lg:mt-[21%]
@@ -72,7 +72,7 @@ export const Title = tw.div`
 // `;
 
 export const AuthorText = tw.div`
-  mb-[20%]
+  mt-[20%]
   lg:mb-[45%]
   font-serif
   text-sm text-center text-white
@@ -85,10 +85,10 @@ export const Subtitle = tw.div`
   mb-4 
   lg:mb-5 
   font-serif
-  text-[20px] text-center text-white
+  text-[15px] text-center text-white
   leading-[1.3] 
   lg:leading-[1.2]
-  lg:text-[25px]
+  lg:text-[18px]
   max-w-[650px]
 `;
 
@@ -102,9 +102,8 @@ export const Credito = tw.div`
 
 export const IntroTitle = tw.div`
   font-bold  font-serif
-  text-3xl text-left text-white
+  text-1xl text-left text-white
   self-start
-  mb-6
   lg:self-start
 `;
 
@@ -113,6 +112,7 @@ export const IntroText = tw.div`
   text-lg text-justify text-white 
   leading-normal 
   opacity-100
+  max-w-[450px]
 `;
 
 export const ChapterGenericDiv = tw.div`
@@ -194,9 +194,10 @@ export const FimDiv = tw.div`
   justify-center items-center 
   bg-black/50
   pr-[10%] pl-[10%]
+  pt-[60%]
   lg:pt-[25%]
-  lg:pr-[25%]
-  lg:pl-[25%]
+  lg:pr-[35%]
+  lg:pl-[35%]
 `;
 
 export const Footer = tw.div`
@@ -266,7 +267,7 @@ export const TextCard1 = tw(TextCardSC)`
 `;
 export const BallsContainer = tw.div`
   flex 
-  justify-center 
+  flex-start
   items-center 
   mt-4
 `;
@@ -274,7 +275,6 @@ export const BallsContainer = tw.div`
 export const BallWithLabel = tw.div`
   flex 
   items-center 
-  mx-4
 `;
 
 export const Ball1 = tw.div`
@@ -345,7 +345,7 @@ const TextgreySC2 = styled.div`
 `;
 
 export const Textgrey2 = tw(TextgreySC2)`
-border-2 border-[grey] 
+
 text-white
   inline
 `;
@@ -354,7 +354,7 @@ const TextBlueSC = styled.div`
 `;
 
 export const TextBlue = tw(TextBlueSC)`
-border-2 border-[#00BFFF]
+
   text-white
   inline
 `;

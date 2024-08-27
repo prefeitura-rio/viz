@@ -268,7 +268,7 @@ class CustomMultilayerMap extends React.Component {
                       objectFit: "cover",
                       zIndex: index,
                       border: "1px solid black",
-                      borderRadius: "5px",
+                      // borderRadius: "5px",
                     }}
                   />
                 </div>
@@ -300,27 +300,28 @@ class CustomMultilayerMap extends React.Component {
                           muted
                           loop
                           style={{
-                            transform: `scale(${chapterNumberMap == "exemplo3" || chapterNumberMap == "exemplo6" ? cardHeight : ((chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight < 2) ? cardHeight * 1.1 : 1})`,
-                            width: `${(chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight > 2 ? "100vw" : "200px"}`,
-                            maxWidth: "100vw",
+                            // transform: `scale(${chapterNumberMap == "exemplo3" || chapterNumberMap == "exemplo6" ? cardHeight : ((chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight < 2) ? cardHeight * 1.1 : 1})`,
+                            width: `${cardHeight * 1.5 * 200}px`,
+                            maxWidth: "50vw",
+                            minWidth: "300px",
                             zIndex: "1",
-                            border: "1px solid black",
-                            borderRadius: "5px",
+                            border: "2.5px solid black",
+                            // borderRadius: "5px",
                             transition: "transform 0.5s",
                           }}
                         />) : <img style={{
-                          transform: `scale(${chapterNumberMap == "exemplo3" || chapterNumberMap == "exemplo6" ? cardHeight : ((chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight < 2) ? cardHeight * 1.1 : 1})`,
-                          width: `${(chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight > 2 ? "100vw" : "200px"}`,
+                          // transform: `scale(${chapterNumberMap == "exemplo3" || chapterNumberMap == "exemplo6" ? cardHeight : ((chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight < 2) ? cardHeight * 1.1 : 1})`,
+                          width: `${cardHeight * 200}px`,
                           zIndex: "1",
-                          border: "1px solid black",
-                          borderRadius: "5px",
+                          border: "2.5px solid black",
+                          // borderRadius: "5px",
                           transition: "transform 0.5s",
                         }} src={imagem16}></img>}
                       <div
                         style={{
                           width: "2px",
                           height: "20px",
-                          backgroundColor: "white",
+                          backgroundColor: "black",
                           zIndex: "0",
                         }}
                       ></div>
@@ -328,7 +329,8 @@ class CustomMultilayerMap extends React.Component {
                         style={{
                           width: "5px",
                           height: "5px",
-                          backgroundColor: "white",
+                          borderRadius: "50%",
+                          backgroundColor: "black",
                           zIndex: "0",
                         }}
                       ></div>
@@ -428,8 +430,8 @@ class CustomMultilayerMap extends React.Component {
                               : "200px"
                               }`,
                             zIndex: "1",
-                            border: "1px solid black",
-                            borderRadius: "5px",
+                            border: "2.5px solid black",
+                            // borderRadius: "5px",
                             transition: "transform 0.5s",
                           }}
                           src={imagem16}
@@ -438,7 +440,7 @@ class CustomMultilayerMap extends React.Component {
                           style={{
                             width: "2px",
                             height: "40px",
-                            backgroundColor: "white",
+                            backgroundColor: "black",
                             zIndex: "0",
                           }}
                         ></div>

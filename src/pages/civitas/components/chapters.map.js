@@ -455,7 +455,39 @@ export const Seop2 = () => {
       },
     },
     layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.8,
+        layer: {
+          ...{
 
+            "id": "cor-909lki",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "fill",
+            "paint": {
+              "fill-emissive-strength": 1,
+              "fill-opacity": 0,
+              "fill-color": [
+                "interpolate",
+                [
+                  "linear"
+                ],
+                [
+                  "zoom"
+                ],
+                0,
+                "hsl(195, 100%, 50%)",
+                22,
+                "hsl(195, 100%, 50%)"
+              ]
+            },
+            "layout": {},
+            "source": "composite",
+            "source-layer": "cor-909lki"
+          },
+        },
+      },
     ],
   };
 };

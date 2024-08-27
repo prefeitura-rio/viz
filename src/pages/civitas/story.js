@@ -176,7 +176,8 @@ export default function SubsidioSPPO() {
       .to("#capa", { opacity: 10, duration: 6 })
       .to("#capa", { opacity: 1, duration: 20 })
       .to("#capa", { opacity: 0, duration: 6 })
-      .to("#capa", { opacity: 0, duration: 28 });
+      .to("#capa", { opacity: 0, duration: 28 })
+      .to("#capa", { opacity: 0, duration: 6 });
 
     ScrollTrigger.create({
       animation: tl2,

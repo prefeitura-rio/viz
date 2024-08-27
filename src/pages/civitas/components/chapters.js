@@ -43,7 +43,7 @@ export function Capa(
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       <styles.Wrap>
         <styles.Title>
-          Estamos de olho 👀
+          Estamos de olho
         </styles.Title>
         <styles.Subtitle>
           Inaugurada em julho de 2024, A CIVITAS é uma central de inteligência, vigilância e tecnologia para o apoio à segurança pública carioca
@@ -155,7 +155,7 @@ export function Exemplo7(
         <styles.ContainerCard1>
           <styles.NewsImage src={bo}></styles.NewsImage>
           <styles.Credito>
-            Imagem:  Imagem do B.O
+            Imagem do B.O
           </styles.Credito>
           <styles.TextCard1>
             COR, 10h28. Chega à CIVITAS o ofício da Polícia Militar com o B.O do roubo/sequestro,  solicitando imagens das câmeras do local e informando a placa parcial.
@@ -325,7 +325,7 @@ export function Seop10(
         <styles.ContainerCard1>
           <styles.NewsImage src={arrested}></styles.NewsImage>
           <styles.Credito>
-            Imagem: Bandido sendo preso.
+            Bandido sendo preso.
           </styles.Credito>
           <styles.TextCard1>
             13h33. Graças à denúncia e ao rastreio das placas dos veículos, a polícia encontra o cativeiro, prende o segundo suspeito e liberta o refém.
@@ -364,7 +364,7 @@ export function Exemplo1(
             <styles.Ball1 />
             <styles.BallLabel>Câmeras</styles.BallLabel>
           </styles.BallWithLabel>
-          <styles.BallWithLabel>
+          <styles.BallWithLabel style={{ paddingLeft: "16px" }}>
             <styles.Ball2 />
             <styles.BallLabel>Radares</styles.BallLabel>
           </styles.BallWithLabel>
@@ -455,7 +455,7 @@ export function Seop6(
       <styles.ContainerCard1>
         {/* <styles.NewsImage src={imagem17}></styles.NewsImage>
         <styles.Credito>
-          Imagem: Documento da moto.
+          Documento da moto.
         </styles.Credito> */}
         <styles.TextCard1>
           As imagens revelam a placa da moto. Ela é inserida no sistema.
@@ -536,9 +536,9 @@ export function Seop2(
 
   return (
     <styles.IntroDiv ref={props.chapRef} id={props.id}>
-      <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+      <styles.ChapterGenericDiv1Center style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }} ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
-          <styles.NewsImage src={alert}></styles.NewsImage>
+          {/* <styles.NewsImage src={alert}></styles.NewsImage> */}
 
           <styles.IntroTitle id={"solucaoTitle"}>Nova localização do veículo foi registrada!</styles.IntroTitle>
         </styles.ContainerCard1>
@@ -560,7 +560,7 @@ export function Seop1(
       <styles.ContainerCard1>
         <styles.NewsImage src={suspeito}></styles.NewsImage>
         <styles.Credito>
-          Imagem: Imagem do suspeito
+          Imagem do suspeito
         </styles.Credito>
         <styles.TextCard1>
           COR, 10H35. As imagens de câmeras do local do crime são acessadas e analisadas. O vídeo é enviado para a polícia, que analisa e levanta as características físicas e a vestimenta do acusado.
@@ -606,7 +606,7 @@ export function Exemplo5(
       <styles.ContainerCard1>
         <styles.NewsImage src={radar_foto}></styles.NewsImage>
         <styles.Credito>
-          Imagem:  Imagem do suspeito
+          Imagem do suspeito
         </styles.Credito>
         {/* <styles.TextCard1>
           No fim do ano passado, um imóvel onde funcionaria um supermercado, com
@@ -642,7 +642,7 @@ export function Fim(
 
   return (
     <styles.FimDiv ref={props.chapRef} id={props.id}>
-      <styles.IntroTitle id={"fimTitle"}>Conclusão</styles.IntroTitle>
+      {/* <styles.IntroTitle id={"fimTitle"}>Conclusão</styles.IntroTitle> */}
       <styles.IntroText>
         Além do cerco eletrônico, a CIVITAS atua em dois outros eixos:
         <br></br>
