@@ -4,7 +4,7 @@ import mapboxgl from "mapbox-gl"; // do not remove this line
 import { isMobile } from "react-device-detect";
 import { useState } from "react";
 import dialogBallon from "../images/ballon.png"
-import imagem16 from "../images/imagem16.png"
+import dois_caras_numa_moto from "../images/dois_caras_numa_moto.png"
 import locationpin from "../images/locationpin.gif"
 import { zoom } from "d3";
 // Theis 3 types of layers, mapbox, mapbox-style and deckgl
@@ -285,7 +285,7 @@ class CustomMultilayerMap extends React.Component {
                   >
                     <div
                       style={{
-                        display: `${videoInfo.chapterNumberMap == chapterNumberMap && chapterNumberMap != "exemplo7" || chapterNumberMap == "exemplo1" ? "flex" : "none"}`,
+                        display: `${videoInfo.chapterNumberMap == chapterNumberMap && chapterNumberMap != "exemplo7" || chapterNumberMap == "exemplo1" || chapterNumberMap == "exemplo11" ? "flex" : "none"}`,
                         position: "relative",
                         flexDirection: "column",
                         alignItems: "center",
@@ -316,7 +316,7 @@ class CustomMultilayerMap extends React.Component {
                           border: "2.5px solid black",
                           // borderRadius: "5px",
                           transition: "transform 0.5s",
-                        }} src={imagem16}></img>}
+                        }} src={dois_caras_numa_moto}></img>}
                       <div
                         style={{
                           width: "2px",
@@ -434,7 +434,7 @@ class CustomMultilayerMap extends React.Component {
                             // borderRadius: "5px",
                             transition: "transform 0.5s",
                           }}
-                          src={imagem16}
+                          src={dois_caras_numa_moto}
                         />
                         <div
                           style={{
@@ -482,7 +482,7 @@ class CustomMultilayerMap extends React.Component {
                             borderRadius: "5px",
                             transition: "transform 0.5s",
                           }}
-                          src={imagem16}
+                          src={dois_caras_numa_moto}
                         />
                         <div
                           style={{

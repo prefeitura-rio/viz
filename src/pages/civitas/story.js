@@ -13,6 +13,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import * as styles from "./components/chapters.style";
 import logo from "./images/logo.png";
+import moto_loading from "./images/moto_loading.gif";
 // import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 // import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
@@ -156,8 +157,10 @@ export default function SubsidioSPPO() {
   const vh = (coef) => window.innerHeight * (coef / 100);
   const vw = (coef) => window.innerWidth * (coef / 100);
   const [cardHeight, setCardHeight] = useState(1);
-  const [currentHour, setCurrentHour] = useState("5:43");
+  const [currentHour, setCurrentHour] = useState("00:00");
   const [currentBairro, setCurrentBairro] = useState("");
+  const [loadingDrawMap, setLoadingDrawMap] = useState(false);
+
   useEffect(() => {
     gsap.defaults({ ease: "none" });
 
@@ -200,14 +203,26 @@ export default function SubsidioSPPO() {
         setChapterNumberMap("exemplo1");
       },
     });
+    ScrollTrigger.create({
+      trigger: "#exemplo11",
+      onToggle: () => {
+        setChapterNumberMap("exemplo11");
+      },
+    });
 
     ScrollTrigger.create({
       trigger: "#exemplo2",
       onToggle: () => {
         setChapterNumberMap("exemplo2");
-        setCurrentHour("5:43");
         setCurrentBairro("Senador Vasconcelos");
       },
+      onEnter: () => {
+        startHourCounter(0, 343);
+      },
+      onEnterBack: () => {
+        startHourCounter(0, 343);
+      },
+
     });
 
 
@@ -215,8 +230,13 @@ export default function SubsidioSPPO() {
       trigger: "#exemplo3",
       onToggle: () => {
         setChapterNumberMap("exemplo3");
-        setCurrentHour("5:43");
         setCurrentBairro("Senador Vasconcelos");
+      },
+      onEnter: () => {
+        startHourCounter(343, 343);
+      },
+      onEnterBack: () => {
+        startHourCounter(343, 343);
       },
       onUpdate: (self) => {
         const progress = self.progress;
@@ -256,9 +276,14 @@ export default function SubsidioSPPO() {
       trigger: "#exemplo4",
       onToggle: () => {
         setChapterNumberMap("exemplo4");
-        setCurrentHour("6:55");
         setCurrentBairro("Bento Ribeiro");
         flicker();
+      },
+      onEnter: () => {
+        startHourCounter(343, 415);
+      },
+      onEnterBack: () => {
+        startHourCounter(343, 415);
       },
     });
 
@@ -283,9 +308,14 @@ export default function SubsidioSPPO() {
       trigger: "#exemplo6",
       onToggle: () => {
         setChapterNumberMap("exemplo6");
-        setCurrentHour("10:17");
         setCurrentBairro("Méier");
         flicker();
+      },
+      onEnter: () => {
+        startHourCounter(415, 617);
+      },
+      onEnterBack: () => {
+        startHourCounter(415, 617);
       },
       onUpdate: (self) => {
         const progress = self.progress;
@@ -318,8 +348,13 @@ export default function SubsidioSPPO() {
       toggleActions: "play reverse play reverse",
       onToggle: () => {
         setChapterNumberMap("exemplo7");
-        setCurrentHour("10:28");
         setCurrentBairro("Centro de Operações");
+      },
+      onEnter: () => {
+        startHourCounterShort(617, 628);
+      },
+      onEnterBack: () => {
+        startHourCounterShort(617, 628);
       },
     });
     ScrollTrigger.create({
@@ -330,8 +365,13 @@ export default function SubsidioSPPO() {
       onToggle: () => {
         flicker();
         setChapterNumberMap("exemplo7");
-        setCurrentHour("10:30");
         setCurrentBairro("Centro de Operações");
+      },
+      onEnter: () => {
+        startHourCounterShort(628, 630);
+      },
+      onEnterBack: () => {
+        startHourCounterShort(628, 630);
       },
     });
 
@@ -376,9 +416,14 @@ export default function SubsidioSPPO() {
       trigger: "#seop1",
       onToggle: () => {
         setChapterNumberMap("seop1");
-        setCurrentHour("10:35");
         setCurrentBairro("Centro de Operações");
         flicker();
+      },
+      onEnter: () => {
+        startHourCounterShort(630, 635);
+      },
+      onEnterBack: () => {
+        startHourCounterShort(630, 635);
       },
     });
 
@@ -403,19 +448,29 @@ export default function SubsidioSPPO() {
       trigger: "#seop3",
       onToggle: () => {
         setChapterNumberMap("seop3");
-        setCurrentHour("10:40");
         setCurrentBairro("Estácio");
         flicker();
-      }
+      },
+      onEnter: () => {
+        startHourCounterShort(635, 640);
+      },
+      onEnterBack: () => {
+        startHourCounterShort(635, 640);
+      },
     });
 
     ScrollTrigger.create({
       trigger: "#seop3_2",
       onToggle: () => {
         setChapterNumberMap("seop3_2");
-        setCurrentHour("10:51");
         setCurrentBairro("Estácio");
         flicker();
+      },
+      onEnter: () => {
+        startHourCounterShort(640, 651);
+      },
+      onEnterBack: () => {
+        startHourCounterShort(640, 651);
       },
       onUpdate: (self) => {
         const progress = self.progress;
@@ -433,9 +488,14 @@ export default function SubsidioSPPO() {
       trigger: "#seop4",
       onToggle: () => {
         setChapterNumberMap("seop4");
-        setCurrentHour("11:02");
         setCurrentBairro("Campo Grande");
         flicker();
+      },
+      onEnter: () => {
+        startHourCounterShort(651, 662);
+      },
+      onEnterBack: () => {
+        startHourCounterShort(651, 662);
       },
     });
     ScrollTrigger.create({
@@ -465,17 +525,23 @@ export default function SubsidioSPPO() {
     ScrollTrigger.create({
       trigger: "#drawMap",
       start: "top bottom",
-      onToggle: () => {
+      onEnter: () => {
         setChapterNumberMap("drawMap");
+        setLoadingDrawMap(true);
       },
     });
     ScrollTrigger.create({
       trigger: "#seop8",
       onToggle: () => {
         setChapterNumberMap("seop8");
-        setCurrentHour("12:55");
         setCurrentBairro("Central Disque Den.");
         flicker();
+      },
+      onEnter: () => {
+        startHourCounter(662, 775);
+      },
+      onEnterBack: () => {
+        startHourCounter(662, 775);
       },
     });
     // ScrollTrigger.create({
@@ -488,9 +554,14 @@ export default function SubsidioSPPO() {
       trigger: "#seop10",
       onToggle: () => {
         setChapterNumberMap("seop10");
-        setCurrentHour("13:33");
         setCurrentBairro("Bandidos presos");
         flicker();
+      },
+      onEnter: () => {
+        startHourCounter(775, 813);
+      },
+      onEnterBack: () => {
+        startHourCounter(775, 813);
       },
     });
 
@@ -512,9 +583,86 @@ export default function SubsidioSPPO() {
       },
     });
   }, []);
+  const startHourCounter = (initMinutes, targetMinutes) => {
+    let minutes = initMinutes;
+    // Target is 5 hours and 43 minutes
+    const totalTransitionTime = 1000; // 1 second in milliseconds
+    const steps = Math.ceil((targetMinutes - initMinutes) / 10); // Calculate steps with increments of 10
+    const intervalTime = totalTransitionTime / steps; // Calculate interval time
+
+    const interval = setInterval(() => {
+      const hours = Math.floor(minutes / 60);
+      const mins = minutes % 60;
+      const formattedTime = `${String(hours).padStart(2, '0')}:${String(mins).padStart(2, '0')}`;
+      setCurrentHour(formattedTime);
+
+      if (minutes >= targetMinutes) {
+        clearInterval(interval);
+        setCurrentHour(formattedTime); // Ensure it stops exactly at 05:43
+      } else {
+        minutes += 20;
+        if (minutes > targetMinutes) {
+          minutes = targetMinutes; // Ensure it doesn't go past the target
+        }
+      }
+    }, intervalTime);
+  };
+  // for small intervals
+  const startHourCounterShort = (initMinutes, targetMinutes) => {
+    let minutes = initMinutes;
+    // Target is 5 hours and 43 minutes
+    const totalTransitionTime = 1; // 1 second in milliseconds
+    const steps = Math.ceil((targetMinutes - initMinutes) / 10); // Calculate steps with increments of 10
+    const intervalTime = totalTransitionTime / steps; // Calculate interval time
+
+    const interval = setInterval(() => {
+      const hours = Math.floor(minutes / 60);
+      const mins = minutes % 60;
+      const formattedTime = `${String(hours).padStart(2, '0')}:${String(mins).padStart(2, '0')}`;
+      setCurrentHour(formattedTime);
+
+      if (minutes >= targetMinutes) {
+        clearInterval(interval);
+        setCurrentHour(formattedTime); // Ensure it stops exactly at 05:43
+      } else {
+        minutes++;
+        if (minutes > targetMinutes) {
+          minutes = targetMinutes; // Ensure it doesn't go past the target
+        }
+      }
+    }, intervalTime);
+  };
+
+  useEffect(() => {
+    if (loadingDrawMap) {
+      // Prevent scrolling
+      document.body.style.overflow = "hidden";
+
+      // Hide the layer after 3 seconds
+      const timer = setTimeout(() => {
+        setLoadingDrawMap(false);
+        document.body.style.overflow = "auto";
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [loadingDrawMap]);
+
 
   return (
     <>
+      {loadingDrawMap && (
+        <div className="overlay">
+          <div className="overlay-content">
+            <img
+              src={moto_loading}
+              alt="Loading"
+              className="overlay-gif"
+            />
+            <h1 className="overlay-title">Carregando percurso...</h1>
+          </div>
+        </div>
+      )}
       <CustomMultilayerMap
         interactive={false}
         scrollZoom={false}
@@ -532,7 +680,7 @@ export default function SubsidioSPPO() {
             src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/V%C3%ADdeo%20capa%20moto%20meier%20cortado.mp4",
             chapterNumberMap: "exemplo2",
             ehImagem: true,
-            srcImagem: "imagem16.png",
+            srcImagem: "dois_caras_numa_moto.png",
             ehPin: false
           },
           {
@@ -604,7 +752,7 @@ export default function SubsidioSPPO() {
           {
             lat: -22.91430,
             lon: -43.20708,
-            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_011.mp4",
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_02.mp4",
             chapterNumberMap: "seop3_2",
             ehPin: false
           },
@@ -638,7 +786,7 @@ export default function SubsidioSPPO() {
         animationSpeed={1}
       />
       <styles.Logo src={logo}></styles.Logo>
-      {(chapterNumberMap != "capa" && chapterNumberMap !== "zoom" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "seop7" && chapterNumberMap !== "drawMap") &&
+      {(chapterNumberMap !== "capa" && chapterNumberMap !== "zoom" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "seop7" && chapterNumberMap !== "drawMap") &&
         <div className="clock">
           {currentHour} AM
           <div className="clock-description">{currentBairro}</div>
@@ -648,6 +796,7 @@ export default function SubsidioSPPO() {
       {/* <chapterDiv.Intro id={"intro"} /> */}
       <chapterDiv.Zoom id={"zoom"} />
       <chapterDiv.Exemplo1 id={"exemplo1"} />
+      <chapterDiv.Exemplo11 id={"exemplo11"} />
       <chapterDiv.Exemplo2 id={"exemplo2"} />
       <chapterDiv.Exemplo3 id={"exemplo3"} />
       <chapterDiv.Exemplo4 id={"exemplo4"} />

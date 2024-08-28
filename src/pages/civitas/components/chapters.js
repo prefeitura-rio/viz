@@ -43,10 +43,10 @@ export function Capa(
     <styles.CapaDiv id={props.id} ref={props.chapRef}>
       <styles.Wrap>
         <styles.Title>
-          Estamos de olho
+          Estamos de olho!
         </styles.Title>
         <styles.Subtitle>
-          Inaugurada em julho de 2024, A CIVITAS é uma central de inteligência, vigilância e tecnologia para o apoio à segurança pública carioca
+          Como o município pode ajudar a melhorar a segurança pública? O papel da CIVITAS no Rio de Janeiro
         </styles.Subtitle>
         <div>
           <styles.AuthorText>
@@ -153,12 +153,8 @@ export function Exemplo7(
     <>
       <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
-          <styles.NewsImage src={bo}></styles.NewsImage>
-          <styles.Credito>
-            Imagem do B.O
-          </styles.Credito>
           <styles.TextCard1>
-            COR, 10h28. Chega à CIVITAS o ofício da Polícia Militar com o B.O do roubo/sequestro,  solicitando imagens das câmeras do local e informando a placa parcial.
+            COR, 10h28. Chega à CIVITAS o ofício da Polícia Militar com o B.O do roubo/sequestro,  solicitando imagens das câmeras do local e informando a placa.
           </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Right>
@@ -176,7 +172,7 @@ export function Exemplo72(
       <styles.ChapterGenericDiv1Left ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
           <styles.TextCard1>
-            COR, 10h30. A placa parcial com a descrição do carro é inserida no sistema próprio, desenvolvido pelo Prefeitura do Rio, que  conecta diversas bases de dados. Com isso, é possível gerar todo um histórico de circulação desse veículo pela cidade, mostrando diversos padrões. Esses dados são utilizados para gerar um relatório automático e auditável, que é enviado à polícia. Ao mesmo tempo, é feito o cadastramento da placa no sistema para o acionamento de alerta.        </styles.TextCard1>
+            COR, 10h30. A placa parcial com somente 3 dígitos e a descrição do carro são inseridas no sistema próprio, desenvolvido pelo Prefeitura do Rio, que  conecta diversas bases de dados. Com isso, é possível completar a placa e gerar todo um histórico de circulação desse veículo pela cidade, mostrando diversos padrões. Esses dados são utilizados para gerar um relatório automático e auditável, que é enviado à polícia. Ao mesmo tempo, é feito o cadastramento da placa no sistema para o acionamento de alerta.         </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Left>
     </>
@@ -349,15 +345,7 @@ export function Exemplo1(
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          Mas e aí? O que a CIVITAS faz, afinal? Uma das atuações da Central é o Cerco Eletrônico, que utiliza o parque tecnológico de{" "}
-          <styles.TextBlue>
-
-            3.800
-          </styles.TextBlue>
-          {" "} câmeras do COR e{" "}
-          <styles.Textgrey2>
-            1.500
-          </styles.Textgrey2>{" "} radares da CET-Rio espalhados por toda a cidade para rastrear atividades suspeitas mediante solicitação das forças de segurança.
+          Mas e aí? O que a Civitas faz, afinal? Uma das atuações da Central é o Cerco Eletrônico, que utiliza o parque tecnológico de 3.800 câmeras do Centro de Operações Rio (COR) e 1.500 radares da CET-Rio espalhados por toda a cidade para rastrear atividades suspeitas mediante solicitação das forças de segurança.
         </styles.TextCard1>
         <styles.BallsContainer>
           <styles.BallWithLabel>
@@ -369,6 +357,24 @@ export function Exemplo1(
             <styles.BallLabel>Radares</styles.BallLabel>
           </styles.BallWithLabel>
         </styles.BallsContainer>
+      </styles.ContainerCard1>
+    </styles.ChapterGenericDiv1Center>
+  );
+}
+export function Exemplo11(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+      <styles.ContainerCard1>
+        <styles.TextCard1>
+          Vejamos um exemplo de atuação da Civitas junto às forças de segurança numa simulação baseada em possibilidades reais de atuação:
+        </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
   );
@@ -386,7 +392,7 @@ export function Exemplo2(
     <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1 id="hour1">
-          Senador Vasconcelos, Rio de Janeiro, 5h43 da manhã.
+          Rua Ematuba, Senador Vasconcelos, Rio de Janeiro, 5h43 da manhã.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Right>
@@ -404,7 +410,7 @@ export function Exemplo3(
     <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          Dois homens numa moto estacionam ao lado de um Honda Civic, placa XXXXXX. Um deles desce da moto, arromba o carro e faz uma ligação direta. Os dois saem dirigindo.
+          Dois homens numa moto estacionam ao lado de um Renault Sandero. Um deles desce da moto, arromba o carro e faz uma ligação direta.  Os dois arrancam.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Right>
@@ -582,11 +588,7 @@ export function Zoom(
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          A cidade do Rio de Janeiro registra{" "}
-          <styles.Textyellow>
-            XXX
-          </styles.Textyellow>{" "}
-          ocorrências todos os dias. Roubos, furtos, sequestros, arrastões, assaltos, vandalismo, agressões. Como a Prefeitura do Rio pode ajudar a resolver isso? A CIVITAS é uma central de inteligência, vigilância e tecnologia voltada para o apoio à segurança pública carioca.
+          A cidade do Rio de Janeiro é uma grande metrópole: 6.748 milhões habitantes, 32.499 logradouros e mais de 6 milhões de veículos circulando por dia. Se dois caras numa moto resolvem infringir a lei, como a Prefeitura do Rio pode ajudar a resolver isso? A Civitas é uma central de inteligência, vigilância e tecnologia voltada para o apoio à segurança pública carioca.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
@@ -697,7 +699,7 @@ export function Exemplo4(
     <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          Rua João Vicente, Bento Ribeiro, 6h55. O Honda Civic passa por um dos equipamentos do cerco eletrônico na Rua João Vicente, sentido Centro.
+          Rua Sapopemba, Bento Ribeiro, 6h55. O Honda Civic passa por um dos equipamentos do cerco eletrônico, indo no sentido Centro.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Right>
