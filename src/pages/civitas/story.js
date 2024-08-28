@@ -175,7 +175,7 @@ export default function SubsidioSPPO() {
     const tl2 = gsap.timeline();
     tl2
       .set("#capa", { opacity: 1 })
-      .to("#capa", { opacity: 1, duration: 30 })
+      .to("#capa", { opacity: 0.9, duration: 30 })
       .to("#capa", { opacity: 10, duration: 6 })
       .to("#capa", { opacity: 1, duration: 20 })
       .to("#capa", { opacity: 0, duration: 6 })
@@ -534,7 +534,7 @@ export default function SubsidioSPPO() {
       trigger: "#seop8",
       onToggle: () => {
         setChapterNumberMap("seop8");
-        setCurrentBairro("Central Disque Den.");
+        setCurrentBairro("Barra da Tijuca");
         flicker();
       },
       onEnter: () => {
@@ -659,7 +659,7 @@ export default function SubsidioSPPO() {
               alt="Loading"
               className="overlay-gif"
             />
-            <h1 className="overlay-title">Carregando percurso...</h1>
+            <h1 className="overlay-title">Siga os suspeitos!</h1>
           </div>
         </div>
       )}

@@ -608,7 +608,7 @@ export function Exemplo5(
       <styles.ContainerCard1>
         <styles.NewsImage src={radar_foto}></styles.NewsImage>
         <styles.Credito>
-          Imagem do suspeito
+          Imagem do veículo captada por equipamento do Cerco Eletrônico
         </styles.Credito>
         {/* <styles.TextCard1>
           No fim do ano passado, um imóvel onde funcionaria um supermercado, com
