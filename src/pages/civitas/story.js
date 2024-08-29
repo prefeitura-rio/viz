@@ -96,9 +96,9 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Seop2().location);
         setLayers(chapterMap.Seop2().layers);
         break;
-      case "seop3":
-        setPosition(chapterMap.Seop3().location);
-        setLayers(chapterMap.Seop3().layers);
+        // case "seop3":
+        //   setPosition(chapterMap.Seop3().location);
+        //   setLayers(chapterMap.Seop3().layers);
         break;
       case "seop3_2":
         setPosition(chapterMap.Seop3_2().location);
@@ -420,10 +420,10 @@ export default function SubsidioSPPO() {
         flicker();
       },
       onEnter: () => {
-        startHourCounterShort(630, 635);
+        startHourCounterShort(635, 636);
       },
       onEnterBack: () => {
-        startHourCounterShort(630, 635);
+        startHourCounterShort(635, 636);
       },
     });
 
@@ -440,7 +440,14 @@ export default function SubsidioSPPO() {
       animation: tl14,
       trigger: "#seop2",
       onToggle: () => {
+        setCurrentBairro("Estácio");
+      },
+      onEnter: () => {
+        startHourCounterShort(630, 635);
         setChapterNumberMap("seop2");
+      },
+      onEnterBack: () => {
+        startHourCounterShort(630, 635);
       },
     });
 
@@ -452,10 +459,10 @@ export default function SubsidioSPPO() {
         flicker();
       },
       onEnter: () => {
-        startHourCounterShort(635, 640);
+        startHourCounterShort(635, 635);
       },
       onEnterBack: () => {
-        startHourCounterShort(635, 640);
+        startHourCounterShort(635, 635);
       },
     });
 
@@ -467,10 +474,10 @@ export default function SubsidioSPPO() {
         flicker();
       },
       onEnter: () => {
-        startHourCounterShort(640, 651);
+        startHourCounterShort(636, 645);
       },
       onEnterBack: () => {
-        startHourCounterShort(640, 651);
+        startHourCounterShort(636, 645);
       },
       onUpdate: (self) => {
         const progress = self.progress;
@@ -703,8 +710,10 @@ export default function SubsidioSPPO() {
           {
             lat: -22.90345,
             lon: -43.28141,
-            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/10.%20video%20assalto%20agencia%20cortado.mp4",
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_02.mp4",
             chapterNumberMap: "exemplo6",
+            ehImagem: true,
+            srcImagem: "dois_caras_numa_moto.png",
             ehPin: false
           },
           {
@@ -740,6 +749,13 @@ export default function SubsidioSPPO() {
             lon: -43.36705499276124,
             src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_011.mp4",
             chapterNumberMap: "exemplo8",
+            ehPin: false
+          },
+          {
+            lat: -22.870894075477764,
+            lon: -43.36705499276124,
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_011.mp4",
+            chapterNumberMap: "seop3",
             ehPin: false
           },
           {
@@ -786,7 +802,7 @@ export default function SubsidioSPPO() {
         animationSpeed={1}
       />
       <styles.Logo src={logo}></styles.Logo>
-      {(chapterNumberMap !== "capa" && chapterNumberMap !== "zoom" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "seop7" && chapterNumberMap !== "drawMap") &&
+      {(chapterNumberMap !== "capa" && chapterNumberMap !== "zoom" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "seop7" && chapterNumberMap !== "drawMap" && chapterNumberMap !== "fim") &&
         <div className="clock">
           {currentHour} AM
           <div className="clock-description">{currentBairro}</div>
@@ -805,10 +821,10 @@ export default function SubsidioSPPO() {
       <chapterDiv.Exemplo7 id={"exemplo7"} />
       <chapterDiv.Exemplo72 id={"exemplo72"} />
       <chapterDiv.Grafico id={"grafico"} />
-      <chapterDiv.Exemplo8 id={"exemplo8"} />
-      <chapterDiv.Seop1 id={"seop1"} />
       <chapterDiv.Seop2 id={"seop2"} />
+      <chapterDiv.Exemplo8 id={"exemplo8"} />
       <chapterDiv.Seop3 id={"seop3"} />
+      <chapterDiv.Seop1 id={"seop1"} />
       <chapterDiv.Seop3_2 id={"seop3_2"} />
       <chapterDiv.Seop4 id={"seop4"} />
       <chapterDiv.Seop5 id={"seop5"} />

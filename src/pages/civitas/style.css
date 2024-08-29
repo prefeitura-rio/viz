@@ -81,10 +81,11 @@
 
 @media (max-width: 600px) {
   .clock {
-    width: 150px;
-    height: 75px;
+    width: 180px;
+    height: 90px;
     font-size: 20px;
     bottom: 20px;
+    margin:"25px";
     top: auto;
     right: 20px;
   }

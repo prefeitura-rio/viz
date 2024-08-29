@@ -20,6 +20,7 @@ import seop4 from "../images/seop4.png";
 import grafico from "../images/grafico.png";
 import legenda from "../images/legenda.png";
 import logoed from "../images/logoed.png";
+import wave_sound from "../images/wave_sound.gif";
 
 // TODO: REMOVE
 import LineChart from "../../../components/charts/line_chart";
@@ -298,7 +299,7 @@ export function Seop9(
       </styles.ChapterGenericDiv> */}
       <styles.ChapterGenericDiv1Center >
         <styles.ContainerCard1>
-          <video autoPlay loop src="https://www.shutterstock.com/shutterstock/videos/1107056163/preview/stock-footage-audio-voice-message-animation-playing-record-voice-message-animation-voice-chat-voice-mail.webm"></video>
+          <styles.NewsImage src={wave_sound}></styles.NewsImage>
 
           <styles.TextCard1>
             Central Disque Denúncia, 12h55.  Chega uma denúncia anônima denunciando uma pessoa refém na mesma área. Os agentes repassam as informações à polícia, que já está no local, e encontraram a moto, agora sem placa, graças às imagens das câmeras de segurança.          </styles.TextCard1>
@@ -430,7 +431,7 @@ export function Seop4(
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          40º Batalhão da Polícia Militar, Campo Grande, 11h02. É aberto o B.O. do furto de carro (depois dele ter sido recuperado!).                </styles.TextCard1>
+          35ª DP, Campo Grande, 11h02. O dono do Sandero percebe o furto e vai à delegacia denunciar (depois do veículo ter sido recuperado!)                </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
   );
@@ -509,7 +510,7 @@ export function Seop3(
     <styles.ChapterGenericDiv1CenterBig ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          10h40. O carro passa em outro equipamento do cerco eletrônico, um alerta em tempo real é gerado e a polícia é prontamente avisada. Com o histórico de movimentação do carro em mão, a polícia consegue se preparar melhor para abordar o suspeito.         </styles.TextCard1>
+          Estácio, 10h35. O carro passa em outro equipamento do cerco eletrônico, um alerta em tempo real é gerado e a polícia é prontamente avisada.      </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1CenterBig>
   );
@@ -526,7 +527,7 @@ export function Seop3_2(
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          Estácio, 10h51. 32 minutos depois do assalto, o carro é interceptado pela polícia militar e um dos suspeitos é detido em flagrante, em tempo recorde.              </styles.TextCard1>
+          Estácio, 10h45. 26 minutos depois do assalto, o carro é interceptado pela polícia militar e um dos suspeitos é detido em flagrante, em tempo recorde.             </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
   );
@@ -569,7 +570,7 @@ export function Seop1(
           Imagem do suspeito
         </styles.Credito>
         <styles.TextCard1>
-          COR, 10H35. As imagens de câmeras do local do crime são acessadas e analisadas. O vídeo é enviado para a polícia, que analisa e levanta as características físicas e a vestimenta do acusado.
+          COR, 10H36. As imagens de câmeras do local do crime são acessadas e analisadas. O vídeo é enviado para a polícia, que analisa e levanta as características físicas e a vestimenta do acusado.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>

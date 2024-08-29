@@ -78,12 +78,12 @@ export const Exemplo7 = () => {
       },
       mobile: {
         center: {
-          lon: -43.20346,
+          lon: -43.20328,
           lat: -22.91209,
         },
-        zoom: 8.38,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 18.0,
+        pitch: 80.0,
+        bearing: 0,
         duration: 4000,
       },
     },
@@ -143,8 +143,8 @@ export const Exemplo6 = () => {
           lon: -43.28141,
           lat: -22.90345,
         },
-        zoom: 8.38,
-        pitch: 0.0,
+        zoom: 15.0,
+        pitch: 45.0,
         bearing: 0.0,
         duration: 4000,
       },
@@ -169,10 +169,10 @@ export const Grafico = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
+          lon: -43.44032,
           lat: -22.92106,
         },
-        zoom: 8.38,
+        zoom: 9,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -219,10 +219,10 @@ export const Seop7 = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
+          lon: -43.44032,
           lat: -22.92106,
         },
-        zoom: 8.38,
+        zoom: 9,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -297,12 +297,12 @@ export const Seop8 = () => {
       },
       mobile: {
         center: {
-          lon: -43.41124038272067,
-          lat: -22.999586702947127,
+          lon: -43.33157970337831,
+          lat: -23.003932747780283
         },
-        zoom: 8.38,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 14,
+        pitch: 50,
+        bearing: 108.625,
         duration: 4000,
       },
     },
@@ -354,10 +354,10 @@ export const Seop10 = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
+          lon: -43.44032,
           lat: -22.92106,
         },
-        zoom: 8.38,
+        zoom: 9,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -383,12 +383,12 @@ export const Seop1 = () => {
       },
       mobile: {
         center: {
-          lon: -43.20346,
+          lon: -43.20328,
           lat: -22.91209,
         },
-        zoom: 8.38,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 18.0,
+        pitch: 80.0,
+        bearing: 0,
         duration: 4000,
       },
     },
@@ -435,27 +435,48 @@ export const Seop2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.20346,
-          lat: -22.91209,
+          lon: -43.36705499276124,
+          lat: -22.870894075477764
         },
-        zoom: 17.38,
-        pitch: 135.0,
-        bearing: 45,
-        duration: 5000,
+        zoom: 15.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.20346,
-          lat: -22.91209,
+          lon: -43.36705499276124,
+          lat: -22.870894075477764
         },
-        zoom: 8.38,
+        zoom: 14,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
       },
     },
     layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.8,
+        layer: {
+          ...{
 
+            "id": "percurso-carro-v2-24pm81",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "line",
+            "paint": {
+              "line-emissive-strength": 1,
+              "line-opacity": 0,
+              "line-color": "hsl(195, 100%, 50%)"
+            },
+            "layout": {},
+            "source": "composite",
+            "source-layer": "percurso_carro_v2-24pm81"
+
+          },
+        },
+      },
     ],
   };
 };
@@ -475,12 +496,12 @@ export const Seop3 = () => {
       },
       mobile: {
         center: {
-          lon: -43.20708,
-          lat: -22.91430,
+          lon: -43.20328,
+          lat: -22.91209,
         },
-        zoom: 14.71,
-        pitch: 52.5,
-        bearing: -53.6,
+        zoom: 18.0,
+        pitch: 80.0,
+        bearing: 0,
         duration: 4000,
       },
     },
@@ -522,8 +543,8 @@ export const Seop4 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.55502657577313,
-          lat: -22.87620428625697,
+          lon: -43.56659507559681,
+          lat: -22.90434611110871,
         },
         zoom: 20.0,
         pitch: 59.0,
@@ -532,24 +553,22 @@ export const Seop4 = () => {
       },
       mobile: {
         center: {
-          lon: -43.543917233799284,
-          lat: -22.86300034959031,
+          lon: -43.56659507559681,
+          lat: -22.90433988826595,
         },
-        zoom: 16.14,
-        pitch: 52.5,
-        bearing: 127.03,
+        zoom: 19.14,
+        pitch: 59.0,
+        bearing: 250.47,
         duration: 4000,
       },
     },
     layers: [
       {
         layerType: "mapbox",
-        targetOpacity: 0.5,
+        targetOpacity: 0.8,
         layer: {
           ...{
-            "id": "40batalhao-2af7w6",
-            "minzoom": 0,
-            "maxzoom": 22,
+            "id": "35dp-bgmv6l",
             "type": "fill",
             "paint": {
               "fill-emissive-strength": 1,
@@ -558,7 +577,7 @@ export const Seop4 = () => {
             },
             "layout": {},
             "source": "composite",
-            "source-layer": "40batalhao-2af7w6"
+            "source-layer": "35dp-bgmv6l"
           },
         },
       },
@@ -580,12 +599,12 @@ export const Seop5 = () => {
       },
       mobile: {
         center: {
-          lon: -43.361335152023315,
-          lat: -22.867618828789663,
+          lon: -43.3605,
+          lat: -22.8648,
         },
-        zoom: 16.14,
-        pitch: 52.5,
-        bearing: 160.03,
+        zoom: 16,
+        pitch: 59.0,
+        bearing: 100.47,
         duration: 4000,
       },
     },
@@ -630,12 +649,12 @@ export const Seop5_2 = () => {
       },
       mobile: {
         center: {
-          lon: -43.361403212469696,
-          lat: -22.86599669984288,
+          lon: -43.3605,
+          lat: -22.8648,
         },
         zoom: 16.14,
-        pitch: 52.5,
-        bearing: 127.03,
+        pitch: 59.0,
+        bearing: 120.47,
         duration: 4000,
       },
     },
@@ -681,12 +700,12 @@ export const Seop6 = () => {
       },
       mobile: {
         center: {
-          lon: -43.361403212469696,
-          lat: -22.86599669984288,
+          lon: -43.3605,
+          lat: -22.8648,
         },
         zoom: 16.14,
-        pitch: 52.5,
-        bearing: 127.03,
+        pitch: 59.0,
+        bearing: 120.47,
         duration: 4000,
       },
     },
@@ -727,18 +746,18 @@ export const Exemplo8 = () => {
           lat: -22.870894075477764
         },
         zoom: 15.38,
-        pitch: 0.0,
-        bearing: 0.0,
+        pitch: 90.0,
+        bearing: -30.0,
         duration: 4000,
       },
       mobile: {
         center: {
-          lon: -43.20346,
-          lat: -22.91209,
+          lon: -43.36705499276124,
+          lat: -22.870894075477764
         },
-        zoom: 8.38,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 14,
+        pitch: 90.0,
+        bearing: -30.0,
         duration: 4000,
       },
     },
@@ -787,9 +806,9 @@ export const Exemplo4 = () => {
           lon: -43.36001,
           lat: -22.86610,
         },
-        zoom: 8.38,
-        pitch: 0.0,
-        bearing: 0.0,
+        zoom: 15,
+        pitch: 45,
+        bearing: -45,
         duration: 4000,
       },
     },
@@ -812,10 +831,10 @@ export const Exemplo1 = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
+          lon: -43.44032,
           lat: -22.92106,
         },
-        zoom: 8.38,
+        zoom: 9,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -1041,10 +1060,10 @@ export const Fim = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
+          lon: -43.44032,
           lat: -22.92106,
         },
-        zoom: 8.38,
+        zoom: 9,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,

@@ -5,6 +5,7 @@ import { isMobile } from "react-device-detect";
 import { useState } from "react";
 import dialogBallon from "../images/ballon.png"
 import dois_caras_numa_moto from "../images/dois_caras_numa_moto.png"
+import imagem16 from "../images/imagem16.png"
 import locationpin from "../images/locationpin.gif"
 import { zoom } from "d3";
 // Theis 3 types of layers, mapbox, mapbox-style and deckgl
@@ -301,9 +302,9 @@ class CustomMultilayerMap extends React.Component {
                           loop
                           style={{
                             // transform: `scale(${chapterNumberMap == "exemplo3" || chapterNumberMap == "exemplo6" ? cardHeight : ((chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight < 2) ? cardHeight * 1.1 : 1})`,
-                            width: `${cardHeight * 1.5 * 200}px`,
-                            maxWidth: "50vw",
-                            minWidth: "300px",
+                            width: `${isMobile ? cardHeight * 1.5 * 70 : cardHeight * 1.5 * 200}px`,
+                            maxWidth: `${isMobile ? 70 : 50}vw`,
+                            minWidth: `${isMobile ? 100 : 300}px`,
                             zIndex: "1",
                             border: "2.5px solid black",
                             // borderRadius: "5px",
@@ -311,7 +312,7 @@ class CustomMultilayerMap extends React.Component {
                           }}
                         />) : <img style={{
                           // transform: `scale(${chapterNumberMap == "exemplo3" || chapterNumberMap == "exemplo6" ? cardHeight : ((chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight < 2) ? cardHeight * 1.1 : 1})`,
-                          width: `${cardHeight * 200}px`,
+                          width: `${isMobile ? cardHeight * 1.5 * 50 : cardHeight * 200}px`,
                           zIndex: "1",
                           border: "2.5px solid black",
                           // borderRadius: "5px",
@@ -400,6 +401,37 @@ class CustomMultilayerMap extends React.Component {
                     </Marker>
                   )
                 }
+                {
+                  (chapterNumberMap == "exemplo7" || chapterNumberMap == "seop3" || chapterNumberMap == "seop1") && (
+                    <Marker
+                      latitude="-22.91213" // quando diminuo em modulo vai pra cima
+                      longitude="-43.2033150" // quando aumento em modulo vai pra esquerda
+                    >
+                      <div style={{
+                        position: 'relative',
+                      }}>
+
+                        <svg id="radar-circle">
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite"></animate>
+                          </circle>
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="0.75s" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="0.75s"></animate>
+                          </circle>
+                          {/* <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="1.5s" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="1.5s"></animate>
+                          </circle> */}
+                          {/* <circle cx="50%" cy="50%" r="10" fill="#00BFFF" stroke="#00BFFF"></circle> */}
+                        </svg>
+                      </div>
+
+
+                    </Marker>
+                  )
+                }
 
 
                 {
@@ -414,7 +446,7 @@ class CustomMultilayerMap extends React.Component {
                           display: "flex",
                           flexDirection: "column",
                           alignItems: "center",
-                          top: "-110px",
+                          top: "-90px",
                         }}
                       >
                         <img
@@ -434,7 +466,7 @@ class CustomMultilayerMap extends React.Component {
                             // borderRadius: "5px",
                             transition: "transform 0.5s",
                           }}
-                          src={dois_caras_numa_moto}
+                          src={imagem16}
                         />
                         <div
                           style={{
@@ -449,54 +481,6 @@ class CustomMultilayerMap extends React.Component {
                     </Marker>
                   )
                 }
-
-                {/* {
-                  (chapterNumberMap == "exemplo1" || chapterNumberMap == "exemplo2" || chapterNumberMap == "exemplo3") && (
-                    <Marker
-                      latitude="-23.01473"
-                      longitude="-43.57571"
-                    >
-                      <div
-                        style={{
-                          position: "relative",
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "center",
-                          top: "-110px",
-                        }}
-                      >
-                        <img
-                          style={{
-                            transform: `scale(${chapterNumberMap === "exemplo3" || chapterNumberMap === "exemplo6"
-                              ? cardHeight
-                              : (chapterNumberMap === "exemplo8" || chapterNumberMap === "seop3_2") && cardHeight < 2
-                                ? cardHeight * 1.1
-                                : 1
-                              })`,
-                            width: `${(chapterNumberMap === "exemplo8" || chapterNumberMap === "seop3_2") && cardHeight > 2
-                              ? "100vw"
-                              : "200px"
-                              }`,
-                            zIndex: "1",
-                            border: "1px solid black",
-                            borderRadius: "5px",
-                            transition: "transform 0.5s",
-                          }}
-                          src={dois_caras_numa_moto}
-                        />
-                        <div
-                          style={{
-                            width: "2px",
-                            height: "40px",
-                            backgroundColor: "white",
-                            zIndex: "0",
-                          }}
-                        ></div>
-
-                      </div>
-                    </Marker>
-                  )
-                } */}
 
               </>
             ))
