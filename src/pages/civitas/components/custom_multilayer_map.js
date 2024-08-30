@@ -274,6 +274,7 @@ class CustomMultilayerMap extends React.Component {
                 <div key={index} style={{ position: "relative", overflow: "hidden", width: "100%", height: "100%" }}>
                   <video
                     loop
+                    playsInline
                     src={videoInfo.src}
                     controls={false}
                     autoPlay
