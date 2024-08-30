@@ -823,7 +823,6 @@ export default function SubsidioSPPO() {
       <chapterDiv.Grafico id={"grafico"} />
       <chapterDiv.Seop2 id={"seop2"} />
       <chapterDiv.Exemplo8 id={"exemplo8"} />
-      <chapterDiv.Seop3 id={"seop3"} />
       <chapterDiv.Seop1 id={"seop1"} />
       <chapterDiv.Seop3_2 id={"seop3_2"} />
       <chapterDiv.Seop4 id={"seop4"} />
