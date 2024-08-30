@@ -319,6 +319,7 @@ class CustomMultilayerMap extends React.Component {
                           autoPlay
                           muted
                           loop
+                          playsInline
                           style={{
                             // transform: `scale(${chapterNumberMap == "exemplo3" || chapterNumberMap == "exemplo6" ? cardHeight : ((chapterNumberMap == "exemplo8" || chapterNumberMap == "seop3_2") && cardHeight < 2) ? cardHeight * 1.1 : 1})`,
                             width: `${isMobile ? cardHeight * 1.5 * 70 : cardHeight * 1.5 * 200}px`,
