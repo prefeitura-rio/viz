@@ -7,6 +7,7 @@ import dialogBallon from "../images/ballon.png"
 import dois_caras_numa_moto from "../images/dois_caras_numa_moto.png"
 import assalto from "../images/assalto.png"
 import imagem16 from "../images/imagem16.png"
+import camera_icon from "../images/camera_icon.png"
 import locationpin from "../images/locationpin.gif"
 import { zoom } from "d3";
 import "../style.css"
@@ -210,6 +211,21 @@ class CustomMultilayerMap extends React.Component {
       height: "100%",
       zIndex: 2
     };
+    const coordinatesCamera = [
+      { latitude: "-22.865037093874534", longitude: "-43.35878100341077" },
+      { latitude: "-22.864821373469056", longitude: "-43.360455836684395" },
+      { latitude: "-22.864373337685365", longitude: "-43.35932127220849" },
+      { latitude: "-22.864132725265634", longitude: "-43.36090606068353" },
+      { latitude: "-22.86466373141714", longitude: "-43.36186954003972" },
+      { latitude: "-22.865443642939496", longitude: "-43.357232232856006" },
+      { latitude: "-22.86647245554734", longitude: "-43.35895208853046" },
+      { latitude: "-22.862784620821742", longitude: "-43.35946286694812" },
+      { latitude: "-22.863946205607462", longitude: "-43.36260543045748" },
+      { latitude: "-22.864410836740618", longitude: "-43.36300162757621" },
+      { latitude: "-22.86592917383011", longitude: "-43.35615822280067" },
+      { latitude: "-22.86553922002203", longitude: "-43.3558610749611" },
+
+    ];
     return (
       <Map
         ref={this.state.mapRef}
@@ -441,11 +457,25 @@ class CustomMultilayerMap extends React.Component {
 
 
                 {
+                  (chapterNumberMap === "seop5") && (
+                    coordinatesCamera.map((coord, index) => (
+                      <Marker
+                        key={index}
+                        latitude={coord.latitude}
+                        longitude={coord.longitude}
+                      >
+                        <img width={50} src={camera_icon}></img>
+                      </Marker>
+                    ))
+                  )
+                }
+                {
                   (chapterNumberMap === "seop5_2" || chapterNumberMap === "seop6") && (
                     <Marker
                       latitude="-22.8648"
                       longitude="-43.3605"
                     >
+
                       <div
                         style={{
                           position: "relative",
@@ -477,11 +507,14 @@ class CustomMultilayerMap extends React.Component {
                         <div
                           style={{
                             width: "2px",
-                            height: "40px",
+                            height: "50px",
                             backgroundColor: "black",
                             zIndex: "0",
                           }}
                         ></div>
+                        <div
+
+                        > <img width={50} src={camera_icon}></img></div>
 
                       </div>
                     </Marker>

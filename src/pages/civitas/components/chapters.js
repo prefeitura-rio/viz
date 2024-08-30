@@ -506,12 +506,9 @@ export function Seop3(
   props = setDefaultProps(props);
 
   return (
-    <styles.ChapterGenericDiv1CenterBig ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <styles.TextCard1>
-          Estácio, 10h45. 26 minutos depois do assalto, o carro é interceptado pela polícia civil e um dos suspeitos é detido em flagrante, em tempo recorde.      </styles.TextCard1>
-      </styles.ContainerCard1>
-    </styles.ChapterGenericDiv1CenterBig>
+    <div ref={props.chapRef} id={props.id}>
+
+    </div>
   );
 }
 export function Seop3_2(
@@ -524,6 +521,16 @@ export function Seop3_2(
 
   return (
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <styles.ContainerCard1>
         <styles.TextCard1>
           Estácio, 10h45. 26 minutos depois do assalto, o carro é interceptado pela polícia militar e um dos suspeitos é detido em flagrante, em tempo recorde.             </styles.TextCard1>
@@ -569,6 +576,8 @@ export function Seop1(
           Imagem do suspeito
         </styles.Credito>
         <styles.TextCard1>
+          {/* <br></br> */}
+          <div style={{ paddingBottom: "20px" }}></div>
           COR, 10H36. As imagens de câmeras do local do crime são acessadas e analisadas. Uma parcial de um suspeito é levantada.  O vídeo com todas as informações é enviado para a polícia, que analisa e levanta as características físicas e a vestimenta do acusado.
           Com o histórico de movimentação do carro em mãos e a parcial, a polícia consegue se preparar melhor para abordar o suspeito.
 

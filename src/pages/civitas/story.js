@@ -110,15 +110,15 @@ export default function SubsidioSPPO() {
         break;
       case "seop5":
         setPosition(chapterMap.Seop5().location);
-        setLayers(chapterMap.Seop5().layers);
+        // setLayers(chapterMap.Seop5().layers);
         break;
       case "seop5_2":
         setPosition(chapterMap.Seop5_2().location);
-        setLayers(chapterMap.Seop5_2().layers);
+        // setLayers(chapterMap.Seop5_2().layers);
         break;
       case "seop6":
         setPosition(chapterMap.Seop6().location);
-        setLayers(chapterMap.Seop6().layers);
+        // setLayers(chapterMap.Seop6().layers);
         break;
       case "seop7":
         setPosition(chapterMap.Seop7().location);
@@ -823,6 +823,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Grafico id={"grafico"} />
       <chapterDiv.Seop2 id={"seop2"} />
       <chapterDiv.Exemplo8 id={"exemplo8"} />
+      <chapterDiv.Seop3 id={"seop3"} />
       <chapterDiv.Seop1 id={"seop1"} />
       <chapterDiv.Seop3_2 id={"seop3_2"} />
       <chapterDiv.Seop4 id={"seop4"} />

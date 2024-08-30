@@ -52,8 +52,8 @@ export const Wrap = tw.div`
 export const Title = tw.div`
   mt-[5%]
   lg:mt-[5%]
-  mb-4  
-  lg:mb-5  
+  mb-16  
+  lg:mb-16  
   font-serif font-bold  
   text-4xl text-center text-white
   leading-[1.3]  
@@ -112,7 +112,7 @@ export const IntroText = tw.div`
   text-lg text-justify text-white 
   leading-normal 
   opacity-100
-  max-w-[450px]
+  max-w-[500px]
 `;
 
 export const ChapterGenericDiv = tw.div`
@@ -194,10 +194,10 @@ export const FimDiv = tw.div`
   justify-center items-center 
   bg-black/50
   pr-[10%] pl-[10%]
-  pt-[60%]
+  pt-[150%]
   lg:pt-[45%]
-  lg:pr-[35%]
-  lg:pl-[35%]
+  lg:pr-[1%]
+  lg:pl-[1%]
 `;
 
 export const Footer = tw.div`
