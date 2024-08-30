@@ -464,7 +464,7 @@ class CustomMultilayerMap extends React.Component {
                         latitude={coord.latitude}
                         longitude={coord.longitude}
                       >
-                        <img width={50} src={camera_icon}></img>
+                        <img width={33} src={camera_icon}></img>
                       </Marker>
                     ))
                   )
@@ -514,7 +514,7 @@ class CustomMultilayerMap extends React.Component {
                         ></div>
                         <div
 
-                        > <img width={50} src={camera_icon}></img></div>
+                        > <img width={33} src={camera_icon}></img></div>
 
                       </div>
                     </Marker>
