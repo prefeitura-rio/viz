@@ -5,9 +5,11 @@ import { isMobile } from "react-device-detect";
 import { useState } from "react";
 import dialogBallon from "../images/ballon.png"
 import dois_caras_numa_moto from "../images/dois_caras_numa_moto.png"
+import assalto from "../images/assalto.png"
 import imagem16 from "../images/imagem16.png"
 import locationpin from "../images/locationpin.gif"
 import { zoom } from "d3";
+import "../style.css"
 // Theis 3 types of layers, mapbox, mapbox-style and deckgl
 
 // The following is required to stop "npm build" from transpiling mapbox code.
@@ -317,7 +319,7 @@ class CustomMultilayerMap extends React.Component {
                           border: "2.5px solid black",
                           // borderRadius: "5px",
                           transition: "transform 0.5s",
-                        }} src={dois_caras_numa_moto}></img>}
+                        }} src={videoInfo.srcImagem == "assalto" ? assalto : dois_caras_numa_moto}></img>}
                       <div
                         style={{
                           width: "2px",
@@ -371,28 +373,32 @@ class CustomMultilayerMap extends React.Component {
                           top: '-90px',
                           right: '-15px',
                           textAlign: 'center',
-                          width: '150px', // Ensures the text stays within the bounds of the image
+                          width: '160px', // Ensures the text stays within the bounds of the image
                         }}>
                           <img src={dialogBallon} alt="Text Background" style={{
-                            width: '150px',
+                            width: '160px',
                             height: 'auto',
                             display: 'block',
                           }} />
 
-                          <div style={{
+                          <div className="radar" style={{
                             position: 'absolute',
-                            top: '20px', // Adjust this value to fine-tune the positioning of the text
-                            left: '20px',
+                            top: '24px', // Adjust this value to fine-tune the positioning of the text
+                            left: '10px',
                             right: '0',
                             padding: '5px',
                             textAlign: "left",
-                            fontSize: '13.5px', // Adjust the font size as needed
+                            fontSize: '10px', // Adjust the font size as needed
                             color: 'white', // Assuming black text color, change as necessary
                           }}>
-                            <div>6h55 AM</div>
-                            <div>Placa XXXX</div>
-                            <div>Rua João Vicente</div>
-                            <div>Sentido Centro</div>
+                            <div className="content">
+                              <div>6h55 AM</div>
+                              <div>
+                                Placa <span style={{ backgroundColor: "rgba(255, 255, 255, 0.5)", filter: "blur(2px)", padding: "5px", borderRadius: "5px" }}>FBR2A23</span>
+                              </div>
+                              <div>Rua Sapopemba</div>
+                              <div>Sentido Centro</div>
+                            </div>
                           </div>
                         </div>
                       </div>

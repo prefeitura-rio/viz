@@ -195,7 +195,7 @@ export const FimDiv = tw.div`
   bg-black/50
   pr-[10%] pl-[10%]
   pt-[60%]
-  lg:pt-[25%]
+  lg:pt-[45%]
   lg:pr-[35%]
   lg:pl-[35%]
 `;
@@ -350,7 +350,7 @@ text-white
   inline
 `;
 const TextBlueSC = styled.div`
-
+ background: #00BFFF;
 `;
 
 export const TextBlue = tw(TextBlueSC)`

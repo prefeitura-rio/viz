@@ -687,7 +687,7 @@ export default function SubsidioSPPO() {
             src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/V%C3%ADdeo%20capa%20moto%20meier%20cortado.mp4",
             chapterNumberMap: "exemplo2",
             ehImagem: true,
-            srcImagem: "dois_caras_numa_moto.png",
+            srcImagem: "dois_caras_numa_moto",
             ehPin: false
           },
           {
@@ -713,7 +713,7 @@ export default function SubsidioSPPO() {
             src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_02.mp4",
             chapterNumberMap: "exemplo6",
             ehImagem: true,
-            srcImagem: "dois_caras_numa_moto.png",
+            srcImagem: "assalto",
             ehPin: false
           },
           {
@@ -745,8 +745,8 @@ export default function SubsidioSPPO() {
           //   ehPin: true
           // },
           {
-            lat: -22.870894075477764,
-            lon: -43.36705499276124,
+            lat: -22.916717828353868,
+            lon: -43.2044788025955,
             src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_011.mp4",
             chapterNumberMap: "exemplo8",
             ehPin: false
@@ -758,13 +758,13 @@ export default function SubsidioSPPO() {
             chapterNumberMap: "seop3",
             ehPin: false
           },
-          {
-            lat: -22.91430,
-            lon: -43.20708,
-            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_02.mp4",
-            chapterNumberMap: "seop3",
-            ehPin: false
-          },
+          // {
+          //   lat: -22.91430,
+          //   lon: -43.20708,
+          //   src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/CENA_02.mp4",
+          //   chapterNumberMap: "seop3",
+          //   ehPin: false
+          // },
           {
             lat: -22.91430,
             lon: -43.20708,

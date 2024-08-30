@@ -435,8 +435,8 @@ export const Seop2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.36705499276124,
-          lat: -22.870894075477764
+          lon: -43.2044788025955,
+          lat: -22.916717828353868
         },
         zoom: 15.38,
         pitch: 0.0,
@@ -445,8 +445,8 @@ export const Seop2 = () => {
       },
       mobile: {
         center: {
-          lon: -43.36705499276124,
-          lat: -22.870894075477764
+          lon: -43.2044788025955,
+          lat: -22.916717828353868
         },
         zoom: 14,
         pitch: 0.0,
@@ -693,8 +693,8 @@ export const Seop6 = () => {
           lon: -43.3605,
           lat: -22.8648,
         },
-        zoom: 16.65,
-        pitch: 59.0,
+        zoom: 17,
+        pitch: 70.0,
         bearing: 120.47,
         duration: 4000,
       },
@@ -703,8 +703,8 @@ export const Seop6 = () => {
           lon: -43.3605,
           lat: -22.8648,
         },
-        zoom: 16.14,
-        pitch: 59.0,
+        zoom: 16.7,
+        pitch: 70.0,
         bearing: 120.47,
         duration: 4000,
       },
@@ -742,8 +742,8 @@ export const Exemplo8 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.36705499276124,
-          lat: -22.870894075477764
+          lon: -43.2044788025955,
+          lat: -22.916717828353868
         },
         zoom: 15.38,
         pitch: 90.0,
@@ -752,8 +752,8 @@ export const Exemplo8 = () => {
       },
       mobile: {
         center: {
-          lon: -43.36705499276124,
-          lat: -22.870894075477764
+          lon: -43.2044788025955,
+          lat: -22.916717828353868
         },
         zoom: 14,
         pitch: 90.0,

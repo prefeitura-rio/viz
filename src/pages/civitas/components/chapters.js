@@ -14,6 +14,8 @@ import alert from "../images/alert.gif";
 import bo from "../images/bo.png";
 import imagem17 from "../images/imagem17.png";
 import arrested from "../images/arrested.png";
+import civitas_icon from "../images/civitas_icon.png";
+import rio_prefeitura from "../images/rio_prefeitura.png";
 import seop2 from "../images/seop2.png";
 import seop3 from "../images/seop3.png";
 import seop4 from "../images/seop4.png";
@@ -137,7 +139,7 @@ export function Exemplo6(
       <styles.ChapterGenericDiv1Left>
         <styles.ContainerCard1>
           <styles.TextCard1>
-            Uma testemunha vê parcialmente a placa do carro. Outra é sequestrada pelos criminosos como refém.         </styles.TextCard1>
+            Uma testemunha vê parcialmente a placa do carro: os primeiros 3 dígitos. Outra é sequestrada pelos criminosos como refém.         </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Left>
     </>
@@ -155,7 +157,7 @@ export function Exemplo7(
       <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
           <styles.TextCard1>
-            COR, 10h28. Chega à CIVITAS o ofício da Polícia Militar com o B.O do roubo/sequestro,  solicitando imagens das câmeras do local e informando a placa.
+            COR, 10h28. Chega à Civitas o ofício da Polícia Civil com o B.O do roubo/sequestro,  solicitando imagens das câmeras do local e informando a placa.
           </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Right>
@@ -173,7 +175,7 @@ export function Exemplo72(
       <styles.ChapterGenericDiv1Left ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
           <styles.TextCard1>
-            COR, 10h30. A placa parcial com somente 3 dígitos e a descrição do carro são inseridas no sistema próprio, desenvolvido pelo Prefeitura do Rio, que  conecta diversas bases de dados. Com isso, é possível completar a placa e gerar todo um histórico de circulação desse veículo pela cidade, mostrando diversos padrões. Esses dados são utilizados para gerar um relatório automático e auditável, que é enviado à polícia. Ao mesmo tempo, é feito o cadastramento da placa no sistema para o acionamento de alerta.         </styles.TextCard1>
+            COR, 10h30. A placa parcial com somente 3 dígitos e a descrição do carro são inseridas no aplicativo próprio, desenvolvido pelo Prefeitura do Rio, que  conecta diversas bases de dados. Com isso, é possível completar a placa e gerar todo um histórico de circulação desse veículo pela cidade, mostrando diversos padrões. Esses dados são utilizados para gerar um relatório automático e auditável, que é enviado à polícia. Ao mesmo tempo, é feito o cadastramento da placa no sistema para o acionamento de alerta em tempo real. Se esse carro transitar pela cidade, um alerta sonoro apitará na Sala de Situação da Civitas.         </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Left>
     </>
@@ -208,7 +210,7 @@ export function Seop7(
       <styles.ChapterGenericDiv1Left >
         <styles.ContainerCard1>
           <styles.TextCard1>
-            Os registros indicam a movimentação da moto até a Barra da Tijuca.           </styles.TextCard1>
+            Os registros indicam que a movimentação da moto passa todos os dias pela Barra da Tijuca. Onde acaba de chegar um alerta em tempo real de que ela está, novamente.         </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Left>
     </>
@@ -302,7 +304,7 @@ export function Seop9(
           <styles.NewsImage src={wave_sound}></styles.NewsImage>
 
           <styles.TextCard1>
-            Central Disque Denúncia, 12h55.  Chega uma denúncia anônima denunciando uma pessoa refém na mesma área. Os agentes repassam as informações à polícia, que já está no local, e encontraram a moto, agora sem placa, graças às imagens das câmeras de segurança.          </styles.TextCard1>
+            Central Disque Denúncia, 12h55.  Chega uma denúncia anônima relatando uma pessoa refém na mesma área. Os agentes do D.D. repassam as informações à polícia, que já está no local, e encontraram a moto, agora sem placa, graças às imagens das câmeras de segurança.  </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Center>
     </>
@@ -321,11 +323,11 @@ export function Seop10(
       <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
           <styles.NewsImage src={arrested}></styles.NewsImage>
-          <styles.Credito>
+          {/* <styles.Credito>
             Bandido sendo preso.
-          </styles.Credito>
+          </styles.Credito> */}
           <styles.TextCard1>
-            13h33. Graças à denúncia e ao rastreio das placas dos veículos, a polícia encontra o cativeiro, prende o segundo suspeito e liberta o refém.
+            13h33. Graças à denúncia e ao rastreio das placas dos veículos, a polícia encontra o cativeiro, prende a quadrilha envolvida e liberta o refém.
           </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Center>
@@ -346,8 +348,7 @@ export function Exemplo1(
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          Mas e aí? O que a Civitas faz, afinal? Uma das atuações da Central é o Cerco Eletrônico, que utiliza o parque tecnológico de 3.800 câmeras do Centro de Operações Rio (COR) e 1.500 radares da CET-Rio espalhados por toda a cidade para rastrear atividades suspeitas mediante solicitação das forças de segurança.
-        </styles.TextCard1>
+          Mas e aí? O que a Civitas faz, afinal? Uma das atuações da Central é o Cerco Eletrônico, que utiliza o parque tecnológico de mais de 3.800 câmeras do Centro de Operações Rio (COR) e 1.500 radares da CET-Rio espalhados por toda a cidade para rastrear atividades suspeitas mediante solicitação das forças de segurança.        </styles.TextCard1>
         <styles.BallsContainer>
           <styles.BallWithLabel>
             <styles.Ball1 />
@@ -374,8 +375,7 @@ export function Exemplo11(
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          Vejamos um exemplo de atuação da Civitas junto às forças de segurança numa simulação baseada em possibilidades reais de atuação:
-        </styles.TextCard1>
+          Vejamos um exemplo de atuação da Civitas junto às forças de segurança numa simulação baseada em possibilidades reais de atuação:        </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
   );
@@ -411,8 +411,7 @@ export function Exemplo3(
     <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          Dois homens numa moto estacionam ao lado de um Renault Sandero. Um deles desce da moto, arromba o carro e faz uma ligação direta.  Os dois arrancam.
-        </styles.TextCard1>
+          Dois homens numa moto param ao lado de um Renault Sandero prata estacionado na rua. Um deles desce da moto, arromba o carro e faz uma ligação direta.  Os dois arrancam.        </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Right>
   );
@@ -431,7 +430,7 @@ export function Seop4(
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          35ª DP, Campo Grande, 11h02. O dono do Sandero percebe o furto e vai à delegacia denunciar (depois do veículo ter sido recuperado!)                </styles.TextCard1>
+          35ª DP, Campo Grande, 11h02. O dono do Sandero percebe o furto e vai à delegacia denunciar (depois do veículo ter sido recuperado!). </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
   );
@@ -465,7 +464,7 @@ export function Seop6(
           Documento da moto.
         </styles.Credito> */}
         <styles.TextCard1>
-          As imagens revelam a placa da moto. Ela é inserida no sistema.
+          COR, 11h45. As imagens revelam a placa da moto. Ela é inserida no sistema de alerta em tempo real.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
@@ -473,7 +472,7 @@ export function Seop6(
       <styles.ContainerCard1>
 
         <styles.TextCard1>
-          A moto também tem seu trajeto do dia rastreado.
+          A moto também tem seu trajeto dos últimos dias rastreado.
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
@@ -492,7 +491,7 @@ export function Seop5(
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          Bento Ribeiro. Os detalhes do furto permitem à polícia solicitar à Civitas imagens das câmeras do local do furto.              </styles.TextCard1>
+          Bento Ribeiro. Com os detalhes do furto a polícia consegue solicitar à Civitas imagens das câmeras do local do furto. </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
   );
@@ -510,7 +509,7 @@ export function Seop3(
     <styles.ChapterGenericDiv1CenterBig ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          Estácio, 10h35. O carro passa em outro equipamento do cerco eletrônico, um alerta em tempo real é gerado e a polícia é prontamente avisada.      </styles.TextCard1>
+          Estácio, 10h45. 26 minutos depois do assalto, o carro é interceptado pela polícia civil e um dos suspeitos é detido em flagrante, em tempo recorde.      </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1CenterBig>
   );
@@ -570,7 +569,9 @@ export function Seop1(
           Imagem do suspeito
         </styles.Credito>
         <styles.TextCard1>
-          COR, 10H36. As imagens de câmeras do local do crime são acessadas e analisadas. O vídeo é enviado para a polícia, que analisa e levanta as características físicas e a vestimenta do acusado.
+          COR, 10H36. As imagens de câmeras do local do crime são acessadas e analisadas. Uma parcial de um suspeito é levantada.  O vídeo com todas as informações é enviado para a polícia, que analisa e levanta as características físicas e a vestimenta do acusado.
+          Com o histórico de movimentação do carro em mãos e a parcial, a polícia consegue se preparar melhor para abordar o suspeito.
+
         </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
@@ -589,8 +590,7 @@ export function Zoom(
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          A cidade do Rio de Janeiro é uma grande metrópole: 6.748 milhões habitantes, 32.499 logradouros e mais de 6 milhões de veículos circulando por dia. Se dois caras numa moto resolvem infringir a lei, como a Prefeitura do Rio pode ajudar a resolver isso? A Civitas é uma central de inteligência, vigilância e tecnologia voltada para o apoio à segurança pública carioca.
-        </styles.TextCard1>
+          A cidade do Rio de Janeiro é uma grande metrópole: 6.748 milhões habitantes, 32.499 ruas e mais de 6 milhões de veículos circulando por dia. Se dois caras numa moto resolvem infringir a lei, como a Prefeitura do Rio pode ajudar a resolver isso? A Civitas é uma central de inteligência, vigilância e tecnologia voltada para o apoio à segurança pública carioca.        </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
   );
@@ -648,17 +648,21 @@ export function Fim(
       {/* <styles.IntroTitle id={"fimTitle"}>Conclusão</styles.IntroTitle> */}
       <styles.IntroText>
         Além do cerco eletrônico, a CIVITAS atua em dois outros eixos:
+
         <br></br>
         <br></br>
 
-        A Rede de Vigilância Comunitária aproveita informações já produzidas pelos cidadãos para entender, monitorar e responder a dinâmicas criminais e incidentes de desordem de forma célere e eficaz. Utiliza diversas fontes de dados, como linhas diretas e serviços de denúncia (1746 e disque denúncia),  raspagem de redes sociais e integração com câmeras privadas para obter uma visão abrangente e dinâmica da cidade.
+        A Rede de Vigilância Comunitária aproveita informações já produzidas pelos cidadãos para entender, monitorar e responder a dinâmicas criminais e incidentes de desordem de forma rápida e eficaz. Para isso, utiliza diversas fontes de dados, como linhas diretas e serviços de denúncia (1746 e Disque Denúncia),  raspagem de assuntos nas redes sociais e integração com câmeras privadas para obter uma visão abrangente e dinâmica da cidade.
         <br></br>
         <br></br>
         Em Controle, segurança urbana e cidadania o objetivo é criação e execução de estratégias de prevenção ao crime e à violência que podem ser implementadas com os recursos e a infraestrutura municipais. Por exemplo, uso das câmeras e Inteligência Artificial para identificar movimentações suspeitas em túneis da cidade, evitando roubos, furtos e arrastões.
         <br></br>
         <br></br>
-        No fim do dia, cada crime deixa um rastro. Através da integração entre vigilância, tecnologia e inteligência, a CIVITAS monitora um cinturão de tecnologia pela cidade inteira e assim dá apoio à segurança pública do Rio.
-
+        No fim do dia, cada crime deixa um rastro. Através da integração entre vigilância, tecnologia e inteligência, a Civitas monitora a cidade inteira, fazendo um cinturão de tecnologia e assim dá apoio à segurança pública do Rio.
+        <div style={{ display: "flex", flexDirection: "row", paddingTop: "160px", paddingBototm: "120px", justifyContent: "center" }}>
+          <img src={civitas_icon} width={145}></img>
+          <img src={rio_prefeitura} style={{ marginLeft: "20%" }} width={80}></img>
+        </div>
       </styles.IntroText>
       <div className="w-44 mt-[200px] lg:mt-[200px] lg:w-56"></div>
     </styles.FimDiv>
@@ -700,8 +704,7 @@ export function Exemplo4(
     <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          Rua Sapopemba, Bento Ribeiro, 6h55. O Honda Civic passa por um dos equipamentos do cerco eletrônico, indo no sentido Centro.
-        </styles.TextCard1>
+          Rua Sapopemba, Bento Ribeiro, 6h55. O Sandero passa por um dos equipamentos do cerco eletrônico, indo no sentido Centro.        </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Right>
   );

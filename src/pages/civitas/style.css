@@ -1,5 +1,26 @@
 @import url("https://fonts.cdnfonts.com/css/digital-numbers");
 
+.radar{
+  font-family: 'Digital Numbers', sans-serif !important;
+}
+.content div {
+  position: relative;
+  padding-left: 20px; /* Adjust padding to accommodate the ball */
+}
+
+.content div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Size of the blue ball */
+  height: 8px; /* Size of the blue ball */
+  background-color: #00BFFF;
+  border-radius: 50%;
+}
+
+
 .clock {
   font-family: 'Digital Numbers', sans-serif !important;
   background-color: black;
