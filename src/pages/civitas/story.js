@@ -60,6 +60,10 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Exemplo1().location);
         setLayers(chapterMap.Exemplo1().layers);
         break;
+      case "exemplo10":
+        setPosition(chapterMap.Exemplo10().location);
+        setLayers(chapterMap.Exemplo10().layers);
+        break;
       case "exemplo2":
         setPosition(chapterMap.Exemplo2().location);
         setLayers(chapterMap.Exemplo2().layers);
@@ -80,18 +84,26 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Exemplo7().location);
         setLayers(chapterMap.Exemplo7().layers);
         break;
+      case "exemplo71":
+        setPosition(chapterMap.Exemplo71().location);
+        setLayers(chapterMap.Exemplo71().layers);
+        break;
       case "grafico":
         setPosition(chapterMap.Grafico().location);
         setLayers(chapterMap.Grafico().layers);
+        break;
+      case "grafico1":
+        setPosition(chapterMap.Grafico1().location);
+        setLayers(chapterMap.Grafico1().layers);
         break;
       case "fim":
         setPosition(chapterMap.Fim().location);
         setLayers(chapterMap.Fim().layers);
         break;
-      case "seop1":
-        setPosition(chapterMap.Seop1().location);
-        setLayers(chapterMap.Seop1().layers);
-        break;
+      // case "seop1":
+      //   setPosition(chapterMap.Seop1().location);
+      //   setLayers(chapterMap.Seop1().layers);
+      //   break;
       case "seop2":
         setPosition(chapterMap.Seop2().location);
         setLayers(chapterMap.Seop2().layers);
@@ -104,12 +116,16 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Seop3_2().location);
         setLayers(chapterMap.Seop3_2().layers);
         break;
-      case "seop4":
-        setPosition(chapterMap.Seop4().location);
-        setLayers(chapterMap.Seop4().layers);
-        break;
+      // case "seop4":
+      //   setPosition(chapterMap.Seop4().location);
+      //   setLayers(chapterMap.Seop4().layers);
+      //   break;
       case "seop5":
         setPosition(chapterMap.Seop5().location);
+        // setLayers(chapterMap.Seop5().layers);
+        break;
+      case "seop51":
+        setPosition(chapterMap.Seop51().location);
         // setLayers(chapterMap.Seop5().layers);
         break;
       case "seop5_2":
@@ -120,13 +136,13 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Seop6().location);
         // setLayers(chapterMap.Seop6().layers);
         break;
-      case "seop7":
-        setPosition(chapterMap.Seop7().location);
-        setLayers(chapterMap.Seop7().layers);
-        break;
+      // case "seop7":
+      //   setPosition(chapterMap.Seop7().location);
+      //   setLayers(chapterMap.Seop7().layers);
+      //   break;
       case "drawMap":
         setPosition(chapterMap.DrawMap().location);
-        setTimeout(() => { setPosition(chapterMap.Seop8().location) }, 3100);
+        setTimeout(() => { setPosition(chapterMap.Exemplo6().location) }, 3100);
         // setLayers(chapterMap.DrawMap().layers);
         break;
       case "seop8":
@@ -137,10 +153,10 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Seop9().location);
         setLayers(chapterMap.Seop9().layers);
         break;
-      case "seop10":
-        setPosition(chapterMap.Seop10().location);
-        setLayers(chapterMap.Seop10().layers);
-        break;
+      // case "seop10":
+      //   setPosition(chapterMap.Seop10().location);
+      //   setLayers(chapterMap.Seop10().layers);
+      //   break;
       case "exemplo8":
         setPosition(chapterMap.Exemplo8().location);
         setLayers(chapterMap.Exemplo8().layers);
@@ -148,6 +164,14 @@ export default function SubsidioSPPO() {
       case "exemplo4":
         setPosition(chapterMap.Exemplo4().location);
         setLayers(chapterMap.Exemplo4().layers);
+        break;
+      case "exemplo41":
+        setPosition(chapterMap.Exemplo41().location);
+        //   setLayers(chapterMap.Exemplo41().layers);
+        break;
+      case "exemplo42":
+        setPosition(chapterMap.Exemplo42().location);
+        setLayers(chapterMap.Exemplo42().layers);
         break;
       default:
         break;
@@ -201,6 +225,12 @@ export default function SubsidioSPPO() {
       trigger: "#exemplo1",
       onToggle: () => {
         setChapterNumberMap("exemplo1");
+      },
+    });
+    ScrollTrigger.create({
+      trigger: "#exemplo10",
+      onToggle: () => {
+        setChapterNumberMap("exemplo10");
       },
     });
     ScrollTrigger.create({
@@ -280,10 +310,10 @@ export default function SubsidioSPPO() {
         flicker();
       },
       onEnter: () => {
-        startHourCounter(343, 415);
+        startHourCounter(343, 355);
       },
       onEnterBack: () => {
-        startHourCounter(343, 415);
+        startHourCounter(343, 355);
       },
     });
 
@@ -312,10 +342,10 @@ export default function SubsidioSPPO() {
         flicker();
       },
       onEnter: () => {
-        startHourCounter(415, 617);
+        startHourCounter(355, 617);
       },
       onEnterBack: () => {
-        startHourCounter(415, 617);
+        startHourCounter(355, 617);
       },
       onUpdate: (self) => {
         const progress = self.progress;
@@ -358,13 +388,28 @@ export default function SubsidioSPPO() {
       },
     });
     ScrollTrigger.create({
+      trigger: "#exemplo71",
+      scrub: false,
+      toggleActions: "play reverse play reverse",
+      onToggle: () => {
+        setChapterNumberMap("exemplo71");
+        setCurrentBairro("Disque Denúncia");
+      },
+      onEnter: () => {
+        startHourCounterShort(628, 629);
+      },
+      onEnterBack: () => {
+        startHourCounterShort(628, 629);
+      },
+    });
+    ScrollTrigger.create({
       animation: tl4,
       trigger: "#exemplo72",
       scrub: false,
       toggleActions: "play reverse play reverse",
       onToggle: () => {
         flicker();
-        setChapterNumberMap("exemplo7");
+        setChapterNumberMap("exemplo72");
         setCurrentBairro("Centro de Operações");
       },
       onEnter: () => {
@@ -381,6 +426,14 @@ export default function SubsidioSPPO() {
       toggleActions: "play reverse play reverse",
       onToggle: () => {
         setChapterNumberMap("grafico");
+      },
+    });
+    ScrollTrigger.create({
+      trigger: "#grafico1",
+      scrub: false,
+      toggleActions: "play reverse play reverse",
+      onToggle: () => {
+        setChapterNumberMap("grafico1");
       },
     });
 
@@ -412,20 +465,20 @@ export default function SubsidioSPPO() {
       }
     });
 
-    ScrollTrigger.create({
-      trigger: "#seop1",
-      onToggle: () => {
-        setChapterNumberMap("seop1");
-        setCurrentBairro("Centro de Operações");
-        flicker();
-      },
-      onEnter: () => {
-        startHourCounterShort(635, 636);
-      },
-      onEnterBack: () => {
-        startHourCounterShort(635, 636);
-      },
-    });
+    // ScrollTrigger.create({
+    //   trigger: "#seop1",
+    //   onToggle: () => {
+    //     setChapterNumberMap("seop1");
+    //     setCurrentBairro("Centro de Operações");
+    //     flicker();
+    //   },
+    //   onEnter: () => {
+    //     startHourCounterShort(635, 636);
+    //   },
+    //   onEnterBack: () => {
+    //     startHourCounterShort(635, 636);
+    //   },
+    // });
 
     const tl14 = gsap.timeline();
     tl14
@@ -491,24 +544,62 @@ export default function SubsidioSPPO() {
       }
     });
 
+    // ScrollTrigger.create({
+    //   trigger: "#seop4",
+    //   onToggle: () => {
+    //     setChapterNumberMap("seop4");
+    //     setCurrentBairro("Campo Grande");
+    //     flicker();
+    //   },
+    //   onEnter: () => {
+    //     startHourCounterShort(651, 662);
+    //   },
+    //   onEnterBack: () => {
+    //     startHourCounterShort(651, 662);
+    //   },
+    // });
     ScrollTrigger.create({
-      trigger: "#seop4",
+      trigger: "#exemplo41",
       onToggle: () => {
-        setChapterNumberMap("seop4");
-        setCurrentBairro("Campo Grande");
-        flicker();
-      },
-      onEnter: () => {
-        startHourCounterShort(651, 662);
-      },
-      onEnterBack: () => {
-        startHourCounterShort(651, 662);
+        setChapterNumberMap("exemplo41");
       },
     });
+    ScrollTrigger.create({
+      trigger: "#exemplo42",
+      onEnter: () => {
+        setChapterNumberMap("exemplo42");
+      },
+      onEnterBack: () => {
+        setChapterNumberMap("exemplo42");
+      },
+    });
+
     ScrollTrigger.create({
       trigger: "#seop5",
       onToggle: () => {
         setChapterNumberMap("seop5");
+        setCurrentBairro("Bento Ribeiro");
+        flicker();
+      },
+      onEnter: () => {
+        startHourCounter(649, 650);
+      },
+      onEnterBack: () => {
+        startHourCounter(649, 650);
+      },
+    });
+    ScrollTrigger.create({
+      trigger: "#seop51",
+      onToggle: () => {
+        setChapterNumberMap("seop5");
+        setCurrentBairro("Bento Ribeiro");
+        flicker();
+      },
+      onEnter: () => {
+        startHourCounter(649, 650);
+      },
+      onEnterBack: () => {
+        startHourCounter(649, 650);
       },
     });
     ScrollTrigger.create({
@@ -523,12 +614,13 @@ export default function SubsidioSPPO() {
         setChapterNumberMap("seop6");
       },
     });
-    ScrollTrigger.create({
-      trigger: "#seop7",
-      onToggle: () => {
-        setChapterNumberMap("seop7");
-      },
-    });
+    // ScrollTrigger.create({
+    //   trigger: "#seop7",
+    //   onToggle: () => {
+    //     setChapterNumberMap("seop7");
+    //   },
+    // });
+
     ScrollTrigger.create({
       trigger: "#drawMap",
       start: "top bottom",
@@ -557,20 +649,20 @@ export default function SubsidioSPPO() {
     //     setChapterNumberMap("seop9");
     //   },
     // });
-    ScrollTrigger.create({
-      trigger: "#seop10",
-      onToggle: () => {
-        setChapterNumberMap("seop10");
-        setCurrentBairro("Bandidos presos");
-        flicker();
-      },
-      onEnter: () => {
-        startHourCounter(775, 813);
-      },
-      onEnterBack: () => {
-        startHourCounter(775, 813);
-      },
-    });
+    // ScrollTrigger.create({
+    //   trigger: "#seop10",
+    //   onToggle: () => {
+    //     setChapterNumberMap("seop10");
+    //     setCurrentBairro("Bandidos presos");
+    //     flicker();
+    //   },
+    //   onEnter: () => {
+    //     startHourCounter(775, 813);
+    //   },
+    //   onEnterBack: () => {
+    //     startHourCounter(775, 813);
+    //   },
+    // });
 
 
     const tl11 = gsap.timeline();
@@ -802,7 +894,7 @@ export default function SubsidioSPPO() {
         animationSpeed={1}
       />
       <styles.Logo src={logo}></styles.Logo>
-      {(chapterNumberMap !== "capa" && chapterNumberMap !== "zoom" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "seop7" && chapterNumberMap !== "drawMap" && chapterNumberMap !== "fim") &&
+      {(chapterNumberMap !== "capa" && chapterNumberMap !== "zoom" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "exemplo10" && chapterNumberMap !== "seop7" && chapterNumberMap !== "drawMap" && chapterNumberMap !== "fim") &&
         <div className="clock">
           {currentHour} AM
           <div className="clock-description">{currentBairro}</div>
@@ -812,29 +904,35 @@ export default function SubsidioSPPO() {
       {/* <chapterDiv.Intro id={"intro"} /> */}
       <chapterDiv.Zoom id={"zoom"} />
       <chapterDiv.Exemplo1 id={"exemplo1"} />
+      <chapterDiv.Exemplo10 id={"exemplo10"} />
       <chapterDiv.Exemplo11 id={"exemplo11"} />
       <chapterDiv.Exemplo2 id={"exemplo2"} />
       <chapterDiv.Exemplo3 id={"exemplo3"} />
       <chapterDiv.Exemplo4 id={"exemplo4"} />
-      <chapterDiv.Exemplo5 id={"exemplo5"} />
+      <chapterDiv.Exemplo41 id={"exemplo41"} />
+      <chapterDiv.Exemplo42 id={"exemplo42"} />
+      <chapterDiv.DrawMap chapterNumberMap={chapterNumberMap} id={"drawMap"} />
+      {/* <chapterDiv.Exemplo5 id={"exemplo5"} /> */}
       <chapterDiv.Exemplo6 id={"exemplo6"} />
       <chapterDiv.Exemplo7 id={"exemplo7"} />
+      <chapterDiv.Exemplo71 id={"exemplo71"} />
       <chapterDiv.Exemplo72 id={"exemplo72"} />
       <chapterDiv.Grafico id={"grafico"} />
+      <chapterDiv.Grafico1 id={"grafico1"} />
       <chapterDiv.Seop2 id={"seop2"} />
       <chapterDiv.Exemplo8 id={"exemplo8"} />
       <chapterDiv.Seop3 id={"seop3"} />
-      <chapterDiv.Seop1 id={"seop1"} />
+      {/* <chapterDiv.Seop1 id={"seop1"} /> */}
       <chapterDiv.Seop3_2 id={"seop3_2"} />
-      <chapterDiv.Seop4 id={"seop4"} />
+      {/* <chapterDiv.Seop4 id={"seop4"} /> */}
+      <chapterDiv.Seop51 id={"seop51"} />
       <chapterDiv.Seop5 id={"seop5"} />
       <chapterDiv.Seop5_2 id={"seop5_2"} />
       <chapterDiv.Seop6 id={"seop6"} />
-      <chapterDiv.Seop7 id={"seop7"} />
-      <chapterDiv.DrawMap chapterNumberMap={chapterNumberMap} id={"drawMap"} />
+      {/* <chapterDiv.Seop7 id={"seop7"} /> */}
       <chapterDiv.Seop8 id={"seop8"} />
       <chapterDiv.Seop9 id={"seop9"} />
-      <chapterDiv.Seop10 id={"seop10"} />
+      {/* <chapterDiv.Seop10 id={"seop10"} /> */}
       <chapterDiv.Fim id={"fim"} />
     </>
   );

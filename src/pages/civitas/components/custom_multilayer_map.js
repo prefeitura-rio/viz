@@ -198,7 +198,15 @@ class CustomMultilayerMap extends React.Component {
   // Render
   render() {
     const { videoInfoArray, chapterNumberMap, cardHeight } = this.props;
-
+    const coordinatesCarro = [
+      { latitude: "-22.864784742263154", longitude: "-43.36105513587367" },
+      { latitude: "-22.905126493488567", longitude: "-43.2772921379854" },
+      { latitude: "-22.888917477677793", longitude: "-43.31705582150667" },
+      { latitude: "-22.90901575450762", longitude: "-43.29103115426432" },
+      { latitude: "-22.87433241197097", longitude: "-43.342067801950435" },
+      { latitude: "-22.89560679783915", longitude: "-43.30057249822963" },
+      // Adicione mais coordenadas conforme necessário
+    ];
     const gridStyle = {
       display: "grid",
       gridTemplateColumns: "repeat(3, 1fr)",
@@ -305,7 +313,7 @@ class CustomMultilayerMap extends React.Component {
                   >
                     <div
                       style={{
-                        display: `${videoInfo.chapterNumberMap == chapterNumberMap && chapterNumberMap != "exemplo7" || chapterNumberMap == "exemplo1" || chapterNumberMap == "exemplo11" ? "flex" : "none"}`,
+                        display: `${videoInfo.chapterNumberMap == chapterNumberMap && chapterNumberMap != "exemplo7" && chapterNumberMap != "exemplo1" && chapterNumberMap != "exemplo10" || chapterNumberMap == "exemplo11" ? "flex" : "none"}`,
                         position: "relative",
                         flexDirection: "column",
                         alignItems: "center",
@@ -361,7 +369,7 @@ class CustomMultilayerMap extends React.Component {
                   </Marker>
                 )}
                 {
-                  chapterNumberMap == "exemplo4" && (
+                  (chapterNumberMap == "exemplo4" || chapterNumberMap == "exemplo41") && (
                     <Marker
                       latitude="-22.86610"
                       longitude="-43.36001"
@@ -426,10 +434,42 @@ class CustomMultilayerMap extends React.Component {
                   )
                 }
                 {
-                  (chapterNumberMap == "exemplo7" || chapterNumberMap == "seop3" || chapterNumberMap == "seop1") && (
+                  chapterNumberMap == "exemplo42" && coordinatesCarro.map((coord, index) => (
+                    <Marker
+                      key={index}
+                      latitude={coord.latitude}
+                      longitude={coord.longitude}
+                    >
+                      <div style={{
+                        position: 'relative',
+                      }}>
+
+                        <svg id="radar-circle">
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite"></animate>
+                          </circle>
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="0.75s" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="0.75s"></animate>
+                          </circle>
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="1.5s" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="1.5s"></animate>
+                          </circle>
+                          <circle cx="50%" cy="50%" r="10" fill="#00BFFF" stroke="#00BFFF"></circle>
+                        </svg>
+                      </div>
+
+
+                    </Marker>
+                  ))
+                }
+                {
+                  (chapterNumberMap == "exemplo7" || chapterNumberMap == "seop3" || chapterNumberMap == "exemplo71" || chapterNumberMap == "exemplo72" || chapterNumberMap == "seop1") && (
                     <Marker
                       latitude="-22.91213" // quando diminuo em modulo vai pra cima
-                      longitude="-43.2033150" // quando aumento em modulo vai pra esquerda
+                      longitude="-43.2033150" // quando diminuo em modulo vai pra direita
                     >
                       <div style={{
                         position: 'relative',

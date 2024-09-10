@@ -124,6 +124,67 @@ export const Exemplo7 = () => {
     ],
   };
 };
+export const Exemplo71 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.20346,
+          lat: -22.91209,
+        },
+        zoom: 18.5,
+        pitch: 120.0,
+        bearing: 0,
+        duration: 5000,
+      },
+      mobile: {
+        center: {
+          lon: -43.20328,
+          lat: -22.91209,
+        },
+        zoom: 18.0,
+        pitch: 80.0,
+        bearing: 0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.8,
+        layer: {
+          ...{
+
+            "id": "cor-909lki",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "fill",
+            "paint": {
+              "fill-emissive-strength": 1,
+              "fill-opacity": 0,
+              "fill-color": [
+                "interpolate",
+                [
+                  "linear"
+                ],
+                [
+                  "zoom"
+                ],
+                0,
+                "hsl(195, 100%, 50%)",
+                22,
+                "hsl(195, 100%, 50%)"
+              ]
+            },
+            "layout": {},
+            "source": "composite",
+            "source-layer": "cor-909lki"
+          },
+        },
+      },
+    ],
+  };
+};
 
 export const Exemplo6 = () => {
   return {
@@ -155,6 +216,56 @@ export const Exemplo6 = () => {
 };
 
 export const Grafico = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.45632,
+          lat: -22.92106,
+        },
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.44032,
+          lat: -22.92106,
+        },
+        zoom: 9,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 0.8,
+        layer: {
+          ...{
+
+            "id": "percurso-carro-v2-24pm81",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "line",
+            "paint": {
+              "line-emissive-strength": 1,
+              "line-opacity": 0,
+              "line-color": "hsl(195, 100%, 50%)"
+            },
+            "layout": {},
+            "source": "composite",
+            "source-layer": "percurso_carro_v2-24pm81"
+
+          },
+        },
+      },
+    ],
+  };
+};
+export const Grafico1 = () => {
   return {
     location: {
       desktop: {
@@ -259,8 +370,8 @@ export const DrawMap = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.57055476830868,
-          lat: -22.911240842215918
+          lon: -43.36105513587367,
+          lat: -22.864784742263154
         },
         zoom: 14,
         pitch: 50,
@@ -269,8 +380,8 @@ export const DrawMap = () => {
       },
       mobile: {
         center: {
-          lon: -43.41124038272067,
-          lat: -22.999586702947127,
+          lon: -43.36105513587367,
+          lat: -22.864784742263154
         },
         zoom: 8.38,
         pitch: 0.0,
@@ -634,6 +745,56 @@ export const Seop5 = () => {
     ],
   };
 };
+export const Seop51 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.3605,
+          lat: -22.8648,
+        },
+        zoom: 16.5,
+        pitch: 59.0,
+        bearing: 100.47,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.3605,
+          lat: -22.8648,
+        },
+        zoom: 16,
+        pitch: 59.0,
+        bearing: 100.47,
+        duration: 4000,
+      },
+    },
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+
+            "id": "bentoribeiro-as8oj1",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "symbol",
+            "paint": {
+              "icon-opacity": 0
+            },
+            "layout": {
+              "icon-image": "laundry",
+              "icon-size": 2.7
+            },
+            "source": "composite",
+            "source-layer": "bentoribeiro-as8oj1"
+          },
+        },
+      },
+    ],
+  };
+};
 export const Seop5_2 = () => {
   return {
     location: {
@@ -815,7 +976,131 @@ export const Exemplo4 = () => {
     layers: [],
   };
 };
+export const Exemplo41 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.36001,
+          lat: -22.86610,
+        },
+        zoom: 16.38,
+        pitch: 45,
+        bearing: -45,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.36001,
+          lat: -22.86610,
+        },
+        zoom: 15,
+        pitch: 45,
+        bearing: -45,
+        duration: 4000,
+      },
+    },
+    layers: [],
+  };
+};
+export const Exemplo42 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.31003115426432,
+          lat: -22.87901575450762,
+        },
+        zoom: 11.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.45632,
+          lat: -22.92106,
+        },
+        zoom: 8.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [],
+  };
+};
 
+export const Exemplo10 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.45632,
+          lat: -22.92106,
+        },
+        zoom: 10.5,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 6000,
+      },
+      mobile: {
+        center: {
+          lon: -43.44032,
+          lat: -22.92106,
+        },
+        zoom: 9,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+
+    layers: [
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            "id": "radares-2i2tet",
+            "type": "circle",
+            "paint": {
+              "circle-radius": 2,
+              "circle-color": "hsl(60, 100%, 50%)",
+              "circle-opacity": 0
+            },
+            "layout": {},
+            "source": "composite",
+            "source-layer": "radares-2i2tet"
+
+
+          },
+        },
+      },
+      {
+        layerType: "mapbox",
+        targetOpacity: 1,
+        layer: {
+          ...{
+            "id": "cameras-66ijxh",
+            "minzoom": 0,
+            "maxzoom": 22,
+            "type": "circle",
+            "paint": {
+              "circle-emissive-strength": 1,
+              "circle-color": "hsl(195, 100%, 50%)",
+              "circle-radius": 2,
+              "circle-opacity": 0
+            },
+            "layout": {},
+            "source": "composite",
+            "source-layer": "cameras-66ijxh"
+          },
+        },
+      },
+    ],
+  };
+};
 export const Exemplo1 = () => {
   return {
     location: {

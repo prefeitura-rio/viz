@@ -6,7 +6,7 @@ import length from '@turf/length';
 import bearing from '@turf/bearing'; // Importing bearing from the correct module
 import 'mapbox-gl/dist/mapbox-gl.css';
 import pinRouteGeojson from './pinRouteGeojson.json';
-import motobg from './images/motobg.png';
+import carro from './images/carro.png';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZXNjcml0b3Jpb2RlZGFkb3MiLCJhIjoiY2t3bWdmcHpjMmJ2cTJucWJ4MGQ1Mm1kbiJ9.4hHJX-1pSevYoBbja7Pq4w';
 
@@ -20,7 +20,7 @@ const MapboxElevationApp = () => {
       const map = new mapboxgl.Map({
         container: mapContainerRef.current,
         zoom: 14,
-        center: [-43.57055476830868, -22.911240842215918],
+        center: [-43.36105513587367, -22.864784742263154],
         pitch: 50,
         bearing: 150,
         style: 'mapbox://styles/escritoriodedados/clzu707th00ro01pc69du960f',
@@ -35,7 +35,7 @@ const MapboxElevationApp = () => {
       const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
 
       const markerElement = document.createElement('div');
-      markerElement.style.backgroundImage = `url(${motobg})`;
+      markerElement.style.backgroundImage = `url(${carro})`;
       markerElement.style.width = '20px';
       markerElement.style.height = '50px';
       markerElement.style.backgroundSize = 'contain';
