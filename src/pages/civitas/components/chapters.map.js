@@ -421,6 +421,33 @@ export const Seop8 = () => {
     ],
   };
 };
+export const Seop81 = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.45632,
+          lat: -22.92106,
+        },
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.44032,
+          lat: -22.92106,
+        },
+        zoom: 9,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [],
+  };
+};
 export const Seop9 = () => {
   return {
     location: {

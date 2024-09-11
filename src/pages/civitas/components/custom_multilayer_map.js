@@ -516,7 +516,7 @@ class CustomMultilayerMap extends React.Component {
 
                 }
                 {
-                  chapterNumberMap == "seop8" &&
+                  (chapterNumberMap == "seop8" || chapterNumberMap == "seop81") &&
                   <Marker
                     key={index}
                     latitude={-23.003932747780283}
@@ -617,19 +617,9 @@ class CustomMultilayerMap extends React.Component {
                     >
                       <div style={{ position: 'relative' }}>
                         <svg id="radar-circle">
-                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
-                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" />
-                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite"></animate>
-                          </circle>
-                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
-                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="0.75s" />
-                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="0.75s"></animate>
-                          </circle>
-                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
-                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="1.5s" />
-                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="1.5s"></animate>
-                          </circle>
-                          <circle cx="50%" cy="50%" r="10" fill="#00BFFF" stroke="#00BFFF"></circle>
+
+                          <circle cx="50%" cy="50%" r="8" fill="#00BFFF" stroke="#00BFFF"></circle>
+                          <circle cx="50%" cy="50%" r="14" fill="none" stroke="white" strokeWidth="2"></circle>
 
                           <g >
                             {coord.from === "top" ? (
@@ -671,7 +661,7 @@ class CustomMultilayerMap extends React.Component {
                 }
 
                 {
-                  (chapterNumberMap == "exemplo7" || chapterNumberMap == "seop3" || chapterNumberMap == "exemplo71" || chapterNumberMap == "exemplo72" || chapterNumberMap == "seop1") && (
+                  (chapterNumberMap == "exemplo7" || chapterNumberMap == "seop3" || chapterNumberMap == "exemplo71" || chapterNumberMap == "exemplo72" || chapterNumberMap == "exemplo73" || chapterNumberMap == "seop1") && (
                     <Marker
                       latitude="-22.91213" // quando diminuo em modulo vai pra cima
                       longitude="-43.2033150" // quando diminuo em modulo vai pra direita

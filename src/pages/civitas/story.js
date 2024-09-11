@@ -153,6 +153,10 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Seop8().location);
         setLayers(chapterMap.Seop8().layers);
         break;
+      case "seop81":
+        setPosition(chapterMap.Seop81().location);
+        setLayers(chapterMap.Seop81().layers);
+        break;
       case "seop9":
         setPosition(chapterMap.Seop9().location);
         setLayers(chapterMap.Seop9().layers);
@@ -423,6 +427,22 @@ export default function SubsidioSPPO() {
         startHourCounterShort(628, 630);
       },
     });
+    ScrollTrigger.create({
+      trigger: "#exemplo73",
+      scrub: false,
+      toggleActions: "play reverse play reverse",
+      onToggle: () => {
+        flicker();
+        setChapterNumberMap("exemplo73");
+        setCurrentBairro("Centro de Operações");
+      },
+      onEnter: () => {
+        startHourCounterShort(630, 630);
+      },
+      onEnterBack: () => {
+        startHourCounterShort(630, 630);
+      },
+    });
 
     ScrollTrigger.create({
       trigger: "#grafico",
@@ -596,7 +616,7 @@ export default function SubsidioSPPO() {
       trigger: "#seop51",
       onToggle: () => {
         setChapterNumberMap("seop5");
-        setCurrentBairro("Bento Ribeiro");
+        setCurrentBairro("Méier");
         flicker();
       },
       onEnter: () => {
@@ -645,6 +665,20 @@ export default function SubsidioSPPO() {
       },
       onEnterBack: () => {
         startHourCounter(662, 775);
+      },
+    });
+    ScrollTrigger.create({
+      trigger: "#seop81",
+      onToggle: () => {
+        setChapterNumberMap("seop81");
+        setCurrentBairro("Barra da Tijuca");
+        flicker();
+      },
+      onEnter: () => {
+        startHourCounter(775, 775);
+      },
+      onEnterBack: () => {
+        startHourCounter(775, 775);
       },
     });
     // ScrollTrigger.create({
@@ -927,6 +961,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Exemplo7 id={"exemplo7"} />
       <chapterDiv.Exemplo71 id={"exemplo71"} />
       <chapterDiv.Exemplo72 id={"exemplo72"} />
+      <chapterDiv.Exemplo73 id={"exemplo73"} />
       <chapterDiv.Grafico id={"grafico"} />
       <chapterDiv.Grafico1 id={"grafico1"} />
       <chapterDiv.Seop2 id={"seop2"} />
@@ -942,6 +977,7 @@ export default function SubsidioSPPO() {
       {/* <chapterDiv.Seop7 id={"seop7"} /> */}
       <chapterDiv.Seop8 id={"seop8"} />
       <chapterDiv.Seop9 id={"seop9"} />
+      <chapterDiv.Seop81 id={"seop81"} />
       {/* <chapterDiv.Seop10 id={"seop10"} /> */}
       <chapterDiv.BeforeFim id={"beforeFim"} />
       <chapterDiv.Fim id={"fim"} />

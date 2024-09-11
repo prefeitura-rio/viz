@@ -194,9 +194,26 @@ export function Exemplo72(
       <styles.ChapterGenericDiv1Left ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
           <styles.TextCard1>
-            COR, 10h30. A placa parcial com somente 3 dígitos e a descrição do carro são denunciadas e as informações inseridas no aplicativo próprio, desenvolvido pela Prefeitura do Rio, que  conecta diversas bases de dados. Com isso, é possível completar a placa e gerar todo um histórico de circulação desse veículo pela cidade, mostrando diversos padrões. Esses dados são utilizados para gerar um relatório automático e auditável, que é enviado à polícia.      </styles.TextCard1>
+            COR, 10h30. A placa parcial com somente 3 dígitos e a descrição do carro são denunciadas e as informações inseridas no aplicativo próprio, desenvolvido pela Prefeitura do Rio, que  conecta diversas bases de dados. </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Left>
+    </>
+  );
+}
+export function Exemplo73(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  return (
+    <>
+      <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+        <styles.ContainerCard1>
+          <styles.TextCard1>
+            Com isso, é possível completar a placa e gerar todo um histórico de circulação desse veículo pela cidade, mostrando diversos padrões. Esses dados são utilizados para gerar um relatório automático e auditável, que é enviado à polícia.      </styles.TextCard1>
+        </styles.ContainerCard1>
+      </styles.ChapterGenericDiv1Center>
     </>
   );
 }
@@ -332,6 +349,25 @@ export function Seop8(
             Os registros indicam a movimentação da moto até a Barra da Tijuca.           </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Left> */}
+    </>
+  );
+}
+export function Seop81(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <>
+      <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
+        <styles.ContainerCard1>
+          <styles.TextCard1>
+            Essa foi uma simulação. Agora veja a diversidade de casos reais em que o apoio da Civitas foi solicitado pelas forças de segurança:           </styles.TextCard1>
+        </styles.ContainerCard1>
+      </styles.ChapterGenericDiv1Center>
     </>
   );
 }
@@ -733,9 +769,9 @@ export function BeforeFim(
   props = setDefaultProps(props);
 
   return (
-    <styles.FimDiv ref={props.chapRef} id={props.id}>
+    <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
 
-    </styles.FimDiv>
+    </styles.ChapterGenericDiv1Center>
   );
 }
 export function Fim(

@@ -52,8 +52,8 @@ export const Wrap = tw.div`
 export const Title = tw.div`
   mt-[5%]
   lg:mt-[5%]
-  mb-16  
-  lg:mb-16  
+  mb-8  
+  lg:mb-8 
   font-serif font-bold  
   text-4xl text-center text-white
   leading-[1.3]  
