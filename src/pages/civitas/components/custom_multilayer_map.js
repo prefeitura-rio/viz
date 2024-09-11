@@ -418,7 +418,7 @@ class CustomMultilayerMap extends React.Component {
                             color: 'white', // Assuming black text color, change as necessary
                           }}>
                             <div className="content">
-                              <div>6h55 AM</div>
+                              <div>5h55 AM</div>
                               <div>
                                 Placa <span style={{ backgroundColor: "rgba(255, 255, 255, 0.5)", filter: "blur(2px)", padding: "5px", borderRadius: "5px" }}>FBR2A23</span>
                               </div>
