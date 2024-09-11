@@ -79,7 +79,7 @@ class CustomMultilayerMap extends React.Component {
     if (!mapInstance) return;
 
     if (this.props.showLayers) {
-      console.log("allLyaers", mapInstance.getStyle().layers);
+      // console.log("allLyaers", mapInstance.getStyle().layers);
     }
     for (let i = 0; i < layers.length; i++) {
       const layerDict = layers[i];

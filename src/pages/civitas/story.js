@@ -41,7 +41,7 @@ export default function SubsidioSPPO() {
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState("capa");
-  console.log(chapterNumberMap);
+  // console.log(chapterNumberMap);
   useEffect(() => {
     switch (chapterNumberMap) {
       case "capa":
