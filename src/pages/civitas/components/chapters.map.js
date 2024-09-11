@@ -230,10 +230,10 @@ export const Grafico = () => {
       },
       mobile: {
         center: {
-          lon: -43.43132,
+          lon: -43.41032,
           lat: -22.92106,
         },
-        zoom: 10.0,
+        zoom: 9.5,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -280,10 +280,10 @@ export const Grafico1 = () => {
       },
       mobile: {
         center: {
-          lon: -43.43132,
+          lon: -43.41032,
           lat: -22.92106,
         },
-        zoom: 10.0,
+        zoom: 9.5,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -938,10 +938,10 @@ export const Exemplo42 = () => {
       },
       mobile: {
         center: {
-          lon: -43.45632,
-          lat: -22.92106,
+          lon: -43.31003115426432,
+          lat: -22.87901575450762,
         },
-        zoom: 8.38,
+        zoom: 10.38,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,

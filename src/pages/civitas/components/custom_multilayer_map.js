@@ -244,13 +244,12 @@ class CustomMultilayerMap extends React.Component {
       { latitude: "-22.91236193778326", longitude: "-43.26788724472604", hora: "9h32", from: "bottom", side: "right" },
     ];
     const coordinatesCasosResolvidos = [
-      { latitude: "-22.881095445621", longitude: "-43.511137976488385", hora: "5h55", from: "top", side: "left" },
-      { latitude: "-22.920709471646703", longitude: "-43.21791865468742", hora: "10h07", from: "top", side: "left" },
-      { latitude: "-22.87566923436411", longitude: "-43.46206227641403", hora: "6h03", from: "bottom", side: "right" },
-      { latitude: "-22.88176861362919", longitude: "-43.32981961339644", hora: "7h45", from: "top", side: "left" },
-      { latitude: "-22.881271662429967", longitude: "-43.41336772903023", hora: "6h10", from: "top", side: "left" },
-      { latitude: "-22.878727578454146", longitude: "-43.374656426499826", hora: "6h21", from: "bottom", side: "right" },
-      { latitude: "-22.91236193778326", longitude: "-43.26788724472604", hora: "9h32", from: "bottom", side: "right" },
+      { latitude: "-22.8968", longitude: "-43.5103", t1: "Enfrent. às Milicias", t2: "Camp.Grande e St Cruz", from: "top", side: "left" },
+      { latitude: "-23.0034", longitude: "-43.4224", t1: "Roubo a Ciclistas", t2: "Recreio", from: "top", side: "left" },
+      { latitude: "	-23.0003", longitude: "-43.3369", t1: "Sequesto", t2: "Barra", from: "bottom", side: "right" },
+      { latitude: "	-22.9495", longitude: "	-43.3712", t1: "Hom. de Pol. Civil", t2: "CDD", from: "top", side: "left" },
+      { latitude: "	-22.9034", longitude: "	-43.2834", t1: "Seq. Relâmpago", t2: "Méier", from: "top", side: "left" },
+      { latitude: "	-22.9239", longitude: "	-43.2324", t1: "Roubos - 6° BPM", t2: "Tijuca", from: "bottom", side: "right" },
     ];
     return (
       <Map
@@ -626,7 +625,7 @@ class CustomMultilayerMap extends React.Component {
                               <>
                                 <line x1="40%" y1="0" x2="50%" y2="50%" stroke="#00BFFF" strokeWidth="2px" />
                                 {coord.side === "left" ? (
-                                  <line x1="40%" y1="0" x2="20%" y2="0" stroke="#00BFFF" strokeWidth="2px" />
+                                  <line x1="40%" y1="0" x2="-20%" y2="0" stroke="#00BFFF" strokeWidth="2px" />
                                 ) : (
                                   <line x1="40%" y1="0" x2="80%" y2="0" stroke="#00BFFF" strokeWidth="2px" />
                                 )}
@@ -637,23 +636,35 @@ class CustomMultilayerMap extends React.Component {
                                 {coord.side === "left" ? (
                                   <line x1="60%" y1="100%" x2="20%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
                                 ) : (
-                                  <line x1="60%" y1="100%" x2="80%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
+                                  <line x1="60%" y1="100%" x2="100%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
                                 )}
                               </>
                             )}
                           </g>
                         </svg>
-                        <h1 className="radar" style={{
+                        <h1 style={{
                           color: "white",
                           fontWeight: "lighter",
-                          fontSize: "14px",
+                          fontSize: "13px",
                           position: 'absolute',
-                          top: `${coord.from === 'top' ? "-20px" : "130px"}`,  // Adjust as needed
-                          left: `${coord.from === 'top' ? "65px" : "186px"}`, // Adjust as needed
+                          top: `${coord.from === 'top' ? "-18px" : "131px"}`,  // Adjust as needed
+                          left: `${coord.from === 'top' ? "5px" : "186px"}`, // Adjust as needed
                           // transform: 'translate(-50%, -50%)',
                           zIndex: 10
                         }}>
-                          {coord.hora}
+                          {coord.t1}
+                        </h1>
+                        <h1 style={{
+                          color: "white",
+                          fontWeight: "lighter",
+                          fontSize: "11px",
+                          position: 'absolute',
+                          top: `${coord.from === 'top' ? "-1px" : "148px"}`,  // Adjust as needed
+                          left: `${coord.from === 'top' ? "5px" : "186px"}`, // Adjust as needed
+                          // transform: 'translate(-50%, -50%)',
+                          zIndex: 10
+                        }}>
+                          {coord.t2}
                         </h1>
                       </div>
                     </Marker>
