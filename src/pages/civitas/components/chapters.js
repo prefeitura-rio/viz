@@ -157,7 +157,7 @@ export function Exemplo7(
       <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
           <styles.TextCard1>
-            COR, 10h28. A polícia Civil é informada do roubo seguido de sequestro, abre a investigação e pede ajuda à Civitas. Um ofício chega solicitando à Civitas as imagens das câmeras, registro de radares próximos e monitoramento desse veículo em tempo real. A equipe da Civitas entra em ação. Através das imagens, descobre o  modelo e cor do carro.
+            COR, 10h28. A polícia Civil é informada do roubo seguido de sequestro, abre a investigação e pede ajuda à Civitas. Um ofício chega à Civitas solicitando as imagens das câmeras, registro de radares próximos e monitoramento desse veículo em tempo real. A equipe da Civitas entra em ação. Através das imagens, descobre o  modelo e cor do carro.
           </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Right>
@@ -550,10 +550,11 @@ export function Seop5(
 
   return (
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
+      {/* <styles.ContainerCard1>
         <styles.TextCard1>
-          Bento Ribeiro. Com os detalhes do furto a polícia consegue solicitar à Civitas imagens das câmeras do local do furto. </styles.TextCard1>
-      </styles.ContainerCard1>
+          Bento Ribeiro. Com os detalhes do furto a polícia consegue solicitar à Civitas imagens das câmeras do local do furto. 
+          </styles.TextCard1>
+      </styles.ContainerCard1> */}
     </styles.ChapterGenericDiv1Center>
   );
 }
@@ -723,6 +724,20 @@ export function Zoom(
 //   );
 // }
 
+export function BeforeFim(
+  props = {
+    id: "",
+    chapRef: null,
+  }
+) {
+  props = setDefaultProps(props);
+
+  return (
+    <styles.FimDiv ref={props.chapRef} id={props.id}>
+
+    </styles.FimDiv>
+  );
+}
 export function Fim(
   props = {
     id: "",

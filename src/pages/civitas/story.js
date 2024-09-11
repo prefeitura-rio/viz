@@ -96,6 +96,10 @@ export default function SubsidioSPPO() {
         setPosition(chapterMap.Grafico1().location);
         setLayers(chapterMap.Grafico1().layers);
         break;
+      case "beforeFim":
+        setPosition(chapterMap.BeforeFim().location);
+        setLayers(chapterMap.BeforeFim().layers);
+        break;
       case "fim":
         setPosition(chapterMap.Fim().location);
         setLayers(chapterMap.Fim().layers);
@@ -578,7 +582,7 @@ export default function SubsidioSPPO() {
       trigger: "#seop5",
       onToggle: () => {
         setChapterNumberMap("seop5");
-        setCurrentBairro("Bento Ribeiro");
+        setCurrentBairro("Méier");
         flicker();
       },
       onEnter: () => {
@@ -674,6 +678,12 @@ export default function SubsidioSPPO() {
       .to("#fim", { opacity: 1, duration: 6 })
       .to("#fim", { opacity: 1, duration: 28 });
 
+    ScrollTrigger.create({
+      trigger: "#beforeFim",
+      onToggle: () => {
+        setChapterNumberMap("beforeFim");
+      },
+    });
     ScrollTrigger.create({
       animation: tl11,
       trigger: "#fim",
@@ -894,7 +904,7 @@ export default function SubsidioSPPO() {
         animationSpeed={1}
       />
       <styles.Logo src={logo}></styles.Logo>
-      {(chapterNumberMap !== "capa" && chapterNumberMap !== "zoom" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "exemplo10" && chapterNumberMap !== "seop7" && chapterNumberMap !== "drawMap" && chapterNumberMap !== "fim") &&
+      {(chapterNumberMap !== "capa" && chapterNumberMap !== "zoom" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "exemplo10" && chapterNumberMap !== "seop7" && chapterNumberMap !== "drawMap" && chapterNumberMap !== "fim" && chapterNumberMap !== "beforeFim") &&
         <div className="clock">
           {currentHour} AM
           <div className="clock-description">{currentBairro}</div>
@@ -933,6 +943,7 @@ export default function SubsidioSPPO() {
       <chapterDiv.Seop8 id={"seop8"} />
       <chapterDiv.Seop9 id={"seop9"} />
       {/* <chapterDiv.Seop10 id={"seop10"} /> */}
+      <chapterDiv.BeforeFim id={"beforeFim"} />
       <chapterDiv.Fim id={"fim"} />
     </>
   );

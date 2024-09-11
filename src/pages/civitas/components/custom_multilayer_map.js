@@ -220,19 +220,37 @@ class CustomMultilayerMap extends React.Component {
       zIndex: 2
     };
     const coordinatesCamera = [
-      { latitude: "-22.865037093874534", longitude: "-43.35878100341077" },
-      { latitude: "-22.864821373469056", longitude: "-43.360455836684395" },
-      { latitude: "-22.864373337685365", longitude: "-43.35932127220849" },
-      { latitude: "-22.864132725265634", longitude: "-43.36090606068353" },
-      { latitude: "-22.86466373141714", longitude: "-43.36186954003972" },
-      { latitude: "-22.865443642939496", longitude: "-43.357232232856006" },
-      { latitude: "-22.86647245554734", longitude: "-43.35895208853046" },
-      { latitude: "-22.862784620821742", longitude: "-43.35946286694812" },
-      { latitude: "-22.863946205607462", longitude: "-43.36260543045748" },
-      { latitude: "-22.864410836740618", longitude: "-43.36300162757621" },
-      { latitude: "-22.86592917383011", longitude: "-43.35615822280067" },
-      { latitude: "-22.86553922002203", longitude: "-43.3558610749611" },
-
+      { latitude: "-22.90345", longitude: "-43.28141" },
+      { latitude: "-22.903337731427072", longitude: "-43.283053488586575" },
+      { latitude: "-22.903083636860444", longitude: "-43.28263430709228" },
+      { latitude: "-22.90320667471427", longitude: "-43.28290423833883" },
+      { latitude: "-22.903341033487465", longitude: "-43.28329631632525" },
+      { latitude: "-22.903454290058093", longitude: "-43.283695347592015" },
+      { latitude: "-22.903533329880688", longitude: "-43.28402647601584" },
+      { latitude: "-22.90361736496473", longitude: "-43.28389423199664" },
+      { latitude: "-22.903492634205833", longitude: "-43.283507755138146" },
+      { latitude: "-22.90337402163334", longitude: "-43.283121591427715" },
+      { latitude: "-22.903261893874046", longitude: "-43.282774079423376" },
+      { latitude: "-22.90350203550139", longitude: "-43.282960236184095" },
+      { latitude: "-22.903822686544743", longitude: "-43.28279549240847" }
+    ];
+    const coordinatesCarro2 = [
+      { latitude: "-22.881095445621", longitude: "-43.511137976488385", hora: "5h55", from: "top", side: "left" },
+      { latitude: "-22.920709471646703", longitude: "-43.21791865468742", hora: "10h07", from: "top", side: "left" },
+      { latitude: "-22.87566923436411", longitude: "-43.46206227641403", hora: "6h03", from: "bottom", side: "right" },
+      { latitude: "-22.88176861362919", longitude: "-43.32981961339644", hora: "7h45", from: "top", side: "left" },
+      { latitude: "-22.881271662429967", longitude: "-43.41336772903023", hora: "6h10", from: "top", side: "left" },
+      { latitude: "-22.878727578454146", longitude: "-43.374656426499826", hora: "6h21", from: "bottom", side: "right" },
+      { latitude: "-22.91236193778326", longitude: "-43.26788724472604", hora: "9h32", from: "bottom", side: "right" },
+    ];
+    const coordinatesCasosResolvidos = [
+      { latitude: "-22.881095445621", longitude: "-43.511137976488385", hora: "5h55", from: "top", side: "left" },
+      { latitude: "-22.920709471646703", longitude: "-43.21791865468742", hora: "10h07", from: "top", side: "left" },
+      { latitude: "-22.87566923436411", longitude: "-43.46206227641403", hora: "6h03", from: "bottom", side: "right" },
+      { latitude: "-22.88176861362919", longitude: "-43.32981961339644", hora: "7h45", from: "top", side: "left" },
+      { latitude: "-22.881271662429967", longitude: "-43.41336772903023", hora: "6h10", from: "top", side: "left" },
+      { latitude: "-22.878727578454146", longitude: "-43.374656426499826", hora: "6h21", from: "bottom", side: "right" },
+      { latitude: "-22.91236193778326", longitude: "-43.26788724472604", hora: "9h32", from: "bottom", side: "right" },
     ];
     return (
       <Map
@@ -466,6 +484,193 @@ class CustomMultilayerMap extends React.Component {
                   ))
                 }
                 {
+                  chapterNumberMap == "seop2" &&
+                  <Marker
+                    key={index}
+                    latitude={-22.916717828353868}
+                    longitude={-43.2044788025955}
+                  >
+                    <div style={{
+                      position: 'relative',
+                    }}>
+
+                      <svg id="radar-circle">
+                        <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                          <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" />
+                          <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite"></animate>
+                        </circle>
+                        <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                          <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="0.75s" />
+                          <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="0.75s"></animate>
+                        </circle>
+                        <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                          <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="1.5s" />
+                          <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="1.5s"></animate>
+                        </circle>
+                        <circle cx="50%" cy="50%" r="10" fill="red" stroke="red"></circle>
+                      </svg>
+                    </div>
+
+
+                  </Marker>
+
+                }
+                {
+                  chapterNumberMap == "seop8" &&
+                  <Marker
+                    key={index}
+                    latitude={-23.003932747780283}
+                    longitude={-43.33157970337831}
+                  >
+                    <div style={{
+                      position: 'relative',
+                    }}>
+
+                      <svg id="radar-circle">
+                        <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                          <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" />
+                          <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite"></animate>
+                        </circle>
+                        <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                          <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="0.75s" />
+                          <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="0.75s"></animate>
+                        </circle>
+                        <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                          <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="1.5s" />
+                          <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="1.5s"></animate>
+                        </circle>
+                        <circle cx="50%" cy="50%" r="10" fill="red" stroke="red"></circle>
+                      </svg>
+                    </div>
+
+
+                  </Marker>
+
+                }
+                {
+                  (chapterNumberMap === "grafico" || chapterNumberMap === "grafico1") && coordinatesCarro2.map((coord, index) => (
+                    <Marker
+                      key={index}
+                      latitude={coord.latitude}
+                      longitude={coord.longitude}
+                    >
+                      <div style={{ position: 'relative' }}>
+                        <svg id="radar-circle">
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite"></animate>
+                          </circle>
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="0.75s" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="0.75s"></animate>
+                          </circle>
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="1.5s" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="1.5s"></animate>
+                          </circle>
+                          <circle cx="50%" cy="50%" r="10" fill="#00BFFF" stroke="#00BFFF"></circle>
+
+                          <g >
+                            {coord.from === "top" ? (
+                              <>
+                                <line x1="40%" y1="0" x2="50%" y2="50%" stroke="#00BFFF" strokeWidth="2px" />
+                                {coord.side === "left" ? (
+                                  <line x1="40%" y1="0" x2="20%" y2="0" stroke="#00BFFF" strokeWidth="2px" />
+                                ) : (
+                                  <line x1="40%" y1="0" x2="80%" y2="0" stroke="#00BFFF" strokeWidth="2px" />
+                                )}
+                              </>
+                            ) : (
+                              <>
+                                <line x1="50%" y1="50%" x2="60%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
+                                {coord.side === "left" ? (
+                                  <line x1="60%" y1="100%" x2="20%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
+                                ) : (
+                                  <line x1="60%" y1="100%" x2="80%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
+                                )}
+                              </>
+                            )}
+                          </g>
+                        </svg>
+                        <h1 className="radar" style={{
+                          color: "white",
+                          fontWeight: "lighter",
+                          fontSize: "14px",
+                          position: 'absolute',
+                          top: `${coord.from === 'top' ? "-20px" : "130px"}`,  // Adjust as needed
+                          left: `${coord.from === 'top' ? "65px" : "186px"}`, // Adjust as needed
+                          // transform: 'translate(-50%, -50%)',
+                          zIndex: 10
+                        }}>
+                          {coord.hora}
+                        </h1>
+                      </div>
+                    </Marker>
+                  ))
+                }
+                {
+                  (chapterNumberMap === "beforeFim") && coordinatesCasosResolvidos.map((coord, index) => (
+                    <Marker
+                      key={index}
+                      latitude={coord.latitude}
+                      longitude={coord.longitude}
+                    >
+                      <div style={{ position: 'relative' }}>
+                        <svg id="radar-circle">
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite"></animate>
+                          </circle>
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="0.75s" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="0.75s"></animate>
+                          </circle>
+                          <circle cx="50%" cy="50%" r="0" fillOpacity="0" stroke="white" strokeWidth="2px" strokeOpacity="1">
+                            <animate attributeName="r" from="0" to="30" dur="3s" repeatCount="indefinite" begin="1.5s" />
+                            <animate attributeName="stroke-opacity" from="1" to="0" dur="3s" repeatCount="indefinite" begin="1.5s"></animate>
+                          </circle>
+                          <circle cx="50%" cy="50%" r="10" fill="#00BFFF" stroke="#00BFFF"></circle>
+
+                          <g >
+                            {coord.from === "top" ? (
+                              <>
+                                <line x1="40%" y1="0" x2="50%" y2="50%" stroke="#00BFFF" strokeWidth="2px" />
+                                {coord.side === "left" ? (
+                                  <line x1="40%" y1="0" x2="20%" y2="0" stroke="#00BFFF" strokeWidth="2px" />
+                                ) : (
+                                  <line x1="40%" y1="0" x2="80%" y2="0" stroke="#00BFFF" strokeWidth="2px" />
+                                )}
+                              </>
+                            ) : (
+                              <>
+                                <line x1="50%" y1="50%" x2="60%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
+                                {coord.side === "left" ? (
+                                  <line x1="60%" y1="100%" x2="20%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
+                                ) : (
+                                  <line x1="60%" y1="100%" x2="80%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
+                                )}
+                              </>
+                            )}
+                          </g>
+                        </svg>
+                        <h1 className="radar" style={{
+                          color: "white",
+                          fontWeight: "lighter",
+                          fontSize: "14px",
+                          position: 'absolute',
+                          top: `${coord.from === 'top' ? "-20px" : "130px"}`,  // Adjust as needed
+                          left: `${coord.from === 'top' ? "65px" : "186px"}`, // Adjust as needed
+                          // transform: 'translate(-50%, -50%)',
+                          zIndex: 10
+                        }}>
+                          {coord.hora}
+                        </h1>
+                      </div>
+                    </Marker>
+                  ))
+                }
+
+                {
                   (chapterNumberMap == "exemplo7" || chapterNumberMap == "seop3" || chapterNumberMap == "exemplo71" || chapterNumberMap == "exemplo72" || chapterNumberMap == "seop1") && (
                     <Marker
                       latitude="-22.91213" // quando diminuo em modulo vai pra cima
@@ -514,8 +719,8 @@ class CustomMultilayerMap extends React.Component {
                 {
                   (chapterNumberMap === "seop5_2" || chapterNumberMap === "seop6") && (
                     <Marker
-                      latitude="-22.8648"
-                      longitude="-43.3605"
+                      latitude="-22.9035"
+                      longitude="-43.2837"
                     >
 
                       <div
@@ -562,6 +767,8 @@ class CustomMultilayerMap extends React.Component {
                     </Marker>
                   )
                 }
+
+
 
               </>
             ))

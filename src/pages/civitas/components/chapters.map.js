@@ -230,10 +230,10 @@ export const Grafico = () => {
       },
       mobile: {
         center: {
-          lon: -43.44032,
+          lon: -43.43132,
           lat: -22.92106,
         },
-        zoom: 9,
+        zoom: 10.0,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -280,10 +280,10 @@ export const Grafico1 = () => {
       },
       mobile: {
         center: {
-          lon: -43.44032,
+          lon: -43.43132,
           lat: -22.92106,
         },
-        zoom: 9,
+        zoom: 10.0,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -566,28 +566,7 @@ export const Seop2 = () => {
       },
     },
     layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.8,
-        layer: {
-          ...{
 
-            "id": "percurso-carro-v2-24pm81",
-            "minzoom": 0,
-            "maxzoom": 22,
-            "type": "line",
-            "paint": {
-              "line-emissive-strength": 1,
-              "line-opacity": 0,
-              "line-color": "hsl(195, 100%, 50%)"
-            },
-            "layout": {},
-            "source": "composite",
-            "source-layer": "percurso_carro_v2-24pm81"
-
-          },
-        },
-      },
     ],
   };
 };
@@ -700,48 +679,27 @@ export const Seop5 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.3605,
-          lat: -22.8648,
+          lon: -43.283053488586575,
+          lat: -22.903337731427072,
         },
-        zoom: 16.5,
+        zoom: 17.2,
         pitch: 59.0,
-        bearing: 100.47,
-        duration: 4000,
+        bearing: 65.47,
+        duration: 6000,
       },
       mobile: {
         center: {
-          lon: -43.3605,
-          lat: -22.8648,
+          lon: -43.283053488586575,
+          lat: -22.903337731427072,
         },
-        zoom: 16,
+        zoom: 17.0,
         pitch: 59.0,
-        bearing: 100.47,
-        duration: 4000,
+        bearing: 65.47,
+        duration: 6000,
       },
     },
     layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 1,
-        layer: {
-          ...{
 
-            "id": "bentoribeiro-as8oj1",
-            "minzoom": 0,
-            "maxzoom": 22,
-            "type": "symbol",
-            "paint": {
-              "icon-opacity": 0
-            },
-            "layout": {
-              "icon-image": "laundry",
-              "icon-size": 2.7
-            },
-            "source": "composite",
-            "source-layer": "bentoribeiro-as8oj1"
-          },
-        },
-      },
     ],
   };
 };
@@ -800,49 +758,27 @@ export const Seop5_2 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.3605,
-          lat: -22.8648,
+          lon: -43.283053488586575,
+          lat: -22.903337731427072,
         },
-        zoom: 16.65,
-        pitch: 59.0,
-        bearing: 120.47,
-        duration: 4000,
+        zoom: 17.4,
+        pitch: 75.0,
+        bearing: 65.47,
+        duration: 6000,
       },
       mobile: {
         center: {
-          lon: -43.3605,
-          lat: -22.8648,
+          lon: -43.283053488586575,
+          lat: -22.903337731427072,
         },
-        zoom: 16.14,
-        pitch: 59.0,
-        bearing: 120.47,
-        duration: 4000,
+        zoom: 17.2,
+        pitch: 64.0,
+        bearing: 65.47,
+        duration: 6000,
       },
     },
     layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 1,
-        layer: {
-          ...{
 
-            "id": "geoimg-dhj13l",
-            "minzoom": 0,
-            "maxzoom": 22,
-            "type": "symbol",
-            "paint": {
-              "icon-opacity": 0
-            },
-            "layout": {
-              "icon-image": "laundry",
-              "icon-size": 2.9
-            },
-            "source": "composite",
-            "source-layer": "geoimg-dhj13l"
-
-          },
-        },
-      },
     ],
   };
 };
@@ -851,49 +787,27 @@ export const Seop6 = () => {
     location: {
       desktop: {
         center: {
-          lon: -43.3605,
-          lat: -22.8648,
+          lon: -43.283053488586575,
+          lat: -22.903337731427072,
         },
-        zoom: 17,
-        pitch: 70.0,
-        bearing: 120.47,
-        duration: 4000,
+        zoom: 17.4,
+        pitch: 75.0,
+        bearing: 65.47,
+        duration: 6000,
       },
       mobile: {
         center: {
-          lon: -43.3605,
-          lat: -22.8648,
+          lon: -43.283053488586575,
+          lat: -22.903337731427072,
         },
-        zoom: 16.7,
-        pitch: 70.0,
-        bearing: 120.47,
-        duration: 4000,
+        zoom: 17.2,
+        pitch: 64.0,
+        bearing: 65.47,
+        duration: 6000,
       },
     },
     layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 1,
-        layer: {
-          ...{
 
-            "id": "geoimg-dhj13l",
-            "minzoom": 0,
-            "maxzoom": 22,
-            "type": "symbol",
-            "paint": {
-              "icon-opacity": 0
-            },
-            "layout": {
-              "icon-image": "laundry",
-              "icon-size": 2.9
-            },
-            "source": "composite",
-            "source-layer": "geoimg-dhj13l"
-
-          },
-        },
-      },
     ],
   };
 };
@@ -923,28 +837,7 @@ export const Exemplo8 = () => {
       },
     },
     layers: [
-      {
-        layerType: "mapbox",
-        targetOpacity: 0.8,
-        layer: {
-          ...{
 
-            "id": "percurso-carro-v2-24pm81",
-            "minzoom": 0,
-            "maxzoom": 22,
-            "type": "line",
-            "paint": {
-              "line-emissive-strength": 1,
-              "line-opacity": 0,
-              "line-color": "hsl(195, 100%, 50%)"
-            },
-            "layout": {},
-            "source": "composite",
-            "source-layer": "percurso_carro_v2-24pm81"
-
-          },
-        },
-      },
     ],
   };
 };
@@ -1330,6 +1223,33 @@ export const Exemplo5 = () => {
   };
 };
 
+export const BeforeFim = () => {
+  return {
+    location: {
+      desktop: {
+        center: {
+          lon: -43.45632,
+          lat: -22.92106,
+        },
+        zoom: 10.38,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+      mobile: {
+        center: {
+          lon: -43.44032,
+          lat: -22.92106,
+        },
+        zoom: 9,
+        pitch: 0.0,
+        bearing: 0.0,
+        duration: 4000,
+      },
+    },
+    layers: [],
+  };
+};
 export const Fim = () => {
   return {
     location: {
