@@ -251,6 +251,16 @@ class CustomMultilayerMap extends React.Component {
       { latitude: "	-22.9034", longitude: "	-43.2834", t1: "Seq. Relâmpago", t2: "Méier", from: "top", side: "left" },
       { latitude: "	-22.9239", longitude: "	-43.2324", t1: "Roubos - 6° BPM", t2: "Tijuca", from: "bottom", side: "right" },
     ];
+    const coordinatesCasosResolvidosMobile = [
+      { latitude: "-22.8368", longitude: "-43.5003", t1: "Enfrent. às Milicias", t2: "Camp.Grande e St Cruz", from: "top", side: "left" },
+      { latitude: "-23.0034", longitude: "-43.4224", t1: "Roubo a Ciclistas", t2: "Recreio", from: "top", side: "left" },
+      { latitude: "	-23.0003", longitude: "-43.3369", t1: "Sequesto", t2: "Barra", from: "bottom", side: "right" },
+      { latitude: "	-22.9495", longitude: "	-43.3712", t1: "Hom. de Pol. Civil", t2: "CDD", from: "top", side: "left" },
+      { latitude: "	-22.8834", longitude: "	-43.2634", t1: "Seq. Relâmpago", t2: "Méier", from: "top", side: "left" },
+    ];
+    const coordinatesCasosResolvidosMobileTijuca = [
+      { latitude: "	-22.9239", longitude: "	-43.2324", t1: "Roubos", t2: "Tijuca", from: "bottom", side: "right" },
+    ];
     return (
       <Map
         ref={this.state.mapRef}
@@ -608,7 +618,7 @@ class CustomMultilayerMap extends React.Component {
                   ))
                 }
                 {
-                  (chapterNumberMap === "beforeFim") && coordinatesCasosResolvidos.map((coord, index) => (
+                  (chapterNumberMap === "beforeFim") && !isMobile && coordinatesCasosResolvidos.map((coord, index) => (
                     <Marker
                       key={index}
                       latitude={coord.latitude}
@@ -661,6 +671,110 @@ class CustomMultilayerMap extends React.Component {
                           position: 'absolute',
                           top: `${coord.from === 'top' ? "-1px" : "148px"}`,  // Adjust as needed
                           left: `${coord.from === 'top' ? "5px" : "186px"}`, // Adjust as needed
+                          // transform: 'translate(-50%, -50%)',
+                          zIndex: 10
+                        }}>
+                          {coord.t2}
+                        </h1>
+                      </div>
+                    </Marker>
+                  ))
+                }
+                {
+                  (chapterNumberMap === "beforeFim") && isMobile && coordinatesCasosResolvidosMobile.map((coord, index) => (
+                    <Marker
+                      key={index}
+                      latitude={coord.latitude}
+                      longitude={coord.longitude}
+                    >
+                      <div style={{ position: 'relative' }}>
+                        <svg id="radar-circle">
+
+                          <circle cx="50%" cy="50%" r="8" fill="#00BFFF" stroke="#00BFFF"></circle>
+                          <circle cx="50%" cy="50%" r="14" fill="none" stroke="white" strokeWidth="2"></circle>
+
+                          <g >
+                            {coord.from === "top" ? (
+                              <>
+                                <line x1="40%" y1="20%" x2="50%" y2="50%" stroke="#00BFFF" strokeWidth="2px" />
+                                {coord.side === "left" ? (
+                                  <line x1="40%" y1="20%" x2="-20%" y2="20%" stroke="#00BFFF" strokeWidth="2px" />
+                                ) : (
+                                  <line x1="40%" y1="0" x2="80%" y2="0" stroke="#00BFFF" strokeWidth="2px" />
+                                )}
+                              </>
+                            ) : (
+                              <>
+                                <line x1="50%" y1="50%" x2="60%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
+                                {coord.side === "left" ? (
+                                  <line x1="60%" y1="100%" x2="20%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
+                                ) : (
+                                  <line x1="60%" y1="100%" x2="100%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
+                                )}
+                              </>
+                            )}
+                          </g>
+                        </svg>
+                        <h1 style={{
+                          color: "white",
+                          fontWeight: "lighter",
+                          fontSize: "13px",
+                          position: 'absolute',
+                          top: `${coord.from === 'top' ? "10px" : "131px"}`,  // Adjust as needed
+                          left: `${coord.from === 'top' ? "5px" : "186px"}`, // Adjust as needed
+                          // transform: 'translate(-50%, -50%)',
+                          zIndex: 10
+                        }}>
+                          {coord.t1}
+                        </h1>
+                        <h1 style={{
+                          color: "white",
+                          fontWeight: "lighter",
+                          fontSize: "11px",
+                          position: 'absolute',
+                          top: `${coord.from === 'top' ? "30px" : "148px"}`,  // Adjust as needed
+                          left: `${coord.from === 'top' ? "5px" : "186px"}`, // Adjust as needed
+                          // transform: 'translate(-50%, -50%)',
+                          zIndex: 10
+                        }}>
+                          {coord.t2}
+                        </h1>
+                      </div>
+                    </Marker>
+                  ))
+                }
+                {
+                  (chapterNumberMap === "beforeFim") && isMobile && coordinatesCasosResolvidosMobileTijuca.map((coord, index) => (
+                    <Marker
+                      key={index}
+                      latitude={coord.latitude}
+                      longitude={coord.longitude}
+                    >
+                      <div style={{ position: 'relative' }}>
+                        <svg id="radar-circle">
+
+                          <circle cx="50%" cy="50%" r="8" fill="#00BFFF" stroke="#00BFFF"></circle>
+                          <circle cx="50%" cy="50%" r="14" fill="none" stroke="white" strokeWidth="2"></circle>
+                          <line x1="50%" y1="50%" x2="22%" y2="50%" stroke="#00BFFF" strokeWidth="2px" />                        </svg>
+                        <h1 style={{
+                          color: "white",
+                          fontWeight: "lighter",
+                          fontSize: "13px",
+                          position: 'absolute',
+                          top: `${coord.from === 'top' ? "0px" : "55px"}`,  // Adjust as needed
+                          left: `${coord.from === 'top' ? "5px" : "65px"}`, // Adjust as needed
+                          // transform: 'translate(-50%, -50%)',
+                          zIndex: 10
+                        }}>
+                          {coord.t1}
+                        </h1>
+                        <h1 style={{
+                          color: "white",
+                          fontWeight: "lighter",
+                          fontSize: "11px",
+                          position: 'absolute',
+                          top: `${coord.from === 'top' ? "30px" : "75px"}`,  // Adjust as needed
+                          left: `${coord.from === 'top' ? "5px" : "70px"}`, // Adjust as needed
                           // transform: 'translate(-50%, -50%)',
                           zIndex: 10
                         }}>

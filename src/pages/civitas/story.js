@@ -41,7 +41,7 @@ export default function SubsidioSPPO() {
     });
   };
   const [chapterNumberMap, setChapterNumberMap] = useState("capa");
-  // console.log(chapterNumberMap);
+  console.log(chapterNumberMap);
   useEffect(() => {
     switch (chapterNumberMap) {
       case "capa":
@@ -937,7 +937,7 @@ export default function SubsidioSPPO() {
         animationLoopLength={21600}
         animationSpeed={1}
       />
-      <styles.Logo src={logo}></styles.Logo>
+      {((chapterNumberMap == "capa" || chapterNumberMap == "zoom") && <styles.Logo src={logo}></styles.Logo>)}
       {(chapterNumberMap !== "capa" && chapterNumberMap !== "zoom" && chapterNumberMap !== "exemplo1" && chapterNumberMap !== "exemplo10" && chapterNumberMap !== "seop7" && chapterNumberMap !== "drawMap" && chapterNumberMap !== "fim" && chapterNumberMap !== "beforeFim") &&
         <div className="clock">
           {currentHour} AM
