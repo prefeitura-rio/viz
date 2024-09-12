@@ -246,20 +246,22 @@ class CustomMultilayerMap extends React.Component {
     const coordinatesCasosResolvidos = [
       { latitude: "-22.8968", longitude: "-43.5103", t1: "Enfrent. às Milicias", t2: "Camp.Grande e St Cruz", from: "top", side: "left" },
       { latitude: "-23.0034", longitude: "-43.4224", t1: "Roubo a Ciclistas", t2: "Recreio", from: "top", side: "left" },
-      { latitude: "	-23.0003", longitude: "-43.3369", t1: "Sequesto", t2: "Barra", from: "bottom", side: "right" },
+      { latitude: "	-23.0003", longitude: "-43.3369", t1: "Sequestro", t2: "Barra", from: "bottom", side: "right" },
       { latitude: "	-22.9495", longitude: "	-43.3712", t1: "Hom. de Pol. Civil", t2: "CDD", from: "top", side: "left" },
       { latitude: "	-22.9034", longitude: "	-43.2834", t1: "Seq. Relâmpago", t2: "Méier", from: "top", side: "left" },
       { latitude: "	-22.9239", longitude: "	-43.2324", t1: "Roubos - 6° BPM", t2: "Tijuca", from: "bottom", side: "right" },
     ];
     const coordinatesCasosResolvidosMobile = [
-      { latitude: "-22.8368", longitude: "-43.5003", t1: "Enfrent. às Milicias", t2: "Camp.Grande e St Cruz", from: "top", side: "left" },
+      { latitude: "-22.8368", longitude: "-43.4903", t1: "Enfrent. às Milicias", t2: "Camp.Grande e St Cruz", from: "top", side: "left" },
       { latitude: "-23.0034", longitude: "-43.4224", t1: "Roubo a Ciclistas", t2: "Recreio", from: "top", side: "left" },
-      { latitude: "	-23.0003", longitude: "-43.3669", t1: "Sequesto", t2: "Barra", from: "bottom", side: "right" },
+      { latitude: "	-23.0003", longitude: "-43.3669", t1: "Sequestro", t2: "Barra", from: "bottom", side: "right" },
       { latitude: "	-22.9495", longitude: "	-43.3712", t1: "Hom. de Pol. Civil", t2: "CDD", from: "top", side: "left" },
-      { latitude: "	-22.8834", longitude: "	-43.2634", t1: "Seq. Relâmpago", t2: "Méier", from: "top", side: "left" },
     ];
     const coordinatesCasosResolvidosMobileTijuca = [
       { latitude: "	-22.9239", longitude: "	-43.2324", t1: "Roubos", t2: "Tijuca", from: "bottom", side: "right" },
+    ];
+    const coordinatesCasosResolvidosMobileMeier = [
+      { latitude: "	-22.8734", longitude: "	-43.3534", t1: "Seq. Relâmpago", t2: "Méier", from: "top", side: "left" },
     ];
     return (
       <Map
@@ -606,8 +608,8 @@ class CustomMultilayerMap extends React.Component {
                           fontWeight: "lighter",
                           fontSize: "14px",
                           position: 'absolute',
-                          top: `${coord.from === 'top' ? "-20px" : "130px"}`,  // Adjust as needed
-                          left: `${coord.from === 'top' ? "65px" : "186px"}`, // Adjust as needed
+                          top: `${coord.from === 'top' ? "-20px" : "130px"}`,
+                          left: `${coord.from === 'top' ? "65px" : "186px"}`,
                           // transform: 'translate(-50%, -50%)',
                           zIndex: 10
                         }}>
@@ -652,28 +654,34 @@ class CustomMultilayerMap extends React.Component {
                             )}
                           </g>
                         </svg>
-                        <h1 style={{
-                          color: "white",
-                          fontWeight: "lighter",
-                          fontSize: "13px",
-                          position: 'absolute',
-                          top: `${coord.from === 'top' ? "-18px" : "131px"}`,  // Adjust as needed
-                          left: `${coord.from === 'top' ? "5px" : "186px"}`, // Adjust as needed
-                          // transform: 'translate(-50%, -50%)',
-                          zIndex: 10
-                        }}>
+                        <h1
+
+                          style={{
+                            fontFamily: "Arial",
+                            color: "white",
+                            fontWeight: "lighter",
+                            fontSize: "14px",
+                            position: 'absolute',
+                            top: `${coord.from === 'top' ? "-18px" : "131px"}`,
+                            left: `${coord.from === 'top' ? "5px" : "186px"}`,
+                            // transform: 'translate(-50%, -50%)',
+                            zIndex: 10
+                          }}>
                           {coord.t1}
                         </h1>
-                        <h1 style={{
-                          color: "white",
-                          fontWeight: "lighter",
-                          fontSize: "11px",
-                          position: 'absolute',
-                          top: `${coord.from === 'top' ? "-1px" : "148px"}`,  // Adjust as needed
-                          left: `${coord.from === 'top' ? "5px" : "186px"}`, // Adjust as needed
-                          // transform: 'translate(-50%, -50%)',
-                          zIndex: 10
-                        }}>
+                        <h1
+
+                          style={{
+                            fontFamily: "Arial",
+                            color: "white",
+                            fontSize: "11px",
+                            fontWeight: "lighter",
+                            position: 'absolute',
+                            top: `${coord.from === 'top' ? "-1px" : "148px"}`,
+                            left: `${coord.from === 'top' ? "5px" : "186px"}`,
+                            // transform: 'translate(-50%, -50%)',
+                            zIndex: 10
+                          }}>
                           {coord.t2}
                         </h1>
                       </div>
@@ -709,7 +717,7 @@ class CustomMultilayerMap extends React.Component {
                                 {coord.side === "left" ? (
                                   <line x1="60%" y1="100%" x2="20%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
                                 ) : (
-                                  <line x1="60%" y1="100%" x2="100%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
+                                  <line x1="60%" y1="100%" x2="84%" y2="100%" stroke="#00BFFF" strokeWidth="2px" />
                                 )}
                               </>
                             )}
@@ -720,8 +728,8 @@ class CustomMultilayerMap extends React.Component {
                           fontWeight: "lighter",
                           fontSize: "13px",
                           position: 'absolute',
-                          top: `${coord.from === 'top' ? "10px" : "131px"}`,  // Adjust as needed
-                          left: `${coord.from === 'top' ? "5px" : "186px"}`, // Adjust as needed
+                          top: `${coord.from === 'top' ? "10px" : "131px"}`,
+                          left: `${coord.from === 'top' ? "5px" : "186px"}`,
                           // transform: 'translate(-50%, -50%)',
                           zIndex: 10
                         }}>
@@ -732,8 +740,8 @@ class CustomMultilayerMap extends React.Component {
                           fontWeight: "lighter",
                           fontSize: "11px",
                           position: 'absolute',
-                          top: `${coord.from === 'top' ? "30px" : "148px"}`,  // Adjust as needed
-                          left: `${coord.from === 'top' ? "5px" : "186px"}`, // Adjust as needed
+                          top: `${coord.from === 'top' ? "30px" : "148px"}`,
+                          left: `${coord.from === 'top' ? "5px" : "186px"}`,
                           // transform: 'translate(-50%, -50%)',
                           zIndex: 10
                         }}>
@@ -761,8 +769,8 @@ class CustomMultilayerMap extends React.Component {
                           fontWeight: "lighter",
                           fontSize: "13px",
                           position: 'absolute',
-                          top: `${coord.from === 'top' ? "0px" : "55px"}`,  // Adjust as needed
-                          left: `${coord.from === 'top' ? "5px" : "65px"}`, // Adjust as needed
+                          top: `${coord.from === 'top' ? "0px" : "55px"}`,
+                          left: `${coord.from === 'top' ? "5px" : "70px"}`,
                           // transform: 'translate(-50%, -50%)',
                           zIndex: 10
                         }}>
@@ -773,8 +781,51 @@ class CustomMultilayerMap extends React.Component {
                           fontWeight: "lighter",
                           fontSize: "11px",
                           position: 'absolute',
-                          top: `${coord.from === 'top' ? "30px" : "75px"}`,  // Adjust as needed
-                          left: `${coord.from === 'top' ? "5px" : "70px"}`, // Adjust as needed
+                          top: `${coord.from === 'top' ? "30px" : "75px"}`,
+                          left: `${coord.from === 'top' ? "5px" : "70px"}`,
+                          // transform: 'translate(-50%, -50%)',
+                          zIndex: 10
+                        }}>
+                          {coord.t2}
+                        </h1>
+                      </div>
+                    </Marker>
+                  ))
+                }
+                {
+                  (chapterNumberMap === "beforeFim") && isMobile && coordinatesCasosResolvidosMobileMeier.map((coord, index) => (
+                    <Marker
+                      key={index}
+                      latitude={coord.latitude}
+                      longitude={coord.longitude}
+                    >
+                      <div style={{ position: 'relative' }}>
+                        <svg id="radar-circle">
+
+                          <circle cx="50%" cy="50%" r="8" fill="#00BFFF" stroke="#00BFFF"></circle>
+                          <circle cx="50%" cy="50%" r="14" fill="none" stroke="white" strokeWidth="2"></circle>
+                          <line x1="40%" y1="20%" x2="50%" y2="50%" stroke="#00BFFF" strokeWidth="2px" />
+                          <line x1="40%" y1="20%" x2="80%" y2="20%" stroke="#00BFFF" strokeWidth="2px" />
+                        </svg>
+                        <h1 style={{
+                          color: "white",
+                          fontWeight: "lighter",
+                          fontSize: "13px",
+                          position: 'absolute',
+                          top: "10px",
+                          left: "140px",
+                          // tranform: 'translate(-50%, -50%)',
+                          zIndex: 10
+                        }}>
+                          {coord.t1}
+                        </h1>
+                        <h1 style={{
+                          color: "white",
+                          fontWeight: "lighter",
+                          fontSize: "11px",
+                          position: 'absolute',
+                          top: "30px",
+                          left: "140px",
                           // transform: 'translate(-50%, -50%)',
                           zIndex: 10
                         }}>
@@ -849,16 +900,8 @@ class CustomMultilayerMap extends React.Component {
                       >
                         <img
                           style={{
-                            transform: `scale(${chapterNumberMap === "exemplo3" || chapterNumberMap === "exemplo6"
-                              ? cardHeight
-                              : (chapterNumberMap === "exemplo8" || chapterNumberMap === "seop3_2") && cardHeight < 2
-                                ? cardHeight * 1.1
-                                : 1
-                              })`,
-                            width: `${(chapterNumberMap === "exemplo8" || chapterNumberMap === "seop3_2") && cardHeight > 2
-                              ? "100vw"
-                              : "200px"
-                              }`,
+
+                            width: `${isMobile ? '300px' : '500px'}`,
                             zIndex: "1",
                             border: "2.5px solid black",
                             // borderRadius: "5px",

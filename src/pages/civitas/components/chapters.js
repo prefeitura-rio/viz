@@ -365,7 +365,7 @@ export function Seop81(
       <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
           <styles.TextCard1>
-            Essa foi uma simulação. Agora veja a diversidade de casos reais em que o apoio da Civitas foi solicitado pelas forças de segurança:           </styles.TextCard1>
+            Essa foi uma simulação. Agora veja alguns casos reais em que o apoio da Civitas foi solicitado pelas forças de segurança:          </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Center>
     </>
@@ -786,18 +786,22 @@ export function Fim(
     <styles.FimDiv ref={props.chapRef} id={props.id}>
       {/* <styles.IntroTitle id={"fimTitle"}>Conclusão</styles.IntroTitle> */}
       <styles.IntroText>
-        Além do cerco eletrônico, a Civitas atua em dois outros eixos:
+        O <styles.TextBlue>Cerco Eletrônico</styles.TextBlue> foi fundamental na solução desses casos. E além do cerco eletrônico, a Civitas atua em dois outros eixos:
+
+        <br></br>
+        <br></br>
+        <styles.TextBlue>A Rede de Vigilância Comunitária</styles.TextBlue> aproveita informações já produzidas pelos cidadãos para entender, monitorar e responder a dinâmicas criminais e incidentes de desordem de forma rápida e eficaz. Para isso, utiliza diversas fontes de dados, como linhas diretas e serviços de denúncia (<styles.TextBlue>1746 e Disque Denúncia</styles.TextBlue>), raspagem de assuntos nas redes sociais e integração com câmeras privadas para obter uma visão abrangente e dinâmica da cidade.
 
         <br></br>
         <br></br>
 
-        A Rede de Vigilância Comunitária aproveita informações já produzidas pelos cidadãos para entender, monitorar e responder a dinâmicas criminais e incidentes de desordem de forma rápida e eficaz. Para isso, utiliza diversas fontes de dados, como linhas diretas e serviços de denúncia (1746 e Disque Denúncia),  raspagem de assuntos nas redes sociais e integração com câmeras privadas para obter uma visão abrangente e dinâmica da cidade.
+        Outra atuação da central é a de <styles.TextBlue>Controle, segurança urbana e cidadania</styles.TextBlue>. Aqui, o objetivo é criação e execução de estratégias de prevenção ao crime e à violência que podem ser implementadas com os recursos e a infraestrutura municipais. Por exemplo, uso das câmeras e Inteligência Artificial para identificar movimentações suspeitas em túneis da cidade, evitando roubos, furtos e arrastões.
         <br></br>
         <br></br>
-        Outra atuação da central é a de Controle, segurança urbana e cidadania. Aqui, o objetivo é criação e execução de estratégias de prevenção ao crime e à violência que podem ser implementadas com os recursos e a infraestrutura municipais. Por exemplo, uso das câmeras e Inteligência Artificial para identificar movimentações suspeitas em túneis da cidade, evitando roubos, furtos e arrastões.
+        Todo crime deixa um rastro. Mas com a integração <styles.TextBlue>entre vigilância, tecnologia e inteligência</styles.TextBlue>, a Civitas monitora a cidade inteira, fazendo um cinturão eletrônico e, assim, dá apoio à segurança pública do Rio.
         <br></br>
         <br></br>
-        Todo crime deixa um rastro. Mas com a integração entre vigilância, tecnologia e inteligência, a Civitas monitora a cidade inteira, fazendo um cinturão eletrônico e, assim, dá apoio à segurança pública do Rio.
+
         <div style={{ display: "flex", flexDirection: "row", paddingTop: "160px", paddingBototm: "120px", justifyContent: "center" }}>
           <img src={civitas_icon} width={145}></img>
           <img src={rio_prefeitura} style={{ marginLeft: "20%" }} width={80}></img>

@@ -194,7 +194,7 @@ export const FimDiv = tw.div`
   justify-center items-center 
   bg-black/50
   pr-[10%] pl-[10%]
-  pt-[150%]
+  pt-[180%]
   lg:pt-[45%]
   lg:pr-[1%]
   lg:pl-[1%]

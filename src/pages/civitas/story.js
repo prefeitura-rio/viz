@@ -471,7 +471,6 @@ export default function SubsidioSPPO() {
       .to("#exemplo8", { opacity: 0, duration: 28 });
 
     ScrollTrigger.create({
-      animation: tl12,
       trigger: "#exemplo8",
       onToggle: () => {
         setChapterNumberMap("exemplo8");

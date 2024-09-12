@@ -230,10 +230,10 @@ export const Grafico = () => {
       },
       mobile: {
         center: {
-          lon: -43.41032,
+          lon: -43.39032,
           lat: -22.92106,
         },
-        zoom: 9.5,
+        zoom: 9.1,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -280,10 +280,10 @@ export const Grafico1 = () => {
       },
       mobile: {
         center: {
-          lon: -43.41032,
+          lon: -43.39032,
           lat: -22.92106,
         },
-        zoom: 9.5,
+        zoom: 9.1,
         pitch: 0.0,
         bearing: 0.0,
         duration: 4000,
@@ -1265,7 +1265,7 @@ export const BeforeFim = () => {
       },
       mobile: {
         center: {
-          lon: -43.44032,
+          lon: -43.45032,
           lat: -22.92106,
         },
         zoom: 9,

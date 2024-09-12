@@ -20,7 +20,9 @@
   border-radius: 50%;
 }
 
-
+.beauty-font{
+  font-family: 'Digital Numbers', sans-serif !important;
+}
 .clock {
   font-family: 'Digital Numbers', sans-serif !important;
   background-color: black;
