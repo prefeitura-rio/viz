@@ -4,6 +4,7 @@
 import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { LoadingSEOPDemolicioes } from "./pages/seop-demolicoes/loading";
+import { LoadingCivitas } from "./pages/civitas/loading";
 import { LoadingObras } from "./pages/obras/loading";
 import { LoadingSubsidioSPPO } from "./pages/subsidio-sppo/loading";
 import { LoadingSeopCep } from "./pages/seop-cep/loading";
@@ -27,6 +28,7 @@ const ObrasZO = lazy(() => import("./pages/obras/story"));
 const TestLineChart = lazy(() => import("./pages/sandbox/test_linechart"));
 const TestMap = lazy(() => import("./pages/sandbox/test_map"));
 const SEOPDemolicoes = lazy(() => import("./pages/seop-demolicoes/story"));
+const Civitas = lazy(() => import("./pages/civitas/story"));
 const PainelAlagamentoPassadoComando = lazy(() =>
   import("./pages/painel-alagamento-passado-comando/story")
 );
@@ -140,7 +142,9 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 SEOPDemolicoes;
+Civitas;
 CepSEOP;
+
 function App() {
   return (
     <div id={"main"}>
@@ -294,6 +298,14 @@ function App() {
             <Route
               path="/especial-seop/demolicoes"
               element={<SEOPDemolicoes />}
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<LoadingCivitas />}>
+          <Routes>
+            <Route
+              path="/civitas"
+              element={<Civitas />}
             ></Route>
           </Routes>
         </Suspense>

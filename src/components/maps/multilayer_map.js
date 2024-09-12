@@ -39,24 +39,24 @@ class MultilayerMap extends React.Component {
   }
 
   // Chamado após o componente ser montado.
-  componentDidMount() {}
+  componentDidMount() { }
   // CUSTOM: Função auxiliar para montar o view state do mapa.
   getViewState(location) {
     let viewState = isMobile
       ? {
-          center: [location.mobile.center.lon, location.mobile.center.lat],
-          zoom: location.mobile.zoom,
-          bearing: location.mobile.bearing,
-          pitch: location.mobile.pitch,
-          duration: location.mobile.duration,
-        }
+        center: [location.mobile.center.lon, location.mobile.center.lat],
+        zoom: location.mobile.zoom,
+        bearing: location.mobile.bearing,
+        pitch: location.mobile.pitch,
+        duration: location.mobile.duration,
+      }
       : {
-          center: [location.desktop.center.lon, location.desktop.center.lat],
-          zoom: location.desktop.zoom,
-          bearing: location.desktop.bearing,
-          pitch: location.desktop.pitch,
-          duration: location.desktop.duration,
-        };
+        center: [location.desktop.center.lon, location.desktop.center.lat],
+        zoom: location.desktop.zoom,
+        bearing: location.desktop.bearing,
+        pitch: location.desktop.pitch,
+        duration: location.desktop.duration,
+      };
     if (!viewState.duration) {
       viewState.duration = 4000;
     }
@@ -193,19 +193,19 @@ class MultilayerMap extends React.Component {
         initialViewState={
           isMobile
             ? {
-                latitude: this.props.location.mobile.center.lat,
-                longitude: this.props.location.mobile.center.lon,
-                zoom: this.props.location.mobile.zoom,
-                bearing: this.props.location.mobile.bearing,
-                pitch: this.props.location.mobile.pitch,
-              }
+              latitude: this.props.location.mobile.center.lat,
+              longitude: this.props.location.mobile.center.lon,
+              zoom: this.props.location.mobile.zoom,
+              bearing: this.props.location.mobile.bearing,
+              pitch: this.props.location.mobile.pitch,
+            }
             : {
-                latitude: this.props.location.desktop.center.lat,
-                longitude: this.props.location.desktop.center.lon,
-                zoom: this.props.location.desktop.zoom,
-                bearing: this.props.location.desktop.bearing,
-                pitch: this.props.location.desktop.pitch,
-              }
+              latitude: this.props.location.desktop.center.lat,
+              longitude: this.props.location.desktop.center.lon,
+              zoom: this.props.location.desktop.zoom,
+              bearing: this.props.location.desktop.bearing,
+              pitch: this.props.location.desktop.pitch,
+            }
         }
         {...this.state.mapSettings}
         onLoad={({ target }) => {
