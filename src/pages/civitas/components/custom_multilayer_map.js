@@ -254,7 +254,7 @@ class CustomMultilayerMap extends React.Component {
     const coordinatesCasosResolvidosMobile = [
       { latitude: "-22.8368", longitude: "-43.5003", t1: "Enfrent. às Milicias", t2: "Camp.Grande e St Cruz", from: "top", side: "left" },
       { latitude: "-23.0034", longitude: "-43.4224", t1: "Roubo a Ciclistas", t2: "Recreio", from: "top", side: "left" },
-      { latitude: "	-23.0003", longitude: "-43.3369", t1: "Sequesto", t2: "Barra", from: "bottom", side: "right" },
+      { latitude: "	-23.0003", longitude: "-43.3669", t1: "Sequesto", t2: "Barra", from: "bottom", side: "right" },
       { latitude: "	-22.9495", longitude: "	-43.3712", t1: "Hom. de Pol. Civil", t2: "CDD", from: "top", side: "left" },
       { latitude: "	-22.8834", longitude: "	-43.2634", t1: "Seq. Relâmpago", t2: "Méier", from: "top", side: "left" },
     ];
