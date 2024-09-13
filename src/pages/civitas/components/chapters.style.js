@@ -355,6 +355,6 @@ const TextBlueSC = styled.div`
 
 export const TextBlue = tw(TextBlueSC)`
 
-  text-white
+  text-black
   inline
 `;

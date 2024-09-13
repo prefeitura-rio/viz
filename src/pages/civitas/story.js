@@ -386,7 +386,7 @@ export default function SubsidioSPPO() {
       toggleActions: "play reverse play reverse",
       onToggle: () => {
         setChapterNumberMap("exemplo7");
-        setCurrentBairro("Centro de Operações");
+        setCurrentBairro("Civitas");
       },
       onEnter: () => {
         startHourCounterShort(617, 628);
@@ -418,7 +418,7 @@ export default function SubsidioSPPO() {
       onToggle: () => {
         flicker();
         setChapterNumberMap("exemplo72");
-        setCurrentBairro("Centro de Operações");
+        setCurrentBairro("Civitas");
       },
       onEnter: () => {
         startHourCounterShort(628, 630);
@@ -434,7 +434,7 @@ export default function SubsidioSPPO() {
       onToggle: () => {
         flicker();
         setChapterNumberMap("exemplo73");
-        setCurrentBairro("Centro de Operações");
+        setCurrentBairro("Civitas");
       },
       onEnter: () => {
         startHourCounterShort(630, 630);
@@ -492,7 +492,7 @@ export default function SubsidioSPPO() {
     //   trigger: "#seop1",
     //   onToggle: () => {
     //     setChapterNumberMap("seop1");
-    //     setCurrentBairro("Centro de Operações");
+    //     setCurrentBairro("Civitas");
     //     flicker();
     //   },
     //   onEnter: () => {
@@ -819,7 +819,7 @@ export default function SubsidioSPPO() {
           {
             lat: -22.89389,
             lon: -43.53625,
-            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/V%C3%ADdeo%20capa%20moto%20meier%20cortado.mp4",
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/video1.mp4",
             chapterNumberMap: "exemplo2",
             ehImagem: true,
             srcImagem: "dois_caras_numa_moto",
@@ -837,7 +837,7 @@ export default function SubsidioSPPO() {
           {
             lat: -22.86589,
             lon: -43.35988,
-            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/V%C3%ADdeo%20furto%20santa%20barbara%20cortado%20pb.mp4",
+            src: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/CIVITAS/video2.mp4",
             chapterNumberMap: "exemplo4",
             ehRadar: true,
             ehPin: false

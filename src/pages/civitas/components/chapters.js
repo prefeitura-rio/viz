@@ -49,7 +49,7 @@ export function Capa(
           Estamos de olho!
         </styles.Title>
         <styles.Subtitle>
-          Como o município pode ajudar a melhorar a segurança pública? O papel da CIVITAS no Rio de Janeiro
+          Como o município pode ajudar a melhorar a segurança pública? O papel da CIVITAS no município do Rio de Janeiro
         </styles.Subtitle>
         <div>
           <styles.AuthorText>
@@ -157,7 +157,7 @@ export function Exemplo7(
       <styles.ChapterGenericDiv1Right ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
           <styles.TextCard1>
-            COR, 10h28. A polícia Civil é informada do roubo seguido de sequestro, abre a investigação e pede ajuda à Civitas. Um ofício chega à Civitas solicitando as imagens das câmeras, registro de radares próximos e monitoramento desse veículo em tempo real. A equipe da Civitas entra em ação. Através das imagens, descobre o  modelo e cor do carro.
+            COR, Sala de Situação Civitas, 10h28. A polícia Civil é informada do roubo seguido de sequestro, abre a investigação e pede ajuda à Civitas. Um ofício chega à Civitas solicitando as imagens das câmeras, registro de radares próximos e monitoramento desse veículo em tempo real. A equipe da Civitas entra em ação. Através das imagens, descobre o  modelo e cor do carro.
           </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Right>
@@ -194,7 +194,7 @@ export function Exemplo72(
       <styles.ChapterGenericDiv1Left ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
           <styles.TextCard1>
-            COR, 10h30. A placa parcial com somente 3 dígitos e a descrição do carro são denunciadas e as informações inseridas no aplicativo próprio, desenvolvido pela Prefeitura do Rio, que  conecta diversas bases de dados. </styles.TextCard1>
+            Civitas, 10h30. Os 3 dígitos da placa e a descrição do carro são inseridas no aplicativo próprio, desenvolvido pela Prefeitura do Rio, que conecta diversas bases de dados. </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Left>
     </>
@@ -211,7 +211,7 @@ export function Exemplo73(
       <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
         <styles.ContainerCard1>
           <styles.TextCard1>
-            Com isso, é possível completar a placa e gerar todo um histórico de circulação desse veículo pela cidade, mostrando diversos padrões. Esses dados são utilizados para gerar um relatório automático e auditável, que é enviado à polícia.      </styles.TextCard1>
+            Com isso, é possível completar a placa e gerar todo um histórico de circulação desse veículo pela cidade, mostrando diversos padrões. Esses dados são utilizados para gerar um relatório automático e auditável, que é enviado à polícia.       </styles.TextCard1>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Center>
     </>
@@ -606,7 +606,7 @@ export function Seop51(
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
       <styles.ContainerCard1>
         <styles.TextCard1>
-          COR, 10h50. O acesso às câmeras do local do assalto revela que havia uma moto dando cobertura ao crime. </styles.TextCard1>
+          Civitas, 10h50. O depoimento do suspeito e o acesso às câmeras do local do assalto revela que havia uma moto dando cobertura ao crime.  </styles.TextCard1>
       </styles.ContainerCard1>
     </styles.ChapterGenericDiv1Center>
   );
@@ -669,7 +669,7 @@ export function Seop2(
         <styles.ContainerCard1>
           {/* <styles.NewsImage src={alert}></styles.NewsImage> */}
 
-          <styles.IntroTitle id={"solucaoTitle"}>Nova localização do veículo foi registrada!</styles.IntroTitle>
+          <styles.IntroTitle id={"solucaoTitle"}>Alerta! Nova localização do veículo identificada.</styles.IntroTitle>
         </styles.ContainerCard1>
       </styles.ChapterGenericDiv1Center>
     </styles.IntroDiv>
