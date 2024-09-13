@@ -859,15 +859,15 @@ export function Exemplo41(
 
   return (
     <styles.ChapterGenericDiv1Center ref={props.chapRef} id={props.id}>
-      <styles.ContainerCard1>
-        <styles.NewsImage src={radar_foto}></styles.NewsImage>
-        {/* <styles.Credito>
+      {/* <styles.ContainerCard1> */}
+      {/* <styles.NewsImage src={radar_foto}></styles.NewsImage> */}
+      {/* <styles.Credito>
           Imagem do veículo captada por equipamento do Cerco Eletrônico
         </styles.Credito> */}
-        <styles.TextCard1>
+      {/* <styles.TextCard1>
           Na meia hora seguinte, ele passa por mais cinco equipamentos. Todo o histórico de circulação é registrado e armazenado pela Civitas.
-        </styles.TextCard1>
-      </styles.ContainerCard1>
+        </styles.TextCard1> */}
+      {/* </styles.ContainerCard1> */}
     </styles.ChapterGenericDiv1Center>
   );
 }
