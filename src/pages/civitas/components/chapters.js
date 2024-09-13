@@ -49,7 +49,7 @@ export function Capa(
           Estamos de olho!
         </styles.Title>
         <styles.Subtitle>
-          Como o município pode ajudar a melhorar a segurança pública? O papel da CIVITAS no município do Rio de Janeiro
+          Como o município pode ajudar a melhorar a segurança pública? O papel da Civitas no município do Rio de Janeiro
         </styles.Subtitle>
         <div>
           <styles.AuthorText>
