@@ -386,7 +386,7 @@ export default function SubsidioSPPO() {
       toggleActions: "play reverse play reverse",
       onToggle: () => {
         setChapterNumberMap("exemplo7");
-        setCurrentBairro("Centro de Operações");
+        setCurrentBairro("Civitas");
       },
       onEnter: () => {
         startHourCounterShort(617, 628);
@@ -418,7 +418,7 @@ export default function SubsidioSPPO() {
       onToggle: () => {
         flicker();
         setChapterNumberMap("exemplo72");
-        setCurrentBairro("Centro de Operações");
+        setCurrentBairro("Civitas");
       },
       onEnter: () => {
         startHourCounterShort(628, 630);
@@ -434,7 +434,7 @@ export default function SubsidioSPPO() {
       onToggle: () => {
         flicker();
         setChapterNumberMap("exemplo73");
-        setCurrentBairro("Centro de Operações");
+        setCurrentBairro("Civitas");
       },
       onEnter: () => {
         startHourCounterShort(630, 630);
@@ -492,7 +492,7 @@ export default function SubsidioSPPO() {
     //   trigger: "#seop1",
     //   onToggle: () => {
     //     setChapterNumberMap("seop1");
-    //     setCurrentBairro("Centro de Operações");
+    //     setCurrentBairro("Civitas");
     //     flicker();
     //   },
     //   onEnter: () => {
