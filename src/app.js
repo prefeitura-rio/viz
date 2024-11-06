@@ -13,6 +13,7 @@ import { LoadingPlanoVerao } from "./pages/plano-verao/loading";
 import { LoadingPainelInvestimento } from "./pages/painel-investimentos/loading";
 import { LoadingEnchentes } from "./pages/enchentes/loading";
 import { LoadingMegaEventos } from "./pages/megaeventos/loading";
+import { LoadingSuperCentro } from "./pages/supercentro/loading";
 import { LoadingParques } from "./pages/parques/loading";
 import MetaTags from "./metaTags";
 import style, { createGlobalStyle } from "styled-components";
@@ -120,6 +121,12 @@ const MegaEventos = lazy(() => {
   return Promise.all([
     import("./pages/megaeventos/story"),
     new Promise((resolve) => setTimeout(resolve, 4000)),
+  ]).then(([moduleExports]) => moduleExports);
+});
+const SuperCentro = lazy(() => {
+  return Promise.all([
+    import("./pages/supercentro/story"),
+    new Promise((resolve) => setTimeout(resolve, 1)),
   ]).then(([moduleExports]) => moduleExports);
 });
 
@@ -329,6 +336,21 @@ function App() {
                   thumbnail="./src/pages/megaeventos/images/capa_megaeventos.png"
                 />
                 <MegaEventos />
+              </>
+            }
+            ></Route>
+          </Routes>
+        </Suspense>
+        <Suspense fallback={<LoadingSuperCentro />}>
+          <Routes>
+            <Route path="/supercentro" element={
+              <>
+                <MetaTags
+                  title="Super Centro"
+                  description="Supercentro lorem ipsum"
+                  thumbnail="./src/pages/supercentro/images/capa_megaeventos.png"
+                />
+                <SuperCentro />
               </>
             }
             ></Route>
