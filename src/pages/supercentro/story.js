@@ -71,7 +71,7 @@ export default function SuperCentro() {
         <div style={{ display: "flex", flexDirection: "column", height: "4200vh", width: "100%", alignItems: "center" }}>
           <video
             ref={videoRef}
-            src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/SUPERCENTRO%20-%20DATA%20VIZ.mp4"
+            src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/supercentroteste.mp4"
             type="video/mp4"
             style={{
               position: "sticky",
