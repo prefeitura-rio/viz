@@ -170,14 +170,13 @@ export const ContainerCard3 = tw.div`
     z-10
     h-auto w-[80vw] lg:w-[460px]
     bg-white 
-    border border-black
+    border border-[#00b7db]
     border-4
     px-[30px]
     py-[25px]
     lg:px-[32px]
     lg:py-[25px]
-    backdrop-blur-md
-    shadow-[12px_12px_black]
+
   `;
 
 export const Grafico = tw.div`
@@ -213,22 +212,22 @@ export const IntroDiv = tw.div`
 export const TextCreditos = tw.div`
   text-black
   underline
-  text-[30px]
+  text-[18px]
   mb-[2px]
 `;
 
 export const TextCreditos1 = tw.div`
   text-black
   
-  text-[20px]
+  text-[16px]
 `;
 
 export const TextCreditos2 = tw.div`
   text-black
   
   font-black
-  text-[32px]
-  lg:text-[40px]
+  text-[20px]
+  lg:text-[30px]
   mb-[40px]
 `;
 
@@ -308,7 +307,7 @@ mt-[20px]
 
 export const TextCard3 = tw.div`
 
-text-[22px]
+text-[16px]
 text-left
 lg:leading-[110%]
 text-black

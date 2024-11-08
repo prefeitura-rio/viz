@@ -61,8 +61,8 @@ export default function SuperCentro() {
 
   return (
     <>
-      <div className="containerr" style={{ backgroundColor: "#dee2ed", backgroundImage: "radial-gradient(circle, rgba(211, 211, 211, 0.4) 20%, transparent 20%)", backgroundSize: "10px 10px" }}>
-        {/* <chapterDiv.Capa style={{ display: "none" }} id={"capa"} /> */}
+      <div className="containerr" style={{ backgroundColor: "#dce0ea" }}>
+        <chapterDiv.Capa style={{ display: "none" }} id={"capa"} />
         {/* <chapterDiv.ContextoHistorico id={"contexto_historico"} /> */}
 
         {/* ******************************** Video Scrolling ********************************  */}
@@ -71,7 +71,7 @@ export default function SuperCentro() {
         <div style={{ display: "flex", flexDirection: "column", height: "4200vh", width: "100%", alignItems: "center" }}>
           <video
             ref={videoRef}
-            src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/supercentroteste.mp4"
+            src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/supercentrofinal.mp4"
             type="video/mp4"
             style={{
               position: "sticky",

@@ -66,32 +66,46 @@ export function Capa(
 ) {
 	props = setDefaultProps(props);
 
-	const handleClick = () => {
-		window.scrollBy({
-			top: window.innerHeight * 1, // 100vh
-			left: 0,
-			behavior: 'smooth'
-		});
-	};
-
-	useEffect(() => {
-		const handleMouseMoveWrapper = (e) => handleMouseMove(e);
-		document.addEventListener("mousemove", handleMouseMoveWrapper);
-		return () => {
-			document.removeEventListener("mousemove", handleMouseMoveWrapper);
-		};
-	}, []);
-
 	return (
-		<styles.CapaDiv
-			id={props.id}
-			onClick={handleClick}
-			style={{ cursor: 'pointer' }}
-		>
-			<styles.CapaAutor >
+		<>
+			<div style={{
+				border: "none",
+				position: 'relative',
+				width: '100vw',   // Largura total da janela
+				height: '100vh',  // Altura total da janela
+				overflow: 'hidden'  // Esconde o overflow
+			}}>
+				<video
+					style={{
+						position: 'absolute',   // Coloca o vídeo em posição absoluta
+						top: 0,
+						left: 0,
+						width: '100%',         // Garante que o vídeo vai cobrir a largura da tela
+						height: '100%',        // Garante que o vídeo vai cobrir a altura da tela
+						objectFit: 'cover',    // Faz o vídeo cobrir toda a tela sem distorcer
+					}}
+					loop
+					playsInline
+					autoPlay
+					muted
+					src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/SUPERCENTRO_CAPA2.mp4"
+				/>
+				<img
+					src={logo}
+					className="lg:mb-[120px] w-[100px] h-auto lg:w-[100px] lg:h-auto"
+					style={{
+						position: 'absolute',
+						top: '20px',
+						left: '50%',
+						transform: 'translateX(-50%)',
+						zIndex: 1,  // Garante que a imagem fique acima do vídeo
+						filter: 'brightness(0) '
+					}}
+					alt="Descrição da imagem"
+				/>
+			</div>
+		</>
 
-			</styles.CapaAutor>
-		</styles.CapaDiv>
 	);
 }
 
@@ -158,7 +172,7 @@ export function QuadroUm(props) {
 			{showArrow && (
 				<div className="scroll-arrow-container" style={{ position: 'fixed', bottom: '10px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
 					<img src={arrowdown} alt="Keep scrolling" />
-					<p style={{ paddingTop: "15px", fontSize: "20px" }}>Continue descendo</p>
+					<p style={{ paddingTop: "0px", fontSize: "16px" }}>Continue descendo</p>
 				</div>
 			)}
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[30vh]">
