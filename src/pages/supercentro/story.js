@@ -24,11 +24,12 @@ export default function SuperCentro() {
   useEffect(() => {
     const vid = videoRef.current;
     const setHeight = setHeightRef.current;
-    const playbackConst = 500;
-    const startOffset = 3 * window.innerHeight; // 100vh
+    let playbackConst = window.innerHeight / 2; // Dynamic calculation
+    const startOffset = 3 * window.innerHeight; // Starting offset remains the same
 
     const setVideoHeight = () => {
       if (vid && setHeight) {
+        playbackConst = window.innerHeight / 2; // Re-calculate on screen changes
         setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
       }
     };
@@ -44,12 +45,19 @@ export default function SuperCentro() {
       requestAnimationFrame(scrollPlay);
     };
 
+    // Event listener for resizing the window
+    const onResize = () => {
+      setVideoHeight();
+    };
+
     vid.addEventListener("loadedmetadata", setVideoHeight);
     window.addEventListener("scroll", onScroll);
+    window.addEventListener("resize", onResize);
 
     return () => {
       vid.removeEventListener("loadedmetadata", setVideoHeight);
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
     };
   }, []);
 
@@ -63,7 +71,7 @@ export default function SuperCentro() {
         {/* ******************************** Video Scrolling ********************************  */}
 
         {/* <div ref={setHeightRef}> */}
-        <div style={{ display: "flex", flexDirection: "column", height: "8300vh", width: "100%", alignItems: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", height: "6100vh", width: "100%", alignItems: "center" }}>
           <video
             ref={videoRef}
             src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/supercentrofinal.mp4"
@@ -79,8 +87,6 @@ export default function SuperCentro() {
           {/* </div> */}
           <chapterDiv.QuadroUm id={"quadro"} />
         </div>
-        {/* <chapterDiv.ParteUm id={"parteum"} /> */}
-        {/* ******************************** Video Scrolling 1 Fim ********************************  */}
 
         <chapterDiv.Creditos id={"creditos"} />
       </div>
