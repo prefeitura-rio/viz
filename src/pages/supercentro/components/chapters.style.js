@@ -46,9 +46,10 @@ export const ScrollableWrap = tw.div`
   pl-5 pr-5  
   relative
   z-10
+  transform -translate-y-1/2
 `;
 export const Wrap = tw.div`
-  h-[100vh] w-full
+  h-[200vh] w-full
   flex flex-col 
   justify-center items-center 
   pl-5 pr-5  
