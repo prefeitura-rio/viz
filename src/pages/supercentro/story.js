@@ -78,7 +78,8 @@ export default function SuperCentro() {
             type="video/mp4"
             style={{
               position: "sticky",
-              top: 0,
+              top: "50%",
+              transform: "translateY(-50%)",
               maxHeight: "100vh",
               margin: "0 auto",
               display: "block",
