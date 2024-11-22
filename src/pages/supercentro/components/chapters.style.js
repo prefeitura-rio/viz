@@ -27,9 +27,10 @@ export const CapaDivSC = styled.div`
 // `;
 
 export const CapaDiv = tw(CapaDivSC)`
-  h-[100vh] w-full
-  flex flex-col
-  justify-center items-center
+ h-screen 
+  flex flex-col 
+  justify-center items-center 
+  bg-black bg-opacity-40 backdrop-blur
 `;
 
 export const CapaAutor = tw.div`
@@ -38,35 +39,47 @@ export const CapaAutor = tw.div`
   justify-center items-center
 `;
 
-export const Title = tw.div`  
-  font-[300]
-  text-[50px]
-  md:text-[96px]
-  text-center
-  leading-[90%]
-  py-[10px]
-  px-8
-  lg:py-0
-  lg:px-0
-  lg:text-[200px]
-  lg:mt-[100px]
-  text-black
-  whitespace-nowrap
+export const Wrap = tw.div`
+  h-[100vh] w-full
+  flex flex-col 
+  justify-center items-center 
+  pl-5 pr-5  
+  absolute
+`;
+export const Title = tw.div`
+  mt-[5%]
+  lg:mt-[5%]
+  mb-8  
+  lg:mb-8 
+  font-serif font-bold  
+  text-2xl text-center text-black
+  leading-[1.3]  
+  lg:text-3xl
+  lg:max-w-[900px]
+  max-w-[900px]
+  lg:leading-[1.2]
   `;
 
 export const Subtitle = tw.div`
- font-[100]
-text-center
-text-[18px]
-lg:text-[22px]
-leading-[120%]
-py-0
-px-8
-lg:py-[12px]
-lg:px-0
-text-black
-
+  mb-4 
+  lg:mb-5 
+  font-serif
+  text-[15px] text-center text-black
+  leading-[1.3] 
+  lg:leading-[1.2]
+  lg:text-[18px]
+  max-w-[650px]
 `;
+export const AuthorText = tw.div`
+  mt-[20%]
+  lg:mb-[45%]
+  font-serif
+  text-sm text-center text-black
+  leading-[1.5] 
+  lg:text-[15px]
+  max-w-[500px]
+`;
+
 
 export const Video = tw.div`
   flex flex-col  
@@ -83,12 +96,6 @@ export const Scroll = tw.div`
   lg:justify-between lg:items-center
   `;
 
-export const AuthorText = tw.div`
-  
-  text-[20px] text-left text-black
-  leading-[150%]
-  mb-[88px]
- `;
 
 export const ChapterGenericDiv = tw.div`
 flex

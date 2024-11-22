@@ -103,6 +103,27 @@ export function Capa(
 					}}
 					alt="Descrição da imagem"
 				/>
+				<styles.Wrap>
+					<styles.Title>
+						Super Centro Carioca de Saúde: o mais moderno complexo de saúde da América Latina
+					</styles.Title>
+					<styles.Subtitle>
+						Como o tempo de espera dos cariocas na fila do Sisreg diminuiu com a inauguração do Centro
+					</styles.Subtitle>
+					<div>
+						<styles.AuthorText>
+							Desenvolvido por{" "}
+							<a
+								className="font-bold underline"
+								href="https://www.dados.rio/"
+								target="_blank"
+								rel="noreferrer"
+							>
+								Escritório de Dados
+							</a>
+						</styles.AuthorText>
+					</div>
+				</styles.Wrap>
 			</div>
 		</>
 
