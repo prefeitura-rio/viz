@@ -25,7 +25,7 @@ export default function SuperCentro() {
     const vid = videoRef.current;
     const setHeight = setHeightRef.current;
     const playbackConst = 500;
-    const startOffset = 2 * window.innerHeight; // 100vh
+    const startOffset = 3 * window.innerHeight; // 100vh
 
     const setVideoHeight = () => {
       if (vid && setHeight) {
@@ -63,7 +63,7 @@ export default function SuperCentro() {
         {/* ******************************** Video Scrolling ********************************  */}
 
         {/* <div ref={setHeightRef}> */}
-        <div style={{ display: "flex", flexDirection: "column", height: "8200vh", width: "100%", alignItems: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", height: "8300vh", width: "100%", alignItems: "center" }}>
           <video
             ref={videoRef}
             src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/supercentrofinal.mp4"
@@ -79,7 +79,7 @@ export default function SuperCentro() {
           {/* </div> */}
           <chapterDiv.QuadroUm id={"quadro"} />
         </div>
-        <chapterDiv.ParteUm id={"parteum"} />
+        {/* <chapterDiv.ParteUm id={"parteum"} /> */}
         {/* ******************************** Video Scrolling 1 Fim ********************************  */}
 
         <chapterDiv.Creditos id={"creditos"} />

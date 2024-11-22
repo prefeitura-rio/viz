@@ -180,47 +180,44 @@ export function QuadroUm(props) {
 			)}
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[30vh]">
 				<styles.TextCard3>
-					John ouviu dizer que o Rio era um destino incrível. Por isso, ele desembarca pronto para curtir um mega show em Copacabana e aproveitar tudo que a cidade tem a oferecer. Seja bem vindo, John.
+					A famosa fila do Sisreg.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[250vh]">
+			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[300vh]">
 				<styles.TextCard3>
-					E ele já chega somando! Ao pagar pela passagem aérea e pelo transporte que o leva até o hotel, ele começa a deixar seu rastro positivo de contribuição. Marina, funcionária do Galeão, e Josiel, motorista de aplicativo, agradecem.
+					Todo carioca sabe o que é: A fila do Sistema de Regulação é a lista de espera oficial do sistema público de saúde, onde pacientes aguardam por consultas com especialistas, exames, procedimentos e cirurgias. O Sisreg é responsável por organizar e priorizar esses atendimentos, de acordo com critérios clínicos e de urgência, além de controlar a oferta de vagas em unidades de saúde. Devido à alta demanda e à capacidade limitada do sistema, a fila pode ser  longa, levando muitos pacientes a esperarem meses, ou até anos, para receberem o tratamento necessário. O Sisreg é essencial para o funcionamento do sistema. Mas a demanda é grande.
+
 				</styles.TextCard3>
 			</styles.ContainerCard3>
-			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[400vh]">
+			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[500vh]">
 				<styles.TextCard3>
-					Entre 2022 e 2023, a movimentação de passageiros no Galeão quase dobrou: um crescimento de 86% em um ano. A cidade recebeu 1,3 milhões de turistas estrangeiros e 16,4 milhões de turistas nacionais em 2023, totalizando 17,8 milhões turistas, segundo a Secretaria Municipal de Turismo do Rio de Janeiro (SMTUR).				</styles.TextCard3>
+					A partir de 2020, a pandemia da Covid-19 sobrecarregou o sistema de saúde público carioca de maneira sem precedentes, agravando ainda mais os desafios existentes, como a fila do Sisreg. Com a demanda crescente por atendimentos médicos, o sistema enfrentou um colapso temporário, e o número de pacientes na fila mais que dobrou, passando de cerca de 230 mil em 2020 para mais de 610 mil em 2022. A emergência sanitária expôs a necessidade de maior organização e ampliação dos serviços especializados.				</styles.TextCard3>
+			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card4"} className=" top-[850vh]">
+				<styles.TextCard3>
+					Além disso, houve um aumento da expansão da Atenção Primária à Saúde no Rio de Janeiro. Foram inauguradas diversas Clínicas da Família na última década, o que aumentou significativamente a cobertura de saúde básica: de 3,5% para 80% da população carioca - apesar da queda temporária para 46% em 2020, da qual a cidade já se recuperou.
+				</styles.TextCard3>
+			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card5"} className=" top-[1550vh]">
+				<styles.TextCard3>
+					Isso ampliou o acesso inicial dos cidadãos ao sistema público de saúde, permitindo que mais pessoas realizassem consultas e exames de rotina. No entanto, essa maior capilaridade gerou um efeito colateral: com mais diagnósticos sendo feitos, a demanda por consultas especializadas disparou, ainda que dessa vez por um bom motivo: a ampliação da cobertura. Mais de 1 milhão de solicitações passaram a ser registradas anualmente, sobrecarregando, mais uma vez, a fila do Sisreg.
+				</styles.TextCard3>
+			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card6"} className=" top-[1700vh]">
+				<styles.TextCard3>
+					Se, por um lado, essa expansão melhorou o acesso inicial ao sistema, por outro, evidenciou a necessidade de reorganização e ampliação dos atendimentos especializados. Foi nesse cenário que a Prefeitura do Rio inaugurou, em 2022, o Super Centro Carioca de Saúde. 				</styles.TextCard3>
+			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card7"} className=" top-[2220vh]">
+				<styles.TextCard3>
+					O complexo conta com mais de 150 consultórios, além de salas de exame e equipamentos de última geração, 582 especialistas e capacidade para 113 mil exames, consultas e procedimentos por mês, pelo Sistema Único de Saúde (SUS). Assim, une especialidades diversas em um único lugar, concentra atendimentos e procedimentos e otimiza a logística médica, acelerando todo o processo para os pacientes esperarem menos. A partir da inauguração, a fila do Sisreg caiu abaixo da metade em menos de 2 anos: de 160 dias de média de espera em 2020, chegou a 75 em 2024.
+				</styles.TextCard3>
 			</styles.ContainerCard3>
 
 		</styles.ChapterGenericDiv2>
 	);
 }
 
-export function ParteUm(
-	props = {
-		id: "",
-		chapRef: null,
-	}
-) {
-	props = setDefaultProps(props);
 
-	return (
-		<styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id} >
-			<styles.ContainerCard>
-				{/* <styles.TextCard1>
-					Seja por eventos naturais ou pela ação humana, a função de uma boa
-					gestão pública é mitigar estes problemas e evitar que eles interrompam
-					o funcionamento das atividades na cidade.
-					<br />
-					<br />A seguir, explicaremos para você alguns dos principais motivos
-					pelos quais a nossa cidade é um território propício para que este tipo
-					de incidente ocorra de forma tão frequente.
-				</styles.TextCard1> */}
-			</styles.ContainerCard>
-		</styles.ChapterGenericDiv1>
-	);
-}
 export function Creditos(
 	props = {
 		id: "",
