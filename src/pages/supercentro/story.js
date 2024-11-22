@@ -18,9 +18,6 @@ import arrowdown from "../supercentro/images/arrowdown.png";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SuperCentro() {
-  const vh = (coef) => window.innerHeight * (coef / 100);
-  const vw = (coef) => window.innerWidth * (coef / 100);
-
   const videoRef = useRef(null);
   const setHeightRef = useRef(null);
 
@@ -28,6 +25,7 @@ export default function SuperCentro() {
     const vid = videoRef.current;
     const setHeight = setHeightRef.current;
     const playbackConst = 500;
+    const startOffset = 2 * window.innerHeight; // 100vh
 
     const setVideoHeight = () => {
       if (vid && setHeight) {
@@ -35,19 +33,15 @@ export default function SuperCentro() {
       }
     };
 
-    let ticking = false;
-
     const scrollPlay = () => {
-      const frameNumber = window.pageYOffset / playbackConst;
-      vid.currentTime = frameNumber;
-      ticking = false;
+      const frameNumber = (window.pageYOffset - startOffset) / playbackConst;
+      if (frameNumber >= 0) {
+        vid.currentTime = frameNumber;
+      }
     };
 
     const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(scrollPlay);
-        ticking = true;
-      }
+      requestAnimationFrame(scrollPlay);
     };
 
     vid.addEventListener("loadedmetadata", setVideoHeight);
@@ -59,16 +53,17 @@ export default function SuperCentro() {
     };
   }, []);
 
+
   return (
     <>
       <div className="containerr" style={{ backgroundColor: "#dce0ea" }}>
-        <chapterDiv.Capa style={{ display: "none" }} id={"capa"} />
-        {/* <chapterDiv.ContextoHistorico id={"contexto_historico"} /> */}
+        <chapterDiv.Capa id={"capa"} />
+
 
         {/* ******************************** Video Scrolling ********************************  */}
 
         {/* <div ref={setHeightRef}> */}
-        <div style={{ display: "flex", flexDirection: "column", height: "4200vh", width: "100%", alignItems: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", height: "8200vh", width: "100%", alignItems: "center" }}>
           <video
             ref={videoRef}
             src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/supercentrofinal.mp4"

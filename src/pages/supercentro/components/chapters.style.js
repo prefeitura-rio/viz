@@ -39,12 +39,22 @@ export const CapaAutor = tw.div`
   justify-center items-center
 `;
 
+export const ScrollableWrap = tw.div`
+  h-[100vh] w-full
+  flex flex-col 
+  justify-center items-center 
+  pl-5 pr-5  
+  relative
+  z-10
+`;
 export const Wrap = tw.div`
   h-[100vh] w-full
   flex flex-col 
   justify-center items-center 
   pl-5 pr-5  
   absolute
+  z-10
+  bg-black bg-opacity-40 backdrop-blur
 `;
 export const Title = tw.div`
   mt-[5%]
@@ -52,7 +62,7 @@ export const Title = tw.div`
   mb-8  
   lg:mb-8 
   font-serif font-bold  
-  text-2xl text-center text-black
+  text-2xl text-center text-white
   leading-[1.3]  
   lg:text-3xl
   lg:max-w-[900px]
@@ -64,7 +74,7 @@ export const Subtitle = tw.div`
   mb-4 
   lg:mb-5 
   font-serif
-  text-[15px] text-center text-black
+  text-[15px] text-center text-white
   leading-[1.3] 
   lg:leading-[1.2]
   lg:text-[18px]
@@ -74,7 +84,7 @@ export const AuthorText = tw.div`
   mt-[20%]
   lg:mb-[45%]
   font-serif
-  text-sm text-center text-black
+  text-sm text-center text-white
   leading-[1.5] 
   lg:text-[15px]
   max-w-[500px]

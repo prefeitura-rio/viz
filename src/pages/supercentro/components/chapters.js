@@ -68,21 +68,16 @@ export function Capa(
 
 	return (
 		<>
-			<div style={{
-				border: "none",
-				position: 'relative',
-				width: '100vw',   // Largura total da janela
-				height: '100vh',  // Altura total da janela
-				overflow: 'hidden'  // Esconde o overflow
-			}}>
+			<ContextoHistorico id={"contexto_historico"} />
+			<div style={{ display: "flex", flexDirection: "column", height: "220vh", width: "100%", alignItems: "center" }}>
 				<video
 					style={{
-						position: 'absolute',   // Coloca o vídeo em posição absoluta
-						top: 0,
-						left: 0,
-						width: '100%',         // Garante que o vídeo vai cobrir a largura da tela
-						height: '100%',        // Garante que o vídeo vai cobrir a altura da tela
-						objectFit: 'cover',    // Faz o vídeo cobrir toda a tela sem distorcer
+						position: "sticky",
+						top: "50%",
+						transform: "translateY(-50%)",
+						maxHeight: "100vh",
+						margin: "0 auto",
+						display: "block",
 					}}
 					loop
 					playsInline
@@ -90,40 +85,6 @@ export function Capa(
 					muted
 					src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/SUPERCENTRO_CAPA2.mp4"
 				/>
-				<img
-					src={logo}
-					className="lg:mb-[120px] w-[100px] h-auto lg:w-[100px] lg:h-auto"
-					style={{
-						position: 'absolute',
-						top: '20px',
-						left: '50%',
-						transform: 'translateX(-50%)',
-						zIndex: 1,  // Garante que a imagem fique acima do vídeo
-						filter: 'brightness(0) '
-					}}
-					alt="Descrição da imagem"
-				/>
-				<styles.Wrap>
-					<styles.Title>
-						Super Centro Carioca de Saúde: o mais moderno complexo de saúde da América Latina
-					</styles.Title>
-					<styles.Subtitle>
-						Como o tempo de espera dos cariocas na fila do Sisreg diminuiu com a inauguração do Centro
-					</styles.Subtitle>
-					<div>
-						<styles.AuthorText>
-							Desenvolvido por{" "}
-							<a
-								className="font-bold underline"
-								href="https://www.dados.rio/"
-								target="_blank"
-								rel="noreferrer"
-							>
-								Escritório de Dados
-							</a>
-						</styles.AuthorText>
-					</div>
-				</styles.Wrap>
 			</div>
 		</>
 
@@ -137,51 +98,72 @@ export function ContextoHistorico(
 	}
 ) {
 	props = setDefaultProps(props);
+	const wrapRef = useRef(null);
+	const textRef = useRef(null);
+
+	useEffect(() => {
+		const wrapElement = wrapRef.current;
+		const textElement = textRef.current;
+
+		gsap.to(wrapElement, {
+			backgroundColor: 'rgba(255, 255, 255, 0)',
+			backdropFilter: 'blur(0px)',
+			scrollTrigger: {
+				trigger: wrapElement,
+				start: 'top top',
+				end: 'center top',
+				scrub: true,
+			},
+		});
+
+		gsap.to(textElement, {
+			opacity: 0,
+			scrollTrigger: {
+				trigger: wrapElement,
+				start: 'top top',
+				end: 'center top',
+				scrub: true,
+			},
+		});
+	}, []);
 
 	return (
-		<>
-			<styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
-				<styles.ContainerCard>
-					{/* <styles.Video>
-						<video autoPlay muted className="w-full h-full" id="video_capa">
-							<source src={video_capa} type="video/mp4" />
-						</video>
-					</styles.Video> */}
-
-					{/* <div className="h-[10px] w-[50px] bg-black mb-[10px]"></div> */}
-					{/* <styles.TextCard>Introdução</styles.TextCard> */}
-					<styles.TextCard1>
-						O Rio de Janeiro tem fama de anfitrião do mundo: somos reconhecidos internacionalmente como palco de grandes eventos. Mas porquê gastar recursos públicos neles? Só pra ficar bem na fita?
-						<br />
-						<br />
-						Ser famoso é até legal, mas a verdade é que grandes eventos significam grandes públicos. E grandes públicos significam grandes números. Para pular um carnaval ou ver o show da Madonna, turistas do mundo inteiro visitam a cidade. E essa gente toda se hospeda, pega transporte, come, compra e faz negócios.
-						<br />
-						<br />
-						Setores como hotelaria, gastronomia, comércio e serviços são diretamente impactados, aumentando faturamentos e recolhimento de impostos, o que beneficia toda a população carioca. Além disso, a demanda gerada por estes eventos cria milhares de empregos temporários e permanentes.
-						<br />
-						<br />
-						Neste dataviz, elaborado pelo Escritório de Dados da Prefeitura da Cidade do Rio de Janeiro em parceria com a Secretaria Municipal de Desenvolvimento Urbano e Econômico do Rio de Janeiro (SMDUE) e com o Instituto Fundação João Goulart (FJG), você acompanhará a viagem de John, um turista que veio à cidade para assistir a um megashow, e verá como sua presença alimenta uma longa cadeia econômica. Spoiler: no fim, John se apaixona… mas por quem será?
-						<br />
-						<br />
-					</styles.TextCard1>
-
-					<div>
-						<div className="mt-[30px] h-[3px] w-[20px] bg-black"></div>
-						<styles.AuthorText className="font-bold mt-[8px] mr-[20px] lg:w-[420px]">
-							Desenvolvido pela Equipe de Visualização de Dados do{" "}
-							<a
-								className="underline"
-								href="https://www.dados.rio/"
-								target="_blank"
-								rel="noreferrer">
-								Escritório de Dados
-							</a>{" "}
-							da Prefeitura da Cidade do Rio de Janeiro
-						</styles.AuthorText>{" "}
-					</div>
-				</styles.ContainerCard>
-			</styles.ChapterGenericDiv>
-		</>
+		<styles.Wrap ref={wrapRef}>
+			<img
+				src={logo}
+				className="lg:mb-[120px] w-[100px] h-auto lg:w-[100px] lg:h-auto"
+				style={{
+					position: 'absolute',
+					top: '20px',
+					left: '50%',
+					transform: 'translateX(-50%)',
+					zIndex: 1,  // Garante que a imagem fique acima do vídeo
+					// filter: 'brightness(0) '
+				}}
+				alt="Descrição da imagem"
+			/>
+			<styles.ScrollableWrap ref={textRef}>
+				<styles.Title>
+					Super Centro Carioca de Saúde: o mais moderno complexo de saúde da América Latina
+				</styles.Title>
+				<styles.Subtitle>
+					Como o tempo de espera dos cariocas na fila do Sisreg diminuiu com a inauguração do Centro
+				</styles.Subtitle>
+				<div>
+					<styles.AuthorText>
+						Desenvolvido por{" "}
+						<a
+							className="font-bold underline"
+							href="https://www.dados.rio/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							Escritório de Dados
+						</a>
+					</styles.AuthorText>
+				</div>
+			</styles.ScrollableWrap>
+		</styles.Wrap>
 	);
 }
 
