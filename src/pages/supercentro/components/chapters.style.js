@@ -307,7 +307,7 @@ export const TextHighlightDark = tw.div`
 
 export const TextCard1 = tw.div`
 
-text-[20px]
+text-[16px]
 text-left
 lg:leading-[150%]
 text-black

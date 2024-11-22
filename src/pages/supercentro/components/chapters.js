@@ -166,6 +166,24 @@ export function ContextoHistorico(
 		</styles.Wrap>
 	);
 }
+export function ParteUm(
+	props = {
+		id: "",
+		chapRef: null,
+	}
+) {
+	props = setDefaultProps(props);
+
+	return (
+		<styles.ChapterGenericDiv1 ref={props.chapRef} id={props.id} >
+			<styles.ContainerCard>
+				<styles.TextCard1>
+					Essas são somente duas das milhares de histórias do Super Centro, por onde passam <b>2,5 mil pacientes por dia</b>, e cuja inauguração representa um avanço crucial na reorganização do sistema de saúde pública do Rio. Com a <b>redução significativa da fila do Sisreg</b>, a nova estrutura vem demonstrando que é possível otimizar o atendimento especializado e reduzir os tempos de espera. <br></br><br></br>Equipado com tecnologia de ponta e concentrando diversos serviços em um só local, o complexo já beneficiou centenas de milhares de cariocas: foram mais de 1.546.572 de consultas, exames, cirurgias e procedimentos entre 2022 e 2024. Ainda há desafios a serem superados, mas a iniciativa aponta para um caminho mais <b>eficiente e humanizado</b> na prestação de cuidados, trazendo uma nova perspectiva para o futuro da saúde pública na cidade.
+				</styles.TextCard1>
+			</styles.ContainerCard>
+		</styles.ChapterGenericDiv1>
+	);
+}
 
 export function QuadroUm(props) {
 	const { showArrow, sectionRef } = useScrollArrow();
@@ -180,36 +198,36 @@ export function QuadroUm(props) {
 			)}
 			<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[30vh]">
 				<styles.TextCard3>
-					A famosa fila do Sisreg.
+					A famosa <b>fila do Sisreg</b>.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[300vh]">
 				<styles.TextCard3>
-					Todo carioca sabe o que é: A fila do Sistema de Regulação é a lista de espera oficial do sistema público de saúde, onde pacientes aguardam por consultas com especialistas, exames, procedimentos e cirurgias. O Sisreg é responsável por organizar e priorizar esses atendimentos, de acordo com critérios clínicos e de urgência, além de controlar a oferta de vagas em unidades de saúde. Devido à alta demanda e à capacidade limitada do sistema, a fila pode ser  longa, levando muitos pacientes a esperarem meses, ou até anos, para receberem o tratamento necessário. O Sisreg é essencial para o funcionamento do sistema. Mas a demanda é grande.
+					Todo carioca sabe o que é: A fila do Sistema de Regulação é a <b>lista de espera oficial do sistema público de saúde</b>, onde pacientes aguardam por consultas com especialistas, exames, procedimentos e cirurgias. O Sisreg é responsável por organizar e priorizar esses atendimentos, de acordo com critérios clínicos e de urgência, além de controlar a oferta de vagas em unidades de saúde. Devido à alta demanda e à capacidade limitada do sistema, a fila pode ser  longa, levando muitos pacientes a esperarem <b>meses, ou até anos,</b> para receberem o tratamento necessário. O Sisreg é essencial para o funcionamento do sistema. Mas a demanda é grande.
 
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[570vh]">
 				<styles.TextCard3>
-					A partir de 2020, a pandemia da Covid-19 sobrecarregou o sistema de saúde público carioca de maneira sem precedentes, agravando ainda mais os desafios existentes, como a fila do Sisreg. Com a demanda crescente por atendimentos médicos, o sistema enfrentou um colapso temporário, e o número de pacientes na fila mais que dobrou, passando de cerca de 230 mil em 2020 para mais de 610 mil em 2022. A emergência sanitária expôs a necessidade de maior organização e ampliação dos serviços especializados.				</styles.TextCard3>
+					A partir de 2020,<b> a pandemia da Covid-19 sobrecarregou o sistema de saúde</b> público carioca de maneira sem precedentes, agravando ainda mais os desafios existentes, como a fila do Sisreg. Com a demanda crescente por atendimentos médicos, o sistema enfrentou um colapso temporário, e o número de pacientes na fila mais que dobrou, passando de cerca de 230 mil em 2020 para mais de 610 mil em 2022. A emergência sanitária expôs a <b>necessidade de maior organização e ampliação dos serviços especializados.</b>			</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card4"} className=" top-[850vh]">
 				<styles.TextCard3>
-					Além disso, houve um aumento da expansão da Atenção Primária à Saúde no Rio de Janeiro. Foram inauguradas diversas Clínicas da Família na última década, o que aumentou significativamente a cobertura de saúde básica: de 3,5% para 80% da população carioca - apesar da queda temporária para 46% em 2020, da qual a cidade já se recuperou.
+					Além disso, houve um aumento da expansão da Atenção Primária à Saúde no Rio de Janeiro. Foram inauguradas <b>diversas Clínicas da Família</b> na última década, o que aumentou significativamente a cobertura de saúde básica: de 3,5% para 80% da população carioca - apesar da queda temporária para 46% em 2020, da qual a cidade já se recuperou.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card5"} className=" top-[1350vh]">
 				<styles.TextCard3>
-					Isso ampliou o acesso inicial dos cidadãos ao sistema público de saúde, permitindo que mais pessoas realizassem consultas e exames de rotina. No entanto, essa maior capilaridade gerou um efeito colateral: com mais diagnósticos sendo feitos, a demanda por consultas especializadas disparou, ainda que dessa vez por um bom motivo: a ampliação da cobertura. Mais de 1 milhão de solicitações passaram a ser registradas anualmente, sobrecarregando, mais uma vez, a fila do Sisreg.
+					Isso <b>ampliou o acesso inicial dos cidadãos ao sistema público de saúde</b>, permitindo que mais pessoas realizassem consultas e exames de rotina. No entanto, essa maior capilaridade gerou um efeito colateral: com mais diagnósticos sendo feitos, a<b> demanda por consultas especializadas disparou</b>, ainda que dessa vez por um bom motivo: a ampliação da cobertura. Mais de 1 milhão de solicitações passaram a ser registradas anualmente, <b>sobrecarregando, mais uma vez, a fila do Sisreg.</b>
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card6"} className=" top-[1500vh]">
 				<styles.TextCard3>
-					Se, por um lado, essa expansão melhorou o acesso inicial ao sistema, por outro, evidenciou a necessidade de reorganização e ampliação dos atendimentos especializados. Foi nesse cenário que a Prefeitura do Rio inaugurou, em 2022, o Super Centro Carioca de Saúde. 				</styles.TextCard3>
+					Se, por um lado, essa expansão melhorou o acesso inicial ao sistema, por outro, evidenciou a necessidade de reorganização e ampliação dos atendimentos especializados. Foi nesse cenário que a Prefeitura do Rio inaugurou, em 2022, <b>o Super Centro Carioca de Saúde.</b> 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card7"} className=" top-[1750vh]">
 				<styles.TextCard3>
-					O complexo conta com mais de 150 consultórios, além de salas de exame e equipamentos de última geração, 582 especialistas e capacidade para 113 mil exames, consultas e procedimentos por mês, pelo Sistema Único de Saúde (SUS). Assim, une especialidades diversas em um único lugar, concentra atendimentos e procedimentos e otimiza a logística médica, acelerando todo o processo para os pacientes esperarem menos. A partir da inauguração, a fila do Sisreg caiu abaixo da metade em menos de 2 anos: de 160 dias de média de espera em 2020, chegou a 75 em 2024.
+					O complexo conta com mais de 150 consultórios, além de salas de exame e equipamentos de última geração, 582 especialistas e capacidade para 113 mil exames, consultas e procedimentos por mês, pelo Sistema Único de Saúde (SUS). Assim, une especialidades diversas em um único lugar, concentra atendimentos e procedimentos e otimiza a logística médica, acelerando todo o processo para os pacientes esperarem menos. <b>A partir da inauguração, a fila do Sisreg caiu abaixo da metade em menos de 2 anos</b>: de 160 dias de média de espera em 2020, chegou a 75 em 2024.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card8"} className=" top-[2000vh]">
@@ -223,16 +241,16 @@ export function QuadroUm(props) {
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card9b"} className=" top-[2400vh]">
 				<styles.TextCard3>
-					O Centro Carioca de Especialidades (CCE) oferece atendimento em especialidades médicas e odontológicas.
+					O <b>Centro Carioca de Especialidades (CCE)</b> oferece atendimento em especialidades médicas e odontológicas.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card10"} className=" top-[2650vh]">
 				<styles.TextCard3>
-					O Centro Carioca de Diagnóstico e Tratamento por Imagem possui modernos equipamentos de saúde para realizar exames, procedimentos e consultas.				</styles.TextCard3>
+					O <b>Centro Carioca de Diagnóstico e Tratamento por Imagem</b> possui modernos equipamentos de saúde para realizar exames, procedimentos e consultas.				</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card11"} className=" top-[2900vh]">
 				<styles.TextCard3>
-					No Hospital do Olho, além de consultas e exames, também há cirurgias e outros procedimentos de correção da visão. O centro conta com equipe clínica e cirúrgica de oftalmologistas.							</styles.TextCard3>
+					No <b>Hospital do Olho</b>, além de consultas e exames, também há cirurgias e outros procedimentos de correção da visão. O centro conta com equipe clínica e cirúrgica de oftalmologistas.							</styles.TextCard3>
 			</styles.ContainerCard3>
 			<styles.ContainerCard3 id={"quadro_um_card12"} className=" top-[3100vh]">
 				<styles.TextCard3>
@@ -307,6 +325,11 @@ export function QuadroUm(props) {
 					Aqui, ela se consulta com um oftalmologista, faz os exames, a cirurgia de catarata e recebe óculos novos. Isso porque o centro conta com equipe clínica e cirúrgica, além de uma ótica e oferta de diversos procedimentos.
 				</styles.TextCard3>
 			</styles.ContainerCard3>
+			<styles.ContainerCard3 id={"quadro_um_card26"} className=" top-[5950vh]">
+				<styles.TextCard3>
+					O Hospital do Olho também oferece: Oftalmologia - Pediatria; tratamento para Glaucoma; Cirurgias de: Catarata; Retina Geral; Córnea; Ceratocone; Estrabismo; Plástica Ocular; Reflexo Vermelho alterado e Sondagem de Vias Lacrimais (Pediatria); além de diversos outros procedimentos.
+				</styles.TextCard3>
+			</styles.ContainerCard3>
 
 		</styles.ChapterGenericDiv2>
 	);
@@ -339,13 +362,9 @@ export function Creditos(
 				<styles.TextCreditos1>
 					Caio Jacintho <br />
 					Fernando Santana <br />
-					Judite Cypreste <br />
 					Lucas Tavares <br />
-					Marcel Grillo Balassiano <br />
 					Mateus Lana <br />
-					Pedro Arias <br />
 					Pedro Meneghel <br />
-					Renata Paes Leme <br />
 				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px] ">
 					Agradecimentos

@@ -71,7 +71,7 @@ export default function SuperCentro() {
         {/* ******************************** Video Scrolling ********************************  */}
 
         {/* <div ref={setHeightRef}> */}
-        <div style={{ display: "flex", flexDirection: "column", height: "6100vh", width: "100%", alignItems: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", height: "6200vh", width: "100%", alignItems: "center" }}>
           <video
             ref={videoRef}
             src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/supercentrofinal.mp4"
@@ -87,7 +87,7 @@ export default function SuperCentro() {
           {/* </div> */}
           <chapterDiv.QuadroUm id={"quadro"} />
         </div>
-
+        <chapterDiv.ParteUm id={"parteum"} />
         <chapterDiv.Creditos id={"creditos"} />
       </div>
     </>
