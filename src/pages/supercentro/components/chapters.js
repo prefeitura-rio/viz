@@ -39,10 +39,10 @@ export function useScrollArrow() {
 			setShowArrow(false);
 			clearTimeout(scrollTimeoutRef.current);
 			const sectionTop = sectionRef.current.offsetTop;
-			const sectionHeight = sectionRef.current.offsetHeight;
+			const sectionHeight = sectionRef.current.scrollHeight;
 			const scrollPosition = window.scrollY + window.innerHeight;
 			scrollTimeoutRef.current = setTimeout(() => {
-				if (scrollPosition > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+				if (scrollPosition < sectionTop + sectionHeight) {
 					setShowArrow(true);
 				}
 			}, 1000);
