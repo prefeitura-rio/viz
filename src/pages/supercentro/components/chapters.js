@@ -347,34 +347,16 @@ export function Creditos(
 	return (
 		<styles.ChapterGenericDiv ref={props.chapRef} id={props.id}>
 			<styles.ContainerCard>
-				<styles.TextCreditos2>Fontes</styles.TextCreditos2>
-				<styles.TextCreditos>Links</styles.TextCreditos>
-				<styles.TextCreditos1 >
-					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2024/04/Estudo-Impacto-Show-Madonna.pdf" target="_blank">Potenciais impactos econômicos do Show da Madonna no Rio. 2024</a> <br />
-					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2024/02/Carnaval-de-Dados-2024.pdf" target="_blank">Carnaval de Dados. 2024</a> <br />
-					<a href="https://observatorioeconomico.rio/wp-content/uploads/sites/5/2023/12/VERSAO-FINAL-Relatorio-REVEILLON-EM-DADOS-REVISADO-1.pdf" target="_blank">Réveillon em Dados. 2023</a> <br />
-
-				</styles.TextCreditos1>
 				<br></br>
 				<br></br>
 				<styles.TextCreditos2>Créditos</styles.TextCreditos2>
-				<styles.TextCreditos>Autores</styles.TextCreditos>
+				<styles.TextCreditos>ESCRITÓRIO DE DADOS</styles.TextCreditos>
 				<styles.TextCreditos1>
 					Caio Jacintho <br />
 					Fernando Santana <br />
 					Lucas Tavares <br />
 					Mateus Lana <br />
 					Pedro Meneghel <br />
-				</styles.TextCreditos1>
-				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px] ">
-					Agradecimentos
-				</styles.TextCreditos>
-				<styles.TextCreditos1>
-					Caroline Brito  <br />
-					Janaína Salles <br />
-					Jeferson Monteiro <br />
-					Miguel Sebastian Saavedra <br />
-					Rafael Lisboa <br />
 				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
 					CHEFE EXECUTIVO DO ESCRITÓRIO DE DADOS
@@ -383,17 +365,15 @@ export function Creditos(
 					João Carabetta <br />
 				</styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
-					SECRETÁRIO DE DESENVOLVIMENTO URBANO E ECONÔMICO
+					SECRETARIA MUNICIPAL DE SAÚDE
 				</styles.TextCreditos>
-				<styles.TextCreditos1>Chicão Bulhões</styles.TextCreditos1>
-				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
-					Fundação João Goulart
-				</styles.TextCreditos>
-				<styles.TextCreditos1>Rafaela Bastos</styles.TextCreditos1>
-				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
-					Secretaria de Turismo
-				</styles.TextCreditos>
-				<styles.TextCreditos1>Daniela Maia</styles.TextCreditos1>
+				<styles.TextCreditos1>Daniel Soranz<br /></styles.TextCreditos1>
+				<styles.TextCreditos1>Alexandre Modesto<br /></styles.TextCreditos1>
+				<styles.TextCreditos1>Fernanda Adaes<br /></styles.TextCreditos1>
+				<styles.TextCreditos1>Claudia Ferrari<br /></styles.TextCreditos1>
+				<styles.TextCreditos1>Paula Fiorito<br /></styles.TextCreditos1>
+				<styles.TextCreditos1>Clarissa Mello<br /></styles.TextCreditos1>
+				<styles.TextCreditos1>Elaine Duim<br /></styles.TextCreditos1>
 				<styles.TextCreditos className=" lg:mt-[40px] mt-[60px]">
 					Prefeito
 				</styles.TextCreditos>
