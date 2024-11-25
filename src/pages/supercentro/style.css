@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 .containerr {
   font-family: "Poppins", sans-serif;
 }
 .trail {
   position: absolute;
-  width: 50px; 
-  height: 50px; 
+  width: 50px;
+  height: 50px;
   background-size: cover;
   background-repeat: no-repeat;
   pointer-events: none;
@@ -14,14 +14,20 @@
   animation: fade 1s linear forwards;
 }
 
+@media (max-width: 768px) {
+  .responsive-video {
+    padding-top: 20vh;
+  }
+}
+
 @keyframes fade {
   from {
-      opacity: 1;
-      transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
   }
   to {
-      opacity: 0;
-      transform: scale(1.5); 
+    opacity: 0;
+    transform: scale(1.5);
   }
 }
 .trail {
@@ -37,12 +43,12 @@
 
 @keyframes fade {
   from {
-      opacity: 1;
-      transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
   }
   to {
-      opacity: 0;
-      transform: scale(1.5);
+    opacity: 0;
+    transform: scale(1.5);
   }
 }
 
@@ -51,9 +57,15 @@ body {
 }
 
 @keyframes flickerAnimation {
-  0%   { opacity: 1; }
-  50%  { opacity: 0.3; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .scroll-arrow-container {
