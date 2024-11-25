@@ -129,12 +129,48 @@ export const ChapterGenericDiv1 = tw.div`
   `;
 
 export const ChapterGenericDiv2 = tw.div`
+   
+    w-auto 
+
+    lg:w-[100vw] 
+
+    bg-transparent	
+  `;
+export const ChapterGenericLeft = tw.div`
     flex
     relative
     justify-center
-    w-auto h-[600vh]
-    lg:w-auto lg:h-[600vh]
-    
+    w-auto 
+
+    lg:justify-start
+    lg:w-[100vw] 
+
+    px-[30px]
+    lg:p-[34px]
+    bg-transparent	
+  `;
+export const ChapterGenericRight = tw.div`
+    flex
+    relative
+    justify-center
+    w-auto 
+
+    lg:justify-end
+    lg:w-[100vw] 
+
+    px-[30px]
+    lg:p-[34px]
+    bg-transparent	
+  `;
+export const ChapterGenericCenter = tw.div`
+    flex
+    relative
+    justify-center
+    w-auto 
+
+    lg:justify-center
+    lg:w-[100vw] 
+
     px-[30px]
     lg:p-[34px]
     bg-transparent	
