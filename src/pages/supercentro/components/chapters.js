@@ -196,13 +196,13 @@ export function QuadroUm(props) {
 					{/* <p style={{ paddingTop: "0px", fontSize: "16px" }}>Continue descendo</p> */}
 				</div>
 			)}
-			<styles.ChapterGenericLeft>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card1"} className=" top-[30vh]">
 					<styles.TextCard3>
 						A famosa <b>fila do Sisreg</b>.
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
 			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[150vh]">
 					<styles.TextCard3>
@@ -243,60 +243,60 @@ export function QuadroUm(props) {
 					</styles.TextCard3>
 				</styles.ContainerCard3>
 			</styles.ChapterGenericRight>
-			<styles.ChapterGenericCenter>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card5"} className=" top-[1250vh]">
 					<styles.TextCard3>
 						Isso <b>ampliou o acesso inicial dos cidadãos ao sistema público de saúde</b>, permitindo que mais pessoas realizassem consultas e exames de rotina. No entanto, essa maior capilaridade gerou um efeito colateral: com mais diagnósticos sendo feitos, a<b> demanda por consultas especializadas disparou</b>, ainda que dessa vez por um bom motivo: a ampliação da cobertura.
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericCenter>
-			<styles.ChapterGenericCenter>
+			</styles.ChapterGenericRight>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card5"} className=" top-[1350vh]">
 					<styles.TextCard3>
 						Mais de 1 milhão de solicitações passaram a ser registradas anualmente, <b>sobrecarregando, mais uma vez, a fila do Sisreg.</b>
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericCenter>
-			<styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card6"} className=" top-[1500vh]">
 					<styles.TextCard3>
 						Se, por um lado, essa expansão melhorou o acesso inicial ao sistema, por outro, evidenciou a necessidade de reorganização e ampliação dos atendimentos especializados. Foi nesse cenário que a Prefeitura do Rio inaugurou, em 2022, <b>o Super Centro Carioca de Saúde.</b> 				</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericLeft>
-			<styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card7"} className=" top-[1600vh]">
 					<styles.TextCard3>
 						O complexo conta com mais de 150 consultórios, além de salas de exame e equipamentos de última geração, 582 especialistas e capacidade para 113 mil exames, consultas e procedimentos por mês, pelo Sistema Único de Saúde (SUS).
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericLeft>
-			<styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card7"} className=" top-[1700vh]">
 					<styles.TextCard3>
 						Assim, une especialidades diversas em um único lugar, concentra atendimentos e procedimentos e otimiza a logística médica, acelerando todo o processo para os pacientes esperarem menos.
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericLeft>
-			<styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card7"} className=" top-[1800vh]">
 					<styles.TextCard3>
 						<b>A partir da inauguração, a fila do Sisreg caiu abaixo da metade em menos de 2 anos</b>: de 160 dias de média de espera em 2020, chegou a 75 em 2024.
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
 			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card8"} className=" top-[1900vh]">
 					<styles.TextCard3>
 						Em muitos casos, a fila foi “equalizada”, ou seja, foi reduzida momentaneamente de forma a atender todas as pessoas que esperavam por determinado procedimento.				</styles.TextCard3>
 				</styles.ContainerCard3>
 			</styles.ChapterGenericRight>
-			<styles.ChapterGenericCenter>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card9"} className=" top-[2050vh]">
 					<styles.TextCard3>
 						Vejamos como funciona: A estrutura do Super Centro se divide em 3 unidades:
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericCenter>
+			</styles.ChapterGenericRight>
 			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card9b"} className=" top-[2300vh]">
 					<styles.TextCard3>
@@ -328,19 +328,19 @@ export function QuadroUm(props) {
 						Como foi o caso de Mauro, 53 anos, morador da Tijuca.					</styles.TextCard3>
 				</styles.ContainerCard3>
 			</styles.ChapterGenericRight>
-			<styles.ChapterGenericLeft>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card14"} className=" top-[3250vh]">
 					<styles.TextCard3>
 						Ele foi encaminhado por uma Clínica da Família para consulta com um pneumologista no CCE. 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericLeft>
-			<styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card15"} className=" top-[3500vh]">
 					<styles.TextCard3>
 						O Centro Carioca de Especialidades (CCE) também oferece atendimento em outras dezoito especialidades médicas e seis especialidades odontológicas. 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericLeft>
-			<styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card16"} className=" top-[3850vh]">
 					<styles.TextCard3>
 						Além dessas especialidades, o CCE também oferece Cirurgia Vascular; Coloproctologia; Endocrinologia; Gastroenterologia; Hepatologia; Otorrinolaringologia;
@@ -349,7 +349,7 @@ export function QuadroUm(props) {
 						Além de especialidades odontológicas como: Cirurgia Oral Menor; Dor Oro Facial / Disfunção Têmporo-mandibular; Endodontia; Estomatologia; Paciente com Necessidades Especiais; Periodontia.
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
 			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card18"} className=" top-[3950vh]">
 					<styles.TextCard3>
@@ -366,23 +366,23 @@ export function QuadroUm(props) {
 					</styles.TextCard3>
 				</styles.ContainerCard3>
 			</styles.ChapterGenericRight>
-			<styles.ChapterGenericLeft>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card20"} className=" top-[4200vh]">
 					<styles.TextCard3>
 						O equipamento de PET Scan do CCD é o único da rede municipal de saúde.
 
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericLeft>
-			<styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card21"} className=" top-[4300vh]">
 					<styles.TextCard3>
 						O CCD conta ainda com diversos outros equipamentos modernos para todo tipo de exames e procedimentos.
 
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericLeft>
-			<styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card22"} className=" top-[4700vh]">
 					<styles.TextCard3>
 						O CCD oferece também:<br></br>
@@ -393,14 +393,14 @@ export function QuadroUm(props) {
 
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericLeft>
-			<styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card23"} className=" top-[4850vh]">
 					<styles.TextCard3>
 						Maria, 55 anos, de Irajá, tem catarata.
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
 			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card24"} className=" top-[4950vh]">
 					<styles.TextCard3>
@@ -415,13 +415,13 @@ export function QuadroUm(props) {
 					</styles.TextCard3>
 				</styles.ContainerCard3>
 			</styles.ChapterGenericRight>
-			<styles.ChapterGenericCenter>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card26"} className=" top-[5650vh]">
 					<styles.TextCard3>
 						O Hospital do Olho também oferece: Oftalmologia - Pediatria; tratamento para Glaucoma; Cirurgias de: Catarata; Retina Geral; Córnea; Ceratocone; Estrabismo; Plástica Ocular; Reflexo Vermelho alterado e Sondagem de Vias Lacrimais (Pediatria); além de diversos outros procedimentos.
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericCenter>
+			</styles.ChapterGenericRight>
 
 		</styles.ChapterGenericDiv2>
 	);
