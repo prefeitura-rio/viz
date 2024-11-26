@@ -224,8 +224,7 @@ export const ContainerCard3 = tw.div`
   z-10
   h-auto w-[80vw] lg:w-[460px]
   bg-[rgba(255,255,255,0.95)]
-  border border-[#00b7db]
-  border-2
+
   px-[30px]
   py-[25px]
   lg:px-[32px]
@@ -363,7 +362,7 @@ export const TextCard3 = tw.div`
 
 text-[14px]
 text-left
-lg:leading-[125%]
+lg:leading-[140%]
 text-black
-leading-[125%]
+leading-[140%]  
 `;

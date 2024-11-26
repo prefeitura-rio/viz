@@ -17,10 +17,10 @@ export default function SuperCentro() {
 
       // Wait until the video metadata is loaded to get the duration
       video.addEventListener("loadedmetadata", () => {
-        const totalFrames = 24 * video.duration;
+        const totalFrames = 48 * video.duration;
 
         gsap.to(video, {
-          currentTime: totalFrames / 24,
+          currentTime: totalFrames / 48,
           scrollTrigger: {
             trigger: videoScrollRef.current,
             start: "top top",
@@ -29,7 +29,7 @@ export default function SuperCentro() {
             onUpdate: (self) => {
               // Calculate the frame based on scroll progress
               const frame = Math.round(self.progress * totalFrames);
-              video.currentTime = frame / 24; // Set the current video time
+              video.currentTime = frame / 48; // Set the current video time
             },
           },
         });
