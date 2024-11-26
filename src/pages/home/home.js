@@ -147,6 +147,9 @@ export default function Home() {
             Especial | Civitas
           </Link>
         </li>
+        <li>
+          <Link to="/supercentro">Especial | Super Centro</Link>
+        </li>
       </lu>
     </div>
   );
