@@ -60,8 +60,8 @@ export const Wrap = tw.div`
 export const Title = tw.div`
   mt-[5%]
   lg:mt-[5%]
-  mb-8  
-  lg:mb-8 
+  mb-3  
+  lg:mb-3 
   font-serif font-bold  
   text-2xl text-center text-white
   leading-[1.3]  
@@ -220,18 +220,18 @@ export const ContainerCard2 = tw.div`
 `;
 
 export const ContainerCard3 = tw.div`
-    absolute
-    z-10
-    h-auto w-[80vw] lg:w-[460px]
-    bg-white 
-    border border-[#00b7db]
-    border-4
-    px-[30px]
-    py-[25px]
-    lg:px-[32px]
-    lg:py-[25px]
+  absolute
+  z-10
+  h-auto w-[80vw] lg:w-[460px]
+  bg-[rgba(255,255,255,0.95)]
+  border border-[#00b7db]
+  border-2
+  px-[30px]
+  py-[25px]
+  lg:px-[32px]
+  lg:py-[25px]
+`;
 
-  `;
 
 export const Grafico = tw.div`
   m-auto
@@ -361,9 +361,9 @@ mt-[20px]
 
 export const TextCard3 = tw.div`
 
-text-[16px]
+text-[14px]
 text-left
-lg:leading-[110%]
+lg:leading-[125%]
 text-black
-leading-[110%]
+leading-[125%]
 `;
