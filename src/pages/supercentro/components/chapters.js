@@ -445,6 +445,7 @@ export function Creditos(
 				<styles.TextCreditos>ESCRITÓRIO DE DADOS</styles.TextCreditos>
 				<styles.TextCreditos1>
 					Caio Jacintho <br />
+					Carol Castro <br />
 					Fernando Santana <br />
 					Lucas Tavares <br />
 					Mateus Lana <br />
