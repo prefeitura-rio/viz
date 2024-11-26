@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function SuperCentro() {
   const videoRef = useRef(null);
-  const totalFrames = 24 * videoRef.current?.duration || 0; // 24 FPS * video duration
   const videoScrollRef = useRef(null);
 
   useEffect(() => {
