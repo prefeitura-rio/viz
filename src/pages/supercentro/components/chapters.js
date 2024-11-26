@@ -204,17 +204,36 @@ export function QuadroUm(props) {
 				</styles.ContainerCard3>
 			</styles.ChapterGenericLeft>
 			<styles.ChapterGenericRight>
-				<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[300vh]">
+				<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[150vh]">
 					<styles.TextCard3>
-						Todo carioca sabe o que é: A fila do Sistema de Regulação é a <b>lista de espera oficial do sistema público de saúde</b>, onde pacientes aguardam por consultas com especialistas, exames, procedimentos e cirurgias. O Sisreg é responsável por organizar e priorizar esses atendimentos, de acordo com critérios clínicos e de urgência, além de controlar a oferta de vagas em unidades de saúde. Devido à alta demanda e à capacidade limitada do sistema, a fila pode ser  longa, levando muitos pacientes a esperarem <b>meses, ou até anos,</b> para receberem o tratamento necessário. O Sisreg é essencial para o funcionamento do sistema. Mas a demanda é grande.
-
+						Todo carioca sabe o que é: A fila do Sistema de Regulação é a <b>lista de espera oficial do sistema público de saúde</b>, onde pacientes aguardam por consultas com especialistas, exames, procedimentos e cirurgias.
 					</styles.TextCard3>
+				</styles.ContainerCard3>
+			</styles.ChapterGenericRight>
+			<styles.ChapterGenericRight>
+				<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[250vh]">
+					<styles.TextCard3>
+						O Sisreg é responsável por organizar e priorizar esses atendimentos, de acordo com critérios clínicos e de urgência, além de controlar a oferta de vagas em unidades de saúde.
+					</styles.TextCard3>
+				</styles.ContainerCard3>
+			</styles.ChapterGenericRight>
+			<styles.ChapterGenericRight>
+				<styles.ContainerCard3 id={"quadro_um_card2"} className=" top-[350vh]">
+					<styles.TextCard3>
+						Devido à alta demanda e à capacidade limitada do sistema, a fila pode ser  longa, levando muitos pacientes a esperarem <b>meses, ou até anos,</b> para receberem o tratamento necessário. O Sisreg é essencial para o funcionamento do sistema. Mas a demanda é grande.
+					</styles.TextCard3>
+				</styles.ContainerCard3>
+			</styles.ChapterGenericRight>
+			<styles.ChapterGenericRight>
+				<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[470vh]">
+					<styles.TextCard3>
+						A partir de 2020,<b> a pandemia da Covid-19 sobrecarregou o sistema de saúde</b> público carioca de maneira sem precedentes, agravando ainda mais os desafios existentes, como a fila do Sisreg. 	</styles.TextCard3>
 				</styles.ContainerCard3>
 			</styles.ChapterGenericRight>
 			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card3"} className=" top-[570vh]">
 					<styles.TextCard3>
-						A partir de 2020,<b> a pandemia da Covid-19 sobrecarregou o sistema de saúde</b> público carioca de maneira sem precedentes, agravando ainda mais os desafios existentes, como a fila do Sisreg. Com a demanda crescente por atendimentos médicos, o sistema enfrentou um colapso temporário, e o número de pacientes na fila mais que dobrou, passando de cerca de 230 mil em 2020 para mais de 610 mil em 2022. A emergência sanitária expôs a <b>necessidade de maior organização e ampliação dos serviços especializados.</b>			</styles.TextCard3>
+						Com a demanda crescente por atendimentos médicos, o sistema enfrentou um colapso temporário, e o número de pacientes na fila mais que dobrou, passando de cerca de 230 mil em 2020 para mais de 610 mil em 2022. A emergência sanitária expôs a <b>necessidade de maior organização e ampliação dos serviços especializados.</b>		 	</styles.TextCard3>
 				</styles.ContainerCard3>
 			</styles.ChapterGenericRight>
 			<styles.ChapterGenericRight>
@@ -225,9 +244,16 @@ export function QuadroUm(props) {
 				</styles.ContainerCard3>
 			</styles.ChapterGenericRight>
 			<styles.ChapterGenericCenter>
+				<styles.ContainerCard3 id={"quadro_um_card5"} className=" top-[1250vh]">
+					<styles.TextCard3>
+						Isso <b>ampliou o acesso inicial dos cidadãos ao sistema público de saúde</b>, permitindo que mais pessoas realizassem consultas e exames de rotina. No entanto, essa maior capilaridade gerou um efeito colateral: com mais diagnósticos sendo feitos, a<b> demanda por consultas especializadas disparou</b>, ainda que dessa vez por um bom motivo: a ampliação da cobertura.
+					</styles.TextCard3>
+				</styles.ContainerCard3>
+			</styles.ChapterGenericCenter>
+			<styles.ChapterGenericCenter>
 				<styles.ContainerCard3 id={"quadro_um_card5"} className=" top-[1350vh]">
 					<styles.TextCard3>
-						Isso <b>ampliou o acesso inicial dos cidadãos ao sistema público de saúde</b>, permitindo que mais pessoas realizassem consultas e exames de rotina. No entanto, essa maior capilaridade gerou um efeito colateral: com mais diagnósticos sendo feitos, a<b> demanda por consultas especializadas disparou</b>, ainda que dessa vez por um bom motivo: a ampliação da cobertura. Mais de 1 milhão de solicitações passaram a ser registradas anualmente, <b>sobrecarregando, mais uma vez, a fila do Sisreg.</b>
+						Mais de 1 milhão de solicitações passaram a ser registradas anualmente, <b>sobrecarregando, mais uma vez, a fila do Sisreg.</b>
 					</styles.TextCard3>
 				</styles.ContainerCard3>
 			</styles.ChapterGenericCenter>
@@ -238,14 +264,28 @@ export function QuadroUm(props) {
 				</styles.ContainerCard3>
 			</styles.ChapterGenericLeft>
 			<styles.ChapterGenericLeft>
+				<styles.ContainerCard3 id={"quadro_um_card7"} className=" top-[1600vh]">
+					<styles.TextCard3>
+						O complexo conta com mais de 150 consultórios, além de salas de exame e equipamentos de última geração, 582 especialistas e capacidade para 113 mil exames, consultas e procedimentos por mês, pelo Sistema Único de Saúde (SUS).
+					</styles.TextCard3>
+				</styles.ContainerCard3>
+			</styles.ChapterGenericLeft>
+			<styles.ChapterGenericLeft>
 				<styles.ContainerCard3 id={"quadro_um_card7"} className=" top-[1700vh]">
 					<styles.TextCard3>
-						O complexo conta com mais de 150 consultórios, além de salas de exame e equipamentos de última geração, 582 especialistas e capacidade para 113 mil exames, consultas e procedimentos por mês, pelo Sistema Único de Saúde (SUS). Assim, une especialidades diversas em um único lugar, concentra atendimentos e procedimentos e otimiza a logística médica, acelerando todo o processo para os pacientes esperarem menos. <b>A partir da inauguração, a fila do Sisreg caiu abaixo da metade em menos de 2 anos</b>: de 160 dias de média de espera em 2020, chegou a 75 em 2024.
+						Assim, une especialidades diversas em um único lugar, concentra atendimentos e procedimentos e otimiza a logística médica, acelerando todo o processo para os pacientes esperarem menos.
+					</styles.TextCard3>
+				</styles.ContainerCard3>
+			</styles.ChapterGenericLeft>
+			<styles.ChapterGenericLeft>
+				<styles.ContainerCard3 id={"quadro_um_card7"} className=" top-[1800vh]">
+					<styles.TextCard3>
+						<b>A partir da inauguração, a fila do Sisreg caiu abaixo da metade em menos de 2 anos</b>: de 160 dias de média de espera em 2020, chegou a 75 em 2024.
 					</styles.TextCard3>
 				</styles.ContainerCard3>
 			</styles.ChapterGenericLeft>
 			<styles.ChapterGenericRight>
-				<styles.ContainerCard3 id={"quadro_um_card8"} className=" top-[1850vh]">
+				<styles.ContainerCard3 id={"quadro_um_card8"} className=" top-[1900vh]">
 					<styles.TextCard3>
 						Em muitos casos, a fila foi “equalizada”, ou seja, foi reduzida momentaneamente de forma a atender todas as pessoas que esperavam por determinado procedimento.				</styles.TextCard3>
 				</styles.ContainerCard3>
@@ -270,12 +310,12 @@ export function QuadroUm(props) {
 						O <b>Centro Carioca de Diagnóstico e Tratamento por Imagem</b> possui modernos equipamentos de saúde para realizar exames, procedimentos e consultas.				</styles.TextCard3>
 				</styles.ContainerCard3>
 			</styles.ChapterGenericRight>
-			<styles.ChapterGenericLeft>
+			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card11"} className=" top-[2750vh]">
 					<styles.TextCard3>
 						No <b>Hospital do Olho</b>, além de consultas e exames, também há cirurgias e outros procedimentos de correção da visão. O centro conta com equipe clínica e cirúrgica de oftalmologistas.							</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericLeft>
+			</styles.ChapterGenericRight>
 			<styles.ChapterGenericRight>
 				<styles.ContainerCard3 id={"quadro_um_card12"} className=" top-[2950vh]">
 					<styles.TextCard3>
@@ -375,13 +415,13 @@ export function QuadroUm(props) {
 					</styles.TextCard3>
 				</styles.ContainerCard3>
 			</styles.ChapterGenericRight>
-			<styles.ChapterGenericRight>
+			<styles.ChapterGenericCenter>
 				<styles.ContainerCard3 id={"quadro_um_card26"} className=" top-[5650vh]">
 					<styles.TextCard3>
 						O Hospital do Olho também oferece: Oftalmologia - Pediatria; tratamento para Glaucoma; Cirurgias de: Catarata; Retina Geral; Córnea; Ceratocone; Estrabismo; Plástica Ocular; Reflexo Vermelho alterado e Sondagem de Vias Lacrimais (Pediatria); além de diversos outros procedimentos.
 					</styles.TextCard3>
 				</styles.ContainerCard3>
-			</styles.ChapterGenericRight>
+			</styles.ChapterGenericCenter>
 
 		</styles.ChapterGenericDiv2>
 	);
