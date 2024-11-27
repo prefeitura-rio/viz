@@ -56,7 +56,7 @@ export default function SuperCentro() {
               src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/supercentrofinal.mp4"
               type="video/mp4"
               className="responsive-video"
-
+              playsInline
             />
             <chapterDiv.QuadroUm id={"quadro"} />
           </div>
