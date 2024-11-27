@@ -57,6 +57,8 @@ export default function SuperCentro() {
               type="video/mp4"
               className="responsive-video"
               playsInline
+              muted
+              preload="auto"
             />
             <chapterDiv.QuadroUm id={"quadro"} />
           </div>
