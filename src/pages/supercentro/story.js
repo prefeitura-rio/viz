@@ -59,6 +59,7 @@ export default function SuperCentro() {
               playsInline
               muted
               preload="auto"
+              controls
               poster={thumb}
             />
             <chapterDiv.QuadroUm id={"quadro"} />
