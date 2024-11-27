@@ -58,7 +58,9 @@ export default function SuperCentro() {
               className="responsive-video"
               playsInline
               muted
-              controls
+              autoPlay
+              preload="auto"
+              controls={false}
               poster={thumb}
             />
             <chapterDiv.QuadroUm id={"quadro"} />
