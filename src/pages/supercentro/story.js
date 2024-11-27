@@ -40,34 +40,29 @@ export default function SuperCentro() {
     <>
       <div className="containerr" style={{ backgroundColor: "#dce0ea" }}>
         <chapterDiv.Capa id={"capa"} />
-
-        <div
-          ref={videoScrollRef}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            height: "6200vh",
-            width: "100%",
-            alignItems: "center",
-          }}
-        >
-          <video
-            ref={videoRef}
-            src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/supercentrofinal.mp4"
-            type="video/mp4"
-            className="responsive-video"
+        <div className="contentContainer">
+          <div
+            ref={videoScrollRef}
             style={{
-              position: "sticky",
-              top: "0",
-              maxHeight: "100vh",
-              margin: "0 auto",
-              display: "block",
+              display: "flex",
+              flexDirection: "column",
+              height: "6200vh",
+              width: "100%",
+              alignItems: "center",
             }}
-          />
-          <chapterDiv.QuadroUm id={"quadro"} />
+          >
+            <video
+              ref={videoRef}
+              src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/supercentrofinal.mp4"
+              type="video/mp4"
+              className="responsive-video"
+              playsInline
+            />
+            <chapterDiv.QuadroUm id={"quadro"} />
+          </div>
+          <chapterDiv.ParteUm id={"parteum"} />
+          <chapterDiv.Creditos id={"creditos"} />
         </div>
-        <chapterDiv.ParteUm id={"parteum"} />
-        <chapterDiv.Creditos id={"creditos"} />
       </div>
     </>
   );

@@ -3,20 +3,33 @@
 .containerr {
   font-family: "Poppins", sans-serif;
 }
-.trail {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  animation: fade 1s linear forwards;
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
 
+.responsive-video {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  margin: 10vw;
+  display: block;
+  align-self: flex-start;
+}
+
+@media (max-width: 1420px) {
+  .responsive-video {
+    margin: 0 auto;
+    align-self: center; /* Ensures it aligns to the left */
+  }
+}
 @media (max-width: 768px) {
   .responsive-video {
     padding-top: 20vh;
+    margin: 0 auto;
+    align-self: center; /* Ensures it aligns to the left */
   }
 }
 

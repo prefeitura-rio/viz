@@ -159,7 +159,9 @@ export const ChapterGenericRight = tw.div`
     lg:w-[100vw] 
 
     px-[30px]
-    lg:p-[34px]
+    lg:p-[1vw]
+    xl:p-[1vw]
+    2xl:p-[10vw]
     bg-transparent	
   `;
 export const ChapterGenericCenter = tw.div`
