@@ -59,6 +59,7 @@ export default function SuperCentro() {
               className="responsive-video"
               playsInline
               muted
+              autoPlay
               preload="auto"
               controls={false}
               poster={thumb}
