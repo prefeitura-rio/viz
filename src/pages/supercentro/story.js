@@ -13,6 +13,7 @@ export default function SuperCentro() {
   useEffect(() => {
     if (videoRef.current) {
       const video = videoRef.current;
+      video.pause(); // Ensure the video is paused initially
 
       // Wait until the video metadata is loaded to get the duration
       video.addEventListener("loadedmetadata", () => {
@@ -58,7 +59,6 @@ export default function SuperCentro() {
               className="responsive-video"
               playsInline
               muted
-              autoPlay
               preload="auto"
               controls={false}
               poster={thumb}
