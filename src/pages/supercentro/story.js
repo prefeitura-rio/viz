@@ -3,7 +3,7 @@ import * as chapterDiv from "./components/chapters";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./style.css";
-
+import thumb from "./images/thumb.png";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SuperCentro() {
@@ -59,6 +59,7 @@ export default function SuperCentro() {
               playsInline
               muted
               preload="auto"
+              poster={thumb}
             />
             <chapterDiv.QuadroUm id={"quadro"} />
           </div>
