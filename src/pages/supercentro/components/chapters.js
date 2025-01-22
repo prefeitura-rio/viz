@@ -192,7 +192,7 @@ export function QuadroUm(props) {
 		<styles.ChapterGenericDiv2 ref={sectionRef} id={props.id}>
 			{showArrow && (
 				<div className="scroll-arrow-container" style={{ position: 'fixed', bottom: '10px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
-					<img src={arrowdown} alt="Keep scrolling" />
+					{/* <img src={arrowdown} alt="Keep scrolling" /> */}
 					<p style={{ paddingTop: "0px", fontSize: "16px" }}>Continue descendo</p>
 				</div>
 			)}

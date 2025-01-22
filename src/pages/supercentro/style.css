@@ -93,8 +93,8 @@ body {
   align-items: center;
 }
 
-.scroll-arrow-container img {
-  width: 50px;
+.scroll-arrow-container p {
+  /* width: 50px; */
   animation: flickerAnimation 1s infinite;
 }
 .viewer {
