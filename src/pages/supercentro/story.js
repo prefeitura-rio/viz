@@ -74,7 +74,7 @@ export default function SuperCentro() {
           >
             <video
               ref={videoRef}
-              src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/supercentrofinal.mp4"
+              src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/supercentro/SUPERCENTRO2.mp4"
               type="video/mp4"
               className="responsive-video"
               playsInline
