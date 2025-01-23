@@ -2,6 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import MultilayerMap from "../../components/maps/multilayer_map";
 import { Controller, Scene } from "react-scrollmagic";
+import { LoadingMegaEventos } from "../megaeventos/loading";
 
 // Chapters
 import * as chapterMap from "./components/chapters.map";
@@ -18,10 +19,32 @@ import arrowdown from "../megaeventos/images/arrowdown.png";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function MegaEventos() {
-  const vh = (coef) => window.innerHeight * (coef / 100);
-  const vw = (coef) => window.innerWidth * (coef / 100);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const imageUrls = [];
+
+  for (let i = 1; i <= 548; i++) {
+    imageUrls.push(`https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/megaeventos/quadro/${i}.jpg`);
+  }
 
   useEffect(() => {
+    const preloadImages = async () => {
+      const promises = imageUrls.map((url) => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.src = url;
+          img.onload = resolve;
+        });
+      });
+      await Promise.all(promises);
+      setImagesLoaded(true);
+    };
+
+    preloadImages();
+  }, []);
+
+  useEffect(() => {
+    if (!imagesLoaded) return;
+
     gsap.defaults({ ease: "none" });
     ScrollTrigger.defaults({
       start: "top center",
@@ -105,7 +128,11 @@ export default function MegaEventos() {
       },
     });
 
-  }, []);
+  }, [imagesLoaded]);
+
+  if (!imagesLoaded) {
+    return <LoadingMegaEventos />;
+  }
 
   return (
     <>
